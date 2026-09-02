@@ -1,14 +1,12 @@
 ﻿"""
-Setup utilities for capture system prerequisites.
-Handles mitmproxy installation, certificate generation, and prerequisite checking.
+Setup utilities for capture prerequisites.
+Handles CA certificate generation, trust, and prerequisite checking.
 """
 
 import subprocess
 import ctypes
-import time
 import os
 import sys
-import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
@@ -27,62 +25,6 @@ class CertificateInstallError(Exception):
 def certificate_path() -> Path:
     """Where mitmproxy writes its CA. Not a constant so tests can patch Path.home()."""
     return Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
-
-
-def find_mitmdump() -> Optional[str]:
-    """
-    Find the mitmdump executable, checking multiple locations.
-
-    When running from a bundled exe, mitmdump may not be on PATH.
-    This function checks common installation locations.
-
-    Returns:
-        Path to mitmdump executable, or None if not found
-    """
-    # First try shutil.which (checks PATH)
-    mitmdump_path = shutil.which("mitmdump")
-    if mitmdump_path:
-        return mitmdump_path
-
-    # Common locations to check on Windows
-    if sys.platform == "win32":
-        locations_to_check = []
-
-        # Check Python Scripts folders
-        # When running bundled exe, sys.executable is the exe path
-        # But we can still check common Python installation paths
-
-        # User's Python Scripts folder
-        user_scripts = Path.home() / "AppData" / "Local" / "Programs" / "Python"
-        if user_scripts.exists():
-            for python_dir in user_scripts.glob("Python*"):
-                scripts_dir = python_dir / "Scripts"
-                locations_to_check.append(scripts_dir / "mitmdump.exe")
-
-        # System Python Scripts folders
-        for base in [r"C:\Python", r"C:\Program Files\Python", r"C:\Program Files (x86)\Python"]:
-            base_path = Path(base)
-            if base_path.exists():
-                for python_dir in base_path.glob("Python*"):
-                    locations_to_check.append(python_dir / "Scripts" / "mitmdump.exe")
-
-        # pyenv-win locations
-        pyenv_root = Path.home() / ".pyenv" / "pyenv-win" / "versions"
-        if pyenv_root.exists():
-            for version_dir in pyenv_root.glob("*"):
-                locations_to_check.append(version_dir / "Scripts" / "mitmdump.exe")
-
-        # Check if running from bundled exe - look next to the exe
-        if getattr(sys, 'frozen', False):
-            exe_dir = Path(sys.executable).parent
-            locations_to_check.append(exe_dir / "mitmdump.exe")
-
-        # Try each location
-        for path in locations_to_check:
-            if path.exists():
-                return str(path)
-
-    return None
 
 
 def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
@@ -246,24 +188,16 @@ def check_prerequisites() -> PrerequisiteStatus:
     except Exception:
         pass
 
-    # Check mitmproxy installation
+    # mitmproxy runs in-process and ships inside the sidecar, so this is just an import check.
+    # It used to spawn "mitmdump --version" on every status poll, which was slow.
     has_mitmproxy = False
     mitmproxy_version = None
-    mitmdump_path = find_mitmdump()
-    if mitmdump_path:
-        try:
-            result = subprocess.run(
-                [mitmdump_path, "--version"],
-                capture_output=True,
-                text=True,
-                timeout=5
-            )
-            if result.returncode == 0:
-                has_mitmproxy = True
-                # Extract version from output (e.g., "Mitmproxy 10.1.1")
-                mitmproxy_version = result.stdout.split()[1] if result.stdout else "unknown"
-        except (FileNotFoundError, subprocess.TimeoutExpired):
-            pass
+    try:
+        from mitmproxy import version as mitmproxy_version_module
+        has_mitmproxy = True
+        mitmproxy_version = mitmproxy_version_module.VERSION
+    except Exception:
+        pass
 
     # Check certificate
     cert_path = certificate_path()
@@ -313,99 +247,24 @@ def _probe_hosts_writable() -> tuple[bool, Optional[str]]:
         return False, _diagnose_hosts_write_failure(hosts_path, e)
 
 
-def _find_python() -> Optional[str]:
-    """Find a Python interpreter suitable for running pip.
-
-    When the sidecar runs elevated via UAC, the user's PATH may not include
-    Python Scripts directories. We search known install locations explicitly.
-    """
-    # If not frozen, use the current interpreter directly.
-    if not getattr(sys, 'frozen', False):
-        return sys.executable
-
-    if sys.platform != "win32":
-        return shutil.which("python3") or shutil.which("python")
-
-    # On elevated processes, shutil.which may miss user-PATH entries,
-    # but let's try — filter out Windows App Execution Aliases (stubs that
-    # don't work elevated).
-    for name in ("python", "python3"):
-        path = shutil.which(name)
-        if path and "WindowsApps" not in path:
-            return path
-
-    # Search user Python installations (most common for non-admin installs).
-    user_root = Path.home() / "AppData" / "Local" / "Programs" / "Python"
-    if user_root.exists():
-        for python_dir in sorted(user_root.glob("Python3*"), reverse=True):
-            exe = python_dir / "python.exe"
-            if exe.exists():
-                return str(exe)
-
-    # Search system-wide Python installations.
-    for base in (Path("C:\\"), Path("C:\\Program Files"), Path("C:\\Program Files (x86)")):
-        for python_dir in sorted(base.glob("Python3*"), reverse=True):
-            exe = python_dir / "python.exe"
-            if exe.exists():
-                return str(exe)
-
-    return None
-
-
-def install_mitmproxy(timeout: int = 120) -> bool:
-    """Install mitmproxy, using the system Python interpreter even when elevated."""
-    python = _find_python()
-    if python:
-        cmd = [python, "-m", "pip", "install", "mitmproxy"]
-    else:
-        # Last resort: rely on pip being on PATH.
-        cmd = ["pip", "install", "mitmproxy"]
-
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-
-    if result.returncode != 0:
-        raise Exception(f"Installation failed: {result.stderr or result.stdout}")
-
-    return True
-
-
 def setup_certificate() -> Path:
     """
-    Generate mitmproxy CA certificate by starting and stopping mitmdump.
+    Create the mitmproxy CA if it is not there yet. Done in-process, so mitmdump does not have to be
+    installed and there is no 3 second sleep waiting for a subprocess.
 
     Returns:
-        Path to the generated certificate
+        Path to the certificate.
 
     Raises:
-        FileNotFoundError: If mitmdump is not installed
-        Exception: If certificate generation fails
+        Exception: If the certificate could not be created.
     """
-    mitmdump_path = find_mitmdump()
-    if not mitmdump_path:
-        raise FileNotFoundError("mitmdump not found. Please install mitmproxy.")
+    from mitmproxy import certs
 
-    # Start mitmdump briefly to generate certificate
-    process = subprocess.Popen(
-        [mitmdump_path],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
-
-    # Give it time to generate the certificate
-    time.sleep(3)
-
-    # Stop the process
-    process.terminate()
-    try:
-        process.wait(timeout=5)
-    except subprocess.TimeoutExpired:
-        process.kill()
-
-    # Verify certificate was created
     cert_path = certificate_path()
+    cert_path.parent.mkdir(parents=True, exist_ok=True)
+    certs.CertStore.from_store(cert_path.parent, "mitmproxy", key_size=2048)
     if not cert_path.exists():
         raise Exception("Certificate was not generated")
-
     return cert_path
 
 

@@ -1,4 +1,4 @@
-# tests/api/test_setup.py
+﻿# tests/api/test_setup.py
 import subprocess
 import pytest
 from unittest.mock import patch, MagicMock
@@ -46,22 +46,6 @@ def test_setup_status_returns_expected_shape():
     assert body["mitmproxy"] is True
     assert body["mitmproxy_version"] == "10.1.1"
     assert body["certificate"] is False
-
-
-def test_install_mitmproxy_success():
-    with patch("api.routes.setup.install_mitmproxy", return_value=True):
-        r = client.post("/api/setup/install-mitmproxy")
-    assert r.status_code == 200
-    assert r.json()["ok"] is True
-
-
-def test_install_mitmproxy_failure():
-    with patch("api.routes.setup.install_mitmproxy", side_effect=Exception("pip failed")):
-        r = client.post("/api/setup/install-mitmproxy")
-    assert r.status_code == 200
-    body = r.json()
-    assert body["ok"] is False
-    assert "pip failed" in body["error"]
 
 
 def test_generate_cert_success():
@@ -265,7 +249,6 @@ def test_check_prerequisites_includes_certificate_trusted(tmp_path, monkeypatch)
     from api.capture import setup as setup_module
     cert_path, _ = _write_pem_cert(tmp_path)
 
-    monkeypatch.setattr(setup_module, "find_mitmdump", lambda: None)
     monkeypatch.setattr(Path, "home", classmethod(lambda cls: tmp_path))
     # mitmproxy expects ~/.mitmproxy/mitmproxy-ca-cert.cer
     mitmproxy_dir = tmp_path / ".mitmproxy"
@@ -301,7 +284,6 @@ def test_setup_status_response_includes_certificate_trusted():
 
 def test_check_prerequisites_certificate_trusted_false_when_no_file(tmp_path, monkeypatch):
     from api.capture import setup as setup_module
-    monkeypatch.setattr(setup_module, "find_mitmdump", lambda: None)
     monkeypatch.setattr(Path, "home", classmethod(lambda cls: tmp_path))
     # No cert file at all → must NOT shell out, must return False
     called = {"n": 0}

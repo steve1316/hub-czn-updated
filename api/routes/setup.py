@@ -10,7 +10,6 @@ from fastapi import APIRouter, HTTPException
 from api.capture.setup import (
     certificate_path,
     check_prerequisites,
-    install_mitmproxy,
     setup_certificate,
     open_certificate,
     install_certificate,
@@ -33,15 +32,6 @@ def get_setup_status():
         "can_write_hosts": s.can_write_hosts,
         "hosts_block_reason": s.hosts_block_reason,
     }
-
-
-@router.post("/setup/install-mitmproxy")
-def post_install_mitmproxy():
-    try:
-        install_mitmproxy()
-        return {"ok": True}
-    except Exception as exc:
-        return {"ok": False, "error": str(exc)}
 
 
 @router.post("/setup/generate-cert")
