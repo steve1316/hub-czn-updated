@@ -100,38 +100,77 @@ def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
 
 def is_certificate_trusted(cert_path: Path) -> bool:
     """
-    Check whether the certificate's SHA-1 thumbprint exists in the Windows
-    LocalMachine\\Root store via 'certutil -verifystore Root <thumbprint>'.
-    Returns False on any failure (missing file, missing certutil, timeout,
-    non-zero exit). Never raises.
+    Check whether the certificate is trusted. Looks in the per-user Root store first, then the machine store
+    so certs installed by older versions still count.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        True if the thumbprint is in either store. False on any failure. Never raises.
     """
     thumbprint = get_certificate_thumbprint(cert_path)
     if not thumbprint:
         return False
-    try:
-        result = subprocess.run(
-            ["certutil", "-verifystore", "Root", thumbprint],
-            capture_output=True,
-            text=True,
-            timeout=5,
-        )
-    except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
-        return False
-    return result.returncode == 0
+    for store_args in (["-user"], []):
+        try:
+            result = subprocess.run(
+                ["certutil", *store_args, "-verifystore", "Root", thumbprint],
+                capture_output=True,
+                text=True,
+                timeout=5,
+            )
+        except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+            return False
+        if result.returncode == 0:
+            return True
+    return False
+
+
+def remove_certificate(cert_path: Path) -> list:
+    """
+    Delete the CA from both Root stores. Matches on the thumbprint, or on the name "mitmproxy" when the
+    cert file is already gone. The machine store only clears if we happen to be admin.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        Names of the stores it was actually removed from, e.g. ["user"].
+    """
+    match = get_certificate_thumbprint(cert_path) or "mitmproxy"
+    removed = []
+    for name, store_args in (("user", ["-user"]), ("machine", [])):
+        try:
+            result = subprocess.run(
+                ["certutil", *store_args, "-delstore", "Root", match],
+                capture_output=True,
+                text=True,
+                timeout=15,
+            )
+        except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+            continue
+        if result.returncode == 0:
+            removed.append(name)
+    return removed
 
 
 def install_certificate(cert_path: Path) -> None:
     """
-    Install the certificate into Windows LocalMachine\\Root via
-    'certutil -addstore -f Root <path>'. Idempotent. Requires admin rights.
-    Raises CertificateInstallError on any failure (missing file, missing certutil,
-    non-zero exit) with the diagnostic message in the exception text.
+    Add the certificate to the current user's Root store. Per-user keeps it away from every other account
+    on the PC and needs no admin rights. Idempotent.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Raises:
+        CertificateInstallError: If the file is missing or certutil fails.
     """
     if not cert_path.exists():
         raise CertificateInstallError(f"Certificate file not found: {cert_path}")
     try:
         result = subprocess.run(
-            ["certutil", "-addstore", "-f", "Root", str(cert_path)],
+            ["certutil", "-user", "-addstore", "-f", "Root", str(cert_path)],
             capture_output=True,
             text=True,
             timeout=15,

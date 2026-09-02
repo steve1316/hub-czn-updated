@@ -234,15 +234,19 @@ def test_install_certificate_endpoint_returns_error_on_failure():
     assert "antivirus blocked" in body["error"]
 
 
-def test_install_certificate_endpoint_403_when_not_admin():
+def test_install_certificate_endpoint_works_without_admin():
+    # The per-user store needs no elevation, so a non-admin install must still go through.
     mock_status = MagicMock(
         is_admin=False,
         has_certificate=True,
         certificate_path=Path("/fake/cert.cer"),
     )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status):
+    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+         patch("api.routes.setup.install_certificate") as install:
         r = client.post("/api/setup/install-certificate")
-    assert r.status_code == 403
+    assert r.status_code == 200
+    assert r.json() == {"ok": True}
+    install.assert_called_once_with(Path("/fake/cert.cer"))
 
 
 def test_install_certificate_endpoint_404_when_no_cert_file():
@@ -309,3 +313,92 @@ def test_check_prerequisites_certificate_trusted_false_when_no_file(tmp_path, mo
     assert status.has_certificate is False
     assert status.certificate_trusted is False
     assert called["n"] == 0
+
+
+# Per-user certificate store: install into CurrentUser\Root instead of LocalMachine\Root
+# so the CA only affects this account. Trust checks still accept the old machine store.
+
+
+def _record_runs(monkeypatch, returncodes):
+    """Patch subprocess.run to record argv lists and return the given exit codes in order."""
+    calls = []
+
+    def fake_run(cmd, *a, **kw):
+        calls.append(list(cmd))
+        rc = returncodes[len(calls) - 1] if len(calls) <= len(returncodes) else returncodes[-1]
+        return subprocess.CompletedProcess(args=cmd, returncode=rc, stdout="", stderr="")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    return calls
+
+
+def test_install_certificate_targets_the_current_user_store(tmp_path, monkeypatch):
+    from api.capture.setup import install_certificate
+    cert_path, _ = _write_pem_cert(tmp_path)
+    calls = _record_runs(monkeypatch, [0])
+    install_certificate(cert_path)
+    assert calls[0][:4] == ["certutil", "-user", "-addstore", "-f"]
+    assert "Root" in calls[0]
+
+
+def test_is_trusted_true_when_only_in_user_store(tmp_path, monkeypatch):
+    from api.capture.setup import is_certificate_trusted
+    cert_path, _ = _write_pem_cert(tmp_path)
+    calls = _record_runs(monkeypatch, [0])
+    assert is_certificate_trusted(cert_path) is True
+    assert "-user" in calls[0]
+    assert len(calls) == 1  # found in the user store, no need to check the machine store
+
+
+def test_is_trusted_falls_back_to_machine_store(tmp_path, monkeypatch):
+    from api.capture.setup import is_certificate_trusted
+    cert_path, _ = _write_pem_cert(tmp_path)
+    calls = _record_runs(monkeypatch, [1, 0])  # miss in user store, hit in machine store
+    assert is_certificate_trusted(cert_path) is True
+    assert len(calls) == 2
+    assert "-user" not in calls[1]
+
+
+def test_is_trusted_false_when_in_neither_store(tmp_path, monkeypatch):
+    from api.capture.setup import is_certificate_trusted
+    cert_path, _ = _write_pem_cert(tmp_path)
+    _record_runs(monkeypatch, [1, 1])
+    assert is_certificate_trusted(cert_path) is False
+
+
+def test_remove_certificate_clears_both_stores(tmp_path, monkeypatch):
+    from api.capture.setup import remove_certificate
+    cert_path, thumb = _write_pem_cert(tmp_path)
+    calls = _record_runs(monkeypatch, [0, 0])
+    removed = remove_certificate(cert_path)
+    assert removed == ["user", "machine"]
+    assert calls[0] == ["certutil", "-user", "-delstore", "Root", thumb]
+    assert calls[1] == ["certutil", "-delstore", "Root", thumb]
+
+
+def test_remove_certificate_reports_only_stores_it_cleared(tmp_path, monkeypatch):
+    from api.capture.setup import remove_certificate
+    cert_path, _ = _write_pem_cert(tmp_path)
+    _record_runs(monkeypatch, [0, 1])  # present in user store only
+    assert remove_certificate(cert_path) == ["user"]
+
+
+def test_remove_certificate_falls_back_to_name_when_file_is_gone(tmp_path, monkeypatch):
+    from api.capture.setup import remove_certificate
+    calls = _record_runs(monkeypatch, [0, 0])
+    remove_certificate(tmp_path / "gone.cer")
+    assert calls[0][-1] == "mitmproxy"  # no thumbprint available, match by subject name
+
+
+def test_remove_certificate_endpoint():
+    mock_status = MagicMock(
+        is_admin=True,
+        has_certificate=True,
+        certificate_path=Path("/fake/cert.cer"),
+    )
+    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+         patch("api.routes.setup.remove_certificate", return_value=["user"]) as rm:
+        r = client.post("/api/setup/remove-certificate")
+    assert r.status_code == 200
+    assert r.json() == {"ok": True, "removed_from": ["user"]}
+    rm.assert_called_once_with(Path("/fake/cert.cer"))

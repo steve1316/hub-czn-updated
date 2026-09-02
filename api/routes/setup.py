@@ -11,6 +11,7 @@ from api.capture.setup import (
     setup_certificate,
     open_certificate,
     install_certificate,
+    remove_certificate,
     CertificateInstallError,
 )
 
@@ -63,9 +64,8 @@ def post_open_cert():
 
 @router.post("/setup/install-certificate")
 def post_install_certificate():
+    # No admin check: the cert goes into the per-user store, which any account can write.
     s = check_prerequisites()
-    if not s.is_admin:
-        raise HTTPException(status_code=403, detail="Administrator privileges required.")
     if not s.has_certificate or s.certificate_path is None:
         raise HTTPException(status_code=404, detail="Certificate not found. Generate it first.")
     try:
@@ -73,3 +73,11 @@ def post_install_certificate():
         return {"ok": True}
     except CertificateInstallError as exc:
         return {"ok": False, "error": str(exc)}
+
+
+@router.post("/setup/remove-certificate")
+def post_remove_certificate():
+    s = check_prerequisites()
+    if not s.has_certificate or s.certificate_path is None:
+        raise HTTPException(status_code=404, detail="Certificate not found.")
+    return {"ok": True, "removed_from": remove_certificate(s.certificate_path)}
