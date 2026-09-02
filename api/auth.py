@@ -7,14 +7,15 @@ stdout and sends it back on every request.
 """
 
 import secrets
-from urllib.parse import parse_qs
 
+from starlette.requests import HTTPConnection
 from starlette.responses import JSONResponse
 
-# Game images are loaded by <img> tags that cannot send headers, and there is nothing private in them.
-OPEN_PREFIXES = ("/assets",)
+# Where main.py mounts the static game art. Imported there too so the two cannot drift apart.
+# Those files are loaded by <img> tags that cannot send headers, and none of it is private.
+ASSETS_PREFIX = "/assets"
 
-HEADER_NAME = b"x-hub-token"
+HEADER_NAME = "x-hub-token"
 
 
 class TokenAuthMiddleware:
@@ -35,7 +36,7 @@ class TokenAuthMiddleware:
             await self.app(scope, receive, send)
             return
 
-        if scope.get("path", "").startswith(OPEN_PREFIXES) or self._token_ok(scope):
+        if scope.get("path", "").startswith(ASSETS_PREFIX) or self._token_ok(scope):
             await self.app(scope, receive, send)
             return
 
@@ -47,8 +48,8 @@ class TokenAuthMiddleware:
 
     def _token_ok(self, scope) -> bool:
         """
-        Look for the token in the header, then the query string. WebSockets and image tags cannot set
-        headers, so they pass it as ?token=.
+        Look for the token in the header, then the query string. WebSockets cannot set headers, so they
+        pass it as ?token= instead.
 
         Args:
             scope: The ASGI connection scope.
@@ -56,12 +57,7 @@ class TokenAuthMiddleware:
         Returns:
             True if the supplied token matches.
         """
-        supplied = ""
-        for key, value in scope.get("headers") or []:
-            if key.lower() == HEADER_NAME:
-                supplied = value.decode("latin-1")
-                break
-        if not supplied:
-            query = parse_qs(scope.get("query_string", b"").decode("latin-1"))
-            supplied = (query.get("token") or [""])[0]
+        # HTTPConnection is the shared base of Request and WebSocket, so it handles both scope types.
+        conn = HTTPConnection(scope)
+        supplied = conn.headers.get(HEADER_NAME) or conn.query_params.get("token", "")
         return secrets.compare_digest(supplied, self.token)
