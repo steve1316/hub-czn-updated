@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AppShell } from './components/layout/AppShell'
 import { useApiPort } from './hooks/useApiPort'
+import { useApiToken } from './hooks/useApiToken'
 import { setApiPort } from './lib/api'
 import { FragmentsPage } from './pages/fragments/FragmentsPage'
 import { SetupPage } from './pages/setup/SetupPage'
@@ -35,6 +36,7 @@ const queryClient = new QueryClient({
 
 function AppRoutes() {
   const port = useApiPort()
+  useApiToken()                          // primes the token used by HTTP calls and WebSockets
   useEffect(() => { setApiPort(port) }, [port])
 
   return (

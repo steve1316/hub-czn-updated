@@ -11,9 +11,14 @@ import type {
 } from './types'
 
 let _port: number = Number(import.meta.env.VITE_API_PORT ?? 7842)
+let _token: string = (import.meta.env.VITE_API_TOKEN as string | undefined) ?? ''
 
 export function setApiPort(port: number): void {
   _port = port
+}
+
+export function setApiToken(token: string): void {
+  _token = token
 }
 
 function base(): string {
@@ -21,12 +26,38 @@ function base(): string {
   return envUrl ?? `http://127.0.0.1:${_port}`
 }
 
+/** Build a WebSocket URL with the token in the query string, since sockets cannot send headers. */
+export function wsUrl(path: string): string {
+  const url = base().replace(/^http/, 'ws')
+  return _token ? `${url}${path}?token=${encodeURIComponent(_token)}` : `${url}${path}`
+}
+
+let _tokenPromise: Promise<string> | null = null
+
+/**
+ * Make sure we have the token before the first call. Asking Tauri lazily avoids a race where a
+ * query fires before App has had a chance to push the token in.
+ */
+async function ensureToken(): Promise<string> {
+  if (_token) return _token
+  if (typeof window === 'undefined' || !window.__TAURI__) return _token
+  if (!_tokenPromise) {
+    _tokenPromise = import('@tauri-apps/api/core')
+      .then(({ invoke }) => invoke<string>('get_api_token'))
+      .then(t => { _token = t; return t })
+      .catch(() => '')
+  }
+  return _tokenPromise
+}
+
 async function request<T>(path: string, options?: RequestInit): Promise<T> {
   const hasBody = options?.body != null
+  const token = await ensureToken()
   const res = await fetch(`${base()}${path}`, {
     ...options,
     headers: {
       ...(hasBody && { 'Content-Type': 'application/json' }),
+      ...(token && { 'X-Hub-Token': token }),
       ...options?.headers,
     },
   })

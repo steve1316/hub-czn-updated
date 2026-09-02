@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef, useCallback } from 'react'
+import { wsUrl } from '@/lib/api'
 import type { CaptureLogMessage } from '@/lib/types'
 
 export function useCaptureLog(port: number) {
@@ -12,7 +13,7 @@ export function useCaptureLog(port: number) {
 
     function connect() {
       if (destroyed) return
-      const ws = new WebSocket(`ws://127.0.0.1:${port}/ws/capture-log`)
+      const ws = new WebSocket(wsUrl('/ws/capture-log'))
       wsRef.current = ws
 
       ws.onopen = () => setConnected(true)

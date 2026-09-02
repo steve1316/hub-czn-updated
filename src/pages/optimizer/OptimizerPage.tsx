@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useApiPort } from '@/hooks/useApiPort'
-import { api } from '@/lib/api'
+import { api, wsUrl } from '@/lib/api'
 import type { OptimizerConfig, OptimizeProgress, OptimizeResult } from '@/lib/types'
 import { OptimizerPanel } from './OptimizerPanel'
 import { ResultsArea } from './ResultsArea'
@@ -73,7 +73,7 @@ export function OptimizerPage() {
 
   // WebSocket: open on mount, reopen if port changes
   useEffect(() => {
-    const ws = new WebSocket(`ws://127.0.0.1:${port}/ws`)
+    const ws = new WebSocket(wsUrl('/ws'))
 
     ws.onmessage = (e: MessageEvent) => {
       let msg: Record<string, unknown>
