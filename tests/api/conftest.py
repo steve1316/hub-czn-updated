@@ -9,6 +9,15 @@ def client():
 
 
 @pytest.fixture(autouse=True)
+def reset_machine_store_cache():
+    """The machine-store miss cache is module level, so clear it between tests."""
+    from api.capture import setup as capture_setup
+    capture_setup._machine_store_misses.clear()
+    yield
+    capture_setup._machine_store_misses.clear()
+
+
+@pytest.fixture(autouse=True)
 def reset_optimizer_state():
     from api.state import state
     from game_data.constants import ALL_STAT_NAMES

@@ -4,8 +4,11 @@ from __future__ import annotations
 from api.frozen_path import add_vribbels_to_path
 add_vribbels_to_path()
 
+from pathlib import Path
+
 from fastapi import APIRouter, HTTPException
 from api.capture.setup import (
+    certificate_path,
     check_prerequisites,
     install_mitmproxy,
     setup_certificate,
@@ -50,14 +53,21 @@ def post_generate_cert():
         return {"ok": False, "error": str(exc)}
 
 
+def _existing_cert() -> Path:
+    """Return the CA path, or 404 if it has not been generated yet."""
+    cert = certificate_path()
+    if not cert.exists():
+        raise HTTPException(status_code=404, detail="Certificate not found. Generate it first.")
+    return cert
+
+
 @router.post("/setup/open-cert")
 def post_open_cert():
-    s = check_prerequisites()
-    if not s.has_certificate or s.certificate_path is None:
-        raise HTTPException(status_code=404, detail="Certificate not found. Generate it first.")
     try:
-        open_certificate(s.certificate_path)
+        open_certificate(_existing_cert())
         return {"ok": True}
+    except HTTPException:
+        raise
     except Exception as exc:
         raise HTTPException(status_code=500, detail=str(exc))
 
@@ -65,11 +75,8 @@ def post_open_cert():
 @router.post("/setup/install-certificate")
 def post_install_certificate():
     # No admin check: the cert goes into the per-user store, which any account can write.
-    s = check_prerequisites()
-    if not s.has_certificate or s.certificate_path is None:
-        raise HTTPException(status_code=404, detail="Certificate not found. Generate it first.")
     try:
-        install_certificate(s.certificate_path)
+        install_certificate(_existing_cert())
         return {"ok": True}
     except CertificateInstallError as exc:
         return {"ok": False, "error": str(exc)}
@@ -77,7 +84,4 @@ def post_install_certificate():
 
 @router.post("/setup/remove-certificate")
 def post_remove_certificate():
-    s = check_prerequisites()
-    if not s.has_certificate or s.certificate_path is None:
-        raise HTTPException(status_code=404, detail="Certificate not found.")
-    return {"ok": True, "removed_from": remove_certificate(s.certificate_path)}
+    return {"ok": True, "removed_from": remove_certificate(_existing_cert())}

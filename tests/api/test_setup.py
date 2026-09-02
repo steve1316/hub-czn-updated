@@ -9,6 +9,26 @@ from api.main import app
 client = TestClient(app)
 
 
+def _cert_stub(exists: bool):
+    """Stand-in for certificate_path() so the cert endpoints do not touch the real filesystem."""
+    cert = MagicMock(spec=Path)
+    cert.exists.return_value = exists
+    return cert
+
+
+def _record_runs(monkeypatch, returncodes):
+    """Patch subprocess.run to record argv lists and return the given exit codes in order."""
+    calls = []
+
+    def fake_run(cmd, *a, **kw):
+        calls.append(list(cmd))
+        rc = returncodes[len(calls) - 1] if len(calls) <= len(returncodes) else returncodes[-1]
+        return subprocess.CompletedProcess(args=cmd, returncode=rc, stdout="", stderr="")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    return calls
+
+
 def test_setup_status_returns_expected_shape():
     mock_status = MagicMock(
         is_admin=False,
@@ -53,8 +73,7 @@ def test_generate_cert_success():
 
 
 def test_open_cert_no_certificate():
-    mock_status = MagicMock(has_certificate=False, certificate_path=None)
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status):
+    with patch("api.routes.setup.certificate_path", return_value=_cert_stub(False)):
         r = client.post("/api/setup/open-cert")
     assert r.status_code == 404
 
@@ -205,27 +224,18 @@ def test_install_certificate_raises_when_certutil_missing(tmp_path, monkeypatch)
 
 
 def test_install_certificate_endpoint_success():
-    mock_status = MagicMock(
-        is_admin=True,
-        has_certificate=True,
-        certificate_path=Path("/fake/cert.cer"),
-    )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+    cert = _cert_stub(True)
+    with patch("api.routes.setup.certificate_path", return_value=cert), \
          patch("api.routes.setup.install_certificate") as install:
         r = client.post("/api/setup/install-certificate")
     assert r.status_code == 200
     assert r.json() == {"ok": True}
-    install.assert_called_once_with(Path("/fake/cert.cer"))
+    install.assert_called_once_with(cert)
 
 
 def test_install_certificate_endpoint_returns_error_on_failure():
     from api.capture.setup import CertificateInstallError
-    mock_status = MagicMock(
-        is_admin=True,
-        has_certificate=True,
-        certificate_path=Path("/fake/cert.cer"),
-    )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+    with patch("api.routes.setup.certificate_path", return_value=_cert_stub(True)), \
          patch("api.routes.setup.install_certificate", side_effect=CertificateInstallError("antivirus blocked")):
         r = client.post("/api/setup/install-certificate")
     assert r.status_code == 200
@@ -235,27 +245,18 @@ def test_install_certificate_endpoint_returns_error_on_failure():
 
 
 def test_install_certificate_endpoint_works_without_admin():
-    # The per-user store needs no elevation, so a non-admin install must still go through.
-    mock_status = MagicMock(
-        is_admin=False,
-        has_certificate=True,
-        certificate_path=Path("/fake/cert.cer"),
-    )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+    # The per-user store needs no elevation, so the route must not consult admin status at all.
+    cert = _cert_stub(True)
+    with patch("api.routes.setup.certificate_path", return_value=cert), \
          patch("api.routes.setup.install_certificate") as install:
         r = client.post("/api/setup/install-certificate")
     assert r.status_code == 200
     assert r.json() == {"ok": True}
-    install.assert_called_once_with(Path("/fake/cert.cer"))
+    install.assert_called_once_with(cert)
 
 
 def test_install_certificate_endpoint_404_when_no_cert_file():
-    mock_status = MagicMock(
-        is_admin=True,
-        has_certificate=False,
-        certificate_path=None,
-    )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status):
+    with patch("api.routes.setup.certificate_path", return_value=_cert_stub(False)):
         r = client.post("/api/setup/install-certificate")
     assert r.status_code == 404
 
@@ -319,19 +320,6 @@ def test_check_prerequisites_certificate_trusted_false_when_no_file(tmp_path, mo
 # so the CA only affects this account. Trust checks still accept the old machine store.
 
 
-def _record_runs(monkeypatch, returncodes):
-    """Patch subprocess.run to record argv lists and return the given exit codes in order."""
-    calls = []
-
-    def fake_run(cmd, *a, **kw):
-        calls.append(list(cmd))
-        rc = returncodes[len(calls) - 1] if len(calls) <= len(returncodes) else returncodes[-1]
-        return subprocess.CompletedProcess(args=cmd, returncode=rc, stdout="", stderr="")
-
-    monkeypatch.setattr(subprocess, "run", fake_run)
-    return calls
-
-
 def test_install_certificate_targets_the_current_user_store(tmp_path, monkeypatch):
     from api.capture.setup import install_certificate
     cert_path, _ = _write_pem_cert(tmp_path)
@@ -391,14 +379,10 @@ def test_remove_certificate_falls_back_to_name_when_file_is_gone(tmp_path, monke
 
 
 def test_remove_certificate_endpoint():
-    mock_status = MagicMock(
-        is_admin=True,
-        has_certificate=True,
-        certificate_path=Path("/fake/cert.cer"),
-    )
-    with patch("api.routes.setup.check_prerequisites", return_value=mock_status), \
+    cert = _cert_stub(True)
+    with patch("api.routes.setup.certificate_path", return_value=cert), \
          patch("api.routes.setup.remove_certificate", return_value=["user"]) as rm:
         r = client.post("/api/setup/remove-certificate")
     assert r.status_code == 200
     assert r.json() == {"ok": True, "removed_from": ["user"]}
-    rm.assert_called_once_with(Path("/fake/cert.cer"))
+    rm.assert_called_once_with(cert)

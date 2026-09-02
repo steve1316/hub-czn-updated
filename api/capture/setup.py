@@ -14,9 +14,19 @@ from pathlib import Path
 from typing import Optional
 
 
+# Thumbprints already known to be absent from the machine store, so the polled status check does not
+# keep shelling out for them.
+_machine_store_misses = set()
+
+
 class CertificateInstallError(Exception):
     """Raised when certificate installation fails."""
     pass
+
+
+def certificate_path() -> Path:
+    """Where mitmproxy writes its CA. Not a constant so tests can patch Path.home()."""
+    return Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
 
 
 def find_mitmdump() -> Optional[str]:
@@ -98,6 +108,29 @@ def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
         return None
 
 
+def _run_certutil(args: list, timeout: int = 15):
+    """
+    Run certutil with the console window hidden. Never raises.
+
+    Args:
+        args: Arguments to pass after the exe name.
+        timeout: Seconds to wait before giving up.
+
+    Returns:
+        The CompletedProcess, or None if certutil could not be run at all.
+    """
+    try:
+        return subprocess.run(
+            ["certutil", *args],
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+        )
+    except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+        return None
+
+
 def is_certificate_trusted(cert_path: Path) -> bool:
     """
     Check whether the certificate is trusted. Looks in the per-user Root store first, then the machine store
@@ -113,24 +146,25 @@ def is_certificate_trusted(cert_path: Path) -> bool:
     if not thumbprint:
         return False
     for store_args in (["-user"], []):
-        try:
-            result = subprocess.run(
-                ["certutil", *store_args, "-verifystore", "Root", thumbprint],
-                capture_output=True,
-                text=True,
-                timeout=5,
-            )
-        except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+        # The machine store is only a fallback for older installs and cannot change while we run,
+        # so remember misses. The Setup page polls this every 5 seconds.
+        if not store_args and thumbprint in _machine_store_misses:
+            continue
+        result = _run_certutil([*store_args, "-verifystore", "Root", thumbprint], timeout=5)
+        if result is None:
             return False
         if result.returncode == 0:
             return True
+        if not store_args:
+            _machine_store_misses.add(thumbprint)
     return False
 
 
-def remove_certificate(cert_path: Path) -> list:
+def remove_certificate(cert_path: Path) -> list[str]:
     """
     Delete the CA from both Root stores. Matches on the thumbprint, or on the name "mitmproxy" when the
-    cert file is already gone. The machine store only clears if we happen to be admin.
+    cert file is already gone. Clearing the machine store needs admin, so it usually fails now that we
+    install per-user.
 
     Args:
         cert_path: Path to the certificate file.
@@ -139,18 +173,11 @@ def remove_certificate(cert_path: Path) -> list:
         Names of the stores it was actually removed from, e.g. ["user"].
     """
     match = get_certificate_thumbprint(cert_path) or "mitmproxy"
+    _machine_store_misses.discard(match)
     removed = []
     for name, store_args in (("user", ["-user"]), ("machine", [])):
-        try:
-            result = subprocess.run(
-                ["certutil", *store_args, "-delstore", "Root", match],
-                capture_output=True,
-                text=True,
-                timeout=15,
-            )
-        except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
-            continue
-        if result.returncode == 0:
+        result = _run_certutil([*store_args, "-delstore", "Root", match])
+        if result is not None and result.returncode == 0:
             removed.append(name)
     return removed
 
@@ -168,17 +195,9 @@ def install_certificate(cert_path: Path) -> None:
     """
     if not cert_path.exists():
         raise CertificateInstallError(f"Certificate file not found: {cert_path}")
-    try:
-        result = subprocess.run(
-            ["certutil", "-user", "-addstore", "-f", "Root", str(cert_path)],
-            capture_output=True,
-            text=True,
-            timeout=15,
-        )
-    except FileNotFoundError:
-        raise CertificateInstallError("certutil.exe not found on PATH")
-    except subprocess.TimeoutExpired:
-        raise CertificateInstallError("certutil timed out installing the certificate")
+    result = _run_certutil(["-user", "-addstore", "-f", "Root", str(cert_path)])
+    if result is None:
+        raise CertificateInstallError("certutil.exe could not be run")
     if result.returncode != 0:
         msg = (result.stderr or result.stdout or "unknown error").strip()
         raise CertificateInstallError(msg)
@@ -247,7 +266,7 @@ def check_prerequisites() -> PrerequisiteStatus:
             pass
 
     # Check certificate
-    cert_path = Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
+    cert_path = certificate_path()
     has_certificate = cert_path.exists()
     certificate_trusted = is_certificate_trusted(cert_path) if has_certificate else False
 
@@ -376,7 +395,7 @@ def setup_certificate() -> Path:
         process.kill()
 
     # Verify certificate was created
-    cert_path = Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
+    cert_path = certificate_path()
     if not cert_path.exists():
         raise Exception("Certificate was not generated")
 
