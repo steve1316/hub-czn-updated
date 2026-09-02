@@ -16,10 +16,57 @@ from typing import Optional, Callable
 from .constants import PROXY_PORT, GAME_PORT, HOSTS_PATH
 from .setup import find_mitmdump
 
+# Markers wrapping the lines we add to the hosts file, so we can find and remove them again.
+HOSTS_BLOCK_START = "# CZN-CAPTURE-START"
+HOSTS_BLOCK_END = "# CZN-CAPTURE-END"
+_HOSTS_BLOCK_RE = r"\n*" + HOSTS_BLOCK_START + r".*?" + HOSTS_BLOCK_END + r"\n*"
+
+# start_capture runs on its own thread while stop_capture comes in on the request thread, so hosts
+# edits need to be serialised.
+_hosts_lock = threading.Lock()
+
 
 class CaptureError(Exception):
     """Raised when capture operations fail."""
     pass
+
+
+def _flush_dns():
+    """Drop the DNS cache so the hosts change takes effect. Windows only, never raises."""
+    if sys.platform != "win32":
+        return
+    try:
+        subprocess.run(["ipconfig", "/flushdns"], capture_output=True)
+    except OSError:
+        pass
+
+
+def remove_capture_entries() -> bool:
+    """
+    Strip our block from the hosts file. Safe to call when there is nothing to remove, and used both
+    by stop_capture and at startup to clean up after a crash.
+
+    Returns:
+        True if the file was actually changed.
+    """
+    with _hosts_lock:
+        try:
+            with open(HOSTS_PATH, "r") as f:
+                content = f.read()
+        except OSError:
+            return False
+        cleaned = re.sub(_HOSTS_BLOCK_RE, "", content, flags=re.DOTALL)
+        if cleaned == content:
+            return False
+        # The regex eats the newlines on both sides of our block, so put a single one back.
+        cleaned = cleaned.rstrip("\n") + "\n" if cleaned.strip() else ""
+        try:
+            with open(HOSTS_PATH, "w") as f:
+                f.write(cleaned)
+        except OSError:
+            return False
+    _flush_dns()
+    return True
 
 
 def _is_process_elevated() -> Optional[bool]:
@@ -821,73 +868,56 @@ class CaptureManager:
         Raises:
             CaptureError: With actionable diagnostic message on failure.
         """
-        try:
-            with open(HOSTS_PATH, "r") as f:
-                content = f.read()
-        except Exception as e:
-            raise CaptureError(
-                f"Cannot read hosts file at {HOSTS_PATH}: {e}\n"
-                f"This is unusual — the file should be world-readable."
-            )
+        with _hosts_lock:
+            try:
+                with open(HOSTS_PATH, "r") as f:
+                    content = f.read()
+            except Exception as e:
+                raise CaptureError(
+                    f"Cannot read hosts file at {HOSTS_PATH}: {e}\n"
+                    f"This is unusual - the file should be world-readable."
+                )
 
-        # Don't modify if already modified
-        if "# CZN-CAPTURE-START" in content:
-            return content
+            # Don't modify if already modified
+            if HOSTS_BLOCK_START in content:
+                return content
 
-        # Probe write access BEFORE building the new content so we fail fast
-        # with a specific reason. We rewrite the file with the same content
-        # — this is a no-op on success, and triggers the same EACCES on failure.
-        try:
-            with open(HOSTS_PATH, "w") as f:
-                f.write(content)
-        except (PermissionError, OSError) as e:
-            raise CaptureError(_diagnose_hosts_write_failure(HOSTS_PATH, e))
+            # Check write access before building the new content so we fail with a specific reason.
+            # Opening for append needs the same rights as a real edit but changes nothing.
+            try:
+                with open(HOSTS_PATH, "a"):
+                    pass
+            except (PermissionError, OSError) as e:
+                raise CaptureError(_diagnose_hosts_write_failure(HOSTS_PATH, e))
 
-        # Build entries and write the real change.
-        from .constants import SERVERS
-        server_config = SERVERS[self.current_region]
-        entries = ["\n# CZN-CAPTURE-START"]
-        for host in server_config.hosts:
-            entries.append(f"127.0.0.1 {host}")
-        entries.append("# CZN-CAPTURE-END\n")
-        new_content = content + "\n".join(entries)
+            # Build entries and write the real change.
+            from .constants import SERVERS
+            server_config = SERVERS[self.current_region]
+            entries = ["\n" + HOSTS_BLOCK_START]
+            for host in server_config.hosts:
+                entries.append(f"127.0.0.1 {host}")
+            entries.append(HOSTS_BLOCK_END + "\n")
+            new_content = content + "\n".join(entries)
 
-        try:
-            with open(HOSTS_PATH, "w") as f:
-                f.write(new_content)
-        except (PermissionError, OSError) as e:
-            # Probe succeeded but real write failed — race condition or transient lock.
-            raise CaptureError(
-                f"Hosts file write failed after access probe succeeded: {e}\n"
-                f"Possible cause: another process locked the file between checks. "
-                f"Common culprits: antivirus real-time scan, DNS resolver service. "
-                f"Retry, and if it persists, temporarily pause the suspected service."
-            )
+            try:
+                with open(HOSTS_PATH, "w") as f:
+                    f.write(new_content)
+            except (PermissionError, OSError) as e:
+                # Probe succeeded but real write failed - race condition or transient lock.
+                raise CaptureError(
+                    f"Hosts file write failed after access probe succeeded: {e}\n"
+                    f"Possible cause: another process locked the file between checks. "
+                    f"Common culprits: antivirus real-time scan, DNS resolver service. "
+                    f"Retry, and if it persists, temporarily pause the suspected service."
+                )
 
-        # Flush DNS cache
-        subprocess.run(["ipconfig", "/flushdns"], capture_output=True)
-
+        _flush_dns()
         return content
 
     def restore_hosts_file(self):
-        """
-        Restore Windows hosts file to original state.
-        Removes CZN-CAPTURE entries added by modify_hosts_file().
-        """
+        """Put the hosts file back the way it was by removing the entries modify_hosts_file() added."""
         try:
-            with open(HOSTS_PATH, "r") as f:
-                content = f.read()
-
-            # Remove our capture entries
-            pattern = r'\n*# CZN-CAPTURE-START.*?# CZN-CAPTURE-END\n*'
-            content = re.sub(pattern, '', content, flags=re.DOTALL)
-
-            with open(HOSTS_PATH, "w") as f:
-                f.write(content)
-
-            # Flush DNS cache
-            subprocess.run(["ipconfig", "/flushdns"], capture_output=True)
-
+            remove_capture_entries()
         except Exception as e:
             self.log_callback(f"Failed to restore hosts: {e}", "error")
 

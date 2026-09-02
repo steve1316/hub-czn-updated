@@ -285,25 +285,32 @@ def check_prerequisites() -> PrerequisiteStatus:
 
 
 def _probe_hosts_writable() -> tuple[bool, Optional[str]]:
-    """Verify the hosts file is writable, surfacing failures BEFORE the user
-    clicks Start Capture. Returns (writable, blocking_reason). The reason is
-    a user-readable message ready to display in the Setup tab."""
+    """
+    Check the hosts file is writable so the Setup tab can warn before the user clicks Start Capture.
+
+    Opening for append needs the same rights as a real edit but writes nothing. That matters because
+    the Setup page polls this every 5 seconds, and a probe that rewrote the file could clobber a
+    running capture's redirect.
+
+    Returns:
+        (writable, blocking_reason). The reason is a user-readable message, or None when fine.
+    """
     if sys.platform != "win32":
         return True, None
-    from .constants import HOSTS_PATH
+    from . import constants
     from .manager import _diagnose_hosts_write_failure
+    hosts_path = constants.HOSTS_PATH
     try:
-        with open(HOSTS_PATH, "r") as f:
-            content = f.read()
+        with open(hosts_path, "r"):
+            pass
     except Exception as e:
         return False, f"Cannot read hosts file: {e}"
     try:
-        # Rewrite identical content as a no-op write probe.
-        with open(HOSTS_PATH, "w") as f:
-            f.write(content)
+        with open(hosts_path, "a"):
+            pass
         return True, None
     except (PermissionError, OSError) as e:
-        return False, _diagnose_hosts_write_failure(HOSTS_PATH, e)
+        return False, _diagnose_hosts_write_failure(hosts_path, e)
 
 
 def _find_python() -> Optional[str]:
