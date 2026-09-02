@@ -368,3 +368,47 @@ def test_remove_certificate_endpoint():
     assert r.status_code == 200
     assert r.json() == {"ok": True, "removed_from": ["user"]}
     rm.assert_called_once_with(cert)
+
+
+def test_install_certificate_keeps_its_window_so_the_prompt_is_visible(tmp_path, monkeypatch):
+    # Adding a root CA to the per-user store makes Windows show a "Security Warning" dialog.
+    # Passing CREATE_NO_WINDOW hides it and certutil then blocks forever on a prompt nobody sees.
+    from api.capture.setup import install_certificate
+    cert_path, _ = _write_pem_cert(tmp_path)
+    seen = {}
+
+    def fake_run(cmd, *a, **kw):
+        seen.update(kw)
+        return subprocess.CompletedProcess(args=cmd, returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    install_certificate(cert_path)
+    assert seen["creationflags"] == 0
+
+
+def test_trust_check_still_hides_its_window(tmp_path, monkeypatch):
+    # verifystore is read-only and never prompts, so it should stay silent.
+    from api.capture.setup import is_certificate_trusted
+    cert_path, _ = _write_pem_cert(tmp_path)
+    seen = {}
+
+    def fake_run(cmd, *a, **kw):
+        seen.update(kw)
+        return subprocess.CompletedProcess(args=cmd, returncode=0, stdout="", stderr="")
+
+    monkeypatch.setattr(subprocess, "run", fake_run)
+    is_certificate_trusted(cert_path)
+    assert seen["creationflags"] != 0
+
+
+def test_install_certificate_explains_an_unanswered_prompt(tmp_path, monkeypatch):
+    from api.capture.setup import install_certificate, CertificateInstallError
+    cert_path, _ = _write_pem_cert(tmp_path)
+
+    def boom(*a, **kw):
+        raise subprocess.TimeoutExpired(cmd="certutil", timeout=120)
+
+    monkeypatch.setattr(subprocess, "run", boom)
+    with pytest.raises(CertificateInstallError) as exc:
+        install_certificate(cert_path)
+    assert "prompt" in str(exc.value).lower()

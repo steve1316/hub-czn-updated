@@ -50,26 +50,46 @@ def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
         return None
 
 
-def _run_certutil(args: list, timeout: int = 15):
+class CertutilPromptTimeout(Exception):
+    """Raised when certutil sat waiting on the Windows security prompt for too long."""
+    pass
+
+
+def _run_certutil(args: list, timeout: int = 15, interactive: bool = False):
     """
-    Run certutil with the console window hidden. Never raises.
+    Run certutil. Never raises except for a timeout on an interactive call.
 
     Args:
         args: Arguments to pass after the exe name.
         timeout: Seconds to wait before giving up.
+        interactive: True for calls that make Windows show its "Security Warning" consent dialog,
+            which adding or deleting a root CA in the per-user store always does. Those must keep
+            their window, otherwise the prompt is invisible and certutil waits forever.
 
     Returns:
         The CompletedProcess, or None if certutil could not be run at all.
+
+    Raises:
+        CertutilPromptTimeout: If an interactive call timed out, which means the prompt went
+            unanswered rather than certutil being broken.
     """
+    creationflags = 0 if interactive else getattr(subprocess, "CREATE_NO_WINDOW", 0)
     try:
         return subprocess.run(
             ["certutil", *args],
             capture_output=True,
             text=True,
             timeout=timeout,
-            creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0),
+            creationflags=creationflags,
         )
-    except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
+    except subprocess.TimeoutExpired:
+        if interactive:
+            raise CertutilPromptTimeout(
+                "Windows asked for confirmation and the prompt was not answered in time. "
+                "Click Yes on the Windows security prompt, then try again."
+            )
+        return None
+    except (FileNotFoundError, OSError):
         return None
 
 
@@ -118,7 +138,8 @@ def remove_certificate(cert_path: Path) -> list[str]:
     _machine_store_misses.discard(match)
     removed = []
     for name, store_args in (("user", ["-user"]), ("machine", [])):
-        result = _run_certutil([*store_args, "-delstore", "Root", match])
+        # Root-store edits make Windows show a consent prompt, so keep the window and wait.
+        result = _run_certutil([*store_args, "-delstore", "Root", match], timeout=120, interactive=True)
         if result is not None and result.returncode == 0:
             removed.append(name)
     return removed
@@ -137,7 +158,12 @@ def install_certificate(cert_path: Path) -> None:
     """
     if not cert_path.exists():
         raise CertificateInstallError(f"Certificate file not found: {cert_path}")
-    result = _run_certutil(["-user", "-addstore", "-f", "Root", str(cert_path)])
+    # Adding a root CA to the per-user store always makes Windows show a "Security Warning"
+    # dialog. It must stay visible or certutil blocks forever on a prompt nobody can see.
+    try:
+        result = _run_certutil(["-user", "-addstore", "-f", "Root", str(cert_path)], timeout=120, interactive=True)
+    except CertutilPromptTimeout as exc:
+        raise CertificateInstallError(str(exc))
     if result is None:
         raise CertificateInstallError("certutil.exe could not be run")
     if result.returncode != 0:
