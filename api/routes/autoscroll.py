@@ -21,7 +21,7 @@ class _StartBody(BaseModel):
 
 def _read_rescue_count() -> int:
     try:
-        from capture.constants import OUTPUT_DIR
+        from api.capture.constants import OUTPUT_DIR
         files = sorted(
             OUTPUT_DIR.glob("rescue_records_*.json"),
             key=lambda f: f.stat().st_mtime,

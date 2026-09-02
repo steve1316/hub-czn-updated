@@ -401,9 +401,15 @@ class CaptureManager:
 
         return None
 
-    def _on_saved(self):
-        """The addon finished writing a snapshot, so tell the UI to reload it."""
-        if self.status_callback:
+    def _on_saved(self, kind: str):
+        """
+        The addon wrote a snapshot, so tell the UI to reload.
+
+        Args:
+            kind: "fragments", "rescue" or "battle". Only a fragments save changes the headline
+                status, which is what the old stdout parser did too.
+        """
+        if kind == "fragments" and self.status_callback:
             self.status_callback("[OK] Data Captured!")
         if self.live_update_callback:
             self.live_update_callback()
@@ -465,6 +471,10 @@ class CaptureManager:
 
         self.log_callback("Starting capture...", None)
 
+        # Importing mitmproxy takes the better part of a second. Get it out of the way before the
+        # hosts redirect goes in, otherwise the game points at a proxy that is not listening yet.
+        import mitmproxy.tools.dump  # noqa: F401
+
         self.resolve_game_server()
         if not self.game_server_ips:
             raise CaptureError("Could not resolve game servers.")
@@ -485,10 +495,12 @@ class CaptureManager:
             on_saved=self._on_saved,
         )
 
-        self._proxy_ready = threading.Event()
+        self._proxy_ready.clear()
         self._proxy_thread = threading.Thread(target=self._run_proxy, args=(real_ip,), daemon=True)
         self._proxy_thread.start()
 
+        # _run_proxy also signals ready from its finally block, so a set event only means
+        # "started or died". Checking _master is what tells the two apart.
         if not self._proxy_ready.wait(timeout=15) or self._master is None:
             self.restore_hosts_file()
             raise CaptureError(
@@ -521,6 +533,9 @@ class CaptureManager:
         if self._proxy_thread:
             self._proxy_thread.join(timeout=10)
         self._proxy_thread = None
+        # The addon's callbacks close over this manager, so drop it or the pair leaks until the
+        # cycle collector runs, holding the debug file handle and the captured data open.
+        self.addon = None
 
         self.restore_hosts_file()
         self.capturing = False

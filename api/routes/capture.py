@@ -73,23 +73,28 @@ def post_capture_start(body: StartRequest):
     mgr = state.get_capture_manager()
     mgr.set_region(body.region)
 
-    def _run():
-        try:
-            mgr.start_capture(debug_mode=body.debug)
-            # Block until the proxy stops, which stop_capture triggers.
-            mgr.wait()
-        except Exception as exc:
-            state.log_queue.put({
-                "level": "error",
-                "message": f"Capture error: {exc}",
-                "timestamp": time.strftime("%H:%M:%S"),
-            })
-        finally:
-            state.capture_running = False
-            state.reset_capture_manager()
+    # Start synchronously so a failure comes back as a real HTTP error. This used to run on a
+    # worker thread, so the endpoint answered {"ok": true} even when capture never started.
+    try:
+        mgr.start_capture(debug_mode=body.debug)
+    except Exception as exc:
+        state.reset_capture_manager()
+        raise HTTPException(status_code=500, detail=str(exc))
 
     state.capture_running = True
-    threading.Thread(target=_run, daemon=True).start()
+
+    def _watch():
+        """Clear the running flag if the proxy stops on its own rather than via /capture/stop."""
+        mgr.wait()
+        if state.capture_running:
+            state.capture_running = False
+            state.log_queue.put({
+                "level": "error",
+                "message": "Capture proxy stopped unexpectedly.",
+                "timestamp": time.strftime("%H:%M:%S"),
+            })
+
+    threading.Thread(target=_watch, daemon=True).start()
     return {"ok": True, "region": body.region}
 
 
@@ -129,7 +134,7 @@ def post_set_region(body: SetRegionRequest):
 @router.post("/capture/open-snapshots")
 def post_open_snapshots():
     import os
-    from capture.constants import OUTPUT_DIR
+    from api.capture.constants import OUTPUT_DIR
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     try:
         os.startfile(str(OUTPUT_DIR))
