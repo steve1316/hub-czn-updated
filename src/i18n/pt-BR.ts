@@ -206,9 +206,8 @@ const ptBR = {
     },
     mitmproxy: {
       label: 'mitmproxy',
-      ok: 'mitmproxy {{version}} instalado',
-      fail: 'Necessário para interceptar o tráfego do jogo',
-      install: 'Instalar',
+      ok: 'mitmproxy {{version}} pronto',
+      fail: 'Faltando nesta versão - reinstale o Hub CZN',
     },
     certificate: {
       label: 'Certificado CA',

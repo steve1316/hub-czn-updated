@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
 import { CheckCircle, XCircle, Loader2, ChevronDown, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { openExternal } from '@/lib/browser'
 
 function StatusIcon({ ok }: { ok: boolean }) {
   return ok
@@ -118,17 +117,6 @@ export function SetupPage() {
           status.mitmproxy
             ? t('setup.mitmproxy.ok', { version: status.mitmproxy_version })
             : t('setup.mitmproxy.fail')
-        }
-        action={
-          !status.mitmproxy && (
-            <Button
-              size="sm"
-              onClick={() => openExternal('https://apps.microsoft.com/detail/9nwndlqmnzd7?hl=en-US&gl=US')}
-              className="bg-[#c084fc] hover:bg-[#9333ea] text-white shrink-0"
-            >
-              {t('setup.mitmproxy.install')}
-            </Button>
-          )
         }
       />
 

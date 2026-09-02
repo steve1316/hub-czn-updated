@@ -92,9 +92,6 @@ export const api = {
 
   setupStatus: () => request<SetupStatus>('/api/setup/status'),
 
-  installMitmproxy: () =>
-    request<SetupActionResponse>('/api/setup/install-mitmproxy', { method: 'POST' }),
-
   generateCert: () =>
     request<SetupActionResponse>('/api/setup/generate-cert', { method: 'POST' }),
 

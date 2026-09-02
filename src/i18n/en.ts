@@ -206,9 +206,8 @@ const en = {
     },
     mitmproxy: {
       label: 'mitmproxy',
-      ok: 'mitmproxy {{version}} installed',
-      fail: 'Required to intercept game traffic',
-      install: 'Install',
+      ok: 'mitmproxy {{version}} ready',
+      fail: 'Missing from this build - reinstall Hub CZN',
     },
     certificate: {
       label: 'CA Certificate',
