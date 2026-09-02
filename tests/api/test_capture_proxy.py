@@ -59,11 +59,28 @@ def test_addon_is_a_real_module_not_a_generated_script(tmp_path):
 def test_addon_reports_saves_through_the_callback(tmp_path):
     # Progress used to be discovered by scraping "Saved:" out of mitmdump's stdout.
     seen = []
-    addon = Addon(tmp_path, on_saved=lambda: seen.append(1))
+    addon = Addon(tmp_path, on_saved=seen.append)
     addon.inventory_data = {"piece_items": [{"id": 1}]}
     addon._save_data()
-    assert seen == [1]
+    assert seen == ["fragments"]
     assert list(tmp_path.glob("memory_fragments_*.json"))
+
+
+def test_debug_log_is_one_json_object_per_line(tmp_path):
+    # Regression: inside the old ADDON_TEMPLATE string the separator was written as "\\n", which
+    # produced a real newline. As a plain module that same source is a literal backslash-n, so the
+    # whole debug log collapsed onto one line.
+    import json
+
+    addon = Addon(tmp_path, debug_mode=True)
+    addon._write_debug({"a": 1})
+    addon._write_debug({"b": 2})
+    addon.done()
+
+    log = next(tmp_path.glob("websocket_debug_*.jsonl"))
+    lines = [l for l in log.read_text(encoding="utf-8").splitlines() if l.strip()]
+    assert len(lines) == 2
+    assert [json.loads(l) for l in lines] == [{"a": 1}, {"b": 2}]
 
 
 def test_certificate_is_generated_in_process(isolated_confdir):

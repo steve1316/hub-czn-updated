@@ -25,6 +25,17 @@ CHAR_NAMES = {rid: c["name"] for rid, c in CHARACTERS.items() if c is not None}
 SET_NAMES = {sid: s["name"] for sid, s in SETS.items()}
 SLOT_NAMES = {k: v.split(" ", 1)[1] if " " in v else v for k, v in EQUIPMENT_SLOTS.items()}
 
+# Zstandard frame header, used to spot compressed WebSocket payloads.
+ZSTD_MAGIC = bytes([0x28, 0xB5, 0x2F, 0xFD])
+
+# Every key the server has been seen to use for the pull history.
+RESCUE_KEYS = (
+    "gacha_history_list",
+    "gacha_records", "rescue_records", "gacha_record_list",
+    "rescue_record_list", "rescue_history", "gacha_history",
+    "pull_records", "pickup_records",
+)
+
 
 def _rescue_record_key(record: dict) -> str:
     """Stable dedup key using only semantic fields, tolerating extra fields and type differences."""
@@ -52,7 +63,7 @@ class Addon:
         dict_path: Optional[Path] = None,
         log_callback: Optional[Callable[[str], None]] = None,
         debug_mode: bool = False,
-        on_saved: Optional[Callable[[], None]] = None
+        on_saved: Optional[Callable[[str], None]] = None
     ):
         """
         Initialize the capture addon.
@@ -62,11 +73,12 @@ class Addon:
             dict_path: Optional path to zstd dictionary file
             log_callback: Optional callback for logging messages (defaults to print)
             debug_mode: If True, log all WebSocket messages to a .jsonl file
-            on_saved: Called after a snapshot is written, so the UI can reload it
+            on_saved: Called with "fragments", "rescue" or "battle" after a snapshot is written,
+                so the UI can reload it
         """
         self.output_dir = output_dir
         self.log_callback = log_callback or (lambda msg: print(msg, flush=True))
-        self.on_saved = on_saved or (lambda: None)
+        self.on_saved = on_saved or (lambda kind: None)
         self.inventory_data = None
         self.character_data = None
         self.saved_path = None
@@ -94,6 +106,13 @@ class Addon:
             except Exception as e:
                 self.log_callback(f"Warning: Failed to load zstd dictionary: {e}")
 
+    def _write_debug(self, entry: dict):
+        """Append one line to the debug JSONL. Does nothing when debug mode is off."""
+        if not self.debug_file:
+            return
+        self.debug_file.write(json.dumps(entry, ensure_ascii=False) + "\n")
+        self.debug_file.flush()
+
     def _detect_region(self) -> Optional[str]:
         """Detect server region from world_id in character data."""
         if not self.character_data:
@@ -116,8 +135,6 @@ class Addon:
         Try to decode binary data - may be compressed or plain JSON.
         Returns decoded string or None if unable to decode.
         """
-        size = len(raw_bytes)
-
         # Try plain UTF-8 first
         try:
             return raw_bytes.decode('utf-8')
@@ -125,7 +142,6 @@ class Addon:
             pass
 
         # Check for Zstandard magic number (0x28 0xB5 0x2F 0xFD)
-        ZSTD_MAGIC = bytes([0x28, 0xB5, 0x2F, 0xFD])
         is_zstd = len(raw_bytes) >= 4 and raw_bytes[:4] == ZSTD_MAGIC
 
         if is_zstd:
@@ -213,8 +229,7 @@ class Addon:
                         "size": len(raw),
                         "hex_head": raw[:64].hex(),
                     }
-                    self.debug_file.write(json.dumps(entry, ensure_ascii=False) + "\\n")
-                    self.debug_file.flush()
+                    self._write_debug(entry)
                 return
 
             try:
@@ -228,8 +243,7 @@ class Addon:
                         "size": len(content),
                         "preview": content[:300],
                     }
-                    self.debug_file.write(json.dumps(entry, ensure_ascii=False) + "\\n")
-                    self.debug_file.flush()
+                    self._write_debug(entry)
                 return
 
             if not isinstance(data, dict):
@@ -244,8 +258,7 @@ class Addon:
                     "size": len(content),
                     "data": data
                 }
-                self.debug_file.write(json.dumps(entry, ensure_ascii=False) + "\\n")
-                self.debug_file.flush()
+                self._write_debug(entry)
 
             # From here on, only process server-side responses (inventory,
             # battle, rescue pipelines). Client requests have a different
@@ -299,12 +312,6 @@ class Addon:
                 self._save_data()
 
             # Capture rescue/gacha records (pull history)
-            RESCUE_KEYS = [
-                "gacha_history_list",
-                "gacha_records", "rescue_records", "gacha_record_list",
-                "rescue_record_list", "rescue_history", "gacha_history",
-                "pull_records", "pickup_records",
-            ]
             for key in RESCUE_KEYS:
                 if key in data:
                     self._save_rescue_data(key, data[key])
@@ -358,8 +365,7 @@ class Addon:
                 except json.JSONDecodeError:
                     entry["decode"] = "not_json"
                     entry["preview"] = content[:300]
-            self.debug_file.write(json.dumps(entry, ensure_ascii=False) + "\\n")
-            self.debug_file.flush()
+            self._write_debug(entry)
         except Exception as e:
             self.log_callback(f"http debug log error: {e}")
 
@@ -398,7 +404,7 @@ class Addon:
         self.log_callback(
             f"Saved: {count} Memory Fragments, {char_count} characters -> {self.saved_path.name}"
         )
-        self.on_saved()
+        self.on_saved("fragments")
 
     def _describe_piece(self, piece_data):
         """Build human-readable piece description like 'Line of Justice Denial (+3)'."""
@@ -495,7 +501,7 @@ class Addon:
         self.log_callback(
             f"[RESCUE] Saved: {len(new_records)} rescue records -> {self.rescue_path.name}"
         )
-        self.on_saved()
+        self.on_saved("rescue")
 
     def _on_battle_info(self, battle_info: dict):
         """Save enemy stats when a new battle begins."""
@@ -564,6 +570,7 @@ class Addon:
             latest_path = self.output_dir / "battle_latest.json"
             with open(latest_path, "w", encoding="utf-8") as f:
                 json.dump(self.battle_data, f, indent=2)
+            self.on_saved("battle")
         except Exception as e:
             self.log_callback(f"[BATTLE] Write error: {e}")
 
