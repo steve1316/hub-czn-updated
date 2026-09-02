@@ -1119,6 +1119,8 @@ addons = [Addon(OUTPUT_DIR, dict_path=DICT_PATH, debug_mode={debug_mode})]
         cmd = [
             mitmdump_path,
             "--mode", f"reverse:https://{real_ip}:{GAME_PORT}/",
+            # Only the local game connects here (the hosts file points at 127.0.0.1), so don't listen on the LAN.
+            "--listen-host", "127.0.0.1",
             "--listen-port", str(PROXY_PORT),
             "--ssl-insecure",
             "--set", "upstream_cert=false",
