@@ -17,10 +17,6 @@ export function setApiPort(port: number): void {
   _port = port
 }
 
-export function setApiToken(token: string): void {
-  _token = token
-}
-
 function base(): string {
   const envUrl = import.meta.env.VITE_API_URL as string | undefined
   return envUrl ?? `http://127.0.0.1:${_port}`
@@ -35,10 +31,12 @@ export function wsUrl(path: string): string {
 let _tokenPromise: Promise<string> | null = null
 
 /**
- * Make sure we have the token before the first call. Asking Tauri lazily avoids a race where a
- * query fires before App has had a chance to push the token in.
+ * Fetch the token from Tauri once and remember it. App waits on this before rendering, so the
+ * synchronous `wsUrl()` always has it by the time a socket opens.
+ *
+ * @returns The API token, or an empty string in dev mode.
  */
-async function ensureToken(): Promise<string> {
+export async function ensureToken(): Promise<string> {
   if (_token) return _token
   if (typeof window === 'undefined' || !window.__TAURI__) return _token
   if (!_tokenPromise) {
