@@ -42,14 +42,13 @@ desktop.ini
 # Exclude snapshots folder (contains user-specific data extracts)
 Vribbels/snapshots/
 
-# Capture output in api/snapshots/ is the player's own account data, never commit it.
-# The reference JSON checked in alongside it (equip_effects, skill_eff_*) stays tracked.
-api/snapshots/memory_fragments_*.json
-api/snapshots/rescue_records_*.json
-api/snapshots/battle_*.json
-api/snapshots/websocket_debug_*.jsonl
-api/snapshots/char_weights.json
-api/snapshots/_capture_addon.py
+# Capture writes the player's own account data into api/snapshots/, so ignore the whole folder and
+# list the reference JSON that is meant to be tracked. New capture output is then ignored by default.
+api/snapshots/*
+!api/snapshots/equip_effects.json
+!api/snapshots/skill_eff_dictionary.json
+!api/snapshots/skill_eff_schema.json
+!api/snapshots/stat_validation_report.json
 
 # Reference images and icon generation tools - not needed in repository
 CZN Assets/
