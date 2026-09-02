@@ -71,6 +71,11 @@ export function SetupPage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
   })
 
+  const removeCertMutation = useMutation({
+    mutationFn: () => api.removeCertificate(),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
+  })
+
   if (isLoading) {
     return <div className="p-8 text-[#b3b3b3]">{t('setup.loading')}</div>
   }
@@ -139,7 +144,7 @@ export function SetupPage() {
         }
         error={certMutation.isError ? certMutation.error : undefined}
         action={
-          !status.certificate && (
+          !status.certificate ? (
             <Button
               size="sm"
               onClick={() => certMutation.mutate()}
@@ -148,7 +153,18 @@ export function SetupPage() {
             >
               {certMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.generate')}
             </Button>
-          )
+          ) : status.certificate_trusted ? (
+            <Button
+              size="sm"
+              variant="outline"
+              onClick={() => removeCertMutation.mutate()}
+              disabled={removeCertMutation.isPending}
+              title={t('setup.certificate.removeHint')}
+              className="border-[#3f3f3f] text-[#b3b3b3] hover:text-[#f3727f] hover:border-[#f3727f] shrink-0"
+            >
+              {removeCertMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.remove')}
+            </Button>
+          ) : null
         }
       />
 

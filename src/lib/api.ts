@@ -1,6 +1,6 @@
 import type {
   ApiStatus, GameData, LoadResponse, MemoryFragment,
-  SetupStatus, SetupActionResponse, CaptureStatus,
+  SetupStatus, SetupActionResponse, RemoveCertResponse, CaptureStatus,
   CaptureStartRequest, CaptureStopResponse, RescueBanner,
   Combatant, CombatantStats, ScoringPriorities,
   OptimizerConfig, EquipmentSet, Monster, AboutInfo, CharPreset,
@@ -74,6 +74,9 @@ export const api = {
 
   installCertificate: () =>
     request<SetupActionResponse>('/api/setup/install-certificate', { method: 'POST' }),
+
+  removeCertificate: () =>
+    request<RemoveCertResponse>('/api/setup/remove-certificate', { method: 'POST' }),
 
   captureStatus: () => request<CaptureStatus>('/api/capture/status'),
 
