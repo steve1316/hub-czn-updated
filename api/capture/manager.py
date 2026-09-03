@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Optional, Callable
 
 from .addon import Addon
-from .setup import certificate_path, install_certificate_for_capture, remove_capture_certificate, setup_certificate
+from .setup import certificate_days_left, certificate_path, install_certificate_for_capture, remove_capture_certificate, setup_certificate
 from .constants import PROXY_PORT, GAME_PORT, HOSTS_PATH
 
 # Markers wrapping the lines we add to the hosts file, so we can find and remove them again.
@@ -478,7 +478,15 @@ class CaptureManager:
         """
         try:
             cert = certificate_path()
+            days_left = certificate_days_left(cert) if cert.exists() else None
             if not cert.exists():
+                setup_certificate()
+            elif days_left is not None and days_left < 0:
+                # Re-adding an expired CA just re-trusts something the game will reject, so make a
+                # new one instead. mitmproxy writes a fresh CA when the old files are gone.
+                self.log_callback("Certificate has expired, generating a new one", "warning")
+                for stale in cert.parent.glob("mitmproxy-ca*"):
+                    stale.unlink(missing_ok=True)
                 setup_certificate()
             install_certificate_for_capture(cert)
         except Exception as exc:
