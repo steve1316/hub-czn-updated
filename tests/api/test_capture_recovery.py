@@ -99,3 +99,25 @@ def test_clear_redirect_is_harmless_when_there_is_nothing_to_remove(client, fake
     fake_hosts.write_text(CLEAN)
     assert client.post("/api/setup/clear-redirect").json() == {"ok": True, "removed": False}
     assert fake_hosts.read_text() == CLEAN
+
+
+def test_a_deliberate_stop_is_not_reported_as_a_crash(client, fake_hosts, monkeypatch):
+    # The watchdog wakes as soon as the proxy shuts down. If the running flag is still set by then
+    # it logs "stopped unexpectedly" on every normal stop, which is alarming and wrong.
+    from api.routes.capture import handle_proxy_death
+
+    seen = []
+
+    class FakeManager:
+        def stop_capture(self):
+            # Stands in for the watchdog waking mid-shutdown.
+            seen.append(handle_proxy_death())
+            return None
+
+    monkeypatch.setattr(state_mod.state, "capture_running", True)
+    monkeypatch.setattr(state_mod.state, "get_capture_manager", lambda: FakeManager())
+    monkeypatch.setattr(state_mod.state, "reset_capture_manager", lambda: None)
+
+    client.post("/api/capture/stop")
+
+    assert seen == [False], "watchdog fired during a deliberate stop"
