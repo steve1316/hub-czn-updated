@@ -1,0 +1,184 @@
+name: Build release on demand
+
+# The only release path for this fork. Triggered by hand: enter a version, and the tag goes up, the
+# Windows installers are built, and the release is created with both attached.
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version to release, as vX.Y.Z. For example v0.5.0.'
+        required: true
+        type: string
+      prerelease:
+        description: 'Mark the release as a pre-release'
+        required: false
+        default: false
+        type: boolean
+
+jobs:
+  release:
+    runs-on: windows-latest
+    permissions:
+      contents: write
+
+    env:
+      PYTHONIOENCODING: 'UTF-8'
+
+    steps:
+      # useUpdateCheck.ts strips a leading "v" and compares exactly three numeric parts, so a tag with
+      # a prerelease suffix would compare as NaN and silently break the in-app update prompt.
+      - name: Check the version and settle the tag
+        shell: pwsh
+        run: |
+          $version = "${{ inputs.version }}"
+          if ($version -notmatch '^v\d+\.\d+\.\d+$') {
+            Write-Error "Version must look like v0.5.0, got '$version'."
+            exit 1
+          }
+          "TAG=$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "VERSION=$($version.TrimStart('v'))" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          Write-Host "Releasing as $version"
+
+      - name: Configure git
+        shell: pwsh
+        run: |
+          [Console]::OutputEncoding = [System.Text.Encoding]::UTF8
+          git config --global core.autocrlf false
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # The app asks GitHub for the latest release, so releasing behind an existing tag would offer
+      # users an older build than the one they already have.
+      - name: Check the tag will be the newest on origin
+        shell: pwsh
+        run: |
+          function Get-VersionKey($tag) {
+            # Pad each part so the keys sort the same way the numbers compare.
+            return (($tag.TrimStart('v') -split '\.') | ForEach-Object { '{0:D6}' -f [int]$_ }) -join '.'
+          }
+          $refs = git ls-remote --tags origin 'refs/tags/v*'
+          if ($LASTEXITCODE -ne 0) {
+            Write-Error "git ls-remote failed, cannot read the tags on origin."
+            exit 1
+          }
+          $names = @($refs) -replace '^\S+\s+refs/tags/', '' -replace '\^\{\}$', ''
+          $tagKey = Get-VersionKey $env:TAG
+          $newer = @($names | Where-Object { $_ -match '^v\d+\.\d+\.\d+$' -and (Get-VersionKey $_) -ge $tagKey } | Sort-Object -Unique)
+          if ($newer) {
+            Write-Error "origin already has $($newer -join ', '), which outrank or match $env:TAG. Release a newer version."
+            exit 1
+          }
+          Write-Host "$env:TAG will be the newest tag on origin"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      # pytest and pytest-asyncio are test-only, so they are not in requirements.txt.
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest pytest-asyncio
+          npm ci
+
+      # The client DB tests skip on their own when CZN_CLIENT_DB is unset, which it is on a runner.
+      - name: Run tests
+        timeout-minutes: 15
+        run: |
+          pytest -m "not slow"
+          npx tsc --noEmit
+
+      # A release is wrong if the app would still ask upstream for its updates, so fail before tagging
+      # rather than ship a build whose update prompt points somewhere else.
+      - name: Check the update check points at this fork
+        shell: pwsh
+        run: |
+          $expected = "https://api.github.com/repos/${{ github.repository }}/releases/latest"
+          $found = Select-String -Path src/hooks/useUpdateCheck.ts -Pattern 'api\.github\.com/repos/[^''"\s]+' -AllMatches |
+            ForEach-Object { $_.Matches } | ForEach-Object { "https://$($_.Value)" }
+          if (-not $found) {
+            Write-Error "useUpdateCheck.ts does not call the GitHub releases API at all."
+            exit 1
+          }
+          foreach ($url in $found) {
+            if ($url -ne $expected) {
+              Write-Error "useUpdateCheck.ts asks '$url', expected '$expected'."
+              exit 1
+            }
+          }
+          Write-Host "Update check points at $expected"
+
+      # The tag goes up only once the tests have passed, so a failing test never leaves a tag behind.
+      - name: Create and push the tag
+        id: push_tag
+        shell: pwsh
+        run: |
+          $subject = (git log -1 --pretty=%s).Trim()
+          git tag -a $env:TAG -m "$subject" HEAD
+          if ($LASTEXITCODE -ne 0) { Write-Error "Could not create $env:TAG."; exit 1 }
+          git push origin $env:TAG
+          if ($LASTEXITCODE -ne 0) { Write-Error "Could not put $env:TAG on origin."; exit 1 }
+          Write-Host "Pushed $env:TAG at ${{ github.sha }}"
+
+      # tauri.conf.json is the only place the version is edited by hand, and sync_version.py takes no
+      # arguments, so the value is written here first and then propagated to Cargo.toml and the sidecar.
+      - name: Set the version
+        shell: pwsh
+        run: |
+          $conf = 'src-tauri/tauri.conf.json'
+          $json = Get-Content $conf -Raw | ConvertFrom-Json
+          $json.version = $env:VERSION
+          $json | ConvertTo-Json -Depth 32 | Set-Content $conf -Encoding utf8
+          python sync_version.py
+
+      # check_sidecar_version.py aborts the Tauri build when the sidecar is older than the version file,
+      # so PyInstaller has to run after sync_version.py. Do not reorder these two steps.
+      - name: Build the sidecar
+        shell: cmd
+        run: |
+          pyinstaller api/hub_czn_api.spec --clean --noconfirm
+          copy /Y "dist\hub-czn-api.exe" "src-tauri\binaries\hub-czn-api-x86_64-pc-windows-msvc.exe"
+
+      # beforeBuildCommand already runs check_sidecar_version.py and the frontend build, so neither
+      # needs its own step here.
+      - name: Build the app
+        run: npm run tauri build
+
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          name: ${{ env.TAG }}
+          draft: false
+          prerelease: ${{ inputs.prerelease }}
+          generate_release_notes: true
+          files: |
+            src-tauri/target/release/bundle/nsis/hub-czn_*_x64-setup.exe
+            src-tauri/target/release/bundle/msi/hub-czn_*_x64_en-US.msi
+          body: |
+            Windows installer for Hub CZN, released as `${{ env.TAG }}`.
+
+            Download `hub-czn_${{ env.VERSION }}_x64-setup.exe` below. The `.msi` is the same app for
+            anyone who prefers it. Do not download the source archives - they do not include the
+            bundled sidecar.
+
+            The installers are unsigned, so Windows will warn the first time you run one.
+
+      # Deleting the tag here would race a re-run, so name the command and leave the call to whoever
+      # is releasing.
+      - name: Say how to remove the tag if the release failed
+        if: failure() && steps.push_tag.outcome == 'success'
+        shell: pwsh
+        run: |
+          Write-Host "::warning::$env:TAG is on origin with no release behind it. Remove it with: git push --delete origin $env:TAG"
