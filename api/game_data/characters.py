@@ -393,8 +393,8 @@ CHARACTERS = {
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "base_weak_ego_dmg_rate": 125.0,
-        "node_50": None,
-        "node_60": None,
+        "node_50": "CRate",
+        "node_60": "CDmg",
     },
     30047: {
         "name": "Nine",

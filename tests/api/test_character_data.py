@@ -134,6 +134,6 @@ def test_defence_scaling_characters_are_flagged_by_their_node():
         assert CHARACTERS[res_id]["node_50"] == "DEF%"
 
 
-def test_no_character_is_left_without_potential_nodes():
+def test_every_character_has_potential_nodes_recorded():
     missing = [c["name"] for _rid, c in COMBATANTS if c["node_50"] is None or c["node_60"] is None]
-    assert missing == ["Tenebria"], f"unexpected characters missing node data: {missing}"
+    assert not missing, f"no potential node data for: {missing}"
