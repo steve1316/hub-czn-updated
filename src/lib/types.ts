@@ -70,6 +70,13 @@ export interface SetupActionResponse {
   error?: string
 }
 
+/** Result of removing the CA from the Windows trust stores. */
+export interface RemoveCertResponse {
+  ok: boolean
+  /** Which stores the cert was actually deleted from, e.g. ["user"]. Empty if it was in neither. */
+  removed_from: string[]
+}
+
 export interface CaptureStatus {
   running: boolean
   region: 'global' | 'asia'

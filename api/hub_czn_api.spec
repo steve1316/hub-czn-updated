@@ -6,8 +6,14 @@ import sys
 import os
 from pathlib import Path
 
+from PyInstaller.utils.hooks import collect_all
+
 repo_root = Path(SPECPATH).parent  # SPECPATH = .../api; parent = repo root
 api_dir = repo_root / 'api'
+
+# mitmproxy now runs inside the sidecar instead of as a separate mitmdump.exe, so it has to be
+# bundled. It loads its addons dynamically, which PyInstaller cannot see, hence collect_all.
+_mitm_datas, _mitm_binaries, _mitm_hidden = collect_all('mitmproxy')
 
 # PyInstaller does not always auto-include the versioned Python DLL on Windows.
 # Collect both python3.dll (stable ABI stub) and pythonXYZ.dll explicitly.
@@ -27,13 +33,13 @@ a = Analysis(
         str(repo_root),
         str(api_dir),
     ],
-    binaries=_py_dlls,
+    binaries=_py_dlls + _mitm_binaries,
     datas=[
         (str(api_dir / 'game_data'),           'game_data'),
         (str(api_dir / 'data'),                'data'),
         (str(api_dir / 'zstd_dictionary.bin'), '.'),
         (str(api_dir / 'assets'),              'assets'),
-    ],
+    ] + _mitm_datas,
     hiddenimports=[
         'hub_czn_version',
         'uvicorn.logging',
@@ -56,7 +62,7 @@ a = Analysis(
         'pynput',
         'pynput.mouse',
         'pynput.keyboard',
-    ],
+    ] + _mitm_hidden,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

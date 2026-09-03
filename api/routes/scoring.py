@@ -34,7 +34,7 @@ class ScoringPrioritiesRequest(BaseModel):
 
 def _persist_char_weights() -> None:
     try:
-        from capture.constants import OUTPUT_DIR
+        from api.capture.constants import OUTPUT_DIR
         path = Path(OUTPUT_DIR) / "char_weights.json"
         path.write_text(json.dumps(state.optimizer.char_weights, indent=2), encoding="utf-8")
     except Exception as exc:

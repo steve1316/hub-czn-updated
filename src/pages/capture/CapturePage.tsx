@@ -3,7 +3,7 @@ import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Dialog } from 'radix-ui'
 import { NavLink } from 'react-router-dom'
-import { api } from '@/lib/api'
+import { api, wsUrl } from '@/lib/api'
 import { useApiPort } from '@/hooks/useApiPort'
 import { useCaptureLog } from '@/hooks/useCaptureLog'
 import { Button } from '@/components/ui/button'
@@ -173,7 +173,7 @@ function AutoScrollPanel({ port }: { port: number }) {
   const [pagesTarget, setPagesTarget] = useState(10)
 
   useEffect(() => {
-    const ws = new WebSocket(`ws://127.0.0.1:${port}/ws`)
+    const ws = new WebSocket(wsUrl('/ws'))
     ws.onmessage = (e) => {
       try {
         const msg = JSON.parse(e.data as string) as Record<string, unknown>

@@ -5,7 +5,6 @@ import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
 import { CheckCircle, XCircle, Loader2, ChevronDown, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { openExternal } from '@/lib/browser'
 
 function StatusIcon({ ok }: { ok: boolean }) {
   return ok
@@ -71,6 +70,11 @@ export function SetupPage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
   })
 
+  const removeCertMutation = useMutation({
+    mutationFn: () => api.removeCertificate(),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
+  })
+
   if (isLoading) {
     return <div className="p-8 text-[#b3b3b3]">{t('setup.loading')}</div>
   }
@@ -114,17 +118,6 @@ export function SetupPage() {
             ? t('setup.mitmproxy.ok', { version: status.mitmproxy_version })
             : t('setup.mitmproxy.fail')
         }
-        action={
-          !status.mitmproxy && (
-            <Button
-              size="sm"
-              onClick={() => openExternal('https://apps.microsoft.com/detail/9nwndlqmnzd7?hl=en-US&gl=US')}
-              className="bg-[#c084fc] hover:bg-[#9333ea] text-white shrink-0"
-            >
-              {t('setup.mitmproxy.install')}
-            </Button>
-          )
-        }
       />
 
       <Row
@@ -139,16 +132,30 @@ export function SetupPage() {
         }
         error={certMutation.isError ? certMutation.error : undefined}
         action={
-          !status.certificate && (
-            <Button
-              size="sm"
-              onClick={() => certMutation.mutate()}
-              disabled={certMutation.isPending}
-              className="bg-[#c084fc] hover:bg-[#9333ea] text-white shrink-0"
-            >
-              {certMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.generate')}
-            </Button>
-          )
+          <>
+            {!status.certificate && (
+              <Button
+                size="sm"
+                onClick={() => certMutation.mutate()}
+                disabled={certMutation.isPending}
+                className="bg-[#c084fc] hover:bg-[#9333ea] text-white shrink-0"
+              >
+                {certMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.generate')}
+              </Button>
+            )}
+            {status.certificate_trusted && (
+              <Button
+                size="sm"
+                variant="outline"
+                onClick={() => removeCertMutation.mutate()}
+                disabled={removeCertMutation.isPending}
+                title={t('setup.certificate.removeHint')}
+                className="border-[#3f3f3f] text-[#b3b3b3] hover:text-[#f3727f] hover:border-[#f3727f] shrink-0"
+              >
+                {removeCertMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.remove')}
+              </Button>
+            )}
+          </>
         }
       />
 

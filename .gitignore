@@ -42,6 +42,14 @@ desktop.ini
 # Exclude snapshots folder (contains user-specific data extracts)
 Vribbels/snapshots/
 
+# Capture writes the player's own account data into api/snapshots/, so ignore the whole folder and
+# list the reference JSON that is meant to be tracked. New capture output is then ignored by default.
+api/snapshots/*
+!api/snapshots/equip_effects.json
+!api/snapshots/skill_eff_dictionary.json
+!api/snapshots/skill_eff_schema.json
+!api/snapshots/stat_validation_report.json
+
 # Reference images and icon generation tools - not needed in repository
 CZN Assets/
 Vribbels/images/growth_stone_*.png

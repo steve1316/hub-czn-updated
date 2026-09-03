@@ -1,3 +1,5 @@
+import os
+import secrets
 import socket
 import sys
 from pathlib import Path
@@ -7,7 +9,12 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
+from api.auth import ASSETS_PREFIX, TokenAuthMiddleware
 from api.routes import status, data, ws, setup, capture, rescue, scoring, combatants, optimize, about, autoscroll, simulate, cards, battle, deck_builder
+
+# Unset means "make one up", which is what happens in production. An explicit empty value turns the
+# check off and is only used by the test suite.
+API_TOKEN = os.environ.get("HUB_CZN_API_TOKEN", secrets.token_urlsafe(32))
 
 
 def _assets_dir() -> Path:
@@ -16,8 +23,20 @@ def _assets_dir() -> Path:
     return Path(__file__).parent / 'assets'
 
 
-def create_app() -> FastAPI:
+def create_app(token: str | None = None) -> FastAPI:
+    """
+    Build the app.
+
+    Args:
+        token: API token to require. Defaults to the module-level one.
+
+    Returns:
+        The configured FastAPI app.
+    """
     app = FastAPI(title="Hub CZN API", version="1.0.0")
+    # Order matters: CORS is added last so it ends up outermost and can answer preflight OPTIONS
+    # requests, which carry no token.
+    app.add_middleware(TokenAuthMiddleware, token=API_TOKEN if token is None else token)
     app.add_middleware(
         CORSMiddleware,
         allow_origins=["*"],
@@ -26,7 +45,7 @@ def create_app() -> FastAPI:
     )
     assets_dir = _assets_dir()
     if assets_dir.exists():
-        app.mount("/assets", StaticFiles(directory=str(assets_dir)), name="assets")
+        app.mount(ASSETS_PREFIX, StaticFiles(directory=str(assets_dir)), name="assets")
 
     app.include_router(status.router, prefix="/api", tags=["status"])
     app.include_router(data.router, prefix="/api", tags=["data"])
@@ -68,6 +87,7 @@ if __name__ == "__main__":
     try:
         port = _find_free_port()
         print(f"PORT:{port}", flush=True)
+        print(f"TOKEN:{API_TOKEN}", flush=True)
         uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
     except Exception as exc:
         print(f"ERROR:{exc}", flush=True, file=sys.stderr)

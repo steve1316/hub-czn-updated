@@ -9,6 +9,24 @@ add_vribbels_to_path()
 from optimizer import GearOptimizer
 
 
+def clear_stale_hosts_entries():
+    """
+    Drop any capture entries left in the hosts file by a previous run.
+
+    The Tauri Job Object kills the sidecar outright, so nothing gets a chance to clean up if the app
+    crashes or is closed mid-capture. Without this the game stays pointed at 127.0.0.1 and cannot
+    connect, with no way to fix it from inside the app.
+    """
+    try:
+        # Import via the api package, not the bare "capture" alias. Both work because of the path
+        # hack in frozen_path, but they load as separate modules with separate module-level state.
+        from api.capture.manager import remove_capture_entries
+        if remove_capture_entries():
+            print("Removed leftover hosts entries from a previous capture", flush=True)
+    except Exception:
+        pass
+
+
 class AppState:
     def __init__(self):
         self.optimizer = GearOptimizer()
@@ -31,12 +49,13 @@ class AppState:
         # CaptureManager is created lazily on first start
         self._capture_manager = None
 
+        clear_stale_hosts_entries()
         self._auto_load_latest()
 
     def _auto_load_latest(self):
         """On startup, load the most recent snapshot so Fragments/Combatants are available immediately."""
         try:
-            from capture.constants import OUTPUT_DIR
+            from api.capture.constants import OUTPUT_DIR
             frags = sorted(OUTPUT_DIR.glob("memory_fragments_*.json"), key=lambda f: f.stat().st_mtime, reverse=True)
             if not frags:
                 return
@@ -53,8 +72,8 @@ class AppState:
     def get_capture_manager(self):
         """Return existing manager or create a new one for this session."""
         if self._capture_manager is None:
-            from capture.manager import CaptureManager
-            from capture.constants import OUTPUT_DIR
+            from api.capture.manager import CaptureManager
+            from api.capture.constants import OUTPUT_DIR
 
             OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
 

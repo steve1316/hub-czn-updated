@@ -160,7 +160,7 @@ def _process_records(raw: list[dict]) -> list[dict]:
 def _latest_rescue_file() -> Path | None:
     """Find the most recently modified rescue_records_*.json in the snapshots folder."""
     try:
-        from capture.constants import OUTPUT_DIR
+        from api.capture.constants import OUTPUT_DIR
         files = sorted(OUTPUT_DIR.glob("rescue_records_*.json"), key=lambda f: f.stat().st_mtime, reverse=True)
         return files[0] if files else None
     except Exception:

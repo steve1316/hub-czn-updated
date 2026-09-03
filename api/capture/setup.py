@@ -1,17 +1,20 @@
 ﻿"""
-Setup utilities for capture system prerequisites.
-Handles mitmproxy installation, certificate generation, and prerequisite checking.
+Setup utilities for capture prerequisites.
+Handles CA certificate generation, trust, and prerequisite checking.
 """
 
 import subprocess
 import ctypes
-import time
 import os
 import sys
-import shutil
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Optional
+
+
+# Thumbprints already known to be absent from the machine store, so the polled status check does not
+# keep shelling out for them.
+_machine_store_misses = set()
 
 
 class CertificateInstallError(Exception):
@@ -19,60 +22,9 @@ class CertificateInstallError(Exception):
     pass
 
 
-def find_mitmdump() -> Optional[str]:
-    """
-    Find the mitmdump executable, checking multiple locations.
-
-    When running from a bundled exe, mitmdump may not be on PATH.
-    This function checks common installation locations.
-
-    Returns:
-        Path to mitmdump executable, or None if not found
-    """
-    # First try shutil.which (checks PATH)
-    mitmdump_path = shutil.which("mitmdump")
-    if mitmdump_path:
-        return mitmdump_path
-
-    # Common locations to check on Windows
-    if sys.platform == "win32":
-        locations_to_check = []
-
-        # Check Python Scripts folders
-        # When running bundled exe, sys.executable is the exe path
-        # But we can still check common Python installation paths
-
-        # User's Python Scripts folder
-        user_scripts = Path.home() / "AppData" / "Local" / "Programs" / "Python"
-        if user_scripts.exists():
-            for python_dir in user_scripts.glob("Python*"):
-                scripts_dir = python_dir / "Scripts"
-                locations_to_check.append(scripts_dir / "mitmdump.exe")
-
-        # System Python Scripts folders
-        for base in [r"C:\Python", r"C:\Program Files\Python", r"C:\Program Files (x86)\Python"]:
-            base_path = Path(base)
-            if base_path.exists():
-                for python_dir in base_path.glob("Python*"):
-                    locations_to_check.append(python_dir / "Scripts" / "mitmdump.exe")
-
-        # pyenv-win locations
-        pyenv_root = Path.home() / ".pyenv" / "pyenv-win" / "versions"
-        if pyenv_root.exists():
-            for version_dir in pyenv_root.glob("*"):
-                locations_to_check.append(version_dir / "Scripts" / "mitmdump.exe")
-
-        # Check if running from bundled exe - look next to the exe
-        if getattr(sys, 'frozen', False):
-            exe_dir = Path(sys.executable).parent
-            locations_to_check.append(exe_dir / "mitmdump.exe")
-
-        # Try each location
-        for path in locations_to_check:
-            if path.exists():
-                return str(path)
-
-    return None
+def certificate_path() -> Path:
+    """Where mitmproxy writes its CA. Not a constant so tests can patch Path.home()."""
+    return Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
 
 
 def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
@@ -98,48 +50,122 @@ def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
         return None
 
 
+class CertutilPromptTimeout(Exception):
+    """Raised when certutil sat waiting on the Windows security prompt for too long."""
+    pass
+
+
+def _run_certutil(args: list, timeout: int = 15, interactive: bool = False):
+    """
+    Run certutil. Never raises except for a timeout on an interactive call.
+
+    Args:
+        args: Arguments to pass after the exe name.
+        timeout: Seconds to wait before giving up.
+        interactive: True for calls that make Windows show its "Security Warning" consent dialog,
+            which adding or deleting a root CA in the per-user store always does. Those must keep
+            their window, otherwise the prompt is invisible and certutil waits forever.
+
+    Returns:
+        The CompletedProcess, or None if certutil could not be run at all.
+
+    Raises:
+        CertutilPromptTimeout: If an interactive call timed out, which means the prompt went
+            unanswered rather than certutil being broken.
+    """
+    creationflags = 0 if interactive else getattr(subprocess, "CREATE_NO_WINDOW", 0)
+    try:
+        return subprocess.run(
+            ["certutil", *args],
+            capture_output=True,
+            text=True,
+            timeout=timeout,
+            creationflags=creationflags,
+        )
+    except subprocess.TimeoutExpired:
+        if interactive:
+            raise CertutilPromptTimeout(
+                "Windows asked for confirmation and the prompt was not answered in time. "
+                "Click Yes on the Windows security prompt, then try again."
+            )
+        return None
+    except (FileNotFoundError, OSError):
+        return None
+
+
 def is_certificate_trusted(cert_path: Path) -> bool:
     """
-    Check whether the certificate's SHA-1 thumbprint exists in the Windows
-    LocalMachine\\Root store via 'certutil -verifystore Root <thumbprint>'.
-    Returns False on any failure (missing file, missing certutil, timeout,
-    non-zero exit). Never raises.
+    Check whether the certificate is trusted. Looks in the per-user Root store first, then the machine store
+    so certs installed by older versions still count.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        True if the thumbprint is in either store. False on any failure. Never raises.
     """
     thumbprint = get_certificate_thumbprint(cert_path)
     if not thumbprint:
         return False
-    try:
-        result = subprocess.run(
-            ["certutil", "-verifystore", "Root", thumbprint],
-            capture_output=True,
-            text=True,
-            timeout=5,
-        )
-    except (FileNotFoundError, subprocess.TimeoutExpired, OSError):
-        return False
-    return result.returncode == 0
+    for store_args in (["-user"], []):
+        # The machine store is only a fallback for older installs and cannot change while we run,
+        # so remember misses. The Setup page polls this every 5 seconds.
+        if not store_args and thumbprint in _machine_store_misses:
+            continue
+        result = _run_certutil([*store_args, "-verifystore", "Root", thumbprint], timeout=5)
+        if result is None:
+            return False
+        if result.returncode == 0:
+            return True
+        if not store_args:
+            _machine_store_misses.add(thumbprint)
+    return False
+
+
+def remove_certificate(cert_path: Path) -> list[str]:
+    """
+    Delete the CA from both Root stores. Matches on the thumbprint, or on the name "mitmproxy" when the
+    cert file is already gone. Clearing the machine store needs admin, so it usually fails now that we
+    install per-user.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        Names of the stores it was actually removed from, e.g. ["user"].
+    """
+    match = get_certificate_thumbprint(cert_path) or "mitmproxy"
+    _machine_store_misses.discard(match)
+    removed = []
+    for name, store_args in (("user", ["-user"]), ("machine", [])):
+        # Root-store edits make Windows show a consent prompt, so keep the window and wait.
+        result = _run_certutil([*store_args, "-delstore", "Root", match], timeout=120, interactive=True)
+        if result is not None and result.returncode == 0:
+            removed.append(name)
+    return removed
 
 
 def install_certificate(cert_path: Path) -> None:
     """
-    Install the certificate into Windows LocalMachine\\Root via
-    'certutil -addstore -f Root <path>'. Idempotent. Requires admin rights.
-    Raises CertificateInstallError on any failure (missing file, missing certutil,
-    non-zero exit) with the diagnostic message in the exception text.
+    Add the certificate to the current user's Root store. Per-user keeps it away from every other account
+    on the PC and needs no admin rights. Idempotent.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Raises:
+        CertificateInstallError: If the file is missing or certutil fails.
     """
     if not cert_path.exists():
         raise CertificateInstallError(f"Certificate file not found: {cert_path}")
+    # Adding a root CA to the per-user store always makes Windows show a "Security Warning"
+    # dialog. It must stay visible or certutil blocks forever on a prompt nobody can see.
     try:
-        result = subprocess.run(
-            ["certutil", "-addstore", "-f", "Root", str(cert_path)],
-            capture_output=True,
-            text=True,
-            timeout=15,
-        )
-    except FileNotFoundError:
-        raise CertificateInstallError("certutil.exe not found on PATH")
-    except subprocess.TimeoutExpired:
-        raise CertificateInstallError("certutil timed out installing the certificate")
+        result = _run_certutil(["-user", "-addstore", "-f", "Root", str(cert_path)], timeout=120, interactive=True)
+    except CertutilPromptTimeout as exc:
+        raise CertificateInstallError(str(exc))
+    if result is None:
+        raise CertificateInstallError("certutil.exe could not be run")
     if result.returncode != 0:
         msg = (result.stderr or result.stdout or "unknown error").strip()
         raise CertificateInstallError(msg)
@@ -188,27 +214,19 @@ def check_prerequisites() -> PrerequisiteStatus:
     except Exception:
         pass
 
-    # Check mitmproxy installation
+    # mitmproxy runs in-process and ships inside the sidecar, so this is just an import check.
+    # It used to spawn "mitmdump --version" on every status poll, which was slow.
     has_mitmproxy = False
     mitmproxy_version = None
-    mitmdump_path = find_mitmdump()
-    if mitmdump_path:
-        try:
-            result = subprocess.run(
-                [mitmdump_path, "--version"],
-                capture_output=True,
-                text=True,
-                timeout=5
-            )
-            if result.returncode == 0:
-                has_mitmproxy = True
-                # Extract version from output (e.g., "Mitmproxy 10.1.1")
-                mitmproxy_version = result.stdout.split()[1] if result.stdout else "unknown"
-        except (FileNotFoundError, subprocess.TimeoutExpired):
-            pass
+    try:
+        from mitmproxy import version as mitmproxy_version_module
+        has_mitmproxy = True
+        mitmproxy_version = mitmproxy_version_module.VERSION
+    except Exception:
+        pass
 
     # Check certificate
-    cert_path = Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
+    cert_path = certificate_path()
     has_certificate = cert_path.exists()
     certificate_trusted = is_certificate_trusted(cert_path) if has_certificate else False
 
@@ -227,120 +245,52 @@ def check_prerequisites() -> PrerequisiteStatus:
 
 
 def _probe_hosts_writable() -> tuple[bool, Optional[str]]:
-    """Verify the hosts file is writable, surfacing failures BEFORE the user
-    clicks Start Capture. Returns (writable, blocking_reason). The reason is
-    a user-readable message ready to display in the Setup tab."""
+    """
+    Check the hosts file is writable so the Setup tab can warn before the user clicks Start Capture.
+
+    Opening for append needs the same rights as a real edit but writes nothing. That matters because
+    the Setup page polls this every 5 seconds, and a probe that rewrote the file could clobber a
+    running capture's redirect.
+
+    Returns:
+        (writable, blocking_reason). The reason is a user-readable message, or None when fine.
+    """
     if sys.platform != "win32":
         return True, None
-    from .constants import HOSTS_PATH
+    from . import constants
     from .manager import _diagnose_hosts_write_failure
+    hosts_path = constants.HOSTS_PATH
     try:
-        with open(HOSTS_PATH, "r") as f:
-            content = f.read()
+        with open(hosts_path, "r"):
+            pass
     except Exception as e:
         return False, f"Cannot read hosts file: {e}"
     try:
-        # Rewrite identical content as a no-op write probe.
-        with open(HOSTS_PATH, "w") as f:
-            f.write(content)
+        with open(hosts_path, "a"):
+            pass
         return True, None
     except (PermissionError, OSError) as e:
-        return False, _diagnose_hosts_write_failure(HOSTS_PATH, e)
-
-
-def _find_python() -> Optional[str]:
-    """Find a Python interpreter suitable for running pip.
-
-    When the sidecar runs elevated via UAC, the user's PATH may not include
-    Python Scripts directories. We search known install locations explicitly.
-    """
-    # If not frozen, use the current interpreter directly.
-    if not getattr(sys, 'frozen', False):
-        return sys.executable
-
-    if sys.platform != "win32":
-        return shutil.which("python3") or shutil.which("python")
-
-    # On elevated processes, shutil.which may miss user-PATH entries,
-    # but let's try — filter out Windows App Execution Aliases (stubs that
-    # don't work elevated).
-    for name in ("python", "python3"):
-        path = shutil.which(name)
-        if path and "WindowsApps" not in path:
-            return path
-
-    # Search user Python installations (most common for non-admin installs).
-    user_root = Path.home() / "AppData" / "Local" / "Programs" / "Python"
-    if user_root.exists():
-        for python_dir in sorted(user_root.glob("Python3*"), reverse=True):
-            exe = python_dir / "python.exe"
-            if exe.exists():
-                return str(exe)
-
-    # Search system-wide Python installations.
-    for base in (Path("C:\\"), Path("C:\\Program Files"), Path("C:\\Program Files (x86)")):
-        for python_dir in sorted(base.glob("Python3*"), reverse=True):
-            exe = python_dir / "python.exe"
-            if exe.exists():
-                return str(exe)
-
-    return None
-
-
-def install_mitmproxy(timeout: int = 120) -> bool:
-    """Install mitmproxy, using the system Python interpreter even when elevated."""
-    python = _find_python()
-    if python:
-        cmd = [python, "-m", "pip", "install", "mitmproxy"]
-    else:
-        # Last resort: rely on pip being on PATH.
-        cmd = ["pip", "install", "mitmproxy"]
-
-    result = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-
-    if result.returncode != 0:
-        raise Exception(f"Installation failed: {result.stderr or result.stdout}")
-
-    return True
+        return False, _diagnose_hosts_write_failure(hosts_path, e)
 
 
 def setup_certificate() -> Path:
     """
-    Generate mitmproxy CA certificate by starting and stopping mitmdump.
+    Create the mitmproxy CA if it is not there yet. Done in-process, so mitmdump does not have to be
+    installed and there is no 3 second sleep waiting for a subprocess.
 
     Returns:
-        Path to the generated certificate
+        Path to the certificate.
 
     Raises:
-        FileNotFoundError: If mitmdump is not installed
-        Exception: If certificate generation fails
+        Exception: If the certificate could not be created.
     """
-    mitmdump_path = find_mitmdump()
-    if not mitmdump_path:
-        raise FileNotFoundError("mitmdump not found. Please install mitmproxy.")
+    from mitmproxy import certs
 
-    # Start mitmdump briefly to generate certificate
-    process = subprocess.Popen(
-        [mitmdump_path],
-        stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE
-    )
-
-    # Give it time to generate the certificate
-    time.sleep(3)
-
-    # Stop the process
-    process.terminate()
-    try:
-        process.wait(timeout=5)
-    except subprocess.TimeoutExpired:
-        process.kill()
-
-    # Verify certificate was created
-    cert_path = Path.home() / ".mitmproxy" / "mitmproxy-ca-cert.cer"
+    cert_path = certificate_path()
+    cert_path.parent.mkdir(parents=True, exist_ok=True)
+    certs.CertStore.from_store(cert_path.parent, "mitmproxy", key_size=2048)
     if not cert_path.exists():
         raise Exception("Certificate was not generated")
-
     return cert_path
 
 

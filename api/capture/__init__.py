@@ -7,8 +7,7 @@ Memory Fragment inventory and character data from the Chaos Zero Nightmare mobil
 Public API:
     - CaptureManager: Main orchestration class for capture workflow
     - CaptureError: Exception raised when capture operations fail
-    - install_mitmproxy: Install mitmproxy via pip
-    - setup_certificate: Generate mitmproxy CA certificate
+    - setup_certificate: Generate the mitmproxy CA certificate in-process
     - check_prerequisites: Check if all prerequisites are met
     - PrerequisiteStatus: Dataclass with prerequisite status info
     - PROXY_PORT: Port used for local proxy
@@ -19,8 +18,6 @@ Example:
     >>>
     >>> # Check prerequisites
     >>> status = check_prerequisites()
-    >>> if not status.has_mitmproxy:
-    >>>     install_mitmproxy()
     >>>
     >>> # Start capture
     >>> manager = CaptureManager(
@@ -34,8 +31,6 @@ Example:
 
 from .manager import CaptureManager, CaptureError
 from .setup import (
-    find_mitmdump,
-    install_mitmproxy,
     setup_certificate,
     check_prerequisites,
     open_certificate,
@@ -49,8 +44,6 @@ __all__ = [
     'CaptureError',
 
     # Setup
-    'find_mitmdump',
-    'install_mitmproxy',
     'setup_certificate',
     'check_prerequisites',
     'open_certificate',

@@ -6,6 +6,9 @@ use tauri_plugin_shell::process::CommandChild;
 
 struct ApiPort(Mutex<u16>);
 
+/// Token the sidecar prints at startup. Every API call has to send it back.
+struct ApiToken(Mutex<String>);
+
 struct SidecarState {
     child: CommandChild,
     pid:   u32,
@@ -158,6 +161,11 @@ fn get_api_port(state: tauri::State<'_, ApiPort>) -> u16 {
     *state.0.lock().unwrap()
 }
 
+#[tauri::command]
+fn get_api_token(state: tauri::State<'_, ApiToken>) -> String {
+    state.0.lock().unwrap().clone()
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -166,6 +174,7 @@ pub fn run() {
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
         .manage(ApiPort(Mutex::new(7842)))
+        .manage(ApiToken(Mutex::new(String::new())))
         .manage(SidecarChild(Mutex::new(None)))
         .setup(|app| {
             #[cfg(not(debug_assertions))]
@@ -193,10 +202,16 @@ pub fn run() {
                 tauri::async_runtime::spawn(async move {
                     while let Some(event) = rx.recv().await {
                         if let CommandEvent::Stdout(bytes) = event {
-                            let line = String::from_utf8_lossy(&bytes);
-                            if let Some(port_str) = line.trim().strip_prefix("PORT:") {
-                                if let Ok(port) = port_str.parse::<u16>() {
-                                    *handle.state::<ApiPort>().0.lock().unwrap() = port;
+                            // PORT: and TOKEN: can land in the same chunk, so walk every line.
+                            let chunk = String::from_utf8_lossy(&bytes);
+                            for line in chunk.lines() {
+                                let line = line.trim();
+                                if let Some(port_str) = line.strip_prefix("PORT:") {
+                                    if let Ok(port) = port_str.parse::<u16>() {
+                                        *handle.state::<ApiPort>().0.lock().unwrap() = port;
+                                    }
+                                } else if let Some(token) = line.strip_prefix("TOKEN:") {
+                                    *handle.state::<ApiToken>().0.lock().unwrap() = token.to_string();
                                 }
                             }
                         }
@@ -221,7 +236,7 @@ pub fn run() {
                 }
             }
         })
-        .invoke_handler(tauri::generate_handler![get_api_port])
+        .invoke_handler(tauri::generate_handler![get_api_port, get_api_token])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }

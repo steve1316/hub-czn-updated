@@ -26,7 +26,7 @@ router = APIRouter()
 
 def _snapshots_dir() -> Path:
     try:
-        from capture.constants import OUTPUT_DIR
+        from api.capture.constants import OUTPUT_DIR
         return Path(OUTPUT_DIR)
     except Exception:
         return Path.home() / ".czn_optimizer" / "snapshots"
