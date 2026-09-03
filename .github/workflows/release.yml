@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       version:
-        description: 'Version to release, as vX.Y.Z. For example v0.5.0.'
+        description: 'Version to release, as X.Y.Z. For example 1.0.0, tagged as v1.0.0.'
         required: true
         type: string
       prerelease:
@@ -32,13 +32,13 @@ jobs:
         shell: pwsh
         run: |
           $version = "${{ inputs.version }}"
-          if ($version -notmatch '^v\d+\.\d+\.\d+$') {
-            Write-Error "Version must look like v0.5.0, got '$version'."
+          if ($version -notmatch '^\d+\.\d+\.\d+$') {
+            Write-Error "Version must look like 1.0.0, got '$version'."
             exit 1
           }
-          "TAG=$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
-          "VERSION=$($version.TrimStart('v'))" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
-          Write-Host "Releasing as $version"
+          "TAG=v$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          "VERSION=$version" | Out-File -FilePath $env:GITHUB_ENV -Append -Encoding utf8
+          Write-Host "Releasing $version as v$version"
 
       - name: Configure git
         shell: pwsh
