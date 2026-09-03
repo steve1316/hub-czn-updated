@@ -86,3 +86,55 @@ def test_setup_install_still_uses_the_per_user_store(cert, certutil_calls):
     capture_setup.install_certificate(cert)
     assert certutil_calls[0]["args"][0] == "-user"
     assert certutil_calls[0]["interactive"] is True
+
+
+def test_trust_answer_is_cached_between_polls(cert, monkeypatch):
+    # Setup and Capture both poll the status endpoint, so this used to spawn certutil every few
+    # seconds. The answer is held briefly instead.
+    from types import SimpleNamespace
+    calls = []
+    monkeypatch.setattr(capture_setup, "get_certificate_thumbprint", lambda p: "AABBCC")
+    monkeypatch.setattr(capture_setup, "_run_certutil",
+                        lambda *a, **k: calls.append(1) or SimpleNamespace(returncode=0, stdout="", stderr=""))
+    capture_setup._trust_cache.clear()
+
+    assert capture_setup.is_certificate_trusted(cert) is True
+    assert capture_setup.is_certificate_trusted(cert) is True
+    assert capture_setup.is_certificate_trusted(cert) is True
+
+    assert len(calls) == 1, "certutil should only run once for repeated polls"
+
+
+def test_installing_for_capture_invalidates_the_cache(cert, certutil_calls):
+    # Capture changes trust mid-run, so a cached "not trusted" must not survive it.
+    capture_setup._trust_cache["AABBCC"] = (False, 9e9)
+    capture_setup.install_certificate_for_capture(cert)
+    assert "AABBCC" not in capture_setup._trust_cache
+
+
+def test_removing_for_capture_invalidates_the_cache(cert, certutil_calls):
+    capture_setup._trust_cache["AABBCC"] = (True, 9e9)
+    capture_setup.remove_capture_certificate(cert)
+    assert "AABBCC" not in capture_setup._trust_cache
+
+
+def test_expiry_is_read_from_the_certificate(tmp_path):
+    from api.capture.setup import certificate_expiry, certificate_days_left, certificate_path
+    real = certificate_path()
+    if not real.exists():
+        import pytest as _pytest
+        _pytest.skip("no CA generated on this machine")
+    assert certificate_expiry(real) is not None
+    assert certificate_days_left(real) == (certificate_expiry(real) - __import__("datetime").datetime.now(__import__("datetime").timezone.utc)).days
+
+
+def test_expiry_of_a_missing_certificate_is_none(tmp_path):
+    from api.capture.setup import certificate_expiry, certificate_days_left
+    missing = tmp_path / "nope.cer"
+    assert certificate_expiry(missing) is None
+    assert certificate_days_left(missing) is None
+
+
+def test_expiry_of_an_unparseable_file_is_none(cert):
+    from api.capture.setup import certificate_expiry
+    assert certificate_expiry(cert) is None

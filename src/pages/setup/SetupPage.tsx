@@ -144,14 +144,16 @@ export function SetupPage() {
       />
 
       <Row
-        ok={status.certificate}
+        ok={status.certificate && !status.certificate_expired}
         label={t('setup.certificate.label')}
         detail={
-          status.certificate_trusted
-            ? t('setup.certificate.trustedOk')
-            : status.certificate
-              ? t('setup.certificate.readyForCapture')
-              : t('setup.certificate.fail')
+          status.certificate_expired
+            ? t('setup.certificate.expired')
+            : status.certificate_trusted
+              ? t('setup.certificate.trustedOk')
+              : status.certificate
+                ? t('setup.certificate.readyForCapture')
+                : t('setup.certificate.fail')
         }
         error={certMutation.isError ? certMutation.error : undefined}
         action={
