@@ -12,6 +12,29 @@ Changes are not sent upstream. For what the app does and how to use it, see the 
 
 ## Changelog
 
+### 2026-09-03
+
+- The certificate is now trusted only while a capture is running and untrusted again the moment it
+  stops, so nothing is left behind on your machine between sessions.
+- You no longer have to permanently trust the certificate before capture will start.
+- If the app is closed or crashes mid-capture, it now removes the redirect and the certificate
+  itself. Before this the game could not connect until you launched the app again.
+- `Setup` now shows a leftover redirect from a previous session with a button to remove it.
+- The packaged app could not reach its own API, so `Setup` reported "Could not connect to the API".
+  Fixed - it affected every build, not just some machines.
+- Stopping a capture on purpose is no longer reported as an unexpected disconnection.
+- The `Capture` prerequisite badges now spin while the checks are still running, instead of looking
+  like a result.
+- The capture region is worked out from the server the game actually connected to.
+- An expired certificate is now detected and reported, and `Setup` no longer re-checks it constantly.
+- Added `Arabella` and her partner `Licinia`, `Hilde`, and `Fei`, along with portraits for them and
+  for `Westmacott`, `Marin`, `Noel` and `Erica`.
+- Corrected several wrong stats: the friendship health bonus was short from level four up, health
+  potential nodes were worth 8% rather than 3%, and `Arabella` and `Adelheid` grew on the wrong
+  curves. Character data is now checked against the game's own files.
+- Releases are now built and published from GitHub, and the app checks this fork for updates instead
+  of the project it was forked from.
+
 ### 2026-09-02
 
 - Forked from upstream `v0.4.6`.
