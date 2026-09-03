@@ -12,7 +12,7 @@ except ImportError:
 
 router = APIRouter()
 
-_GITHUB_REPO = "sostenesfreitas/hub-czn"
+_GITHUB_REPO = "steve1316/hub-czn-updated"
 
 
 @router.get("/about")

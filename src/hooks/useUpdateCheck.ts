@@ -26,7 +26,7 @@ export function useUpdateCheck() {
     queryKey: ['github-latest-release'],
     queryFn: async () => {
       const res = await fetch(
-        'https://api.github.com/repos/sostenesfreitas/hub-czn/releases/latest',
+        'https://api.github.com/repos/steve1316/hub-czn-updated/releases/latest',
       )
       if (!res.ok) throw new Error('Failed to fetch release')
       return res.json() as Promise<GitHubRelease>

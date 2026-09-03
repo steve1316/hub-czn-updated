@@ -7,9 +7,11 @@ def test_about_returns_version(client):
 
 
 def test_about_returns_github_urls(client):
+    # These drive the About page's links. Pointing them at upstream would send people to upstream's
+    # releases rather than the ones this fork builds.
     response = client.get("/api/about")
     assert response.status_code == 200
     body = response.json()
-    assert body["github_url"] == "https://github.com/sostenesfreitas/hub-czn"
-    assert body["releases_url"] == "https://github.com/sostenesfreitas/hub-czn/releases"
-    assert body["issues_url"] == "https://github.com/sostenesfreitas/hub-czn/issues"
+    assert body["github_url"] == "https://github.com/steve1316/hub-czn-updated"
+    assert body["releases_url"] == "https://github.com/steve1316/hub-czn-updated/releases"
+    assert body["issues_url"] == "https://github.com/steve1316/hub-czn-updated/issues"
