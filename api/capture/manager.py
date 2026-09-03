@@ -14,6 +14,7 @@ from pathlib import Path
 from typing import Optional, Callable
 
 from .addon import Addon
+from .setup import certificate_path, install_certificate_for_capture, remove_capture_certificate, setup_certificate
 from .constants import PROXY_PORT, GAME_PORT, HOSTS_PATH
 
 # Markers wrapping the lines we add to the hosts file, so we can find and remove them again.
@@ -467,6 +468,31 @@ class CaptureManager:
             self._master = None
             self._proxy_ready.set()
 
+    def _trust_certificate(self):
+        """
+        Generate the CA if it is missing and add it to the machine store for this capture.
+
+        Raises:
+            CaptureError: If the certificate cannot be generated or trusted, since capture would
+                only fail later with a confusing TLS error.
+        """
+        try:
+            cert = certificate_path()
+            if not cert.exists():
+                setup_certificate()
+            install_certificate_for_capture(cert)
+        except Exception as exc:
+            raise CaptureError(f"Could not trust the capture certificate: {exc}")
+        self.log_callback("Certificate trusted for this capture", "success")
+
+    def _untrust_certificate(self):
+        """Drop the CA from the machine store. Never raises - stopping must not fail on cleanup."""
+        try:
+            if remove_capture_certificate(certificate_path()):
+                self.log_callback("Certificate trust removed", "success")
+        except Exception:
+            pass
+
     def start_capture(self, debug_mode: bool = False):
         """
         Start capturing: check we are admin, point the game host at us in the hosts file, then run
@@ -496,6 +522,10 @@ class CaptureManager:
         if not self.game_server_ips:
             raise CaptureError("Could not resolve game servers.")
         real_ip = list(self.game_server_ips.values())[0]
+
+        # Trust the CA only while we are actually capturing. Goes in before the redirect so the
+        # game never meets the proxy with an untrusted leaf.
+        self._trust_certificate()
 
         self.modify_hosts_file()
         self.log_callback("Hosts file modified", "success")
@@ -555,6 +585,7 @@ class CaptureManager:
         self.addon = None
 
         self.restore_hosts_file()
+        self._untrust_certificate()
         self.capturing = False
 
         if self.status_callback:
