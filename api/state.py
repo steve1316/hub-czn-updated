@@ -27,6 +27,22 @@ def clear_stale_hosts_entries():
         pass
 
 
+def clear_stale_certificate_trust():
+    """
+    Drop any machine-store CA left behind by a previous run.
+
+    Capture trusts the CA only while it runs, but the Tauri Job Object kills the sidecar outright,
+    so a crash mid-capture would otherwise leave the machine permanently trusting it. Only the
+    machine store is touched - a per-user copy is the user's own choice.
+    """
+    try:
+        from api.capture.setup import certificate_path, remove_capture_certificate
+        if remove_capture_certificate(certificate_path()):
+            print("Removed leftover certificate trust from a previous capture", flush=True)
+    except Exception:
+        pass
+
+
 class AppState:
     def __init__(self):
         self.optimizer = GearOptimizer()
@@ -50,6 +66,7 @@ class AppState:
         self._capture_manager = None
 
         clear_stale_hosts_entries()
+        clear_stale_certificate_trust()
         self._auto_load_latest()
 
     def _auto_load_latest(self):

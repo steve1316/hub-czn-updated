@@ -63,6 +63,16 @@ export interface SetupStatus {
   certificate_trusted: boolean
   can_write_hosts: boolean
   hosts_block_reason: string | null
+  /** True when a capture redirect is still in the hosts file, which stops the game connecting. */
+  hosts_redirect_active?: boolean
+}
+
+/** Result of clearing a leftover capture redirect from the hosts file. */
+export interface ClearRedirectResponse {
+  ok: boolean
+  /** True if a redirect was actually removed. False means there was nothing there. */
+  removed: boolean
+  error?: string
 }
 
 export interface SetupActionResponse {
@@ -93,6 +103,8 @@ export interface CaptureStopResponse {
   ok: boolean
   file_path: string | null
   region: string
+  /** True when the game redirect was taken back out of the hosts file. */
+  hosts_restored?: boolean
 }
 
 export interface RescuePull {

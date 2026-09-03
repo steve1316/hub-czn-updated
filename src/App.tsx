@@ -2,8 +2,7 @@ import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AppShell } from './components/layout/AppShell'
-import { useApiPort } from './hooks/useApiPort'
-import { ensureToken, setApiPort } from './lib/api'
+import { ensureApi } from './lib/api'
 import { FragmentsPage } from './pages/fragments/FragmentsPage'
 import { SetupPage } from './pages/setup/SetupPage'
 import { CapturePage } from './pages/capture/CapturePage'
@@ -34,14 +33,12 @@ const queryClient = new QueryClient({
 })
 
 function AppRoutes() {
-  const port = useApiPort()
-  const [tokenReady, setTokenReady] = useState(false)
-  useEffect(() => { setApiPort(port) }, [port])
+  const [apiReady, setApiReady] = useState(false)
 
-  // Wait for the token before rendering, otherwise a page that opens a WebSocket on mount can
-  // connect without one and get closed. Resolves immediately in dev.
-  useEffect(() => { ensureToken().then(() => setTokenReady(true)) }, [])
-  if (!tokenReady) return null
+  // Wait for the port and token before rendering. A page that fetches or opens a WebSocket on
+  // mount would otherwise use the default port and no token at all. Resolves immediately in dev.
+  useEffect(() => { ensureApi().then(() => setApiReady(true)) }, [])
+  if (!apiReady) return null
 
   return (
     <BrowserRouter>
