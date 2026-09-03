@@ -108,8 +108,8 @@ def is_certificate_trusted(cert_path: Path) -> bool:
     if not thumbprint:
         return False
     for store_args in (["-user"], []):
-        # The machine store is only a fallback for older installs and cannot change while we run,
-        # so remember misses. The Setup page polls this every 5 seconds.
+        # Misses are remembered because the Setup page polls this every 5 seconds. Capture installs
+        # and removes the machine copy as it runs, so both of those clear the memo.
         if not store_args and thumbprint in _machine_store_misses:
             continue
         result = _run_certutil([*store_args, "-verifystore", "Root", thumbprint], timeout=5)
@@ -143,6 +143,51 @@ def remove_certificate(cert_path: Path) -> list[str]:
         if result is not None and result.returncode == 0:
             removed.append(name)
     return removed
+
+
+def install_certificate_for_capture(cert_path: Path) -> None:
+    """
+    Add the CA to the machine Root store for the duration of a capture.
+
+    The per-user store always makes Windows show a consent dialog, which would mean a click every
+    time capture starts. The machine store is silent because the sidecar is already elevated, so
+    the trade is a wider store for a much shorter window - minutes instead of forever.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Raises:
+        CertificateInstallError: If the file is missing or certutil fails.
+    """
+    if not cert_path.exists():
+        raise CertificateInstallError(f"Certificate file not found: {cert_path}")
+    _machine_store_misses.clear()
+    result = _run_certutil(["-addstore", "-f", "Root", str(cert_path)], timeout=30)
+    if result is None:
+        raise CertificateInstallError("certutil.exe could not be run")
+    if result.returncode != 0:
+        msg = (result.stderr or result.stdout or "unknown error").strip()
+        raise CertificateInstallError(msg)
+
+
+def remove_capture_certificate(cert_path: Path) -> bool:
+    """
+    Take the CA back out of the machine Root store. Safe to call when it was never there, and used
+    both when capture stops and at startup to clean up after a crash.
+
+    Deleting from the machine store while elevated does not prompt, so this stays windowless. It
+    never touches the per-user store, which is the user's own choice to install or remove.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        True if a certificate was actually removed.
+    """
+    match = get_certificate_thumbprint(cert_path) or "mitmproxy"
+    _machine_store_misses.discard(match)
+    result = _run_certutil(["-delstore", "Root", match], timeout=30)
+    return result is not None and result.returncode == 0
 
 
 def install_certificate(cert_path: Path) -> None:
