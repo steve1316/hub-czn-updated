@@ -393,8 +393,8 @@ CHARACTERS = {
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "base_weak_ego_dmg_rate": 125.0,
-        "node_50": None,
-        "node_60": None,
+        "node_50": "CRate",
+        "node_60": "CDmg",
     },
     30047: {
         "name": "Nine",
@@ -475,6 +475,36 @@ CHARACTERS = {
         "base_crit_dmg": 125.0,
         "node_50": "CRate",
         "node_60": "CDmg",
+    },
+    # PROVISIONAL res_id. Nobody here owns Fei, so her real id has never been seen in a capture.
+    # 30111 is a free slot in the right window: she released 2026-07-08 with Ruixiang, before
+    # Hilde (30113), and ids run combatant then partner, so 30112 would be Ruixiang. Her stats are
+    # read from the game and correct - only the id is a guess. Fix it the moment a capture has her.
+    30111: {
+        "name": "Fei",
+        "grade": 5,
+        "attribute": "Void",
+        "class": "Ranger",
+        "base_atk": 515,
+        "base_def": 141,
+        "base_hp": 317,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "node_50": "CDmg",
+        "node_60": "CRate",
+    },
+    30113: {
+        "name": "Hilde",
+        "grade": 5,
+        "attribute": "Instinct",
+        "class": "Ranger",
+        "base_atk": 515,
+        "base_def": 141,
+        "base_hp": 317,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "node_50": "CDmg",
+        "node_60": "CRate",
     },
 }
 

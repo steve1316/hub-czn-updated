@@ -134,6 +134,20 @@ def test_defence_scaling_characters_are_flagged_by_their_node():
         assert CHARACTERS[res_id]["node_50"] == "DEF%"
 
 
-def test_no_character_is_left_without_potential_nodes():
+def test_every_character_has_potential_nodes_recorded():
     missing = [c["name"] for _rid, c in COMBATANTS if c["node_50"] is None or c["node_60"] is None]
-    assert missing == ["Tenebria"], f"unexpected characters missing node data: {missing}"
+    assert not missing, f"no potential node data for: {missing}"
+
+
+def test_provisional_ids_are_still_flagged_as_guesses():
+    # Fei's res_id is a guess: nobody here owns her, so her real id has never appeared in a capture.
+    # Her stats came from the game and are right, but the id is not confirmed, and a wrong one means
+    # she never matches a real capture. This fails if the comment marking it is ever removed without
+    # the id being verified, so it cannot quietly become treated as known.
+    from pathlib import Path
+    source = (Path(__file__).resolve().parents[2] / "api" / "game_data" / "characters.py").read_text(encoding="utf-8")
+    assert "PROVISIONAL res_id" in source, (
+        "the provisional marker on Fei's res_id is gone - if it was confirmed against a capture, "
+        "delete this test too"
+    )
+    assert CHARACTERS[30111]["name"] == "Fei"
