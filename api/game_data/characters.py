@@ -458,6 +458,21 @@ CHARACTERS = {
         "node_50": "CRate",
         "node_60": "CDmg",
     },
+    30115: {
+        "name": "Arabella",
+        "grade": 5,
+        "attribute": "Instinct",
+        "class": "Striker",
+        # Level 60 before ascension, matching every other 5-star Striker. Community sites quote
+        # 495/146/332, which looks like level 60 with ascension included.
+        "base_atk": 467,
+        "base_def": 155,
+        "base_hp": 376,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "node_50": "CRate",
+        "node_60": "CDmg",
+    },
 }
 
 # Build reverse lookup: name -> character data (for lookups by name)
