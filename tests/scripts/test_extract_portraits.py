@@ -59,3 +59,31 @@ def test_a_character_absent_from_the_client_reports_every_required_file(client):
 
     assert copied == 0
     assert len(missing) == 2
+
+
+def test_a_face_is_taken_from_the_fallback_name_when_the_first_is_absent(tmp_path, monkeypatch):
+    # Some characters only ship the un-prefixed variant, which is the same 72x72 icon.
+    face = tmp_path / "client" / "face" / "character"
+    face.mkdir(parents=True)
+    (face / "face_character_map_30044.png").write_bytes(b"png")
+    monkeypatch.setattr(extract_portraits, "DST_BASE", tmp_path / "assets")
+
+    copied, missing = extract_portraits.copy_for(30044, tmp_path / "client")
+
+    assert copied == 1
+    # Written under the name the frontend asks for, not the name it was found under.
+    assert (tmp_path / "assets" / "faces" / "bookmark_face_character_map_30044.png").is_file()
+    assert "face/character/bookmark_face_character_map_30044.png" not in missing
+
+
+def test_the_preferred_face_name_wins_over_the_fallback(tmp_path, monkeypatch):
+    face = tmp_path / "client" / "face" / "character"
+    face.mkdir(parents=True)
+    (face / "bookmark_face_character_map_30115.png").write_bytes(b"preferred")
+    (face / "face_character_map_30115.png").write_bytes(b"fallback")
+    monkeypatch.setattr(extract_portraits, "DST_BASE", tmp_path / "assets")
+
+    extract_portraits.copy_for(30115, tmp_path / "client")
+
+    dst = tmp_path / "assets" / "faces" / "bookmark_face_character_map_30115.png"
+    assert dst.read_bytes() == b"preferred"

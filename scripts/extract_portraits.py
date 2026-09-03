@@ -28,13 +28,15 @@ sys.path.insert(0, str(REPO_ROOT))
 
 DST_BASE = REPO_ROOT / "api" / "assets" / "game"
 
-# (source-relative-dir, filename-template, destination-subdir, required)
-# `{res_id}` is substituted. Multiple entries with the same dst form variants.
+# (source-relative-dir, filename-templates, destination-subdir, required)
+# `{res_id}` is substituted. The first template names the file the frontend looks for, and the rest
+# are fallbacks the client uses for some characters. Multiple entries with the same dst form variants.
 PATTERNS = [
-    ("face/character",            "bookmark_face_character_map_{res_id}.png", "faces",    True),
-    ("tp_skill",                  "battle_icon_tp_skill_{res_id}.png",        "tp_skill", True),
-    ("collapse/collapse_illustration", "collapse_{res_id}_01.png",            "collapse", False),
-    ("collapse/collapse_illustration", "collapse_{res_id}_02.png",            "collapse", False),
+    ("face/character",            ("bookmark_face_character_map_{res_id}.png",
+                                   "face_character_map_{res_id}.png"),        "faces",    True),
+    ("tp_skill",                  ("battle_icon_tp_skill_{res_id}.png",),      "tp_skill", True),
+    ("collapse/collapse_illustration", ("collapse_{res_id}_01.png",),          "collapse", False),
+    ("collapse/collapse_illustration", ("collapse_{res_id}_02.png",),          "collapse", False),
 ]
 
 
@@ -51,16 +53,17 @@ def copy_for(res_id: int, output_dir: Path) -> tuple[int, list[str]]:
     """
     copied = 0
     missing: list[str] = []
-    for src_subdir, template, dst_subdir, required in PATTERNS:
-        fname = template.format(res_id=res_id)
-        src = output_dir / src_subdir / fname
-        if not src.exists():
+    for src_subdir, templates, dst_subdir, required in PATTERNS:
+        names = [t.format(res_id=res_id) for t in templates]
+        src = next((p for p in (output_dir / src_subdir / n for n in names) if p.exists()), None)
+        if src is None:
             if required:
-                missing.append(f"{src_subdir}/{fname}")
+                missing.append(f"{src_subdir}/{names[0]}")
             continue
         dst_dir = DST_BASE / dst_subdir
         dst_dir.mkdir(parents=True, exist_ok=True)
-        shutil.copy2(src, dst_dir / fname)
+        # Always the first name, whichever source matched - that is what the frontend asks for.
+        shutil.copy2(src, dst_dir / names[0])
         copied += 1
     return copied, missing
 
