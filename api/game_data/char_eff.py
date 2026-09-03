@@ -16,7 +16,9 @@ from api.game_data.eff_instances import EffInstanceIndex
 from api.simulator.replay.char_resolver import CardExpectation, CharResolver
 
 
-_CLIENT_DB_DEFAULT = Path(r"C:\Users\soste\Downloads\output\db")
+from api.client_db import client_db_dir
+
+_CLIENT_DB_DEFAULT = client_db_dir()
 
 _DAMAGE_EFF_TYPES = (
     "SKILL_EFF_DMG",

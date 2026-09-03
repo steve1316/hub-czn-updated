@@ -17,7 +17,9 @@ from functools import cached_property
 from pathlib import Path
 
 
-_DEFAULT_CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
+from api.client_db import client_db_dir
+
+_DEFAULT_CLIENT_DB = client_db_dir()
 _CS_SHARDS = (
     "cs(monster)@skill_eff.json",
     "cs(card1)@skill_eff.json",

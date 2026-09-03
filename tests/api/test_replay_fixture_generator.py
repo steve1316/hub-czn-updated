@@ -11,7 +11,13 @@ from api.simulator.replay.fixture_generator import (
 from api.game_data.eff_instances import EffInstanceIndex
 
 
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
+from api.client_db import client_db_dir, have_client_db
+
+CLIENT_DB = client_db_dir()
+
+# The client DB is unpacked from the game and is not in the repo, so these skip
+# rather than fail everywhere except a machine that has it. Set CZN_CLIENT_DB.
+pytestmark = pytest.mark.skipif(not have_client_db(), reason="game client DB not available")
 
 
 @pytest.fixture(scope="module")

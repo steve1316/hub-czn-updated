@@ -3,9 +3,14 @@ from pathlib import Path
 
 import pytest
 
+from api.client_db import have_client_db
 from api.game_data.cs_multipliers import (
     CSMultiplierIndex, DamageModifier,
 )
+
+# The index is built from the unpacked game data, which is not in the repo. Tests that assert on
+# real contents skip without it. The ones that only check empty/typed behaviour still run.
+needs_client_db = pytest.mark.skipif(not have_client_db(), reason="game client DB not available")
 
 
 def test_damage_modifier_dataclass_basic_construction():
@@ -30,6 +35,7 @@ def test_index_all_cs_ids_returns_set():
     assert isinstance(ids, set)
 
 
+@needs_client_db
 def test_index_lookup_returns_modifiers_for_known_cs_id():
     """cs00_0002 has at least one SKILL_EFF_DAMAGE_VALUE_ADD in cs(card1)
     with eff_value=50, sign=MATHSIGN_ADD_HUND_MULTIPLY_PCT, opt=[take]."""
@@ -44,6 +50,7 @@ def test_index_lookup_returns_modifiers_for_known_cs_id():
     assert m.source_id.startswith("cs00_0002")
 
 
+@needs_client_db
 def test_index_strips_instance_suffix():
     """Modifiers from id='cs00_0002_01' index under cs_id='cs00_0002'."""
     idx = CSMultiplierIndex()
@@ -51,6 +58,7 @@ def test_index_strips_instance_suffix():
     assert idx.lookup("cs00_0002_01") == []  # full id not used as key
 
 
+@needs_client_db
 def test_index_total_modifiers_around_386():
     """The 3 cs shards together yield ~386 SKILL_EFF_DAMAGE_VALUE_ADD instances."""
     idx = CSMultiplierIndex()
@@ -58,6 +66,7 @@ def test_index_total_modifiers_around_386():
     assert 300 <= total <= 500, f"expected ~386 modifiers, got {total}"
 
 
+@needs_client_db
 def test_index_directions_distribution():
     """Both 'take' and 'attack' directions should appear."""
     idx = CSMultiplierIndex()
