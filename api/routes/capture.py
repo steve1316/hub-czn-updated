@@ -7,7 +7,10 @@ from typing import Literal
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 
+# api.state has to come first: importing it is what puts game_data on sys.path, which
+# api.capture.manager needs to import at all.
 from api.state import state
+from api.capture.manager import remove_capture_entries
 
 router = APIRouter()
 
@@ -62,6 +65,32 @@ def get_capture_status():
     }
 
 
+def handle_proxy_death() -> bool:
+    """
+    Tidy up after the proxy stopped on its own instead of via /capture/stop.
+
+    The redirect has to come out with it. Left behind it points the game at 127.0.0.1 with nothing
+    listening, and the Stop button is already disabled by then, so the only way out would be
+    restarting the whole app.
+
+    Returns:
+        True if a leftover redirect was actually removed.
+    """
+    if not state.capture_running:
+        return False
+    state.capture_running = False
+    removed = remove_capture_entries()
+    message = "Capture proxy stopped unexpectedly."
+    if removed:
+        message += " Removed the game redirect."
+    state.log_queue.put({
+        "level": "error",
+        "message": message,
+        "timestamp": time.strftime("%H:%M:%S"),
+    })
+    return removed
+
+
 @router.post("/capture/start")
 def post_capture_start(body: StartRequest):
     if not _is_admin():
@@ -84,15 +113,8 @@ def post_capture_start(body: StartRequest):
     state.capture_running = True
 
     def _watch():
-        """Clear the running flag if the proxy stops on its own rather than via /capture/stop."""
         mgr.wait()
-        if state.capture_running:
-            state.capture_running = False
-            state.log_queue.put({
-                "level": "error",
-                "message": "Capture proxy stopped unexpectedly.",
-                "timestamp": time.strftime("%H:%M:%S"),
-            })
+        handle_proxy_death()
 
     threading.Thread(target=_watch, daemon=True).start()
     return {"ok": True, "region": body.region}
@@ -101,6 +123,11 @@ def post_capture_start(body: StartRequest):
 @router.post("/capture/stop")
 def post_capture_stop():
     if not state.capture_running:
+        # Stop must never be a dead end. If the proxy died on its own the flag is already false, but
+        # the redirect can still be in the hosts file, and this is the only way to undo it in-app.
+        if remove_capture_entries():
+            state.reset_capture_manager()
+            return {"ok": True, "file_path": None, "region": state.capture_region or "", "hosts_restored": True}
         raise HTTPException(status_code=409, detail="No capture is running.")
 
     mgr = state.get_capture_manager()
@@ -122,7 +149,7 @@ def post_capture_stop():
         except Exception:
             pass
 
-    return {"ok": True, "file_path": str(file_path) if file_path else None, "region": region}
+    return {"ok": True, "file_path": str(file_path) if file_path else None, "region": region, "hosts_restored": True}
 
 
 @router.post("/capture/set-region")
