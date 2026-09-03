@@ -17,7 +17,13 @@ from api.simulator.state import BattleState
 
 
 REPO = Path(__file__).resolve().parents[2]
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
+from api.client_db import client_db_dir, have_client_db
+
+CLIENT_DB = client_db_dir()
+
+# The client DB is unpacked from the game and is not in the repo, so these skip
+# rather than fail everywhere except a machine that has it. Set CZN_CLIENT_DB.
+pytestmark = pytest.mark.skipif(not have_client_db(), reason="game client DB not available")
 CATALOG_PATH = REPO / "api" / "data" / "eff_type_catalog.json"
 
 

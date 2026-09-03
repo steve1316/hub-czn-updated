@@ -17,7 +17,12 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from api.game_data.partners import PARTNERS  # noqa: E402
 
-OUTPUT_DIR = Path(r"C:\Users\soste\Downloads\output")
+from api.client_db import client_output_dir, have_client_db
+
+OUTPUT_DIR = client_output_dir()
+
+# Assisted extraction needs the unpacked game data, which is not in the repo.
+pytestmark = pytest.mark.skipif(not have_client_db(), reason="game client DB not available")
 
 
 @pytest.fixture(scope="module")
