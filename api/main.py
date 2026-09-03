@@ -10,6 +10,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
 
 from api.auth import ASSETS_PREFIX, TokenAuthMiddleware
+from api.shutdown import watch_parent
 from api.routes import status, data, ws, setup, capture, rescue, scoring, combatants, optimize, about, autoscroll, simulate, cards, battle, deck_builder
 
 # Tauri generates this and passes it in, so it never has to be read back off our stdout. Unset means
@@ -94,10 +95,17 @@ def _chosen_port() -> int:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--cleanup":
+        # Used by the uninstaller. Undoes a capture that is still in place, then exits.
+        from api.shutdown import cleanup
+        cleanup()
+        sys.exit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "--version":
         from hub_czn_version import __version__
         print(__version__, flush=True)
         sys.exit(0)
+    # Tauri does not kill us any more, so a capture gets undone properly when the window closes.
+    watch_parent()
     try:
         port = _chosen_port()
         print(f"PORT:{port}", flush=True)
