@@ -26,10 +26,31 @@ const AUTOSCROLL_MODAL_STEPS = [
   { n: 3 as const, pre: 'capture.autoscroll.modal.step3Pre' as const, bold: 'capture.autoscroll.modal.step3Bold' as const, post: 'capture.autoscroll.modal.step3Post' as const },
 ] as const
 
-function PrereqBadge({ ok, label, tip }: { ok: boolean; label: string; tip?: string }) {
+/** Props for PrereqBadge. */
+interface PrereqBadgeProps {
+  /** Whether the prerequisite is satisfied. Ignored while `pending` is true. */
+  ok: boolean
+  /** Short name of the prerequisite, e.g. "Admin". */
+  label: string
+  /** Optional explanation shown in a popover next to the label. */
+  tip?: string
+  /** True while the check is still in flight, so a red cross is not shown before we know. */
+  pending?: boolean
+}
+
+/**
+ * One prerequisite in the Capture header.
+ *
+ * @param props See `PrereqBadgeProps`.
+ * @returns The badge, spinning and yellow until the check comes back.
+ */
+function PrereqBadge({ ok, label, tip, pending }: PrereqBadgeProps) {
+  const colour = pending ? 'text-yellow-400' : ok ? 'text-green-400' : 'text-red-400'
   return (
-    <span className={`flex items-center gap-1 text-xs ${ok ? 'text-green-400' : 'text-red-400'}`}>
-      {ok ? <CheckCircle size={12} /> : <XCircle size={12} />}
+    <span className={`flex items-center gap-1 text-xs ${colour}`}>
+      {pending
+        ? <Loader2 size={12} className="animate-spin" />
+        : ok ? <CheckCircle size={12} /> : <XCircle size={12} />}
       {label}
       {tip && <InfoPopover content={tip} />}
     </span>
@@ -337,13 +358,13 @@ export function CapturePage() {
   const [howToUseOpen, setHowToUseOpen] = useState(false)
   const logRef = useRef<HTMLDivElement>(null)
 
-  const { data: captureStatus } = useQuery({
+  const { data: captureStatus, isPending: capturePending } = useQuery({
     queryKey: ['capture-status'],
     queryFn: () => api.captureStatus(),
     refetchInterval: 3000,
   })
 
-  const { data: setupStatus } = useQuery({
+  const { data: setupStatus, isPending: setupPending } = useQuery({
     queryKey: ['setup-status'],
     queryFn: () => api.setupStatus(),
     refetchInterval: 10000,
@@ -411,7 +432,8 @@ export function CapturePage() {
 
   const running = captureStatus?.running ?? false
   const isAdmin = captureStatus?.admin ?? false
-  const prereqsOk = isAdmin && (setupStatus?.mitmproxy ?? false) && (setupStatus?.certificate_trusted ?? false)
+  // Not gated on the CA being trusted: capture trusts it at start and untrusts it at stop.
+  const prereqsOk = isAdmin && (setupStatus?.mitmproxy ?? false)
 
   return (
     <div className="p-6 flex gap-6 h-full">
@@ -422,11 +444,11 @@ export function CapturePage() {
         {/* Prerequisites bar */}
         <div className="p-3 rounded-lg bg-[#181818] border border-[#282828] flex flex-col gap-2">
           <div className="flex items-center gap-3 flex-wrap">
-            <PrereqBadge ok={isAdmin} label={t('capture.prereq.admin')} tip={t('capture.prereq.adminTip')} />
-            <PrereqBadge ok={setupStatus?.mitmproxy ?? false} label={t('capture.prereq.mitmproxy')} tip={t('capture.prereq.mitmproxyTip')} />
-            <PrereqBadge ok={setupStatus?.certificate_trusted ?? false} label={t('capture.prereq.certificate')} />
+            <PrereqBadge ok={isAdmin} pending={capturePending} label={t('capture.prereq.admin')} tip={t('capture.prereq.adminTip')} />
+            <PrereqBadge ok={setupStatus?.mitmproxy ?? false} pending={setupPending} label={t('capture.prereq.mitmproxy')} tip={t('capture.prereq.mitmproxyTip')} />
+            <PrereqBadge ok={setupStatus?.certificate ?? false} pending={setupPending} label={t('capture.prereq.certificate')} tip={t('capture.prereq.certificateTip')} />
           </div>
-          {!prereqsOk && (
+          {!prereqsOk && !capturePending && !setupPending && (
             <NavLink to="/setup" className="text-xs text-[#c084fc] hover:underline mt-1">
               {t('capture.goToSetup')}
             </NavLink>
