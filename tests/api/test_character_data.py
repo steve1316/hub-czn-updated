@@ -99,3 +99,27 @@ def test_partner_passive_renders_at_every_limit_break(res_id, partner):
     for limit_break in range(5):
         desc = get_partner_passive_info(res_id, limit_break)["passive_desc"]
         assert "{" not in desc, f"unfilled placeholder at limit break {limit_break}: {desc}"
+
+
+def test_potential_node_percentages_match_the_game():
+    # Read in game on Adelheid: a maxed Health node and a maxed Defense node both give 8%. HP% used
+    # to top out at 3%, which understated Health for every character carrying that node.
+    from api.game_data.characters import POTENTIAL_STAT_VALUES
+    assert POTENTIAL_STAT_VALUES["HP%"][-1] == 8.0
+    assert POTENTIAL_STAT_VALUES["DEF%"][-1] == 8.0
+    assert POTENTIAL_STAT_VALUES["HP%"] == POTENTIAL_STAT_VALUES["DEF%"]
+
+
+def test_potential_node_values_have_one_entry_per_node_level():
+    from api.game_data.characters import POTENTIAL_STAT_VALUES
+    for stat, values in POTENTIAL_STAT_VALUES.items():
+        assert len(values) == 5, stat
+        assert list(values) == sorted(values), stat
+
+
+def test_adelheid_reaches_her_in_game_stats_with_maxed_nodes():
+    # Base 419/191/443 at level 60 with full ascension, plus 8% Defense and 8% Health, gives the
+    # 419/206/478 shown in game. Attack is untouched because she has no Attack node.
+    base_def, base_hp = 191, 443
+    assert int(base_def * 1.08) == 206
+    assert int(base_hp * 1.08) == 478

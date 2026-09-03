@@ -488,7 +488,8 @@ CHARACTERS_BY_NAME = {
 # These are the stat bonus percentages/values gained at each level
 # Note: Values may need adjustment based on actual game data
 POTENTIAL_STAT_VALUES = {
-    "HP%": (0.6, 1.2, 1.8, 2.4, 3.0),      # % HP increase per level
+    # Same steps as DEF%, confirmed in game: a maxed Health node gives 8%, not 3%.
+    "HP%": (1.6, 3.2, 4.8, 6.4, 8.0),      # % HP increase per level
     "ATK%": (0.6, 1.2, 1.8, 2.4, 3.0),     # % ATK increase per level
     "DEF%": (1.6, 3.2, 4.8, 6.4, 8.0),     # % DEF increase per level
     "CRate": (2.0, 4.0, 6.0, 8.0, 10.0),   # Crit Rate % per level
