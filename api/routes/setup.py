@@ -16,6 +16,7 @@ from api.capture.setup import (
     remove_certificate,
     CertificateInstallError,
 )
+from api.capture.manager import has_capture_entries, remove_capture_entries
 
 router = APIRouter()
 
@@ -31,7 +32,19 @@ def get_setup_status():
         "certificate_trusted": s.certificate_trusted,
         "can_write_hosts": s.can_write_hosts,
         "hosts_block_reason": s.hosts_block_reason,
+        # Runtime state rather than a prerequisite: a block left by a capture that did not shut down
+        # cleanly stops the game connecting, so Setup has to show it and offer a way out.
+        "hosts_redirect_active": has_capture_entries(),
     }
+
+
+@router.post("/setup/clear-redirect")
+def post_clear_redirect():
+    """Take a leftover capture redirect out of the hosts file."""
+    try:
+        return {"ok": True, "removed": remove_capture_entries()}
+    except Exception as exc:
+        return {"ok": False, "removed": False, "error": str(exc)}
 
 
 @router.post("/setup/generate-cert")

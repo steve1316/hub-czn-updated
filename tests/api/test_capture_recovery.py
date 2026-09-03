@@ -66,3 +66,36 @@ def test_watchdog_does_nothing_when_capture_was_stopped_normally(fake_hosts, mon
     from api.routes.capture import handle_proxy_death
     monkeypatch.setattr(state_mod.state, "capture_running", False)
     assert handle_proxy_death() is False
+
+
+def test_setup_status_reports_a_stuck_redirect(client, fake_hosts):
+    # Setup polls this, so a leftover block becomes visible instead of silently breaking the game.
+    res = client.get("/api/setup/status")
+    assert res.status_code == 200
+    assert res.json()["hosts_redirect_active"] is True
+
+
+def test_setup_status_is_quiet_when_the_hosts_file_is_clean(client, fake_hosts):
+    fake_hosts.write_text(CLEAN)
+    assert client.get("/api/setup/status").json()["hosts_redirect_active"] is False
+
+
+def test_setup_status_never_writes_to_the_hosts_file(client, fake_hosts):
+    before = fake_hosts.read_text()
+    mtime = fake_hosts.stat().st_mtime_ns
+    client.get("/api/setup/status")
+    assert fake_hosts.read_text() == before
+    assert fake_hosts.stat().st_mtime_ns == mtime
+
+
+def test_clear_redirect_removes_the_block(client, fake_hosts):
+    res = client.post("/api/setup/clear-redirect")
+    assert res.status_code == 200
+    assert res.json() == {"ok": True, "removed": True}
+    assert "CZN-CAPTURE" not in fake_hosts.read_text()
+
+
+def test_clear_redirect_is_harmless_when_there_is_nothing_to_remove(client, fake_hosts):
+    fake_hosts.write_text(CLEAN)
+    assert client.post("/api/setup/clear-redirect").json() == {"ok": True, "removed": False}
+    assert fake_hosts.read_text() == CLEAN
