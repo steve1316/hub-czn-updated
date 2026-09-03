@@ -292,14 +292,17 @@ CHARACTERS = {
         "grade": 5,
         "attribute": "Void",
         "class": "Vanguard",
-        "base_atk": 327,
-        "base_def": 153,
-        "base_hp": 403,
+        # Was 327/153/403, which matched no growth curve. These are what her curve
+        # actually produces, same as every other entry here.
+        "base_atk": 407,
+        "base_def": 183,
+        "base_hp": 423,
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "base_weak_ego_dmg_rate": 125.0,
-        "node_50": None,
-        "node_60": None,
+        # DEF% at node 50 is also what marks her damage as scaling off Defense, which her cards do.
+        "node_50": "DEF%",
+        "node_60": "HP%",
     },
     1056: {
         "name": "Rei",
@@ -458,6 +461,21 @@ CHARACTERS = {
         "node_50": "CRate",
         "node_60": "CDmg",
     },
+    30115: {
+        "name": "Arabella",
+        "grade": 5,
+        "attribute": "Instinct",
+        "class": "Striker",
+        # She is a Striker but grows on the Ranger curve, which the game's own level 1 and level 60
+        # numbers confirm. Level 60 here, same as every other entry.
+        "base_atk": 495,
+        "base_def": 146,
+        "base_hp": 332,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "node_50": "CRate",
+        "node_60": "CDmg",
+    },
 }
 
 # Build reverse lookup: name -> character data (for lookups by name)
@@ -471,7 +489,8 @@ CHARACTERS_BY_NAME = {
 # These are the stat bonus percentages/values gained at each level
 # Note: Values may need adjustment based on actual game data
 POTENTIAL_STAT_VALUES = {
-    "HP%": (0.6, 1.2, 1.8, 2.4, 3.0),      # % HP increase per level
+    # Same steps as DEF%, confirmed in game: a maxed Health node gives 8%, not 3%.
+    "HP%": (1.6, 3.2, 4.8, 6.4, 8.0),      # % HP increase per level
     "ATK%": (0.6, 1.2, 1.8, 2.4, 3.0),     # % ATK increase per level
     "DEF%": (1.6, 3.2, 4.8, 6.4, 8.0),     # % DEF increase per level
     "CRate": (2.0, 4.0, 6.0, 8.0, 10.0),   # Crit Rate % per level

@@ -735,6 +735,20 @@ PARTNERS = {
         "ego_cost": 3,
         "ego_desc": "200% Shield\nDraw 2 Blessing cards from Draw Pile.",
     },
+    30116: {
+        "name": "Licinia",
+        "grade": 5,
+        "class": "Striker",
+        "passive_name": "Poison-Laced Atonement",
+        "passive_desc": "Increase the assigned Combatant's Attack by {ATK%}%.\nWhen Fracture is applied through an ability of the assigned Combatant, +10% to Critical Chance (cannot stack).\nWhen Fracture is activated through an ability of the assigned Combatant, inflict 1 Virutoxin on the target.\n[Virutoxin]: Increase Damage Amount taken from the assigned Combatant by 4% (max 4 stacks).",
+        "values": {
+            "ATK%": (16, 18, 20, 22, 24),
+        },
+        "stats": {"ATK%": (16, 18, 20, 22, 24)},
+        "ego_name": "Blossoming Venom",
+        "ego_cost": 3,
+        "ego_desc": "Gain 1 AP\n3 Paralytic Poison to all enemies.",
+    },
 }
 
 # Base stats by grade and class at level 60
