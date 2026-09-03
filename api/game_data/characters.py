@@ -292,9 +292,11 @@ CHARACTERS = {
         "grade": 5,
         "attribute": "Void",
         "class": "Vanguard",
-        "base_atk": 327,
-        "base_def": 153,
-        "base_hp": 403,
+        # Was 327/153/403, which matched no growth curve. These are what her curve
+        # actually produces, same as every other entry here.
+        "base_atk": 407,
+        "base_def": 183,
+        "base_hp": 423,
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "base_weak_ego_dmg_rate": 125.0,
