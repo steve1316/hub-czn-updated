@@ -1,6 +1,12 @@
+use std::collections::HashMap;
+use std::net::TcpListener;
 use std::sync::Mutex;
+
 use tauri::Manager;
 use tauri_plugin_shell::process::CommandChild;
+
+/// Ports to try for the sidecar, matching the range it would have picked from on its own.
+const PORT_RANGE: std::ops::Range<u16> = 7842..7852;
 
 // ── App state ────────────────────────────────────────────────────────────────
 
@@ -8,6 +14,7 @@ struct ApiPort(Mutex<u16>);
 
 /// Token the sidecar prints at startup. Every API call has to send it back.
 struct ApiToken(Mutex<String>);
+
 
 struct SidecarState {
     child: CommandChild,
@@ -166,6 +173,24 @@ fn get_api_token(state: tauri::State<'_, ApiToken>) -> String {
     state.0.lock().unwrap().clone()
 }
 
+/// First port in PORT_RANGE we can bind. The sidecar binds it for real a moment later, so this is
+/// just a reservation - the same small window the sidecar had when it picked its own port.
+fn pick_port() -> u16 {
+    for port in PORT_RANGE {
+        if TcpListener::bind(("127.0.0.1", port)).is_ok() {
+            return port;
+        }
+    }
+    PORT_RANGE.start
+}
+
+/// 32 random bytes as hex, for the token the sidecar will expect on every request.
+fn make_token() -> String {
+    let mut bytes = [0u8; 32];
+    getrandom::fill(&mut bytes).expect("OS randomness unavailable");
+    bytes.iter().map(|b| format!("{b:02x}")).collect()
+}
+
 #[cfg_attr(mobile, tauri::mobile_entry_point)]
 pub fn run() {
     tauri::Builder::default()
@@ -173,18 +198,29 @@ pub fn run() {
         .plugin(tauri_plugin_shell::init())
         .plugin(tauri_plugin_dialog::init())
         .plugin(tauri_plugin_fs::init())
-        .manage(ApiPort(Mutex::new(7842)))
+        .manage(ApiPort(Mutex::new(PORT_RANGE.start)))
         .manage(ApiToken(Mutex::new(String::new())))
         .manage(SidecarChild(Mutex::new(None)))
         .setup(|app| {
             #[cfg(not(debug_assertions))]
             {
                 use tauri_plugin_shell::ShellExt;
-                use tauri_plugin_shell::process::CommandEvent;
+
+                // Hand the sidecar its port and token instead of reading them back off its
+                // stdout. The webview can ask for them the moment it loads, and nothing depends on
+                // us being able to capture output from an elevated child process.
+                let port = pick_port();
+                let token = make_token();
+                *app.state::<ApiPort>().0.lock().unwrap() = port;
+                *app.state::<ApiToken>().0.lock().unwrap() = token.clone();
 
                 let shell = app.shell();
                 let sidecar = shell.sidecar("hub-czn-api")
-                    .expect("hub-czn-api sidecar not found in binaries/");
+                    .expect("hub-czn-api sidecar not found in binaries/")
+                    .envs(HashMap::from([
+                        ("HUB_CZN_PORT".to_string(), port.to_string()),
+                        ("HUB_CZN_API_TOKEN".to_string(), token),
+                    ]));
 
                 let (mut rx, child) = sidecar.spawn()
                     .expect("Failed to spawn hub-czn-api sidecar");
@@ -198,24 +234,10 @@ pub fn run() {
                     _job: create_job_for(pid),
                 });
 
-                let handle = app.handle().clone();
+                // Nothing is parsed out of this any more, but the pipe still has to be drained or
+                // the sidecar blocks once it fills up.
                 tauri::async_runtime::spawn(async move {
-                    while let Some(event) = rx.recv().await {
-                        if let CommandEvent::Stdout(bytes) = event {
-                            // PORT: and TOKEN: can land in the same chunk, so walk every line.
-                            let chunk = String::from_utf8_lossy(&bytes);
-                            for line in chunk.lines() {
-                                let line = line.trim();
-                                if let Some(port_str) = line.strip_prefix("PORT:") {
-                                    if let Ok(port) = port_str.parse::<u16>() {
-                                        *handle.state::<ApiPort>().0.lock().unwrap() = port;
-                                    }
-                                } else if let Some(token) = line.strip_prefix("TOKEN:") {
-                                    *handle.state::<ApiToken>().0.lock().unwrap() = token.to_string();
-                                }
-                            }
-                        }
-                    }
+                    while rx.recv().await.is_some() {}
                 });
             }
             #[cfg(debug_assertions)]

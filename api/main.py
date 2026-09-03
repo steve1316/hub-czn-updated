@@ -12,7 +12,8 @@ from fastapi.staticfiles import StaticFiles
 from api.auth import ASSETS_PREFIX, TokenAuthMiddleware
 from api.routes import status, data, ws, setup, capture, rescue, scoring, combatants, optimize, about, autoscroll, simulate, cards, battle, deck_builder
 
-# Unset means "make one up", which is what happens in production. An explicit empty value turns the
+# Tauri generates this and passes it in, so it never has to be read back off our stdout. Unset means
+# "make one up", which is what happens when running standalone. An explicit empty value turns the
 # check off and is only used by the test suite.
 API_TOKEN = os.environ.get("HUB_CZN_API_TOKEN", secrets.token_urlsafe(32))
 
@@ -79,13 +80,26 @@ def _find_free_port(start: int = 7842) -> int:
     raise RuntimeError("No free port available in range 7842-7851")
 
 
+def _chosen_port() -> int:
+    """
+    Use the port Tauri picked for us, so it does not have to read one back off our stdout.
+
+    Returns:
+        The port from HUB_CZN_PORT, or one we pick ourselves when running standalone.
+    """
+    env_port = os.environ.get("HUB_CZN_PORT", "").strip()
+    if env_port.isdigit():
+        return int(env_port)
+    return _find_free_port()
+
+
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--version":
         from hub_czn_version import __version__
         print(__version__, flush=True)
         sys.exit(0)
     try:
-        port = _find_free_port()
+        port = _chosen_port()
         print(f"PORT:{port}", flush=True)
         print(f"TOKEN:{API_TOKEN}", flush=True)
         uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
