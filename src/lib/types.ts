@@ -93,6 +93,8 @@ export interface CaptureStopResponse {
   ok: boolean
   file_path: string | null
   region: string
+  /** True when the game redirect was taken back out of the hosts file. */
+  hosts_restored?: boolean
 }
 
 export interface RescuePull {
