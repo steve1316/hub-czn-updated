@@ -13,8 +13,9 @@ async function freshApi() {
 describe('ensureToken', () => {
   beforeEach(() => {
     invoke.mockReset()
-    // The suite runs in the node environment, so there is no window to attach __TAURI__ to.
-    vi.stubGlobal('window', { __TAURI__: {} })
+    // The suite runs in the node environment, so there is no window to attach the global to.
+    // Only __TAURI_INTERNALS__ is set, because that is all the packaged app actually gets.
+    vi.stubGlobal('window', { __TAURI_INTERNALS__: {} })
   })
 
   it('does not cache an empty token', async () => {
@@ -48,8 +49,9 @@ describe('ensureToken', () => {
 describe('ensureApi', () => {
   beforeEach(() => {
     invoke.mockReset()
-    // The suite runs in the node environment, so there is no window to attach __TAURI__ to.
-    vi.stubGlobal('window', { __TAURI__: {} })
+    // The suite runs in the node environment, so there is no window to attach the global to.
+    // Only __TAURI_INTERNALS__ is set, because that is all the packaged app actually gets.
+    vi.stubGlobal('window', { __TAURI_INTERNALS__: {} })
   })
 
   it('resolves the port before the token so no request uses the default port', async () => {
@@ -60,5 +62,30 @@ describe('ensureApi', () => {
 
     expect(invoke).toHaveBeenCalledWith('get_api_port')
     expect(api.wsUrl('/ws')).toBe('ws://127.0.0.1:7845/ws?token=real-token')
+  })
+})
+
+describe('inTauri', () => {
+  beforeEach(() => { invoke.mockReset() })
+
+  it('detects the shell without window.__TAURI__', async () => {
+    // Regression: every call used to be gated on window.__TAURI__, which only exists when
+    // withGlobalTauri is on. It is off, so the packaged app never invoked anything - the token
+    // stayed empty and Setup showed "Missing or invalid API token".
+    const api = await freshApi()
+    vi.stubGlobal('window', { __TAURI_INTERNALS__: {} })
+    expect(api.inTauri()).toBe(true)
+
+    invoke.mockResolvedValue('real-token')
+    expect(await api.ensureToken()).toBe('real-token')
+    expect(invoke).toHaveBeenCalledWith('get_api_token')
+  })
+
+  it('stays out of the way in a plain browser', async () => {
+    const api = await freshApi()
+    vi.stubGlobal('window', {})
+    expect(api.inTauri()).toBe(false)
+    expect(await api.ensureToken()).toBe('')
+    expect(invoke).not.toHaveBeenCalled()
   })
 })

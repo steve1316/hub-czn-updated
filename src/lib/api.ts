@@ -32,6 +32,19 @@ let _tokenPromise: Promise<string> | null = null
 let _bootstrapPromise: Promise<void> | null = null
 
 /**
+ * True when the page is running inside the Tauri shell.
+ *
+ * Do not check `window.__TAURI__` here. That global only exists when `withGlobalTauri` is turned on
+ * in tauri.conf.json, and it is not, so it is always undefined in the packaged app.
+ * `__TAURI_INTERNALS__` is what the Tauri API itself uses and is always injected.
+ *
+ * @returns True if Tauri commands can be invoked.
+ */
+export function inTauri(): boolean {
+  return typeof window !== 'undefined' && '__TAURI_INTERNALS__' in window
+}
+
+/**
  * Fetch the token from Tauri once and remember it. App waits on this before rendering, so the
  * synchronous `wsUrl()` always has it by the time a socket opens.
  *
@@ -43,7 +56,7 @@ let _bootstrapPromise: Promise<void> | null = null
  */
 export async function ensureToken(): Promise<string> {
   if (_token) return _token
-  if (typeof window === 'undefined' || !window.__TAURI__) return _token
+  if (!inTauri()) return _token
   if (!_tokenPromise) {
     _tokenPromise = import('@tauri-apps/api/core')
       .then(({ invoke }) => invoke<string>('get_api_token'))
@@ -65,7 +78,7 @@ export async function ensureToken(): Promise<string> {
 export async function ensureApi(): Promise<void> {
   if (!_bootstrapPromise) {
     _bootstrapPromise = (async () => {
-      if (typeof window !== 'undefined' && window.__TAURI__) {
+      if (inTauri()) {
         const { invoke } = await import('@tauri-apps/api/core')
         const port = await invoke<number>('get_api_port').catch(() => 0)
         if (port) _port = port
