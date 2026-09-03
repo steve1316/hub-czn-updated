@@ -30,6 +30,8 @@ def get_setup_status():
         "mitmproxy_version": s.mitmproxy_version,
         "certificate": s.has_certificate,
         "certificate_trusted": s.certificate_trusted,
+        "certificate_days_left": s.certificate_days_left,
+        "certificate_expired": s.certificate_expired,
         "can_write_hosts": s.can_write_hosts,
         "hosts_block_reason": s.hosts_block_reason,
         # Runtime state rather than a prerequisite: a block left by a capture that did not shut down

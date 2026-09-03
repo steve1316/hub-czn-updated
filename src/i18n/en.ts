@@ -225,6 +225,7 @@ const en = {
       removeHint: 'Deletes the CA from the Windows trust store. Capture stops working until you install it again.',
       trustedOk: 'Trusted for your Windows user account',
       readyForCapture: 'Ready. Trusted only while capture is running, then removed.',
+      expired: 'Expired. Capture will generate a replacement the next time you start it.',
       trustedFail: 'File generated but not installed in trust store',
     },
     installCert: {

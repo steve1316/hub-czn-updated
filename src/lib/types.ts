@@ -61,6 +61,10 @@ export interface SetupStatus {
   mitmproxy_version: string | null
   certificate: boolean
   certificate_trusted: boolean
+  /** Days until the CA expires. Negative once expired, null if the date could not be read. */
+  certificate_days_left?: number | null
+  /** True once the CA is past its expiry date, in which case capture regenerates it. */
+  certificate_expired?: boolean
   can_write_hosts: boolean
   hosts_block_reason: string | null
   /** True when a capture redirect is still in the hosts file, which stops the game connecting. */
