@@ -123,3 +123,17 @@ def test_adelheid_reaches_her_in_game_stats_with_maxed_nodes():
     base_def, base_hp = 191, 443
     assert int(base_def * 1.08) == 206
     assert int(base_hp * 1.08) == 478
+
+
+def test_defence_scaling_characters_are_flagged_by_their_node():
+    # node_50 == "DEF%" is what marks a character's damage as scaling off Defense rather than
+    # Attack, so recording the nodes in the wrong order silently changes their damage.
+    from api.routes.battle import _DEF_SCALE_IDS
+    assert 1055 in _DEF_SCALE_IDS, "Adelheid's cards scale off Defense"
+    for res_id in _DEF_SCALE_IDS:
+        assert CHARACTERS[res_id]["node_50"] == "DEF%"
+
+
+def test_no_character_is_left_without_potential_nodes():
+    missing = [c["name"] for _rid, c in COMBATANTS if c["node_50"] is None or c["node_60"] is None]
+    assert missing == ["Tenebria"], f"unexpected characters missing node data: {missing}"

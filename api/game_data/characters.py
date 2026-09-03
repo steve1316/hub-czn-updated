@@ -300,8 +300,9 @@ CHARACTERS = {
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "base_weak_ego_dmg_rate": 125.0,
-        "node_50": None,
-        "node_60": None,
+        # DEF% at node 50 is also what marks her damage as scaling off Defense, which her cards do.
+        "node_50": "DEF%",
+        "node_60": "HP%",
     },
     1056: {
         "name": "Rei",
