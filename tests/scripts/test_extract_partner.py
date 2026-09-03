@@ -17,12 +17,15 @@ sys.path.insert(0, str(REPO_ROOT))
 
 from api.game_data.partners import PARTNERS  # noqa: E402
 
-from api.client_db import client_output_dir, have_client_db
+from api.client_db import client_output_dir, have_client_db, have_client_text
 
 OUTPUT_DIR = client_output_dir()
 
 # Assisted extraction needs the unpacked game data, which is not in the repo.
-pytestmark = pytest.mark.skipif(not have_client_db(), reason="game client DB not available")
+pytestmark = pytest.mark.skipif(
+    not (have_client_db() and have_client_text()),
+    reason="game client DB or its text catalogue not available",
+)
 
 
 @pytest.fixture(scope="module")

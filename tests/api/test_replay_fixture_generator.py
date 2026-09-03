@@ -59,10 +59,11 @@ def test_expected_eff_pct_comes_from_inst_not_description(fixtures):
     f = by_card.get("c_1040_srt4")
     if f is None:
         pytest.skip("c_1040_srt4 not in fixtures")
-    assert f.expected_eff_pct == 140
-    # description_eff_pct may be 210 (epiphany-augmented) — captured for diagnostic
+    # 160 in the current client. It was 140 when this test was written, so the number moves with
+    # balance changes - the property below is the part that actually matters.
+    assert f.expected_eff_pct == 160
     if f.description_eff_pct is not None:
-        assert f.description_eff_pct >= 140  # description never lower than baseline for this card
+        assert f.description_eff_pct > f.expected_eff_pct, "baseline should exclude the epiphany bonus"
 
 
 def test_description_baseline_alignment_diagnostic(fixtures):

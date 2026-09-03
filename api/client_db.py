@@ -53,3 +53,26 @@ def have_client_db() -> bool:
         True if the `db/` folder exists, so callers can skip or fall back instead of failing.
     """
     return client_db_dir().is_dir()
+
+
+def client_text_file() -> Path:
+    """
+    The English text catalogue, which holds display names.
+
+    Returns:
+        `<client_output_dir()>/text/en/text.json`. Not guaranteed to exist.
+    """
+    return client_output_dir() / "text" / "en" / "text.json"
+
+
+def have_client_text() -> bool:
+    """
+    Whether the text catalogue is present.
+
+    Separate from `have_client_db` because an export can stop early and leave the shard JSONs
+    without it. Anything that resolves names needs this as well.
+
+    Returns:
+        True if the catalogue exists.
+    """
+    return client_text_file().is_file()

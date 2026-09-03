@@ -139,15 +139,69 @@ def test_every_character_has_potential_nodes_recorded():
     assert not missing, f"no potential node data for: {missing}"
 
 
-def test_provisional_ids_are_still_flagged_as_guesses():
-    # Fei's res_id is a guess: nobody here owns her, so her real id has never appeared in a capture.
-    # Her stats came from the game and are right, but the id is not confirmed, and a wrong one means
-    # she never matches a real capture. This fails if the comment marking it is ever removed without
-    # the id being verified, so it cannot quietly become treated as known.
-    from pathlib import Path
-    source = (Path(__file__).resolve().parents[2] / "api" / "game_data" / "characters.py").read_text(encoding="utf-8")
-    assert "PROVISIONAL res_id" in source, (
-        "the provisional marker on Fei's res_id is gone - if it was confirmed against a capture, "
-        "delete this test too"
-    )
-    assert CHARACTERS[30111]["name"] == "Fei"
+# The extracted client database is the authority, but it is not in the repo, so these only run on a
+# machine that has it. See docs/adding-a-character.md.
+_CLIENT_COMBATANTS = None
+
+
+def _client_combatants():
+    """
+    Combatant rows from the extracted client, keyed by res_id.
+
+    Returns:
+        res_id -> row, or None when the client data is not available.
+    """
+    global _CLIENT_COMBATANTS
+    if _CLIENT_COMBATANTS is None:
+        from api.client_db import client_db_dir
+        path = client_db_dir() / "char_base@char_combatant.json"
+        if not path.exists():
+            _CLIENT_COMBATANTS = {}
+        else:
+            _CLIENT_COMBATANTS = {int(r["id"]): r for r in json.loads(path.read_text(encoding="utf-8"))}
+    return _CLIENT_COMBATANTS
+
+
+needs_client_db = pytest.mark.skipif(
+    not (Path(__file__).resolve().parents[2] / "api").exists() or not _client_combatants(),
+    reason="extracted client data not available",
+)
+
+
+@needs_client_db
+def test_every_res_id_exists_in_the_client():
+    # Fei was carried with a made up res_id until the client data settled it. Nothing should be
+    # invented again without this failing.
+    client = _client_combatants()
+    unknown = [(rid, c["name"]) for rid, c in COMBATANTS if rid not in client]
+    assert not unknown, f"res_ids that do not exist in the game: {unknown}"
+
+
+@needs_client_db
+def test_growth_curves_match_the_client():
+    # Class does not determine the curve - Arabella is a Striker on the Ranger curve, which the
+    # client confirms. This checks every character against the real table rather than guessing.
+    client = _client_combatants()
+    wrong = []
+    for rid, _char in COMBATANTS:
+        if rid not in client or str(rid) not in CHAR_BASE_L1:
+            continue
+        ours = CHAR_BASE_L1[str(rid)]["level_group"]
+        theirs = client[rid]["link_combatant_level_group"]
+        if ours != theirs:
+            wrong.append((rid, ours, theirs))
+    assert not wrong, f"level_group disagrees with the client: {wrong}"
+
+
+@needs_client_db
+def test_limit_break_groups_match_the_client():
+    client = _client_combatants()
+    wrong = []
+    for rid, _char in COMBATANTS:
+        if rid not in client or str(rid) not in CHAR_BASE_L1:
+            continue
+        ours = CHAR_BASE_L1[str(rid)]["limit_break_group"]
+        theirs = client[rid].get("link_combatant_limit_break_group")
+        if theirs and ours != theirs:
+            wrong.append((rid, ours, theirs))
+    assert not wrong, f"limit_break_group disagrees with the client: {wrong}"
