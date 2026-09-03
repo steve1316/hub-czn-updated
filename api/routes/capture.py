@@ -131,6 +131,9 @@ def post_capture_stop():
         raise HTTPException(status_code=409, detail="No capture is running.")
 
     mgr = state.get_capture_manager()
+    # Mark the stop as deliberate before the proxy goes down. The watchdog wakes the moment the
+    # master shuts down, and would otherwise report this as an unexpected stop.
+    state.capture_running = False
     try:
         result = mgr.stop_capture()
         file_path, region = result if isinstance(result, tuple) else (result, state.capture_region)
