@@ -29,10 +29,15 @@ export function wsUrl(path: string): string {
 }
 
 let _tokenPromise: Promise<string> | null = null
+let _bootstrapPromise: Promise<void> | null = null
 
 /**
  * Fetch the token from Tauri once and remember it. App waits on this before rendering, so the
  * synchronous `wsUrl()` always has it by the time a socket opens.
+ *
+ * The Rust side holds the call until the sidecar has printed its token, so this does not race the
+ * sidecar's startup. An empty answer means something went wrong, so it is not cached - otherwise
+ * one bad reply would leave every later request unauthenticated for the rest of the session.
  *
  * @returns The API token, or an empty string in dev mode.
  */
@@ -42,10 +47,33 @@ export async function ensureToken(): Promise<string> {
   if (!_tokenPromise) {
     _tokenPromise = import('@tauri-apps/api/core')
       .then(({ invoke }) => invoke<string>('get_api_token'))
-      .then(t => { _token = t; return t })
       .catch(() => '')
+      .then(t => {
+        if (t) _token = t
+        else _tokenPromise = null
+        return t
+      })
   }
   return _tokenPromise
+}
+
+/**
+ * Resolve the sidecar's port and token into module state. Both Tauri commands block until the
+ * sidecar has actually printed them, so this settles only once the API is really reachable.
+ * Doing it in one place keeps the port from arriving after a page has already started fetching.
+ */
+export async function ensureApi(): Promise<void> {
+  if (!_bootstrapPromise) {
+    _bootstrapPromise = (async () => {
+      if (typeof window !== 'undefined' && window.__TAURI__) {
+        const { invoke } = await import('@tauri-apps/api/core')
+        const port = await invoke<number>('get_api_port').catch(() => 0)
+        if (port) _port = port
+      }
+      await ensureToken()
+    })()
+  }
+  return _bootstrapPromise
 }
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {

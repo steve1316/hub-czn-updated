@@ -77,3 +77,22 @@ def test_empty_token_disables_the_check():
 def test_real_app_has_the_middleware_installed():
     from api.main import create_app
     assert any(m.cls is TokenAuthMiddleware for m in create_app().user_middleware)
+
+
+def test_port_comes_from_the_environment(monkeypatch):
+    # Tauri picks the port and passes it in, so it never has to read one back off our stdout.
+    from api.main import _chosen_port
+    monkeypatch.setenv("HUB_CZN_PORT", "7849")
+    assert _chosen_port() == 7849
+
+
+def test_port_falls_back_to_a_free_one_when_unset(monkeypatch):
+    from api.main import _chosen_port
+    monkeypatch.delenv("HUB_CZN_PORT", raising=False)
+    assert 7842 <= _chosen_port() <= 7851
+
+
+def test_junk_in_the_port_variable_is_ignored(monkeypatch):
+    from api.main import _chosen_port
+    monkeypatch.setenv("HUB_CZN_PORT", "not-a-port")
+    assert 7842 <= _chosen_port() <= 7851
