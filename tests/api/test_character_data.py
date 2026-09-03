@@ -27,11 +27,6 @@ CLASSES = {"Hunter", "Psionic", "Ranger", "Striker", "Controller", "Vanguard"}
 MAX_LEVEL = 60
 MAX_ASCEND = 5
 
-# Adelheid predates this check and does not satisfy it. Her stored stats are well below what her
-# growth curve produces, so either the stats or the curve is wrong, and there is no game data here
-# to say which. Left failing loudly would drown out real problems, so she is listed explicitly.
-KNOWN_STAT_MISMATCHES = {"Adelheid"}
-
 COMBATANTS = [(rid, c) for rid, c in CHARACTERS.items() if c]
 PARTNER_ENTRIES = [(rid, p) for rid, p in PARTNERS.items() if p]
 
@@ -62,8 +57,6 @@ def test_stored_stats_agree_with_the_growth_curve(res_id, char):
     # The stored numbers must be what the level 1 stats plus the character's curve actually produce.
     # A curve chosen from the character's class rather than from their real stats fails here, which
     # is exactly how Arabella was caught growing on the Ranger curve despite being a Striker.
-    if char["name"] in KNOWN_STAT_MISMATCHES:
-        pytest.skip(f"{char['name']} is a known pre-existing mismatch")
     if str(res_id) not in CHAR_BASE_L1:
         pytest.skip("no level 1 entry")
     s = get_char_base_stats(str(res_id), MAX_LEVEL, MAX_ASCEND)
