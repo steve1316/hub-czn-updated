@@ -133,7 +133,7 @@ const en = {
   },
   capture: {
     title: 'Capture',
-    prereq: { admin: 'Admin', mitmproxy: 'mitmproxy', certificate: 'Certificate', adminTip: 'Admin rights let the app modify the Windows hosts file to redirect game traffic through the local proxy. No data leaves your machine.', mitmproxyTip: "mitmproxy acts as a local reverse proxy that intercepts the game's WebSocket messages to extract gear and rescue data in real time." },
+    prereq: { admin: 'Admin', mitmproxy: 'mitmproxy', certificate: 'Certificate', adminTip: 'Admin rights let the app modify the Windows hosts file to redirect game traffic through the local proxy. No data leaves your machine.', mitmproxyTip: "mitmproxy acts as a local reverse proxy that intercepts the game's WebSocket messages to extract gear and rescue data in real time.", certificateTip: 'The CA is trusted only while capture is running, and removed again when you stop.' },
     goToSetup: '→ Go to Setup',
     server: 'Server',
     debugMode: 'Debug mode',
@@ -224,11 +224,12 @@ const en = {
       remove: 'Remove',
       removeHint: 'Deletes the CA from the Windows trust store. Capture stops working until you install it again.',
       trustedOk: 'Trusted for your Windows user account',
+      readyForCapture: 'Ready. Trusted only while capture is running, then removed.',
       trustedFail: 'File generated but not installed in trust store',
     },
     installCert: {
-      label: 'Install certificate',
-      detail: 'Required for the game to trust the proxy.',
+      label: 'Install certificate permanently (optional)',
+      detail: 'Capture trusts the certificate on its own while it runs. Only install it permanently if that fails, for example when antivirus blocks it.',
       button: 'Install Certificate',
       installing: 'Installing…',
       manualLink: 'Or install manually if blocked by antivirus',

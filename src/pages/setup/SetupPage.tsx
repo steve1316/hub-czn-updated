@@ -144,13 +144,13 @@ export function SetupPage() {
       />
 
       <Row
-        ok={status.certificate_trusted}
+        ok={status.certificate}
         label={t('setup.certificate.label')}
         detail={
           status.certificate_trusted
             ? t('setup.certificate.trustedOk')
             : status.certificate
-              ? t('setup.certificate.trustedFail')
+              ? t('setup.certificate.readyForCapture')
               : t('setup.certificate.fail')
         }
         error={certMutation.isError ? certMutation.error : undefined}
@@ -182,10 +182,11 @@ export function SetupPage() {
         }
       />
 
+      {/* Optional now, not a failed step: capture trusts the CA on its own. This is the way out when
+          something blocks that, such as antivirus intercepting certutil. */}
       {status.certificate && !status.certificate_trusted && (
         <div className="p-4 rounded-lg bg-[#181818] border border-[#282828] flex flex-col gap-3">
           <div className="flex items-start gap-4">
-            <StatusIcon ok={false} />
             <div className="flex-1">
               <p className="text-[#ffffff] font-medium text-sm">{t('setup.installCert.label')}</p>
               <p className="text-[#b3b3b3] text-xs mt-0.5">{t('setup.installCert.detail')}</p>
