@@ -18,7 +18,9 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
+from api.client_db import client_db_dir
+
+CLIENT_DB = client_db_dir()
 OUTPUT_PATH = Path(__file__).parent.parent / "snapshots" / "skill_eff_dictionary.json"
 
 
