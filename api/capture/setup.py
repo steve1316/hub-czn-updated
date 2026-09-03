@@ -7,7 +7,9 @@ import subprocess
 import ctypes
 import os
 import sys
+import time
 from dataclasses import dataclass
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import Optional
 
@@ -15,6 +17,15 @@ from typing import Optional
 # Thumbprints already known to be absent from the machine store, so the polled status check does not
 # keep shelling out for them.
 _machine_store_misses = set()
+
+# The Setup and Capture pages poll the status endpoint every 5 to 10 seconds, and each check used to
+# shell out to certutil. Answers are held briefly instead. Capture installing or removing the CA
+# clears this, so a change we make ourselves is never served stale.
+_trust_cache: dict = {}
+TRUST_CACHE_SECONDS = 15
+
+# Warn while there is still time to do something about it, rather than on the day it dies.
+CERT_EXPIRY_WARNING_DAYS = 30
 
 
 class CertificateInstallError(Exception):
@@ -53,6 +64,47 @@ def get_certificate_thumbprint(cert_path: Path) -> Optional[str]:
 class CertutilPromptTimeout(Exception):
     """Raised when certutil sat waiting on the Windows security prompt for too long."""
     pass
+
+
+def certificate_expiry(cert_path: Path) -> Optional[datetime]:
+    """
+    Read the CA's expiry date.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        Expiry as an aware UTC datetime, or None if the file is missing or unreadable.
+    """
+    try:
+        data = cert_path.read_bytes()
+    except OSError:
+        return None
+    try:
+        from cryptography import x509
+        try:
+            cert = x509.load_pem_x509_certificate(data)
+        except ValueError:
+            cert = x509.load_der_x509_certificate(data)
+        return cert.not_valid_after_utc
+    except Exception:
+        return None
+
+
+def certificate_days_left(cert_path: Path) -> Optional[int]:
+    """
+    Days until the CA expires.
+
+    Args:
+        cert_path: Path to the certificate file.
+
+    Returns:
+        Whole days remaining, negative once expired, or None if the date cannot be read.
+    """
+    expires = certificate_expiry(cert_path)
+    if expires is None:
+        return None
+    return (expires - datetime.now(timezone.utc)).days
 
 
 def _run_certutil(args: list, timeout: int = 15, interactive: bool = False):
@@ -107,6 +159,11 @@ def is_certificate_trusted(cert_path: Path) -> bool:
     thumbprint = get_certificate_thumbprint(cert_path)
     if not thumbprint:
         return False
+
+    cached = _trust_cache.get(thumbprint)
+    if cached and time.monotonic() - cached[1] < TRUST_CACHE_SECONDS:
+        return cached[0]
+
     for store_args in (["-user"], []):
         # Misses are remembered because the Setup page polls this every 5 seconds. Capture installs
         # and removes the machine copy as it runs, so both of those clear the memo.
@@ -116,9 +173,11 @@ def is_certificate_trusted(cert_path: Path) -> bool:
         if result is None:
             return False
         if result.returncode == 0:
+            _trust_cache[thumbprint] = (True, time.monotonic())
             return True
         if not store_args:
             _machine_store_misses.add(thumbprint)
+    _trust_cache[thumbprint] = (False, time.monotonic())
     return False
 
 
@@ -136,6 +195,7 @@ def remove_certificate(cert_path: Path) -> list[str]:
     """
     match = get_certificate_thumbprint(cert_path) or "mitmproxy"
     _machine_store_misses.discard(match)
+    _trust_cache.pop(match, None)
     removed = []
     for name, store_args in (("user", ["-user"]), ("machine", [])):
         # Root-store edits make Windows show a consent prompt, so keep the window and wait.
@@ -162,6 +222,7 @@ def install_certificate_for_capture(cert_path: Path) -> None:
     if not cert_path.exists():
         raise CertificateInstallError(f"Certificate file not found: {cert_path}")
     _machine_store_misses.clear()
+    _trust_cache.clear()
     result = _run_certutil(["-addstore", "-f", "Root", str(cert_path)], timeout=30)
     if result is None:
         raise CertificateInstallError("certutil.exe could not be run")
@@ -186,6 +247,7 @@ def remove_capture_certificate(cert_path: Path) -> bool:
     """
     match = get_certificate_thumbprint(cert_path) or "mitmproxy"
     _machine_store_misses.discard(match)
+    _trust_cache.pop(match, None)
     result = _run_certutil(["-delstore", "Root", match], timeout=30)
     return result is not None and result.returncode == 0
 
@@ -225,6 +287,8 @@ class PrerequisiteStatus:
     has_certificate: bool
     certificate_path: Optional[Path]
     certificate_trusted: bool
+    certificate_days_left: Optional[int] = None
+    certificate_expired: bool = False
     can_write_hosts: bool = True
     hosts_block_reason: Optional[str] = None
 
@@ -274,6 +338,7 @@ def check_prerequisites() -> PrerequisiteStatus:
     cert_path = certificate_path()
     has_certificate = cert_path.exists()
     certificate_trusted = is_certificate_trusted(cert_path) if has_certificate else False
+    days_left = certificate_days_left(cert_path) if has_certificate else None
 
     can_write_hosts, hosts_block_reason = _probe_hosts_writable()
 
@@ -286,6 +351,8 @@ def check_prerequisites() -> PrerequisiteStatus:
         certificate_trusted=certificate_trusted,
         can_write_hosts=can_write_hosts,
         hosts_block_reason=hosts_block_reason,
+        certificate_days_left=days_left,
+        certificate_expired=days_left is not None and days_left < 0,
     )
 
 
