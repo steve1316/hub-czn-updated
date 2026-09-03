@@ -1014,7 +1014,7 @@
     "cri": 3.0,
     "cri_dmg": 125.0,
     "weak_ego_dmg_rate": 125.0,
-    "level_group": "c_lv_striker_ssr",
+    "level_group": "c_lv_ranger_ssr",
     "ascend_group": "dev_ascend",
     "limit_break_group": "limit_30115",
     "friendship_group": "friendship_bonus_no_bg"

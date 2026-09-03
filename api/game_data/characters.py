@@ -463,11 +463,11 @@ CHARACTERS = {
         "grade": 5,
         "attribute": "Instinct",
         "class": "Striker",
-        # Level 60 before ascension, matching every other 5-star Striker. Community sites quote
-        # 495/146/332, which looks like level 60 with ascension included.
-        "base_atk": 467,
-        "base_def": 155,
-        "base_hp": 376,
+        # She is a Striker but grows on the Ranger curve, which the game's own level 1 and level 60
+        # numbers confirm. Level 60 here, same as every other entry.
+        "base_atk": 495,
+        "base_def": 146,
+        "base_hp": 332,
         "base_crit_rate": 3.0,
         "base_crit_dmg": 125.0,
         "node_50": "CRate",
