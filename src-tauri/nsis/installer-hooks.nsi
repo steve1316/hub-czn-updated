@@ -6,6 +6,13 @@
   Sleep 1000
 !macroend
 
+; Undo a capture that is still in place before the files go, using the same cleanup the app runs
+; on shutdown. Without this, uninstalling mid-capture leaves the game pointed at 127.0.0.1 for good
+; and the app that could fix it is gone.
+!macro NSIS_HOOK_PREUNINSTALL
+  nsExec::ExecToLog '"$INSTDIR\hub-czn-api.exe" --cleanup'
+!macroend
+
 ; Untrust the mitmproxy CA that Setup added, so uninstalling actually undoes it.
 ; Only touches the per-user store, and the private key in ~/.mitmproxy is left alone
 ; in case another mitmproxy tool is using it.

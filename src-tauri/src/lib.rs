@@ -17,149 +17,27 @@ struct ApiToken(Mutex<String>);
 
 
 struct SidecarState {
+    #[allow(dead_code)]
     child: CommandChild,
+    #[allow(dead_code)]
     pid:   u32,
-    /// Job Object handle (Windows only).
-    /// Kept alive so that when this struct — or the entire process — is
-    /// dropped/killed for ANY reason, the OS closes this handle and
-    /// immediately terminates every process in the job (sidecar + mitmdump
-    /// + any other children).  No cleanup code needs to run.
-    #[cfg(target_os = "windows")]
-    _job: Option<WinJob>,
 }
 
 struct SidecarChild(Mutex<Option<SidecarState>>);
 
-impl Drop for SidecarChild {
-    fn drop(&mut self) {
-        if let Ok(mut guard) = self.0.lock() {
-            if let Some(state) = guard.take() {
-                // Belt-and-suspenders: explicit kill + taskkill tree before
-                // the Job Object handle is released by dropping `state`.
-                let _ = state.child.kill();
-                kill_tree(state.pid);
-                // `state` is dropped here → _job is dropped → OS kills job.
-            }
-        }
-    }
-}
-
-fn kill_tree(pid: u32) {
-    #[cfg(target_os = "windows")]
-    let _ = std::process::Command::new("taskkill")
-        .args(["/F", "/T", "/PID", &pid.to_string()])
-        .output();
-    #[cfg(not(target_os = "windows"))]
-    let _ = pid;
-}
-
-// ── Windows Job Object ────────────────────────────────────────────────────────
+// ── Sidecar shutdown ───────────────────────────────────────────────────────
 //
-// Strategy: assign the sidecar to a Job Object with KILL_ON_JOB_CLOSE.
-// When hub-czn.exe exits for ANY reason (graceful close, installer kill,
-// crash, Task Manager), Windows automatically closes all process handles,
-// including the Job Object handle.  That triggers the OS to kill every
-// process in the job — sidecar, mitmdump, and any grandchildren — with no
-// Rust cleanup code required.  This is fundamentally more reliable than
-// taskkill, which only runs when our code runs.
+// This used to be a Job Object with KILL_ON_JOB_CLOSE, so the OS killed the sidecar whenever
+// hub-czn.exe went away, with no cleanup code required. That guarantee was the problem: a capture
+// leaves a redirect in the hosts file and the CA in the machine trust store, and being killed
+// outright meant neither came back out. The game was then unable to connect until the app was
+// launched again.
 //
-// Raw extern declarations avoid adding a new crate dependency.
-
-#[cfg(target_os = "windows")]
-mod win {
-    use std::ffi::c_void;
-
-    pub const PROCESS_TERMINATE:  u32 = 0x0001;
-    pub const PROCESS_SET_QUOTA:  u32 = 0x0100;
-    pub const JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE: u32 = 0x0000_2000;
-    pub const JOB_OBJECT_EXTENDED_LIMIT_INFORMATION: i32 = 9;
-
-    #[repr(C)]
-    pub struct BasicLimitInfo {
-        pub per_process_time: i64,
-        pub per_job_time:     i64,
-        pub limit_flags:      u32,
-        pub min_ws:           usize,
-        pub max_ws:           usize,
-        pub active_proc:      u32,
-        pub affinity:         usize,
-        pub priority:         u32,
-        pub scheduling:       u32,
-    }
-
-    #[repr(C)]
-    pub struct IoCounters {
-        pub read_ops:   u64, pub write_ops:  u64, pub other_ops:   u64,
-        pub read_xfer:  u64, pub write_xfer: u64, pub other_xfer:  u64,
-    }
-
-    #[repr(C)]
-    pub struct ExtLimitInfo {
-        pub basic:          BasicLimitInfo,
-        pub io:             IoCounters,
-        pub proc_mem_limit: usize,
-        pub job_mem_limit:  usize,
-        pub peak_proc_mem:  usize,
-        pub peak_job_mem:   usize,
-    }
-
-    #[link(name = "kernel32")]
-    extern "system" {
-        pub fn CreateJobObjectW(attrs: *mut c_void, name: *const u16) -> isize;
-        pub fn OpenProcess(access: u32, inherit: i32, pid: u32) -> isize;
-        pub fn AssignProcessToJobObject(job: isize, process: isize) -> i32;
-        pub fn SetInformationJobObject(
-            job: isize, class: i32, info: *mut c_void, len: u32,
-        ) -> i32;
-        pub fn CloseHandle(handle: isize) -> i32;
-    }
-}
-
-#[cfg(target_os = "windows")]
-struct WinJob(isize);
-
-#[cfg(target_os = "windows")]
-unsafe impl Send for WinJob {}
-#[cfg(target_os = "windows")]
-unsafe impl Sync for WinJob {}
-
-#[cfg(target_os = "windows")]
-impl Drop for WinJob {
-    fn drop(&mut self) {
-        if self.0 != 0 {
-            unsafe { win::CloseHandle(self.0); }
-        }
-    }
-}
-
-#[cfg(target_os = "windows")]
-fn create_job_for(pid: u32) -> Option<WinJob> {
-    unsafe {
-        let job = win::CreateJobObjectW(std::ptr::null_mut(), std::ptr::null());
-        if job == 0 { return None; }
-
-        let mut info = std::mem::zeroed::<win::ExtLimitInfo>();
-        info.basic.limit_flags = win::JOB_OBJECT_LIMIT_KILL_ON_JOB_CLOSE;
-        win::SetInformationJobObject(
-            job,
-            win::JOB_OBJECT_EXTENDED_LIMIT_INFORMATION,
-            &mut info as *mut _ as *mut _,
-            std::mem::size_of::<win::ExtLimitInfo>() as u32,
-        );
-
-        let proc_handle = win::OpenProcess(
-            win::PROCESS_TERMINATE | win::PROCESS_SET_QUOTA,
-            0,
-            pid,
-        );
-        if proc_handle != 0 {
-            win::AssignProcessToJobObject(job, proc_handle);
-            win::CloseHandle(proc_handle);
-        }
-
-        Some(WinJob(job))
-    }
-}
+// So the sidecar now watches us instead. We pass it our PID, it waits for us to exit, undoes both,
+// and exits on its own. We do not kill it at all - killing it is what broke this.
+//
+// The trade: an orphaned sidecar used to be impossible and is now merely unlikely, since it needs
+// both the watcher and its deadline to fail. See api/shutdown.py.
 
 // ── Tauri entry point ─────────────────────────────────────────────────────────
 
@@ -220,6 +98,8 @@ pub fn run() {
                     .envs(HashMap::from([
                         ("HUB_CZN_PORT".to_string(), port.to_string()),
                         ("HUB_CZN_API_TOKEN".to_string(), token),
+                        // Our PID, so it knows what to watch for and when to clean up.
+                        ("HUB_CZN_PARENT_PID".to_string(), std::process::id().to_string()),
                     ]));
 
                 let (mut rx, child) = sidecar.spawn()
@@ -227,12 +107,7 @@ pub fn run() {
 
                 let pid = child.pid();
 
-                *app.state::<SidecarChild>().0.lock().unwrap() = Some(SidecarState {
-                    child,
-                    pid,
-                    #[cfg(target_os = "windows")]
-                    _job: create_job_for(pid),
-                });
+                *app.state::<SidecarChild>().0.lock().unwrap() = Some(SidecarState { child, pid });
 
                 // Nothing is parsed out of this any more, but the pipe still has to be drained or
                 // the sidecar blocks once it fills up.
@@ -246,16 +121,9 @@ pub fn run() {
         })
         .on_window_event(|window, event| {
             if let tauri::WindowEvent::Destroyed = event {
-                // Explicit cleanup on graceful close — belt-and-suspenders
-                // alongside the Job Object (which handles forced kills).
-                if let Some(state) = window
-                    .app_handle()
-                    .state::<SidecarChild>()
-                    .0.lock().unwrap().take()
-                {
-                    let _ = state.child.kill();
-                    kill_tree(state.pid);
-                }
+                // Deliberately does not kill the sidecar. It is watching our PID and will undo the
+                // hosts redirect and the certificate trust once we are gone, which a kill prevents.
+                let _ = window;
             }
         })
         .invoke_handler(tauri::generate_handler![get_api_port, get_api_token])
