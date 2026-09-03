@@ -194,6 +194,13 @@ const en = {
     loading: 'Checking prerequisites…',
     apiError: 'Could not connect to the API',
     apiErrorHint: 'Make sure the Python server is running.',
+    redirect: {
+      label: 'Game redirect',
+      active: 'A capture redirect is still in your hosts file. The game cannot connect until it is removed.',
+      clear: 'Remove',
+      clearing: 'Removing…',
+      error: 'Could not remove the redirect.',
+    },
     admin: {
       label: 'Administrator',
       ok: 'Running with administrator privileges',

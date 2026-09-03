@@ -41,6 +41,23 @@ def _flush_dns():
         pass
 
 
+def has_capture_entries() -> bool:
+    """
+    Check whether our block is sitting in the hosts file.
+
+    Read-only, and polled by the Setup page, so it must never write. A leftover block means the game
+    is pointed at 127.0.0.1 and cannot connect.
+
+    Returns:
+        True if the block is present.
+    """
+    try:
+        with open(HOSTS_PATH, "r") as f:
+            return HOSTS_BLOCK_START in f.read()
+    except OSError:
+        return False
+
+
 def remove_capture_entries() -> bool:
     """
     Strip our block from the hosts file. Safe to call when there is nothing to remove, and used both

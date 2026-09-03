@@ -1,6 +1,6 @@
 import type {
   ApiStatus, GameData, LoadResponse, MemoryFragment,
-  SetupStatus, SetupActionResponse, RemoveCertResponse, CaptureStatus,
+  SetupStatus, SetupActionResponse, RemoveCertResponse, ClearRedirectResponse, CaptureStatus,
   CaptureStartRequest, CaptureStopResponse, RescueBanner,
   Combatant, CombatantStats, ScoringPriorities,
   OptimizerConfig, EquipmentSet, Monster, AboutInfo, CharPreset,
@@ -132,6 +132,9 @@ export const api = {
   gameData: () => request<GameData>('/api/game-data'),
 
   setupStatus: () => request<SetupStatus>('/api/setup/status'),
+
+  clearRedirect: () =>
+    request<ClearRedirectResponse>('/api/setup/clear-redirect', { method: 'POST' }),
 
   generateCert: () =>
     request<SetupActionResponse>('/api/setup/generate-cert', { method: 'POST' }),

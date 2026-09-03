@@ -70,6 +70,11 @@ export function SetupPage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
   })
 
+  const clearRedirectMutation = useMutation({
+    mutationFn: () => api.clearRedirect(),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
+  })
+
   const removeCertMutation = useMutation({
     mutationFn: () => api.removeCertificate(),
     onSuccess: () => qc.invalidateQueries({ queryKey: ['setup-status'] }),
@@ -93,6 +98,24 @@ export function SetupPage() {
   return (
     <div className="p-6 flex flex-col gap-4 max-w-xl">
       <h1 className="text-xl font-bold text-[#ffffff]">{t('setup.title')}</h1>
+
+      {status.hosts_redirect_active && (
+        <Row
+          ok={false}
+          label={t('setup.redirect.label')}
+          detail={t('setup.redirect.active')}
+          error={clearRedirectMutation.isError ? clearRedirectMutation.error : undefined}
+          action={
+            <Button
+              size="sm"
+              onClick={() => clearRedirectMutation.mutate()}
+              disabled={clearRedirectMutation.isPending}
+            >
+              {clearRedirectMutation.isPending ? t('setup.redirect.clearing') : t('setup.redirect.clear')}
+            </Button>
+          }
+        />
+      )}
 
       <Row
         ok={status.admin}
