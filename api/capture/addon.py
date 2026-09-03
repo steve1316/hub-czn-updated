@@ -13,6 +13,8 @@ from typing import Optional, Callable
 from game_data import CHARACTERS, SETS
 from game_data.constants import EQUIPMENT_SLOTS
 
+from .constants import SERVERS
+
 try:
     import zstandard as zstd
     HAS_ZSTD = True
@@ -24,6 +26,9 @@ except ImportError:
 CHAR_NAMES = {rid: c["name"] for rid, c in CHARACTERS.items() if c is not None}
 SET_NAMES = {sid: s["name"] for sid, s in SETS.items()}
 SLOT_NAMES = {k: v.split(" ", 1)[1] if " " in v else v for k, v in EQUIPMENT_SLOTS.items()}
+
+# Which region each game host belongs to, so a capture can record the server it actually talked to.
+HOST_TO_REGION = {host: cfg.region_id for cfg in SERVERS.values() for host in cfg.hosts}
 
 # Zstandard frame header, used to spot compressed WebSocket payloads.
 ZSTD_MAGIC = bytes([0x28, 0xB5, 0x2F, 0xFD])
@@ -87,6 +92,8 @@ class Addon:
         self.battle_data: dict = {}
         self.zstd_dict = None
         self.zstd_dctx = None
+        # Hosts the game actually connected to, used to work out the region.
+        self.seen_hosts: set = set()
 
         # Debug logging
         self.debug_file = None
@@ -114,20 +121,19 @@ class Addon:
         self.debug_file.flush()
 
     def _detect_region(self) -> Optional[str]:
-        """Detect server region from world_id in character data."""
-        if not self.character_data:
-            return None
+        """
+        Work out which server this capture came from, using the hosts the game connected to.
 
-        # Check for world_id in user data
-        user_data = self.character_data.get("user", {})
-        world_id = user_data.get("world_id", "")
+        The payload carries no region of its own. This used to look for a `world_id` field that the
+        server never sends, so it always returned None and the region was never detected.
 
-        # Map world_id to region
-        if "world_live_global" in world_id:
-            return "global"
-        elif "world_live_asia" in world_id:
-            return "asia"
-
+        Returns:
+            "global" or "asia", or None if no known game host was seen.
+        """
+        for host in self.seen_hosts:
+            region = HOST_TO_REGION.get(host)
+            if region:
+                return region
         return None
 
     def _try_decode_binary(self, raw_bytes):
@@ -207,6 +213,12 @@ class Addon:
         Args:
             flow: mitmproxy flow object containing WebSocket messages
         """
+        # pretty_host prefers the Host header, which the game still sets to the real server even
+        # though the hosts file sent the connection to us.
+        host = getattr(flow.request, "pretty_host", None) or getattr(flow.request, "host", None)
+        if host:
+            self.seen_hosts.add(host)
+
         msg = flow.websocket.messages[-1]
         direction = "c2s" if msg.from_client else "s2c"
 
