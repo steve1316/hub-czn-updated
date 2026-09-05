@@ -12,6 +12,14 @@ Changes are not sent upstream. For what the app does and how to use it, see the 
 
 ## Changelog
 
+### 2026-09-05
+
+- Capture now stops with a clear message when a redirect left behind by a crashed run is still in
+  place, and points you at `Setup` to remove it. Before this it started anyway and captured nothing.
+- The game can no longer be pointed at a dead port during the moment a capture is shutting down.
+- The real-time log no longer erases itself a moment after you press `Start`. It was wiping the
+  startup messages it had just shown, sometimes leaving the panel blank.
+
 ### 2026-09-03
 
 - The certificate is now trusted only while a capture is running and untrusted again the moment it
