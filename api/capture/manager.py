@@ -306,6 +306,10 @@ class CaptureManager:
         """
         Resolve game server hostnames to IP addresses for current region.
         Stores results in self.game_server_ips.
+
+        Raises:
+            CaptureError: If a hostname resolves to loopback, which means a capture redirect from
+                an earlier run is still in the hosts file.
         """
         from .constants import SERVERS
         server_config = SERVERS[self.current_region]
@@ -313,9 +317,18 @@ class CaptureManager:
         for host in server_config.hosts:
             try:
                 ip = socket.gethostbyname(host)
-                self.game_server_ips[host] = ip
             except socket.gaierror:
-                pass
+                continue
+            # A loopback answer means we are resolving through our own redirect. modify_hosts_file
+            # leaves an existing block alone, so a stale one from a crashed run lands here, and
+            # 127.0.0.1 would then become the reverse proxy's upstream - forwarding to itself.
+            if ip.startswith("127."):
+                raise CaptureError(
+                    f"{host} already resolves to {ip}, so a capture redirect is still in the "
+                    f"hosts file from an earlier run. Remove it on the Setup page, then start "
+                    f"capture again."
+                )
+            self.game_server_ips[host] = ip
 
     def modify_hosts_file(self) -> str:
         """
@@ -583,6 +596,11 @@ class CaptureManager:
         if not self.capturing:
             return None
 
+        # Undo the redirect before taking the listener down, not after. In between, the hosts
+        # entry still sends the game to 127.0.0.1 while nothing is listening there, so a game that
+        # reconnects in that window hits a closed port instead of the real server.
+        self.restore_hosts_file()
+
         if self._master:
             self._master.shutdown()  # documented as thread-safe
         if self._proxy_thread:
@@ -592,7 +610,6 @@ class CaptureManager:
         # cycle collector runs, holding the debug file handle and the captured data open.
         self.addon = None
 
-        self.restore_hosts_file()
         self._untrust_certificate()
         self.capturing = False
 

@@ -390,6 +390,7 @@ export function CapturePage() {
   const startMutation = useMutation({
     mutationFn: () => api.captureStart({ region, debug }),
     onMutate: async () => {
+      clear()
       await qc.cancelQueries({ queryKey: ['capture-status'] })
       const prev = qc.getQueryData<CaptureStatus>(['capture-status'])
       qc.setQueryData<CaptureStatus>(['capture-status'], old =>
@@ -401,7 +402,6 @@ export function CapturePage() {
       qc.setQueryData(['capture-status'], context?.prev)
     },
     onSuccess: () => {
-      clear()
       qc.invalidateQueries({ queryKey: ['capture-status'] })
     },
   })
