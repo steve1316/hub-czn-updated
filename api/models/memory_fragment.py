@@ -163,9 +163,3 @@ class MemoryFragment:
         for sub in self.substats:
             stats[sub.name] = stats.get(sub.name, 0) + sub.value
         return stats
-
-    def get_set_pieces(self) -> int:
-        set_info = SETS.get(self.set_id)
-        if set_info:
-            return set_info.get("pieces", 2)
-        return 2

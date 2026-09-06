@@ -18,7 +18,7 @@ SETS = {
     16: {"name": "Offering of the Void", "pieces": 4, "bonus": "+20% Void DMG after Exhaust (1 turn)",                                                     "type": "conditional", "icon_path": _ICON.format(16)},
     18: {"name": "Spark of Passion",     "pieces": 4, "bonus": "+20% Passion DMG after Upgrade (5 times)",                                                 "type": "conditional", "icon_path": _ICON.format(18)},
     19: {"name": "Cursed Corpse",        "pieces": 2, "bonus": "+10% DMG to targets inflicted with Agony",                                                 "type": "conditional", "icon_path": _ICON.format(19)},
-    20: {"name": "Line of Justice",      "pieces": 4, "bonus": "+20% Crit Rate for cards that cost 2 or more",                                             "type": "conditional", "icon_path": _ICON.format(20), "two_piece": {"stat": "ATK%", "value": 17}},
+    20: {"name": "Line of Justice",      "pieces": 4, "bonus": "+20% Crit Rate for cards that cost 2 or more",                                             "type": "conditional", "icon_path": _ICON.format(20)},
     21: {"name": "Wireth's Steel",       "pieces": 4, "bonus": "2pc: +20% Defense | 4pc: +50% Counterattack DMG",                                         "type": "conditional", "two_piece": {"stat": "DEF%", "value": 20}},
     22: {"name": "Orb of Inhibition",    "pieces": 4, "bonus": "+30% DMG to Void cards with 2+ hits",                                                      "type": "conditional", "icon_path": _ICON.format(22)},
     23: {"name": "Judgment's Flames",    "pieces": 4, "bonus": "+50% Instinct DMG against Ravaged targets",                                                "type": "conditional", "icon_path": _ICON.format(23)},
@@ -26,6 +26,8 @@ SETS = {
     25: {"name": "Glory's Reign",        "pieces": 4, "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",                    "type": "conditional", "icon_path": _ICON.format(25)},
     26: {"name": "Prelude to a Hero",    "pieces": 4, "bonus": "When a Passion/Void Attack Card is Discarded, +15% Crit Chance for 1 turn (max 15%)",     "type": "conditional", "icon_path": _ICON.format(26)},
     27: {"name": "Starlight and Dreams", "pieces": 4, "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",     "type": "conditional", "icon_path": _ICON.format(27)},
+    28: {"name": "Battlefield Evolution", "pieces": 4, "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)", "type": "conditional", "icon_path": _ICON.format(28)},
+    29: {"name": "Sanguine Thorn",      "pieces": 4, "bonus": "+25% Crit DMG for 1 turn when a card applies Fracture (max 2 stacks) | +15% Crit DMG to DoTs once 10 Fractures have been applied", "type": "conditional", "icon_path": _ICON.format(29)},
 }
 
 TWO_PIECE_SETS = [sid for sid, s in SETS.items() if s["pieces"] == 2]

@@ -101,6 +101,13 @@ class GearOptimizer:
             except Exception as e:
                 print(f"Error parsing fragment: {e}")
 
+        # SETS is hand-maintained, so a game update can ship a set the table cannot name. Those
+        # fragments still load, but they score no set bonus, so say so once rather than per piece.
+        unknown_sets = sorted({f.set_id for f in self.fragments} - set(SETS))
+        if unknown_sets:
+            print(f"Unknown Memory Fragment set ids in this capture: {unknown_sets}. "
+                  "They will score no set bonus until they are added to api/game_data/sets.py")
+
         for char_gear in self.characters.values():
             char_gear.sort(key=lambda f: f.slot_num)
 
