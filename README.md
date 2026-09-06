@@ -19,6 +19,13 @@ Changes are not sent upstream. For what the app does and how to use it, see the 
 - The game can no longer be pointed at a dead port during the moment a capture is shutting down.
 - The real-time log no longer erases itself a moment after you press `Start`. It was wiping the
   startup messages it had just shown, sometimes leaving the panel blank.
+- Two new Memory Fragment sets, `Battlefield Evolution` and `Sanguine Thorn`, are now recognised.
+  Their fragments used to show as `Unknown` and counted for nothing when the `Optimizer` scored a
+  build, so any build using them was ranked too low.
+- `Line of Justice` no longer grants a 2-piece Attack bonus. The game does not give one, so builds
+  holding two of its pieces were being scored higher than they actually are.
+- Set data is now checked against the game's own files, the same way character data is, and a
+  capture holding a set the app does not know now says so instead of failing quietly.
 
 ### 2026-09-03
 
