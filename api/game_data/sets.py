@@ -18,7 +18,7 @@ SETS = {
     16: {"name": "Offering of the Void", "pieces": 4, "bonus": "+20% Void DMG after Exhaust (1 turn)",                                                     "type": "conditional", "icon_path": _ICON.format(16)},
     18: {"name": "Spark of Passion",     "pieces": 4, "bonus": "+20% Passion DMG after Upgrade (5 times)",                                                 "type": "conditional", "icon_path": _ICON.format(18)},
     19: {"name": "Cursed Corpse",        "pieces": 2, "bonus": "+10% DMG to targets inflicted with Agony",                                                 "type": "conditional", "icon_path": _ICON.format(19)},
-    20: {"name": "Line of Justice",      "pieces": 4, "bonus": "+20% Crit Rate for cards that cost 2 or more",                                             "type": "conditional", "icon_path": _ICON.format(20), "two_piece": {"stat": "ATK%", "value": 17}},
+    20: {"name": "Line of Justice",      "pieces": 4, "bonus": "+20% Crit Rate for cards that cost 2 or more",                                             "type": "conditional", "icon_path": _ICON.format(20)},
     21: {"name": "Wireth's Steel",       "pieces": 4, "bonus": "2pc: +20% Defense | 4pc: +50% Counterattack DMG",                                         "type": "conditional", "two_piece": {"stat": "DEF%", "value": 20}},
     22: {"name": "Orb of Inhibition",    "pieces": 4, "bonus": "+30% DMG to Void cards with 2+ hits",                                                      "type": "conditional", "icon_path": _ICON.format(22)},
     23: {"name": "Judgment's Flames",    "pieces": 4, "bonus": "+50% Instinct DMG against Ravaged targets",                                                "type": "conditional", "icon_path": _ICON.format(23)},
