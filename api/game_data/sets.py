@@ -26,6 +26,8 @@ SETS = {
     25: {"name": "Glory's Reign",        "pieces": 4, "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",                    "type": "conditional", "icon_path": _ICON.format(25)},
     26: {"name": "Prelude to a Hero",    "pieces": 4, "bonus": "When a Passion/Void Attack Card is Discarded, +15% Crit Chance for 1 turn (max 15%)",     "type": "conditional", "icon_path": _ICON.format(26)},
     27: {"name": "Starlight and Dreams", "pieces": 4, "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",     "type": "conditional", "icon_path": _ICON.format(27)},
+    28: {"name": "Battlefield Evolution", "pieces": 4, "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)", "type": "conditional", "icon_path": _ICON.format(28)},
+    29: {"name": "Sanguine Thorn",      "pieces": 4, "bonus": "+25% Crit DMG for 1 turn when a card applies Fracture (max 2 stacks) | +15% Crit DMG to DoTs once 10 Fractures have been applied", "type": "conditional", "icon_path": _ICON.format(29)},
 }
 
 TWO_PIECE_SETS = [sid for sid, s in SETS.items() if s["pieces"] == 2]
