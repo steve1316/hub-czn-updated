@@ -1,0 +1,50 @@
+[
+  {
+    "id": "piece_set_option@name@set_public_007",
+    "text": "Tetra’s Authority"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_007_set2",
+    "text": "+12% Defense"
+  },
+  {
+    "id": "piece_set_option@name@set_public_020",
+    "text": "Line of Justice"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_020_set4",
+    "text": "+20% Crit of <color_ego_norms_light>Order</> cards<br>second line"
+  },
+  {
+    "id": "piece_set_option@name@set_public_021",
+    "text": "Wireth’s Steel"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_021_set2",
+    "text": "+20% Defense"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_021_set4",
+    "text": "Increase Damage of Counterattack by 50%"
+  },
+  {
+    "id": "piece_set_option@name@set_public_030",
+    "text": "Unscorable Set"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_030_set2",
+    "text": "+8% Critical Chance"
+  },
+  {
+    "id": "piece_set_option@name@set_public_031",
+    "text": "Six Piece Set"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_031_set2",
+    "text": "+9% Attack"
+  },
+  {
+    "id": "piece_set_option@desc@set_public_031_set6",
+    "text": "Something at six pieces"
+  }
+]
