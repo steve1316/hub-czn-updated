@@ -502,6 +502,20 @@ CHARACTERS = {
         "node_50": "CDmg",
         "node_60": "CRate",
     },
+    30117: {  # TODO: confirm node_50, node_60
+        "name": "Olga",
+        "grade": 5,
+        "attribute": "Instinct",
+        "class": "Psionic",
+        "base_atk": 443,
+        "base_def": 169,
+        "base_hp": 356,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "base_weak_ego_dmg_rate": 125.0,
+        "node_50": "CRate",
+        "node_60": "CDmg",
+    },
 }
 
 # Build reverse lookup: name -> character data (for lookups by name)

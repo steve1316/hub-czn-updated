@@ -205,3 +205,28 @@ def test_limit_break_groups_match_the_client():
         if theirs and ours != theirs:
             wrong.append((rid, ours, theirs))
     assert not wrong, f"limit_break_group disagrees with the client: {wrong}"
+
+
+@pytest.mark.parametrize("res_id,at_e0,at_e4", [
+    (30116, "by 4% (max 4 stacks)", "by 8% (max 4 stacks)"),    # Licinia's Virutoxin
+    (30095, "by 5% (max 4 stacks)", "by 10% (max 4 stacks)"),   # Clara's Prism
+])
+def test_conditional_passive_values_scale_with_limit_break(res_id, at_e0, at_e4):
+    # Both entries used to hardcode the E0 number, so the passive read the same at every limit break
+    # while the game scaled it. The client says these two double from E0 to E4.
+    assert at_e0 in get_partner_passive_info(res_id, 0)["passive_desc"]
+    assert at_e4 in get_partner_passive_info(res_id, 4)["passive_desc"]
+
+
+@needs_client_db
+def test_every_partner_exists_in_the_client():
+    # Capri sat in this table with no client row and no art, so nothing could ever reference her.
+    # A partner the client does not have cannot be owned, equipped or optimised for.
+    from api.client_db import client_db_dir
+
+    path = client_db_dir() / "partner_base@char_base.json"
+    if not path.exists():
+        pytest.skip("partner table not in the extracted client")
+    client = {int(r["id"]) for r in json.loads(path.read_text(encoding="utf-8"))}
+    unknown = [(rid, p["name"]) for rid, p in PARTNER_ENTRIES if rid not in client]
+    assert not unknown, f"partners that do not exist in the game: {unknown}"

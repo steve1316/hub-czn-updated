@@ -1,11 +1,44 @@
 # Adding a new character
 
+## The short version
+
+With the client unpacked and `CZN_CLIENT_DB` pointing at it, one command does everything below:
+
+```
+python scripts/add_character.py
+```
+
+It works out what the client has that the repo does not, pulls the entry, writes it into
+`characters.py` / `partners.py` / `char_base_l1.json`, copies the art, and mirrors the Android
+assets. Name res_ids to do only those, and add `--dry-run` to see the entries without writing:
+
+```
+python scripts/add_character.py 30117 30118
+python scripts/add_character.py --dry-run
+```
+
+Auto-detection only picks up characters that have an **English name** in the client. Ids appear
+months before release with no name, so without that gate a datamined character lands in the app
+called `char_base@name@30117`. Naming an id explicitly skips the gate.
+
+The script never invents data. Where the client is missing rows it says so and leaves the field
+empty. The one that comes up regularly is the potential nodes, which for a just-released character
+are often not in `potential_node@potential_node_effect.json` yet - read them off the potential tree
+in game and pass them in:
+
+```
+python scripts/add_character.py 30117 --node-50 CRate --node-60 CDmg
+```
+
+Then read the diff and run `pytest tests/api/test_character_data.py`. The rest of this document is
+what the script is doing, and what to do when it cannot.
+
+## Unpacking the client
+
 The game's own data lives in `bin/appdata/cznlive/data.pack`. It can be unpacked with
 [Chaos-Zero-Nightmare-ASSet-Ripper](https://github.com/akioukun/Chaos-Zero-Nightmare-ASSet-Ripper),
 and that is the authoritative source for everything below - res_ids, growth curves, and the art.
 Use it if you can. Sourcing a character by hand is the fallback, and it has been wrong before.
-
-## Unpacking the client
 
 Point **Open Pack** at `bin/appdata/cznlive/data.pack`, then **Scan Tree**. The tree lists one
 folder per asset category, and Ctrl+Right Click multi-selects, so you can pick a few and export only

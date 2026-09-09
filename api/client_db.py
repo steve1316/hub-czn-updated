@@ -8,7 +8,9 @@ extraction scripts all read it, and each falls back quietly when it is absent.
 Set CZN_CLIENT_DB to the extracted output folder, the one containing `db/` and `text/`.
 """
 
+import json
 import os
+from functools import lru_cache
 from pathlib import Path
 
 ENV_VAR = "CZN_CLIENT_DB"
@@ -76,3 +78,73 @@ def have_client_text() -> bool:
         True if the catalogue exists.
     """
     return client_text_file().is_file()
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# Reading it
+
+
+@lru_cache(maxsize=None)
+def _load(path: str) -> str:
+    return Path(path).read_text(encoding="utf-8")
+
+
+def table(name: str, root: Path | None = None) -> list[dict]:
+    """
+    One shard JSON from the client's `db` folder.
+
+    The files run to megabytes and the extraction scripts read the same handful of them once per
+    res_id, so the result is cached for the life of the process. Treat what comes back as read only.
+
+    Args:
+        name: The file name inside `db`, such as "char_base@char_base.json".
+        root: Root of the unpacked client, defaulting to the configured one.
+
+    Returns:
+        The rows, in file order.
+    """
+    base = (root / "db") if root is not None else client_db_dir()
+    return json.loads(_load(str(base / name)))
+
+
+@lru_cache(maxsize=None)
+def _index(path: str) -> dict[str, dict]:
+    return {str(row["id"]): row for row in json.loads(_load(path)) if "id" in row}
+
+
+def table_by_id(name: str, root: Path | None = None) -> dict[str, dict]:
+    """
+    One shard JSON keyed by its `id` column.
+
+    Args:
+        name: The file name inside `db`.
+        root: Root of the unpacked client, defaulting to the configured one.
+
+    Returns:
+        id -> row, cached. Treat it as read only.
+    """
+    base = (root / "db") if root is not None else client_db_dir()
+    return _index(str(base / name))
+
+
+@lru_cache(maxsize=None)
+def _text_index(path: str) -> dict[str, str]:
+    return {str(row["id"]): row.get("text") for row in json.loads(_load(path)) if row.get("id")}
+
+
+def text_index(root: Path | None = None) -> dict[str, str]:
+    """
+    The English text catalogue as a lookup.
+
+    The file is over 13 MB, and every display name, skill name and description in the client is a key
+    in it, so scanning it per lookup is what makes the extraction scripts slow.
+
+    Args:
+        root: Root of the unpacked client, defaulting to the configured one.
+
+    Returns:
+        text key -> display string, cached. Treat it as read only.
+    """
+    path = (root / "text" / "en" / "text.json") if root is not None else client_text_file()
+    return _text_index(str(path))
