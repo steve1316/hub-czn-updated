@@ -84,6 +84,19 @@ _KEYWORD_VARIANT = re.compile(r"#\d+$")
 # card's own list of effects and the value comes from that effect.
 _RUNTIME_VALUE = re.compile(r"#result_\w*?_?(\d+)#")
 
+# "#during_ev_0_0#" is the value of an effect that only runs while the ego is active. The first
+# number picks the linked effect, the second picks which of its during-effect slots to read.
+_DURING_VALUE = re.compile(r"#during_ev_(\d+)_(\d+)#")
+
+# Tokens that name something rather than carry a value. The table words this the same way throughout.
+_NAMED_TOKENS = {"#own_char#": "the assigned Combatant"}
+
+# Anything still fenced in hashes after all that has no value to read from, so it needs a human.
+_ANY_TOKEN = re.compile(r"#[^#\s]+#")
+
+# The client uses both typographic single quotes where an apostrophe belongs.
+_APOSTROPHES = {"\u2018": "'", "\u2019": "'"}
+
 _SHARD_CACHE: dict[tuple[str, str], dict[str, dict]] = {}
 
 
@@ -125,15 +138,25 @@ def resolve_ego_description(description: str, card: dict, output_dir: Path) -> t
         The description with every placeholder it could fill in replaced, and whether any are left.
     """
     effects = table_by_id(PARTNER_CARD_EFFECT_TABLE, output_dir)
-    values = [effects.get(eff_id, {}).get("eff_value") for eff_id in _ID_TOKEN.findall(card.get("link_skill_eff_id", ""))]
+    linked = [effects.get(eff_id, {}) for eff_id in _ID_TOKEN.findall(card.get("link_skill_eff_id", ""))]
 
-    def replace(match: re.Match) -> str:
+    def effect_value(match: re.Match) -> str:
         index = int(match.group(1))
-        value = values[index] if index < len(values) else None
-        return value if value else match.group(0)
+        value = linked[index].get("eff_value") if index < len(linked) else None
+        return value or match.group(0)
 
-    filled = _RUNTIME_VALUE.sub(replace, description)
-    return filled, bool(_RUNTIME_VALUE.search(filled))
+    def during_value(match: re.Match) -> str:
+        index, slot = int(match.group(1)), int(match.group(2))
+        if index >= len(linked):
+            return match.group(0)
+        during = linked[index].get(f"during_eff_{slot}_link_skill_eff_id", "none")
+        return effects.get(during, {}).get("eff_value") or match.group(0)
+
+    filled = _RUNTIME_VALUE.sub(effect_value, description)
+    filled = _DURING_VALUE.sub(during_value, filled)
+    for token, replacement in _NAMED_TOKENS.items():
+        filled = filled.replace(token, replacement)
+    return filled, bool(_ANY_TOKEN.search(filled))
 
 
 def _text(catalogue: dict[str, str], key: str) -> str | None:
@@ -155,7 +178,9 @@ def normalise(text: str) -> str:
     Returns:
         The same text with line breaks as newlines and the markup removed.
     """
-    flat = _MARKUP.sub("", text.replace("\u2019", "'").replace("<br>", "\n"))
+    for quote, plain in _APOSTROPHES.items():
+        text = text.replace(quote, plain)
+    flat = _MARKUP.sub("", text.replace("<br>", "\n"))
     return _KEYWORD.sub(lambda match: _KEYWORD_VARIANT.sub("", match.group(1)), flat).strip()
 
 

@@ -189,8 +189,35 @@ def test_normalise_removes_the_clients_display_markup():
     assert extract_partner.normalise(raw) == "Increase Attack by 16%.\nWhen Fracture is applied, inflict Virutoxin."
 
 
-def test_normalise_replaces_the_typographic_apostrophe():
-    assert extract_partner.normalise("the Combatant\u2019s Attack") == "the Combatant's Attack"
+@pytest.mark.parametrize("quote", ["\u2018", "\u2019"])
+def test_normalise_replaces_both_typographic_apostrophes(quote):
+    # The client uses the opening quote as an apostrophe in some strings and the closing one in others.
+    assert extract_partner.normalise(f"the Combatant{quote}s Attack") == "the Combatant's Attack"
+
+
+@needs_client
+def test_ego_descriptions_resolve_every_value_the_client_can_supply():
+    # An ego description arrives full of tokens the client fills in at battle time. Anything left
+    # unresolved has to be reported rather than shipped, or it reaches the UI as "#during_ev_0_0#".
+    for res_id, partner in PARTNERS.items():
+        if not partner:
+            continue
+        try:
+            entry, unfilled = extract_partner.extract(OUTPUT_DIR, res_id)
+        except (KeyError, ValueError):
+            continue
+        assert ("#" in entry["ego_desc"]) == ("ego_desc" in unfilled), (
+            f"{res_id} {entry['name']}: unresolved token not reported - {entry['ego_desc']!r}"
+        )
+
+
+@needs_client
+def test_a_during_effect_value_is_read_from_the_cards_own_effect():
+    # Eunie's ego reads "#during_ev_0_0# Ammo Transfer", which is the during-effect of her card's
+    # first linked effect. Leaving it unresolved would put the raw token in front of the user.
+    entry, _ = extract_partner.extract(OUTPUT_DIR, 30114)
+    assert "1 Ammo Transfer for each defeated" in entry["ego_desc"]
+    assert "#" not in entry["ego_desc"]
 
 
 @needs_client
