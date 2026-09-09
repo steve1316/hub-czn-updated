@@ -164,6 +164,26 @@
     "rarity": 5,
     "kind": "Combatant"
   },
+  "Arabella": {
+    "res_id": 30115,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
+  "Fei": {
+    "res_id": 30048,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
+  "Hilde": {
+    "res_id": 30113,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
+  "Olga": {
+    "res_id": 30117,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
   "Ivy": {
     "res_id": 1025,
     "rarity": 5,
@@ -396,6 +416,16 @@
   },
   "Clara": {
     "res_id": 30095,
+    "rarity": 5,
+    "kind": "Partner"
+  },
+  "Licinia": {
+    "res_id": 30116,
+    "rarity": 5,
+    "kind": "Partner"
+  },
+  "Emilie": {
+    "res_id": 30118,
     "rarity": 5,
     "kind": "Partner"
   }

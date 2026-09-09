@@ -749,6 +749,25 @@ PARTNERS = {
         "ego_cost": 3,
         "ego_desc": "Gain 1 AP\n3 Paralytic Poison to all enemies.",
     },
+    # Emilie went live before the client listed her passive's effect rows, so `stats` could not be
+    # derived the way every other partner's was. The Attack bonus is taken from her own description
+    # and the ladder every other grade 5 partner uses. Re-check it once the client catches up.
+    30118: {
+        "name": "Emilie",
+        "grade": 5,
+        "class": "Psionic",
+        "passive_name": "As My Mistress Wishes",
+        "passive_desc": "Increase the assigned Combatant's Attack by {ATK%}%.\nWhen Fracture is inflicted through a card of the assigned Combatant, +{CRate}% to Critical Chance and increase Damage Amount of ally Fracture and Scorched by {AllyDMG%}% (cannot stack).",
+        "values": {
+            "ATK%": (16, 18, 20, 22, 24),
+            "CRate": (10, 13, 15, 18, 20),
+            "AllyDMG%": (15, 19, 23, 27, 30),
+        },
+        "stats": {"ATK%": (16, 18, 20, 22, 24)},
+        "ego_name": "For My Mistress",
+        "ego_cost": 2,
+        "ego_desc": "300 Damage\n2 Sensory Deprivation",
+    },
 }
 
 # Base stats by grade and class at level 60
