@@ -19,9 +19,16 @@ Example:
 """
 from __future__ import annotations
 
-import json
+import re
 import sys
+from functools import lru_cache
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
+
+from api.client_db import table, table_by_id, text_index  # noqa: E402
+from entry_format import format_entry  # noqa: E402
 
 # link_char_growth_material_id is "c_{class_key}_{color_key}".
 GROWTH_CLASS_TO_CLASS = {
@@ -47,33 +54,37 @@ RARITY_TO_GRADE = {
     "RARITY_R": 3,
 }
 
-NODE_STAT_TYPE_TO_LABEL = {
-    "hp_rate": "HP%",
-    "atk_rate": "ATK%",
-    "def_rate": "DEF%",
-    "cri": "CRate",
-    "cri_dmg_rate": "CDmg",
+# Potential nodes sit in numbered slots, and their effect ids read "<res_id>_<slot>_<branch>_<step>".
+# Slots 5 and 6 are the two the app records as node_50 and node_60.
+NODE_SLOTS = {5: "node_50", 6: "node_60"}
+
+# The tree layout names the same two slots by branch instead.
+NODE_LAYOUT_SLOTS = {"5_0": "node_50", "6_0": "node_60"}
+
+NODE_STAT_TO_LABEL = {
+    "S_CRI_INC_ADD": "CRate",
+    "S_CRI_DMG_RATE_INC_ADD": "CDmg",
+    "S_ATK_INC_RATE_OUT": "ATK%",
+    "S_DEF_INC_RATE_OUT": "DEF%",
+    "S_HP_INC_RATE_OUT": "HP%",
 }
+
+ENTRY_KEYS = ("name", "grade", "attribute", "class", "base_atk", "base_def", "base_hp",
+              "base_crit_rate", "base_crit_dmg", "base_weak_ego_dmg_rate", "node_50", "node_60")
+
+BASE_TABLE = "char_base@char_base.json"
+COMBATANT_TABLE = "char_base@char_combatant.json"
+LEVEL_TABLE = "char_base@combatant_level.json"
+ASCEND_TABLE = "char_base@combatant_ascend.json"
+NODE_EFFECT_TABLE = "potential_node@potential_node_effect.json"
+NODE_LAYOUT_TABLE = "potential_node@potential_node.json"
+NODE_TYPE_TABLE = "potential_node_type_define@potential_node_type_define.json"
+
+_NODE_ID = re.compile(r"^(\d+)_(\d+)_\d+_\d+$")
 
 # Stats in CHARACTERS are stored at this level/ascend (matches scaling.py / optimizer).
 _CANONICAL_LEVEL = 60
 _CANONICAL_ASCEND = 5
-
-
-def _load_json(path: Path) -> list | dict:
-    return json.loads(path.read_text(encoding="utf-8"))
-
-
-def _index_by_id(rows: list[dict]) -> dict[str, dict]:
-    return {str(r["id"]): r for r in rows if "id" in r}
-
-
-def _name_from_text_json(text_rows: list[dict], res_id: int) -> str | None:
-    key = f"char_base@name@{res_id}"
-    for row in text_rows:
-        if row.get("id") == key:
-            return row.get("text")
-    return None
 
 
 def _parse_growth_material(growth_id: str) -> tuple[str, str]:
@@ -89,17 +100,63 @@ def _parse_growth_material(growth_id: str) -> tuple[str, str]:
     return klass, attr
 
 
-def _resolve_node(node_effects: list[dict], res_id: int, node_num: int) -> str | None:
-    prefix = f"{res_id}{node_num:02d}"
-    for row in node_effects:
-        nid = str(row.get("id", ""))
-        if not nid.startswith(prefix):
+def _effect_nodes(output_dir: Path, res_id: int) -> dict[str, str]:
+    """The two recorded potential nodes, read from the effect rows the game actually applies."""
+    found: dict[str, str] = {}
+    for row in table(NODE_EFFECT_TABLE, output_dir):
+        row_id = str(row.get("id", ""))
+        if not row_id.startswith(f"{res_id}_") or row.get("node_type") != "NODE_STAT_ADD":
             continue
-        stat_type = row.get("stat_type") or row.get("stat_key") or ""
-        label = NODE_STAT_TYPE_TO_LABEL.get(stat_type.lower())
+        match = _NODE_ID.match(row_id)
+        if match is None:
+            continue
+        key = NODE_SLOTS.get(int(match.group(2)))
+        label = NODE_STAT_TO_LABEL.get(row.get("link_stat_list_id", ""))
+        if key and label:
+            found.setdefault(key, label)
+    return found
+
+
+def _layout_nodes(output_dir: Path, res_id: int) -> dict[str, str]:
+    """
+    The same two nodes, read from the tree layout instead.
+
+    The layout says which node type sits in each slot, and the type says which stat it grants. It is
+    the only source for a character the effect table has not caught up with, but it disagrees with the
+    effect rows across the original 10xx roster, so it is a fallback rather than the answer.
+    """
+    types = table_by_id(NODE_TYPE_TABLE, output_dir)
+    found: dict[str, str] = {}
+    for row in table(NODE_LAYOUT_TABLE, output_dir):
+        key = NODE_LAYOUT_SLOTS.get(str(row.get("node_num", "")))
+        if key is None or str(row.get("link_char_combatant_id")) != str(res_id):
+            continue
+        stat = types.get(str(row.get("link_potential_node_type_define_id")), {}).get("link_stat_list_id", "")
+        label = NODE_STAT_TO_LABEL.get(stat)
         if label:
-            return label
-    return None
+            found.setdefault(key, label)
+    return found
+
+
+def resolve_nodes(output_dir: Path, res_id: int) -> tuple[dict[str, str | None], bool]:
+    """
+    The stat each of a character's two recorded potential nodes grants.
+
+    Args:
+        output_dir: Root of the unpacked client.
+        res_id: Combatant res_id.
+
+    Returns:
+        `node_50` and `node_60`, each a stat label or None, and whether the tree layout had to be
+        used because the effect rows were missing. The layout agrees with the effect rows for every
+        character released since 30047, but it is the weaker source, so the caller should say so.
+    """
+    found = _effect_nodes(output_dir, res_id)
+    if len(found) == len(NODE_SLOTS):
+        return {key: found.get(key) for key in NODE_SLOTS.values()}, False
+    layout = _layout_nodes(output_dir, res_id)
+    merged = {key: found.get(key) or layout.get(key) for key in NODE_SLOTS.values()}
+    return merged, bool(layout) and merged != {key: found.get(key) for key in NODE_SLOTS.values()}
 
 
 def _build_level_scaling(level_rows: list[dict]) -> dict[str, dict[str, dict]]:
@@ -165,25 +222,44 @@ def _scale_stats(
     )
 
 
-def extract(output_dir: Path, res_id: int) -> dict:
-    db = output_dir / "db"
-    text_json = output_dir / "text" / "en" / "text.json"
+@lru_cache(maxsize=None)
+def _scaling_tables(root: str) -> tuple[dict, dict]:
+    """Both growth tables for one unpacked client, built once and reused across res_ids."""
+    output_dir = Path(root)
+    return (
+        _build_level_scaling(table(LEVEL_TABLE, output_dir)),
+        _build_ascend_scaling(table(ASCEND_TABLE, output_dir)),
+    )
 
-    char_base = _index_by_id(_load_json(db / "char_base@char_base.json"))
-    combatants = _index_by_id(_load_json(db / "char_base@char_combatant.json"))
-    text_rows = _load_json(text_json)
-    node_effects = _load_json(db / "potential_node@potential_node_effect.json")
-    level_scaling = _build_level_scaling(_load_json(db / "char_base@combatant_level.json"))
-    ascend_scaling = _build_ascend_scaling(_load_json(db / "char_base@combatant_ascend.json"))
 
-    base_row = char_base.get(str(res_id))
+def extract(output_dir: Path, res_id: int) -> tuple[dict, list[str]]:
+    """
+    Build a CHARACTERS entry for one combatant.
+
+    Args:
+        output_dir: Root of the unpacked client.
+        res_id: Combatant res_id.
+
+    Returns:
+        The entry, with every key CHARACTERS uses, and the names of the fields a human still has to
+        settle. `node_50` / `node_60` land there when the client has no effect rows for them, whether
+        they came back empty or were filled in from the weaker tree layout.
+
+    Raises:
+        KeyError: If the combatant or its English name is missing from the client.
+        ValueError: If its growth material or rarity is one this script does not know.
+    """
+    level_scaling, ascend_scaling = _scaling_tables(str(output_dir))
+    nodes, from_layout = resolve_nodes(output_dir, res_id)
+
+    base_row = table_by_id(BASE_TABLE, output_dir).get(str(res_id))
     if base_row is None:
-        raise KeyError(f"res_id {res_id} not found in char_base@char_base.json")
-    stat_row = combatants.get(str(res_id))
+        raise KeyError(f"res_id {res_id} not found in {BASE_TABLE}")
+    stat_row = table_by_id(COMBATANT_TABLE, output_dir).get(str(res_id))
     if stat_row is None:
-        raise KeyError(f"res_id {res_id} not found in char_base@char_combatant.json")
+        raise KeyError(f"res_id {res_id} not found in {COMBATANT_TABLE}")
 
-    name = _name_from_text_json(text_rows, res_id)
+    name = text_index(output_dir).get(f"char_base@name@{res_id}")
     if name is None:
         raise KeyError(f"no English name for res_id {res_id} in text.json")
 
@@ -216,21 +292,12 @@ def extract(output_dir: Path, res_id: int) -> dict:
         "base_crit_rate": float(stat_row["s_cri"]),
         "base_crit_dmg": float(stat_row["s_cri_dmg_rate"]),
         "base_weak_ego_dmg_rate": float(stat_row["s_weak_ego_dmg_rate"]),
-        "node_50": _resolve_node(node_effects, res_id, 50),
-        "node_60": _resolve_node(node_effects, res_id, 60),
+        **nodes,
     }
-    return entry
-
-
-def _format_entry(res_id: int, entry: dict) -> str:
-    lines = [f"    {res_id}: {{"]
-    for key in ("name", "grade", "attribute", "class", "base_atk", "base_def",
-                "base_hp", "base_crit_rate", "base_crit_dmg",
-                "base_weak_ego_dmg_rate", "node_50", "node_60"):
-        value = entry[key]
-        lines.append(f"        {key!r}: {value!r},")
-    lines.append("    },")
-    return "\n".join(lines)
+    unfilled = [key for key in NODE_SLOTS.values() if nodes[key] is None]
+    if from_layout:
+        unfilled += [key for key in NODE_SLOTS.values() if nodes[key] is not None]
+    return entry, unfilled
 
 
 def main(argv: list[str]) -> int:
@@ -241,8 +308,8 @@ def main(argv: list[str]) -> int:
     output_dir = Path(argv[1])
     for raw in argv[2:]:
         res_id = int(raw)
-        entry = extract(output_dir, res_id)
-        print(_format_entry(res_id, entry))
+        entry, unfilled = extract(output_dir, res_id)
+        print(format_entry(res_id, entry, ENTRY_KEYS, f"TODO: confirm {', '.join(unfilled)}" if unfilled else ""))
     return 0
 
 
