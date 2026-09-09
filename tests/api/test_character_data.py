@@ -216,3 +216,17 @@ def test_conditional_passive_values_scale_with_limit_break(res_id, at_e0, at_e4)
     # while the game scaled it. The client says these two double from E0 to E4.
     assert at_e0 in get_partner_passive_info(res_id, 0)["passive_desc"]
     assert at_e4 in get_partner_passive_info(res_id, 4)["passive_desc"]
+
+
+@needs_client_db
+def test_every_partner_exists_in_the_client():
+    # Capri sat in this table with no client row and no art, so nothing could ever reference her.
+    # A partner the client does not have cannot be owned, equipped or optimised for.
+    from api.client_db import client_db_dir
+
+    path = client_db_dir() / "partner_base@char_base.json"
+    if not path.exists():
+        pytest.skip("partner table not in the extracted client")
+    client = {int(r["id"]) for r in json.loads(path.read_text(encoding="utf-8"))}
+    unknown = [(rid, p["name"]) for rid, p in PARTNER_ENTRIES if rid not in client]
+    assert not unknown, f"partners that do not exist in the game: {unknown}"
