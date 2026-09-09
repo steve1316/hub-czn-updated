@@ -771,6 +771,42 @@ PARTNERS = {
         "ego_cost": 2,
         "ego_desc": "300 Damage\n2 Sensory Deprivation",
     },
+    30092: {
+        "name": "Ruixiang",
+        "grade": 5,
+        "class": "Ranger",
+        "passive_name": "A Pleasant Aroma Lingers",
+        "passive_desc": "Increase the assigned Combatant's Attack by {ATK%}%.\nEach time the assigned Combatant creates a Void-Attribute Attack Card in Draw Pile, gain 1 Gentle Aroma.\nWhen Gentle Aroma reaches 5 stacks, +{CDmg%}% Critical Damage to the assigned Combatant.\nGentle Aroma: +{AromaDMG%}% Damage Amount to the assigned Combatant (max 5 stacks)",
+        "values": {
+            "ATK%": (16, 18, 20, 22, 24),
+            "CDmg%": (20, 25, 30, 35, 40),
+            "AromaDMG%": (5, 7, 8, 9, 10),
+        },
+        "stats": {
+            "ATK%": (16, 18, 20, 22, 24),
+        },
+        "ego_name": "Incense",
+        "ego_cost": 3,
+        "ego_desc": "Draw 1 of the assigned Combatant's Attack Card\nIf Cost of that card is either 0 or X, Draw 2",
+    },
+    30114: {
+        "name": "Eunie",
+        "grade": 5,
+        "class": "Ranger",
+        "passive_name": "Battlefield Saturation Doctrine",
+        "passive_desc": "Increase Attack of the assigned Combatant by {ATK%}%.\nWhen the assigned Combatant creates an Instinct-Attribute Attack Card in Draw Pile, increase Damage Amount of the Extra Attack of that card by {ExtraDMG%}% until activated.\nIf that card is an Unusable card, gain 1 Preparing Live Rounds.\nPreparing Live Rounds: +{CRate%}% Critical Chance to the assigned Combatant (cannot stack)",
+        "values": {
+            "ATK%": (16, 18, 20, 22, 24),
+            "ExtraDMG%": (40, 50, 60, 70, 80),
+            "CRate%": (10, 13, 15, 18, 20),
+        },
+        "stats": {
+            "ATK%": (16, 18, 20, 22, 24),
+        },
+        "ego_name": "Lay Down Suppressive Fire!",
+        "ego_cost": 3,
+        "ego_desc": "80 Damage to all enemies\n1 Leaving the Rest to You!, and when an enemy is defeated, 1 Ammo Transfer for each defeated",
+    },
 }
 
 # Base stats by grade and class at level 60
@@ -898,6 +934,8 @@ PARTNER_DEFAULT_ADD: dict[int, dict] = {
     1025:  {"atk": 27, "def": 0,  "hp": 1},
     30053: {"atk": 27, "def": 0,  "hp": 1},
     30094: {"atk": 27, "def": 0,  "hp": 1},
+    30092: {"atk": 27, "def": 0, "hp": 1},
+    30114: {"atk": 27, "def": 0, "hp": 1},
 }
 
 
@@ -946,6 +984,8 @@ def get_partner_stats(res_id: int, level: int) -> dict:
 SSSR_ASCEND_PARTNERS = {
     1025, 20002, 20004, 20009, 20021, 20030, 20034, 20037, 20038,
     30044, 30045, 30046, 30051, 30052, 30053, 30054, 30076, 30085, 30091, 30094,
+    30092,
+    30114,
 }
 
 

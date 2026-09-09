@@ -428,5 +428,15 @@
     "res_id": 30118,
     "rarity": 5,
     "kind": "Partner"
+  },
+  "Ruixiang": {
+    "res_id": 30092,
+    "rarity": 5,
+    "kind": "Partner"
+  },
+  "Eunie": {
+    "res_id": 30114,
+    "rarity": 5,
+    "kind": "Partner"
   }
 }
