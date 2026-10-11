@@ -6,21 +6,20 @@
       10
     ],
     "main_stat_4": [
-      "HP%"
+      "HP%",
+      "CRate",
+      "CDmg"
     ],
     "main_stat_5": [
       "HP%"
     ],
     "main_stat_6": [
-      "Ego",
       "DEF%",
-      "HP%"
+      "Ego"
     ],
     "substats": [
       "Flat DEF",
       "DEF%",
-      "Flat HP",
-      "HP%",
       "Ego"
     ],
     "weights": {
@@ -29,8 +28,8 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
-      "Flat HP": 8,
-      "HP%": 8,
+      "Flat HP": 1,
+      "HP%": 1,
       "CRate": 1,
       "CDmg": 1,
       "Ego": 8,
@@ -86,13 +85,13 @@
   },
   "1005": {
     "recommended_sets": [
-      9,
-      11
+      18,
+      9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
       "Passion DMG%",
@@ -129,16 +128,19 @@
   },
   "1008": {
     "recommended_sets": [
-      12,
-      7
+      7,
+      11,
+      8
     ],
     "main_stat_4": [
       "CRate",
-      "CDmg"
+      "CDmg",
+      "HP%"
     ],
     "main_stat_5": [
       "Instinct DMG%",
-      "ATK%"
+      "ATK%",
+      "HP%"
     ],
     "main_stat_6": [
       "DEF%"
@@ -170,12 +172,13 @@
   },
   "1009": {
     "recommended_sets": [
-      9,
-      19,
-      11
+      16,
+      9
     ],
     "main_stat_4": [
-      "ATK%"
+      "ATK%",
+      "CRate",
+      "CDmg"
     ],
     "main_stat_5": [
       "Void DMG%",
@@ -215,20 +218,23 @@
       11
     ],
     "main_stat_4": [
+      "HP%",
       "CRate",
       "CDmg"
     ],
     "main_stat_5": [
+      "HP%",
       "Justice DMG%"
     ],
     "main_stat_6": [
-      "DEF%"
+      "DEF%",
+      "HP%"
     ],
     "substats": [
       "Flat DEF",
       "DEF%",
-      "CRate",
-      "CDmg"
+      "Flat HP",
+      "HP%"
     ],
     "weights": {
       "Flat ATK": 1,
@@ -236,6 +242,49 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
+      "Flat HP": 8,
+      "HP%": 8,
+      "CRate": 1,
+      "CDmg": 1,
+      "Ego": 1,
+      "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "1012": {
+    "recommended_sets": [
+      11,
+      9,
+      8
+    ],
+    "main_stat_4": [
+      "ATK%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "Order DMG%",
+      "ATK%"
+    ],
+    "main_stat_6": [
+      "ATK%"
+    ],
+    "substats": [
+      "Flat ATK",
+      "ATK%",
+      "CRate",
+      "CDmg"
+    ],
+    "weights": {
+      "Flat ATK": 8,
+      "ATK%": 8,
+      "Extra DMG%": 1,
+      "Flat DEF": 1,
+      "DEF%": 1,
       "Flat HP": 1,
       "HP%": 1,
       "CRate": 8,
@@ -252,15 +301,17 @@
   "1017": {
     "recommended_sets": [
       7,
-      8,
-      11
+      11,
+      8
     ],
     "main_stat_4": [
       "CRate",
-      "CDmg"
+      "CDmg",
+      "HP%"
     ],
     "main_stat_5": [
-      "Order DMG%"
+      "Order DMG%",
+      "HP%"
     ],
     "main_stat_6": [
       "DEF%"
@@ -293,16 +344,16 @@
   "1018": {
     "recommended_sets": [
       6,
-      9
+      11
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Void DMG%",
-      "ATK%"
+      "ATK%",
+      "Void DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -334,12 +385,12 @@
   },
   "1021": {
     "recommended_sets": [
-      6,
+      18,
       11
     ],
     "main_stat_4": [
-      "CRate",
       "CDmg",
+      "CRate",
       "ATK%"
     ],
     "main_stat_5": [
@@ -376,30 +427,29 @@
   },
   "1024": {
     "recommended_sets": [
-      7,
-      8,
-      9
+      25,
+      7
     ],
     "main_stat_4": [
+      "HP%",
       "ATK%"
     ],
     "main_stat_5": [
+      "HP%",
       "Instinct DMG%",
       "ATK%"
     ],
     "main_stat_6": [
-      "DEF%",
-      "ATK%"
-    ],
-    "substats": [
-      "Flat ATK",
-      "ATK%",
-      "Flat DEF",
       "DEF%"
     ],
+    "substats": [
+      "Flat DEF",
+      "DEF%",
+      "Ego"
+    ],
     "weights": {
-      "Flat ATK": 8,
-      "ATK%": 8,
+      "Flat ATK": 1,
+      "ATK%": 1,
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
@@ -407,7 +457,7 @@
       "HP%": 1,
       "CRate": 1,
       "CDmg": 1,
-      "Ego": 1,
+      "Ego": 8,
       "DoT%": 1,
       "Passion DMG%": 1,
       "Order DMG%": 1,
@@ -419,16 +469,16 @@
   "1027": {
     "recommended_sets": [
       18,
-      9
+      11
     ],
     "main_stat_4": [
-      "CRate",
       "CDmg",
+      "CRate",
       "ATK%"
     ],
     "main_stat_5": [
-      "Passion DMG%",
-      "ATK%"
+      "ATK%",
+      "Passion DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -465,20 +515,23 @@
       11
     ],
     "main_stat_4": [
+      "HP%",
       "CRate",
       "CDmg"
     ],
     "main_stat_5": [
+      "HP%",
       "Passion DMG%"
     ],
     "main_stat_6": [
-      "DEF%"
+      "DEF%",
+      "HP%"
     ],
     "substats": [
       "Flat DEF",
       "DEF%",
-      "CRate",
-      "CDmg"
+      "Flat HP",
+      "HP%"
     ],
     "weights": {
       "Flat ATK": 1,
@@ -486,10 +539,10 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
-      "Flat HP": 1,
-      "HP%": 1,
-      "CRate": 8,
-      "CDmg": 8,
+      "Flat HP": 8,
+      "HP%": 8,
+      "CRate": 1,
+      "CDmg": 1,
       "Ego": 1,
       "DoT%": 1,
       "Passion DMG%": 1,
@@ -501,17 +554,17 @@
   },
   "1033": {
     "recommended_sets": [
-      9,
-      11
+      18,
+      9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Passion DMG%",
-      "ATK%"
+      "ATK%",
+      "Passion DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -549,21 +602,20 @@
       10
     ],
     "main_stat_4": [
-      "HP%"
+      "HP%",
+      "CRate",
+      "CDmg"
     ],
     "main_stat_5": [
       "HP%"
     ],
     "main_stat_6": [
-      "Ego",
       "DEF%",
-      "HP%"
+      "Ego"
     ],
     "substats": [
       "Flat DEF",
       "DEF%",
-      "Flat HP",
-      "HP%",
       "Ego"
     ],
     "weights": {
@@ -572,8 +624,8 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
-      "Flat HP": 8,
-      "HP%": 8,
+      "Flat HP": 1,
+      "HP%": 1,
       "CRate": 1,
       "CDmg": 1,
       "Ego": 8,
@@ -588,11 +640,12 @@
   "1040": {
     "recommended_sets": [
       11,
-      9
+      9,
+      8
     ],
     "main_stat_4": [
-      "CRate",
       "CDmg",
+      "CRate",
       "ATK%"
     ],
     "main_stat_5": [
@@ -648,13 +701,12 @@
       "Flat ATK",
       "ATK%",
       "CRate",
-      "CDmg",
-      "Extra DMG%"
+      "CDmg"
     ],
     "weights": {
       "Flat ATK": 8,
       "ATK%": 8,
-      "Extra DMG%": 8,
+      "Extra DMG%": 1,
       "Flat DEF": 1,
       "DEF%": 1,
       "Flat HP": 1,
@@ -673,16 +725,17 @@
   "1043": {
     "recommended_sets": [
       9,
-      11
+      11,
+      8
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Order DMG%",
-      "ATK%"
+      "ATK%",
+      "Order DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -715,16 +768,59 @@
   },
   "1049": {
     "recommended_sets": [
-      8,
-      9,
-      11
+      25,
+      8
     ],
     "main_stat_4": [
+      "HP%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "HP%"
+    ],
+    "main_stat_6": [
+      "HP%",
+      "Ego"
+    ],
+    "substats": [
+      "Flat HP",
+      "HP%",
+      "Ego"
+    ],
+    "weights": {
+      "Flat ATK": 1,
+      "ATK%": 1,
+      "Extra DMG%": 1,
+      "Flat DEF": 1,
+      "DEF%": 1,
+      "Flat HP": 8,
+      "HP%": 8,
+      "CRate": 1,
+      "CDmg": 1,
+      "Ego": 8,
+      "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "1050": {
+    "recommended_sets": [
+      8,
+      9,
+      7
+    ],
+    "main_stat_4": [
+      "HP%",
       "ATK%"
     ],
     "main_stat_5": [
-      "Instinct DMG%",
-      "HP%"
+      "HP%",
+      "Passion DMG%",
+      "ATK%"
     ],
     "main_stat_6": [
       "HP%",
@@ -755,44 +851,42 @@
       "Instinct DMG%": 1
     }
   },
-  "1050": {
+  "1052": {
     "recommended_sets": [
-      9,
+      7,
       8,
-      7
+      11
     ],
     "main_stat_4": [
-      "CRate",
-      "CDmg",
-      "ATK%",
-      "HP%"
-    ],
-    "main_stat_5": [
-      "Passion DMG%",
-      "ATK%"
-    ],
-    "main_stat_6": [
-      "ATK%",
-      "DEF%"
-    ],
-    "substats": [
-      "Flat ATK",
-      "ATK%",
-      "Flat DEF",
-      "DEF%",
+      "HP%",
       "CRate",
       "CDmg"
     ],
+    "main_stat_5": [
+      "HP%",
+      "Instinct DMG%",
+      "ATK%"
+    ],
+    "main_stat_6": [
+      "DEF%",
+      "HP%"
+    ],
+    "substats": [
+      "Flat DEF",
+      "DEF%",
+      "Flat HP",
+      "HP%"
+    ],
     "weights": {
-      "Flat ATK": 8,
-      "ATK%": 8,
+      "Flat ATK": 1,
+      "ATK%": 1,
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
-      "Flat HP": 1,
-      "HP%": 1,
-      "CRate": 8,
-      "CDmg": 8,
+      "Flat HP": 8,
+      "HP%": 8,
+      "CRate": 1,
+      "CDmg": 1,
       "Ego": 1,
       "DoT%": 1,
       "Passion DMG%": 1,
@@ -802,27 +896,30 @@
       "Instinct DMG%": 1
     }
   },
-  "1052": {
+  "1055": {
     "recommended_sets": [
-      7,
-      8,
-      10
+      27,
+      7
     ],
     "main_stat_4": [
+      "HP%",
       "CRate",
       "CDmg"
     ],
     "main_stat_5": [
-      "Instinct DMG%"
+      "HP%",
+      "Void DMG%",
+      "ATK%"
     ],
     "main_stat_6": [
-      "DEF%"
+      "DEF%",
+      "HP%"
     ],
     "substats": [
       "Flat DEF",
       "DEF%",
-      "CRate",
-      "CDmg"
+      "Flat HP",
+      "HP%"
     ],
     "weights": {
       "Flat ATK": 1,
@@ -830,10 +927,10 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
-      "Flat HP": 1,
-      "HP%": 1,
-      "CRate": 8,
-      "CDmg": 8,
+      "Flat HP": 8,
+      "HP%": 8,
+      "CRate": 1,
+      "CDmg": 1,
       "Ego": 1,
       "DoT%": 1,
       "Passion DMG%": 1,
@@ -845,18 +942,19 @@
   },
   "1056": {
     "recommended_sets": [
-      10,
       9,
-      8
+      8,
+      10
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
+      "ATK%",
       "Void DMG%",
-      "ATK%"
+      "HP%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -864,8 +962,7 @@
     "substats": [
       "Flat ATK",
       "ATK%",
-      "CRate",
-      "CDmg"
+      "Ego"
     ],
     "weights": {
       "Flat ATK": 8,
@@ -875,9 +972,9 @@
       "DEF%": 1,
       "Flat HP": 1,
       "HP%": 1,
-      "CRate": 8,
-      "CDmg": 8,
-      "Ego": 1,
+      "CRate": 1,
+      "CDmg": 1,
+      "Ego": 8,
       "DoT%": 1,
       "Passion DMG%": 1,
       "Order DMG%": 1,
@@ -892,13 +989,13 @@
       9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Order DMG%",
-      "ATK%"
+      "ATK%",
+      "Order DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -934,16 +1031,17 @@
       9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Void DMG%",
-      "ATK%"
+      "ATK%",
+      "Void DMG%"
     ],
     "main_stat_6": [
-      "ATK%"
+      "ATK%",
+      "HP%"
     ],
     "substats": [
       "Flat ATK",
@@ -972,7 +1070,7 @@
   },
   "1061": {
     "recommended_sets": [
-      9,
+      26,
       11
     ],
     "main_stat_4": [
@@ -1016,16 +1114,16 @@
   "1062": {
     "recommended_sets": [
       20,
-      9
+      11
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Justice DMG%",
-      "ATK%"
+      "ATK%",
+      "Justice DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -1061,13 +1159,13 @@
       9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Void DMG%",
-      "ATK%"
+      "ATK%",
+      "Void DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -1104,13 +1202,13 @@
       11
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Passion DMG%",
-      "ATK%"
+      "ATK%",
+      "Passion DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -1147,15 +1245,16 @@
     ],
     "main_stat_4": [
       "CRate",
-      "CDmg",
-      "HP%"
+      "CDmg"
     ],
     "main_stat_5": [
       "Order DMG%",
+      "ATK%",
       "HP%"
     ],
     "main_stat_6": [
-      "DEF%"
+      "DEF%",
+      "HP%"
     ],
     "substats": [
       "Flat DEF",
@@ -1169,6 +1268,49 @@
       "Extra DMG%": 1,
       "Flat DEF": 8,
       "DEF%": 8,
+      "Flat HP": 1,
+      "HP%": 1,
+      "CRate": 8,
+      "CDmg": 8,
+      "Ego": 1,
+      "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "30048": {
+    "recommended_sets": [
+      28,
+      9
+    ],
+    "main_stat_4": [
+      "ATK%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "ATK%",
+      "Void DMG%"
+    ],
+    "main_stat_6": [
+      "ATK%"
+    ],
+    "substats": [
+      "Flat ATK",
+      "ATK%",
+      "CRate",
+      "CDmg",
+      "Extra DMG%"
+    ],
+    "weights": {
+      "Flat ATK": 8,
+      "ATK%": 8,
+      "Extra DMG%": 8,
+      "Flat DEF": 1,
+      "DEF%": 1,
       "Flat HP": 1,
       "HP%": 1,
       "CRate": 8,
@@ -1230,10 +1372,12 @@
       7
     ],
     "main_stat_4": [
+      "HP%",
       "CRate",
       "CDmg"
     ],
     "main_stat_5": [
+      "HP%",
       "Order DMG%"
     ],
     "main_stat_6": [
@@ -1242,8 +1386,7 @@
     "substats": [
       "Flat DEF",
       "DEF%",
-      "CRate",
-      "CDmg"
+      "Ego"
     ],
     "weights": {
       "Flat ATK": 1,
@@ -1253,9 +1396,9 @@
       "DEF%": 8,
       "Flat HP": 1,
       "HP%": 1,
-      "CRate": 8,
-      "CDmg": 8,
-      "Ego": 1,
+      "CRate": 1,
+      "CDmg": 1,
+      "Ego": 8,
       "DoT%": 1,
       "Passion DMG%": 1,
       "Order DMG%": 1,
@@ -1267,16 +1410,16 @@
   "30093": {
     "recommended_sets": [
       26,
-      11
+      9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Passion DMG%",
-      "ATK%"
+      "ATK%",
+      "Passion DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -1309,17 +1452,17 @@
   },
   "30097": {
     "recommended_sets": [
-      20,
-      11
+      24,
+      9
     ],
     "main_stat_4": [
+      "ATK%",
       "CRate",
-      "CDmg",
-      "ATK%"
+      "CDmg"
     ],
     "main_stat_5": [
-      "Justice DMG%",
-      "ATK%"
+      "ATK%",
+      "Justice DMG%"
     ],
     "main_stat_6": [
       "ATK%"
@@ -1342,6 +1485,135 @@
       "CDmg": 8,
       "Ego": 1,
       "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "30113": {
+    "recommended_sets": [
+      28,
+      11
+    ],
+    "main_stat_4": [
+      "CRate",
+      "CDmg",
+      "ATK%"
+    ],
+    "main_stat_5": [
+      "Instinct DMG%",
+      "ATK%"
+    ],
+    "main_stat_6": [
+      "ATK%"
+    ],
+    "substats": [
+      "Flat ATK",
+      "ATK%",
+      "CRate",
+      "CDmg",
+      "Extra DMG%"
+    ],
+    "weights": {
+      "Flat ATK": 8,
+      "ATK%": 8,
+      "Extra DMG%": 8,
+      "Flat DEF": 1,
+      "DEF%": 1,
+      "Flat HP": 1,
+      "HP%": 1,
+      "CRate": 8,
+      "CDmg": 8,
+      "Ego": 1,
+      "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "30115": {
+    "recommended_sets": [
+      29,
+      11
+    ],
+    "main_stat_4": [
+      "ATK%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "Instinct DMG%",
+      "ATK%"
+    ],
+    "main_stat_6": [
+      "ATK%"
+    ],
+    "substats": [
+      "Flat ATK",
+      "ATK%",
+      "CRate",
+      "CDmg",
+      "DoT%"
+    ],
+    "weights": {
+      "Flat ATK": 8,
+      "ATK%": 8,
+      "Extra DMG%": 1,
+      "Flat DEF": 1,
+      "DEF%": 1,
+      "Flat HP": 1,
+      "HP%": 1,
+      "CRate": 8,
+      "CDmg": 8,
+      "Ego": 1,
+      "DoT%": 8,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "30117": {
+    "recommended_sets": [
+      29,
+      11
+    ],
+    "main_stat_4": [
+      "ATK%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "Instinct DMG%",
+      "ATK%"
+    ],
+    "main_stat_6": [
+      "ATK%"
+    ],
+    "substats": [
+      "Flat ATK",
+      "ATK%",
+      "CRate",
+      "CDmg",
+      "DoT%"
+    ],
+    "weights": {
+      "Flat ATK": 8,
+      "ATK%": 8,
+      "Extra DMG%": 1,
+      "Flat DEF": 1,
+      "DEF%": 1,
+      "Flat HP": 1,
+      "HP%": 1,
+      "CRate": 8,
+      "CDmg": 8,
+      "Ego": 1,
+      "DoT%": 8,
       "Passion DMG%": 1,
       "Order DMG%": 1,
       "Justice DMG%": 1,

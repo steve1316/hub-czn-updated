@@ -1,6 +1,6 @@
-export type Lang = 'en' | 'pt-BR'
+import type { LocalizedText } from '@/lib/localized-text'
 
-export type LocalizedText = Record<Lang, string>
+export type { Lang, LocalizedText } from '@/lib/localized-text'
 
 export type GlossaryCategory = 'status' | 'card-type' | 'mechanic'
 

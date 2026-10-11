@@ -22,12 +22,10 @@ describe('glossary content', () => {
     expect(new Set(GLOSSARY.map(e => e.id)).size).toBe(GLOSSARY.length)
   })
 
-  it('has non-empty en and pt-BR text for every entry', () => {
+  it('has non-empty en text for every entry', () => {
     for (const e of GLOSSARY) {
       expect(e.term.en.trim(), e.id).not.toBe('')
-      expect(e.term['pt-BR'].trim(), e.id).not.toBe('')
       expect(e.definition.en.trim(), e.id).not.toBe('')
-      expect(e.definition['pt-BR'].trim(), e.id).not.toBe('')
     }
   })
 
@@ -46,10 +44,9 @@ describe('glossary content', () => {
 })
 
 describe('clarification content', () => {
-  it('has non-empty en and pt-BR text for every entry', () => {
+  it('has non-empty en text for every entry', () => {
     for (const c of CLARIFICATIONS) {
       expect(c.text.en.trim(), c.refId).not.toBe('')
-      expect(c.text['pt-BR'].trim(), c.refId).not.toBe('')
     }
   })
 

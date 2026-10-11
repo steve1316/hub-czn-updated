@@ -2,7 +2,7 @@ import type {
   CardEntry,
   DeckBuilderCard as ApiDeckBuilderCard,
 } from '@/lib/types'
-import type { LocalizedText } from '@/pages/encyclopedia/encyclopedia.types'
+import type { LocalizedText } from '@/lib/localized-text'
 
 export type DeckBuilderEpiphanyVariant = {
   variant_id: string

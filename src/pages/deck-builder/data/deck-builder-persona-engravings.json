@@ -1,7 +1,7 @@
 [
   {
-    "id": "n_0081",
-    "image_id": "n_0081",
+    "id": "n_0099",
+    "image_id": "n_0099",
     "name": "Persona",
     "category": "persona",
     "image_type": "persona",
@@ -41,7 +41,7 @@
         "modifiers": [],
         "allowed_classes": [],
         "tags": [],
-        "description": "Attunement: Decrease Cost by 1 until used"
+        "description": "Attunement: Decrease Cost by 1 until activated"
       },
       {
         "engraving_id": "pe_0003",
@@ -120,7 +120,7 @@
         ],
         "allowed_classes": [],
         "tags": [],
-        "description": "5 Umbra Engraving: Discard all Attack Cards, then add Hit(s)"
+        "description": "Umbra Engraving 5: Discard all Attack Cards, then add 2 Hit(s)"
       },
       {
         "engraving_id": "pe_0011",
@@ -131,7 +131,7 @@
         ],
         "allowed_classes": [],
         "tags": [],
-        "description": "5 Umbra Engraving: Add 2 Hit(s)"
+        "description": "Umbra Engraving 5: Add 2 Hit(s)"
       },
       {
         "engraving_id": "pe_0012",
@@ -142,7 +142,7 @@
         ],
         "allowed_classes": [],
         "tags": [],
-        "description": "Select 1 Attack Card(s) of this unit from Discard Pile, then move those cards to hand"
+        "description": "Select 1 Attack Card(s) of this unit in Discard Pile, then move those cards to hand"
       },
       {
         "engraving_id": "pe_0013",
@@ -153,7 +153,7 @@
         ],
         "allowed_classes": [],
         "tags": [],
-        "description": "When this card is Discarded, decrease Cost of this card by 1 until used"
+        "description": "When this card is Discarded, decrease Cost of this card by 1 until activated"
       },
       {
         "engraving_id": "pe_0014",
@@ -173,7 +173,7 @@
           "Psionic"
         ],
         "tags": [],
-        "description": "Create Overload for each Umbra Engraving in Discard Pile, then +50% Damage Amount for each created"
+        "description": "For each Umbra Engraving, create Overload in Discard Pile, then +50% Damage Amount for each created"
       },
       {
         "engraving_id": "pe_0016",
@@ -200,7 +200,7 @@
         "modifiers": [],
         "allowed_classes": [],
         "tags": [],
-        "description": "4 Umbra Engraving: +40% Damage Amount to Quietus cards of this unit for 1 turn"
+        "description": "Umbra Engraving 4: +40% Damage Amount to Quietus cards of this unit for 1 turn"
       },
       {
         "engraving_id": "pe_0019",
@@ -220,7 +220,7 @@
         ],
         "allowed_classes": [],
         "tags": [],
-        "description": "When this card is Discarded, activate this card"
+        "description": "When this card is Discarded, proc this card"
       },
       {
         "engraving_id": "pe_0021",
@@ -281,7 +281,7 @@
           "Ranger"
         ],
         "tags": [],
-        "description": "1 Mark on random enemies for each Lux Engraving"
+        "description": "For each Lux Engraving, 1 Mark to random enemies"
       },
       {
         "engraving_id": "pe_0026",
@@ -308,7 +308,7 @@
           "Controller"
         ],
         "tags": [],
-        "description": "4 Lux Engraving: +40% Damage Amount to Exhaust cards of this unit for 1 turn"
+        "description": "Lux Engraving 4: +40% Damage Amount to Exhaust cards of this unit for 1 turn"
       },
       {
         "engraving_id": "pe_0028",
@@ -337,7 +337,7 @@
           "Controller"
         ],
         "tags": [],
-        "description": "5 Lux Engraving: 3 Vulnerable to this unit, then Draw 3"
+        "description": "Lux Engraving 5: 3 Vulnerable to this unit, then Draw 3"
       },
       {
         "engraving_id": "pe_0030",
@@ -404,7 +404,7 @@
           "Controller"
         ],
         "tags": [],
-        "description": "5 Umbra Engraving: Move all Persona Cards to hand"
+        "description": "Umbra Engraving 5: Move all Persona Cards to hand"
       },
       {
         "engraving_id": "pe_0035",
@@ -414,10 +414,11 @@
           "Haste"
         ],
         "allowed_classes": [
-          "Controller"
+          "Controller",
+          "Vanguard"
         ],
         "tags": [],
-        "description": "+15% Damage Amount to Attack Cards for 1 turn for each Lux Engraving"
+        "description": "For each Lux Engraving, +15% Damage Amount to ally Attack Cards for 1 turn"
       },
       {
         "engraving_id": "pe_0036",
@@ -440,7 +441,7 @@
           "Controller"
         ],
         "tags": [],
-        "description": "3 Lux Engraving: Increase Action Count of all enemies by 3"
+        "description": "Lux Engraving 3: Increase Action Count of all enemies by 3"
       },
       {
         "engraving_id": "pe_0038",
@@ -453,7 +454,7 @@
           "Hunter"
         ],
         "tags": [],
-        "description": "3 Umbra Engraving: Select and activate 1 card(s) in hand"
+        "description": "Umbra Engraving 3: Select and proc 1 card(s) in hand"
       }
     ]
   }

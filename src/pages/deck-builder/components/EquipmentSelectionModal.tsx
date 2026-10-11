@@ -14,7 +14,7 @@ import {
   getDeckBuilderItemsBySlot,
   getItemRarityClassName,
 } from '../deck-builder-items.utils'
-import { resolveLang } from '@/pages/encyclopedia/encyclopedia.utils'
+import { localized, resolveLang } from '@/lib/localized-text'
 
 const RARITIES = ['All', 'Rare', 'Legendary', 'Unique'] as const
 const PAGE_SIZE = 12
@@ -83,7 +83,7 @@ function EquipmentCard({
         </div>
 
         <p className="mt-2 line-clamp-3 text-[11px] leading-relaxed text-[#c7c7d1]">
-          {item.description[lang]}
+          {localized(item.description, lang)}
         </p>
 
         <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px]">
@@ -140,7 +140,7 @@ export function EquipmentSelectionModal({
       const matchesSearch =
         !normalizedSearch ||
         item.name.toLowerCase().includes(normalizedSearch) ||
-        item.description[lang].toLowerCase().includes(normalizedSearch) ||
+        localized(item.description, lang).toLowerCase().includes(normalizedSearch) ||
         (item.source ?? '').toLowerCase().includes(normalizedSearch)
 
       const matchesRarity = rarity === 'All' || item.rarity === rarity
