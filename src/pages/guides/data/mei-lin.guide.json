@@ -1,0 +1,523 @@
+{
+  "charResId": 1027,
+  "name": "Mei Lin",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1896747388#gid=1896747388",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "mei-lin-move-vs-draw-vs-create-strikes",
+      "title": {
+        "en": "Mei Lin Move Vs Draw Vs Create Strikes"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Mei Lin's Strength is about \"Moving\" her Strike Cards and Playing for 0 Cost\nHer base Unity version only \"Draws\" the Strike Cards\nDrawing is different from Moving, and can only be taken from the Deck\nBut if your Strikes are in your \"Discard\" \"Draw\" can force a \"Reshuffle\"\nOnce your Strikes are in the Deck from Reshuffle, it Draws your Strikes\n\"Move\" transfers the Card directly from zones into Hand\nMei Lin \"Move\" can transfer from \"Deck\" \"Discard and \"Used\" Pile\n\"Move\" counts as Draw, Only if Moving the card from Deck, not Discard/Used\nUnity 4, Creates 2 Strikes that Don't have Exhaust, so they're Permanent\nThey get Added to your deck, Killing Draws\nInstead of Drawing a Unity worth 2 Strikes, you'll Draw Strikes Individually."
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spire Math"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 Unity = 4x3 = (12+3) x 1+1 = 16 Hits on 1 spire /Ap = 8\n3 unity = 3x3 = (9+3) x 2 +3 = 25 Hits on 2 Spires /AP = 6.25\n2 Units = 2x3 = (6+3) x 3 + 6 = 33 Hits on 3 Spires /AP = 5.5\n1 Unity = 1 x3 = (3+3) x 4 + 10 = 32 Hits on 4 Spires /AP = 4\nThe Value of 3/4 Spire dupes does increase with Veronica\nBut so does AP Requirement\n2/3 Spire is the sweet spot, just depends on how much AP you can make"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unchanged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mathmatically-correct-spire",
+      "title": {
+        "en": "Mathmatically Correct Spire"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Aromata -> Jewel -> Strike/Unity Spam -> Spire -> Dead"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Standard Spire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Aromata -> Jewel -> Strike/Unity Spam -> Spire -> Dead"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't | Basic Striker"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lillian-scarlet-douglas",
+      "title": {
+        "en": "Lillian | Scarlet | Douglas"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lillian: Really really good also a 4 star, so easy to get dupes\nScarlet: Also really good, but needs dupes to beat Lillian\nDouglas: Atk% Stat Stick"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Marianne | Priscilla | Asteria"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not worth"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not worth"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Marianne: Stinky\nPriscilla: Not better then Lillian or Scarlet\nAsteria: Her Ego Skill goes crazy with Dragon Spire ngl"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-scrab-flex",
+      "title": {
+        "en": "Blackwing | Executioner | Scrab Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Seth's Scrab is okay\nCursed Corpse is higher potential damage. Mei Lin damage is Rising Dragon Spire loaded, over Basics"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passion | Executioner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nThis bad is butt\nE2:\nEmber is really easy to get\nE3:\nIt's pretty nice 6 more hits\nE4:\nA lot of additive, really nice\nE5:\nPotential levels are good since Meil Lin has very high multiplicatives\nE6:\nThis bad is butt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nHunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1027_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Strike: Gonna be Used alot by Mei Lin through Unity\nSovereignty: 2 Cost is stinky"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Jewel 1: Most consistent, Always good\nJewel 2: Tenacity Damage isn't required\nJewel 3: Not very good once you get E2, but good before that\nJewel 4: Last option, only slightly better then Jewel 1 or 2 against only Passion Weak Enemies\n+Moral the best epiphany if you ever get it"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1027_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "10/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spire 1: Ain't good\nSpire 2: Even worse\nSpire 3: Even even worse\nSpire 4: This one is kinda funny\nSpire 5: Other Epiphanies do not even compare to the ammount of damage this has potentially"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unity 1: Draw = Stinky\nUnity 2: Her bread in butter, \"Moving\" strikes from \"Used pile\" Is a broken mechanic\nUnity 3: Draw = Stinky, but ig it has Utility\nUnity 4: Alternative, but it ends up clogging your deck after the first use\nUnity 5: Supplement to other Unities, less spire hits and 2 AP upfront cost, but its ok"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1027_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spirit 1: Her BIS when comboed with Veronica to scale additional times\nSpirit 2: Independantly good and regularly can outscale Spirit 1 otherwise\nSpirit 3: Initiation isn't important, but ig 0 cost is okay\nSpirit 4: Ember isn't important in general\nSpirit 5: Only for my Meme Build"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mei-lin-example-teams",
+      "title": {
+        "en": "Mei Lin Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Buff/Debuff | Sub DPS | Passion | AP Engines"
+          }
+        }
+      ]
+    }
+  ]
+}

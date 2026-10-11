@@ -1,0 +1,762 @@
+{
+  "charResId": 1028,
+  "name": "Maribell",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=558276550#gid=558276550",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "maribell-counterattack-and-fixed-damage",
+      "title": {
+        "en": "Maribell Counterattack and Fixed Damage"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Maribell's kit centers around Counterattacks\nCounterattacks are a buff that procs when an enemy hits your team\n(Every hit of a multi hit counts multiple times)\nWhen a counterattack is triggered the owner deals an attack of Def Based Dmg\nCounterattacks deal 1.5x? damage if the enemy hit is fully blocked by Shield\nCounterattacks can Crit\nCounterattacks are not Extra Attacks\nShelter Strike is a bit special, it is a Fixed Damage attack\nFixed Damage attacks cannot be altered by Buffs or Debuffs\nOnly Elemental%, Base stats and Crit can alter the damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unchanged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-4-shelter-strike-carry-160-fm",
+      "title": {
+        "en": "Cycle -4 | Shelter Strike Carry | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +1 on First turn and 2 Crystallization"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7LxZzpohK6YuhtknbPdWcQVti_ltSLw-IpCMUGmFPFnpPy_EOdFLqYNKQPJ7ocv6oLgTqEg"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shelter Strike Example | Shelter Strike OTK"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Shelter Strike Carry (Resolve) | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2 Resolve compared to OG"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7LxZzpohK6YuhtknbPdWcQVti_ltSLxKIxSQUGmFPFnpPy_EOdFLqYNKQPJ7ocv6oLgTqEg"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "minimal-mei-lin-herb",
+      "title": {
+        "en": "Minimal Mei Lin Herb"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Maribell has less interesting cards then Owen"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7LxZypohK6YuhtknbftWcQU97XLtVk6bV4gFXfHjLhWdm7vB5bVfqYJETOlJPVTmPp6HpMZftuyIANw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Counter Buff Passive"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Set and Forget style, not really recommended"
+          }
+        }
+      ]
+    },
+    {
+      "id": "eishlen-erica-rachel-wilhelmina",
+      "title": {
+        "en": "Eishlen | Erica | Rachel | Wilhelmina"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eishlen: Buffs Def and HP to enable higher Shield Maximum 4 EP Shield Retain is backup\nWilhelmina: Basic Stat Stick\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel:You only use her for the Draw Ego"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Alsea | Akad | Raidel"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Alsea: Only a Stat Stick, nothing else at all\nAkad: If you're really afraid Shelter Strike won't crit, he has a good Ego ig\nRaidel: Trash"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shelter-strike-dps",
+      "title": {
+        "en": "Shelter Strike DPS"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Crit is one of the few things that increase Fixed Damage Damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Defensive Shielder/Counter Attack"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Executioner | Healer's"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just look for good substats in your Flex spot, finishing a set isn't nessicary"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Prelude | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Technicality can be enabled"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nBig damage buff to Shelter Strike, ngl it's kinda amazing\nE2:\nThis bad is butt\nE3:\nPotentials are meh\nE4:\nThis bad is butt\nE3:\nPotentials are meh\nE6:\nIg it's kinda nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shelter Strike: Fixed damage, that can be huge\nBelligerence is a great draw Neutral because Mari can thin her deck and remove her attacks\nSadism: A way to make sure your Prism always works, it can be pretty good with some neutral epi"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Resolute 1: 2 Counter + High base\nResolute 2: 1 but worse\nResolute 3: AOE but expensive\nResolute 4: Gain dmg off of Shield\nResolute 5: Upgrade that gains counterattack"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1028_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Wolves 1: 0 cost intiation is good\nWolves 2: 50% Fixed Shield ain't bad\nWolves 3: 2 Counter is ok\nWolves 4: Divine Draw makes this pretty good\nWolves 5: Increases Counter damage\n+2 Moral is a good neutral to get"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1028_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1028_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shelter 1: AOE\nShelter 2: 1 cost\nShelter 3: 2 Cost\nShelter 4: +500% is kinda funny\nShelter 5: 0 Cost"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1028_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Oh 1: 2 Weaken\nOh 2: 2 Counter but no weaken\nOh 3: No Shield meh\nOh 4: Upgrade that deals free damage\nOh 5: Upgradethat gives free shield"
+          }
+        }
+      ]
+    },
+    {
+      "id": "maribell-example-teams",
+      "title": {
+        "en": "Maribell Example teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1028,
+                1033,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                1028,
+                1052,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1028,
+                1033,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1028,
+                1055,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1028,
+                1010,
+                1008
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1055,
+                1033,
+                1003,
+                1049
+              ]
+            },
+            {
+              "title": {
+                "en": "Shield Gen"
+              },
+              "faces": [
+                1033,
+                1055,
+                1052,
+                30084,
+                1050
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                30084,
+                1052,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "Extra Hit"
+              },
+              "faces": [
+                1050
+              ]
+            },
+            {
+              "title": {
+                "en": "CounterAttack"
+              },
+              "faces": [
+                1010,
+                1008,
+                30047,
+                1017
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

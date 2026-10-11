@@ -1,0 +1,1296 @@
+{
+  "charResId": 30084,
+  "name": "Tiphera",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=2007318060#gid=2007318060",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "tiphera-archtypes-and-harmonization",
+      "title": {
+        "en": "Tiphera, Archtypes and Harmonization"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_cre1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "TIPHERA IS THE GAMBLING CHARACTER\nTiphera centers around her (Generally) randomly generated Archtype cards:\nCircle ◯, Triangle △ and Square ◻\n◯\nHeal 60%\n1 AP\n△\nShield 60%\n30% Multiplitive to next Attack card FIRST HIT ONLY\n◻\nHeal 60%\nDraw 1 Archtype\nGenerally what you create is random, and they can clog the draw pile\nONLY USE QUANTUM SEED WHEN YOU CAN USE FORM RIGHT AFTER\nYOU DO NOT WANT ARCHETYPES TO CLOG YOUR DECK"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Form1, Duel 5, Archetype distinct effects and Event Horizon Form Upgrade"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Each Archetype comes with 2 distinct effects\n◯\nHeal 60%\n1 AP\nForm 1 just doubles one of the lines effect: example\n◯ ◯\nHeal 120% or Heal 60%\n1 AP 2 AP\nDuel 5 instead just generates A NEW Archetype, just with one effect removed e.g.\n◯ ◯\n1 AP or Heal 60%\nEvent Horizon \"Form Upgrade\" every Archetype used, upgrade a random effect, e.g.\nEvent Horizon (Form 0/3) Event Horizon (Form 1/3) Event Horizon Form 3/3)\n1 AP 2 AP 1 AP\n1 Draw 1 Draw 4 Draw\n40% Buff 40% Buff 40% Buff\nThe line that gets upgraded is random, type of Archetype doesn't effect it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E2 Archetype"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E2 the first 3 Archetypes used each turn create a special one\nThe Build your own Archtype has effects based on what you used\n◯ 160% Healing Worst effect\n△ 30% Buff Best effect\n◻ Draw 1 Archetype Situational effect\nExample:\n△△△\n90% Buff\n◯△◻\n160% Healing\n30% Buff\nDraw 1 Archetype\nUsually want to aim for △, ◻ if you need, and not ◯"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-exclusive",
+      "title": {
+        "en": "Season 4 Exclusive"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 Exclusive"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 Exclusive"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-controlled-chaos-inquiry-vuln-fm-180",
+      "title": {
+        "en": "Cycle -1 | Controlled Chaos (Inquiry Vuln) | FM 180"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetypes 10-11\nInquiry helps you with Cycle and also now Tiphera can apply Vuln & Agony"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5qz2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_P21lrvq_x0wgPLMM3ASt0jFkBzJR6V9dMYpbdTdCov"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Controlled Chaos (Persona Loop) | FM 180"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetypes 10-11\nPersona Move/Reuse"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_O21lrvq_ytwQAQOTcXaQCAG8P4K5h-1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | CnD Nuke | FM 180"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Controlled Chaos, but with a goat of pain over it"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_Pyw1rvr_x9wkBqPjcuadEiFUZzJn679Lk2p51dd2EE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-controlled-chaos-fm-160",
+      "title": {
+        "en": "Cycle -2 | Controlled Chaos | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetypes 10-11"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_O21lrvq_ytwQAQOTcXaQCAG8P4K5h-1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Gamba Seed | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetype 5-16 (Alot of Heaven)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7JBZypsJE6cGvtn_UfuOTQQFEW7sSr6mWxiex8GZu5-Sm6RbhlXUkRtI3MRNjet9cweXIM6XCS5gI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Square Retain | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetypes 12+ RNG based on Squares"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e-nghwaE6cIN10Q0NPgSNB4_AbUMYBZ_O21lrvqfytwQAQOTcVaQCAG8P4K5hx1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -5 | DPS Tephira | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I'm not gonna tell you this bad is good"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42N2B0S-e9npmvJeIWLQa08bdt5-Sj6RPjonUkRpUxNFAMUQ6P4CKtszrKqSPRNMBfJR6V9d0YpbdT"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-controlled-chaos-alt-fm-160",
+      "title": {
+        "en": "Cycle -2 | Controlled Chaos Alt | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archtypes 9 + 6 Rng doubled"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_Oyw1rvr_yqGgnq7hTKawCAG8P4K5h_1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Chaotic Quadrupling | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archetypes 14"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e9nghwaE6cINB0Q0NPgSNB4_AWUMYBZ_Oyw1rvr_yqGgnq7hTKawCAG8P4K5h-1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Kayron Exhaust Support | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Controlled Chaos, but you Exhaust 6 cards instead of random doubling"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-e8nkB3aE6cIN90C0RPgSNB4_AZUI4GZ_Oyw1rvrPyqGgnq7RTKawCAG8P4K5h_1jS3qQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Moral Tiphera... | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "7 Moral"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7L_V5rD2l4z9NvP42NyB0S-X5mAhwaE6cIppyQ0NPgSNB4_JcVsYBZ_Pyw1rt7fo8xQNqPjRMRwDmNcHyK5ur96ce"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tiana-nyx-alyssa-arwen-yvonne",
+      "title": {
+        "en": "Tiana | Nyx | Alyssa | Arwen | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30085,
+              "name": "Tiana",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20003,
+              "name": "Alyssa",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20001,
+              "name": "Arwen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20026,
+              "name": "Yvonne",
+              "rating": "1/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nyx: Best in class, her Ego skill can save your hand from bad draws\nTiana: Increases Crit Chance with Tiphera, Draws Archetypes, Buffs damage great\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20016,
+              "name": "Yuri",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Yuri: Draw 2 Ego\nRitochika: 3 Moral Ego"
+          }
+        }
+      ]
+    },
+    {
+      "id": "glory-tetra",
+      "title": {
+        "en": "Glory | Tetra"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Recoveryis sought after to power Tiphera's great ego skill"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Executioners | Agony Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 Generalist Def based DPS set, can be swapped among all members\nAgony technically is the best if enabled, but honestly just cherry pick relics"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ego-manifestation",
+      "title": {
+        "en": "Ego Manifestation"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nThis is actually so big, gives you 1 more chance at rolling into Draw\nE2:\nYour first 3 Archtypes used each turn are combined into an extra card, very very good\nE3:\nMakes her Ego Skill go from 5 refund 2, to refund 3, basically 2 cost, so good\nE4:\n10% Order damage, 10% Def Based damage, this is literally Nine Shilling\nE5:\nTiphera has pretty decent multipliers, so not bad\nE6:\nBasically tries to make Subdps Creation and Destruction a thing, very very weird"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Tiphera can technically Retain this lol\nOWA: Can cheat out 9 cost CnD for Nuke\nEbony: Tiphera can Exhaust this (Event Neutral)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_col2",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nForced: +1 Cycle\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-12",
+      "title": {
+        "en": "Part 12"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Event Horizon: This is great, but is RNG if its cycle positive or generates AP\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30084_bhc",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Seed 1:Makes 3 Random Archetypes for 0\nSeed 2: SELECT WHAT ARCHETYPE TO MAKE, Only one that can get Draw Divine\nSeed 3: Main appeal is it's always draw neutral, random upside to make 2 extra Archetypes\nSeed 4: Great with Form 3\nSeed 5: Creates 1 Archetype in hand and 1 in deck, the rate is terrible"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "CnD 1: Feels good in Chaos, but outside of it no\nCnD 2: Main DPS Tiphera\nCnD 3: This is terrible\nCnD 4: This kills 1 draw, but it does give you free damage in future turns, always a possile include if you want it\nCnD 5: Nuke"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Form 1: Being able to double up to 3 effects is very good\nForm 2: Draw 4 Archetypes, Exhaust one Exhaust card in hand\nForm 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Duel 1: When 2 Arche created, create 1 identical card in discard\nDuel 2: Placing the Archetype directly into your hand is very big\nDuel 3: When Arch type [] is activated, create 1 different archetype in discard\nDuel 4: 2 of the Archetype you want, 4 in total, feels really good in Chaos, but is a skill, skill darn good\nDuel 5: Duplicating the effect of a Form 1 is very good, but this is ALOT of rng, also +5 Exhaust cards"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tiphera-team-examples",
+      "title": {
+        "en": "Tiphera Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30047,
+                30084,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                30084,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                30084,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                30084,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                30097,
+                30084,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                30084,
+                1024
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1003,
+                1040,
+                30048,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Nuke DPS"
+              },
+              "faces": [
+                30047,
+                30097,
+                30093,
+                1064,
+                30113,
+                1040
+              ]
+            },
+            {
+              "title": {
+                "en": "Vulnerable"
+              },
+              "faces": [
+                1024,
+                1010,
+                1050,
+                1017,
+                30097,
+                1008
+              ]
+            },
+            {
+              "title": {
+                "en": "Likes Shields"
+              },
+              "faces": [
+                1017
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

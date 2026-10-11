@@ -1,0 +1,650 @@
+{
+  "charResId": 1040,
+  "name": "Beryl",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1841435457#gid=1841435457",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "beryl-retain-and-allies-retain-activate",
+      "title": {
+        "en": "Beryl Retain and Allies Retain Activate"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_col",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Beryl's Main Gimmick is \"Retaining Cards\"\nRetain cards are not discarded at the end of the turn\nRetain cards can have an activated effect that happens if they're saved\nOpening Found 5 (The Upgrade)\nONLY ACTIVATES ON END OF TURN RETAIN\nGuilty Pleasure 4, Growth Accel 1, Will of Light do not Activate it\nGuilty Pleasure 4 only affects Beryl Cards\nWill of Light only affects Orlea Cards (?)\nGrowth Accel 1 is the only version that can target allies, AKA Beryl to Combo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "opening-found-upgrade",
+      "title": {
+        "en": "Opening Found Upgrade"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unique Guilty Pleasure to prevent dupes\nIf you wanna use a flash you can get +1 Moral version"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Beryl Retain Example"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engine Beryl"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Self Deck Thins, after Drawing and Buffing Moral, Very good as long as you don't need hand space for some reason\nIt's possible to even Forgo more and delete Charged Shot or Specialist to Thin more"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Opening Found Orlea Combo"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just Spam Growth Accel on Opening Found, Opening Found is best damage increase"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spore Mother"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eventually you fill your hand with Spore Creators spam Guilty and make tons of Spores\nGreat with Flash Hew Nine or just to Fuel\nExtreme Hew, Moon+ Chizuru, or Spire Mei Lin"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rosaria-daisy-nakia-ritochika",
+      "title": {
+        "en": "Rosaria | Daisy | Nakia | Ritochika"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rosaria: is god\nDaisy: Beats Nakia if you have max dupes\nNakia: Don't go this over Rosaria\nRitochika: 3 EP Ego Skill (Technically Rosaria can generate this much each time, but its RNG)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Solia | Marin"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Solia: If you go AFK Retain, then Solia rises up in Value, Rosaria wins if she can gen Moral tho\nMarin: You mainly play her for her Ego Skill to pull Guilty Pleasure, 3 EP to Tutor is great\nAlso she requires dupes to reach the same Atk%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-corpse",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Corpse"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increases Opening Found Upgrade, or everything in general"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If you're making Spores with Beryl you can keep this up permanent easily"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Technically Usable if Opening Found Combo with Orlea"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nHeavy Weapon Specialist to 0 Cost, VERY GOOD\nE2:\nAll Retain cards get +20% Damage, Good\nE3:\nPotential Levels: It's ok\nE4:\nIncreases Ego Skill damage, it's ok\nE5:\nPotential Levels: It's ok\nE6:\nWhen Retaining a card, you charge up an \"Extra Attack\" Good free damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-seed",
+      "title": {
+        "en": "C7 Seed"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-8",
+      "title": {
+        "en": "Part 8"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spores are very good at triggering opening found\nAnd you could use Guilty 4 to create a ton\nMushroom Ammo + Guilty 4 + Spore is a funny idea, but the ratios aren't that high\nNutrient: Helps exhaust Forgotten Grave\nAzure: Ig it exists to exaust stuff"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Beryl basics aren't very good\nSpecialist: Creates you fodder for Opening Found Upgrade, or is just free damage, good\nHidden Bullet: Just a good Retain Neutral\nQuick Shelling: Cantrips with damage, never bad\nLeap Attack: Quick Shelling but more conditional\nNegotiate: 2 Moral"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1040_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Found 1: Extra Hit is good\nFound 2: Can be 0 Cost, but not very nessicary\nFound 3: 2 Extra Hits is very good, but only lasts for 1 turn\nFound 4: Very Weak Scaling compared to Found 1 or 3\nFound 5: Upgrade End of Turn Spam Beryl\nIt turns out even though it's non Visual Unique% Potential Increases Upgrade Damage\nNot sure about Unique Stat"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Guilty 1: 0 AP Draw 3, then 1 Permanent Moral, Very good\nGuilty 2: Cost Reduction unimportant\nGuilty 3: Delayed Draw 2, it's ok\nGuilty 4: Activates Beryl only retain, not allies, it's ok since it Cantrips, not card positive\nGuilty 5: Unique, 0 AP Draw 3, good for Run and to not dupe it, it's ok\nMoral Neutral Epiphany is great, AP or Draw are also very good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1040_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charged 1: Highest Retain Damage Increase\nCharged 2: Terrible\nCharged 3: Eventually can be 0 cost, but bad\nCharged 4: One time Increase, also just weak, terrible\nCharged 5: Worse Scaling then Charged 1, besides that it can Double Dip Buffs"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1040_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Firepower 1: Gives Shield but lower damage increase\nFirepower 2: Beryl doesn't spam attacks\nFirepower 3: Largest Damage Increase for Found Combo\nFirepower 4: Meh (Its the only version that buffs allies)\nFirepower 5: It's an Upgrade"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beryl-dps-example-teams",
+      "title": {
+        "en": "Beryl DPS Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Buffers/Debuffers | AP Engine | DPS"
+          }
+        }
+      ]
+    }
+  ]
+}

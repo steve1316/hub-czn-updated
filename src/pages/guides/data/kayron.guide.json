@@ -1,0 +1,780 @@
+{
+  "charResId": 1064,
+  "name": "Kayron",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1855295740#gid=1855295740",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "important-kayron-glossary-mechanics",
+      "title": {
+        "en": "Important Kayron Glossary/Mechanics"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_eps",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Kayron's gimmick is that he creates Futility Cards and needs to Exhaust them\nFutility cards at a base are a 1 AP, Exhaustible \"Status Ailment\" Card\nHis whole goal is to create as many Futility as he can, and exhaust them\nBria and Kayron E3 are very efficent ways to completely clear Futilities\nUse Bria/Kayron E3 right before you reshuffle for the most Value\nThey are both a very big spike for Kayron"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Oath of Vanity"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Kayron's MOST Important card, changes his playstyle\nKayron's Futilities are only Status cards before Oath\nUsing them as Status is very inefficent, but if you don't it clogs your deck\nOath can change Futilities into Attack cards to do damage and/or heal also\nOath 4 is the truely Kayron play style defining epiphany\nOath 4 lets you easily fill your hands of Futilities then instantly Exhaust many\nBut since it has exhaust itself, and doesn't change Futilities into Attacks\nIf you can't win that early, you need either Bria or Kayron E3 to start making sure\nThat Futilities will not clog your deck"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Multiplicative synergy and Allies Exhaust"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Kayron is a little special, and his scaling damage on Echo and Black Hole\nAre affected by Multiplicative Damage Sources, so Void Set and Equipment\nKayron usually only cares about exhausting his own Futility, but Brand\nBrand 0,1,2,4 are versions that can also care about how many cards are\nExhausted by his Allies"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Oaths got buffed, Futilities got buffed, its nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-6-futility-use",
+      "title": {
+        "en": "Cycle -6 | Futility Use"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8 AP required for Futilities\n2 Black Hole, 1 Brand, 1 Persona\n12 AP Total ideally, also this Persona is pretty broken 60% Multiplier for 1 AP is great"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -5 | Brand 4"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Althought its best played as an OTK deck with Exhaust draw, it can always work with Tiphera\nWhich creates alot of Exhaustable support cards, Blackhole/Echoes is optional for bonus damage\nBut they cost alot of AP and draw, for realistically not alot of bonus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Brand 4"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Moral Brand"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 Brands worth 16 Moral!\nUp to you if you want permanent/temporary morale with Neutrals like Attack/Gearbag/Reorganize\nOr you could go for more Draw Divines on Brands for more consistent cycle\nYou could technically put Clover on Kayron due to Healing Futilities"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-6-brand-4-persona",
+      "title": {
+        "en": "Cycle -6 | Brand 4 Persona"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1064_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The persona heavy bricks once you run out of Bria/Kayron Ego so realistically you can only 2 turn\nLooping this persona through supports can allow you to replay it and create even larger Brands\nPretty nutty while it works"
+          }
+        }
+      ]
+    },
+    {
+      "id": "bria-eloise-zatera",
+      "title": {
+        "en": "Bria | Eloise | Zatera"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bria: With the addition of Tiphera, we have a good support to exhaust futilities, a dump isn't as required\nEloise: Really good damage for Kayron and the ego isn't too bad\nZatera: Atk% Stat stick"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Anteia"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Anteia is bad"
+          }
+        }
+      ]
+    },
+    {
+      "id": "void-executioner",
+      "title": {
+        "en": "Void | Executioner"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Void set goes crazy with Kayron's Multiplicative scaling"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blackwing | Executioner | Cursed Corpse"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "It's also good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Please don't, it's technically Usable with Futility Attack"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\n2 more Futility from Echoes of True Abyss, very good\nE2:\nFree attack for every 2 Futility exhausted (It consumes buffs, so Vuln is bad)\nE3:\nAllows Rift of Nothingless to also Exhaust Futility from Graveyard Very strong\nE4:\n30% Additive is okay\nE5:\nGeneric damage increase, ok\nE6:\nRandom debuff whenever a futility is made, strong (Vuln is OP)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4-swamp-of-judgement",
+      "title": {
+        "en": "C4 Swamp of Judgement"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nVine Lord: Drawing 6 exhaust cards is a bit excessive, but Vinelord isn't terrible\nSoldier Prime: Celestial Activator that refunds\nHunger: 2 Moral if you're going support"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tech"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "True Abyss is actually one of Kayron's best cards, just bad besides Oath 4/Bria/Kayron E3 Scaling\n2 AP for 3 (5 with E1) is a very good rate at generating futility to scale Kayron"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1064_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Echo 1: 1 AP is bad, but VERY HIGH base damage and also 3 instead of 2 Futility faster scaling\nEcho 2: 1 AP and Slow scaling is bad\nEcho 3: 1 Ap, 2 Ephemeral for 2 Futility scaling for free, great value\nEcho 4: Compensates for your team having Excess AP, but not enough draw for other Echo versions\nEcho 5: ZERO COST? AND SCALING DAMAGE? THATS CRAZY"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1064_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hole 1: Only if you don't have Bria and/or Kayron E3, or Oath 4, and you don't have AP to play them\nHole 2: Scaling damage option, big number and higher damage per Futility then Upgrade\nHole 3: Funny 5 hit if you wanna go additive for Kayron\nHole 4: The scaling on this is only VERY slightly higher then Hole 2, and not infinite, but its Multi hit\nHole 5: Set it and forget it"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1064_tut1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Brand 1: Good, base damage increase\nBrand 2: ST version of brand upgrade, also good\nBrand 3: Very easy to get to 0 cost, so its very good\nBrand 4: Great on the turns you exhaust alot aka Bria/Kayron skill, or with Exhaust fodder Tres/Luke etc\nBrand 5: Absolutely terrible\nVuln Brand is very good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Oath 1: Just upgraded, if you want Heals as well as damage\nOath 2: Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3\nOath 3: The best Futility use Oath, increasing the damage by over double\nOath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
+          }
+        }
+      ]
+    },
+    {
+      "id": "kayron-team-examples",
+      "title": {
+        "en": "Kayron Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw/Discard | Buff Debuff | Exhaust Support | Spam Exhaust | AP Gen"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,989 @@
+{
+  "charResId": 1017,
+  "name": "Amir",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=630202015#gid=630202015",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "amir-and-metallize",
+      "title": {
+        "en": "Amir and Metallize"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Amir's mechanic is her Metallize\nMetallize is gained from Hovering Metal and Metal Extraction\nMetallize can be consumed by Amir's skills to boost them\nMetallize can also be consumed by gaining shield from a card\nWhen Metallize is Activated Amir shoots an attack and also gains some shield"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The ratio of Metallize creation and usage should try to be perfect\nNarja at max can consume 12 Metallize a turn\nNarja consuming 8 is less damage, but also less Metallize required\n12 Metallize = 2 Hovering + Extraction + E6 = 12 x 4 hits (3 Hurricane) 48\n8 Metallize = 1 Hovering + Extraction + E6 = 8 x 5 hits (4 Hurricane ) 40"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-5-metallize-amir-4-hit-fm-160",
+      "title": {
+        "en": "Cycle -5 | Metallize Amir 4 Hit | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "13 Metallize that hit 4 times = 52 + 3 (Hurricane)\n8 AP Required"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UhlzpphH6Zust1nWfsWRQUxGZLsSiauWiyWO8GZuo8ik6V7jMOUuZ2WS4HKsytWtWSA6ETByQAC5NcBfISCS9YwYpBpey_U"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Metallize Amir Lite | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "13 Metallize that hit 3 times = 39 hits +2 (Hurricane)\n6 AP Required"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UhlzpphH6Zust1nWfsWRQUxGZLsSiauWiyWO8GZu58Kk6VvjqnUkRtIdMxNdeN8aw9rIMI_ASrkjEXh0JiG79RQ7GjE"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Amir Metallize Example feat Narja"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Amir Metallize Example Narjaless"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Hurricane Amir | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3x5 = 15 hits\n5 AP required"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UhlypphH6ZustlnWfsWRQU5GZLtVg6vVkgxXZ0WWgicW4_B6UIcGIGq7OerMov2twURSOTdwadAiFuF-mJI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hurricane Example"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-6-metallize-amir-5-hit-fm-160",
+      "title": {
+        "en": "Cycle -6 | Metallize Amir 5 Hit | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "10 Metallize that hit 5 times = 50 + 4 (Hurricane)\n9 AP Required"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UhlzpphH6Zust1nWfsWRQUxGZLtWg6uWjiUUYGxPFUd3y7N4eVedRAKTfujlcmaOMCHqEjByQAC5NcBfISCS9YwYpBpey_U"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -5 | 2 Cost Hurricane Amir | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4x5 = 20 Hits + 2\n8 AP required"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UhlzpphH6ZustlnWfsWRQUxGZLsWg6uWjiWH8CX9qmQayinicO8uZ2iSPujlcmWO4CLtiz3K8CMAN8fGLJgi1jUapIVU"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eishlen-erica-wilhelma-rachel",
+      "title": {
+        "en": "Eishlen | Erica | Wilhelma | Rachel"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eishlen: Def% and +15-30% Def Damage (Conditional) is good\nErica: Def% and rng CounterAttack gain\nWilhelma: Def%\nRachel: Draw 1 Ego, but no Def% so you lose damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetra-executioners-agony-flex",
+      "title": {
+        "en": "Tetra | Executioners | Agony Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Base Def based DPS"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "For 2 Cost Hurricane"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "For 1 cost Hurricane"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nBuffs Iron Skin, meh card at least removes finale\nE2:\nStart of battle 2 Metallization, pretty nice\nE3:\nPotential levels, ok\nE4:\nBigger Shield, ok\nE5:\nPotential levels, ok\nE6:\nStart of turn +1 Metallizatin VERY NICE"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever: +120% is pretty great, but -1 Cycle and +1 AP required\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive, but Cycle -2 is very difficult to support\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 1, potentially 2 moral, and 60% Multiplicative is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Vanguard Residual Herbs are just worse since no Moral Epiphany but can proc metallize"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing is very good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Dmg by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of 2>= Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt to 1<= Attacl Cards +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Iron Wall: 1 CounterAttack each turn\nSadism: AOE Vuln and technically 0 AP if it cost reduces the right card\nEnergy Barrier: 1 Time AP and Perma CounterAttack"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt3",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1017_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Basic Shield: Activates Metallize and also refunds you, really not bad\nIron Skin: Take no damage for one turn, not really anything that requires this effect, it exhausts itself\nBelligerence: Potential draw 2 for 0 AP, its ok"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hover 1: More\nHover 2: Counter Attack\nHover 3: Celestial\nHover 4: Exhaust\nHover 5: Upgrade"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Extract 1: Multiplicative to shield, but only 2 metallization meh\nExtract 2: 3 metallization, 3 resolve its ok\nExtract 3: 4 Metallization but conditional\nExtract 4: Celestial, but not really worth since its just 2 metalization and 3 resolve\nExtract 5: Metallization damage, the best here"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_uni1",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pierce 1: 3 Hits and 2 Vuln, very nice\nPierce 2: Just big damage hit, abuses Vuln\nPierce 3: 1 Vuln but gives you Metalizationm which should be unnesicary\nPierce 4: 2 Cost bad\nPierce 5: Weaken useless, besides for Bone Cutter"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hurricane 1: Makes Metalization AOE\nHurricane 2: Buffs ST Metalization damage\nHurricane 3: Upgrade End of turn AOE Dmg\nHurricane 4: 4 hit + Buffs Metallization damage\nHurricane 5: 5 big hits, very strong"
+          }
+        }
+      ]
+    },
+    {
+      "id": "amir-example-teams",
+      "title": {
+        "en": "Amir Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1017,
+                1052,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1033,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1049,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1055,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1052,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1040,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1055,
+                30084
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1049,
+                1033,
+                1003,
+                1056,
+                1040,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "Shielders"
+              },
+              "faces": [
+                1052,
+                30084,
+                1055,
+                1050,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1052,
+                1049,
+                1055,
+                1050,
+                1039,
+                1056,
+                1040,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1052,
+                30084,
+                1055,
+                1003,
+                1039
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

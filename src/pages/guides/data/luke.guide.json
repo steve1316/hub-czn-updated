@@ -1,0 +1,731 @@
+{
+  "charResId": 1004,
+  "name": "Luke",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=583443439#gid=583443439",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "luke-bullets-and-multi-hit",
+      "title": {
+        "en": "Luke, Bullets and Multi Hit"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_bhc1",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_cre2",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1004_cre3",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1004_cre4",
+              "note": {
+                "en": ""
+              },
+              "rating": "10/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Luke's gimmick is his HANDGUN Bullets\nHandgun Bullets are COMMON cards\nThey have really low base damage, so additive buffs are amazing\nReally good for stacking Demon Dance or for activating Selena Coord Attacks"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Irrelevant changes to Irrelevant Rapid Fires except Rapid 5 slight dmg buff"
+          }
+        }
+      ]
+    },
+    {
+      "id": "standard-luke",
+      "title": {
+        "en": "Standard Luke"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You could remove Seize to gurantee dupes\nCould also add back Finisher for +1 Attack card if you wanted\nCould add back Seize if you wanna minmax damage but reduces dupe chances"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Luke Otk Alt | Luke Otk Alt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo Bait"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You could use a different Rapid if you wanted\nCould add back Seize and Finisher if you wanted"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Luke Hugo Bait"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena MinMax"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Max Spam, for Max Selena Coord Attacks\nYou could cut down on Seize then Finisher or Dance if you wanted"
+          }
+        }
+      ]
+    },
+    {
+      "id": "otk-luke",
+      "title": {
+        "en": "OTK Luke"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "if you have the AP/Draw from Supports a 2nd Demon Dance is better then 4th Rapid Fire\nCould add back Stealth and Finisher if you wanted"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1004_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Instead of Dance of Demon you could use Seize Upgrade to make it even thinner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "akad-yuri",
+      "title": {
+        "en": "Akad | Yuri"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Akad: Insanely nuts Ego Skill +25% Crit rate is crazy, and the bullet damage is nice\nYuri: Atk% Stat Stick, if you really want the Draw Ego for Draw Luke"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Janet | Serithea"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Janet: Lukes synergy: Makes extra bullets for Demon Dance, nuff said\nSerenthia: Crit Rate and Crit Dmg absolutely insane"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-corpse",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Corpse"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Luke's best"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Order | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Multiplier isn't strong on Luke with his insanely low base multipliers"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1\nThis is butt\nE2:\nVERY good 3 bullets -> 5 Bullets once per turn, very nice\nE3:\nOnly Ego Skill Damage Increase meh\nE4:\nIt adds ups, pretty good\nE5:\nPotential Levels, Meh\nE6:\nHonestly, really nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nGrave: 60% Crit rate is nice, then it just self deletes, not bad but wouldn't dupe\nNegotiate: 2 Moral for 1, it's not great, but it's accessible"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Finisher: This is so butt without E2, and even for a final build it isnt that great a draw\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nAmbush: If you can break ig, not especially good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rapid 1: Giga combo, best damage, most bullets, especially with -1 cost Divine, but only first time\nRapid 2: 3x hit = 3x bullets, most consistent option\nRapid 3: Single big hit? weird\nRapid 4: Makes it into a Bullet? interesting?\nRapid 5: Gives Luke Utility as a type of draw support, -1 cost divine is very good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Seize 1: The highest Multi hit bullet is Rapid 4 and that's only 3, super mid\nSeize 2: 480% only on bullets is not that fire\nSeize 3: You just need 7 bullets to beat Seize 2\nSeize 4: If used on Demon Dance, the damage is insane\nSeize 5: Upgrade = Exhaust = Most consistent, always valuable"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1004_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Stealth 1: Crit chance on bullets ain't bad\nStealth 2: Is okay\nStealth 3: 4 bullets, also can set up if this turn isnt combo turn\nStealth 4: 0 cost upgrade, can get draw divine easy, and free turn based bullet gen\nStealth 5: 2 AP is expensive, but it is alot of bullets and exhaustable ig"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1004_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dance 2: The best because its scales per all attacks done and the extra hits with additive buffs are best\nDance 1/3: Because of additive buffs, the extra hits on Dance 2, out scale both bullet dances\nDance 4: If you really wanted Shield Luke\nDance 5: Can cost 0, good enough"
+          }
+        }
+      ]
+    },
+    {
+      "id": "luke-example-teams",
+      "title": {
+        "en": "Luke Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Buff/Debuff | Sub DPS | Exhaust Lover | AP Generator"
+          }
+        }
+      ]
+    }
+  ]
+}

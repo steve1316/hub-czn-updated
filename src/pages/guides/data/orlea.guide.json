@@ -1,0 +1,592 @@
+{
+  "charResId": 1024,
+  "name": "Orlea",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=423931700#gid=423931700",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "important-orlea-glossary-mechanics",
+      "title": {
+        "en": "Important Orlea Glossary/Mechanics"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_cre2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_cre3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_cre4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_cre7",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Orlea's Gimmick is all about Retain and her Creations that Exhaust\nRetain means the card isn't discarded at the End of Turn\nSome of Orlea's Cards also have Activated Abilities by Retaining\nEnding turn, or Growth Acceleration can Activate these Abilities\nOrlea has 3 types of creations:\nSoftie: The buffer\nUse Effect: Multiplicative Damage Bonus to next attack used\nRetain Effect: Multiplicative Damage Bonus to next attack used\nSwiftie: The Damage\nUse Effect: Does Damage\nRetain Effect: Increases Swifties damage by a Additive Damage Ammount\nSturdie/Toughie: The Sustain\nUse Effect: Shields\nRetain Effect: Heals\n(Yes, Retain heal generates Tressa Daggers, End of Turn and Growth Accel)\nCreations have 3 star levels, Creations combine if Same Type, Increasing Star\nIncreasing Stars boost the Retain effect and Use strength\nExamples:\nSoft 1 + Soft 1 = Soft 2\nSoft 2 + Soft 1 = Soft 3\nSoft 2 + Soft 2 = Soft 2, Soft 2\nSoft 1+ Sturdie 1 = Can't happen"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Growth Accel got healing buffs nice\nAll Creations got numbers buffs\nWill of Light got AP reduced to 1, very nice\nBut it still of Activates them once (It should be twice)\nPotential change AMAZING\nBasics change, whatever you just remove em"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-5-gold-mane-armour-breaker",
+      "title": {
+        "en": "Cycle-5 | Gold Mane Armour Breaker"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0 Cost Growth Spam"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0 Cost Growth Accel, can get draw divine and be able to cycle, but can't inflict Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "AOE Vuln Softie Buffer"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "By stacking up Growing creatires. a single Will of Light can be 105% or 140%\nGrowth Accel will only ever be 70%, but it's still good to keep a copy to keep up Vuln"
+          }
+        }
+      ]
+    },
+    {
+      "id": "big-swiftie",
+      "title": {
+        "en": "Big Swiftie"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Make a giant butt Swiftie, the one source of Vuln Growth Accel is a humongous damage buff\nDPS Orlea, but not recommended"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spores are just less effective then Softies generally"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyx-tiana-noel-alyssa-yvonne",
+      "title": {
+        "en": "Nyx | Tiana | Noel | Alyssa | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nTiana: Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash\nNoel: Now has Def%, passive abilities are nice but Orlea's ratios aren't that high\nAlyssa: Big Def%, okay Ego skill\nYvonne: Alyssa but weaker after Dupes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Arwen"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Arwen: Not Def%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "full-support-healing-tank-orlea",
+      "title": {
+        "en": "Full Support Healing/Tank Orlea"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Tetra"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5% Damage Ammount per generated or used Exhaust Skill Cards max 15% Damage Increase"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Swiftie Orlea"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blackwing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3rd slot can be anything, Tetra for lil bit more healing, healers for hp, agony for baby dmg, Realistically you should just Cherry pick for Sub Stats for 3rd slot"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Instinct | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Orlea has absolutely terrible base Ratios, most of the Swiftie damage comes from Additive Dmg Buffs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nGiving retain to Will of Light is really nice deckthinning, but not nessicary after changes\nE2:\nIt's ok\nE3:\nVery nice buff\nE4:\nReally really nice, just 10% Multiplier for the team\nE5:\nNot really useful\nE6:\nTiny tiny damage, not very useful"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage through a card was not dealt to an enemy for 1 turn, at the start of the next turn, increase Damage Amount by 50% for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_cre8",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Harvester: Retain and makes alot of Spores the best\nNature's Gift: The worst Spore creator but still makes spores\nSalamander: 1 AP draw 4 is always good\nKefox: 1 AP to draw 1 and give it retain is good, but somewhat more conditional"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just remove your baiscs\nWill of Light: You only really need to Activate Softies, otherwise its a brick draw, kinda meh\nWanderer: Tech\nRally/Gear/Reorganize: Great draw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1024_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1024_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sacred 1: 3 Creations is good, but its RNG\nSacred 2: UPGRADE VERY GOOD, but 2 Cost is high, hopefully it discounts or you have Lead Prism\nSacred 3: 2 Softies for 1 AP, rate isn't bad\nSacred 4: 40% on a low base multiplier isn't that important\nSacred 5: High Shield isn't required"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1024_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1024_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1024_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Annoying 1: 0 Cost, damage and heal, nothing valuable\nAnnoying 2: Uselss damage\nAnnoying 3: Useless damage\nAnnoying 4: 0 Cost and also makes Creations, good\nAnnoying 5: Eventually high damage, but 1 cost isn't that great\nNeutral Epiphanies are good, since the base card is already pretty good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Growth 1: 0 Cost is insane, and also can work on other characters Retain aka Beryl\nGrowth 2: 2 Cost is so bad\nGrowth 3: AOE Vuln and Activates Softie dmg buff twice, very good\nGrowth 4: Just stack Swiftie fast\nGrowth 5: 5 stress is terrible"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1024_uni3",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Creature 1: Honestly rather have a contaminated spore, since you know what you'd get\nCreature 2: 2 Creations good rate, but RNG\nCreate 3: 3 star Softie and Vuln, very good\nCreate 4: 4 star Swiftie, and retain it twice already? very good\nCreate 5: Weaken is okay, but you don't need Sturdie 3 star\nNeutral epiphanies aren't bad, but the Creation is RNG"
+          }
+        }
+      ]
+    },
+    {
+      "id": "orlea-example-teams",
+      "title": {
+        "en": "Orlea Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | DPS | Buff/Debuff | AP Engines"
+          }
+        }
+      ]
+    }
+  ]
+}

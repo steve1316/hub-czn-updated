@@ -1,0 +1,876 @@
+{
+  "charResId": 1052,
+  "name": "Narja",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=607408982#gid=607408982",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "narja-s-voracity-and-predation",
+      "title": {
+        "en": "Narja's Voracity and Predation"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Voracity\nWhen at 50%> HP, when an ally hits with an attack card +30-40% Damage Bonus\nAt any HP Threshold Voracity is Activated you will heal a small fixed ammount\nPredation\nWhen attack card hits give +110%-140% Damage Bonus\nUnfortunately all of these are consumed on HIT not per card use\nNarja can give 140% damage increase\nShackles of Hunger 340% After using 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-voracity-discounts",
+      "title": {
+        "en": "Cycle +2 | Voracity Discounts"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Since this is only 140/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\n4th copy of Hunger without Divine or 2nd Voluntary\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Pure Shielder"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pretty simple, get Voracity, use Voracity on Shackles (Don't waste on dmg)\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Unconditional Discounts"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Since this is only 140/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\n4th copy of Hunger without Divine or 2nd Voluntary\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Rei Cosplay"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger is 200% 2 times or 400% aka 20 Moral\nSince this is only 160/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Chizuru/Mei Lin basic buffer/Discounter"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Since this is only 140/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\n4th copy of Hunger without Divine or 2nd Voluntary\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Rin/Mei/Serenial/Haru Move"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Since this is only 140/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\n4th copy of Hunger without Divine or 2nd Voluntary\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-azir-metallize",
+      "title": {
+        "en": "Cycle -1 | Azir Metallize"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "9 Metallize Procs with +200% Def Dmg or 10 Moral, this is great"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Moral Voluntary Mealtime Discard"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The gameplan here is to Discard Mealtime into Discard (Graveyard)\nGet all the Moral you require from Voluntary 9/12 Morale\nOnly problem is that effectively Mealtime will never be played and continues to brick\nIf shuffled back in"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Moral Voluntary Mealtime Play"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1052_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The actual method of getting Mealtime in the Graveyard is the problem\nMix of discounting, but Mealtime being played itself means consuming Voracity aka hitting\nCan be a bit anti synergy that you have to hit a bit unboosted before being able to boost but 9 Moral is not terrible"
+          }
+        }
+      ]
+    },
+    {
+      "id": "gaya-nyx-alyssa-yvonne",
+      "title": {
+        "en": "Gaya | Nyx | Alyssa | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gaya: Tutoring Mealtime is OP, Mealtime gives teambuff, and also a good Narja damage increase\nNyx: 4 EP Draw 4\nAlyssa/Yvonne: Def% Controller supports"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetra-executioners-flex",
+      "title": {
+        "en": "Tetra | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra Def for heals and damage, Executioners for damage, flex for hp or more damage\n300 Def is really easy to get to"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Starlight | Tetra"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean technically Narja can activate this\nBut buffing Extra Attacks or Counters aren't really useful on her"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Tetra"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You would need spores, or alot of neutrals for this"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Good with Serenial cuz Narja is Multi hit, additive buffs be very nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\n2 Predation on Mealtime, is Fine\nE2:\nRng to keep Voracity up, but on Average it's still good\nE3:\n3 Predation like E1 it's okay\nE4:\nPredation get +30% dmg boost, it's good but predation is hard to get\nE5:\nPotential Levels: It's ok\nE6:\nThis is a funny way to make her a main dps"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card(s)."
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nSpores are always okay, but Narja has no specific synergies"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just remove basics\nAttack can get Shackles easily\nRally/Gearbag/Reorganize are always good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shackles 1: Attunement 6 is great\nShackles 2: Deck thins and has an insanely good Draw 2 Divine\nShackles 3: Additional hits for Voracity, worthless\nShackles 4: +200% Additive is great, 3 Predation is just bonus\nShackles 5: Multiple Metalization procs per repeat, also strong with Resolve buffing"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Voluntary 1: 1 Cost 9 Voracity or 3 Predation, very good rate\nVoluntary 2: Moving Mealtime to hand is great to start discounting it, 3 Moral is a good upside\nVoluntary 3: Each time enemy action count down, 1 Voracity, very good rate, but slow voracity gain\nVoluntary 4: UNIQUE 10 Voracity and 1 predation each time its moved to hand, very good\nVoluntary 5: UNIQUE Basic attack buff and Voracity too, good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1052_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bottomless 1: 3 Voracity and 2 random cost reduction, very good\nBottomless 2: Unconditional 2 random cost reduction, but no Voracity its ok\nBottomless 3: UNIQUE Upgrade, 1 cost reduction after the first 3 voracity used each turn (Max 1 a turn sad)\nBottomless 4: RETAIN Increases Defense based damage by 100%, might be cracked with counterattacks\nBottomless 5: 1 cost Lead 7 Voracity, increases mealtime damage but that doesn't matter"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1052_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1052_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1052_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1052_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Domain 1: Extra Tenactiy taken\nDomain 2: Extra Def based damage\nDomain 3: Healing\nDomain 4: Garbage high cost, activation condition isn't that easy\nDomain 5: Healing"
+          }
+        }
+      ]
+    },
+    {
+      "id": "narja-example-teams",
+      "title": {
+        "en": "Narja Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw | Buff Enjoyer | I love Def Dmg | Buff/Debuff"
+          }
+        }
+      ]
+    }
+  ]
+}

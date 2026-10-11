@@ -1,0 +1,947 @@
+{
+  "charResId": 1062,
+  "name": "Haru",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=2001649653#gid=2001649653",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "haru-e2-and-e6-and-damage-reduction",
+      "title": {
+        "en": "Haru E2 and E6 and Damage Reduction"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Haru Anchor Shot, Pointer Move, and Cost Reduction"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Anchor Shot is Haru's Main Damage Source\n2 Cost Scaling Attack at base, but it's best Version is Combo Anchor Shot\nThis Combo is Active as long as you use any Justice/Blue card before using it\nAnchor Pointer has \"Move\"\n\"Move\" transfers the Card directly from zones into Hand\n\"Move\" can transfer from \"Deck\" \"Discard and \"Used\" Pile\n\"Move\" counts as Draw, Only if Moving the card from Deck, not Discard/Used\nAnchor Shot is the reason that Haru uses Justice Memory Set\nBUT If you start to Reduce it's Cost from Divines/Gesture of Freedom\nJustice Set Effect will BREAK since Anchor Shot won't be 2+ Cost\nYou can then use:\nConqueror 1 Cost Anchor Shot\n2/2/2 0 Cost Anchor Shot/Ecstasy Span"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charge Energy and Lift Anchor, Anchor Shot Scaling"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charge Energy 3 is BROKEN, 70% per Haru card in hand is Insane\n40% The highest Multiplier from Charge Energy is only 144% on Anchor Shot\nThat means Charge 3 only requires 2 Cards 140%, to Break even\nAnything after that is just straight up better\nIt's cap is 630% FOR THE WHOLE TURN, Insane if you can set it up\nYou do need to be able to discard and redraw non Haru cards for this usually\nNia is very good at this, Cassius less so\nLift Anchor is REALLY BAD, It'sDamage, but also ALOT of AP increased\nThe Scaling from Anchor Shot is \"Generic Additive\"\nGeneric Additive is used in the formula after \"Generic Multiplicatives\"\nLike Charge Energy or Lift Anchor"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E2 Allows Anchor Shot to be played for Left over AP with Damage Reduced\nE2 is 40% FINAL DAMAGE REDUCTION PER MISSING AP\nE6 is 20% FINAL DAMAGE REDUCTION PER MISSING AP\nE2 Examples:\n2 Cost Anchor Shot, Used at 1 AP -40% = 60% Final Damage\n2 Cost Anchor Shot, Used at 0 AP -80% = 20% Final Damage\n3 Cost Anchor Shot, Used at 0 AP -120% = 0% Final Damage\nFunny enough when it comes to Tenacity Dealt, it's based on the Initial Cost\nForbidden Gesture of Freedom/Narja making Anchors 0 cost perma are great\nSince you don't actually lose damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Anchor 1 got very heavy buffed BUT\nAnchor 2 requires ALOT of buffs to beat it, so Anchor 1 is the usual now"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-5-copy-anchor-160-fm",
+      "title": {
+        "en": "Cycle -5 | Copy Anchor | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Damage is COMPLETELY UNCOMPARABLE TO OTHER BUILDS\nCOST REDUCTION IS AN REQUIREMENT (NARJA)\nYou spend 2 x 3 x 5 = 30 AP each turn without Narja"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Haru Copy Anchor 9/9 OTK | Haru Copy Tower"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Haru Copy 9/9 OTK"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7DRZzpulI6emjtibZfrieQU16UrsWzqSWjBmW8CGupWQC9jHic3ZjhtexlU8uUN-M5-LvM5vVSiEA8cV9y52YQyo7Vz4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | E2 Moral Support | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "19 Moral + -10 Fort = 29 Moral Equivalent\nYou could get Charge with 1 Moral for Total 30, but then Cycle -3"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7DRZzpulI6emjtibZfrieQ3lAPbwWzqSUvCOW8CGupWYyzDHic3ZjhtezpXUuUN-M5-LvM5nVSiEA8cV9y52YTyo7Vz4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | 2 Hit Anchor | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_srt2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Never use Lift Anchor, its only here to count for Charge Energy\nBasics are the same Cycle as Removing 2 Draw divines and count for Charge Energy\nPersona Loop is relatively good on AnchorShot"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7DRZzp-lI6OmjtibZfrieQU96VbsWzqSWkBmx8CGupWQe9hbic3ZjhtexiU8JUN-M4OTvcNrPSrgf8OJ5y52YTSo7hTqtcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Scaling Anchor"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Default Playstyle"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lillian-ritochika-douglas",
+      "title": {
+        "en": "Lillian | Ritochika | Douglas"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lillian: Best generally\nRitochika: Very very good with Beryl retain as a support, Ritochika passive counts all ally attacks\nDouglas: Easiest to get dupes\nComparison is everyone at Max Dupes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmacott | Scarlet | Priscilla | Asteria | Marianne"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmacott: Ego Skill got buffed alot, and just 8% stat stick, never bad\nScarlet: A little bit hard to use, but generally better then Asteria at base\nPriscilla: Easiest to get dupes, and they really aren't that bad\nAsteria: You need dupes to beat the 4 and 3 stars\nMarianne: Still poopoo\n5 stars require dupes to win out over the raw Atk% that 4 and 3 stars give"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-agony-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Agony Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Works with every version of Haru, even her best Copy Anchor"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Maximum damage, but also requires AP compared to 2/2/2\nBut you need -1 Cost Divine on Anchor"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "SET EFFECT CAN BREAK if you use Gesture of Freedom, but otherwise, generally good\nBut 2 Cost Anchor Spam is very hard to actually have enough AP to use"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nIncreases Lift Anchor Damage Increase, pretty nice\nE2:\nOpens up Moral Support Haru setup, also very good for Chaos/Sortie\nE3:\nIncreases Ego Skill damage, it's ok\nE4:\nVery Tiny Permanent Additive Damage Buff, it's ok\nE5:\nPotential Levels: It's ok\nE6:\nE2's Damage Reudction on Anchor Shot is cut in Half, Very good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSever: Haru can somewhat Benefit from this, but like meh"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hand Buff: Very good with Persona Looping Supports to be +50% x 9 = 450%\nDraw Moral: Very minimal damage difference compared to Persona Loop\nDiscard 2: only 120% or 6 Moral, for the cost of -3 Cycle, which is pretty detrimental"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Residual Herb: Technically Haru is an candidate to carry this too, for her Moral Build"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ecstasy: 0 Cost 4 hits is great\nGesture: Realistically you can go this if you don't have Narja basically\nBut this is best kept on your supports, not on Haru or you'll lose out on Anchor loops"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of Enemey increased, Damage +50% for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rage: Potentially 0 AP 3 Moral\nOverwhelm: 3 hits for 0 AP"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Keeping basics on Haru is okay, to meet your Charge Energy 3 requirement\nLift Anchor: Only use for this is to stay in hand as a Retain, Until Used is bad"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shot 1: Unga Bunga beats Combo Anchor\nShot 2: 2 Hits is still strong, but requires more knowledge of how to use CE3\nShot 3:Minimal Damage Increase, for 3 AP as well as discard downside\nShot 4: Pretty funny with Pointer 1 + Narja\nShot 5: Conditional 1 extra Anchor Shot, Not iInsanely good, but not terrible\nShot 0 Moral/Vuln are also good options"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1062_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1062_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1062_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Power 1: You don't use Power Charge for the ST\nPower 2: Good if you aren't attacking weakness, but high cost is prohibitive\nPower 3: An extra hit is very good, but also very conditional\nPower 4: Very conditional damage increase, 2 AP is high cost\nPower 5: Changing it to 1 cost is very big, and makes it less dead in hand\nHaru isn't meant to do AOE, so I wouldn't recommend it, but you if you wanted to"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pointer 1: Really good with Copy anchor cuz 3x Value, bad otherwise\nPointer 2: Helps during a Run, but really you don't need need it in a finished Build\nPointer 3: Otk Anchor, allows for 2x Anchor use per pointer, max 9\nPointer 4: Increase Damage, but doesn't stack the Damage Increase only the buff duration\nPointer 5: Crit Chance Increase is very good\nYOU PICK AP DIVINE, Vuln Apply Neutral Epiphany is also good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1062_uni3",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charge 1: +20% Crit Chance is crazy\nCharge 2: Terrible, since its only for the next card\nCharge 3: You still only need 3 cards to beat Charge 1, and 2 to beat anything else\nOnly requires 3 other Haru cards to beat Charge 1\nCharge 4: 50% for the whole turn and also Cantrips, less consistent then Charge 5\nCharge 5: 40% on an upgrade that is always active and non conditional"
+          }
+        }
+      ]
+    },
+    {
+      "id": "haru-example-teams",
+      "title": {
+        "en": "Haru Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Buff/Debuff | AP/Cost Reduc | Heaven"
+          }
+        }
+      ]
+    }
+  ]
+}
