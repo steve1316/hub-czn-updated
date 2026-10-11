@@ -1,0 +1,24 @@
+{
+  "_about": "Fixed cleanup rules applied to every generated description after its template is filled in. Keys are matched as whole words, case-insensitively, and the replacement keeps the matched word's leading capital. 'soften' only applies to Guides.",
+  "typos": {
+    "Rythmn": "Rhythm",
+    "Rythmns": "Rhythms",
+    "Rythm": "Rhythm",
+    "Menifestation": "Manifestation"
+  },
+  "casing": {
+    "Defense-based": "Defense-Based",
+    "Attack-based": "Attack-Based"
+  },
+  "soften": {
+    "fucking": "really",
+    "fuckin": "really",
+    "fuck": "heck",
+    "shit": "bad",
+    "sht": "bad",
+    "shitty": "bad",
+    "damn": "darn",
+    "ass": "butt",
+    "bullshit": "nonsense"
+  }
+}

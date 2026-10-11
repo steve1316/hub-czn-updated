@@ -1,0 +1,302 @@
+{
+  "_about": "The client has no glossary, so this file is the term list. Each term names where its text comes from: `tooltip` (a tooltip id, giving the title and description), or `term_key` / `definition_key` (text keys). `term` and `definition` are written by hand only where the client has no text, and win over the client when both exist. `category`, `aliases` and `seeAlso` are always editorial. Keys of the form `<kind>:<refId>` are clarifications shown above an item's game text.",
+  "agony": {
+    "tooltip": "T_CS00_0004",
+    "category": "status",
+    "aliases": ["Agony"],
+    "seeAlso": ["ravaged"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "quietus": {
+    "tooltip": "TALENT_TESTAMENT",
+    "category": "mechanic",
+    "aliases": ["Quietus"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ravaged": {
+    "term_key": "help_menu@name@help_025",
+    "definition_key": "tt_pg@desc@024",
+    "category": "status",
+    "aliases": ["Ravaged", "Ravage"],
+    "seeAlso": ["agony"],
+    "_why": "No tooltip names the Ravaged state. The help page entry explains it, while the CARD_EGO_BREAK tooltip only covers the trigger"
+  },
+  "weaken": {
+    "tooltip": "T_CS00_0003",
+    "category": "status",
+    "aliases": ["Weaken", "Weakened"],
+    "seeAlso": ["vulnerable"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "vulnerable": {
+    "tooltip": "T_CS00_0002",
+    "category": "status",
+    "aliases": ["Vulnerable"],
+    "seeAlso": ["weaken"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "shield": {
+    "tooltip": "CARD_SHIELD",
+    "category": "status",
+    "aliases": ["Shield"],
+    "seeAlso": ["fixed-shield"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "attack-card": {
+    "term": {"en": "Attack Card"},
+    "definition": {"en": "A card that deals damage when used, in contrast with Skill cards, which produce non-damage effects."},
+    "category": "card-type",
+    "aliases": ["Attack Card"],
+    "seeAlso": ["instinct", "order", "void", "passion", "justice"],
+    "_why": "The client has no tooltip or help text defining Attack cards"
+  },
+  "instinct": {
+    "term_key": "attribute_electric",
+    "definition": {"en": "One of the card affinities in Chaos Zero Nightmare. Cards and set bonuses can be tied to a specific affinity."},
+    "category": "card-type",
+    "aliases": ["Instinct"],
+    "seeAlso": ["attack-card"],
+    "_why": "The client names the affinity (attribute_electric) but has no description for it"
+  },
+  "order": {
+    "term_key": "attribute_nature",
+    "definition": {"en": "One of the card affinities in Chaos Zero Nightmare. Cards and set bonuses can be tied to a specific affinity."},
+    "category": "card-type",
+    "aliases": [],
+    "seeAlso": ["attack-card"],
+    "_why": "The client names the affinity (attribute_nature) but has no description for it. No aliases, since the plain word would link everywhere"
+  },
+  "void": {
+    "term_key": "attribute_dark",
+    "definition": {"en": "One of the card affinities in Chaos Zero Nightmare. Cards and set bonuses can be tied to a specific affinity."},
+    "category": "card-type",
+    "aliases": ["Void"],
+    "seeAlso": ["attack-card"],
+    "_why": "The client names the affinity (attribute_dark) but has no description for it. The tooltip titled Void (T_CS02_0250) is a monster status"
+  },
+  "passion": {
+    "term_key": "attribute_fire",
+    "definition": {"en": "One of the card affinities in Chaos Zero Nightmare. Cards and set bonuses can be tied to a specific affinity."},
+    "category": "card-type",
+    "aliases": ["Passion"],
+    "seeAlso": ["attack-card"],
+    "_why": "The client names the affinity (attribute_fire) but has no description for it. The tooltip titled Passion (T_CS05_0006) is a card status"
+  },
+  "justice": {
+    "term_key": "attribute_light",
+    "definition": {"en": "One of the card affinities in Chaos Zero Nightmare. Cards and set bonuses can be tied to a specific affinity."},
+    "category": "card-type",
+    "aliases": [],
+    "seeAlso": ["attack-card"],
+    "_why": "The client names the affinity (attribute_light) but has no description for it. No aliases, since the plain word would link everywhere"
+  },
+  "spark": {
+    "term": {"en": "Spark"},
+    "definition": {"en": "An enhanced version of a card unlocked through Spark tiers. The Cards view shows how many Spark tiers a card has (✦N)."},
+    "category": "mechanic",
+    "aliases": ["Spark"],
+    "seeAlso": ["epiphany"],
+    "_why": "Spark is the app's own name for epiphany tiers. The client has no text for it"
+  },
+  "epiphany": {
+    "tooltip": "CARD_R_SPARK_CRACK",
+    "category": "mechanic",
+    "aliases": ["Epiphany"],
+    "seeAlso": ["spark", "engraving"],
+    "_why": "Two tooltips are titled Epiphany. CARD_R_SPARK_CRACK describes the system, TALENT_SPARK only the card trait"
+  },
+  "engraving": {
+    "term": {"en": "Engraving"},
+    "definition": {"en": "A modification applied to a Persona card through two engraving slots. Each engraving belongs to the Lux or Umbra Eidolon and changes how the card behaves."},
+    "category": "mechanic",
+    "aliases": ["Engraving"],
+    "seeAlso": ["eidolon", "epiphany"],
+    "_why": "The client only has tooltips for Lux and Umbra Engraving counts, not for engravings in general"
+  },
+  "eidolon": {
+    "term": {"en": "Eidolon"},
+    "definition": {"en": "The two opposing aspects a Persona engraving can belong to: Lux and Umbra."},
+    "category": "mechanic",
+    "aliases": ["Eidolon", "Lux", "Umbra"],
+    "seeAlso": ["engraving"],
+    "_why": "Eidolon is the client's internal name for the Lux and Umbra slots. It has no player-facing text"
+  },
+  "morale": {
+    "tooltip": "T_CS00_0001",
+    "category": "mechanic",
+    "aliases": ["Morale"],
+    "seeAlso": [],
+    "_why": "Two tooltips are titled Morale. T_CS00_0001 is the buff, T_CS00_0226 a negative variant"
+  },
+  "action-count": {
+    "tooltip": "CARD_TURN_COUNT",
+    "category": "mechanic",
+    "aliases": ["Action Count"],
+    "seeAlso": ["haste"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "haste": {
+    "tooltip": "TALENT_NO_COUNT",
+    "category": "mechanic",
+    "aliases": ["Haste"],
+    "seeAlso": ["action-count"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "attunement": {
+    "tooltip": "CARD_WHEN_BREAK",
+    "category": "mechanic",
+    "aliases": ["Attunement"],
+    "seeAlso": ["engraving"],
+    "_why": "CARD_WHEN_BREAK has no tooltip row, but its title and description text keys exist (it is the ^TRIGGER_WHEN_BREAK^ engraving trigger)"
+  },
+  "exhaust": {
+    "tooltip": "TALENT_EXHAUST",
+    "category": "mechanic",
+    "aliases": ["Exhaust", "Exhausted"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ap": {
+    "tooltip": "CARD_ENERGY",
+    "category": "mechanic",
+    "aliases": ["AP"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "counterattack": {
+    "tooltip": "T_CS00_0157",
+    "category": "mechanic",
+    "aliases": ["Counterattack"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "damage-reduction": {
+    "tooltip": "T_CS00_0062",
+    "category": "mechanic",
+    "aliases": ["Damage Reduction"],
+    "seeAlso": ["shield"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "discard": {
+    "tooltip": "CARD_DISCARD",
+    "category": "mechanic",
+    "aliases": ["Discard"],
+    "seeAlso": ["draw", "exhaust"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "draw": {
+    "tooltip": "CARD_DRAW",
+    "category": "mechanic",
+    "aliases": ["Draw"],
+    "seeAlso": ["discard"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ego-points": {
+    "tooltip": "CARD_TACTIC_GAUGE",
+    "category": "mechanic",
+    "aliases": ["Ego Points"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "extra-attack": {
+    "tooltip": "CARD_ADDITIONAL_ATTACK",
+    "category": "mechanic",
+    "aliases": ["Extra Attack"],
+    "seeAlso": ["counterattack"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "fixed-damage": {
+    "tooltip": "CARD_FIXEDDAMAGE",
+    "category": "mechanic",
+    "aliases": ["Fixed Damage"],
+    "seeAlso": ["tenacity-damage"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "fixed-shield": {
+    "tooltip": "CARD_FIXEDSHIELD",
+    "category": "mechanic",
+    "aliases": ["Fixed Shield"],
+    "seeAlso": ["shield"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "heal": {
+    "tooltip": "CARD_CURE",
+    "category": "mechanic",
+    "aliases": ["Heal"],
+    "seeAlso": [],
+    "_why": "Card text says $Heal$ for the Defense-based healing effect, whose tooltip is CARD_CURE (titled Healing). CARD_HEAL is the separate Recover keyword"
+  },
+  "immunity": {
+    "tooltip": "T_CS00_0006",
+    "category": "status",
+    "aliases": ["Immunity"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "impair": {
+    "tooltip": "T_CS00_0007",
+    "category": "status",
+    "aliases": ["Impair"],
+    "seeAlso": ["weaken", "vulnerable"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "initiation": {
+    "tooltip": "TALENT_INNATE",
+    "category": "mechanic",
+    "aliases": ["Initiation"],
+    "seeAlso": ["action-count"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "lead": {
+    "tooltip": "TALENT_LEAD",
+    "category": "mechanic",
+    "aliases": ["Lead"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "mark": {
+    "tooltip": "T_CS00_0025",
+    "category": "status",
+    "aliases": ["Mark"],
+    "seeAlso": ["vulnerable"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "stockpile": {
+    "term": {"en": "Stockpile"},
+    "definition": {"en": "To accumulate a resource or stacks of an effect over multiple turns for a delayed, larger payoff."},
+    "category": "mechanic",
+    "aliases": ["Stockpile"],
+    "seeAlso": [],
+    "_why": "The client has no tooltip or help text for Stockpile"
+  },
+  "tenacity": {
+    "tooltip": "CARD_EGO_FIELD",
+    "category": "status",
+    "aliases": ["Tenacity"],
+    "seeAlso": ["tenacity-damage"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "tenacity-damage": {
+    "tooltip": "CARD_EGO_DAMAGE",
+    "category": "mechanic",
+    "aliases": ["Tenacity Damage"],
+    "seeAlso": ["tenacity", "fixed-damage"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "thorns": {
+    "tooltip": "T_CS00_0009",
+    "category": "status",
+    "aliases": ["Thorns"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "engraving:pe_0001": {
+    "text": {"en": "While at least one enemy with an Action Count of 1 is present, this card costs 2 less."},
+    "_why": "Hand-written clarification shown above the engraving's game text on the Engravings tab"
+  },
+  "engraving:pe_0002": {
+    "text": {"en": "Attunement: this card costs 1 less; the reduction stays until the card is used."},
+    "_why": "Hand-written clarification shown above the engraving's game text on the Engravings tab"
+  }
+}

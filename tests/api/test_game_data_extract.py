@@ -210,7 +210,7 @@ def test_splitter_drops_blank_progress():
     assert extract.StreamSplitter().feed("\r   \rline\n") == [("line", "line")]
 
 
-@pytest.mark.parametrize("code,fragment", [(0, "all four"), (2, "open or scan"), (3, "czn_ripper.log"), (4, "None of"), (9, "code 9")])
+@pytest.mark.parametrize("code,fragment", [(0, "every folder"), (2, "open or scan"), (3, "czn_ripper.log"), (4, "None of"), (9, "code 9")])
 def test_exit_messages(code, fragment):
     assert fragment in extract.exit_message(code)
 
@@ -250,13 +250,32 @@ def test_extract_fails_when_output_is_incomplete(fake_setup, monkeypatch):
 def test_extract_in_dev_mode_chains_a_dry_run(fake_setup, monkeypatch):
     script = fake_setup.parent / "fake_add_character.py"
     script.write_text("import sys\nprint('args:', ' '.join(sys.argv[1:]))\n", encoding="utf-8")
+    datagen = fake_setup.parent / "fake_datagen.py"
+    # Exits 1 the way `--check` does when something would change, which a dry run treats as success.
+    datagen.write_text("import sys\nprint('datagen:', ' '.join(sys.argv[1:]))\nsys.exit(1)\n", encoding="utf-8")
     monkeypatch.setattr(extract, "ADD_CHARACTER_SCRIPT", script)
+    monkeypatch.setattr(extract, "DATAGEN_COMMAND", [str(datagen)])
     monkeypatch.setattr(extract, "is_dev_mode", lambda: True)
     extract.runner.start_extract()
     job = _wait(extract.runner)
     assert job["state"] == "ok", job
     assert job["kind"] == "dry_run"
     assert f"args: {fake_setup} --dry-run" in job["log"]
+    assert f"datagen: --client {fake_setup} --check" in job["log"]
+    # Dev mode also pulls the art the generators need.
+    assert (fake_setup / "card_illustration").is_dir()
+
+
+def test_apply_fails_when_datagen_fails(fake_setup, monkeypatch):
+    for name, body in (("fake_add_character.py", "print('ok')\n"), ("fake_datagen.py", "import sys\nsys.exit(1)\n")):
+        (fake_setup.parent / name).write_text(body, encoding="utf-8")
+    monkeypatch.setattr(extract, "ADD_CHARACTER_SCRIPT", fake_setup.parent / "fake_add_character.py")
+    monkeypatch.setattr(extract, "DATAGEN_COMMAND", [str(fake_setup.parent / "fake_datagen.py")])
+    extract.runner.start_extract()
+    _wait(extract.runner)
+    extract.runner.start_apply(dry_run=False)
+    job = _wait(extract.runner)
+    assert job["state"] == "failed" and "Generating the game data" in job["message"]
 
 
 def test_start_without_cli_is_a_400(isolated):

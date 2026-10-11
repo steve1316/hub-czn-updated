@@ -47,9 +47,13 @@ with `EGO_NONE`/`none`/`EGO_NORMS`/`EGO_INSTINCT` are not.
 Display name
 ------------
 Monster rows store `name` as a string id (e.g. `monster@name@1007021_01`).
-We resolve it via the English text shard at `output/text/en/text.json`.
+We resolve it via the English text shard at `<client>/text/en/text.json`.
 
-Usage: python scripts/build_monster_catalog.py
+Usage: python scripts/build_monster_catalog.py [CLIENT_DIR]
+
+CLIENT_DIR is the extracted client folder holding `db/` and `text/`. It defaults
+to the configured one (`api.client_db.client_output_dir()`). The datagen
+`monster_catalog` target calls `build_catalog()` directly instead.
 """
 import json
 import re
@@ -59,8 +63,6 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
-TEXT_EN = Path(r"C:\Users\soste\Downloads\output\text\en\text.json")
 OUTPUT = REPO / "api" / "data" / "monster_catalog.json"
 
 # Elemental-color faction_ego values that map to has_weak=True.
@@ -70,13 +72,14 @@ _WEAK_FACTION_EGOS = {"RED", "ORANGE", "BLUE", "PURPLE", "GREEN"}
 _ID_TIER_RE = re.compile(r"_(\d+)$")
 
 
-def _load_name_table() -> dict[str, str]:
+def _load_name_table(client_root: Path) -> dict[str, str]:
     """Return id -> text mapping for monster@name@* keys."""
-    if not TEXT_EN.exists():
-        print(f"WARNING: {TEXT_EN} not found; falling back to raw name ids",
+    text_en = client_root / "text" / "en" / "text.json"
+    if not text_en.exists():
+        print(f"WARNING: {text_en} not found; falling back to raw name ids",
               file=sys.stderr)
         return {}
-    rows = json.loads(TEXT_EN.read_text(encoding="utf-8"))
+    rows = json.loads(text_en.read_text(encoding="utf-8"))
     return {
         r["id"]: r["text"]
         for r in rows
@@ -84,9 +87,9 @@ def _load_name_table() -> dict[str, str]:
     }
 
 
-def _load_tier_to_mon_stat_key() -> dict[int, str]:
+def _load_tier_to_mon_stat_key(client_db: Path) -> dict[int, str]:
     """Return tier_id (int from tier_monster_stat.id) -> stage_enter_link_mon_stat_id."""
-    p = CLIENT_DB / "tier_monster_stat@tier_monster_stat.json"
+    p = client_db / "tier_monster_stat@tier_monster_stat.json"
     if not p.exists():
         raise FileNotFoundError(f"Required client_db file missing: {p}")
     rows = json.loads(p.read_text(encoding="utf-8"))
@@ -103,14 +106,14 @@ def _load_tier_to_mon_stat_key() -> dict[int, str]:
     return out
 
 
-def _load_mon_stat_def() -> dict[str, int]:
+def _load_mon_stat_def(client_db: Path) -> dict[str, int]:
     """Return mon_stat row id -> stat_def (int).
 
     We index all rows (not just stat_*), so any string from
     tier_monster_stat.stage_enter_link_mon_stat_id resolves. This includes
     edge keys like 'tutorial', 'stat_1'..'stat_200', etc.
     """
-    p = CLIENT_DB / "mon_stat@mon_stat.json"
+    p = client_db / "mon_stat@mon_stat.json"
     if not p.exists():
         raise FileNotFoundError(f"Required client_db file missing: {p}")
     rows = json.loads(p.read_text(encoding="utf-8"))
@@ -146,14 +149,27 @@ def _id_to_tier(mid: str) -> int:
     return n if n >= 1 else 1
 
 
-def main() -> int:
-    name_table = _load_name_table()
-    tier_to_mskey = _load_tier_to_mon_stat_key()
-    mon_stat_def = _load_mon_stat_def()
+def build_catalog(client_root: Path) -> tuple[list[dict], dict[str, int]]:
+    """Build the catalog from one extracted client, without writing it.
+
+    Args:
+        client_root: The extracted client folder, holding `db/` and `text/`.
+
+    Returns:
+        The entries sorted by DEF then name, and counters for the rows that
+        were skipped or fell back to the default tier.
+
+    Raises:
+        FileNotFoundError: If tier_monster_stat or mon_stat is missing.
+        ValueError: If either of them loads empty.
+    """
+    client_root = Path(client_root)
+    client_db = client_root / "db"
+    name_table = _load_name_table(client_root)
+    tier_to_mskey = _load_tier_to_mon_stat_key(client_db)
+    mon_stat_def = _load_mon_stat_def(client_db)
     if not tier_to_mskey or not mon_stat_def:
-        print("ERROR: failed to load tier_monster_stat or mon_stat",
-              file=sys.stderr)
-        return 1
+        raise ValueError("failed to load tier_monster_stat or mon_stat")
 
     # Fallback DEF for monsters whose tier suffix isn't in tier_monster_stat.
     fallback_msid = tier_to_mskey.get(1, "stat_1")
@@ -165,7 +181,7 @@ def main() -> int:
     seen_ids: set[str] = set()
     tier_miss = 0
 
-    for shard in sorted(CLIENT_DB.glob("monster(*)@monster.json")):
+    for shard in sorted(client_db.glob("monster(*)@monster.json")):
         if shard.stat().st_size <= 2:
             continue
         try:
@@ -227,6 +243,18 @@ def main() -> int:
 
     # Sort by DEF then name for predictable UI order
     catalog.sort(key=lambda e: (e["def"], e["name"]))
+    return catalog, {"skipped_no_id": skipped_no_id, "skipped_dup": skipped_dup, "tier_miss": tier_miss}
+
+
+def main(argv: list[str]) -> int:
+    from api.client_db import client_output_dir
+
+    client_root = Path(argv[0]) if argv else client_output_dir()
+    try:
+        catalog, counts = build_catalog(client_root)
+    except (FileNotFoundError, ValueError) as e:
+        print(f"ERROR: {e}", file=sys.stderr)
+        return 1
 
     OUTPUT.parent.mkdir(parents=True, exist_ok=True)
     OUTPUT.write_text(
@@ -239,8 +267,8 @@ def main() -> int:
             f"Wrote {len(catalog)} monsters to {OUTPUT.name} "
             f"(DEF range {min(defs)}-{max(defs)}, "
             f"mean={sum(defs)/len(defs):.0f}). "
-            f"skipped_no_id={skipped_no_id} skipped_dup={skipped_dup} "
-            f"tier_miss={tier_miss}"
+            f"skipped_no_id={counts['skipped_no_id']} skipped_dup={counts['skipped_dup']} "
+            f"tier_miss={counts['tier_miss']}"
         )
     else:
         print("WARNING: catalog is empty")
@@ -248,4 +276,4 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
