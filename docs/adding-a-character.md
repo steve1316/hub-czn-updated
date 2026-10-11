@@ -17,6 +17,18 @@ python scripts/add_character.py 30117 30118
 python scripts/add_character.py --dry-run
 ```
 
+Then regenerate everything else that follows from the client: the deck builder entries and card art, gear presets,
+items, epiphanies, the glossary and the catalogs. `--check` lists what is stale without writing anything:
+
+```
+python -m scripts.datagen
+python -m scripts.datagen --check
+```
+
+Running from source (`npm start`), the Setup page's **Check for new characters** and **Apply** buttons run both steps.
+Guides come from the community Google Sheet and update separately, since they need the network:
+`python -m scripts.datagen guides`. Anything the generators cannot derive lives in `api/data/overrides/`.
+
 Auto-detection only picks up characters that have an **English name** in the client. Ids appear
 months before release with no name, so without that gate a datamined character lands in the app
 called `char_base@name@30117`. Naming an id explicitly skips the gate.
@@ -35,21 +47,23 @@ what the script is doing, and what to do when it cannot.
 
 ## Unpacking the client
 
-The game's own data lives in `bin/appdata/cznlive/data.pack`. It can be unpacked with
-[Chaos-Zero-Nightmare-ASSet-Ripper](https://github.com/akioukun/Chaos-Zero-Nightmare-ASSet-Ripper),
+The game's own data lives in `bin/appdata/cznlive/gameres/manifest.ssra` plus its chunk files. Installs from before
+the late September 2026 update have a single `bin/appdata/cznlive/data.pack` instead. Either can be unpacked with
+[Chaos-Zero-Nightmare-ASSet-Ripper](https://github.com/cznrip/Chaos-Zero-Nightmare-ASSet-Ripper),
 and that is the authoritative source for everything below - res_ids, growth curves, and the art.
 Use it if you can. Sourcing a character by hand is the fallback, and it has been wrong before.
 
-Point **Open Pack** at `bin/appdata/cznlive/data.pack`, then **Scan Tree**. The tree lists one
-folder per asset category, and Ctrl+Right Click multi-selects, so you can pick a few and export only
-those.
+The easiest way is the **Game data** card on the Setup page, which finds the game, runs the ripper's
+`ChaosZeroNightmareRipper-CLI.exe`, and extracts only the folders below. By hand, point **Open Pack** at the archive,
+then **Scan Tree**. The tree lists one folder per asset category, and Ctrl+Right Click multi-selects, so you can pick a
+few and export only those.
 
 **Do not export the whole tree.** That is over 5 GB and slow enough that it is easy to interrupt.
 Only six folders are ever read:
 
 | Folder | Feeds | Size |
 |---|---|---|
-| `card_illustration/` | Deck builder card art, only for `extract_card_art.py` | ~400 MB |
+| `card_illustration/` | Card art for the deck builder, simulator icons and guides, read by `python -m scripts.datagen` | ~400 MB |
 | `collapse/collapse_illustration/` | Full-art character illustrations, optional | ~80 MB |
 | `db/` | Every character, scaling, potential and monster value | ~180 MB |
 | `face/character/` | The 72x72 portraits | tiny |
