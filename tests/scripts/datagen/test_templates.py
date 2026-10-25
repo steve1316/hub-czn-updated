@@ -65,6 +65,7 @@ TOOLTIPS = [
     {"id": "TALENT_NO_COUNT", "title": "tooltip@title@TALENT_NO_COUNT"},
     {"id": "TALENT_LEAD", "title": "tooltip@title@TALENT_LEAD"},
     {"id": "TRIGGER_C1018_STANCE", "title": "tooltip@title@TRIGGER_C1018_STANCE"},
+    {"id": "C30115_DEBUFF_TRIGGER", "title": "tooltip@title@C30115_DEBUFF_TRIGGER"},
 ]
 
 TEXT = {
@@ -83,6 +84,7 @@ TEXT = {
     "tooltip@title@talent_no_count": "Haste",
     "tooltip@title@talent_lead": "Lead",
     "tooltip@title@trigger_c1018_stance": "Dark Mist Stance",
+    "tooltip@title@c30115_debuff_trigger": "Fracture Amplification:",
 }
 
 
@@ -137,6 +139,11 @@ def test_fixed_damage_has_no_percent_and_override_titles_apply(resolver):
 def test_card_name(resolver):
     assert resolver.card_name("c_1008_srt4") == "Celestial Strike"
     assert resolver.card_name("c_unknown") is None
+
+
+def test_character_triggers_use_their_tooltip_title(resolver):
+    assert resolver.resolve("^C30115_DEBUFF_TRIGGER^ Activate", []).text == "Fracture Amplification: Activate"
+    assert resolver.resolve("^C9999_UNKNOWN^ Activate", []).text == "^C9999_UNKNOWN^ Activate"
 
 
 def test_status_max(resolver):
