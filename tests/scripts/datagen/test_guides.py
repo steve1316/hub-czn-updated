@@ -156,11 +156,9 @@ def test_label_rows_are_short_single_line_non_ratings():
     assert not guides._is_label_row([])
 
 
-def test_slugs_ids_and_identifiers():
+def test_slugs_and_identifiers():
     assert naming.slug("Mei Lin") == "mei-lin"
     assert naming.slug("A" * 47 + " b", 48) == "a" * 47
-    used: set[str] = set()
-    assert [guides._unique("part", used) for _ in range(3)] == ["part", "part-2", "part-3"]
     assert guides._identifier("mei-lin") == "meiLinJson"
 
 
@@ -187,7 +185,6 @@ def test_sections_drop_last_edit_and_name_parts():
     ])
     assert updated == "10/24"
     assert [section["title"]["en"] for section in sections] == ["Card ratings", "Teams", "Notes", "Notes"]
-    assert [section["id"] for section in sections] == ["card-ratings", "teams", "notes", "notes-2"]
 
 
 def test_set_named_section_title_leads_with_a_set_list():
@@ -198,7 +195,7 @@ def test_set_named_section_title_leads_with_a_set_list():
 
 
 def _section(title: str, *types: str) -> dict:
-    return {"id": naming.slug(title), "title": {"en": title}, "blocks": [{"type": block_type} for block_type in types]}
+    return {"title": {"en": title}, "blocks": [{"type": block_type} for block_type in types]}
 
 
 # The Rossweisse tab, band by band.
@@ -310,10 +307,10 @@ def test_text_beside_a_picture_is_kept():
     assert sections[0]["blocks"] == [_prose("Important Substats:\nCrt Rate/Crt Dmg")]
 
 
-def test_a_skipped_cell_is_left_out():
-    grid = _grid(_cell(65, 2, "DPS"), _cell(65, 3, pictures=1), _cell(66, 2, "Keep me\nas a note"))
-    sections, _ = _builder({"Tab!C66": {"skip": True, "_why": "template filler"}}).sections(grid)
-    assert sections[0]["blocks"] == [_prose("Keep me\nas a note")]
+def test_text_beside_faces_is_left_out():
+    # Template filler such as "DPS" sits beside the example team faces.
+    sections, _ = _builder({"Tab!D66": {"charResId": 1003}}).sections(_grid(_cell(65, 2, "DPS"), _cell(65, 3, pictures=1)))
+    assert [block["type"] for block in sections[0]["blocks"]] == ["team-grid"]
 
 
 LEGEND = "Purple: Main Damage Boosts\n\nGold: QOL\n\nBlue: Irrelevant usually"

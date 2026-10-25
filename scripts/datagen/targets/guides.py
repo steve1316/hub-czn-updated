@@ -81,6 +81,7 @@ PAGES = [("playstyle", "Playstyle"), ("decks", "Decks"), ("partners", "Partners"
          ("card-ratings", "Card Ratings"), ("teams", "Example Teams")]
 # Seasonal cards, chaos notes, refinements and the like, which only some guides have. Shown last, and only when there are any.
 EXTRAS_PAGE = ("seasons-chaos", "Seasons & Chaos")
+_PAGE_IDS = [page_id for page_id, _ in [*PAGES, EXTRAS_PAGE]]
 # Pages whose band titles only repeat the page name ("Card ratings", "Rossweisse Example Teams") or list its partners, so they are not shown.
 _UNTITLED_PAGES = {"partners", "potentials", "card-ratings", "teams"}
 # A band before the partners that is about how the character plays, though it is not the first band.
@@ -364,11 +365,10 @@ def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) ->
     Returns:
         The usable entries, in the same shape.
     """
-    page_ids = {page_id for page_id, _ in [*PAGES, EXTRAS_PAGE]}
     fixes: dict[str, dict[str, str]] = {}
     for tab_name, titles in directive.items():
         for title, page_id in titles.items():
-            if page_id in page_ids:
+            if page_id in _PAGE_IDS:
                 fixes.setdefault(tab_name, {})[title] = page_id
             else:
                 issues.append(Issue("error", f"{NAME}: `_sections` puts {tab_name!r} band {title!r} on unknown page {page_id!r}"))
@@ -606,9 +606,7 @@ class _GuideBuilder:
             The sections, in sheet order, without empty ones, and the sheet's edit date if it has one.
         """
         sections: list[dict] = []
-        skipped = {ref for ref, entry in self.overrides.entries.items() if entry.get("skip")}
         for band in _bands(grid):
-            band = [cell for cell in band if f"{self.tab_name}!{cell.ref}" not in skipped]
             blocks, band = self._potentials(band)
             title = POTENTIALS_TITLE if blocks else None
             for panel in _panels(band):
@@ -644,20 +642,20 @@ class _GuideBuilder:
         colours, extra = [], []
         for line in legend.text.split("\n"):
             if match := _LEGEND_LINE.match(line):
-                colours.append({"colour": match.group(1).lower(), "text": {"en": self.ctx.text(match.group(2), soften=True, sentences=False)}})
+                colours.append({"colour": match.group(1).lower(), "text": self._text(match.group(2))})
             elif line.strip():
                 extra.append(line.strip())
         # Levels are numbered in the order they are written, as some tabs label E5 as "E3".
         notes = _EGO_LEVEL.split(ego.text) if ego else [""]
-        block = {"type": "potentials", "image": None, "legend": colours,
-                 "ego": [{"level": level, "text": {"en": self.ctx.text(note.strip(), soften=True, sentences=False)}} for level, note in enumerate(notes[1:], 1)]}
+        image = f"{self.guide_slug}.webp" if tree else None
         if tree:
-            block["image"] = f"{self.guide_slug}.webp"
-            self.pictures[block["image"]] = self.downloads.get(tree.images[0])
+            self.pictures[image] = self.downloads.get(tree.images[0])
+        block = {"type": "potentials", "image": image, "legend": colours,
+                 "ego": [{"level": level, "text": self._text(note.strip())} for level, note in enumerate(notes[1:], 1)]}
         if notes[0].strip():
             extra.append(notes[0].strip())
         used = {cell.ref for cell in (legend, tree, ego) if cell}
-        rest = [cell for cell in band if cell.ref not in used and not (cell.text and len(cell.text) <= _LABEL_MAX_LENGTH and _POTENTIALS_HEADING.search(cell.text))]
+        rest = [cell for cell in band if cell.ref not in used and not (_is_label_row([cell.text]) and _POTENTIALS_HEADING.search(cell.text))]
         return [block, *([self._prose("\n".join(extra))] if extra else [])], rest
 
     def _panel(self, cells: list[Cell]) -> tuple[str | None, list[dict], bool]:
@@ -692,9 +690,11 @@ class _GuideBuilder:
                     title, title_shown = held, True
                 held = None
                 blocks.extend(new_blocks)
-                # Text beside the pictures, such as a relic's substats note next to its set icons.
-                blocks.extend(self._prose(cell.text) for picture_row in rows[index:index + consumed] if any(cell.images for cell in picture_row)
-                              for cell in picture_row if cell.text)
+                if not new_blocks:
+                    # Text beside pictures that are not cards or faces, such as a relic's substats note next to its set icons.
+                    for picture_row in rows[index:index + consumed]:
+                        if any(cell.images for cell in picture_row):
+                            blocks.extend(self._prose(cell.text) for cell in picture_row if cell.text)
                 index += consumed
                 continue
             texts = [cell.text for cell in row if cell.text]
@@ -868,7 +868,7 @@ class _GuideBuilder:
             return {"type": "partner-list", "items": items}, bool(names)
         columns = sorted({col for row in face_rows for col, _ in row})
         if names and all(col in names for col in columns):
-            groups = [{"title": {"en": self.ctx.text(names[col], soften=True, sentences=False)}, "members": self._members(res_id for row in face_rows for c, res_id in row if c == col)}
+            groups = [{"title": self._text(names[col]), "members": self._members(res_id for row in face_rows for c, res_id in row if c == col)}
                       for col in columns]
             return {"type": "team-grid", "groups": groups}, True
         return {"type": "team-grid", "groups": [{"members": self._members(res_id for _, res_id in row)} for row in face_rows]}, False
@@ -883,8 +883,12 @@ class _GuideBuilder:
         text = self.ctx.client.text(f"char_base@name@{res_id}") or self.ctx.client.text(f"partner_base@name@{res_id}")
         return text or str(res_id)
 
+    def _text(self, text: str) -> dict:
+        """Sheet text as localized guide text."""
+        return {"en": self.ctx.text(text, soften=True, sentences=False)}
+
     def _prose(self, text: str) -> dict:
-        return {"type": "prose", "body": {"en": self.ctx.text(text, soften=True, sentences=False)}}
+        return {"type": "prose", "body": self._text(text)}
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -900,11 +904,10 @@ def _tidy_sections(sections: list[dict]) -> tuple[list[dict], str | None]:
         sections: Each band's title (None when it has none) and blocks.
 
     Returns:
-        The sections with ids, and the sheet's edit date. The "Last Edit" section is dropped for that date. An untitled section is
+        The sections, and the sheet's edit date. The "Last Edit" section is dropped for that date. An untitled section is
         named for what it holds, and one-line lists of sets (as a title or a prose line) become set cards.
     """
     tidied: list[dict] = []
-    used_ids: set[str] = set()
     updated = None
     for section in sections:
         blocks = section["blocks"]
@@ -916,7 +919,7 @@ def _tidy_sections(sections: list[dict]) -> tuple[list[dict], str | None]:
         blocks = [_set_block(block) for block in blocks]
         if title_sets := set_line(title):
             blocks.insert(0, {"type": "set-list", "items": title_sets})
-        tidied.append({"id": _unique(slug(title, _SLUG_MAX_LENGTH) or "part", used_ids), "title": {"en": title}, "blocks": blocks})
+        tidied.append({"title": {"en": title}, "blocks": blocks})
     return tidied, updated
 
 
@@ -933,20 +936,16 @@ def _pages(sections: list[dict], fixes: dict[str, str]) -> list[dict]:
         only repeats the page or is already shown as set cards. A page with no bands has no blocks and is marked missing.
     """
     partners_at = next((index for index, section in enumerate(sections) if any(block["type"] == "partner-list" for block in section["blocks"])), len(sections))
-    grouped: dict[str, list[dict]] = {page_id: [] for page_id, _ in [*PAGES, EXTRAS_PAGE]}
+    grouped: dict[str, list[dict]] = {page_id: [] for page_id in _PAGE_IDS}
     for index, section in enumerate(sections):
         page_id = fixes.get(section["title"]["en"]) or _page_of(section, index, partners_at)
         heading = [] if page_id in _UNTITLED_PAGES or set_line(section["title"]["en"]) else [{"type": "heading", "text": section["title"]}]
         grouped[page_id].extend([*heading, *section["blocks"]])
     pages = []
-    for page_id, title in PAGES:
-        page = {"id": page_id, "title": {"en": title}, "blocks": grouped[page_id]}
-        if not page["blocks"]:
-            page["missing"] = True
-        pages.append(page)
-    extras_id, extras_title = EXTRAS_PAGE
-    if grouped[extras_id]:
-        pages.append({"id": extras_id, "title": {"en": extras_title}, "blocks": grouped[extras_id]})
+    for page_id, title in [*PAGES, EXTRAS_PAGE]:
+        blocks = grouped[page_id]
+        if blocks or page_id != EXTRAS_PAGE[0]:
+            pages.append({"id": page_id, "title": {"en": title}, "blocks": blocks, **({} if blocks else {"missing": True})})
     return pages
 
 
@@ -1252,15 +1251,6 @@ def _is_label_row(texts: list[str]) -> bool:
 def _normalise(name: str) -> str:
     """A name reduced to lower-case letters and digits, for matching tab names to characters."""
     return re.sub(r"[^a-z0-9]", "", name.casefold())
-
-
-def _unique(candidate: str, used: set[str]) -> str:
-    """`candidate`, or `candidate-2`, `-3`... when it is taken. Records the result in `used`."""
-    result, number = candidate, 2
-    while result in used:
-        result, number = f"{candidate}-{number}", number + 1
-    used.add(result)
-    return result
 
 
 def _review_page(pictures: dict[int, _Picture], unknown_epiphanies: dict[str, _Picture] | None = None) -> bytes:
