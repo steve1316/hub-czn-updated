@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import io
 import random
+from types import SimpleNamespace
 
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
@@ -241,6 +242,30 @@ def test_unmatched_note_lines_stay_in_prose():
     cards = {"type": "card-list", "items": [_rated("c_30134_cre1", "Sword Tassel", "5/5")]}
     blocks = guides._attach_notes([cards, _prose("Equilux: Start of turn\nTassel: base\nPlain line")])
     assert blocks[1] == _prose("Equilux: Start of turn\nPlain line")
+
+
+def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._GuideBuilder:
+    # Every picture is the same banner, so nothing needs a matcher.
+    banner = guides._Download(_png(_pattern(5, picture_size)))
+    ctx = SimpleNamespace(text=lambda text, **_: text)
+    downloads = SimpleNamespace(get=lambda url: banner)
+    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
+                                guides._PictureLabels({}), "Tab")
+
+
+def _grid(*cells: Cell) -> dict[tuple[int, int], Cell]:
+    return {(cell.row, cell.col): cell for cell in cells}
+
+
+def test_text_beside_a_picture_is_kept():
+    sections, _ = _builder().sections(_grid(_cell(20, 1, pictures=1), _cell(20, 4, "Important Substats:\nCrt Rate/Crt Dmg")))
+    assert sections[0]["blocks"] == [_prose("Important Substats:\nCrt Rate/Crt Dmg")]
+
+
+def test_a_skipped_cell_is_left_out():
+    grid = _grid(_cell(65, 2, "DPS"), _cell(65, 3, pictures=1), _cell(66, 2, "Keep me\nas a note"))
+    sections, _ = _builder({"Tab!C66": {"skip": True, "_why": "template filler"}}).sections(grid)
+    assert sections[0]["blocks"] == [_prose("Keep me\nas a note")]
 
 
 def _download(seed: int) -> guides._Download:

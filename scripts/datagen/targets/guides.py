@@ -550,7 +550,9 @@ class _GuideBuilder:
             The sections, in sheet order, without empty ones, and the sheet's edit date if it has one.
         """
         sections: list[dict] = []
+        skipped = {ref for ref, entry in self.overrides.entries.items() if entry.get("skip")}
         for band in _bands(grid):
+            band = [cell for cell in band if f"{self.tab_name}!{cell.ref}" not in skipped]
             blocks: list[dict] = []
             title = None
             for panel in _panels(band):
@@ -599,6 +601,9 @@ class _GuideBuilder:
                     title, title_shown = held, True
                 held = None
                 blocks.extend(new_blocks)
+                # Text beside the pictures, such as a relic's substats note next to its set icons.
+                blocks.extend(self._prose(cell.text) for picture_row in rows[index:index + consumed] if any(cell.images for cell in picture_row)
+                              for cell in picture_row if cell.text)
                 index += consumed
                 continue
             texts = [cell.text for cell in row if cell.text]
