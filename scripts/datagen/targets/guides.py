@@ -26,7 +26,7 @@ from pathlib import Path
 from PIL import Image
 
 from scripts.datagen import card_text, epiphany, images, roster
-from scripts.datagen.art import wanted, webp
+from scripts.datagen.art import webp
 from scripts.datagen.epiphany import Extra
 from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import slug
@@ -269,8 +269,7 @@ def build(ctx: Context) -> TargetResult:
         ctx: The run context.
 
     Returns:
-        One JSON file per guide, the module that lists them, the potentials pictures as files created only when missing, a summary,
-        and what could not be identified as issues.
+        One JSON file per guide, the module that lists them, each potentials tree picture, a summary, and what could not be identified as issues.
     """
     overrides = ctx.overrides(NAME)
     cache = ctx.client.root / ".cache" / "guides"
@@ -291,7 +290,6 @@ def build(ctx: Context) -> TargetResult:
     issues: list[Issue] = []
     section_fixes = _section_fixes(overrides.directives.get("_sections", {}), issues)
     files: dict[Path, bytes] = {}
-    new_files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
 
@@ -316,9 +314,9 @@ def build(ctx: Context) -> TargetResult:
             guide["updated"] = updated
         guide["sections"] = _pages(sections, section_fixes.get(tab_name, {}))
         guides.append((guide_slug, name, guide))
+        # Written every run like the guide itself, so a tree the author redraws replaces the old one.
         for file_name, download in builder.pictures.items():
-            if wanted(ctx, POTENTIALS_DIR / file_name):
-                new_files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
+            files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
 
     # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
     text_cache_path = cache / CARD_TEXT_CACHE
@@ -351,7 +349,7 @@ def build(ctx: Context) -> TargetResult:
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
-    return TargetResult(files, f"{len(guides)} guides, {len(new_files)} potentials picture(s) to add", issues, new_files=new_files)
+    return TargetResult(files, f"{len(guides)} guides", issues)
 
 
 def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) -> dict[str, dict[str, str]]:
