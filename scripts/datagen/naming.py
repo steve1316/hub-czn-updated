@@ -16,6 +16,9 @@ ROMAN = {1: "I", 2: "II", 3: "III", 4: "IV", 5: "V"}
 # The client's card categories the deck builder shows, by display name.
 CARD_TYPES = {"CARD_ATK": "Attack", "CARD_SKILL": "Skill", "CARD_POWER": "Upgrade"}
 
+# The client's rarities for items and cards, by display name. The client ranks them common, rare, legend, unique.
+RARITIES = {"RARITY_COMMON": "Common", "RARITY_RARE": "Rare", "RARITY_LEGEND": "Legendary", "RARITY_UNIQUE": "Unique"}
+
 # The overrides key that pins legacy output ids to client ids.
 IDS_KEY = "_ids"
 

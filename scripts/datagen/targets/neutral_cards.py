@@ -12,7 +12,7 @@ from pathlib import Path
 
 from scripts.datagen.art import wanted, webp
 from scripts.datagen.client import parse_list
-from scripts.datagen.naming import card_type, class_names, legacy_ids
+from scripts.datagen.naming import RARITIES, card_type, class_names, legacy_ids
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import Context, TargetResult, json_bytes
 
@@ -151,7 +151,7 @@ def card_entry(ctx: Context, shard: str, row: dict, output_id: str, season_tags:
     resolution = ctx.resolver.card_description(row["id"])
     issues.extend(overrides.unresolved(output_id, f"{row['id']} ({output_id})", resolution.unresolved, "description"))
     classes = class_names(ctx, row.get("ownable_link_base_class_define_id"))
-    return {
+    entry = {
         "id": output_id,
         "name": ctx.text(ctx.client.text(row.get("name")) or output_id, sentences=False),
         "cost": _cost(row.get("cost")),
@@ -164,6 +164,12 @@ def card_entry(ctx: Context, shard: str, row: dict, output_id: str, season_tags:
         "allowed_classes": classes,
         "image_path": f"{IMAGE_DIR.as_posix()}/{category}/{output_id}.webp",
     }
+    # Monster cards are priced by rarity in the deck builder. Neutral cards all cost the same, so they leave it out.
+    if is_monster:
+        entry["rarity"] = RARITIES.get(row.get("rarity", ""))
+        if entry["rarity"] is None:
+            issues.append(Issue("error", f"{NAME}: {row['id']} ({output_id}) has an unknown rarity {row.get('rarity')}"))
+    return entry
 
 
 def restrictions(classes: list[str]) -> str:
