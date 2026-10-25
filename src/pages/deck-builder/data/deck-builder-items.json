@@ -2561,5 +2561,181 @@
       "en": "+20% Damage Amount to Attack Cards, and for each enemy present, +2% Critical Chance."
     },
     "image_path": ""
+  },
+  {
+    "id": "eq_ds05_001",
+    "name": "Runic Hammer",
+    "rarity": "Legendary",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "+20% Critical Damage to ally Unique Attack Cards (cannot stack)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_002",
+    "name": "Core Disassembler",
+    "rarity": "Rare",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "When an enemy with Shield is Hit by this unit, 2 Tenacity Damage (1 time per turn)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_003",
+    "name": "Phantom Dagger",
+    "rarity": "Rare",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "When an Attack Card of this unit is used, 60% Fixed Damage for each Cost of the card used to a random enemy (2 times per turn)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_004",
+    "name": "Shield of Repentance",
+    "rarity": "Rare",
+    "slot": "Armor",
+    "tags": [],
+    "description": {
+      "en": "At the end of the turn, 2 Vulnerable to all enemies that have Shield (1 time per battle)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_005",
+    "name": "Crown of Corruption",
+    "rarity": "Legendary",
+    "slot": "Armor",
+    "tags": [],
+    "description": {
+      "en": "Decrease max HP by 10%. +10% Critical Chance to Justice Attack Cards of this unit."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_006",
+    "name": "White Coat",
+    "rarity": "Rare",
+    "slot": "Armor",
+    "tags": [],
+    "description": {
+      "en": "At the start of the turn, if an ally is in a harmful effect state, 50% Fixed Shield."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_007",
+    "name": "Overloaded Power Engine",
+    "rarity": "Legendary",
+    "slot": "Accessory",
+    "tags": [],
+    "description": {
+      "en": "+3% Critical Damage to Attack Cards of this unit for each Bind card of this unit stacked this turn (max 30%)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_ds05_008",
+    "name": "Enforcement Contract",
+    "rarity": "Rare",
+    "slot": "Accessory",
+    "tags": [],
+    "description": {
+      "en": "At the end of the turn, Fixed Heal 20% for each card in hand (max 100%)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_001",
+    "name": "Triskelion of Judgment",
+    "rarity": "Rare",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "When attacked, increase Damage Amount of the next Attack Card of this unit used by 20% (1 time per turn)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_002",
+    "name": "Fragment of Condensed Radiance",
+    "rarity": "Legendary",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "+50% Critical Damage to Bind Attack Cards of this unit."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_003",
+    "name": "Needle of the Severed Overseer",
+    "rarity": "Legendary",
+    "slot": "Weapon",
+    "tags": [],
+    "description": {
+      "en": "On Weakness Attack through an Attack Card of this unit, +40% Damage Amount."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_004",
+    "name": "Condensed Fuel",
+    "rarity": "Rare",
+    "slot": "Armor",
+    "tags": [],
+    "description": {
+      "en": "At the end of the turn, Fixed Heal 100% (3 times per battle)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_005",
+    "name": "Imitated Hand",
+    "rarity": "Legendary",
+    "slot": "Armor",
+    "tags": [],
+    "description": {
+      "en": "At the start of battle, gain 2 Damage Reduction. When attacked, Fixed Heal 80% (1 time per turn)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_006",
+    "name": "Pendant of Balance",
+    "rarity": "Rare",
+    "slot": "Accessory",
+    "tags": [],
+    "description": {
+      "en": "When an Attack Card is used by allies, 20% Fixed Shield (5 times per turn)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_007",
+    "name": "Split Design Core",
+    "rarity": "Legendary",
+    "slot": "Accessory",
+    "tags": [],
+    "description": {
+      "en": "At the start of the turn, increase Damage Amount of allies by 8% (max 3 stacks)."
+    },
+    "image_path": ""
+  },
+  {
+    "id": "eq_g05_008",
+    "name": "The Final Command",
+    "rarity": "Unique",
+    "slot": "Accessory",
+    "tags": [],
+    "description": {
+      "en": "When AP is gained through a card or Ego Skill of this unit, +3% Attack to allies for 1 turn (max 6 stacks)."
+    },
+    "image_path": ""
   }
 ]

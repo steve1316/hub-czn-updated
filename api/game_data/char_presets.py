@@ -273,6 +273,13 @@ _RAW: dict[int, dict] = {
         "main_6":  ['ATK%'],
         "substats":['Flat ATK', 'ATK%', 'CRate', 'CDmg', 'DoT%', 'Instinct DMG%'],
     },
+    30134: {
+        "sets":    [30, 11],
+        "main_4":  ['ATK%', 'CRate', 'CDmg'],
+        "main_5":  ['ATK%', 'Justice DMG%'],
+        "main_6":  ['ATK%'],
+        "substats":['Flat ATK', 'ATK%', 'CRate', 'CDmg', 'Justice DMG%'],
+    },
 }
 
 

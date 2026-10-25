@@ -405,4 +405,13 @@ export const DECK_BUILDER_CARD_IMAGE_BY_ID: Record<string, string> = {
   "c_30117_uni2": "combatants/olga/c_30117_uni2.webp",
   "c_30117_uni3": "combatants/olga/c_30117_uni3.webp",
   "c_30117_uni4": "combatants/olga/c_30117_uni4.webp",
+  "c_30134_eps": "combatants/rossweisse/c_30134_eps.webp",
+  "c_30134_srt1": "combatants/rossweisse/c_30134_srt1.webp",
+  "c_30134_srt2": "combatants/rossweisse/c_30134_srt2.webp",
+  "c_30134_srt3": "combatants/rossweisse/c_30134_srt3.webp",
+  "c_30134_srt4": "combatants/rossweisse/c_30134_srt4.webp",
+  "c_30134_uni1": "combatants/rossweisse/c_30134_uni1.webp",
+  "c_30134_uni2": "combatants/rossweisse/c_30134_uni2.webp",
+  "c_30134_uni3": "combatants/rossweisse/c_30134_uni3.webp",
+  "c_30134_uni4": "combatants/rossweisse/c_30134_uni4.webp",
 }
