@@ -36,8 +36,9 @@ DECK_BUILDER_QUALITY = 90
 _CARD_COLUMNS = [f"start_{n}_link_card_id" for n in range(1, 5)] + [f"spark_card_{n}_link_card_id" for n in range(1, 5)]
 _CARD_COLUMNS.append("collapse_skill_link_card_id")
 
-# Cards a combatant creates (Sword Tassel) or transforms into (Shard:Light) are shown by the Guides. Epiphany variants (`_rsp`) are not.
-_EXTRA_CARD = re.compile(r"^c_(\d+)_(?:cre\d+|[a-z]+\d+_mut\d+)$")
+# Cards a combatant creates (Sword Tassel), transforms into (Shard:Light) or gets on collapse (Daze, `_col`, which no row links to) are
+# shown by the Guides. Epiphany variants (`_rsp`) are not.
+_EXTRA_CARD = re.compile(r"^c_(\d+)_(?:col|cre\d+|[a-z]+\d+_mut\d+)$")
 
 _CARD_FILE = re.compile(r"^(c_(\d+)_\w+)\.webp$")
 
@@ -85,7 +86,7 @@ def build(ctx: Context) -> TargetResult:
 
 def extra_cards(ctx: Context, res_id: int) -> list[str]:
     """
-    The combatant's own created and transformed cards.
+    The combatant's own created, transformed and collapse cards.
 
     Args:
         ctx: The run context.
