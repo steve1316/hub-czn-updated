@@ -75,6 +75,17 @@ _EGO_LEVEL = re.compile(r"^\s*E[1-6](?:\s*:|\s*$)", re.MULTILINE)
 _POTENTIALS_HEADING = re.compile(r"potential|ego m[ae]nifestation", re.IGNORECASE)
 POTENTIALS_TITLE = "Potentials & Ego"
 
+# Every guide shows these pages, in this order, with the sheet's bands sorted into them. A page the sheet has nothing for is
+# still shown, marked missing.
+PAGES = [("playstyle", "Playstyle"), ("decks", "Decks"), ("partners", "Partners"), ("relics", "Relics"), ("potentials", POTENTIALS_TITLE),
+         ("card-ratings", "Card Ratings"), ("teams", "Example Teams")]
+# Seasonal cards, chaos notes, refinements and the like, which only some guides have. Shown last, and only when there are any.
+EXTRAS_PAGE = ("seasons-chaos", "Seasons & Chaos")
+# Pages whose band titles only repeat the page name ("Card ratings", "Rossweisse Example Teams") or list its partners, so they are not shown.
+_UNTITLED_PAGES = {"partners", "potentials", "card-ratings", "teams"}
+# A band before the partners that is about how the character plays, though it is not the first band.
+_PLAYSTYLE_TITLE = re.compile(r"notes|patch|season", re.IGNORECASE)
+
 # Two picture hashes this close (out of 256 bits) are the same picture, re-encoded or resized by the sheet.
 PICTURE_LABEL_DISTANCE = 12
 
@@ -277,6 +288,7 @@ def build(ctx: Context) -> TargetResult:
     variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))
     decks = _DeckPictures()
     issues: list[Issue] = []
+    section_fixes = _section_fixes(overrides.directives.get("_sections", {}), issues)
     files: dict[Path, bytes] = {}
     new_files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
@@ -301,7 +313,7 @@ def build(ctx: Context) -> TargetResult:
         sections, updated = builder.sections(grid)
         if updated:
             guide["updated"] = updated
-        guide["sections"] = sections
+        guide["sections"] = _pages(sections, section_fixes.get(tab_name, {}))
         guides.append((guide_slug, name, guide))
         for file_name, download in builder.pictures.items():
             if wanted(ctx, POTENTIALS_DIR / file_name):
@@ -339,6 +351,28 @@ def build(ctx: Context) -> TargetResult:
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
     return TargetResult(files, f"{len(guides)} guides, {len(new_files)} potentials picture(s) to add", issues, new_files=new_files)
+
+
+def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) -> dict[str, dict[str, str]]:
+    """
+    The `_sections` directive without the entries that name no known page.
+
+    Args:
+        directive: Tab -> band title -> page id.
+        issues: Updated in place with an error for each unknown page id.
+
+    Returns:
+        The usable entries, in the same shape.
+    """
+    page_ids = {page_id for page_id, _ in [*PAGES, EXTRAS_PAGE]}
+    fixes: dict[str, dict[str, str]] = {}
+    for tab_name, titles in directive.items():
+        for title, page_id in titles.items():
+            if page_id in page_ids:
+                fixes.setdefault(tab_name, {})[title] = page_id
+            else:
+                issues.append(Issue("error", f"{NAME}: `_sections` puts {tab_name!r} band {title!r} on unknown page {page_id!r}"))
+    return fixes
 
 
 def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
@@ -884,6 +918,67 @@ def _tidy_sections(sections: list[dict]) -> tuple[list[dict], str | None]:
             blocks.insert(0, {"type": "set-list", "items": title_sets})
         tidied.append({"id": _unique(slug(title, _SLUG_MAX_LENGTH) or "part", used_ids), "title": {"en": title}, "blocks": blocks})
     return tidied, updated
+
+
+def _pages(sections: list[dict], fixes: dict[str, str]) -> list[dict]:
+    """
+    The guide's sections sorted into the standard pages.
+
+    Args:
+        sections: The tidied sections, in sheet order.
+        fixes: Band title -> page id, from the `_sections` directive, for a band the rules put on the wrong page.
+
+    Returns:
+        Every page in `PAGES`, then the extras page when it has anything. Each band's title leads its blocks as a heading, unless it
+        only repeats the page or is already shown as set cards. A page with no bands has no blocks and is marked missing.
+    """
+    partners_at = next((index for index, section in enumerate(sections) if any(block["type"] == "partner-list" for block in section["blocks"])), len(sections))
+    grouped: dict[str, list[dict]] = {page_id: [] for page_id, _ in [*PAGES, EXTRAS_PAGE]}
+    for index, section in enumerate(sections):
+        page_id = fixes.get(section["title"]["en"]) or _page_of(section, index, partners_at)
+        heading = [] if page_id in _UNTITLED_PAGES or set_line(section["title"]["en"]) else [{"type": "heading", "text": section["title"]}]
+        grouped[page_id].extend([*heading, *section["blocks"]])
+    pages = []
+    for page_id, title in PAGES:
+        page = {"id": page_id, "title": {"en": title}, "blocks": grouped[page_id]}
+        if not page["blocks"]:
+            page["missing"] = True
+        pages.append(page)
+    extras_id, extras_title = EXTRAS_PAGE
+    if grouped[extras_id]:
+        pages.append({"id": extras_id, "title": {"en": extras_title}, "blocks": grouped[extras_id]})
+    return pages
+
+
+def _page_of(section: dict, index: int, partners_at: int) -> str:
+    """
+    The page a band belongs on, from what it holds and where it sits.
+
+    Args:
+        section: The tidied section.
+        index: Its position among the guide's sections.
+        partners_at: The position of the first partners band, or the section count when there is none.
+
+    Returns:
+        The page id. Bands after the partners that are not relics, potentials, ratings or teams are extras. Before the partners,
+        the first band and notes are the playstyle, and bands with decks are the decks.
+    """
+    types = [block["type"] for block in section["blocks"]]
+    if "potentials" in types:
+        return "potentials"
+    if section["title"]["en"].casefold() == "card ratings":
+        return "card-ratings"
+    if "partner-list" in types:
+        return "partners"
+    if types and types[0] == "set-list":
+        return "relics"
+    if types and types.count("team-grid") * 2 >= len(types):
+        return "teams"
+    if index > partners_at:
+        return EXTRAS_PAGE[0]
+    if index == 0 or _PLAYSTYLE_TITLE.search(section["title"]["en"]):
+        return "playstyle"
+    return "decks" if {"deck", "rating-list"} & set(types) else "playstyle"
 
 
 def _untitled_name(blocks: list[dict]) -> str:

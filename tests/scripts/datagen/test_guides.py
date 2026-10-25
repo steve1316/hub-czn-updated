@@ -197,6 +197,54 @@ def test_set_named_section_title_leads_with_a_set_list():
     assert [item.get("setId") for item in blocks[0]["items"]] == [30, 11]
 
 
+def _section(title: str, *types: str) -> dict:
+    return {"id": naming.slug(title), "title": {"en": title}, "blocks": [{"type": block_type} for block_type in types]}
+
+
+# The Rossweisse tab, band by band.
+ROSSWEISSE = [_section("Rossweisse's Self Buffs", "deck", "prose"), _section("Cycle -2 | Unbound Nuke | 180 FM", "deck", "rating-list"),
+              _section("Sig | Scarlet | Westmacott", "partner-list"), _section("Radiance | Executioners", "set-list", "prose"),
+              _section("Potentials & Ego", "potentials"), _section("Card ratings", "card-list", "prose"), _section("Rossweisse Example Teams", "team-grid")]
+
+
+def _headings(page: dict) -> list[str]:
+    return [block["text"]["en"] for block in page["blocks"] if block["type"] == "heading"]
+
+
+def test_rossweisse_fills_the_seven_pages_in_order():
+    pages = guides._pages(ROSSWEISSE, {})
+    assert [page["id"] for page in pages] == ["playstyle", "decks", "partners", "relics", "potentials", "card-ratings", "teams"]
+    assert not any(page.get("missing") for page in pages)
+    by_id = {page["id"]: page for page in pages}
+    assert _headings(by_id["playstyle"]) == ["Rossweisse's Self Buffs"]
+    assert _headings(by_id["decks"]) == ["Cycle -2 | Unbound Nuke | 180 FM"]
+    # These band titles only repeat the page, or are already shown as set cards.
+    assert not any(_headings(by_id[page_id]) for page_id in ("partners", "relics", "potentials", "card-ratings", "teams"))
+
+
+def test_extras_after_the_partners_go_to_seasons_and_chaos():
+    sections = [_section("Nia's card draw", "prose"), _section("Season 4 Exclusive", "prose"), _section("Standard Hunt Base", "deck"),
+                *ROSSWEISSE[1:5], _section("Season 4 | Shattered Light and Claw", "card-list"), _section("Desire Synergy:", "prose"),
+                _section("Notes", "prose"), _section("C7 Burning Life", "prose"), *ROSSWEISSE[5:]]
+    pages = {page["id"]: page for page in guides._pages(sections, {})}
+    assert _headings(pages["playstyle"]) == ["Nia's card draw", "Season 4 Exclusive"]
+    assert _headings(pages["decks"]) == ["Standard Hunt Base", "Cycle -2 | Unbound Nuke | 180 FM"]
+    assert list(pages)[-1] == "seasons-chaos"
+    assert pages["seasons-chaos"]["title"] == {"en": "Seasons & Chaos"}
+    assert _headings(pages["seasons-chaos"]) == ["Season 4 | Shattered Light and Claw", "Desire Synergy:", "Notes", "C7 Burning Life"]
+
+
+def test_a_page_the_sheet_lacks_is_marked_missing():
+    pages = {page["id"]: page for page in guides._pages([section for section in ROSSWEISSE if section["title"]["en"] != "Potentials & Ego"], {})}
+    assert pages["potentials"] == {"id": "potentials", "title": {"en": "Potentials & Ego"}, "blocks": [], "missing": True}
+    assert "seasons-chaos" not in pages
+
+
+def test_a_band_can_be_moved_to_another_page():
+    pages = {page["id"]: page for page in guides._pages(ROSSWEISSE, {"Cycle -2 | Unbound Nuke | 180 FM": "playstyle"})}
+    assert pages["decks"]["missing"] and len(_headings(pages["playstyle"])) == 2
+
+
 def _rated(card_id: str, name: str, rating: str, level: int | None = None) -> dict:
     item = {"cardId": card_id, "name": name, "cost": 1, "rating": rating, "note": {"en": ""}}
     return item if level is None else {**item, "level": level}
