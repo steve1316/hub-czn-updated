@@ -28,6 +28,8 @@ SETS = {
     27: {"name": "Starlight and Dreams", "pieces": 4, "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",     "type": "conditional", "icon_path": _ICON.format(27)},
     28: {"name": "Battlefield Evolution", "pieces": 4, "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)", "type": "conditional", "icon_path": _ICON.format(28)},
     29: {"name": "Sanguine Thorn",      "pieces": 4, "bonus": "+25% Crit DMG for 1 turn when a card applies Fracture (max 2 stacks) | +15% Crit DMG to DoTs once 10 Fractures have been applied", "type": "conditional", "icon_path": _ICON.format(29)},
+    30: {"name": "Veiled Radiance",     "pieces": 4, "bonus": "When a Justice card is stacked, +8% Attack Card Crit Chance (max 2 stacks)",               "type": "conditional", "icon_path": _ICON.format(30)},
+    31: {"name": "Snowflake of Our First Meeting", "pieces": 4, "bonus": "Stacking a Bind card grants Powder Snow: +10% ally Attack Card DMG (+5% more if Justice, max 2 stacks), +15% ally Justice Attack Crit DMG at 2", "type": "conditional", "icon_path": _ICON.format(31)},
 }
 
 TWO_PIECE_SETS = [sid for sid, s in SETS.items() if s["pieces"] == 2]
