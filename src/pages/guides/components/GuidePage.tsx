@@ -14,6 +14,7 @@ import { PartnerListBlock } from './blocks/PartnerListBlock'
 import { GearListBlock } from './blocks/GearListBlock'
 import { RatingListBlock } from './blocks/RatingListBlock'
 import { TeamGridBlock } from './blocks/TeamGridBlock'
+import { PotentialsBlock } from './blocks/PotentialsBlock'
 
 export function GuidePage({ guide }: { guide: Guide }) {
   const { t, i18n } = useTranslation()
@@ -49,6 +50,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
               section.id === active?.id
                 ? 'bg-[#282828] font-bold text-[#ffffff]'
                 : 'text-[#b3b3b3] hover:bg-[#282828] hover:text-[#ffffff]',
+              section.missing && 'opacity-40',
             )}
           >
             {localized(section.title, lang)}
@@ -64,7 +66,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
               {localized(active.title, lang)}
             </h2>
             {active.blocks.length === 0 ? (
-              <p className="text-sm text-[#666] italic">{t('guides.sectionComingSoon')}</p>
+              <p className="text-sm text-[#666] italic">{t('guides.sectionMissing')}</p>
             ) : (
               <div className="flex max-w-3xl flex-col gap-6">
                 {active.blocks.map((block, i) => {
@@ -72,6 +74,14 @@ export function GuidePage({ guide }: { guide: Guide }) {
                     const next = active.blocks[i + 1]
                     return <ProseBlock key={i} body={block.body} beforeNonProse={next !== undefined && next.type !== 'prose'} />
                   }
+                  if (block.type === 'heading')
+                    return (
+                      <h3 key={i} className={cn('-mb-3 text-base font-bold text-[#ffffff]', i > 0 && 'mt-4 border-t border-[#282828] pt-6')}>
+                        {localized(block.text, lang)}
+                      </h3>
+                    )
+                  if (block.type === 'potentials')
+                    return <PotentialsBlock key={i} image={block.image} legend={block.legend} ego={block.ego} />
                   if (block.type === 'card-list')
                     return (
                       <CardListBlock

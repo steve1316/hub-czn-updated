@@ -91,8 +91,31 @@ export interface TeamMember {
   name: string
 }
 
+/** One colour of the potentials picture's legend. */
+export interface PotentialsLegendEntry {
+  /** The highlight colour in the picture that this entry explains. */
+  colour: 'purple' | 'gold' | 'blue'
+  /** What the author marks with that colour, such as "Main Damage Boosts". */
+  text: LocalizedText
+}
+
+/** The author's comment on one ego manifestation level. */
+export interface EgoNote {
+  /** The level, 1-6, counted in the order the sheet lists them. */
+  level: number
+  /** The comment. */
+  text: LocalizedText
+}
+
 export type Block =
   | { type: 'prose'; body: LocalizedText }
+  | { type: 'heading'; text: LocalizedText }
+  | {
+      type: 'potentials'
+      image: string | null
+      legend: PotentialsLegendEntry[]
+      ego: EgoNote[]
+    }
   | {
       type: 'card-list'
       intro?: LocalizedText
@@ -124,10 +147,16 @@ export type Block =
       groups: { title?: LocalizedText; members: TeamMember[] }[]
     }
 
+/** One page of a guide. Every guide has the same pages, in the same order. */
 export interface GuideSection {
+  /** The page id, such as "decks" or "potentials". */
   id: string
+  /** The page name shown in the nav. */
   title: LocalizedText
+  /** The page's content, with each sheet band's title as a heading block. */
   blocks: Block[]
+  /** True when the sheet has nothing for this page. */
+  missing?: boolean
 }
 
 export interface GuideSource {
