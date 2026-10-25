@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { Guide } from './guides.types'
-import { epiphanyRatings, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
+import { epiphanyRatings, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en only for en', () => {
@@ -59,6 +59,15 @@ describe('proseParts', () => {
   })
   it('keeps a plain sentence as text', () => {
     expect(proseParts('Plain sentence here.', false)).toEqual([{ kind: 'text', text: 'Plain sentence here.' }])
+  })
+})
+
+describe('headsNext', () => {
+  it('lets a short line head content but not prose or a band heading', () => {
+    expect(headsNext({ type: 'set-list', items: [] })).toBe(true)
+    expect(headsNext({ type: 'heading', text: { en: 'C7 Burning Life' } })).toBe(false)
+    expect(headsNext({ type: 'prose', body: { en: 'More' } })).toBe(false)
+    expect(headsNext(undefined)).toBe(false)
   })
 })
 

@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
 import type { CardEntry } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { epiphanyRatings, resolveLang, localized } from '../guides.utils'
+import { epiphanyRatings, headsNext, resolveLang, localized } from '../guides.utils'
 import type { Guide } from '../guides.types'
 import { ProseBlock } from './blocks/ProseBlock'
 import { CardListBlock } from './blocks/CardListBlock'
@@ -70,10 +70,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
             ) : (
               <div className="flex max-w-3xl flex-col gap-6">
                 {active.blocks.map((block, i) => {
-                  if (block.type === 'prose') {
-                    const next = active.blocks[i + 1]
-                    return <ProseBlock key={i} body={block.body} beforeNonProse={next !== undefined && next.type !== 'prose'} />
-                  }
+                  if (block.type === 'prose') return <ProseBlock key={i} body={block.body} beforeNonProse={headsNext(active.blocks[i + 1])} />
                   if (block.type === 'heading')
                     return (
                       <h3 key={i} className={cn('-mb-3 text-base font-bold text-[#ffffff]', i > 0 && 'mt-4 border-t border-[#282828] pt-6')}>
