@@ -189,6 +189,11 @@
     "rarity": 4,
     "kind": "Combatant"
   },
+  "Rossweisse": {
+    "res_id": 30134,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
   "Ivy": {
     "res_id": 1025,
     "rarity": 5,
@@ -436,6 +441,11 @@
   },
   "Eunie": {
     "res_id": 30114,
+    "rarity": 5,
+    "kind": "Partner"
+  },
+  "Sig": {
+    "res_id": 30135,
     "rarity": 5,
     "kind": "Partner"
   }

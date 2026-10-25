@@ -147,6 +147,27 @@
     "image_path": "neutral-cards/neutral/n_0007.webp"
   },
   {
+    "id": "card_ds05_00003",
+    "name": "Ambush Cover",
+    "cost": 1,
+    "card_type": "Attack",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Combo"
+    ],
+    "description": "[Combo] 150% Damage to all enemies. Inspiration: Apply Pulverize.",
+    "restrictions": "Ranger, Hunter only",
+    "allowed_classes": [
+      "Ranger",
+      "Hunter"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00003.webp"
+  },
+  {
     "id": "n_0008",
     "name": "Arcane Rush",
     "cost": 1,
@@ -347,6 +368,24 @@
     "image_path": "neutral-cards/neutral/n_0015.webp"
   },
   {
+    "id": "card_ds05_00008",
+    "name": "Celestial Wrath",
+    "cost": 1,
+    "card_type": "Attack",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Exhaust"
+    ],
+    "description": "[Exhaust] 10% Damage. +60% Damage Amount for each Bind stack.",
+    "restrictions": "No Class restrictions",
+    "allowed_classes": [],
+    "image_path": "neutral-cards/neutral/card_ds05_00008.webp"
+  },
+  {
     "id": "card_enc_00026",
     "name": "Chaos Creature",
     "cost": 0,
@@ -495,6 +534,24 @@
     "image_path": "neutral-cards/neutral/n_0022.webp"
   },
   {
+    "id": "card_enc_00065",
+    "name": "Defaced Relic",
+    "cost": 2,
+    "card_type": "Skill",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Remove"
+    ],
+    "description": "[Remove] Decrease Stress of all Combatants by -10. Gain 200 Credits.",
+    "restrictions": "No Class restrictions",
+    "allowed_classes": [],
+    "image_path": "neutral-cards/neutral/card_enc_00065.webp"
+  },
+  {
     "id": "n_0023",
     "name": "Destruction",
     "cost": 1,
@@ -569,6 +626,22 @@
     "restrictions": "No Class restrictions",
     "allowed_classes": [],
     "image_path": "neutral-cards/neutral/card_ta_pn_00005.webp"
+  },
+  {
+    "id": "card_ds05_00007",
+    "name": "Divine Retribution",
+    "cost": 3,
+    "card_type": "Attack",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [],
+    "description": "350% Damage. Decrease Cost for each Pulverize card in hand.",
+    "restrictions": "No Class restrictions",
+    "allowed_classes": [],
+    "image_path": "neutral-cards/neutral/card_ds05_00007.webp"
   },
   {
     "id": "n_0026",
@@ -724,6 +797,22 @@
     "image_path": "neutral-cards/neutral/card_ta_pn_00001.webp"
   },
   {
+    "id": "card_ds05_00009",
+    "name": "Enveloping Light",
+    "cost": 1,
+    "card_type": "Upgrade",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [],
+    "description": "When an ally Skill or Upgrade Card is used, create 1 Celestial Wrath in hand (3 times per turn).",
+    "restrictions": "No Class restrictions",
+    "allowed_classes": [],
+    "image_path": "neutral-cards/neutral/card_ds05_00009.webp"
+  },
+  {
     "id": "card_ds04_00004",
     "name": "Essence Tracking",
     "cost": 1,
@@ -761,6 +850,28 @@
     "restrictions": "No Class restrictions",
     "allowed_classes": [],
     "image_path": "neutral-cards/neutral/card_ta_pn_00007.webp"
+  },
+  {
+    "id": "card_ds05_00006",
+    "name": "Execution Rite",
+    "cost": 1,
+    "card_type": "Skill",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Finale",
+      "Exhaust"
+    ],
+    "description": "[Finale] [Exhaust] At the start of the next turn, gain 2 Morale for 1 turn and gain 2 AP.",
+    "restrictions": "Psionic, Controller only",
+    "allowed_classes": [
+      "Psionic",
+      "Controller"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00006.webp"
   },
   {
     "id": "n_0032",
@@ -1191,6 +1302,25 @@
     "image_path": "neutral-cards/neutral/card_enc_00011.webp"
   },
   {
+    "id": "card_ds05_00004",
+    "name": "Frozen Revelation",
+    "cost": 0,
+    "card_type": "Skill",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [],
+    "description": "Draw 1 Upgrade Card(s). Streak: Draw 1.",
+    "restrictions": "Ranger, Hunter only",
+    "allowed_classes": [
+      "Ranger",
+      "Hunter"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00004.webp"
+  },
+  {
     "id": "card_enc_00029",
     "name": "Fruit of Dead Souls",
     "cost": 1,
@@ -1406,6 +1536,27 @@
     "restrictions": "No Class restrictions",
     "allowed_classes": [],
     "image_path": "neutral-cards/neutral/n_0061.webp"
+  },
+  {
+    "id": "card_ds05_00002",
+    "name": "Herald's Armor",
+    "cost": 2,
+    "card_type": "Skill",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Exhaust"
+    ],
+    "description": "[Exhaust] 200% Shield. When an ally Upgrade Card is used, if this card is in hand, proc.",
+    "restrictions": "Striker, Vanguard only",
+    "allowed_classes": [
+      "Striker",
+      "Vanguard"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00002.webp"
   },
   {
     "id": "n_0062",
@@ -3005,6 +3156,27 @@
     "image_path": "neutral-cards/neutral/n_0126.webp"
   },
   {
+    "id": "card_ds05_00005",
+    "name": "Slow Cooling",
+    "cost": 1,
+    "card_type": "Skill",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Retain"
+    ],
+    "description": "[Retain] 2 Vulnerable. Increase Action Count by 1. Purity: Apply 2x the effect.",
+    "restrictions": "Psionic, Controller only",
+    "allowed_classes": [
+      "Psionic",
+      "Controller"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00005.webp"
+  },
+  {
     "id": "n_0127",
     "name": "Somnolent Fruit",
     "cost": 1,
@@ -3242,6 +3414,28 @@
       "Controller"
     ],
     "image_path": "neutral-cards/neutral/n_0136.webp"
+  },
+  {
+    "id": "card_ds05_00001",
+    "name": "Warrior of the Bitter Cold",
+    "cost": 1,
+    "card_type": "Attack",
+    "category": "neutral",
+    "tags": [
+      "neutral",
+      "season"
+    ],
+    "effect_tags": [
+      "Retain",
+      "Pulverize"
+    ],
+    "description": "[Retain] [Pulverize] 120% Damage. When a card of this unit is created, if this card is in hand, +30% Damage Amount until activated. (max 180%).",
+    "restrictions": "Striker, Vanguard only",
+    "allowed_classes": [
+      "Striker",
+      "Vanguard"
+    ],
+    "image_path": "neutral-cards/neutral/card_ds05_00001.webp"
   },
   {
     "id": "n_0137",
@@ -3851,6 +4045,23 @@
     "restrictions": null,
     "allowed_classes": [],
     "image_path": "neutral-cards/monster/m_0025.webp"
+  },
+  {
+    "id": "card_mon_00043",
+    "name": "Triniel",
+    "cost": 2,
+    "card_type": "Skill",
+    "category": "monster",
+    "tags": [
+      "monster"
+    ],
+    "effect_tags": [
+      "Exhaust"
+    ],
+    "description": "[Exhaust] At the start of the next turn, 300% Shield. When damage is taken, activate this card from Draw Pile and Discard Pile.",
+    "restrictions": null,
+    "allowed_classes": [],
+    "image_path": "neutral-cards/monster/card_mon_00043.webp"
   },
   {
     "id": "card_mon_00042",

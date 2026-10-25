@@ -156,6 +156,12 @@
     "has_weak": true
   },
   {
+    "id": "3000544_01",
+    "name": "Brainwashed Xera Empire Footsoldier",
+    "def": 47,
+    "has_weak": true
+  },
+  {
     "id": "1006002_01",
     "name": "Broodling",
     "def": 47,
@@ -1212,6 +1218,12 @@
     "has_weak": false
   },
   {
+    "id": "3000543_01",
+    "name": "Triniel",
+    "def": 47,
+    "has_weak": false
+  },
+  {
     "id": "3000196_01",
     "name": "Turtle",
     "def": 47,
@@ -1638,6 +1650,12 @@
     "has_weak": true
   },
   {
+    "id": "3000544_03",
+    "name": "Brainwashed Xera Empire Footsoldier",
+    "def": 50,
+    "has_weak": false
+  },
+  {
     "id": "2100108_03",
     "name": "Cannibal Spirit",
     "def": 50,
@@ -1702,6 +1720,12 @@
     "name": "Black Market Guard",
     "def": 52,
     "has_weak": true
+  },
+  {
+    "id": "3000544_04",
+    "name": "Brainwashed Xera Empire Footsoldier",
+    "def": 52,
+    "has_weak": false
   },
   {
     "id": "2302107_04",
@@ -2346,6 +2370,12 @@
     "has_weak": true
   },
   {
+    "id": "3000544_50",
+    "name": "Brainwashed Xera Empire Footsoldier",
+    "def": 206,
+    "has_weak": true
+  },
+  {
     "id": "3000377_50",
     "name": "Chizuru",
     "def": 206,
@@ -2372,6 +2402,12 @@
   {
     "id": "2302106_50",
     "name": "Darkstar Shieldman",
+    "def": 206,
+    "has_weak": false
+  },
+  {
+    "id": "1003006_50",
+    "name": "Dominion",
     "def": 206,
     "has_weak": false
   },
@@ -2532,6 +2568,12 @@
     "has_weak": false
   },
   {
+    "id": "1003007_50",
+    "name": "Slaughter",
+    "def": 206,
+    "has_weak": false
+  },
+  {
     "id": "1002002_50",
     "name": "Snipper",
     "def": 206,
@@ -2574,6 +2616,12 @@
     "has_weak": false
   },
   {
+    "id": "3000543_50",
+    "name": "Triniel",
+    "def": 206,
+    "has_weak": false
+  },
+  {
     "id": "3000269_50",
     "name": "Wanted Criminal",
     "def": 206,
@@ -2604,6 +2652,12 @@
     "has_weak": false
   },
   {
+    "id": "3000544_51",
+    "name": "Brainwashed Xera Empire Footsoldier",
+    "def": 207,
+    "has_weak": true
+  },
+  {
     "id": "3000318_51",
     "name": "Dark Star Research Center",
     "def": 207,
@@ -2612,6 +2666,12 @@
   {
     "id": "2302107_51",
     "name": "Darkstar Assault Trooper",
+    "def": 207,
+    "has_weak": false
+  },
+  {
+    "id": "2302106_51",
+    "name": "Darkstar Shieldman",
     "def": 207,
     "has_weak": false
   },
@@ -2696,6 +2756,12 @@
   {
     "id": "3000513_53",
     "name": "Biologist Pio",
+    "def": 209,
+    "has_weak": false
+  },
+  {
+    "id": "2302107_53",
+    "name": "Darkstar Assault Trooper",
     "def": 209,
     "has_weak": false
   },
@@ -2796,6 +2862,12 @@
     "has_weak": false
   },
   {
+    "id": "3000511_80",
+    "name": "Chaos Core",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "3000353_80",
     "name": "Chilling Godfather",
     "def": 239,
@@ -2848,6 +2920,12 @@
     "name": "Darkstar Shieldman",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "1003006_80",
+    "name": "Dominion",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "1006018_80",
@@ -2946,6 +3024,18 @@
     "has_weak": false
   },
   {
+    "id": "3000532_80",
+    "name": "Herald of Judgment",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1002010_80",
+    "name": "Hexer",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "3000354_80",
     "name": "Hunger of Loss",
     "def": 239,
@@ -2956,6 +3046,12 @@
     "name": "Hunger of the Void",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "1003018_80",
+    "name": "Indigo Oracle",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "3000291_80",
@@ -2986,6 +3082,12 @@
     "name": "Luscus",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "1002011_80",
+    "name": "Man-Eater",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "1004001_80",
@@ -3052,6 +3154,12 @@
     "name": "Sand Worm Nest",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "1003009_80",
+    "name": "Scarlet Oracle",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "2300003_80",
@@ -3188,6 +3296,12 @@
   {
     "id": "3000500_81",
     "name": "Avaritia",
+    "def": 240,
+    "has_weak": true
+  },
+  {
+    "id": "2104110_81",
+    "name": "Bandit",
     "def": 240,
     "has_weak": true
   },
@@ -3468,6 +3582,12 @@
     "has_weak": false
   },
   {
+    "id": "1006001_82",
+    "name": "Tustra",
+    "def": 241,
+    "has_weak": true
+  },
+  {
     "id": "1006013_82",
     "name": "Winged Humanoid Beast",
     "def": 241,
@@ -3606,6 +3726,12 @@
     "has_weak": true
   },
   {
+    "id": "2302106_88",
+    "name": "Darkstar Shieldman",
+    "def": 247,
+    "has_weak": true
+  },
+  {
     "id": "1006022_88",
     "name": "Nimble Granny",
     "def": 247,
@@ -3615,6 +3741,18 @@
     "id": "2302107_89",
     "name": "Darkstar Assault Trooper",
     "def": 248,
+    "has_weak": true
+  },
+  {
+    "id": "1006022_89",
+    "name": "Nimble Granny",
+    "def": 248,
+    "has_weak": true
+  },
+  {
+    "id": "2302107_90",
+    "name": "Darkstar Assault Trooper",
+    "def": 249,
     "has_weak": true
   },
   {

@@ -1478,7 +1478,7 @@
     "id": "div_0079",
     "god": "Nihilum",
     "display_god": "Nihilum",
-    "description": "Increase base Damage Amount by 100%. Apply Finale to this card.",
+    "description": "Increase Heal Amount by 100%. Apply Finale to this card.",
     "rarity": "Unique",
     "card_types": [
       "Skill"
@@ -1489,7 +1489,7 @@
       "Finale"
     ],
     "source_key": "add_r_spark_nihilum_15",
-    "raw_text": "Increase base Damage Amount by 100%. Apply Finale to this card.\nNihilum\nUNIQUE\nSkill"
+    "raw_text": "Increase Heal Amount by 100%. Apply Finale to this card.\nNihilum\nUNIQUE\nSkill"
   },
   {
     "id": "div_0080",

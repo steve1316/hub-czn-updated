@@ -655,7 +655,7 @@
           "Lead",
           "Retain"
         ],
-        "description": "[Lead] [Retain] For 1 turn, increase Damage Amount of Attack Cards by 25% for each Attack Card of this unit in hand. Efficiency: For 1 turn, decrease Cost of Attack Cards of this unit in hand by 1."
+        "description": "[Lead] [Retain] For 1 turn, increase Damage Amount of Attack Cards of this unit by 25% for each Attack Card of this unit in hand. Efficiency: Decrease Cost of Attack Cards of this unit in hand by 1 for 1 turn."
       },
       {
         "variant_id": "c_1012_uni3_epiphany_5",
@@ -877,7 +877,7 @@
         "tags": [
           "Unique"
         ],
-        "description": "[Unique] 60% Damage and 3 Fracture to all enemies. ^C30115_DEBUFF_TRIGGER^ Activate Fracture inflicted by allies."
+        "description": "[Unique] 60% Damage and 3 Fracture to all enemies. Fracture Amplification: Activate Fracture inflicted by allies."
       },
       {
         "variant_id": "c_30115_uni2_epiphany_2",
@@ -886,7 +886,7 @@
         "cost": 1,
         "card_type": "Attack",
         "tags": [],
-        "description": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. ^C30115_DEBUFF_TRIGGER^ Activate Fracture inflicted by this unit."
+        "description": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
       },
       {
         "variant_id": "c_30115_uni2_epiphany_3",
@@ -906,7 +906,7 @@
         "cost": 1,
         "card_type": "Attack",
         "tags": [],
-        "description": "60% Damage, 2 Fracture, and 4 Agony to all enemies. ^C30115_DEBUFF_TRIGGER^ Activate Agony inflicted by allies."
+        "description": "60% Damage, 2 Fracture, and 4 Agony to all enemies. Fracture Amplification: Activate Agony inflicted by allies."
       },
       {
         "variant_id": "c_30115_uni2_epiphany_5",
@@ -934,7 +934,7 @@
         "tags": [
           "Unique"
         ],
-        "description": "[Unique] 100% Damage. Add 1 Hit for each type of harmful effect the target has (max 3 times). ^C30115_DEBUFF_TRIGGER^ Activate Fracture inflicted by allies."
+        "description": "[Unique] 100% Damage. Add 1 Hit for each type of harmful effect the target has (max 3 times). Fracture Amplification: Activate Fracture inflicted by allies."
       },
       {
         "variant_id": "c_30115_uni3_epiphany_2",
@@ -943,7 +943,7 @@
         "cost": 1,
         "card_type": "Attack",
         "tags": [],
-        "description": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. ^C30115_DEBUFF_TRIGGER^ Draw 1 card of this unit."
+        "description": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
       },
       {
         "variant_id": "c_30115_uni3_epiphany_3",
@@ -963,7 +963,7 @@
         "tags": [
           "Lead"
         ],
-        "description": "[Lead] 40% Damage to random enemies. 2 Fracture on each Hit. If Cost of this card is decreased, add 1 Hit."
+        "description": "[Lead] 40% Damage to random enemies. 2 Fracture on each Hit. Efficiency: Add 1 Hit."
       },
       {
         "variant_id": "c_30115_uni3_epiphany_5",
@@ -1458,7 +1458,7 @@
         "tags": [
           "Initiation"
         ],
-        "description": "[Initiation] 150% Damage. 1 Cursed Shackles. ^C1060_DEBUFF_TRIGGER^ Add 1 Hit."
+        "description": "[Initiation] 150% Damage. 1 Cursed Shackles. Cursed Shackles: Add 1 Hit."
       },
       {
         "variant_id": "c_1060_srt4_epiphany_2",
@@ -1469,7 +1469,7 @@
         "tags": [
           "Initiation"
         ],
-        "description": "[Initiation] 150% Damage. 1 Cursed Shackles. ^C1060_DEBUFF_TRIGGER^ Decrease Cost of the next card of this unit activated by 2."
+        "description": "[Initiation] 150% Damage. 1 Cursed Shackles. Cursed Shackles: Decrease Cost of the next card of this unit activated by 2."
       },
       {
         "variant_id": "c_1060_srt4_epiphany_3",
@@ -1480,7 +1480,7 @@
         "tags": [
           "Initiation"
         ],
-        "description": "[Initiation] 250% Damage. 1 Cursed Shackles. ^C1060_DEBUFF_TRIGGER^ Increase Damage Amount by 150%."
+        "description": "[Initiation] 250% Damage. 1 Cursed Shackles. Cursed Shackles: Increase Damage Amount by 150%."
       },
       {
         "variant_id": "c_1060_srt4_epiphany_4",
@@ -6865,9 +6865,10 @@
         "cost": 0,
         "card_type": "Attack",
         "tags": [
-          "Haste"
+          "Haste",
+          "Unactivatable"
         ],
-        "description": "[Haste] 450% Damage. Dark Mist Stance: Temporarily remove Unactivatable from this card."
+        "description": "[Haste] [Unactivatable] 450% Damage. Dark Mist Stance: Temporarily remove Unactivatable from this card."
       },
       {
         "variant_id": "c_1018_srt4_epiphany_4",
@@ -7304,6 +7305,244 @@
           "Unique"
         ],
         "description": "[Unique] When Chronal Ascension is gained, Draw 3 2-Cost Attack Card(s)."
+      }
+    ]
+  },
+  "c_30134_srt4": {
+    "character_id": 30134,
+    "character_name": "Rossweisse",
+    "base_card_id": "c_30134_srt4",
+    "base_card_name": "Flicker Blade",
+    "variants": [
+      {
+        "variant_id": "c_30134_srt4_epiphany_1",
+        "level": 1,
+        "name": "Flicker Blade I",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [
+          "Equilux",
+          "Unique"
+        ],
+        "description": "[Equilux] [Unique] 600% Damage. On polarization, split into Shard:Light (Amped) and Shard:Dark (Amped)."
+      },
+      {
+        "variant_id": "c_30134_srt4_epiphany_2",
+        "level": 2,
+        "name": "Flicker Blade II",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [
+          "Equilux",
+          "Unique"
+        ],
+        "description": "[Equilux] [Unique] 600% Damage. On polarization, split into Shard:Light (Cycle) and Shard:Dark (Cycle)."
+      },
+      {
+        "variant_id": "c_30134_srt4_epiphany_3",
+        "level": 3,
+        "name": "Flicker Blade III",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [
+          "Equilux",
+          "Unique"
+        ],
+        "description": "[Equilux] [Unique] 400% Damage. 20% DMG-Based Shield. On polarization, split into Shard:Light (Aegis) and Shard:Dark (Aegis)."
+      },
+      {
+        "variant_id": "c_30134_srt4_epiphany_4",
+        "level": 4,
+        "name": "Flicker Blade IV",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [
+          "Equilux",
+          "Unique"
+        ],
+        "description": "[Equilux] [Unique] 600% Damage. On polarization, split into Shard:Light (Blink) and Shard:Dark (Blink)."
+      },
+      {
+        "variant_id": "c_30134_srt4_epiphany_5",
+        "level": 5,
+        "name": "Flicker Blade V",
+        "cost": -1,
+        "card_type": "Attack",
+        "tags": [
+          "Equilux",
+          "Unique",
+          "Finale"
+        ],
+        "description": "[Equilux] [Unique] [Finale] 400% Damage. +120% base Damage Amount for each X. On polarization, split into Shard:Light (Unbound) and Shard:Dark (Unbound)."
+      }
+    ]
+  },
+  "c_30134_uni1": {
+    "character_id": 30134,
+    "character_name": "Rossweisse",
+    "base_card_id": "c_30134_uni1",
+    "base_card_name": "Sword Resonance",
+    "variants": [
+      {
+        "variant_id": "c_30134_uni1_epiphany_1",
+        "level": 1,
+        "name": "Sword Resonance I",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Create 3 Sword Tassel. Activate effect for 1 random Light or Dark card."
+      },
+      {
+        "variant_id": "c_30134_uni1_epiphany_2",
+        "level": 2,
+        "name": "Sword Resonance II",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Create 3 Sword Tassel. Draw 1 card(s) of this unit."
+      },
+      {
+        "variant_id": "c_30134_uni1_epiphany_3",
+        "level": 3,
+        "name": "Sword Resonance III",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] Apply Retrieve to all Light and Dark cards in hand."
+      },
+      {
+        "variant_id": "c_30134_uni1_epiphany_4",
+        "level": 4,
+        "name": "Sword Resonance IV",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Create 3 Sword Tassel. When the next Equilux card is coalesced, apply Pulverize to that card."
+      },
+      {
+        "variant_id": "c_30134_uni1_epiphany_5",
+        "level": 5,
+        "name": "Sword Resonance V",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] Activate effect for all Light and Dark cards in hand."
+      }
+    ]
+  },
+  "c_30134_uni2": {
+    "character_id": 30134,
+    "character_name": "Rossweisse",
+    "base_card_id": "c_30134_uni2",
+    "base_card_name": "Radiant Sword Flow",
+    "variants": [
+      {
+        "variant_id": "c_30134_uni2_epiphany_1",
+        "level": 1,
+        "name": "Radiant Sword Flow I",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "300% Damage. Discard up to 2 card(s) in hand, then that amount Discarded × 200% Damage."
+      },
+      {
+        "variant_id": "c_30134_uni2_epiphany_2",
+        "level": 2,
+        "name": "Radiant Sword Flow II",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "200% Damage. Discard 1, and if that card is a Light or Dark card, proc then move to hand."
+      },
+      {
+        "variant_id": "c_30134_uni2_epiphany_3",
+        "level": 3,
+        "name": "Radiant Sword Flow III",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "300% Damage. Discard up to 1 card(s) in hand. Decrease Cost of the next 2 Light or Dark cards by 2 until activated."
+      },
+      {
+        "variant_id": "c_30134_uni2_epiphany_4",
+        "level": 4,
+        "name": "Radiant Sword Flow IV",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] 300% Damage. When a Bind card is stacked this turn, +50% base Damage Amount (max 500%)."
+      },
+      {
+        "variant_id": "c_30134_uni2_epiphany_5",
+        "level": 5,
+        "name": "Radiant Sword Flow V",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] Increase Damage Amount of this unit by 15% for each Justice Card in hand for 1 turn (max 75%)."
+      }
+    ]
+  },
+  "c_30134_uni3": {
+    "character_id": 30134,
+    "character_name": "Rossweisse",
+    "base_card_id": "c_30134_uni3",
+    "base_card_name": "Blade of the Cycle",
+    "variants": [
+      {
+        "variant_id": "c_30134_uni3_epiphany_1",
+        "level": 1,
+        "name": "Blade of the Cycle I",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "300% Damage. 6 Brand of the Cycle."
+      },
+      {
+        "variant_id": "c_30134_uni3_epiphany_2",
+        "level": 2,
+        "name": "Blade of the Cycle II",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "300% Damage. 2 Brand of the Cycle. Purity: Create 2 Sword Tassel."
+      },
+      {
+        "variant_id": "c_30134_uni3_epiphany_3",
+        "level": 3,
+        "name": "Blade of the Cycle III",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "200% Damage. 4 Brand of the Cycle. Draw 1 card(s) of this unit, then decrease Cost of those cards by 1 for 1 turn."
+      },
+      {
+        "variant_id": "c_30134_uni3_epiphany_4",
+        "level": 4,
+        "name": "Blade of the Cycle IV",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "300% Damage. 1 Brand of the Cycle for each Justice Card in hand. Purity: Decrease Cost by 1."
+      },
+      {
+        "variant_id": "c_30134_uni3_epiphany_5",
+        "level": 5,
+        "name": "Blade of the Cycle V",
+        "cost": 2,
+        "card_type": "Attack",
+        "tags": [
+          "Pulverize"
+        ],
+        "description": "[Pulverize] 500% Damage. 4 Brand of the Cycle. On Shield Break through this card, proc 1 more time (1 time per turn)."
       }
     ]
   },

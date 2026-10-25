@@ -31,7 +31,8 @@ _BATTLE_ONLY = re.compile(r"^(n_.*|.*_stack_.*|.*vt_mul.*|.*vt_add.*|cs_tv_(?!ma
 
 _TOKEN = re.compile(r"#([A-Za-z0-9_]+)#")
 _CAL = re.compile(r"\{cal\}(.*?)\{/\}", re.DOTALL)
-_TRIGGER = re.compile(r"\^(TRIGGER_[A-Za-z0-9_]+)\^")
+# Shared triggers such as `TRIGGER_EFFICIENCY` and character ones such as `C30115_DEBUFF_TRIGGER`. Card references are lower case.
+_TRIGGER = re.compile(r"\^([A-Z][A-Z0-9_]+)\^")
 _CARD_REF = re.compile(r"\^card@([A-Za-z0-9_]+)\^")
 _KEYWORD = re.compile(r"\$([^$]*?)(?:#\d+)?\$")
 _COLOR_MARKERS = re.compile(r"\[/?(?:fc|nfc|cfc|reverse_color)\]|\[/\]")

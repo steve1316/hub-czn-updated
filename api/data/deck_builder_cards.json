@@ -163,7 +163,7 @@
       },
       {
         "card_id": "c_30115_uni4",
-        "description": "[Unique] 200% Damage to all enemies. Increase Damage Amount by 15% for each type of harmful effect the target has (max 120%). ^C30115_DEBUFF_TRIGGER^ 2x base Damage Amount."
+        "description": "[Unique] 200% Damage to all enemies. Increase Damage Amount by 15% for each type of harmful effect the target has (max 120%). Fracture Amplification: 2x base Damage Amount."
       }
     ],
     "ego_skill": {
@@ -274,7 +274,7 @@
       },
       {
         "card_id": "c_1060_srt4",
-        "description": "[Initiation] 100% Damage. 1 Cursed Shackles. ^C1060_DEBUFF_TRIGGER^ Add 1 Hit."
+        "description": "[Initiation] 100% Damage. 1 Cursed Shackles. Cursed Shackles: Add 1 Hit."
       }
     ],
     "epiphany_cards": [
@@ -292,7 +292,7 @@
       },
       {
         "card_id": "c_1060_uni4",
-        "description": "[Bind 1] [Retain] 80% Damage × 1. +80% Damage Amount for each Bind stack."
+        "description": "[Retain] 80% Damage × 1. +80% Damage Amount for each Bind stack."
       }
     ],
     "ego_skill": {
@@ -1330,6 +1330,49 @@
     "ego_skill": {
       "card_id": "c_30097_eps",
       "description": "6 Chronal Ascension. Increase Damage Amount of the next Attack Card of this unit activated by 10% for each Cost of cards activated this battle (max 200%)."
+    }
+  },
+  "30134": {
+    "character_name": "Rossweisse",
+    "starting_cards": [
+      {
+        "card_id": "c_30134_srt1",
+        "description": "100% Damage."
+      },
+      {
+        "card_id": "c_30134_srt2",
+        "description": "100% Damage."
+      },
+      {
+        "card_id": "c_30134_srt3",
+        "description": "100% Shield."
+      },
+      {
+        "card_id": "c_30134_srt4",
+        "description": "[Equilux] [Unique] 400% Damage. On polarization, split into Shard:Light and Shard:Dark."
+      }
+    ],
+    "epiphany_cards": [
+      {
+        "card_id": "c_30134_uni1",
+        "description": "Create 3 Sword Tassel."
+      },
+      {
+        "card_id": "c_30134_uni2",
+        "description": "200% Damage. Discard up to 1 card(s) in hand, and if Discarded, 150% Damage."
+      },
+      {
+        "card_id": "c_30134_uni3",
+        "description": "200% Damage. 4 Brand of the Cycle."
+      },
+      {
+        "card_id": "c_30134_uni4",
+        "description": "[Unique] [Initiation] Draw 2. 1 Kyrken's Aegis."
+      }
+    ],
+    "ego_skill": {
+      "card_id": "c_30134_eps",
+      "description": "1200% Damage. When the next Equilux card is activated, inflict Fixed Damage equal to 30% of Damage dealt to the target."
     }
   },
   "1005": {
