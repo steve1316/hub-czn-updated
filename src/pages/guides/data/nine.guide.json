@@ -126,11 +126,19 @@
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             }
           ]
         },
@@ -201,11 +209,19 @@
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -269,11 +285,19 @@
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             }
           ]
         },
@@ -513,7 +537,11 @@
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -601,7 +629,11 @@
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -665,19 +697,35 @@
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             }
           ]
         },
@@ -766,7 +814,11 @@
             },
             {
               "cardId": "n_0012",
-              "name": "Belligerence"
+              "name": "Belligerence",
+              "cost": 0,
+              "text": {
+                "en": "If there are no Attack Cards in hand, Draw 2."
+              }
             }
           ]
         },
@@ -1012,6 +1064,7 @@
             {
               "cardId": "n_0067",
               "name": "Iron Wall",
+              "cost": 1,
               "note": {
                 "en": "1 CounterAttack each turn"
               },
@@ -1020,6 +1073,7 @@
             {
               "cardId": "n_0121",
               "name": "Sadism",
+              "cost": 1,
               "note": {
                 "en": "AOE Vuln and technically 0 AP if it cost reduces the right card"
               },
@@ -1028,6 +1082,7 @@
             {
               "cardId": "n_0031",
               "name": "Energy Barrier",
+              "cost": 0,
               "note": {
                 "en": "1 Time AP and Perma CounterAttack"
               },

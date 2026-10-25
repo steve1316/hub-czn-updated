@@ -1392,6 +1392,7 @@
             {
               "cardId": "n_0080",
               "name": "Persona",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1400,6 +1401,7 @@
             {
               "cardId": "n_0080",
               "name": "Persona",
+              "cost": 1,
               "note": {
                 "en": ""
               },

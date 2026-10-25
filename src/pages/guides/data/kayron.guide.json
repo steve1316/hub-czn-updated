@@ -452,15 +452,27 @@
             },
             {
               "cardId": "n_0010",
-              "name": "Attack!"
+              "name": "Attack!",
+              "cost": 0,
+              "text": {
+                "en": "Select 1 Attack Card(s) in Draw Pile and move those cards to hand."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -790,6 +802,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
@@ -798,6 +811,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "Tutoring out a card and giving it retrieve is amazing"
               },
@@ -806,6 +820,7 @@
             {
               "cardId": "m_0026",
               "name": "Vine Lord",
+              "cost": 0,
               "note": {
                 "en": "Drawing 6 exhaust cards is a bit excessive, but Vinelord isn't terrible"
               },
@@ -814,6 +829,7 @@
             {
               "cardId": "m_0022",
               "name": "Soldier Prime",
+              "cost": 2,
               "note": {
                 "en": "Celestial Activator that refunds"
               },
@@ -840,19 +856,35 @@
             },
             {
               "cardId": "n_0136",
-              "name": "Wanderer of the Void"
+              "name": "Wanderer of the Void",
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] Target's Action Count does not decrease for 1 turn."
+              }
             },
             {
               "cardId": "n_0112",
-              "name": "Rally"
+              "name": "Rally",
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust 2] Draw 1. Increase Action Count of all enemies by 3."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0115",
-              "name": "Reorganize"
+              "name": "Reorganize",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] Draw 3."
+              }
             }
           ]
         },

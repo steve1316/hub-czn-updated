@@ -503,6 +503,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
@@ -511,6 +512,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "Tutoring out a card and giving it retrieve is amazing"
               },
@@ -519,6 +521,7 @@
             {
               "cardId": "m_0009",
               "name": "Dominion",
+              "cost": 2,
               "note": {
                 "en": "Pretty slow to scale"
               },
@@ -527,6 +530,7 @@
             {
               "cardId": "n_0079",
               "name": "Overwhelm",
+              "cost": 0,
               "note": {
                 "en": "Makes up for Rin's AOE Weakness in runs, it's really nice to have"
               },
@@ -535,6 +539,7 @@
             {
               "cardId": "n_0012",
               "name": "Belligerence",
+              "cost": 0,
               "note": {
                 "en": ""
               },

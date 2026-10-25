@@ -237,7 +237,11 @@
             },
             {
               "cardId": "n_0047",
-              "name": "Forest's Hunger"
+              "name": "Forest's Hunger",
+              "cost": 2,
+              "text": {
+                "en": "300% Defense-Based Damage. Exhaust all Exhaust cards in hand, then +25% base Damage Amount for each Exhausted."
+              }
             }
           ]
         },
@@ -646,6 +650,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "Amazing draw"
               },
@@ -654,6 +659,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "Amazing Tutor"
               },
@@ -662,6 +668,7 @@
             {
               "cardId": "m_0022",
               "name": "Soldier Prime",
+              "cost": 2,
               "note": {
                 "en": "Activates Celestial, and also refunds"
               },
@@ -670,6 +677,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -678,6 +686,7 @@
             {
               "cardId": "n_0047",
               "name": "Forest's Hunger",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -706,6 +715,7 @@
             {
               "cardId": "n_0012",
               "name": "Belligerence",
+              "cost": 0,
               "note": {
                 "en": "Just great"
               },
@@ -714,6 +724,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },

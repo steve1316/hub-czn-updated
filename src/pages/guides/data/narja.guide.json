@@ -1322,6 +1322,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "Amazing draw"
               },
@@ -1339,6 +1340,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1347,6 +1349,7 @@
             {
               "cardId": "n_0074",
               "name": "Nature's Gift",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1375,6 +1378,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1383,6 +1387,7 @@
             {
               "cardId": "n_0112",
               "name": "Rally",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1391,6 +1396,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1399,6 +1405,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": ""
               },

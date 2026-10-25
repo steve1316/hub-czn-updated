@@ -330,7 +330,11 @@
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit"
+              "name": "First Aid Kit",
+              "cost": 2,
+              "text": {
+                "en": "[Celestial] [Exhaust] Heal 250%."
+              }
             }
           ]
         },
@@ -603,7 +607,11 @@
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit"
+              "name": "First Aid Kit",
+              "cost": 2,
+              "text": {
+                "en": "[Celestial] [Exhaust] Heal 250%."
+              }
             }
           ]
         },
@@ -855,6 +863,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -863,6 +872,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -871,6 +881,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -879,6 +890,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -887,6 +899,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -906,6 +919,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -914,6 +928,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -1470,6 +1485,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1478,6 +1494,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },

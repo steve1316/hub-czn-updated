@@ -162,7 +162,11 @@
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester"
+              "name": "Spore Harvester",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."
+              }
             }
           ]
         },
@@ -436,7 +440,11 @@
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester"
+              "name": "Spore Harvester",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."
+              }
             }
           ]
         }
@@ -704,6 +712,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Retain and makes alot of Spores the best"
               },
@@ -712,6 +721,7 @@
             {
               "cardId": "n_0074",
               "name": "Nature's Gift",
+              "cost": 1,
               "note": {
                 "en": "The worst Spore creator but still makes spores"
               },
@@ -729,6 +739,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "1 AP to draw 1 and give it retain is good, but somewhat more conditional"
               },
@@ -757,6 +768,7 @@
             {
               "cardId": "n_0112",
               "name": "Rally",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -765,6 +777,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -773,6 +786,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": ""
               },

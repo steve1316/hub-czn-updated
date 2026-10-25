@@ -968,6 +968,7 @@
             {
               "cardId": "n_0111",
               "name": "Rage",
+              "cost": 2,
               "note": {
                 "en": "Potentially 0 AP 3 Moral"
               },
@@ -976,6 +977,7 @@
             {
               "cardId": "n_0079",
               "name": "Overwhelm",
+              "cost": 0,
               "note": {
                 "en": "3 hits for 0 AP"
               },
@@ -1493,6 +1495,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": "Technically Haru is an candidate to carry this too, for her Moral Build"
               },
@@ -1501,6 +1504,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },

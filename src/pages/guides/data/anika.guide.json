@@ -193,7 +193,11 @@
             },
             {
               "cardId": "n_0107",
-              "name": "Pulverize"
+              "name": "Pulverize",
+              "cost": 2,
+              "text": {
+                "en": "[Weakness Attack] 150% Damage × 2. Draw 1."
+              }
             }
           ]
         },
@@ -464,7 +468,11 @@
             },
             {
               "cardId": "n_0107",
-              "name": "Pulverize"
+              "name": "Pulverize",
+              "cost": 2,
+              "text": {
+                "en": "[Weakness Attack] 150% Damage × 2. Draw 1."
+              }
             }
           ]
         },
@@ -733,6 +741,7 @@
             {
               "cardId": "n_0107",
               "name": "Pulverize",
+              "cost": 2,
               "note": {
                 "en": "3 Moral for 2 AP, cantrips isnt that bad"
               }

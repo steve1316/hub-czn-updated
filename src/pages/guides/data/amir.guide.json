@@ -815,6 +815,7 @@
             {
               "cardId": "n_0067",
               "name": "Iron Wall",
+              "cost": 1,
               "note": {
                 "en": "1 CounterAttack each turn"
               },
@@ -823,6 +824,7 @@
             {
               "cardId": "n_0121",
               "name": "Sadism",
+              "cost": 1,
               "note": {
                 "en": "AOE Vuln and technically 0 AP if it cost reduces the right card"
               },
@@ -831,6 +833,7 @@
             {
               "cardId": "n_0031",
               "name": "Energy Barrier",
+              "cost": 0,
               "note": {
                 "en": "1 Time AP and Perma CounterAttack"
               },
@@ -1405,6 +1408,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1413,6 +1417,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1421,6 +1426,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },

@@ -242,7 +242,11 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -355,7 +359,11 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -457,15 +465,27 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -575,15 +595,27 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0055",
-              "name": "Glorious Resistance"
+              "name": "Glorious Resistance",
+              "cost": 3,
+              "text": {
+                "en": "At the start of the turn, deal 10% Max HP Fixed Damage to each ally. Gain 1 AP."
+              }
             }
           ]
         },
@@ -671,23 +703,43 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -790,23 +842,43 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -1035,6 +1107,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1043,6 +1116,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1051,6 +1125,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1059,6 +1134,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -1067,6 +1143,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -1095,6 +1172,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1103,6 +1181,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -1111,6 +1190,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -1783,6 +1863,7 @@
             {
               "cardId": "n_0027",
               "name": "Dream World",
+              "cost": 3,
               "note": {
                 "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
@@ -1808,6 +1889,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1816,6 +1898,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },
@@ -1824,6 +1907,7 @@
             {
               "cardId": "n_0028",
               "name": "Ebony Lumen",
+              "cost": 3,
               "note": {
                 "en": "Rei can easily Exhaust this (Event Neutral)"
               },
@@ -1843,6 +1927,7 @@
             {
               "cardId": "n_0046",
               "name": "Forced Learning Apparatus",
+              "cost": 2,
               "note": {
                 "en": "+1 Cycle"
               }
@@ -1850,6 +1935,7 @@
             {
               "cardId": "n_0122",
               "name": "Self-Generating Experiment",
+              "cost": 2,
               "note": {
                 "en": ""
               }

@@ -1015,6 +1015,7 @@
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1023,6 +1024,7 @@
             {
               "cardId": "n_0103",
               "name": "Precision Aim",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1031,6 +1033,7 @@
             {
               "cardId": "n_0075",
               "name": "Negotiate",
+              "cost": 1,
               "note": {
                 "en": ""
               },
