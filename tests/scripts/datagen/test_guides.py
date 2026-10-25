@@ -12,7 +12,7 @@ import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
 from scripts.datagen import images, naming
-from scripts.datagen.sheet import Cell, column_letters, parse_grid, tabs
+from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
 from scripts.datagen.targets import guides
 
 TAB_LIST = 'items.push({name: "Tenebria", pageUrl: "x", gid: "484210597"});items.push({name: "Adelheid\\/ADHD", pageUrl: "x", gid: "7"});'
@@ -87,6 +87,20 @@ def test_grid_tracks_spans_line_breaks_and_images():
     # The rowspan above pushes row 5's first cell over to column B.
     assert grid[(4, 1)].text == "3.5/5"
     assert (1, 0) not in grid
+
+
+def test_fetcher_refetches_pages_but_caches_pictures(tmp_path, monkeypatch):
+    calls: list[str] = []
+
+    def download(url: str) -> bytes:
+        calls.append(url)
+        return f"{url}#{len(calls)}".encode("utf-8")
+
+    monkeypatch.setattr(Fetcher, "_download", staticmethod(download))
+    fetcher = Fetcher(tmp_path)
+    assert fetcher.text("page") != fetcher.text("page")
+    assert fetcher.bytes("picture") == fetcher.bytes("picture")
+    assert calls == ["page", "page", "picture"]
 
 
 def test_column_letters():

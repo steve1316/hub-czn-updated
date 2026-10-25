@@ -1,0 +1,791 @@
+{
+  "charResId": 1012,
+  "name": "Anika",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=128509108#gid=128509108",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "anika-efficiency-shockwave-handlock",
+      "title": {
+        "en": "Anika Efficiency, Shockwave, Handlock"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Efficency:\nIf cost reduced, activate efficency effect, Divines work for the condition\nShockwave:\nEnemies with Shockwave take 2x Tenacity damage, if ravaged +50% Additive\nHandlock:\nDebilitating self debuff that prevents Draw and Move, -1 stack end of turn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "10/24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-moral-support-1-0-ap-180-fm",
+      "title": {
+        "en": "Cycle -2 | Moral Support | -1/0 AP | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "16 Moral\n6 hits"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2avTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbYZ5WQqccA_kvyh9RdnK2p-q39HXhReTnQiLBRf3y3lP9K5voSLEOGsv1RntRTmy-GA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Basic Attack SubDPS | 0 AP | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "13 Moral\n4 Hits\nJust setup and play normally with Chizuru"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2avTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbYZ5WRlg6tMFLt4i7rIAKZI7ftu1L28JfpKsHRfvcNSNsKJ8lf3d6uuQwlZhCMA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | 20 Moral | -6 AP | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20 Moral\n7 Hits\nNot worth the extra cycle or AP really"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2ZPTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbgVcYBZBDMVk9d-HY4S4YriBecXMNdO_h5ATb3Iyc0mgr6rcaZw1h4Rkqrc6QILgsaY2KnDk"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "westmacott-lillian-scarlet-priscilla-ritochika",
+      "title": {
+        "en": "Westmacott | Lillian | Scarlet | Priscilla | Ritochika"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmacott: 5 Star stats + Draw Ego\nLillian: Draw Ego\nScarlet: 5 Starstats\nPriscilla: 4.5 Star Stats\nRitochika: 4 Star Stats, Moral Ego"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Standard Damage, EA can be good for her Subdps build"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can break under some circumstances"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can break under some circumstances"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nSometimes move Rampage trigger from deck to hand, ONLY DRAW so its mid\nE2:\nTeamwide +25% additive by playing normally\nE3:\nPotential levels, ok\nE4:\nBigger Shield, ok\nE5:\nPotential levels, ok\nE6:\nRavage is +2 AP 1 time each turn instead of 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-7",
+      "title": {
+        "en": "Part 7"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pulverize: 3 Moral for 2 AP, cantrips isnt that bad"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni4",
+              "name": "Rampage Trigger",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rampage Trigger: If this was able to Move from Used pile it would be more interesting"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ignition 1: Just adds Weakness Attack meh\nIgnition 2: Ravage for 2 AP, but no Efficiency is terrible\nIgnition 3: Funny nuke idea, but its not base damage\nIgnition 4: Draw Ignition but only 2 cost\nIgnition 5: Extra Attack per basic can be quite a few hits, but why is it not Bullet?"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Reloading 1: Can draw other's Lead cards, why would you?\nReloading 2: Really good saving 2 AP each turn and even enabling Efficency?\nReloading 3: Possibly a draw 5 each time, but you need to be able to generate Lead cards\nReloading 4: This is just not good\nReloading 5: Handlock is debilitating limiting you to 10 cards maximum basically (5 being Anika)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shock 1: Just slight numbers buff\nShock 2: AOE but 2 cost is bad\nShock 3: Combo but no Shockwave is bad\nShock 4: Exhaust but 2 cost ew\nShock 5: Most bullets are 0 cost, and 50% Rng makes me wanna throw up"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Warming 1: 1 more cost decrease is eh\nWarming 2: just numbers buff isnt enough\nWarming 3: Retain to draw instead of Efficency play\nWarming 4: Reduces alot more AP possible then other versions\nWarming 5: Cost reduces 3 but still eh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "anika-example-teams",
+      "title": {
+        "en": "Anika Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1060,
+                1012,
+                1043
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1012,
+                30113
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                1012,
+                1005
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1012,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1012,
+                1043
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1012,
+                30113
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "DPS"
+              },
+              "faces": [
+                1060,
+                30075,
+                1027,
+                1040,
+                30093,
+                1009,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "SubDPS"
+              },
+              "faces": [
+                1043,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1043,
+                30113,
+                1033,
+                1055,
+                1043,
+                1003
+              ]
+            },
+            {
+              "title": {
+                "en": "AP/Discount"
+              },
+              "faces": [
+                1052,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "1 AP Bullet"
+              },
+              "faces": [
+                1041,
+                1021
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,757 @@
+{
+  "charResId": 30134,
+  "name": "Rossweisse",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=644384273#gid=644384273",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "rossweisse-s-self-buffs",
+      "title": {
+        "en": "Rossweisse's Self Buffs"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_cre1",
+              "name": "Sword Tassel",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rossweisse(RW) Equilux, Apostle, Sword Tassel, Brand, Purity"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Equilux:\nStart of turn moves to hand, if moved split into Light and Dark\nLight and Dark variants depend on Flicker Blade version\nHit Count is fixed to 1\nSword Tassel:\nUnique Skill that RW stacks, combines into Flicker blade with Light and Dark\nFor each stack (Max 20) +80% Base Dmg max 1600% which is kinda crazy\nKyrken's Aegis:\nPermanent dmg buff to RW\nBrand of the Cycle:\nEnemy debuff that increases RW Card damage to enemy, decreases per card\nPurity:\nTriggered effect by having only 1 element of card in hand aka Justice"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_uni4",
+              "name": "Kyrken's Apostle",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20% Multi (30% E1) + 75% Multi (Flow) + 20% Brand = 115% + E4 (40%) 155%\nFinal Damage Buff:\n15% (20% E1) to flicker blade + 20% = 35% to Flicker Blade\nE2 20% Final Damage straight up E6 + 30% = 50%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "10/24"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-unbound-nuke-180-fm",
+      "title": {
+        "en": "Cycle -2 | Unbound Nuke | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni4",
+              "name": "Kyrken's Apostle",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6 Hits 2 Dark 2 Light 1 Cycle 1 Flicker\n3x4 +1x4 = 16 Sword Tassel E2 completes it to 20\nOnly needs 3 AP for Flicker to beat every other version in terms of damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Blink Flow | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30134_uni4",
+              "name": "Kyrken's Apostle",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just use Dark/Light until Retrieve is gone, use Flow on whatever version you want\nOnly iffy card is Blade of Cycle since you consume the stacks way too quickly"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sig-scarlet-westmacott-priscilla-lillian",
+      "title": {
+        "en": "Sig | Scarlet | Westmacott | Priscilla | Lillian"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30135,
+              "name": "Sig",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sig: Crit Chance, Crit Damage, 5 Star Stats, Ap and Multiplicative Dmg Ego, absolutely busted\nScarlet: 5 Starstats + Damage\nWestmacott: 5 Star stats + Draw Ego\nPriscilla: 4.5 Star Stats\nLillian: Draw Ego"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ritochika: 4 Star Stats, Moral Ego"
+          }
+        }
+      ]
+    },
+    {
+      "id": "radiance-executioners",
+      "title": {
+        "en": "Radiance | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "16% Crit Rate for playing Normally is great"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Standard Damage, EA can be good for her Subdps build"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nPretty good gives Kyrken's Apostle more damage and also 1 AP for setup\nE2:\nAbsolutely broken, 20% Final damage and 4 attacks for free for existing\nE3:\n30% more fixed damage from the Flicker Nuke is pretty good\nE4:\nUp to 40% Multi very easy to max as well\nE5:\nRW has very high base Multipliers, so potential levels are good\nE6:\nMore free Final damage and now Dark and Light doesn't matter for Hand Size is crazy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-7",
+      "title": {
+        "en": "Part 7"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_uni4",
+              "name": "Kyrken's Apostle",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30134_cre1",
+              "name": "Sword Tassel",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Kyrken's Apostle: Free Draw 2 and even +1 AP and permanent Buff on Initiation? This is so free\nTassel: Doesn't break Equilux and is BASE DAMAGE, thats crazy"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30134_srt4",
+              "name": "Flicker Blade",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30134_srt4_mut1",
+              "name": "Shard:Light",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Amped: Basic 4 activates 120% each, 600% base\nCycle: Amped but for Discard and drawing, condition is a bit less consistent\nAegis: Dog bad only proc twice and getting hit is an absolutely terrible condition\nBlink: 0 Cost to use and has retrieve for 4x (then 2x) but base is 240%\nUnbound: Ap and 1 Cost usage very easy to proc, 2 AP to equivalent base damage, bigger nukeability"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30134_uni2",
+              "name": "Radiant Sword Flow",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flow 1: Discard 2 if you want, with only a bit of damage upside, not sure if its 1 or 2 hits\nFlow 2: Discard 1 if you want, but if not just Proc a Light/Dark of your choice and is 0 cost? Its great\nFlow 3: Why you ever even want the Decrease Cost of 120% base damage\nFlow 4: 800% base damage is quite a large hit you can build up to\nFlow 5: 5 Justice Cards for 75% Multiplicative on RW's massive base damage is pretty crazy"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_uni1",
+              "name": "Sword Resonance",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Resonance 1: Activate for more Sword Tassel and hits but 1 AP each\nResonance 2: Self draw stapled on, amazing\nResonance 3: Best with Blink with its high base damage and actual usability\nResonance 4: Potentially good, but GR will tell\nResonance 5: Basically Resonance 4 but for more AP, wouldn't recommend really"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30134_uni3",
+              "name": "Blade of the Cycle",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 1: Just 6 Brand of Cycle, meh\nCycle 2: 2 Brand of Cycle, 2 Sword Tassel, meh\nCycle 3: Self Draw and Cost discount? Pretty good, 4 Brand of Cycle\nCycle 4: Brand of Cycle based on you, but real benefit is Purity making it 0 Cost\nCycle 5: Big hit, that can Proc again, but like why"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rossweisse-example-teams",
+      "title": {
+        "en": "Rossweisse Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30134,
+                30048,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30134,
+                1055,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30134,
+                1024,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30134,
+                1003,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30134,
+                30097,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30134,
+                30097,
+                1039
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                30048,
+                1003,
+                1055,
+                1049,
+                1033,
+                1040,
+                1041,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                30084,
+                1024,
+                30097,
+                1010
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1039,
+                30084
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

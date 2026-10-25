@@ -2,8 +2,8 @@
 Read the community Google Sheet the Guides page is imported from.
 
 The sheet is public, so its HTML view needs no login. Each tab's HTML is one table whose cells hold text and images in
-the positions a reader sees, which is what the guide importer works from. Every download is cached on disk so a re-run
-does not hit the network again.
+the positions a reader sees, which is what the guide importer works from. Pages are fetched fresh every run, since the
+sheet is edited, while pictures are cached on disk so a re-run does not download them again.
 """
 
 from __future__ import annotations
@@ -45,21 +45,21 @@ class Cell:
 
 
 class Fetcher:
-    """Downloads sheet pages and images, caching each one on disk by URL."""
+    """Downloads sheet pages fresh and images through an on-disk cache keyed by URL."""
 
     def __init__(self, cache_dir: Path):
         """
         Args:
-            cache_dir: Where downloads are kept between runs.
+            cache_dir: Where images are kept between runs.
         """
         self.cache_dir = cache_dir
 
     def bytes(self, url: str) -> bytes:
         """
-        One download, from the cache when it has been fetched before.
+        One image, from the cache when it has been fetched before.
 
         Args:
-            url: The address.
+            url: The address. A changed picture gets a new address, so a cached one never goes stale.
 
         Returns:
             The response body.
@@ -67,14 +67,12 @@ class Fetcher:
         path = self.cache_dir / hashlib.sha1(url.encode("utf-8")).hexdigest()
         if not path.is_file():
             self.cache_dir.mkdir(parents=True, exist_ok=True)
-            request = urllib.request.Request(url, headers={"User-Agent": "hub-czn datagen"})
-            with urllib.request.urlopen(request, timeout=_TIMEOUT_SECONDS) as response:
-                path.write_bytes(response.read())
+            path.write_bytes(self._download(url))
         return path.read_bytes()
 
     def text(self, url: str) -> str:
         """
-        One page as text.
+        One page as text, always fetched fresh so edits to the sheet show up.
 
         Args:
             url: The address.
@@ -82,7 +80,22 @@ class Fetcher:
         Returns:
             The decoded page.
         """
-        return self.bytes(url).decode("utf-8")
+        return self._download(url).decode("utf-8")
+
+    @staticmethod
+    def _download(url: str) -> bytes:
+        """
+        One request to the network.
+
+        Args:
+            url: The address.
+
+        Returns:
+            The response body.
+        """
+        request = urllib.request.Request(url, headers={"User-Agent": "hub-czn datagen"})
+        with urllib.request.urlopen(request, timeout=_TIMEOUT_SECONDS) as response:
+            return response.read()
 
 
 def column_letters(col: int) -> str:
