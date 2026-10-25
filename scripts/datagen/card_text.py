@@ -84,7 +84,7 @@ def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> M
         extras: The lines the card may carry: the god's divine epiphanies when it shows a god's emblem, else the common ones.
 
     Returns:
-        The match, or None when no candidate scores well enough or another level comes too close.
+        The match, or None when no candidate scores well enough, or another level or another added line comes too close.
     """
     letters, digits = _letters(text), _digits(text)
     scored = []
@@ -100,8 +100,14 @@ def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> M
     best = scored[0]
     if best[0] < MIN_SCORE:
         return None
-    other = next((entry for entry in scored if entry[2] != best[2]), None)
-    if other and best[0] - other[0] < LETTER_MARGIN and best[1] - other[1] < DIGIT_MARGIN:
+    other_level = next((entry for entry in scored if entry[2] != best[2]), None)
+    if other_level and best[0] - other_level[0] < LETTER_MARGIN and best[1] - other_level[1] < DIGIT_MARGIN:
+        return None
+    # Another line at the same level, such as "Apply 1 Weaken" against "Apply 2 Weaken". One digit barely moves the score, so any
+    # digit lead settles it, and no lead means the digit was not read. Lines with the same text are the same read, whatever their
+    # ids. No line against a short line is left to the ranking, as they score close even on a clean read.
+    other_line = next((entry for entry in scored if best[3] and entry[2] == best[2] and entry[3] and entry[3].text != best[3].text), None)
+    if other_line and best[0] - other_line[0] < LETTER_MARGIN and best[1] <= other_line[1]:
         return None
     return Match(best[2], best[3])
 

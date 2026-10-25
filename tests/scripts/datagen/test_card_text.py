@@ -35,6 +35,15 @@ def test_match_epiphany_refuses_a_close_call():
     assert match_epiphany("Deal 240% damage. Apply 4 Brand of the Cycle", [BRAND_4, twin], []) is None
 
 
+def test_match_epiphany_refuses_a_close_call_on_the_added_line():
+    # The digit that tells these two lines apart was not read.
+    weaken_2, weaken_1 = Extra("com_0050", None, "Apply 2 Weaken"), Extra("com_0055", None, "Apply 1 Weaken")
+    assert match_epiphany(f"{BRAND_4.text} Apply Weaken", [BRAND_4], [weaken_2, weaken_1]) is None
+    # Lines with the same text are one line, so they are no reason to refuse.
+    twin = Extra("com_0099", None, VULNERABLE.text)
+    assert match_epiphany(f"{BRAND_4.text} {VULNERABLE.text}", [BRAND_4], [VULNERABLE, twin]) == Match(0, VULNERABLE)
+
+
 def test_match_epiphany_refuses_garbage():
     assert match_epiphany("zzzz", [BRAND_4, BRAND_1], [VULNERABLE]) is None
 
