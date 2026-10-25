@@ -6,8 +6,10 @@ Everything runs on synthetic inputs, so no network or extracted client is needed
 from __future__ import annotations
 
 import io
+import random
 
-from PIL import Image, ImageDraw
+import pytest
+from PIL import Image, ImageDraw, ImageFilter
 
 from scripts.datagen import images, naming
 from scripts.datagen.sheet import Cell, column_letters, parse_grid, tabs
@@ -43,6 +45,27 @@ def _pattern(seed: int, size=(96, 96)) -> Image.Image:
         x, y = (seed * 13 + n * 29) % size[0], (seed * 7 + n * 41) % size[1]
         draw.rectangle((x, y, x + size[0] // 3, y + size[1] // 5), fill=((n * 80 + seed * 30) % 255, (n * 50) % 255, (seed * 120) % 255))
     return image
+
+
+def _textured(seed: int, size=(420, 632)) -> Image.Image:
+    """Card-sized art with enough corners and blobs for SIFT to find features, the same for the same seed."""
+    rng = random.Random(seed)
+    image = Image.new("RGB", size, (rng.randrange(256), rng.randrange(256), rng.randrange(256)))
+    draw = ImageDraw.Draw(image)
+    for _ in range(250):
+        x, y, r = rng.randrange(size[0]), rng.randrange(size[1]), rng.randrange(4, 30)
+        shape = draw.ellipse if rng.random() < 0.5 else draw.rectangle
+        shape((x - r, y - r, x + r, y + r), fill=(rng.randrange(256), rng.randrange(256), rng.randrange(256)))
+    return image.filter(ImageFilter.GaussianBlur(1))
+
+
+def _framed_render(art: Image.Image) -> Image.Image:
+    """`art` as the sheet shows a card: shrunk to a render with its title bar and text box painted over."""
+    render = art.resize(images.CARD_RENDER_SIZE)
+    draw = ImageDraw.Draw(render)
+    draw.rectangle((0, 0, 132, 25), fill=(20, 20, 20))
+    draw.rectangle((0, 110, 132, 197), fill=(20, 20, 20))
+    return render
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -149,8 +172,49 @@ def test_card_matcher_finds_the_art_under_a_frame(tmp_path):
     for name, art in arts.items():
         art.save(tmp_path / f"{name}.png")
     matcher = images.CardMatcher({name: tmp_path / f"{name}.png" for name in arts})
-    render = arts["unique_1_02"].resize(images.CARD_RENDER_SIZE)
-    draw = ImageDraw.Draw(render)
-    draw.rectangle((0, 0, 132, 25), fill=(20, 20, 20))
-    draw.rectangle((0, 110, 132, 197), fill=(20, 20, 20))
-    assert matcher.match(render) == "unique_1_02"
+    assert matcher.match(_framed_render(arts["unique_1_02"])) == "unique_1_02"
+
+
+def test_sift_matcher_finds_another_characters_card_under_a_frame(tmp_path):
+    pytest.importorskip("cv2")
+    for seed in (21, 22, 23):
+        _textured(seed).save(tmp_path / f"c_{seed}.png")
+    matcher = images.SiftMatcher({f"c_{seed}": [tmp_path / f"c_{seed}.png"] for seed in (21, 22, 23)},
+                                 query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
+    assert matcher.match(_framed_render(_textured(22))) == "c_22"
+    assert matcher.match(_framed_render(_textured(99))) is None
+
+
+def test_sift_matcher_tells_recoloured_art_apart_by_colour(tmp_path):
+    pytest.importorskip("cv2")
+    # The same art tinted red and blue at equal brightness, as with a monster card and its stronger form. SIFT sees them as one.
+    art = _textured(32).convert("L").point(lambda value: 40 + value * 175 // 255)
+    red, blue = (Image.merge("RGB", [art.point(lambda value, shift=shift: value + shift) for shift in tint]) for tint in ((40, -20, 0), (-40, 20, 0)))
+    red.save(tmp_path / "m_0001.png")
+    blue.save(tmp_path / "m_0002.png")
+    matcher = images.SiftMatcher({"m_0001": [tmp_path / "m_0001.png"], "m_0002": [tmp_path / "m_0002.png"]},
+                                 query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
+    assert matcher.match(_framed_render(blue)) == "m_0002"
+    assert matcher.match(_framed_render(red)) == "m_0001"
+
+
+def test_card_art_lists_a_shared_image_once_under_its_plainest_id(tmp_path, monkeypatch):
+    folder = tmp_path / "combatants" / "rin"
+    folder.mkdir(parents=True)
+    for stem, seed in (("c_1018_srt4_rsp1", 1), ("c_1018_srt4", 1), ("c_1018_uni1", 2)):
+        _pattern(seed).save(folder / f"{stem}.webp")
+    monkeypatch.setattr(guides, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(guides, "CARD_ART_DIRS", (folder.relative_to(tmp_path),))
+    assert sorted(guides._card_art()) == ["c_1018_srt4", "c_1018_uni1"]
+
+
+def test_cached_sift_remembers_results_without_building_the_matcher(monkeypatch):
+    def fail(*args, **kwargs):
+        raise AssertionError("the matcher should not be built on a cache hit")
+
+    monkeypatch.setattr(images, "SiftMatcher", fail)
+    cache: dict[str, str] = {}
+    cached = guides._CachedSift("sift-cards", {"n_0001": []}, cache)
+    data = b"picture"
+    cache[f"{guides.hashlib.sha1(data).hexdigest()}:sift-cards:{cached.signature}"] = "n_0001"
+    assert cached.match(Image.new("RGB", (133, 198)), data) == "n_0001"

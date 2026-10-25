@@ -19,12 +19,28 @@
           "items": [
             {
               "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
               "note": {
                 "en": ""
               }
@@ -76,30 +92,56 @@
           "items": [
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": ""
               }
@@ -123,24 +165,56 @@
           "items": [
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": ""
               }
@@ -164,24 +238,56 @@
           "items": [
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": ""
               }
@@ -197,16 +303,68 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lillian: Really really good also a 4 star, so easy to get dupes\nScarlet: Also really good, but needs dupes to beat Lillian\nDouglas: Atk% Stat Stick"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Marianne | Priscilla | Asteria"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Marianne"
+              },
+              "faces": [
+                20037
+              ]
+            },
+            {
+              "title": {
+                "en": "Priscilla"
+              },
+              "faces": [
+                20019
+              ]
+            },
+            {
+              "title": {
+                "en": "Asteria"
+              },
+              "faces": [
+                30045
+              ]
+            }
+          ]
         },
         {
           "type": "prose",
@@ -357,6 +515,43 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0009",
+              "name": "Dominion",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "10/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nHunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
@@ -367,6 +562,7 @@
           "items": [
             {
               "cardId": "c_1027_srt1",
+              "name": "Strike",
               "note": {
                 "en": ""
               },
@@ -374,6 +570,7 @@
             },
             {
               "cardId": "c_1027_uni4",
+              "name": "Flame Dragon's Sovereignty",
               "note": {
                 "en": ""
               },
@@ -392,6 +589,7 @@
           "items": [
             {
               "cardId": "c_1027_srt4",
+              "name": "Flame Dragon's Jewel",
               "note": {
                 "en": ""
               },
@@ -410,6 +608,7 @@
           "items": [
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": "Epiphany I"
               },
@@ -417,6 +616,7 @@
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": "Epiphany II"
               },
@@ -424,6 +624,7 @@
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": "Epiphany III"
               },
@@ -431,6 +632,7 @@
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -438,6 +640,7 @@
             },
             {
               "cardId": "c_1027_uni1",
+              "name": "Rising Dragon Spire",
               "note": {
                 "en": "Epiphany V"
               },
@@ -452,6 +655,51 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Unity 1: Draw = Stinky\nUnity 2: Her bread in butter, \"Moving\" strikes from \"Used pile\" Is a broken mechanic\nUnity 3: Draw = Stinky, but ig it has Utility\nUnity 4: Alternative, but it ends up clogging your deck after the first use\nUnity 5: Supplement to other Unities, less spire hits and 2 AP upfront cost, but its ok"
@@ -462,6 +710,7 @@
           "items": [
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": "Epiphany I"
               },
@@ -469,6 +718,7 @@
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": "Epiphany II"
               },
@@ -476,6 +726,7 @@
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": "Epiphany III"
               },
@@ -483,6 +734,7 @@
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -490,6 +742,7 @@
             },
             {
               "cardId": "c_1027_uni3",
+              "name": "Spirit of the Aromata",
               "note": {
                 "en": "Epiphany V"
               },
@@ -512,10 +765,93 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Buff/Debuff | Sub DPS | Passion | AP Engines"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1027,
+                1033,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1050,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1043,
+                1052
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1043,
+                1049,
+                1040
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1052,
+                1050,
+                1049,
+                1056
+              ]
+            },
+            {
+              "title": {
+                "en": "Sub DPS"
+              },
+              "faces": [
+                1052,
+                1043,
+                1005
+              ]
+            },
+            {
+              "title": {
+                "en": "Passion"
+              },
+              "faces": [
+                1033,
+                1050,
+                1005
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1052,
+                1039
+              ]
+            }
+          ]
         }
       ]
     }

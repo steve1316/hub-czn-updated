@@ -19,6 +19,14 @@
           "items": [
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
@@ -42,18 +50,21 @@
           "items": [
             {
               "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": ""
               }
@@ -105,30 +116,42 @@
           "items": [
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
@@ -175,18 +198,42 @@
           "items": [
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
@@ -221,24 +268,63 @@
           "items": [
             {
               "cardId": "c_1062_srt1",
+              "name": "Anchor",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_srt2",
+              "name": "Power Anchor",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni4",
+              "name": "Lift Anchor",
               "note": {
                 "en": ""
               }
@@ -273,42 +359,49 @@
           "items": [
             {
               "cardId": "c_1062_srt1",
+              "name": "Anchor",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
                 "en": ""
               }
@@ -330,16 +423,84 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lillian: Best generally\nRitochika: Very very good with Beryl retain as a support, Ritochika passive counts all ally attacks\nDouglas: Easiest to get dupes\nComparison is everyone at Max Dupes"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Westmacott | Scarlet | Priscilla | Asteria | Marianne"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30045,
+              "name": "Asteria",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20037,
+              "name": "Marianne",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -436,6 +597,27 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -762,6 +944,27 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0111",
+              "name": "Rage",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0079",
+              "name": "Overwhelm",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Rage: Potentially 0 AP 3 Moral\nOverwhelm: 3 hits for 0 AP"
@@ -772,6 +975,7 @@
           "items": [
             {
               "cardId": "c_1062_uni4",
+              "name": "Lift Anchor",
               "note": {
                 "en": ""
               },
@@ -790,6 +994,7 @@
           "items": [
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": "Epiphany I"
               },
@@ -797,6 +1002,7 @@
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
                 "en": "Epiphany II"
               },
@@ -804,15 +1010,25 @@
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "6/5"
             },
             {
               "cardId": "c_1062_srt4",
+              "name": "Anchor Shot",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany V"
               },
               "rating": "2/5"
             }
@@ -829,6 +1045,7 @@
           "items": [
             {
               "cardId": "c_1062_uni2",
+              "name": "Power Charge",
               "note": {
                 "en": "Epiphany I"
               },
@@ -836,6 +1053,7 @@
             },
             {
               "cardId": "c_1062_uni2",
+              "name": "Power Charge",
               "note": {
                 "en": "Epiphany II"
               },
@@ -843,6 +1061,7 @@
             },
             {
               "cardId": "c_1062_uni2",
+              "name": "Power Charge",
               "note": {
                 "en": "Epiphany III"
               },
@@ -850,8 +1069,17 @@
             },
             {
               "cardId": "c_1062_uni2",
+              "name": "Power Charge",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1062_uni2",
+              "name": "Power Charge",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "3/5"
             }
@@ -868,6 +1096,7 @@
           "items": [
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": "Epiphany I"
               },
@@ -875,6 +1104,7 @@
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": "Epiphany II"
               },
@@ -882,6 +1112,7 @@
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": "Epiphany III"
               },
@@ -889,6 +1120,7 @@
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -896,6 +1128,7 @@
             },
             {
               "cardId": "c_1062_uni1",
+              "name": "Anchor Pointer",
               "note": {
                 "en": "Epiphany V"
               },
@@ -914,8 +1147,41 @@
           "items": [
             {
               "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
               "note": {
-                "en": ""
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1062_uni3",
+              "name": "Charge Energy",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "5/5"
             }
@@ -936,10 +1202,95 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Buff/Debuff | AP/Cost Reduc | Heaven"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1062,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1040,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1043,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1033,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1024,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1010,
+                1039
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1040,
+                1043,
+                1049,
+                1041
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1050,
+                1024,
+                1010
+              ]
+            },
+            {
+              "title": {
+                "en": "AP/Cost Reduc"
+              },
+              "faces": [
+                1052,
+                1060,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "Heaven"
+              },
+              "faces": [
+                1008
+              ]
+            }
+          ]
         }
       ]
     }

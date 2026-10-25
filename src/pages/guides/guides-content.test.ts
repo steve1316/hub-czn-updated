@@ -21,7 +21,9 @@ describe('guides content', () => {
           if (block.type === 'card-list') {
             if (block.intro) expectLocalized(block.intro, `${ctx}.intro`)
             for (const it of block.items) {
-              expect(it.cardId, `${ctx}.cardId`).toMatch(/^c_\d+_/)
+              expect(it.cardId?.trim(), `${ctx}.cardId`).not.toBe('')
+              // Cards from other characters or the shared pool are not in the guide character's card list, so each one carries its name.
+              expect(it.name?.trim(), `${ctx}.name`).not.toBe('')
               // A card's note is often empty, since the sheet writes one combined note under a row of cards.
               expect(typeof it.note.en, `${ctx}.note`).toBe('string')
             }

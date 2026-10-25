@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
@@ -42,6 +44,18 @@
           "body": {
             "en": "Precision Aim and Eternal Hunger"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -82,30 +96,35 @@
           "items": [
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
@@ -140,30 +159,35 @@
           "items": [
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
@@ -200,42 +224,49 @@
           "items": [
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
@@ -270,42 +301,56 @@
           "items": [
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni4",
+              "name": "Bombardment Prep",
               "note": {
                 "en": ""
               }
@@ -340,42 +385,49 @@
           "items": [
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": ""
               }
@@ -545,6 +597,7 @@
           "items": [
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               },
@@ -563,6 +616,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -931,10 +997,52 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni4",
+              "name": "Bombardment Prep",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -947,30 +1055,35 @@
           "items": [
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_srt4",
+              "name": "Firing Preparation",
               "note": {
                 "en": ""
               }
@@ -1018,30 +1131,35 @@
           "items": [
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
               "note": {
                 "en": ""
               }
@@ -1089,6 +1207,7 @@
           "items": [
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1096,6 +1215,7 @@
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1103,6 +1223,7 @@
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1110,6 +1231,7 @@
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1117,6 +1239,7 @@
             },
             {
               "cardId": "c_1033_uni1",
+              "name": "Repose",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1135,6 +1258,7 @@
           "items": [
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1142,6 +1266,7 @@
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1149,6 +1274,7 @@
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1156,6 +1282,7 @@
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1163,6 +1290,7 @@
             },
             {
               "cardId": "c_1033_uni3",
+              "name": "Sir Kowalski",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1191,10 +1319,203 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Veronica | Veronica | Veronica | Veronica | Veronica"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            },
+            {
+              "title": {
+                "en": "Veronica"
+              },
+              "faces": [
+                1033,
+                1033,
+                1033,
+                1033,
+                1033,
+                1033
+              ]
+            }
+          ]
         }
       ]
     }

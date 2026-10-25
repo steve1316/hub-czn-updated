@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_1009_cre1",
+              "name": "Shadow Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_cre1",
+              "name": "Shadow Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
@@ -88,36 +91,42 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
@@ -158,18 +167,21 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": ""
               }
@@ -204,6 +216,21 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "name": "Curse",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
               "note": {
                 "en": ""
               }
@@ -238,48 +265,63 @@
           "items": [
             {
               "cardId": "c_1009_srt3",
+              "name": "Touch of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni4",
+              "name": "Cursed Gouge",
               "note": {
                 "en": ""
               }
@@ -305,36 +347,42 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": ""
               }
@@ -369,6 +417,21 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "name": "Curse",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
               "note": {
                 "en": ""
               }
@@ -401,16 +464,60 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20027,
+              "name": "Eloise",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20021,
+              "name": "Bria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20012,
+              "name": "Zatera",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Eloise: Most synergy there is and relatively easy to dupe\nZatera: Easy to get dupes for Atk%\nBria: Good synergy with Tressa, just need dupes to beat Eloise"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Itsuku | Anteia"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Itsuku"
+              },
+              "faces": [
+                30046
+              ]
+            },
+            {
+              "title": {
+                "en": "Anteia"
+              },
+              "faces": [
+                20008
+              ]
+            }
+          ]
         },
         {
           "type": "prose",
@@ -501,6 +608,27 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -857,10 +985,76 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nWanderer: Tech that justbeats some bosses\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -873,6 +1067,7 @@
           "items": [
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": "Epiphany I"
               },
@@ -880,6 +1075,7 @@
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": "Epiphany II"
               },
@@ -887,6 +1083,7 @@
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": "Epiphany III"
               },
@@ -894,6 +1091,7 @@
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -901,6 +1099,7 @@
             },
             {
               "cardId": "c_1009_srt4",
+              "name": "Unsheathe Dagger",
               "note": {
                 "en": "Epiphany V"
               },
@@ -919,6 +1118,7 @@
           "items": [
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": "Epiphany I"
               },
@@ -926,6 +1126,7 @@
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": "Epiphany II"
               },
@@ -933,6 +1134,7 @@
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": "Epiphany III"
               },
@@ -940,6 +1142,7 @@
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -947,6 +1150,7 @@
             },
             {
               "cardId": "c_1009_uni2",
+              "name": "Shadow Reload",
               "note": {
                 "en": "Epiphany V"
               },
@@ -965,6 +1169,7 @@
           "items": [
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": "Epiphany I"
               },
@@ -972,6 +1177,7 @@
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": "Epiphany II"
               },
@@ -979,6 +1185,7 @@
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": "Epiphany III"
               },
@@ -986,6 +1193,7 @@
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -993,6 +1201,7 @@
             },
             {
               "cardId": "c_1009_uni1",
+              "name": "Curse",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1011,6 +1220,7 @@
           "items": [
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1018,6 +1228,7 @@
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1025,6 +1236,7 @@
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1032,6 +1244,7 @@
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1039,6 +1252,7 @@
             },
             {
               "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
               "note": {
                 "en": "Epiphany V"
               },

@@ -19,18 +19,28 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
@@ -87,13 +97,36 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30047_uni1",
+              "name": "Experienced Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
               "note": {
                 "en": ""
               }
@@ -128,18 +161,35 @@
           "items": [
             {
               "cardId": "c_30047_col2",
+              "name": "Impulse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
               "note": {
                 "en": ""
               }
@@ -174,18 +224,35 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
               "note": {
                 "en": ""
               }
@@ -222,30 +289,35 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
@@ -280,30 +352,35 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
@@ -340,36 +417,49 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
               "note": {
                 "en": ""
               }
@@ -404,36 +494,49 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
               "note": {
                 "en": ""
               }
@@ -467,19 +570,57 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "m_0007",
+              "name": "Cyborg Automaton",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "m_0007",
+              "name": "Cyborg Automaton",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "m_0007",
+              "name": "Cyborg Automaton",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "m_0007",
+              "name": "Cyborg Automaton",
               "note": {
                 "en": ""
               }
@@ -503,48 +644,63 @@
           "items": [
             {
               "cardId": "c_30047_srt1",
+              "name": "Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_srt1",
+              "name": "Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_col2",
+              "name": "Impulse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
               "note": {
                 "en": ""
               }
@@ -703,6 +859,7 @@
           "items": [
             {
               "cardId": "c_30047_eps",
+              "name": "Reflection: Zero",
               "note": {
                 "en": "Epiphany I"
               },
@@ -710,6 +867,7 @@
             },
             {
               "cardId": "c_30047_eps",
+              "name": "Reflection: Zero",
               "note": {
                 "en": "Epiphany II"
               },
@@ -970,6 +1128,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0031",
+              "name": "Energy Barrier",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Iron Wall: 1 CounterAttack each turn\nSadism: AOE Vuln and technically 0 AP if it cost reduces the right card\nEnergy Barrier: 1 Time AP and Perma CounterAttack"
@@ -980,6 +1167,7 @@
           "items": [
             {
               "cardId": "c_30047_uni4",
+              "name": "Fighting Spirit",
               "note": {
                 "en": ""
               },
@@ -998,6 +1186,7 @@
           "items": [
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1005,6 +1194,7 @@
             },
             {
               "cardId": "c_30047_col2",
+              "name": "Impulse",
               "note": {
                 "en": ""
               },
@@ -1012,6 +1202,7 @@
             },
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1019,8 +1210,17 @@
             },
             {
               "cardId": "c_30047_srt4",
+              "name": "Hew",
               "note": {
                 "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
             }
@@ -1037,6 +1237,7 @@
           "items": [
             {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1044,17 +1245,35 @@
             },
             {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany IV"
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "name": "Fatal Strike",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
             }
           ]
         },
@@ -1069,6 +1288,7 @@
           "items": [
             {
               "cardId": "c_30047_uni1",
+              "name": "Experienced Strike",
               "note": {
                 "en": ""
               },
@@ -1076,6 +1296,7 @@
             },
             {
               "cardId": "c_30047_uni1",
+              "name": "Experienced Strike",
               "note": {
                 "en": ""
               },
@@ -1094,6 +1315,7 @@
           "items": [
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1101,22 +1323,33 @@
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany II"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "name": "Counterblade",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_30047_uni3",
+              "name": "Counterblade",
               "note": {
-                "en": "Epiphany III"
+                "en": "Epiphany V"
               },
               "rating": "4/5"
             }

@@ -4,7 +4,7 @@ import type { CardEntry } from '@/lib/types'
 import { resolveLang, localized } from '../../guides.utils'
 import type { LocalizedText } from '../../guides.types'
 
-type Item = { cardId: string; rating?: string; note: LocalizedText }
+type Item = { cardId: string; name?: string; rating?: string; note: LocalizedText }
 
 export function CardListBlock({
   intro,
@@ -30,7 +30,8 @@ export function CardListBlock({
             ({
               card_id: item.cardId,
               char_res_id: null,
-              name: item.cardId,
+              // Cards outside the guide character's own list fall back to the name the guide carries.
+              name: item.name ?? item.cardId,
               cost: 0,
               eff_value: 0,
               hits: 0,

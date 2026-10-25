@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": ""
               }
@@ -54,6 +57,7 @@
           "items": [
             {
               "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
               "note": {
                 "en": ""
               }
@@ -93,30 +97,35 @@
           "items": [
             {
               "cardId": "c_1018_srt1",
+              "name": "Dark Mist Sword: First Form",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni4",
+              "name": "Dark Mist Secret Art: Black Dance",
               "note": {
                 "en": ""
               }
@@ -140,30 +149,35 @@
           "items": [
             {
               "cardId": "c_1018_srt1",
+              "name": "Dark Mist Sword: First Form",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1018_uni4",
+              "name": "Dark Mist Secret Art: Black Dance",
               "note": {
                 "en": ""
               }
@@ -185,16 +199,60 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lillian: Best generally\nDouglas: Easiest to get dupes\nComparison is everyone at Max Dupes"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Westmacott | Scarlet | Priscilla"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -333,6 +391,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0009",
+              "name": "Dominion",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0079",
+              "name": "Overwhelm",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nOverwhelm: Makes up for Rin's AOE Weakness in runs, it's really nice to have\nBeligerence: Pretty good on Rin, its a skill card for blackdance, or finds more destructions"
@@ -343,6 +446,7 @@
           "items": [
             {
               "cardId": "c_1018_srt1",
+              "name": "Dark Mist Sword: First Form",
               "note": {
                 "en": ""
               },
@@ -350,6 +454,7 @@
             },
             {
               "cardId": "c_1018_srt2",
+              "name": "Dark Mist Sword: Third Form",
               "note": {
                 "en": ""
               },
@@ -357,6 +462,7 @@
             },
             {
               "cardId": "c_1018_uni4",
+              "name": "Dark Mist Secret Art: Black Dance",
               "note": {
                 "en": ""
               },
@@ -375,6 +481,7 @@
           "items": [
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": "Epiphany I"
               },
@@ -382,6 +489,7 @@
             },
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": "Epiphany II"
               },
@@ -389,6 +497,7 @@
             },
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": "Epiphany III"
               },
@@ -396,6 +505,7 @@
             },
             {
               "cardId": "c_1018_bhc1",
+              "name": "Sheathe Sword",
               "note": {
                 "en": "Epiphany I"
               },
@@ -414,6 +524,7 @@
           "items": [
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": "Epiphany I"
               },
@@ -421,6 +532,7 @@
             },
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": "Epiphany II"
               },
@@ -428,6 +540,7 @@
             },
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": "Epiphany III"
               },
@@ -435,10 +548,19 @@
             },
             {
               "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
               "note": {
                 "en": "Epiphany IV"
               },
               "rating": "2/5"
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "name": "Dark Mist Secret Art: Annihilation",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -453,6 +575,7 @@
           "items": [
             {
               "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
               "note": {
                 "en": "Epiphany I"
               },
@@ -460,6 +583,7 @@
             },
             {
               "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
               "note": {
                 "en": "Epiphany II"
               },
@@ -467,6 +591,7 @@
             },
             {
               "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
               "note": {
                 "en": "Epiphany I"
               },
@@ -485,6 +610,7 @@
           "items": [
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": "Epiphany I"
               },
@@ -492,6 +618,7 @@
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": "Epiphany II"
               },
@@ -499,6 +626,7 @@
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": "Epiphany I"
               },
@@ -506,6 +634,7 @@
             },
             {
               "cardId": "c_1018_uni3",
+              "name": "Dark Mist Inner Art",
               "note": {
                 "en": "Epiphany II"
               },
@@ -528,10 +657,88 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw/Discard | Buff/Debuff | Skill Cards | AP Gen"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1018,
+                1033,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1024,
+                1040
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1040
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1033,
+                1056
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw/Discard"
+              },
+              "faces": [
+                1033,
+                1040,
+                1049,
+                1043,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1040,
+                1056,
+                1049,
+                1024,
+                1050,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "Skill Cards"
+              },
+              "faces": [
+                1033,
+                1040,
+                1039,
+                1052,
+                1024,
+                1056
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Gen"
+              },
+              "faces": [
+                1039,
+                1052
+              ]
+            }
+          ]
         }
       ]
     }

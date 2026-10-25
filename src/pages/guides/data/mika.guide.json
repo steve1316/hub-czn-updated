@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
@@ -70,30 +72,35 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
               "note": {
                 "en": ""
               }
@@ -128,30 +135,42 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -186,42 +205,49 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
@@ -245,54 +271,63 @@
           "items": [
             {
               "cardId": "c_1039_srt2",
+              "name": "Water Barrier",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt2",
+              "name": "Water Barrier",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
               "note": {
                 "en": ""
               }
@@ -318,36 +353,42 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
               "note": {
                 "en": ""
               }
@@ -376,36 +417,42 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
               "note": {
                 "en": ""
               }
@@ -555,6 +602,19 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
@@ -565,6 +625,27 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -583,6 +664,7 @@
           "items": [
             {
               "cardId": "c_1039_srt2",
+              "name": "Water Barrier",
               "note": {
                 "en": ""
               },
@@ -867,6 +949,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
@@ -877,6 +1004,31 @@
           "items": [
             {
               "cardId": "c_1039_uni4",
+              "name": "Deluge",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
               "note": {
                 "en": ""
               },
@@ -895,6 +1047,7 @@
           "items": [
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": "Epiphany I"
               },
@@ -902,6 +1055,7 @@
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": "Epiphany II"
               },
@@ -909,6 +1063,7 @@
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": "Epiphany III"
               },
@@ -916,6 +1071,7 @@
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -923,6 +1079,7 @@
             },
             {
               "cardId": "c_1039_srt4",
+              "name": "Source of Water",
               "note": {
                 "en": "Epiphany V"
               },
@@ -941,6 +1098,7 @@
           "items": [
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": "Epiphany I"
               },
@@ -948,6 +1106,7 @@
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": "Epiphany II"
               },
@@ -955,6 +1114,7 @@
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": "Epiphany III"
               },
@@ -962,6 +1122,7 @@
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -969,6 +1130,7 @@
             },
             {
               "cardId": "c_1039_uni2",
+              "name": "Tactical Analysis",
               "note": {
                 "en": "Epiphany V"
               },
@@ -987,30 +1149,35 @@
           "items": [
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1039_uni1",
+              "name": "Blessing of Waves",
               "note": {
                 "en": ""
               }
@@ -1058,6 +1225,7 @@
           "items": [
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1065,6 +1233,7 @@
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1072,6 +1241,7 @@
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1079,6 +1249,7 @@
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1086,6 +1257,7 @@
             },
             {
               "cardId": "c_1039_uni3",
+              "name": "Whirlpool",
               "note": {
                 "en": "Epiphany V"
               },

@@ -52,7 +52,22 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": ""
               }
@@ -75,7 +90,29 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
               "note": {
                 "en": ""
               }
@@ -104,13 +141,29 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1050_uni3",
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": ""
               }
@@ -132,16 +185,84 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Ritochika: 3 Moral Ego Skill\nLillian: Draw 1 Ego Skill\nDouglas: Atk% Stat Stick\nNyx: Great Draw"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Westmaccot | Marianne | Priscilla | Scarlet"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Westmaccot"
+              },
+              "faces": [
+                30044
+              ]
+            },
+            {
+              "title": {
+                "en": "Marianne"
+              },
+              "faces": [
+                20037
+              ]
+            },
+            {
+              "title": {
+                "en": "Priscilla"
+              },
+              "faces": [
+                20019
+              ]
+            },
+            {
+              "title": {
+                "en": "Scarlet"
+              },
+              "faces": [
+                20034
+              ]
+            }
+          ]
         },
         {
           "type": "prose",
@@ -292,6 +413,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0009",
+              "name": "Dominion",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
@@ -302,6 +468,7 @@
           "items": [
             {
               "cardId": "c_1050_uni4",
+              "name": "Gale Strike",
               "note": {
                 "en": ""
               },
@@ -322,6 +489,51 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1050_uni2",
+              "name": "Break Armor",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Break 1: -4 Fort, only source\nBreak 2: 0 Cost = OP\nBreak 3: Little bit of damage\nBreak 4: Little bit of damage\nBreak 5: Ig you could discard and draw it, but why\n+2 Moral is a good neutral to get"
@@ -332,30 +544,35 @@
           "items": [
             {
               "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
               "note": {
                 "en": ""
               }
@@ -403,6 +620,7 @@
           "items": [
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": "Epiphany I"
               },
@@ -410,6 +628,7 @@
             },
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": "Epiphany II"
               },
@@ -417,6 +636,7 @@
             },
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": "Epiphany III"
               },
@@ -424,6 +644,7 @@
             },
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -431,6 +652,7 @@
             },
             {
               "cardId": "c_1050_uni3",
+              "name": "Wind Riding",
               "note": {
                 "en": "Epiphany V"
               },
@@ -453,10 +675,94 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Vuln Enjoyers | PassionEnjoyer | AP Engines"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1027,
+                1050,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1050,
+                1040
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1050,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1040,
+                1050,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1050,
+                1039
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1040,
+                1043,
+                1049
+              ]
+            },
+            {
+              "title": {
+                "en": "Vuln Enjoyers"
+              },
+              "faces": [
+                30047,
+                1062,
+                1040,
+                1064
+              ]
+            },
+            {
+              "title": {
+                "en": "PassionEnjoyer"
+              },
+              "faces": [
+                1027
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1052,
+                1039
+              ]
+            }
+          ]
         }
       ]
     }

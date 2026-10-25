@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
@@ -54,12 +57,14 @@
           "items": [
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
@@ -104,7 +109,22 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
@@ -151,13 +171,22 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
@@ -186,30 +215,35 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
@@ -235,30 +269,42 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
@@ -293,42 +339,49 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
                 "en": ""
               }
@@ -368,37 +421,50 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
@@ -433,42 +499,49 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
@@ -493,31 +566,43 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               }
@@ -552,12 +637,28 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": ""
               }
@@ -760,6 +861,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1110,6 +1224,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
@@ -1120,6 +1263,7 @@
           "items": [
             {
               "cardId": "c_30075_srt1",
+              "name": "Pulse Fire",
               "note": {
                 "en": ""
               },
@@ -1127,6 +1271,7 @@
             },
             {
               "cardId": "c_30075_uni4",
+              "name": "Pale Shooting Star",
               "note": {
                 "en": ""
               },
@@ -1145,6 +1290,7 @@
           "items": [
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1152,6 +1298,7 @@
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1159,6 +1306,7 @@
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1166,6 +1314,7 @@
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1173,6 +1322,7 @@
             },
             {
               "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1191,6 +1341,7 @@
           "items": [
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1198,6 +1349,7 @@
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1205,6 +1357,7 @@
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1212,6 +1365,7 @@
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1219,6 +1373,7 @@
             },
             {
               "cardId": "c_30075_uni2",
+              "name": "Shining Core",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1237,6 +1392,7 @@
           "items": [
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1244,6 +1400,7 @@
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1251,6 +1408,7 @@
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1258,10 +1416,19 @@
             },
             {
               "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
               "note": {
                 "en": "Epiphany IV"
               },
               "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "name": "Plasma Missile",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -1276,6 +1443,7 @@
           "items": [
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1283,15 +1451,25 @@
             },
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
                 "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
               "note": {
-                "en": "Epiphany III"
+                "en": "Epiphany IV"
               },
               "rating": "4/5"
             }

@@ -19,24 +19,28 @@
           "items": [
             {
               "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_cre2",
+              "name": "Inferno Rhapsody",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_cre2",
+              "name": "Inferno Rhapsody",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_cre1",
+              "name": "Heavensfall",
               "note": {
                 "en": ""
               }
@@ -88,24 +92,28 @@
           "items": [
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
@@ -140,6 +148,7 @@
           "items": [
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
@@ -168,24 +177,28 @@
           "items": [
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
@@ -221,25 +234,50 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni4",
+              "name": "Blazing War Dance",
               "note": {
                 "en": ""
               }
@@ -273,25 +311,50 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30048_uni1",
+              "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni4",
+              "name": "Blazing War Dance",
               "note": {
                 "en": ""
               }
@@ -326,48 +389,56 @@
           "items": [
             {
               "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30048_uni4",
+              "name": "Blazing War Dance",
               "note": {
                 "en": ""
               }
@@ -508,6 +579,7 @@
           "items": [
             {
               "cardId": "c_30048_col",
+              "name": "Guilt",
               "note": {
                 "en": ""
               },
@@ -532,6 +604,7 @@
           "items": [
             {
               "cardId": "c_30048_cre2",
+              "name": "Inferno Rhapsody",
               "note": {
                 "en": ""
               },
@@ -550,6 +623,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -884,10 +970,27 @@
           "items": [
             {
               "cardId": "c_30048_col2",
+              "name": "Guilt",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -902,6 +1005,7 @@
           "items": [
             {
               "cardId": "c_30048_uni4",
+              "name": "Blazing War Dance",
               "note": {
                 "en": ""
               },
@@ -920,22 +1024,41 @@
           "items": [
             {
               "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
                 "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
+              "note": {
+                "en": "Epiphany II"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany III"
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany IV"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30048_srt4",
+              "name": "Exorcist's Formation",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "2/5"
             }
@@ -952,6 +1075,7 @@
           "items": [
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": "Epiphany I"
               },
@@ -959,6 +1083,7 @@
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": "Epiphany II"
               },
@@ -966,6 +1091,7 @@
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": "Epiphany III"
               },
@@ -973,6 +1099,7 @@
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -980,6 +1107,7 @@
             },
             {
               "cardId": "c_30048_uni2",
+              "name": "Night Rain",
               "note": {
                 "en": "Epiphany V"
               },
@@ -998,6 +1126,7 @@
           "items": [
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1005,6 +1134,7 @@
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1012,6 +1142,7 @@
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1019,6 +1150,7 @@
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1026,6 +1158,7 @@
             },
             {
               "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1044,6 +1177,7 @@
           "items": [
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1051,6 +1185,7 @@
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1058,15 +1193,25 @@
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30048_uni3",
+              "name": "Soulfire Dance",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany V"
               },
               "rating": "4/5"
             }

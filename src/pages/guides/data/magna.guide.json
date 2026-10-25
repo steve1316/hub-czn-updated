@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
@@ -76,24 +78,35 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
               "note": {
                 "en": ""
               }
@@ -117,18 +130,21 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
@@ -146,24 +162,28 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni4",
+              "name": "Storm of Bitter Cold",
               "note": {
                 "en": ""
               }
@@ -189,42 +209,49 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni4",
+              "name": "Storm of Bitter Cold",
               "note": {
                 "en": ""
               }
@@ -248,30 +275,35 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
@@ -295,42 +327,49 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni4",
+              "name": "Storm of Bitter Cold",
               "note": {
                 "en": ""
               }
@@ -358,16 +397,68 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20024,
+              "name": "Wilhelmina",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30054,
+              "name": "Erica",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20032,
+              "name": "Rachel",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20013,
+              "name": "Raidel",
+              "rating": "0/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Wilhelmina: Easiest to get Def% high\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel: The supporty option that increases Shield%, still a great Ego Skill\nRaidel: Trash"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Eishlen | Alsea"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30091,
+              "name": "Alsea",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -521,14 +612,32 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "n_0028",
+              "name": "Ebony Lumen",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": ""
               },
               "rating": "3/5"
             },
             {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "c_1010_col",
+              "name": "Impulse",
               "note": {
                 "en": ""
               },
@@ -547,6 +656,23 @@
           "items": [
             {
               "cardId": "c_1010_uni4",
+              "name": "Storm of Bitter Cold",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
               "note": {
                 "en": ""
               },
@@ -565,6 +691,7 @@
           "items": [
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": "Epiphany I"
               },
@@ -572,6 +699,7 @@
             },
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": "Epiphany II"
               },
@@ -579,6 +707,7 @@
             },
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": "Epiphany III"
               },
@@ -586,6 +715,7 @@
             },
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -593,6 +723,7 @@
             },
             {
               "cardId": "c_1010_srt4",
+              "name": "Ice Fragment",
               "note": {
                 "en": "Epiphany V"
               },
@@ -611,30 +742,35 @@
           "items": [
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
               "note": {
                 "en": ""
               }
@@ -682,6 +818,7 @@
           "items": [
             {
               "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
               "note": {
                 "en": ""
               },
@@ -700,6 +837,7 @@
           "items": [
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": "Epiphany I"
               },
@@ -707,6 +845,7 @@
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": "Epiphany II"
               },
@@ -714,6 +853,7 @@
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": "Epiphany III"
               },
@@ -721,6 +861,7 @@
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -728,6 +869,7 @@
             },
             {
               "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
               "note": {
                 "en": "Epiphany V"
               },
@@ -750,10 +892,92 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw | AOE | Vuln Abusers | AP Engines | Shielders"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1010,
+                1052,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1010,
+                1064,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1010,
+                1017,
+                1040
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1033,
+                1049,
+                1040,
+                1021
+              ]
+            },
+            {
+              "title": {
+                "en": "AOE"
+              },
+              "faces": [
+                1033,
+                1064,
+                1008,
+                1017,
+                1021
+              ]
+            },
+            {
+              "title": {
+                "en": "Vuln Abusers"
+              },
+              "faces": [
+                1033,
+                1064,
+                1062,
+                1040,
+                1017,
+                30047,
+                1021
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1052,
+                1060,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "Shielders"
+              },
+              "faces": [
+                1008,
+                30047,
+                1028
+              ]
+            }
+          ]
         }
       ]
     }

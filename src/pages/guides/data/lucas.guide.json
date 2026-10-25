@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_1021_cre2",
+              "name": "Explosive Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_cre3",
+              "name": "Dispersing Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_cre5",
+              "name": "Flame Shot",
               "note": {
                 "en": ""
               }
@@ -70,24 +73,28 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
@@ -111,24 +118,28 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
@@ -152,24 +163,28 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
@@ -189,36 +204,42 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
@@ -241,31 +262,43 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
               "note": {
                 "en": ""
               }
@@ -289,36 +322,42 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
@@ -342,36 +381,42 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": ""
               }
@@ -393,16 +438,60 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20016,
+              "name": "Yuri",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20007,
+              "name": "Akad",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20036,
+              "name": "Akad",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Yuri: You generally play Lucas as a Draw Support so Yuri Ego has best synergy\nAkad/Carroty both buff Lucas damage"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Serithea | Janet"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20014,
+              "name": "Serithea",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20004,
+              "name": "Janet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -535,6 +624,43 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0009",
+              "name": "Dominion",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nGrave: Can be pretty good, but it dies eventually which is unfortuate"
@@ -545,6 +671,31 @@
           "items": [
             {
               "cardId": "c_1021_uni4",
+              "name": "R.P.G-7",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
               "note": {
                 "en": ""
               },
@@ -563,6 +714,7 @@
           "items": [
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": "Epiphany I"
               },
@@ -570,6 +722,7 @@
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
                 "en": "Epiphany II"
               },
@@ -577,15 +730,25 @@
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany V"
               },
               "rating": "4/5"
             }
@@ -602,6 +765,7 @@
           "items": [
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": "Epiphany I"
               },
@@ -609,15 +773,33 @@
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
                 "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "name": "Flame Thrower",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "1/5"
             }
@@ -634,6 +816,7 @@
           "items": [
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": "Epiphany I"
               },
@@ -641,6 +824,7 @@
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": "Epiphany II"
               },
@@ -648,6 +832,7 @@
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": "Epiphany III"
               },
@@ -655,6 +840,7 @@
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -662,6 +848,7 @@
             },
             {
               "cardId": "c_1021_uni1",
+              "name": "S.S.S",
               "note": {
                 "en": "Epiphany V"
               },
@@ -680,6 +867,7 @@
           "items": [
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": "Epiphany I"
               },
@@ -687,6 +875,7 @@
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": "Epiphany II"
               },
@@ -694,6 +883,7 @@
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": "Epiphany III"
               },
@@ -701,6 +891,7 @@
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -708,6 +899,7 @@
             },
             {
               "cardId": "c_1021_uni3",
+              "name": "Flashbang",
               "note": {
                 "en": "Epiphany V"
               },
@@ -730,10 +922,106 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Vulnerable | AP Engines | Bullets | PassionEnjoyer"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1021,
+                1010,
+                1008
+              ]
+            },
+            {
+              "faces": [
+                1021,
+                1033,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                1004,
+                1021,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1021,
+                1049,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1021,
+                1010,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1021,
+                1049,
+                1052
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1010,
+                1008,
+                1049,
+                1040,
+                1043
+              ]
+            },
+            {
+              "title": {
+                "en": "Vulnerable"
+              },
+              "faces": [
+                1010,
+                1024,
+                1008
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1052,
+                1039,
+                1008
+              ]
+            },
+            {
+              "title": {
+                "en": "Bullets"
+              },
+              "faces": [
+                1004,
+                1041
+              ]
+            },
+            {
+              "title": {
+                "en": "PassionEnjoyer"
+              },
+              "faces": [
+                1027
+              ]
+            }
+          ]
         }
       ]
     }

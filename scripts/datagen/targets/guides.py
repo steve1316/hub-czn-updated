@@ -4,8 +4,9 @@ The Guides page, imported from the community Google Sheet ("Sproot's Nightmare")
 Each character tab in the sheet becomes one guide. A tab is a free-form layout of side-by-side panels, so the importer
 works from its cell grid: empty rows split it into bands, each band becomes a section, and the 6-column panels inside a
 band become blocks in reading order. Text is kept as written, through the tidy pass with swear-softening. Faces become
-character ids and card renders become card ids where the game's art identifies them clearly. The rest is reported, and
-can be filled in through `api/data/overrides/guides.json` keyed by tab and cell, such as "Tenebria!B11".
+character ids and card renders become card ids where the game's art identifies them clearly. A card is looked for among
+the guide character's own cards first, then among every card in the deck builder. The rest is reported, and can be
+filled in through `api/data/overrides/guides.json` keyed by tab and cell, such as "Tenebria!B11".
 
 This target needs the network, so it only runs when named: `python -m scripts.datagen guides`.
 """
@@ -27,7 +28,8 @@ from PIL import Image
 from scripts.datagen import images, roster
 from scripts.datagen.naming import ROMAN, slug
 from scripts.datagen.overrides import Issue, Overrides
-from scripts.datagen.runner import Context, TargetResult, json_bytes
+from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
+from scripts.datagen.targets import card_art, neutral_cards
 from scripts.datagen.sheet import EDIT_URL, HTMLVIEW_URL, TAB_URL, Cell, Fetcher, parse_grid, tabs
 
 NAME = "guides"
@@ -59,6 +61,15 @@ REVIEW_PAGE = "unidentified.html"
 
 # Card match results by picture and candidate set, so a re-run skips the slow alignment search.
 MATCH_CACHE = "card_matches.json"
+
+# The deck builder's card art, which the guide page shows. Matching against it finds cards of any character or the shared pool.
+_NEUTRAL_ART_DIR = neutral_cards.DATA_DIR / neutral_cards.IMAGE_DIR
+CARD_ART_DIRS = (card_art.COMBATANTS_DIR, _NEUTRAL_ART_DIR / "neutral", _NEUTRAL_ART_DIR / neutral_cards.MONSTER_SHARD)
+# The faces the app can show, and the client's portrait folder a face is compared against.
+APP_FACE_DIR = Path("api/assets/game/faces")
+CLIENT_FACE_DIR = Path("face/character")
+_APP_FACE = re.compile(r"^bookmark_face_character_map_(\d+)$")
+_CLIENT_FACE = re.compile(r"^(?:shortcut_face_character|face_character|face_character_popup|portrait_character_crop)_(\d+)$")
 
 
 class _Download:
@@ -181,13 +192,16 @@ def build(ctx: Context) -> TargetResult:
     cache = ctx.client.root / ".cache" / "guides"
     fetcher = Fetcher(cache)
     downloads = _Downloads(fetcher)
-    faces = images.FaceMatcher(ctx.client.root / "face" / "character")
+    faces = images.FaceMatcher(ctx.client.root / CLIENT_FACE_DIR)
     labels = _PictureLabels(overrides.directives.get("_pictures", {}))
     match_cache_path = cache / MATCH_CACHE
     match_cache: dict[str, str] = json.loads(match_cache_path.read_text(encoding="utf-8")) if match_cache_path.is_file() else {}
     tab_ids = overrides.directives.get("_tabs", {})
     names = {_normalise(entry["name"]): res_id for res_id, entry in roster.combatants().items()}
     own_cards = _cards_by_owner(ctx)
+    sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
+    sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
+    card_names = _card_names(ctx)
     issues: list[Issue] = []
     files: dict[Path, bytes] = {}
     guides: list[tuple[str, str]] = []
@@ -201,7 +215,8 @@ def build(ctx: Context) -> TargetResult:
         name = roster.combatants()[res_id]["name"]
         grid = parse_grid(fetcher.text(TAB_URL.format(gid=gid)))
         illustrations, card_ids = _card_candidates(ctx, own_cards.get(str(res_id), []))
-        builder = _GuideBuilder(ctx, downloads, faces, _CachedCards(illustrations, card_ids, match_cache), overrides, labels, tab_name)
+        cards = _CachedCards(illustrations, card_ids, match_cache)
+        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, overrides, labels, tab_name)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -270,6 +285,112 @@ def _card_candidates(ctx: Context, own_cards: list[str]) -> tuple[dict[str, Path
     return illustrations, card_ids
 
 
+def _card_art() -> dict[str, list[Path]]:
+    """
+    The deck builder's card art, one entry per distinct image.
+
+    Returns:
+        Card id -> its WebP. Cards that share one image file are listed once, under the id with the fewest parts, such as
+        `c_1012_srt4` rather than `c_1012_srt4_rsp1`, since the art alone cannot tell them apart.
+    """
+    by_content: dict[str, list[Path]] = {}
+    for folder in CARD_ART_DIRS:
+        for path in sorted((REPO_ROOT / folder).rglob("*.webp")):
+            by_content.setdefault(hashlib.sha1(path.read_bytes()).hexdigest(), []).append(path)
+    plainest = (min(paths, key=lambda path: (path.stem.count("_"), path.stem)) for paths in by_content.values())
+    return {path.stem: [path] for path in plainest}
+
+
+def _face_art(ctx: Context) -> dict[str, list[Path]]:
+    """
+    The client portraits of every character the app has a face for.
+
+    Args:
+        ctx: The run context.
+
+    Returns:
+        res_id (as text) -> its portraits in the client's `face/character` folder.
+    """
+    shown = {match.group(1) for path in (REPO_ROOT / APP_FACE_DIR).glob("*.png") if (match := _APP_FACE.match(path.stem))}
+    faces: dict[str, list[Path]] = {}
+    for path in sorted((ctx.client.root / CLIENT_FACE_DIR).glob("*.png")):
+        match = _CLIENT_FACE.match(path.stem)
+        if match and match.group(1) in shown:
+            faces.setdefault(match.group(1), []).append(path)
+    return faces
+
+
+def _card_names(ctx: Context) -> dict[str, str]:
+    """
+    The display name of every card a guide can list.
+
+    Args:
+        ctx: The run context.
+
+    Returns:
+        Card id -> name, for character cards and for the deck builder's shared pool, whose ids differ from the client's.
+    """
+    names = {card_id: ctx.text(name, sentences=False) for card_id in ctx.client.cards if (name := ctx.resolver.card_name(card_id))}
+    names.update({card["id"]: card["name"] for card in json.loads((REPO_ROOT / neutral_cards.OUTPUT_PATH).read_text(encoding="utf-8"))})
+    return names
+
+
+def _remembered(cache: dict[str, str], key: str, find) -> str:
+    """
+    A match result from the cache, found and stored on a miss.
+
+    Args:
+        cache: Cache key -> match, or "" for no match. Updated in place.
+        key: This picture's cache key.
+        find: Returns the match, or None, when the key is not cached yet.
+
+    Returns:
+        The cached match, or "" for no match.
+    """
+    if key not in cache:
+        cache[key] = find() or ""
+    return cache[key]
+
+
+class _CachedSift:
+    """A SIFT matcher over one pool, built only on the first cache miss, with results remembered across runs."""
+
+    def __init__(self, pool: str, candidates: dict[str, list[Path]], cache: dict[str, str], **options):
+        """
+        Args:
+            pool: The pool's name in cache keys, such as "sift-cards".
+            candidates: Key -> its images.
+            cache: "<picture sha1>:<pool>:<candidates and settings sha1>" -> key, or "" for no match. Updated in place.
+            options: Passed on to `images.SiftMatcher`.
+        """
+        self.pool = pool
+        self.candidates = candidates
+        self.cache = cache
+        self.options = options
+        # The matcher's settings are part of the signature, so tuning a threshold re-matches every picture.
+        settings = sorted((name, value) for name, value in vars(images).items() if name.startswith("SIFT_"))
+        self.signature = hashlib.sha1(f"{sorted(candidates)}{settings}{sorted(options.items())}".encode("utf-8")).hexdigest()[:12]
+        self._matcher: images.SiftMatcher | None = None
+
+    def match(self, picture: Image.Image, data: bytes) -> str | None:
+        """
+        The candidate a picture shows.
+
+        Args:
+            picture: The decoded picture.
+            data: Its downloaded bytes, which key the cache.
+
+        Returns:
+            The candidate's key, or None when there is no clear match.
+        """
+        def find():
+            if self._matcher is None:
+                self._matcher = images.SiftMatcher(self.candidates, **self.options)
+            return self._matcher.match(picture)
+
+        return _remembered(self.cache, f"{hashlib.sha1(data).hexdigest()}:{self.pool}:{self.signature}", find) or None
+
+
 class _CachedCards:
     """One character's card matcher, with results remembered across runs."""
 
@@ -297,25 +418,28 @@ class _CachedCards:
         Returns:
             The card id, or None when there is no clear match.
         """
-        key = f"{hashlib.sha1(data).hexdigest()}:{self.signature}"
-        if key not in self.cache:
+        def find():
             if self._matcher is None:
                 self._matcher = images.CardMatcher(self.illustrations)
-            self.cache[key] = self._matcher.match(picture) or ""
-        return self.card_ids.get(self.cache[key])
+            return self._matcher.match(picture)
+
+        return self.card_ids.get(_remembered(self.cache, f"{hashlib.sha1(data).hexdigest()}:{self.signature}", find))
 
 
 class _GuideBuilder:
     """Turns one tab's cell grid into guide sections."""
 
-    def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, cards: "_CachedCards", overrides: Overrides,
-                 labels: _PictureLabels, tab_name: str):
+    def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
+                 sift_cards: _CachedSift, card_names: dict[str, str], overrides: Overrides, labels: _PictureLabels, tab_name: str):
         """
         Args:
             ctx: The run context.
             downloads: The sheet's pictures, decoded once per run.
-            faces: Identifies face portraits.
+            faces: Identifies face portraits by hash.
+            sift_faces: Identifies the face portraits the hash misses.
             cards: Identifies this character's card renders.
+            sift_cards: Identifies the card renders `cards` misses, among every card in the deck builder.
+            card_names: Card id -> display name, written next to each listed card.
             overrides: The guides overrides, whose entries can label one cell as "<tab>!<cell>".
             labels: Labels by picture, which also collect what nothing identified.
             tab_name: The sheet tab, used in cell override keys and references.
@@ -323,7 +447,10 @@ class _GuideBuilder:
         self.ctx = ctx
         self.downloads = downloads
         self.faces = faces
+        self.sift_faces = sift_faces
         self.cards = cards
+        self.sift_cards = sift_cards
+        self.card_names = card_names
         self.overrides = overrides
         self.labels = labels
         self.tab_name = tab_name
@@ -447,13 +574,13 @@ class _GuideBuilder:
                     if label.get("skip"):
                         continue
                     if "charResId" in label or (kind == "face" and "cardId" not in label):
-                        res_id = label.get("charResId") or self.faces.match(download.picture, hash_value=download.hash)
+                        res_id = label.get("charResId") or self._face(download)
                         if res_id is None:
                             self.labels.unidentify(download.hash, download.data, kind, ref)
                         else:
                             face_row.append((cell.col, res_id))
                     elif "cardId" in label or kind == "card":
-                        card_id = label.get("cardId") or self.cards.card_id(download.picture, download.data)
+                        card_id = label.get("cardId") or self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
                         if card_id is None:
                             self.labels.unidentify(download.hash, download.data, kind, ref)
                             last_card = None
@@ -476,9 +603,24 @@ class _GuideBuilder:
             blocks.append(face_block)
         return consumed, blocks, named
 
+    def _face(self, download: _Download) -> int | None:
+        """
+        The character a face portrait shows.
+
+        Args:
+            download: The sheet's picture.
+
+        Returns:
+            The res_id, from the portrait hash or else from SIFT, or None when neither finds a clear match.
+        """
+        res_id = self.faces.match(download.picture, hash_value=download.hash)
+        if res_id is None and (found := self.sift_faces.match(download.picture, download.data)):
+            res_id = int(found)
+        return res_id
+
     def _card_list(self, cards: list[dict], ratings: dict[int, str]) -> dict:
         """
-        Cards with the rating under each one.
+        Cards with their names and the rating under each one.
 
         Args:
             cards: Identified cards with their column and epiphany position.
@@ -491,7 +633,10 @@ class _GuideBuilder:
         variants = {card["cardId"] for card in cards if card["epiphany"] > 1} if ratings else set()
         items = []
         for card in cards:
-            item = {"cardId": card["cardId"], "note": {"en": f"Epiphany {ROMAN.get(card['epiphany'], card['epiphany'])}" if card["cardId"] in variants else ""}}
+            item = {"cardId": card["cardId"]}
+            if card["cardId"] in self.card_names:
+                item["name"] = self.card_names[card["cardId"]]
+            item["note"] = {"en": f"Epiphany {ROMAN.get(card['epiphany'], card['epiphany'])}" if card["cardId"] in variants else ""}
             if card["col"] in ratings:
                 item["rating"] = ratings[card["col"]]
             items.append(item)

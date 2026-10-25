@@ -13,6 +13,7 @@ import re
 from pathlib import Path
 
 from scripts.datagen.client import parse_list
+from scripts.datagen.naming import RARITIES
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
 from scripts.datagen.templates import format_number
@@ -29,8 +30,6 @@ IMAGES_ROOT = Path("src/pages/deck-builder/data")
 RELIC_TABLES = ("relic@relic.json", "relic(disaster)@relic.json")
 
 SLOTS = {"EQUIP_WEAPON": "Weapon", "EQUIP_ARMOR": "Armor", "EQUIP_ACC": "Accessory"}
-
-RARITIES = {"RARITY_COMMON": "Common", "RARITY_RARE": "Rare", "RARITY_LEGEND": "Legendary", "RARITY_UNIQUE": "Unique"}
 
 # `#rev_N_M#` shows the term value of the relic's Nth linked status, its `s1_cs_value[N]`. M only names the status effect
 # the value feeds, so it does not change the number shown.

@@ -59,6 +59,8 @@ function getMonsterCardCost(item: DeckCardInstance) {
   const rarity = normalizeComparable(item.rarity ?? 'common')
 
   switch (rarity) {
+    // The game ranks unique above legendary, so it falls in the top bracket.
+    case 'unique':
     case 'legendary':
       return DECK_BUILDER_COST_RULES.monsterLegendary
     case 'rare':
@@ -151,7 +153,7 @@ export function calculateDeckBuilderSlotCost(slot: SquadSlot): DeckBuilderSlotCo
   }, 0)
 
   const monsterLegendaryCards = slot.cards.reduce((total, item) => {
-    if (item.group === 'monster' && normalizeComparable(item.rarity ?? '') === 'legendary') {
+    if (item.group === 'monster' && ['legendary', 'unique'].includes(normalizeComparable(item.rarity ?? ''))) {
       return total + getMonsterCardCost(item)
     }
 

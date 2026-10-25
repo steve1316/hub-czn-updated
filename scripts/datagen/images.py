@@ -5,6 +5,9 @@ Character faces in the sheet are the game's face portraits, so a perceptual hash
 in-game card renders with a frame, name and text drawn over the art, so they are matched by sliding the bare client
 illustration under the render's art window and keeping the best fit. Only a clear winner counts. Anything ambiguous is
 reported rather than guessed.
+
+Pictures those two miss, such as a face cropped differently or another character's card, fall back to `SiftMatcher`,
+which matches local features and so survives frames, crops and rescaling. It needs OpenCV, imported only when used.
 """
 
 from __future__ import annotations
@@ -12,7 +15,7 @@ from __future__ import annotations
 import io
 import re
 from pathlib import Path
-from typing import TypeVar
+from typing import Generic, TypeVar
 
 from PIL import Image, ImageChops, ImageStat
 
@@ -31,6 +34,27 @@ CARD_SCALES = (133, 150, 170)
 CARD_OFFSETS = range(-30, 31, 3)
 # The best card must beat the runner-up by this much mean pixel difference (0-255).
 CARD_MIN_MARGIN = 8
+
+# SIFT features found per image, Lowe's ratio for a good feature match, and the RANSAC reprojection limit in pixels.
+SIFT_FEATURES = 600
+SIFT_RATIO = 0.75
+SIFT_REPROJECTION = 6.0
+# Fewer good feature matches than this cannot fit a transform.
+SIFT_MIN_GOOD = 6
+# A transform that shrinks or grows the picture more than this is degenerate, such as every point collapsing onto one spot.
+SIFT_SCALE_RANGE = (0.25, 4.0)
+# Candidates are shrunk to this longest side before their features are found.
+SIFT_MAX_SIDE = 512
+# The best candidate needs this many inliers, where a wrong one rarely reaches 12. Every candidate within `SIFT_MIN_RATIO`
+# of the best is a contender.
+SIFT_MIN_INLIERS = 20
+SIFT_MIN_RATIO = 2.0
+# Contenders are laid over the picture and compared by colour (mean pixel difference, 0-255). The winner must be at most
+# this far off, since a card's frame and glow keep even the right art around 10-60, and beat the next contender by the margin.
+SIFT_MAX_COLOUR_DIFFERENCE = 64
+SIFT_COLOUR_MARGIN = 8
+# Sheet pictures are enlarged by this much before matching, since they are small next to the client art.
+SIFT_QUERY_SCALE = 2
 
 # What a matcher ranks: a res_id for faces, an illustration name for cards.
 _Key = TypeVar("_Key")
@@ -179,3 +203,127 @@ class CardMatcher:
             difference = sum(ImageStat.Stat(ImageChops.difference(window, candidate)).mean) / 3
             best[name] = min(difference, best.get(name, difference))
         return _clear_winner(best, margin=CARD_MIN_MARGIN)
+
+
+class SiftMatcher(Generic[_Key]):
+    """Finds which candidate a picture shows by matching SIFT features, then checking the colours of the closest ones."""
+
+    def __init__(self, candidates: dict[_Key, list[Path]], query_box: tuple[int, int, int, int] | None = None, query_size: tuple[int, int] | None = None):
+        """
+        Args:
+            candidates: Key -> the images that show it. A key scores the best of its images.
+            query_box: The part of a resized picture to match, such as a card's art window. The whole picture when None.
+            query_size: The size a picture is resized to before matching. Its own size when None.
+        """
+        import cv2  # Only uncached guide pictures need OpenCV, so it is not a sidecar dependency.
+        import numpy
+
+        self._cv2 = cv2
+        self._np = numpy
+        self._sift = cv2.SIFT_create(nfeatures=SIFT_FEATURES)
+        self._matcher = cv2.BFMatcher()
+        self.query_box = query_box
+        self.query_size = query_size
+        self._candidates: list[tuple[_Key, Path, list, object]] = []
+        for key, paths in candidates.items():
+            for path in paths:
+                art = self._candidate_image(path)
+                points, descriptors = self._sift.detectAndCompute(self._grey(art), None)
+                if descriptors is not None:
+                    self._candidates.append((key, path, points, descriptors))
+
+    def match(self, image: Image.Image) -> _Key | None:
+        """
+        The candidate a picture shows.
+
+        Args:
+            image: The sheet's picture.
+
+        Returns:
+            The winning key, or None when no candidate is a clear match.
+        """
+        query = self._query_image(image)
+        points, descriptors = self._sift.detectAndCompute(self._grey(query), None)
+        if descriptors is None or len(points) < SIFT_MIN_GOOD:
+            return None
+        best: dict[_Key, tuple[int, Path, object]] = {}
+        for key, path, candidate_points, candidate_descriptors in self._candidates:
+            inliers, transform = self._fit(points, descriptors, candidate_points, candidate_descriptors)
+            if inliers > best.get(key, (0,))[0]:
+                best[key] = (inliers, path, transform)
+        ranked = sorted(best.items(), key=lambda item: -item[1][0])
+        if not ranked or ranked[0][1][0] < SIFT_MIN_INLIERS:
+            return None
+        contenders = [item for item in ranked if item[1][0] * SIFT_MIN_RATIO > ranked[0][1][0]]
+        # Features can line up the wrong art, and recoloured art (a monster card and its stronger form) shares them, so colour decides.
+        differences = {key: self._colour_difference(query, path, transform) for key, (_, path, transform) in contenders}
+        return _clear_winner(differences, margin=SIFT_COLOUR_MARGIN, max_distance=SIFT_MAX_COLOUR_DIFFERENCE)
+
+    def _fit(self, points: list, descriptors, candidate_points: list, candidate_descriptors) -> tuple[int, object]:
+        """
+        How well a picture's features map onto one candidate's.
+
+        Args:
+            points: The picture's keypoints.
+            descriptors: Their descriptors.
+            candidate_points: The candidate's keypoints.
+            candidate_descriptors: Their descriptors.
+
+        Returns:
+            The number of good matches that agree on one transform, and that picture -> candidate transform. (0, None) when
+            there is no plausible transform.
+        """
+        np = self._np
+        pairs = self._matcher.knnMatch(descriptors, candidate_descriptors, k=2)
+        good = [pair[0] for pair in pairs if len(pair) == 2 and pair[0].distance < SIFT_RATIO * pair[1].distance]
+        if len(good) < SIFT_MIN_GOOD:
+            return 0, None
+        source = np.float32([points[match.queryIdx].pt for match in good])
+        target = np.float32([candidate_points[match.trainIdx].pt for match in good])
+        # RANSAC samples at random, so a fixed seed keeps the result the same from run to run.
+        self._cv2.setRNGSeed(0)
+        transform, mask = self._cv2.estimateAffinePartial2D(source, target, method=self._cv2.RANSAC, ransacReprojThreshold=SIFT_REPROJECTION)
+        smallest, largest = SIFT_SCALE_RANGE
+        if transform is None or not smallest <= float(np.hypot(transform[0, 0], transform[1, 0])) <= largest:
+            return 0, None
+        return int(mask.sum()), transform
+
+    def _colour_difference(self, query: Image.Image, path: Path, transform) -> float:
+        """
+        The mean pixel difference between a picture and a candidate laid over it.
+
+        Args:
+            query: The prepared picture.
+            path: The candidate image.
+            transform: The picture -> candidate transform from `_fit`.
+
+        Returns:
+            The difference (0-255) over the area the candidate covers, or 255 when it covers none.
+        """
+        np = self._np
+        size = query.size
+        art = np.asarray(self._candidate_image(path))
+        warped = self._cv2.warpAffine(art, transform, size, flags=self._cv2.WARP_INVERSE_MAP)
+        covered = self._cv2.warpAffine(np.ones(art.shape[:2], np.uint8), transform, size, flags=self._cv2.WARP_INVERSE_MAP) > 0
+        if not covered.any():
+            return 255.0
+        return float(np.abs(warped.astype(np.int16) - np.asarray(query).astype(np.int16))[covered].mean())
+
+    def _query_image(self, image: Image.Image) -> Image.Image:
+        """A sheet picture resized, cropped and enlarged for matching."""
+        if self.query_size:
+            image = image.resize(self.query_size)
+        if self.query_box:
+            image = image.crop(self.query_box)
+        return image.resize((image.width * SIFT_QUERY_SCALE, image.height * SIFT_QUERY_SCALE), Image.BICUBIC)
+
+    @staticmethod
+    def _candidate_image(path: Path) -> Image.Image:
+        """A candidate image, flattened and shrunk to at most `SIFT_MAX_SIDE`."""
+        art = load(path.read_bytes())
+        art.thumbnail((SIFT_MAX_SIDE, SIFT_MAX_SIDE), Image.LANCZOS)
+        return art
+
+    def _grey(self, image: Image.Image):
+        """An image as the greyscale array OpenCV expects."""
+        return self._np.asarray(image.convert("L"))

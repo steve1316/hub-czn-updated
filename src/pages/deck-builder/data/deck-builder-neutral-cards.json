@@ -3506,7 +3506,8 @@
     "description": "[Exhaust] Decrease Morale by 1. Decrease Resolve by 3.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0001.webp"
+    "image_path": "neutral-cards/monster/m_0001.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0002",
@@ -3521,7 +3522,8 @@
     "description": "At the start of the turn, 1 Arbitum - Damage Reduction (cannot stack). 1 Arbitum - Damage Reduction.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0002.webp"
+    "image_path": "neutral-cards/monster/m_0002.webp",
+    "rarity": "Rare"
   },
   {
     "id": "m_0003",
@@ -3536,7 +3538,8 @@
     "description": "150% Damage. Vulnerable 4.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0003.webp"
+    "image_path": "neutral-cards/monster/m_0003.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00031",
@@ -3551,7 +3554,8 @@
     "description": "200% Defense-Based Damage. 200% Shield. When Shield is gained, decrease Cost of this card by 1 for 1 turn until activated.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00031.webp"
+    "image_path": "neutral-cards/monster/card_mon_00031.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0004",
@@ -3566,7 +3570,8 @@
     "description": "350% Damage. If the target has Shield, +50% Damage.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0004.webp"
+    "image_path": "neutral-cards/monster/m_0004.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0005",
@@ -3581,7 +3586,8 @@
     "description": "Proc 1 card(s) from the bottom of Draw Pile. Select 1 card(s) in hand and move those cards to bottom of Draw Pile.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0005.webp"
+    "image_path": "neutral-cards/monster/m_0005.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0006",
@@ -3596,7 +3602,8 @@
     "description": "140% Shield. At the start of the next turn, increase Action Count of all enemies by 2.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0006.webp"
+    "image_path": "neutral-cards/monster/m_0006.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0007",
@@ -3611,7 +3618,8 @@
     "description": "600% Defense-Based Damage. Incinerate: Proc this card.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0007.webp"
+    "image_path": "neutral-cards/monster/m_0007.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0008",
@@ -3626,7 +3634,8 @@
     "description": "120% Damage × 2. Defeat: 120% Damage × 2 to random enemies.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0008.webp"
+    "image_path": "neutral-cards/monster/m_0008.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0009",
@@ -3641,7 +3650,8 @@
     "description": "At the start of the turn, 1 Morale.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0009.webp"
+    "image_path": "neutral-cards/monster/m_0009.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0010",
@@ -3658,7 +3668,8 @@
     "description": "[Exhaust] 2 Resolve. Gain Fixed Shield equal to lost HP.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0010.webp"
+    "image_path": "neutral-cards/monster/m_0010.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00030",
@@ -3673,7 +3684,8 @@
     "description": "70% Shield Retention (cannot stack).",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00030.webp"
+    "image_path": "neutral-cards/monster/card_mon_00030.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0011",
@@ -3688,7 +3700,8 @@
     "description": "When a Targeting Attack Card is activated, 1 Agony to the target.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0011.webp"
+    "image_path": "neutral-cards/monster/m_0011.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00033",
@@ -3703,7 +3716,8 @@
     "description": "3 Fortitude for 1 turn equal to X. On the next turn, 3 Morale for 1 turn equal to X.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00033.webp"
+    "image_path": "neutral-cards/monster/card_mon_00033.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0012",
@@ -3720,7 +3734,8 @@
     "description": "[Exhaust 2] Draw 4.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0012.webp"
+    "image_path": "neutral-cards/monster/m_0012.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00032",
@@ -3737,7 +3752,8 @@
     "description": "[Exhaust] Exhaust all cards in hand. Draw 3.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00032.webp"
+    "image_path": "neutral-cards/monster/card_mon_00032.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00025",
@@ -3754,7 +3770,8 @@
     "description": "[Exhaust] 1 Spiritualization.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00025.webp"
+    "image_path": "neutral-cards/monster/card_mon_00025.webp",
+    "rarity": "Unique"
   },
   {
     "id": "m_0013",
@@ -3769,7 +3786,8 @@
     "description": "At the end of the turn, 200% Damage to a random enemy.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0013.webp"
+    "image_path": "neutral-cards/monster/m_0013.webp",
+    "rarity": "Rare"
   },
   {
     "id": "m_0014",
@@ -3786,7 +3804,8 @@
     "description": "[Exhaust] Draw 1. If there are no cards in hand, Draw 4 additionally.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0014.webp"
+    "image_path": "neutral-cards/monster/m_0014.webp",
+    "rarity": "Rare"
   },
   {
     "id": "m_0015",
@@ -3803,7 +3822,8 @@
     "description": "[Exhaust] 2 Morale Leech.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0015.webp"
+    "image_path": "neutral-cards/monster/m_0015.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00040",
@@ -3820,7 +3840,8 @@
     "description": "[Exhaust] Remove Impair from allies. 700% Shield.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00040.webp"
+    "image_path": "neutral-cards/monster/card_mon_00040.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00037",
@@ -3837,7 +3858,8 @@
     "description": "[Initiation] Select and proc 1 Upgrade Cards in Draw Pile.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00037.webp"
+    "image_path": "neutral-cards/monster/card_mon_00037.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0016",
@@ -3854,7 +3876,8 @@
     "description": "[Haste] 160% Damage. Increase Action Count by 1.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0016.webp"
+    "image_path": "neutral-cards/monster/m_0016.webp",
+    "rarity": "Common"
   },
   {
     "id": "card_mon_00038",
@@ -3871,7 +3894,8 @@
     "description": "[Unactivatable] 150% Damage × 4 to random enemies. After the end of 3 turns, remove Unactivatable.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00038.webp"
+    "image_path": "neutral-cards/monster/card_mon_00038.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00039",
@@ -3886,7 +3910,8 @@
     "description": "When 7 Attack Cards are activated, 700% Fixed Damage to all enemies.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00039.webp"
+    "image_path": "neutral-cards/monster/card_mon_00039.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0017",
@@ -3901,7 +3926,8 @@
     "description": "250% Damage. If this is the only card in hand, decrease Cost by 2.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0017.webp"
+    "image_path": "neutral-cards/monster/m_0017.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0018",
@@ -3918,7 +3944,8 @@
     "description": "[Haste] 120% Damage. If Action Count of the target is 5 or more, gain 2 AP.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0018.webp"
+    "image_path": "neutral-cards/monster/m_0018.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0019",
@@ -3933,7 +3960,8 @@
     "description": "5 Crystallize.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0019.webp"
+    "image_path": "neutral-cards/monster/m_0019.webp",
+    "rarity": "Rare"
   },
   {
     "id": "m_0020",
@@ -3948,7 +3976,8 @@
     "description": "50% × 4 Damage. 3 Mark.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0020.webp"
+    "image_path": "neutral-cards/monster/m_0020.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0021",
@@ -3965,7 +3994,8 @@
     "description": "[Exhaust] 200% Shield. Damage to all enemies equal to Shield gained.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0021.webp"
+    "image_path": "neutral-cards/monster/m_0021.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0022",
@@ -3980,7 +4010,8 @@
     "description": "300% Damage. Ravage: Gain 2 AP.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0022.webp"
+    "image_path": "neutral-cards/monster/m_0022.webp",
+    "rarity": "Rare"
   },
   {
     "id": "m_0023",
@@ -3995,7 +4026,8 @@
     "description": "50% × 4 Damage. 6 Agony.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0023.webp"
+    "image_path": "neutral-cards/monster/m_0023.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0024",
@@ -4012,7 +4044,8 @@
     "description": "[Exhaust] Select and Draw 1 card(s) from Draw Pile, then apply Retrieve to those cards.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0024.webp"
+    "image_path": "neutral-cards/monster/m_0024.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00041",
@@ -4029,7 +4062,8 @@
     "description": "[Retain] Recover 3 AP. On Hit, decrease Cost by 1 until activated.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00041.webp"
+    "image_path": "neutral-cards/monster/card_mon_00041.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0025",
@@ -4044,7 +4078,8 @@
     "description": "120% Shield, 1 Vulnerable. If the target did not act, +120% Shield Gain, +1 Vulnerable.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0025.webp"
+    "image_path": "neutral-cards/monster/m_0025.webp",
+    "rarity": "Common"
   },
   {
     "id": "card_mon_00043",
@@ -4061,7 +4096,8 @@
     "description": "[Exhaust] At the start of the next turn, 300% Shield. When damage is taken, activate this card from Draw Pile and Discard Pile.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00043.webp"
+    "image_path": "neutral-cards/monster/card_mon_00043.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00042",
@@ -4076,7 +4112,8 @@
     "description": "Select and Draw 1 card(s) from Draw Pile, then apply Spectral Poison to those cards.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00042.webp"
+    "image_path": "neutral-cards/monster/card_mon_00042.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0026",
@@ -4093,7 +4130,8 @@
     "description": "[Exhaust 3] Draw 2 Exhaust card(s) of this unit.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0026.webp"
+    "image_path": "neutral-cards/monster/m_0026.webp",
+    "rarity": "Rare"
   },
   {
     "id": "card_mon_00034",
@@ -4108,7 +4146,8 @@
     "description": "Each time Damage is taken, Fixed Heal 80%.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00034.webp"
+    "image_path": "neutral-cards/monster/card_mon_00034.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00036",
@@ -4125,7 +4164,8 @@
     "description": "[Finale] 1 Wing Flaps.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00036.webp"
+    "image_path": "neutral-cards/monster/card_mon_00036.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "card_mon_00035",
@@ -4140,7 +4180,8 @@
     "description": "500% Damage. Defeat: Recover 3 AP, then move this card to hand.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/card_mon_00035.webp"
+    "image_path": "neutral-cards/monster/card_mon_00035.webp",
+    "rarity": "Legendary"
   },
   {
     "id": "m_0027",
@@ -4155,7 +4196,8 @@
     "description": "50% Damage × 5 to random enemies.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0027.webp"
+    "image_path": "neutral-cards/monster/m_0027.webp",
+    "rarity": "Common"
   },
   {
     "id": "m_0028",
@@ -4170,6 +4212,7 @@
     "description": "120% Damage to all enemies, 2 Weaken, 2 Impair.",
     "restrictions": null,
     "allowed_classes": [],
-    "image_path": "neutral-cards/monster/m_0028.webp"
+    "image_path": "neutral-cards/monster/m_0028.webp",
+    "rarity": "Common"
   }
 ]

@@ -18,7 +18,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": ""
               }
@@ -70,36 +78,49 @@
           "items": [
             {
               "cardId": "c_1017_srt3",
+              "name": "Steel Barrier",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
@@ -134,36 +155,49 @@
           "items": [
             {
               "cardId": "c_1017_srt3",
+              "name": "Steel Barrier",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
@@ -210,6 +244,7 @@
           "items": [
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
@@ -252,30 +287,42 @@
           "items": [
             {
               "cardId": "c_1017_srt3",
+              "name": "Steel Barrier",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": ""
               }
@@ -310,12 +357,21 @@
           "items": [
             {
               "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": ""
               }
@@ -347,6 +403,43 @@
         "en": "Eishlen | Erica | Wilhelma | Rachel"
       },
       "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30054,
+              "name": "Erica",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20024,
+              "name": "Wilhelma",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20032,
+              "name": "Rachel",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
         {
           "type": "prose",
           "body": {
@@ -442,6 +535,35 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -738,6 +860,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0067",
+              "name": "Iron Wall",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0031",
+              "name": "Energy Barrier",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Iron Wall: 1 CounterAttack each turn\nSadism: AOE Vuln and technically 0 AP if it cost reduces the right card\nEnergy Barrier: 1 Time AP and Perma CounterAttack"
@@ -748,6 +899,7 @@
           "items": [
             {
               "cardId": "c_1017_srt3",
+              "name": "Steel Barrier",
               "note": {
                 "en": ""
               },
@@ -755,6 +907,7 @@
             },
             {
               "cardId": "c_1017_uni4",
+              "name": "Iron Skin",
               "note": {
                 "en": ""
               },
@@ -769,6 +922,51 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_srt4",
+              "name": "Hovering Metal",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Hover 1: More\nHover 2: Counter Attack\nHover 3: Celestial\nHover 4: Exhaust\nHover 5: Upgrade"
@@ -779,6 +977,7 @@
           "items": [
             {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": "Epiphany I"
               },
@@ -786,6 +985,7 @@
             },
             {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
                 "en": "Epiphany II"
               },
@@ -793,15 +993,25 @@
             },
             {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1017_uni2",
+              "name": "Metal Extraction",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany V"
               },
               "rating": "5/5"
             }
@@ -818,10 +1028,43 @@
           "items": [
             {
               "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
               "note": {
-                "en": ""
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1017_uni1",
+              "name": "Metal Pierce",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -836,6 +1079,7 @@
           "items": [
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": "Epiphany I"
               },
@@ -843,6 +1087,7 @@
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": "Epiphany II"
               },
@@ -850,10 +1095,19 @@
             },
             {
               "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
               "note": {
                 "en": "Epiphany III"
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
             }
           ]
         },

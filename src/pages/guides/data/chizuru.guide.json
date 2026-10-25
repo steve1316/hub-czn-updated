@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
@@ -48,6 +50,7 @@
           "items": [
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
@@ -87,42 +90,49 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
@@ -146,42 +156,49 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
@@ -211,42 +228,49 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
@@ -270,42 +294,49 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
@@ -331,18 +362,21 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": ""
               }
@@ -581,6 +615,27 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing"
@@ -591,6 +646,7 @@
           "items": [
             {
               "cardId": "c_1060_srt1",
+              "name": "Moonslash",
               "note": {
                 "en": ""
               },
@@ -598,6 +654,7 @@
             },
             {
               "cardId": "c_1060_srt3",
+              "name": "Spiritflame's Ward",
               "note": {
                 "en": ""
               },
@@ -605,6 +662,7 @@
             },
             {
               "cardId": "c_1060_uni4",
+              "name": "Shadow of the Moon",
               "note": {
                 "en": "Epiphany I"
               },
@@ -612,6 +670,7 @@
             },
             {
               "cardId": "c_1060_uni4",
+              "name": "Shadow of the Moon",
               "note": {
                 "en": "Epiphany II"
               },
@@ -630,6 +689,7 @@
           "items": [
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": "Epiphany I"
               },
@@ -637,6 +697,7 @@
             },
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": "Epiphany II"
               },
@@ -644,6 +705,7 @@
             },
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": "Epiphany III"
               },
@@ -651,6 +713,7 @@
             },
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -658,6 +721,7 @@
             },
             {
               "cardId": "c_1060_srt4",
+              "name": "Karmic Flames",
               "note": {
                 "en": "Epiphany V"
               },
@@ -676,6 +740,7 @@
           "items": [
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": "Epiphany I"
               },
@@ -683,6 +748,7 @@
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": "Epiphany II"
               },
@@ -690,6 +756,7 @@
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": "Epiphany III"
               },
@@ -697,6 +764,7 @@
             },
             {
               "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -715,6 +783,7 @@
           "items": [
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": "Epiphany I"
               },
@@ -722,6 +791,7 @@
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": "Epiphany II"
               },
@@ -729,6 +799,7 @@
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": "Epiphany III"
               },
@@ -736,6 +807,7 @@
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -743,6 +815,7 @@
             },
             {
               "cardId": "c_1060_uni1",
+              "name": "Tsukuyomi",
               "note": {
                 "en": "Epiphany V"
               },
@@ -761,6 +834,7 @@
           "items": [
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": "Epiphany I"
               },
@@ -768,6 +842,7 @@
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": "Epiphany II"
               },
@@ -775,6 +850,7 @@
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": "Epiphany III"
               },
@@ -782,6 +858,7 @@
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -789,6 +866,7 @@
             },
             {
               "cardId": "c_1060_uni3",
+              "name": "Oni Hunt",
               "note": {
                 "en": "Epiphany V"
               },
@@ -811,10 +889,85 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Card generators | Buffers/Debuffers | Multi Hits"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1060,
+                1043,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1033,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1004
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                30075,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1043,
+                1033,
+                1004,
+                1040,
+                1049
+              ]
+            },
+            {
+              "title": {
+                "en": "Card generators"
+              },
+              "faces": [
+                1009,
+                1027,
+                1004,
+                30075
+              ]
+            },
+            {
+              "title": {
+                "en": "Buffers/Debuffers"
+              },
+              "faces": [
+                1056,
+                1052,
+                1050
+              ]
+            },
+            {
+              "title": {
+                "en": "Multi Hits"
+              },
+              "faces": [
+                1043,
+                1052,
+                1004,
+                30075
+              ]
+            }
+          ]
         }
       ]
     }
