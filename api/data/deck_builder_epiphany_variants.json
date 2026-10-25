@@ -5440,7 +5440,7 @@
       {
         "variant_id": "c_30047_srt4_epiphany_1",
         "level": 1,
-        "name": "Hew I",
+        "name": "Hew (Ironclad)",
         "cost": 3,
         "card_type": "Attack",
         "tags": [
@@ -5454,7 +5454,7 @@
       {
         "variant_id": "c_30047_srt4_epiphany_2",
         "level": 2,
-        "name": "Hew II",
+        "name": "Hew (Extreme)",
         "cost": 3,
         "card_type": "Attack",
         "tags": [
@@ -5468,7 +5468,7 @@
       {
         "variant_id": "c_30047_srt4_epiphany_3",
         "level": 3,
-        "name": "Hew III",
+        "name": "Hew (Flash)",
         "cost": 3,
         "card_type": "Attack",
         "tags": [
@@ -5483,7 +5483,7 @@
       {
         "variant_id": "c_30047_srt4_epiphany_4",
         "level": 4,
-        "name": "Hew IV",
+        "name": "Hew (Massacre)",
         "cost": 3,
         "card_type": "Attack",
         "tags": [
@@ -5497,7 +5497,7 @@
       {
         "variant_id": "c_30047_srt4_epiphany_5",
         "level": 5,
-        "name": "Hew V",
+        "name": "Hew (Ambush)",
         "cost": 3,
         "card_type": "Attack",
         "tags": [
@@ -7317,7 +7317,7 @@
       {
         "variant_id": "c_30134_srt4_epiphany_1",
         "level": 1,
-        "name": "Flicker Blade I",
+        "name": "Flicker Blade (Amped)",
         "cost": 0,
         "card_type": "Attack",
         "tags": [
@@ -7329,7 +7329,7 @@
       {
         "variant_id": "c_30134_srt4_epiphany_2",
         "level": 2,
-        "name": "Flicker Blade II",
+        "name": "Flicker Blade (Cycle)",
         "cost": 0,
         "card_type": "Attack",
         "tags": [
@@ -7341,7 +7341,7 @@
       {
         "variant_id": "c_30134_srt4_epiphany_3",
         "level": 3,
-        "name": "Flicker Blade III",
+        "name": "Flicker Blade (Aegis)",
         "cost": 0,
         "card_type": "Attack",
         "tags": [
@@ -7353,7 +7353,7 @@
       {
         "variant_id": "c_30134_srt4_epiphany_4",
         "level": 4,
-        "name": "Flicker Blade IV",
+        "name": "Flicker Blade (Blink)",
         "cost": 0,
         "card_type": "Attack",
         "tags": [
@@ -7365,7 +7365,7 @@
       {
         "variant_id": "c_30134_srt4_epiphany_5",
         "level": 5,
-        "name": "Flicker Blade V",
+        "name": "Flicker Blade (Unbound)",
         "cost": -1,
         "card_type": "Attack",
         "tags": [
