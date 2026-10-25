@@ -36,6 +36,9 @@ DECK_BUILDER_QUALITY = 90
 _CARD_COLUMNS = [f"start_{n}_link_card_id" for n in range(1, 5)] + [f"spark_card_{n}_link_card_id" for n in range(1, 5)]
 _CARD_COLUMNS.append("collapse_skill_link_card_id")
 
+# Cards a combatant creates (Sword Tassel) or transforms into (Shard:Light) are shown by the Guides. Epiphany variants (`_rsp`) are not.
+_EXTRA_CARD = re.compile(r"^c_(\d+)_(?:cre\d+|[a-z]+\d+_mut\d+)$")
+
 _CARD_FILE = re.compile(r"^(c_(\d+)_\w+)\.webp$")
 
 
@@ -56,8 +59,7 @@ def build(ctx: Context) -> TargetResult:
     for res_id, character in roster.by_name():
         row = combatants.get(str(res_id), {})
         folder = folders.get(res_id) or slug(character["name"])
-        for column in _CARD_COLUMNS:
-            card_id = row.get(column)
+        for card_id in [row.get(column) for column in _CARD_COLUMNS] + extra_cards(ctx, res_id):
             card = ctx.client.cards.get(card_id or "")
             source = ctx.client.illustration(card) if card else None
             if source is None:
@@ -79,6 +81,20 @@ def build(ctx: Context) -> TargetResult:
     image_map = _image_map(set(new_files))
     summary = f"{len(roster.combatants())} characters, {len(new_files)} image(s) to add, {len(image_map)} mapped deck builder cards"
     return TargetResult({IMAGE_MAP_PATH: _render_map(image_map)}, summary, issues, new_files=new_files)
+
+
+def extra_cards(ctx: Context, res_id: int) -> list[str]:
+    """
+    The combatant's own created and transformed cards.
+
+    Args:
+        ctx: The run context.
+        res_id: The combatant.
+
+    Returns:
+        Their card ids, sorted.
+    """
+    return sorted(card_id for card_id in ctx.client.cards if (match := _EXTRA_CARD.match(card_id)) and int(match.group(1)) == res_id)
 
 
 def _android_collapse(ctx: Context, res_id: int) -> Path | None:
