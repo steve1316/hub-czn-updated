@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "haru-e2-and-e6-and-damage-reduction",
+      "id": "playstyle",
       "title": {
-        "en": "Haru E2 and E6 and Damage Reduction"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Haru E2 and E6 and Damage Reduction"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -92,15 +98,13 @@
           "body": {
             "en": "E2 Allows Anchor Shot to be played for Left over AP with Damage Reduced\nE2 is 40% FINAL DAMAGE REDUCTION PER MISSING AP\nE6 is 20% FINAL DAMAGE REDUCTION PER MISSING AP\nE2 Examples:\n2 Cost Anchor Shot, Used at 1 AP -40% = 60% Final Damage\n2 Cost Anchor Shot, Used at 0 AP -80% = 20% Final Damage\n3 Cost Anchor Shot, Used at 0 AP -120% = 0% Final Damage\nFunny enough when it comes to Tenacity Dealt, it's based on the Initial Cost\nForbidden Gesture of Freedom/Narja making Anchors 0 cost perma are great\nSince you don't actually lose damage"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -110,11 +114,17 @@
       ]
     },
     {
-      "id": "cycle-5-copy-anchor-160-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -5 | Copy Anchor | 160 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -5 | Copy Anchor | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -624,9 +634,9 @@
       ]
     },
     {
-      "id": "lillian-ritochika-douglas",
+      "id": "partners",
       "title": {
-        "en": "Lillian | Ritochika | Douglas"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -718,9 +728,9 @@
       ]
     },
     {
-      "id": "blackwing-executioners-agony-flex",
+      "id": "relics",
       "title": {
-        "en": "BlackWing | Executioners | Agony Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -746,6 +756,12 @@
               "label": "Agony Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "CR>CD > Atk>Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Justice% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -812,390 +828,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nIncreases Lift Anchor Damage Increase, pretty nice\nE2:\nOpens up Moral Support Haru setup, also very good for Chaos/Sortie\nE3:\nIncreases Ego Skill damage, it's ok\nE4:\nVery Tiny Permanent Additive Damage Buff, it's ok\nE5:\nPotential Levels: It's ok\nE6:\nE2's Damage Reudction on Anchor Shot is cut in Half, Very good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSever: Haru can somewhat Benefit from this, but like meh"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hand Buff: Very good with Persona Looping Supports to be +50% x 9 = 450%\nDraw Moral: Very minimal damage difference compared to Persona Loop\nDiscard 2: only 120% or 6 Moral, for the cost of -3 Cycle, which is pretty detrimental"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "haru.webp",
+          "legend": [
             {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": "Technically Haru is an candidate to carry this too, for her Moral Build"
-              },
-              "rating": "3/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
             },
             {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Increases Lift Anchor Damage Increase, pretty nice"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Opens up Moral Support Haru setup, also very good for Chaos/Sortie"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increases Ego Skill damage, it's ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Very Tiny Permanent Additive Damage Buff, it's ok"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "E2's Damage Reudction on Anchor Shot is cut in Half, Very good"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ecstasy: 0 Cost 4 hits is great\nGesture: Realistically you can go this if you don't have Narja basically\nBut this is best kept on your supports, not on Haru or you'll lose out on Anchor loops"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of Enemey increased, Damage +50% for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Attacked apply Vuln/Weaken"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Foretold Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1502,9 +1205,9 @@
       ]
     },
     {
-      "id": "haru-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Haru Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1684,6 +1387,377 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSever: Haru can somewhat Benefit from this, but like meh"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hand Buff: Very good with Persona Looping Supports to be +50% x 9 = 450%\nDraw Moral: Very minimal damage difference compared to Persona Loop\nDiscard 2: only 120% or 6 Moral, for the cost of -3 Cycle, which is pretty detrimental"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": "Technically Haru is an candidate to carry this too, for her Moral Build"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ecstasy: 0 Cost 4 hits is great\nGesture: Realistically you can go this if you don't have Narja basically\nBut this is best kept on your supports, not on Haru or you'll lose out on Anchor loops"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of Enemey increased, Damage +50% for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

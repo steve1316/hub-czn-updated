@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "beryl-retain-and-allies-retain-activate",
+      "id": "playstyle",
       "title": {
-        "en": "Beryl Retain and Allies Retain Activate"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Beryl Retain and Allies Retain Activate"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -74,11 +80,17 @@
       ]
     },
     {
-      "id": "opening-found-upgrade",
+      "id": "decks",
       "title": {
-        "en": "Opening Found Upgrade"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Opening Found Upgrade"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -418,9 +430,9 @@
       ]
     },
     {
-      "id": "rosaria-daisy-nakia-ritochika",
+      "id": "partners",
       "title": {
-        "en": "Rosaria | Daisy | Nakia | Ritochika"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -490,9 +502,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-corpse",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Corpse"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -523,6 +535,12 @@
               "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "CR>CD > Atk>Atk%\nOr for Opening Found Upgrade\nExtra Atk> CR>CD>Atk>Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Justice% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -589,97 +607,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nHeavy Weapon Specialist to 0 Cost, VERY GOOD\nE2:\nAll Retain cards get +20% Damage, Good\nE3:\nPotential Levels: It's ok\nE4:\nIncreases Ego Skill damage, it's ok\nE5:\nPotential Levels: It's ok\nE6:\nWhen Retaining a card, you charge up an \"Extra Attack\" Good free damage"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-seed",
-      "title": {
-        "en": "C7 Seed"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "beryl.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Heavy Weapon Specialist to 0 Cost, VERY GOOD"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "All Retain cards get +20% Damage, Good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Increases Ego Skill damage, it's ok"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "When Retaining a card, you charge up an \"Extra Attack\" Good free damage"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1000,9 +998,9 @@
       ]
     },
     {
-      "id": "beryl-dps-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Beryl DPS Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1162,6 +1160,80 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Seed"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

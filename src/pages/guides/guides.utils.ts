@@ -1,5 +1,5 @@
 import type { CardEntry } from '@/lib/types'
-import type { EpiphanyRating, Guide } from './guides.types'
+import type { Block, EpiphanyRating, Guide } from './guides.types'
 
 export { localized, resolveLang } from '@/lib/localized-text'
 
@@ -55,6 +55,15 @@ export function ratingTone(rating: string): RatingTone {
   if (score === 4) return 'blue'
   if (score === 3) return 'grey'
   return 'red'
+}
+
+/**
+ * Whether a short prose line can head the block after it. Prose and band headings are not headed by the line before them.
+ * @param next The block after the prose, if any.
+ * @returns True when the next block is content such as cards, sets or teams.
+ */
+export function headsNext(next: Block | undefined): boolean {
+  return next !== undefined && next.type !== 'prose' && next.type !== 'heading'
 }
 
 /**

@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "rita-chronical-and-chrono-ascension",
+      "id": "playstyle",
       "title": {
-        "en": "Rita Chronical and Chrono Ascension"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Rita Chronical and Chrono Ascension"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -79,11 +85,17 @@
       ]
     },
     {
-      "id": "cycle-1-basic-rita-base",
+      "id": "decks",
       "title": {
-        "en": "Cycle -1 | Basic Rita Base"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Basic Rita Base"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -203,15 +215,13 @@
           "body": {
             "en": "This Chrono Circle doesn't Move, so Time Axis Collapse is gone when used\nSo you have no more ways to use Chronicle Ascension, no point in Time Paradox"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-2-basic-rita-dedicated",
-      "title": {
-        "en": "Cycle -2 | Basic Rita dedicated"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Basic Rita dedicated"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -528,9 +538,9 @@
       ]
     },
     {
-      "id": "ivy-eloise-zatera",
+      "id": "partners",
       "title": {
-        "en": "Ivy | Eloise | Zatera"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -578,9 +588,9 @@
       ]
     },
     {
-      "id": "justice-executioners",
+      "id": "relics",
       "title": {
-        "en": "Justice | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -603,6 +613,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrt Rate/Crt Dmg/Atk/Atk%\nMain Stat Rec:\n4: Crt Rate\n5: Atk%>Justice%\n6: Atk%"
+          }
         },
         {
           "type": "prose",
@@ -675,65 +691,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nTime Paradox now makes 8 Chronical Ascension (2 more AP basically) lowkey bricky\nE2:\nGives you a buff card upon entering Ascension, It's a pretty decent multi (60%+ Average)\nE3:\nIncreases max damage buff to 300% (100% more) thats quite a substantial Multi\nE4:\nUp to 30% Multi, but it it's incremental\nE5:\nRita has very high base Multipliers, so potential levels are good (Not Fate Imprint)\nE6:\nWhat the heck? You can get 12 Ascension? One time per battle, but still great setup"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
-          }
+          "type": "potentials",
+          "image": "rita.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Time Paradox now makes 8 Chronical Ascension (2 more AP basically) lowkey bricky"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Gives you a buff card upon entering Ascension, It's a pretty decent multi (60%+ Average)"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increases max damage buff to 300% (100% more) thats quite a substantial Multi"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Up to 30% Multi, but it it's incremental"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Rita has very high base Multipliers, so potential levels are good (Not Fate Imprint)"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "What the heck? You can get 12 Ascension? One time per battle, but still great setup"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1048,9 +1076,9 @@
       ]
     },
     {
-      "id": "rita-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Rita Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1246,6 +1274,50 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
+          }
         }
       ]
     }

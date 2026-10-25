@@ -10,11 +10,17 @@
   "updated": "10/24",
   "sections": [
     {
-      "id": "rossweisse-s-self-buffs",
+      "id": "playstyle",
       "title": {
-        "en": "Rossweisse's Self Buffs"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Rossweisse's Self Buffs"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -90,11 +96,17 @@
       ]
     },
     {
-      "id": "cycle-2-unbound-nuke-180-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -2 | Unbound Nuke | 180 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Unbound Nuke | 180 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -366,9 +378,9 @@
       ]
     },
     {
-      "id": "sig-scarlet-westmacott-priscilla-lillian",
+      "id": "partners",
       "title": {
-        "en": "Sig | Scarlet | Westmacott | Priscilla | Lillian"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -440,9 +452,9 @@
       ]
     },
     {
-      "id": "radiance-executioners",
+      "id": "relics",
       "title": {
-        "en": "Radiance | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -465,6 +477,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrt Rate/Crt Dmg/Atk/Atk%\nMain Stat Rec:\n4: Crt Rate\n5: Atk%>Justice%\n6: Atk%"
+          }
         },
         {
           "type": "prose",
@@ -507,27 +525,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nPretty good gives Kyrken's Apostle more damage and also 1 AP for setup\nE2:\nAbsolutely broken, 20% Final damage and 4 attacks for free for existing\nE3:\n30% more fixed damage from the Flicker Nuke is pretty good\nE4:\nUp to 40% Multi very easy to max as well\nE5:\nRW has very high base Multipliers, so potential levels are good\nE6:\nMore free Final damage and now Dark and Light doesn't matter for Hand Size is crazy"
-          }
+          "type": "potentials",
+          "image": "rossweisse.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Pretty good gives Kyrken's Apostle more damage and also 1 AP for setup"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Absolutely broken, 20% Final damage and 4 attacks for free for existing"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "30% more fixed damage from the Flicker Nuke is pretty good"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Up to 40% Multi very easy to max as well"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "RW has very high base Multipliers, so potential levels are good"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "More free Final damage and now Dark and Light doesn't matter for Hand Size is crazy"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -802,7 +870,7 @@
                   "level": 2,
                   "name": "Sword Resonance II",
                   "cost": 1,
-                  "rating": "3/5",
+                  "rating": "5/5",
                   "note": {
                     "en": "Self draw stapled on, amazing"
                   }
@@ -820,7 +888,7 @@
                   "level": 4,
                   "name": "Sword Resonance IV",
                   "cost": 1,
-                  "rating": "4/5",
+                  "rating": "3/5",
                   "note": {
                     "en": "Potentially good, but GR will tell"
                   }
@@ -900,9 +968,9 @@
       ]
     },
     {
-      "id": "rossweisse-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Rossweisse Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {

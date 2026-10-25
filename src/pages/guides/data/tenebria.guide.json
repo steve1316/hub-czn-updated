@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "tenebria-and-rhythm",
+      "id": "playstyle",
       "title": {
-        "en": "Tenebria and Rhythm"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Tenebria and Rhythm"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -102,11 +108,17 @@
       ]
     },
     {
-      "id": "cycle-11-arpeggio-spotlight-ap-1-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle -11 | Arpeggio Spotlight | AP -1 | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -11 | Arpeggio Spotlight | AP -1 | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -534,15 +546,13 @@
           "body": {
             "en": "Fermata for Crescendo its just easier to play then Staccato, and slightly higher damage\nHonestly the set you run on Tenebria can basically be anything from\nEncore Activate\nSpotlight Activate\nSpotlight Move"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-11-encore-activate",
-      "title": {
-        "en": "Cycle -11 | Encore Activate"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -11 | Encore Activate"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -1043,9 +1053,9 @@
       ]
     },
     {
-      "id": "aria-eloise-anteia",
+      "id": "partners",
       "title": {
-        "en": "Aria | Eloise | Anteia"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -1080,9 +1090,9 @@
       ]
     },
     {
-      "id": "executioners-blackwing-scrab",
+      "id": "relics",
       "title": {
-        "en": "Executioners | Blackwing | Scrab"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -1113,6 +1123,12 @@
               "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 3.3% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -1152,91 +1168,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nThis is so bad, 2.5 moral on 10 hits of a mid skill except in Chaos\nE2:\n2 Ego start of every fight, good in Chaos and Tower pretty mid elsewhere\nE3:\nEveryone's Idol? More like Everyone's letdown, since this EP skill is 7 cost (5 cuz E2)\nE4:\n30% Multi, is pretty nice, but nothing to spend over\nE5:\nTene actually has some pretty high base numbers, this isn't terrible\nE6:\nNow Ego is usuable! Yay! 40% Final Multi, boring but huge damage buff"
-          }
-        }
-      ]
-    },
-    {
-      "id": "lux-equipment-engraving",
-      "title": {
-        "en": "Lux Equipment Engraving"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "This is actually just really good, the important Arpeggios have Haste as well as all other Rhythms"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "25% Multi is pretty good, and Tene does have some Haste, but its also good on her allies"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ig its a damage buff"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Tene doesn't really work well with Additive buffs except CnR4"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra Equipment Engraving"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Only real feasable and also good equipment engraving"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "15% Crit rate needs SO MUCH in generic buffs dilution to beat 30% Damage from only 7 cards in Grave"
-          }
-        }
-      ]
-    },
-    {
-      "id": "skill-persona",
-      "title": {
-        "en": "Skill Persona"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Cantrip that can generate 2 moral, and is also 60% Multi, pretty great\n120% Additive isn't really required on Tene, also doesn't buff Performance Buss (CnR4 is pretty good)"
-          }
+          "type": "potentials",
+          "image": "tenebria.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This is so bad, 2.5 moral on 10 hits of a mid skill except in Chaos"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "2 Ego start of every fight, good in Chaos and Tower pretty mid elsewhere"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Everyone's Idol? More like Everyone's letdown, since this EP skill is 7 cost (5 cuz E2)"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "30% Multi, is pretty nice, but nothing to spend over"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Tene actually has some pretty high base numbers, this isn't terrible"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Now Ego is usuable! Yay! 40% Final Multi, boring but huge damage buff"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1594,9 +1596,9 @@
       ]
     },
     {
-      "id": "tenebria-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Tenebria Example teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1856,6 +1858,74 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Lux Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "This is actually just really good, the important Arpeggios have Haste as well as all other Rhythms"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Multi is pretty good, and Tene does have some Haste, but its also good on her allies"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ig its a damage buff"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tene doesn't really work well with Additive buffs except CnR4"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only real feasable and also good equipment engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Crit rate needs SO MUCH in generic buffs dilution to beat 30% Damage from only 7 cards in Grave"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Skill Persona"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cantrip that can generate 2 moral, and is also 60% Multi, pretty great\n120% Additive isn't really required on Tene, also doesn't buff Performance Buss (CnR4 is pretty good)"
+          }
         }
       ]
     }

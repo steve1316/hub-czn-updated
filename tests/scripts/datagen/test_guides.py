@@ -7,6 +7,7 @@ from __future__ import annotations
 
 import io
 import random
+from types import SimpleNamespace
 
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
@@ -155,11 +156,9 @@ def test_label_rows_are_short_single_line_non_ratings():
     assert not guides._is_label_row([])
 
 
-def test_slugs_ids_and_identifiers():
+def test_slugs_and_identifiers():
     assert naming.slug("Mei Lin") == "mei-lin"
     assert naming.slug("A" * 47 + " b", 48) == "a" * 47
-    used: set[str] = set()
-    assert [guides._unique("part", used) for _ in range(3)] == ["part", "part-2", "part-3"]
     assert guides._identifier("mei-lin") == "meiLinJson"
 
 
@@ -186,7 +185,6 @@ def test_sections_drop_last_edit_and_name_parts():
     ])
     assert updated == "10/24"
     assert [section["title"]["en"] for section in sections] == ["Card ratings", "Teams", "Notes", "Notes"]
-    assert [section["id"] for section in sections] == ["card-ratings", "teams", "notes", "notes-2"]
 
 
 def test_set_named_section_title_leads_with_a_set_list():
@@ -194,6 +192,54 @@ def test_set_named_section_title_leads_with_a_set_list():
     blocks = sections[0]["blocks"]
     assert [block["type"] for block in blocks] == ["set-list", "set-list", "prose"]
     assert [item.get("setId") for item in blocks[0]["items"]] == [30, 11]
+
+
+def _section(title: str, *types: str) -> dict:
+    return {"title": {"en": title}, "blocks": [{"type": block_type} for block_type in types]}
+
+
+# The Rossweisse tab, band by band.
+ROSSWEISSE = [_section("Rossweisse's Self Buffs", "deck", "prose"), _section("Cycle -2 | Unbound Nuke | 180 FM", "deck", "rating-list"),
+              _section("Sig | Scarlet | Westmacott", "partner-list"), _section("Radiance | Executioners", "set-list", "prose"),
+              _section("Potentials & Ego", "potentials"), _section("Card ratings", "card-list", "prose"), _section("Rossweisse Example Teams", "team-grid")]
+
+
+def _headings(page: dict) -> list[str]:
+    return [block["text"]["en"] for block in page["blocks"] if block["type"] == "heading"]
+
+
+def test_rossweisse_fills_the_seven_pages_in_order():
+    pages = guides._pages(ROSSWEISSE, {})
+    assert [page["id"] for page in pages] == ["playstyle", "decks", "partners", "relics", "potentials", "card-ratings", "teams"]
+    assert not any(page.get("missing") for page in pages)
+    by_id = {page["id"]: page for page in pages}
+    assert _headings(by_id["playstyle"]) == ["Rossweisse's Self Buffs"]
+    assert _headings(by_id["decks"]) == ["Cycle -2 | Unbound Nuke | 180 FM"]
+    # These band titles only repeat the page, or are already shown as set cards.
+    assert not any(_headings(by_id[page_id]) for page_id in ("partners", "relics", "potentials", "card-ratings", "teams"))
+
+
+def test_extras_after_the_partners_go_to_seasons_and_chaos():
+    sections = [_section("Nia's card draw", "prose"), _section("Season 4 Exclusive", "prose"), _section("Standard Hunt Base", "deck"),
+                *ROSSWEISSE[1:5], _section("Season 4 | Shattered Light and Claw", "card-list"), _section("Desire Synergy:", "prose"),
+                _section("Notes", "prose"), _section("C7 Burning Life", "prose"), *ROSSWEISSE[5:]]
+    pages = {page["id"]: page for page in guides._pages(sections, {})}
+    assert _headings(pages["playstyle"]) == ["Nia's card draw", "Season 4 Exclusive"]
+    assert _headings(pages["decks"]) == ["Standard Hunt Base", "Cycle -2 | Unbound Nuke | 180 FM"]
+    assert list(pages)[-1] == "seasons-chaos"
+    assert pages["seasons-chaos"]["title"] == {"en": "Seasons & Chaos"}
+    assert _headings(pages["seasons-chaos"]) == ["Season 4 | Shattered Light and Claw", "Desire Synergy:", "Notes", "C7 Burning Life"]
+
+
+def test_a_page_the_sheet_lacks_is_marked_missing():
+    pages = {page["id"]: page for page in guides._pages([section for section in ROSSWEISSE if section["title"]["en"] != "Potentials & Ego"], {})}
+    assert pages["potentials"] == {"id": "potentials", "title": {"en": "Potentials & Ego"}, "blocks": [], "missing": True}
+    assert "seasons-chaos" not in pages
+
+
+def test_a_band_can_be_moved_to_another_page():
+    pages = {page["id"]: page for page in guides._pages(ROSSWEISSE, {"Cycle -2 | Unbound Nuke | 180 FM": "playstyle"})}
+    assert pages["decks"]["missing"] and len(_headings(pages["playstyle"])) == 2
 
 
 def _rated(card_id: str, name: str, rating: str, level: int | None = None) -> dict:
@@ -241,6 +287,79 @@ def test_unmatched_note_lines_stay_in_prose():
     cards = {"type": "card-list", "items": [_rated("c_30134_cre1", "Sword Tassel", "5/5")]}
     blocks = guides._attach_notes([cards, _prose("Equilux: Start of turn\nTassel: base\nPlain line")])
     assert blocks[1] == _prose("Equilux: Start of turn\nPlain line")
+
+
+def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._GuideBuilder:
+    # Every picture is the same banner, so nothing needs a matcher.
+    banner = guides._Download(_png(_pattern(5, picture_size)))
+    ctx = SimpleNamespace(text=lambda text, **_: text)
+    downloads = SimpleNamespace(get=lambda url: banner)
+    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
+                                guides._PictureLabels({}), "Tab", "tab")
+
+
+def _grid(*cells: Cell) -> dict[tuple[int, int], Cell]:
+    return {(cell.row, cell.col): cell for cell in cells}
+
+
+def test_text_beside_a_picture_is_kept():
+    sections, _ = _builder().sections(_grid(_cell(20, 1, pictures=1), _cell(20, 4, "Important Substats:\nCrt Rate/Crt Dmg")))
+    assert sections[0]["blocks"] == [_prose("Important Substats:\nCrt Rate/Crt Dmg")]
+
+
+def test_text_beside_faces_is_left_out():
+    # Template filler such as "DPS" sits beside the example team faces.
+    sections, _ = _builder({"Tab!D66": {"charResId": 1003}}).sections(_grid(_cell(65, 2, "DPS"), _cell(65, 3, pictures=1)))
+    assert [block["type"] for block in sections[0]["blocks"]] == ["team-grid"]
+
+
+LEGEND = "Purple: Main Damage Boosts\n\nGold: QOL\n\nBlue: Irrelevant usually"
+EGO = "E1: \nPretty good\n\nE2:\nAbsolutely broken\n\nE3: Fine\nE4\nOkay\nE3: \nTypo for E5\nE6:\nE2's damage gets better"
+
+
+def _potentials_grid(tree: bool = True, legend: str = LEGEND) -> dict[tuple[int, int], Cell]:
+    # The Rossweisse layout: headings on row 24, the tree in B25, the legend in E25 and the ego notes in H25.
+    cells = [_cell(23, 2, "Potentials"), _cell(23, 8, "Ego Manifestation"), _cell(24, 4, legend), _cell(24, 7, EGO)]
+    return _grid(*cells, *([_cell(24, 1, pictures=1)] if tree else []))
+
+
+def test_potentials_band_becomes_one_block():
+    builder = _builder(picture_size=(371, 318))
+    sections, _ = builder.sections(_potentials_grid())
+    [section] = sections
+    assert section["title"] == {"en": "Potentials & Ego"}
+    [block] = section["blocks"]
+    assert block["image"] == "tab.webp" and set(builder.pictures) == {"tab.webp"}
+    assert block["legend"] == [{"colour": "purple", "text": {"en": "Main Damage Boosts"}}, {"colour": "gold", "text": {"en": "QOL"}},
+                               {"colour": "blue", "text": {"en": "Irrelevant usually"}}]
+    # Levels follow the order the notes are written in, as some tabs label E5 as "E3".
+    assert block["ego"] == [{"level": level, "text": {"en": text}} for level, text in
+                            enumerate(["Pretty good", "Absolutely broken", "Fine", "Okay", "Typo for E5", "E2's damage gets better"], 1)]
+
+
+def test_a_tiny_tree_picture_still_counts():
+    builder = _builder(picture_size=(23, 20))
+    [section], _ = builder.sections(_potentials_grid())
+    assert section["blocks"][0]["image"] == "tab.webp"
+
+
+def test_potentials_without_a_tree_picture():
+    builder = _builder()
+    [section], _ = builder.sections(_potentials_grid(tree=False))
+    assert section["blocks"][0]["image"] is None and not builder.pictures
+
+
+def test_potentials_legend_keeps_other_wording_and_extra_lines():
+    legend = "Purple: Main Identity Boost\nGold: QOL\nBlue: Irrelevant usually\nNothing is THAT important"
+    [section], _ = _builder().sections(_potentials_grid(legend=legend))
+    potentials, extra = section["blocks"]
+    assert potentials["legend"][0] == {"colour": "purple", "text": {"en": "Main Identity Boost"}}
+    assert extra == _prose("Nothing is THAT important")
+
+
+def test_purple_without_a_colon_is_not_a_legend():
+    sections, _ = _builder().sections(_grid(_cell(64, 7, "Red DPS\nteam"), _cell(64, 8, "Purple DPS\nteam")))
+    assert all(block["type"] == "prose" for block in sections[0]["blocks"])
 
 
 def _download(seed: int) -> guides._Download:

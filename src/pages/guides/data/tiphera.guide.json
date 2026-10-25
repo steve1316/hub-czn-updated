@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "tiphera-archtypes-and-harmonization",
+      "id": "playstyle",
       "title": {
-        "en": "Tiphera, Archtypes and Harmonization"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Tiphera, Archtypes and Harmonization"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -90,15 +96,13 @@
           "body": {
             "en": "E2 the first 3 Archetypes used each turn create a special one\nThe Build your own Archtype has effects based on what you used\n◯ 160% Healing Worst effect\n△ 30% Buff Best effect\n◻ Draw 1 Archetype Situational effect\nExample:\n△△△\n90% Buff\n◯△◻\n160% Healing\n30% Buff\nDraw 1 Archetype\nUsually want to aim for △, ◻ if you need, and not ◯"
           }
-        }
-      ]
-    },
-    {
-      "id": "season-4-exclusive",
-      "title": {
-        "en": "Season 4 Exclusive"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 Exclusive"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -114,11 +118,17 @@
       ]
     },
     {
-      "id": "cycle-1-controlled-chaos-inquiry-vuln-fm-180",
+      "id": "decks",
       "title": {
-        "en": "Cycle -1 | Controlled Chaos (Inquiry Vuln) | FM 180"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Controlled Chaos (Inquiry Vuln) | FM 180"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -271,15 +281,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-2-controlled-chaos-fm-160",
-      "title": {
-        "en": "Cycle -2 | Controlled Chaos | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Controlled Chaos | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -522,15 +530,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-2-controlled-chaos-alt-fm-160",
-      "title": {
-        "en": "Cycle -2 | Controlled Chaos Alt | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Controlled Chaos Alt | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -776,9 +782,9 @@
       ]
     },
     {
-      "id": "tiana-nyx-alyssa-arwen-yvonne",
+      "id": "partners",
       "title": {
-        "en": "Tiana | Nyx | Alyssa | Arwen | Yvonne"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -850,9 +856,9 @@
       ]
     },
     {
-      "id": "glory-tetra",
+      "id": "relics",
       "title": {
-        "en": "Glory | Tetra"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -875,6 +881,12 @@
               "icon": "/assets/pieces/icon_piece_set_007.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nEgo>>Def>Def%>>HP\nMain Stat Rec:\n4: HP but can flex Dmg Crt Rate\n5: HP but can flex Dmg Order%\n6 Ego Recovery/ Def% to reach 300"
+          }
         },
         {
           "type": "prose",
@@ -909,427 +921,91 @@
         {
           "type": "prose",
           "body": {
+            "en": "Important Substats:\nCRT Rate/Dmg>>Def>Def%\nMain Stat Rec:\n4: CRT Rate\n5: Order%\n6 Def%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
             "en": "2/2/2 Generalist Def based DPS set, can be swapped among all members\nAgony technically is the best if enabled, but honestly just cherry pick relics"
           }
         }
       ]
     },
     {
-      "id": "ego-manifestation",
+      "id": "potentials",
       "title": {
-        "en": "Ego Manifestation"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nThis is actually so big, gives you 1 more chance at rolling into Draw\nE2:\nYour first 3 Archtypes used each turn are combined into an extra card, very very good\nE3:\nMakes her Ego Skill go from 5 refund 2, to refund 3, basically 2 cost, so good\nE4:\n10% Order damage, 10% Def Based damage, this is literally Nine Shilling\nE5:\nTiphera has pretty decent multipliers, so not bad\nE6:\nBasically tries to make Subdps Creation and Destruction a thing, very very weird"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "tiphera.webp",
+          "legend": [
             {
-              "cardId": "card_ds04_00007",
-              "name": "Hand Enthralled by Light",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0027",
-              "name": "Dream World",
-              "note": {
-                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0076",
-              "name": "Nutrient Absorption",
-              "note": {
-                "en": "Exhausts any card and can Cost Reduce cards for Move"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": "Tiphera can technically Retain this lol"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "n_0077",
-              "name": "One With All",
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "n_0028",
-              "name": "Ebony Lumen",
-              "note": {
-                "en": "Tiphera can Exhaust this (Event Neutral)"
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "OWA: Can cheat out 9 cost CnD for Nuke"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30084_col2",
-              "name": "Gloom",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "n_0046",
-              "name": "Forced Learning Apparatus",
-              "note": {
-                "en": "+1 Cycle"
+              "colour": "purple",
+              "text": {
+                "en": "Main Identity Boost"
               }
             },
             {
-              "cardId": "n_0122",
-              "name": "Self-Generating Experiment",
-              "note": {
-                "en": ""
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This is actually so big, gives you 1 more chance at rolling into Draw"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Your first 3 Archtypes used each turn are combined into an extra card, very very good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Makes her Ego Skill go from 5 refund 2, to refund 3, basically 2 cost, so good"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "10% Order damage, 10% Def Based damage, this is literally Nine Shilling"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Tiphera has pretty decent multipliers, so not bad"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Basically tries to make Subdps Creation and Destruction a thing, very very weird"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: Ally Ravage, Increase Action Count by 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When discard 2, Draw 1 Quietus"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Discard 1 Quietus, Draw 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When turn ended with 1 AP, 1 AOE Vuln"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of battle 1 Stockpile"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1636,9 +1312,9 @@
       ]
     },
     {
-      "id": "tiphera-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Tiphera Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1850,6 +1526,406 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_00007",
+              "name": "Hand Enthralled by Light",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": "Tiphera can technically Retain this lol"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0077",
+              "name": "One With All",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0028",
+              "name": "Ebony Lumen",
+              "note": {
+                "en": "Tiphera can Exhaust this (Event Neutral)"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "OWA: Can cheat out 9 cost CnD for Nuke"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_col2",
+              "name": "Gloom",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0046",
+              "name": "Forced Learning Apparatus",
+              "note": {
+                "en": "+1 Cycle"
+              }
+            },
+            {
+              "cardId": "n_0122",
+              "name": "Self-Generating Experiment",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

@@ -10,11 +10,17 @@
   "updated": "10/24",
   "sections": [
     {
-      "id": "anika-efficiency-shockwave-handlock",
+      "id": "playstyle",
       "title": {
-        "en": "Anika Efficiency, Shockwave, Handlock"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Anika Efficiency, Shockwave, Handlock"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -65,11 +71,17 @@
       ]
     },
     {
-      "id": "cycle-2-moral-support-1-0-ap-180-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -2 | Moral Support | -1/0 AP | 180 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Moral Support | -1/0 AP | 180 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -434,9 +446,9 @@
       ]
     },
     {
-      "id": "westmacott-lillian-scarlet-priscilla-ritochika",
+      "id": "partners",
       "title": {
-        "en": "Westmacott | Lillian | Scarlet | Priscilla | Ritochika"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -500,9 +512,9 @@
       ]
     },
     {
-      "id": "blackwing-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "BlackWing | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -528,6 +540,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD>EA>Atk>Atk%\nMain Stat Recommendation:\n4: Crit Rate\n5: Atk%>Order% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -592,29 +610,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nSometimes move Rampage trigger from deck to hand, ONLY DRAW so its mid\nE2:\nTeamwide +25% additive by playing normally\nE3:\nPotential levels, ok\nE4:\nBigger Shield, ok\nE5:\nPotential levels, ok\nE6:\nRavage is +2 AP 1 time each turn instead of 1"
-          }
+          "type": "potentials",
+          "image": "anika.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Sometimes move Rampage trigger from deck to hand, ONLY DRAW so its mid"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Teamwide +25% additive by playing normally"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potential levels, ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Bigger Shield, ok"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Ravage is +2 AP 1 time each turn instead of 1"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -882,9 +950,9 @@
       ]
     },
     {
-      "id": "anika-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Anika Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {

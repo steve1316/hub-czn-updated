@@ -10,11 +10,17 @@
   "updated": "8/5",
   "sections": [
     {
-      "id": "amir-and-metallize",
+      "id": "playstyle",
       "title": {
-        "en": "Amir and Metallize"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Amir and Metallize"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -45,11 +51,17 @@
       ]
     },
     {
-      "id": "cycle-5-metallize-amir-4-hit-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle -5 | Metallize Amir 4 Hit | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -5 | Metallize Amir 4 Hit | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -348,15 +360,13 @@
           "body": {
             "en": "Hurricane Example"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-6-metallize-amir-5-hit-fm-160",
-      "title": {
-        "en": "Cycle -6 | Metallize Amir 5 Hit | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -6 | Metallize Amir 5 Hit | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -544,9 +554,9 @@
       ]
     },
     {
-      "id": "eishlen-erica-wilhelma-rachel",
+      "id": "partners",
       "title": {
-        "en": "Eishlen | Erica | Wilhelma | Rachel"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -589,9 +599,9 @@
       ]
     },
     {
-      "id": "tetra-executioners-agony-flex",
+      "id": "relics",
       "title": {
-        "en": "Tetra | Executioners | Agony Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -617,6 +627,12 @@
               "label": "Agony Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrt Rt/Crt Dmg/Def/Def%\nMain Stat Rec:\n4: Crit Rate\n5: Order%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -681,376 +697,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nBuffs Iron Skin, meh card at least removes finale\nE2:\nStart of battle 2 Metallization, pretty nice\nE3:\nPotential levels, ok\nE4:\nBigger Shield, ok\nE5:\nPotential levels, ok\nE6:\nStart of turn +1 Metallizatin VERY NICE"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever: +120% is pretty great, but -1 Cycle and +1 AP required\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Discard 2 is +120% Additive, but Cycle -2 is very difficult to support\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 1, potentially 2 moral, and 60% Multiplicative is good"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "amir.webp",
+          "legend": [
             {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
             },
             {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
             },
             {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Buffs Iron Skin, meh card at least removes finale"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Start of battle 2 Metallization, pretty nice"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potential levels, ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Bigger Shield, ok"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Start of turn +1 Metallizatin VERY NICE"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Vanguard Residual Herbs are just worse since no Moral Epiphany but can proc metallize"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nothing is very good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Dmg by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of 2>= Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt to 1<= Attacl Cards +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Foretold Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1350,9 +1069,9 @@
       ]
     },
     {
-      "id": "amir-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Amir Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1604,6 +1323,355 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever: +120% is pretty great, but -1 Cycle and +1 AP required\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive, but Cycle -2 is very difficult to support\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 1, potentially 2 moral, and 60% Multiplicative is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Vanguard Residual Herbs are just worse since no Moral Epiphany but can proc metallize"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing is very good"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Dmg by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of 2>= Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt to 1<= Attacl Cards +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "notes",
+      "id": "playstyle",
       "title": {
-        "en": "Notes"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -95,11 +101,17 @@
       ]
     },
     {
-      "id": "cycle-4-general-draw",
+      "id": "decks",
       "title": {
-        "en": "Cycle +4 | General Draw"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +4 | General Draw"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -410,9 +422,9 @@
       ]
     },
     {
-      "id": "clara-rachel-erica-eishlen-wilhelma",
+      "id": "partners",
       "title": {
-        "en": "Clara | Rachel | Erica | Eishlen | Wilhelma"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -469,9 +481,9 @@
       ]
     },
     {
-      "id": "starlight-tetra",
+      "id": "relics",
       "title": {
-        "en": "Starlight | Tetra"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -494,6 +506,12 @@
               "icon": "/assets/pieces/icon_piece_set_007.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nDef>Def%>Crit Rate/Dmg>HP/Ego\nMain Stat Recommendation:\n4:Crit Rate\n5: Void%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -569,21 +587,77 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
+          "type": "potentials",
+          "image": "adelheid.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Making Garden 0 Cost is nice, but it isn't important for general use (draw)\nWhy does this also not add Blessing? Huh?"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Grants Adel's team up to 30% Multi Damage, It's okay, but a dedicated buffer is better"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Buffs Ego Skill Uselss"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "You can forgo more OUAT for more Protect Us"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, not very important"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Now the buff is up to 40% Multi, but also way easier to stack\n+1 Draw each turn as well, this is really good"
+              }
+            }
+          ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "E1:\nMaking Garden 0 Cost is nice, but it isn't important for general use (draw)\nWhy does this also not add Blessing? Huh?\nE2:\nGrants Adel's team up to 30% Multi Damage, It's okay, but a dedicated buffer is better\nE3:\nBuffs Ego Skill Uselss\nE4:\nYou can forgo more OUAT for more Protect Us\nE5:\nPotential levels, not very important\nE6:\nNow the buff is up to 40% Multi, but also way easier to stack\n+1 Draw each turn as well, this is really good"
+            "en": "Nothing is THAT important\nAdding Blessing to basics good\nVoid% is okay for damage\nDivines are good on Supports\nUnique% is good\nHP% increases max shield"
           }
         }
       ]
@@ -591,7 +665,7 @@
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -876,56 +950,9 @@
       ]
     },
     {
-      "id": "skill-persona",
+      "id": "teams",
       "title": {
-        "en": "Skill Persona"
-      },
-      "blocks": [
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0080",
-              "name": "Persona",
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "n_0080",
-              "name": "Persona",
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free\nPersona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free\nPersona 4: For Shield Stack/Counter Team if you really wanted to\nThe Persona cards themselves are good, but on Average Engravings are bad"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Attack Persona"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks\nPersona 2: Potentially CounterAttack, but usually nothing burger\nPersona cards themself are bad, but the engravings are good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "adelheid-team-examples",
-      "title": {
-        "en": "Adelheid Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1313,15 +1340,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "teams",
-      "title": {
-        "en": "Teams"
-      },
-      "blocks": [
+        },
         {
           "type": "team-grid",
           "groups": [
@@ -1334,6 +1353,95 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Skill Persona"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0080",
+              "name": "Persona",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0080",
+              "name": "Persona",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free\nPersona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free\nPersona 4: For Shield Stack/Counter Team if you really wanted to\nThe Persona cards themselves are good, but on Average Engravings are bad"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The best, especially x2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only need as a 1 of"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "One or Two, up to you"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I'm not sure why'd you need so much"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Persona"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks\nPersona 2: Potentially CounterAttack, but usually nothing burger\nPersona cards themself are bad, but the engravings are good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feels good for Persona to cost 0\nAlthough 2x +15% is good\nIf you can afford it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Additive +75% as a one of\nAdditive +150% as a two of"
+          }
         }
       ]
     }

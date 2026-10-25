@@ -10,11 +10,17 @@
   "updated": "8/2",
   "sections": [
     {
-      "id": "what-is-tenacity-and-ravage-state",
+      "id": "playstyle",
       "title": {
-        "en": "What is Tenacity and Ravage State"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "What is Tenacity and Ravage State"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -106,11 +112,17 @@
       ]
     },
     {
-      "id": "cycle-3-clog-draw-serenial-140-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle +3 | Clog Draw Serenial | 140 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +3 | Clog Draw Serenial | 140 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -344,15 +356,13 @@
           "body": {
             "en": "Shining Core should make Laser 5\nPale Shooting Star is a bit expensive, so extra AP would be good"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-1-move-laser-default-160-fm",
-      "title": {
-        "en": "Cycle -1 | Move Laser Default | 160 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Move Laser Default | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -791,15 +801,13 @@
           "body": {
             "en": "Shining Core should make Laser 5\nPale Shooting Star is a bit expensive, so extra AP would be good"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-2-e1-e2-pale-2x-160-fm",
-      "title": {
-        "en": "Cycle -2 | E1/E2 Pale 2x | 160 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | E1/E2 Pale 2x | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -993,9 +1001,9 @@
       ]
     },
     {
-      "id": "peko-serithea-janet-yuri",
+      "id": "partners",
       "title": {
-        "en": "Peko | Serithea | Janet | Yuri"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -1065,9 +1073,9 @@
       ]
     },
     {
-      "id": "blackwing-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "BlackWing | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -1093,6 +1101,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrtR>>CrtDmg>Atk>Atk%\nMain Stat Rec:\n4:Crit Rate\n5: Atk%>Instinct% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -1157,414 +1171,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Purple: Main Damage Boosts\nGold: QOL\nBlue: Irrelevant usually"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nPale Shooting Star now activates 2 more Lasers, honestly very nice buff\nE2:\nCreates Extra Lasers turn one, very helpful in breaking an enemy\nE3:\nEgo Skill damage increase, Haste could be good, but usually isn't important\nE4:\nVery big damage Increase for the turn, very good\nE5:\nPotential Levels: It's ok\nE6:\nVery Strong Scaling with Additive Buffs"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": null,
+          "legend": [
             {
-              "cardId": "n_0048",
-              "name": "Forgotten Grave",
-              "note": {
-                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-              },
-              "rating": "3/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Pale Shooting Star now activates 2 more Lasers, honestly very nice buff"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Creates Extra Lasers turn one, very helpful in breaking an enemy"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Ego Skill damage increase, Haste could be good, but usually isn't important"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Very big damage Increase for the turn, very good"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Very Strong Scaling with Additive Buffs"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "35"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c5-forbidden-ruins",
-      "title": {
-        "en": "C5 Forbidden Ruins"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1864,9 +1543,9 @@
       ]
     },
     {
-      "id": "serenial-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Serenial Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -2069,6 +1748,387 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "35"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

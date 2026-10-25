@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "rin-dark-mist-and-retain-dark-mist",
+      "id": "playstyle",
       "title": {
-        "en": "Rin Dark Mist, and Retain Dark Mist"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Rin Dark Mist, and Retain Dark Mist"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -68,15 +74,13 @@
           "body": {
             "en": "Base Destruction version only \"Draws\" the Cards\nDrawing is different from Moving, and can only be taken from the Deck\nBut if your Cards are in your \"Discard\" \"Draw\" can force a \"Reshuffle\"\nOnce your Cards are in the Deck from Reshuffle, it Draws your Cards\n\"Move\" transfers the Card directly from zones into Hand\n\"Move\" can transfer from \"Deck\" \"Discard and \"Used\" Pile\n\"Move\" counts as Draw, Only if Moving the card from Deck, not Discard/Used"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -86,11 +90,17 @@
       ]
     },
     {
-      "id": "standard-rin",
+      "id": "decks",
       "title": {
-        "en": "Standard Rin"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Standard Rin"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -193,9 +203,9 @@
       ]
     },
     {
-      "id": "lillian-douglas",
+      "id": "partners",
       "title": {
-        "en": "Lillian | Douglas"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -263,9 +273,9 @@
       ]
     },
     {
-      "id": "conqueror-executioner",
+      "id": "relics",
       "title": {
-        "en": "Conqueror | Executioner"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -288,6 +298,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD > Atk> Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -362,91 +378,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nIncreases Black Dance Base Multiplier, Very Strong\nE2:\nAdds an additional source of damage, its okay\nE3:\nIncreases Ego Skill damage and Vuln by a bit, it's ok\nE4:\nAllows every card to make you enter Stance, not very important if played well\nE5:\nPotential Levels: It's ok\nE6:\nStart fights in Stance, if start of turn in stance, gain 2 Moral, Really good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life-stinky",
-      "title": {
-        "en": "C7 Burning Life Stinky"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Forbidden Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "rin.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Increases Black Dance Base Multiplier, Very Strong"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Adds an additional source of damage, its okay"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increases Ego Skill damage and Vuln by a bit, it's ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Allows every card to make you enter Stance, not very important if played well"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Start fights in Stance, if start of turn in stance, gain 2 Moral, Really good"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -738,9 +740,9 @@
       ]
     },
     {
-      "id": "rin-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Rin Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -916,6 +918,74 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life Stinky"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

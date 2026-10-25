@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "fei-flame-arts-and-descent",
+      "id": "playstyle",
       "title": {
-        "en": "Fei Flame Arts and Descent"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Fei Flame Arts and Descent"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -51,15 +57,13 @@
           "body": {
             "en": "Flame Arts:\nGained by using Inferno Rhapsody, as well as Night Rain and Soulfire\nEvery 3 Flame Arts = 1 Extra Attack\nActivating the 3rd Flame Art with Inferno Rhapsody has additional effects\nDescent:\nGained whenever ANY ally effect causes draw\nEvery 8 Descent, generate a Heavensfall (Maximum 10 times, or 80 Descent)"
           }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -81,11 +85,17 @@
       ]
     },
     {
-      "id": "cycle-7-0-cost-ap-draw-engine-fei-100-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle +7 | 0 Cost AP Draw Engine Fei | 100 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +7 | 0 Cost AP Draw Engine Fei | 100 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -244,15 +254,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-flame-art-3x-160-fm",
-      "title": {
-        "en": "Cycle | Flame Art 3x | 160 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle | Flame Art 3x | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -573,9 +581,9 @@
       ]
     },
     {
-      "id": "ruixiang-rosaria-solia-daisy",
+      "id": "partners",
       "title": {
-        "en": "Ruixiang | Rosaria | Solia | Daisy"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -618,9 +626,9 @@
       ]
     },
     {
-      "id": "battlefield-evo-executioners",
+      "id": "relics",
       "title": {
-        "en": "BattleField Evo | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -643,6 +651,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD > Extra Attack > Atk% > Atk\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 3.3% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -716,416 +730,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nNot important, just small damage boost\nE2:\nMaking Heavenfall becomes easier and small damage buff to Inferno Rhapsodies\nE3:\nMakes Soulfire 3, more interesting ig, otherwise pretty eh\nE4:\nOnly boosts Heavensfall damage\nE5:\nPotential levels, not super important, but kinda adds up for Heavensfall\nE6:\nNow this is lowkey crazy 6 Moral for Inferno Rhapsodies 120%\nEvery 3rd Heavensfall (technically) gets +3 hits doubling its damage (Soulfire 3)"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "fei.webp",
+          "legend": [
             {
-              "cardId": "c_30048_col",
-              "name": "Guilt",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Not important, just small damage boost"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Making Heavenfall becomes easier and small damage buff to Inferno Rhapsodies"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Makes Soulfire 3, more interesting ig, otherwise pretty eh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Only boosts Heavensfall damage"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, not super important, but kinda adds up for Heavensfall"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Now this is lowkey crazy 6 Moral for Inferno Rhapsodies 120%\nEvery 3rd Heavensfall (technically) gets +3 hits doubling its damage (Soulfire 3)"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30048_cre2",
-              "name": "Inferno Rhapsody",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0048",
-              "name": "Forgotten Grave",
-              "note": {
-                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-              },
-              "rating": "2/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "I mean Ranger/Hunter can always Attunment Abuse with Precision Aim"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1429,9 +1106,9 @@
       ]
     },
     {
-      "id": "fei-teams",
+      "id": "teams",
       "title": {
-        "en": "Fei Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1702,6 +1379,397 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_col",
+              "name": "Guilt",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_cre2",
+              "name": "Inferno Rhapsody",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean Ranger/Hunter can always Attunment Abuse with Precision Aim"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
         }
       ]
     }

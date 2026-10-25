@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "important-kayron-glossary-mechanics",
+      "id": "playstyle",
       "title": {
-        "en": "Important Kayron Glossary/Mechanics"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Important Kayron Glossary/Mechanics"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -143,15 +149,13 @@
           "body": {
             "en": "Kayron is a little special, and his scaling damage on Echo and Black Hole\nAre affected by Multiplicative Damage Sources, so Void Set and Equipment\nKayron usually only cares about exhausting his own Futility, but Brand\nBrand 0,1,2,4 are versions that can also care about how many cards are\nExhausted by his Allies"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -161,11 +165,17 @@
       ]
     },
     {
-      "id": "cycle-6-futility-use",
+      "id": "decks",
       "title": {
-        "en": "Cycle -6 | Futility Use"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -6 | Futility Use"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -361,15 +371,13 @@
           "body": {
             "en": "4 Brands worth 16 Moral!\nUp to you if you want permanent/temporary morale with Neutrals like Attack/Gearbag/Reorganize\nOr you could go for more Draw Divines on Brands for more consistent cycle\nYou could technically put Clover on Kayron due to Healing Futilities"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-6-brand-4-persona",
-      "title": {
-        "en": "Cycle -6 | Brand 4 Persona"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -6 | Brand 4 Persona"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -429,9 +437,9 @@
       ]
     },
     {
-      "id": "bria-eloise-zatera",
+      "id": "partners",
       "title": {
-        "en": "Bria | Eloise | Zatera"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -485,9 +493,9 @@
       ]
     },
     {
-      "id": "void-executioner",
+      "id": "relics",
       "title": {
-        "en": "Void | Executioner"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -510,6 +518,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD > Atk> Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -584,111 +598,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\n2 more Futility from Echoes of True Abyss, very good\nE2:\nFree attack for every 2 Futility exhausted (It consumes buffs, so Vuln is bad)\nE3:\nAllows Rift of Nothingless to also Exhaust Futility from Graveyard Very strong\nE4:\n30% Additive is okay\nE5:\nGeneric damage increase, ok\nE6:\nRandom debuff whenever a futility is made, strong (Vuln is OP)"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c4-swamp-of-judgement",
-      "title": {
-        "en": "C4 Swamp of Judgement"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "kayron.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "2 more Futility from Echoes of True Abyss, very good"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Free attack for every 2 Futility exhausted (It consumes buffs, so Vuln is bad)"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Allows Rift of Nothingless to also Exhaust Futility from Graveyard Very strong"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "30% Additive is okay"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Generic damage increase, ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Random debuff whenever a futility is made, strong (Vuln is OP)"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1006,9 +986,9 @@
       ]
     },
     {
-      "id": "kayron-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Kayron Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1243,6 +1223,92 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

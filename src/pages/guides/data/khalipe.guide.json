@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "notes",
+      "id": "playstyle",
       "title": {
-        "en": "Notes"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -46,11 +52,17 @@
       ]
     },
     {
-      "id": "classic-khalipe",
+      "id": "decks",
       "title": {
-        "en": "Classic Khalipe"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Classic Khalipe"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -401,9 +413,9 @@
       ]
     },
     {
-      "id": "zeta-rachel-wilhelma-eishlen",
+      "id": "partners",
       "title": {
-        "en": "Zeta | Rachel | Wilhelma | Eishlen"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -452,9 +464,9 @@
       ]
     },
     {
-      "id": "tetra-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "Tetra | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -480,6 +492,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrtR>CrtDmg>Def,Def%>Atk>Atk%\nMain Stat Rec:\n4:Crit Rate\n5: Instinct%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -544,105 +562,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nAdding Retain is really good\nE2:\nMoving Vulture to the top is really good\nE3:\nGains one Silver Veil on use, it's ok\nE4:\n+20% on Khalipe is butt\nE5:\nPotential Levels: It's ok\nE6:\n+100% to every Silver Veil proc"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Damage Amount by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Foretold Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "khalipe.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Adding Retain is really good"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Moving Vulture to the top is really good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Gains one Silver Veil on use, it's ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "+20% on Khalipe is butt"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "+100% to every Silver Veil proc"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -971,9 +963,9 @@
       ]
     },
     {
-      "id": "khalipe-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Khalipe Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1149,6 +1141,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

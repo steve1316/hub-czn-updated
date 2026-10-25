@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "tressa-and-agony-why",
+      "id": "playstyle",
       "title": {
-        "en": "Tressa and Agony | Why?"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Tressa and Agony | Why?"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -52,15 +58,13 @@
           "body": {
             "en": "WHY, WHY DID THEY HAVE TO MAKE AGONY CAP AT 20\nITS SO BAD, MY GIRL, WHAT HAVE THEY DONE TO YOU"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -82,11 +86,17 @@
       ]
     },
     {
-      "id": "cycle-1-hugo-tressa-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle -1 | Hugo Tressa | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Hugo Tressa | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -347,15 +357,13 @@
           "body": {
             "en": "Use all your upgrades, run through your Orlea/Nia/Mika Healing cards to generate daggers.\nStack up Agony using Cursed Gouge + Curse to make 3 seperate Agony per dagger.\nUse Vital 3 whenever, or Vital 4 or 5 near the end for a huge damage burst"
           }
-        }
-      ]
-    },
-    {
-      "id": "don-t-lol-agony-tressa-fm-160",
-      "title": {
-        "en": "Don't lol | Agony Tressa | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Don't lol | Agony Tressa | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -481,9 +489,9 @@
       ]
     },
     {
-      "id": "eloise-bria-zatera",
+      "id": "partners",
       "title": {
-        "en": "Eloise | Bria | Zatera"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -557,9 +565,9 @@
       ]
     },
     {
-      "id": "blackwing-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "BlackWing | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -585,6 +593,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nAtk>Atk%>CR>CDmg>DoT%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -622,422 +636,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nGOUGE IS SO GARBAGE NOW IT DOESNT MATTER\nE2:\nThis is still nice, but we don't have the Dagger gen we used to\nE3:\nPotential levels, not very important\nE4:\n4 more agony, butt\nE5:\nPotential levels, not very important\nE6:\nGives a dagger on Agonied enemy defeat, its good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Feralization: 3.75 Moral for 1 turn\nSample: 1 AP draw 2\nForbidden: 1 AP Cantrip and random debuffs\nGilded Nest: 6 Agony (Why?) and Scorch (Yet to be seen how much Olga buffs)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "150% +(+30% x 20) 600% x 5 = 3000% dmg 4 times before exhausted\nDiscard 2 for +120% and 60% Multi for Attack Cards\nDraw 1 for 60% Multi\nDraw 2 if discarded"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "tressa.webp",
+          "legend": [
             {
-              "cardId": "n_0076",
-              "name": "Nutrient Absorption",
-              "note": {
-                "en": "Exhausts any card and can Cost Reduce cards for Move"
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
             },
             {
-              "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": "Free Final Dmg Multi and Glory Set Activator"
-              },
-              "rating": "3/5"
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "GOUGE IS SO GARBAGE NOW IT DOESNT MATTER"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "This is still nice, but we don't have the Dagger gen we used to"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potential levels, not very important"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "4 more agony, butt"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, not very important"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Gives a dagger on Agonied enemy defeat, its good"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Eternal: Tressa can always just hold it"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Feralization"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Feralization"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Gilded"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: Increase Dmg Amnt of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c4-swamp-of-judgement",
-      "title": {
-        "en": "C4 Swamp of Judgement"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1363,9 +1034,9 @@
       ]
     },
     {
-      "id": "tressa-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Tressa Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1616,6 +1287,401 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization: 3.75 Moral for 1 turn\nSample: 1 AP draw 2\nForbidden: 1 AP Cantrip and random debuffs\nGilded Nest: 6 Agony (Why?) and Scorch (Yet to be seen how much Olga buffs)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "150% +(+30% x 20) 600% x 5 = 3000% dmg 4 times before exhausted\nDiscard 2 for +120% and 60% Multi for Attack Cards\nDraw 1 for 60% Multi\nDraw 2 if discarded"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": "Free Final Dmg Multi and Glory Set Activator"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eternal: Tressa can always just hold it"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gilded"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Dmg Amnt of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

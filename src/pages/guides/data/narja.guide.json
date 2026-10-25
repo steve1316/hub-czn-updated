@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "narja-s-voracity-and-predation",
+      "id": "playstyle",
       "title": {
-        "en": "Narja's Voracity and Predation"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Narja's Voracity and Predation"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -45,11 +51,17 @@
       ]
     },
     {
-      "id": "cycle-2-voracity-discounts",
+      "id": "decks",
       "title": {
-        "en": "Cycle +2 | Voracity Discounts"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +2 | Voracity Discounts"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -323,15 +335,13 @@
           "body": {
             "en": "Since this is only 140/180 FM\nYou still have room for:\nNeutrals/Persona/Forbidden\n4th copy of Hunger without Divine or 2nd Voluntary\nIf you want to Activate Clover you need Mealtime back for -1 Cycle"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-1-azir-metallize",
-      "title": {
-        "en": "Cycle -1 | Azir Metallize"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Azir Metallize"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -531,9 +541,9 @@
       ]
     },
     {
-      "id": "gaya-nyx-alyssa-yvonne",
+      "id": "partners",
       "title": {
-        "en": "Gaya | Nyx | Alyssa | Yvonne"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -582,9 +592,9 @@
       ]
     },
     {
-      "id": "tetra-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "Tetra | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -610,6 +620,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrtR/CrtDmg/Def/Def%/Ego Recov\nMain Stat Rec:\n4:Crit Rate\n5: Instinct%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -701,99 +717,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\n2 Predation on Mealtime, is Fine\nE2:\nRng to keep Voracity up, but on Average it's still good\nE3:\n3 Predation like E1 it's okay\nE4:\nPredation get +30% dmg boost, it's good but predation is hard to get\nE5:\nPotential Levels: It's ok\nE6:\nThis is a funny way to make her a main dps"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Damage Amount by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card(s)."
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "narja.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "2 Predation on Mealtime, is Fine"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Rng to keep Voracity up, but on Average it's still good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "3 Predation like E1 it's okay"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Predation get +30% dmg boost, it's good but predation is hard to get"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "This is a funny way to make her a main dps"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1131,9 +1127,9 @@
       ]
     },
     {
-      "id": "narja-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Narja Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1373,6 +1369,80 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card(s)."
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

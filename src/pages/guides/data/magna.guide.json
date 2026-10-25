@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "lead-prism",
+      "id": "playstyle",
       "title": {
-        "en": "Lead Prism"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Lead Prism"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -53,15 +59,13 @@
           "body": {
             "en": "Multifacted Parallel Universe Nexus or Lead Prism is INSANE on Magna\nActivating 1 random Lead card (Prism's owner only) is a big AP Cheat\nEspecially so on Magna, where her Lead cards can be 2 Cost!"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -71,11 +75,17 @@
       ]
     },
     {
-      "id": "vuln-counter-draw-support",
+      "id": "decks",
       "title": {
-        "en": "Vuln Counter Draw Support"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Vuln Counter Draw Support"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -222,15 +232,13 @@
           "body": {
             "en": "Can use other forms of Ice Wall too and add more Ice Wall if you want"
           }
-        }
-      ]
-    },
-    {
-      "id": "aoe-vuln-support",
-      "title": {
-        "en": "AOE Vuln Support"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "AOE Vuln Support"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -492,9 +500,9 @@
       ]
     },
     {
-      "id": "wilhelmina-erica-rachel-raidel",
+      "id": "partners",
       "title": {
-        "en": "Wilhelmina | Erica | Rachel | Raidel"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -564,9 +572,9 @@
       ]
     },
     {
-      "id": "tetra-executioners-flex",
+      "id": "relics",
       "title": {
-        "en": "Tetra | Executioners | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -592,6 +600,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCrt Rate/Crt Dmg/Def/Def%\nMain Stat Rec:\n4: Crt Rate\n5: Justice%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -658,103 +672,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nGives Initiation to Storm SO GOOD\nE2:\nCounters now apply Freeze debuff, stacking damage buff for Magna, its ok\nE3:\nIncreased Damage, its ok\nE4:\nCounters no longer reduce vuln is okay\nE5:\nPotential Levels, it's ok\nE6:\nGains 1 Enhanced Counter at start of turn, it's ok"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Damage Amount by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "magna.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Gives Initiation to Storm SO GOOD"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Counters now apply Freeze debuff, stacking damage buff for Magna, its ok"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increased Damage, its ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Counters no longer reduce vuln is okay"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels, it's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Gains 1 Enhanced Counter at start of turn, it's ok"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1058,9 +1046,9 @@
       ]
     },
     {
-      "id": "magna-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Magna Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1243,6 +1231,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }
