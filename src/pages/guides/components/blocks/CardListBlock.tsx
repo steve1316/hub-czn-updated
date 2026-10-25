@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { CardImage } from '@/pages/deck-builder/components/CardImage'
 import type { CardEntry } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { cardEntry, LEVEL_NUMERALS, localized, resolveLang } from '../../guides.utils'
+import { cardEntry, levelNumeral, localized, ratingScore, resolveLang } from '../../guides.utils'
 import type { CardItem, EpiphanyRating, LocalizedText } from '../../guides.types'
 import { CostGem } from './CostGem'
 import { RatingChip } from './RatingChip'
@@ -24,16 +24,6 @@ interface EpiphanyRowsProps {
 }
 
 /**
- * The whole score of a rating, so the best epiphany can be picked out.
- * @param rating The author's rating, such as "5/5".
- * @returns The score, or -1 when there is none.
- */
-function score(rating: string | undefined): number {
-  const value = parseFloat(rating ?? '')
-  return Number.isNaN(value) ? -1 : value
-}
-
-/**
  * One row per rated epiphany level, with the best score highlighted.
  * @param props The card's epiphanies.
  * @returns The rows.
@@ -41,7 +31,7 @@ function score(rating: string | undefined): number {
 function EpiphanyRows({ epiphanies }: EpiphanyRowsProps) {
   const { i18n } = useTranslation()
   const lang = resolveLang(i18n.language)
-  const best = Math.max(...epiphanies.map(ep => score(ep.rating)))
+  const best = Math.max(...epiphanies.map(ep => ratingScore(ep.rating)))
 
   return (
     <div className="mt-2 flex flex-col gap-1">
@@ -53,11 +43,11 @@ function EpiphanyRows({ epiphanies }: EpiphanyRowsProps) {
             title={ep.name}
             className={cn(
               'grid grid-cols-[44px_34px_1fr] items-start gap-2 rounded px-1.5 py-1 text-xs',
-              best >= 0 && score(ep.rating) === best && 'bg-[#c084fc]/9 outline outline-[#c084fc]/30',
+              best >= 0 && ratingScore(ep.rating) === best && 'bg-[#c084fc]/9 outline outline-[#c084fc]/30',
             )}
           >
             <span className="flex items-center gap-1 font-bold text-[#ffffff]">
-              {LEVEL_NUMERALS[ep.level - 1]}
+              {levelNumeral(ep.level)}
               <CostGem cost={ep.cost} small />
             </span>
             <span>{ep.rating && <RatingChip rating={ep.rating} />}</span>

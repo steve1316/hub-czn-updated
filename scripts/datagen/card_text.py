@@ -13,6 +13,7 @@ import hashlib
 import io
 import re
 from dataclasses import dataclass
+from functools import cache
 
 import numpy as np
 from numpy.lib.stride_tricks import sliding_window_view
@@ -116,25 +117,30 @@ def match_god(picture: Image.Image) -> str | None:
         The god's display name, such as "Nihilum", or None for the regular emblem or an unclear one.
     """
     region = np.asarray(picture.convert("RGB").resize(RENDER_SIZE).crop(EMBLEM_BOX), dtype=float)
-    scores = sorted((_emblem_difference(region, icon), god) for god, icon in _god_icons().items())
+    scores = sorted((_emblem_difference(region, sizes), god) for god, sizes in _god_icons().items())
     (best, god), (second, _) = scores[0], scores[1]
     return god if best <= MAX_EMBLEM_DIFF and second - best >= EMBLEM_MARGIN else None
 
 
-def _emblem_difference(region: np.ndarray, icon: Image.Image) -> float:
+def _emblem_difference(region: np.ndarray, sizes: list[tuple[np.ndarray, np.ndarray]]) -> float:
     """The smallest mean colour difference between the icon and any spot in the region, over the icon's sizes."""
     best = float("inf")
-    for size in EMBLEM_SIZES:
-        pixels = np.asarray(icon.resize((size, size), Image.LANCZOS), dtype=float)
-        alpha, colour = pixels[..., 3:] / 255, pixels[..., :3]
-        windows = sliding_window_view(region, (size, size, 3))[:, :, 0]
+    for colour, alpha in sizes:
+        windows = sliding_window_view(region, colour.shape)[:, :, 0]
         difference = (np.abs(windows - colour) * alpha).sum(axis=(2, 3, 4)) / (alpha.sum() * 3)
         best = min(best, float(difference.min()))
     return best
 
 
-def _god_icons() -> dict[str, Image.Image]:
-    return {display: Image.open(GOD_ICON_DIR / f"{stem}.webp").convert("RGBA") for stem, display in divine_gods().items()}
+@cache
+def _god_icons() -> dict[str, list[tuple[np.ndarray, np.ndarray]]]:
+    """Each god's display name -> its emblem icon at every size in `EMBLEM_SIZES`, as (colour, alpha 0-1) arrays."""
+    icons = {}
+    for stem, display in divine_gods().items():
+        icon = Image.open(GOD_ICON_DIR / f"{stem}.webp").convert("RGBA")
+        pixels = [np.asarray(icon.resize((size, size), Image.LANCZOS), dtype=float) for size in EMBLEM_SIZES]
+        icons[display] = [(sized[..., :3], sized[..., 3:] / 255) for sized in pixels]
+    return icons
 
 
 def _ocr():

@@ -21,7 +21,26 @@ const TERM_MAX_WORDS = 4
 const HEADING_MAX_LENGTH = 60
 
 // Roman numerals for epiphany levels 1-5.
-export const LEVEL_NUMERALS = ['I', 'II', 'III', 'IV', 'V']
+const LEVEL_NUMERALS = ['I', 'II', 'III', 'IV', 'V']
+
+/**
+ * An epiphany level as the game writes it.
+ * @param level The epiphany level, 1-5.
+ * @returns The numeral, such as "IV".
+ */
+export function levelNumeral(level: number): string {
+  return LEVEL_NUMERALS[level - 1]
+}
+
+/**
+ * The score of a rating.
+ * @param rating The author's rating, such as "3.5/5".
+ * @returns The score before the slash, or -1 when there is none.
+ */
+export function ratingScore(rating: string | undefined): number {
+  const score = parseFloat(rating ?? '')
+  return Number.isNaN(score) ? -1 : score
+}
 
 /**
  * The colour of a rating chip.
@@ -29,8 +48,8 @@ export const LEVEL_NUMERALS = ['I', 'II', 'III', 'IV', 'V']
  * @returns Gold for 6 and up, purple for 5, blue for 4, grey for 3 (or no score) and red for 2 and below.
  */
 export function ratingTone(rating: string): RatingTone {
-  const score = parseInt(rating, 10)
-  if (Number.isNaN(score)) return 'grey'
+  const score = Math.floor(ratingScore(rating))
+  if (score < 0) return 'grey'
   if (score >= 6) return 'gold'
   if (score === 5) return 'purple'
   if (score === 4) return 'blue'

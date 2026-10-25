@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { Guide } from './guides.types'
-import { epiphanyRatings, localized, proseParts, ratingTone, resolveLang } from './guides.utils'
+import { epiphanyRatings, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en only for en', () => {
@@ -17,6 +17,22 @@ describe('localized', () => {
     const t = { en: 'Hello', 'pt-BR': 'Olá' }
     expect(localized(t, 'en')).toBe('Hello')
     expect(localized(t, 'pt-BR')).toBe('Olá')
+  })
+})
+
+describe('ratingScore', () => {
+  it('reads the score before the slash, or -1 when there is none', () => {
+    expect(ratingScore('3.5/5')).toBe(3.5)
+    expect(ratingScore('0/5')).toBe(0)
+    expect(ratingScore(undefined)).toBe(-1)
+    expect(ratingScore('?')).toBe(-1)
+  })
+})
+
+describe('levelNumeral', () => {
+  it('writes epiphany levels 1-5 as numerals', () => {
+    expect(levelNumeral(1)).toBe('I')
+    expect(levelNumeral(5)).toBe('V')
   })
 })
 

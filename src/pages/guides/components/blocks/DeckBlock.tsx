@@ -1,7 +1,7 @@
 import { useTranslation } from 'react-i18next'
 import { CardImage } from '@/pages/deck-builder/components/CardImage'
 import type { CardEntry } from '@/lib/types'
-import { cardEntry, LEVEL_NUMERALS, localized, resolveLang } from '../../guides.utils'
+import { cardEntry, levelNumeral, localized, resolveLang } from '../../guides.utils'
 import type { DeckCard, EpiphanyRating } from '../../guides.types'
 import { CostGem } from './CostGem'
 import { RatingChip } from './RatingChip'
@@ -49,7 +49,7 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
                 <span
                   className={`absolute bottom-1 left-1 rounded border bg-[#0d0d0d]/85 px-1 text-[10px] font-bold text-[#ffffff] ${level === 0 ? 'border-[#555]' : 'border-[#c084fc]'}`}
                 >
-                  {level === 0 ? t('guides.base') : LEVEL_NUMERALS[level - 1]}
+                  {level === 0 ? t('guides.base') : levelNumeral(level)}
                 </span>
               )}
             </div>

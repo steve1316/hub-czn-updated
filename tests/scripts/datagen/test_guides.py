@@ -276,6 +276,16 @@ def test_unresolved_deck_card_is_listed_for_review():
     assert "Deck cards with an unknown epiphany" in page and "Tab!D10" in page
 
 
+def test_deck_copies_of_one_picture_are_matched_once():
+    picture = _download(4)
+    library = guides._DeckPictures()
+    reads = []
+    for cell in ("D10", "E10"):
+        card = {"cardId": "c_30134_uni2", "cost": 1}
+        assert not guides._resolve_deck_card(card, picture, f"Tab!{cell}", library, {}, lambda data: reads.append(data) or "zzzz", _variants_of)
+    assert len(reads) == 1
+
+
 def test_unrated_card_row_becomes_a_deck_with_every_copy():
     resonance = {"cardId": "c_30134_uni1", "name": "Sword Resonance", "cost": 1, "note": {"en": ""}}
     deck = guides._as_deck({"type": "card-list", "items": [dict(resonance) for _ in range(4)]})

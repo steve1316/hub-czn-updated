@@ -209,6 +209,8 @@ class _DeckPictures:
         self.copies: dict[tuple[str, str], int] = {}
         # (deck card, its picture, its cell) still to be resolved.
         self.pending: list[tuple[dict, _Download, str]] = []
+        # (card id, picture sha1) -> the OCR match of that picture, so copies of one picture in a deck are read once.
+        self.matches: dict[tuple[str, str], card_text.Match | None] = {}
 
     def add_copy(self, card_id: str, download: _Download, level: int) -> None:
         """
@@ -944,10 +946,13 @@ def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPi
         level = entry["epiphany"]
         extra = _extra(entry.get("divine") or entry.get("common"))
     elif (level := decks.level_of(card["cardId"], download)) is None:
-        # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
-        god = card_text.match_god(download.picture)
-        extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
-        match = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
+        key = (card["cardId"], download.sha1)
+        if key not in decks.matches:
+            # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
+            god = card_text.match_god(download.picture)
+            extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
+            decks.matches[key] = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
+        match = decks.matches[key]
         if match is None:
             return False
         level, extra = match.level, match.extra

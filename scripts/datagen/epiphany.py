@@ -162,7 +162,5 @@ def _catalog(name: str) -> list[dict]:
     return json.loads((EPIPHANY_DATA_DIR / name).read_text(encoding="utf-8"))
 
 
-
-
 def _text(ctx: Context, card_id: str, base_id: str | None) -> str:
     return ctx.text(ctx.resolver.card_description(card_id, base_card_id=base_id).text)
