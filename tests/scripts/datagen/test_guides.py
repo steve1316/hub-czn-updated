@@ -50,6 +50,11 @@ RW_DECK = [("B10", "c_30134_srt4", "f8ae3a4126e2"), *[(f"{col}10", "c_30134_uni1
            ("B11", "c_30134_uni2", "f25269e88665"), ("C11", "c_30134_uni3", "dfd4da2efaee")]
 
 
+# A neutral card as the deck builder's shared pool lists it.
+SPORE_HARVESTER = {"id": "n_0129", "name": "Spore Harvester", "cost": 0,
+                   "description": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."}
+
+
 def _rossweisse_deck() -> list[bytes] | None:
     if not (have_client_db() and have_client_text()):
         return None
@@ -388,7 +393,7 @@ def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._G
     banner = guides._Download(_png(_pattern(5, picture_size)))
     ctx = SimpleNamespace(text=lambda text, **_: text)
     downloads = SimpleNamespace(get=lambda url, key: banner)
-    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
+    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
                                 guides._PictureLabels({}), "Tab", "tab")
 
 
@@ -530,14 +535,27 @@ def test_unrated_card_row_becomes_a_deck_with_every_copy():
 def test_deck_card_with_no_epiphanies_shows_its_own_text(monkeypatch):
     builder = _builder()
     builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={"c_1040_uni4": {}, "c_30134_uni2": {}}))
+    builder.shared_cards = {"n_0129": SPORE_HARVESTER}
     monkeypatch.setattr(guides.epiphany, "base_text", lambda ctx, card_id: "Create 1 Opening Found.")
     specialist = {"cardId": "c_1040_uni4", "name": "Heavy Weapons Specialist", "cost": 1, "note": {"en": ""}}
     flow = {"cardId": "c_30134_uni2", "name": "Radiant Sword Flow", "cost": 1, "note": {"en": ""}}
     neutral = {"cardId": "n_0129", "name": "Spore Harvester", "note": {"en": ""}}
-    deck = builder._deck_or_list({"type": "card-list", "items": [specialist, flow, neutral]})
+    unknown = {"cardId": "n_9999", "name": "Unknown", "note": {"en": ""}}
+    deck = builder._deck_or_list({"type": "card-list", "items": [specialist, flow, neutral, unknown]})
     assert deck["cards"][0]["text"] == {"en": "Create 1 Opening Found."}
-    # A card with epiphanies gets its text from the one it shows, and a card the client does not have gets none.
-    assert "text" not in deck["cards"][1] and "text" not in deck["cards"][2]
+    # A card with epiphanies gets its text from the one it shows, and a card no data knows gets none.
+    assert "text" not in deck["cards"][1] and "text" not in deck["cards"][3]
+    # A neutral or monster card takes its text from the deck builder's shared pool.
+    assert deck["cards"][2]["text"] == {"en": SPORE_HARVESTER["description"]}
+
+
+def test_neutral_card_takes_its_cost_from_the_shared_pool():
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={}))
+    builder.card_names = {"n_0129": "Spore Harvester"}
+    builder.shared_cards = {"n_0129": SPORE_HARVESTER}
+    block = builder._card_list([{"cardId": "n_0129", "col": 1, "picture": None, "epiphany": 0}], {})
+    assert block["items"][0]["cost"] == 0
 
 
 def test_rossweisse_deck_epiphanies():

@@ -288,7 +288,8 @@ def build(ctx: Context) -> TargetResult:
     own_cards = _cards_by_owner(ctx)
     sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
     sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
-    card_names = _card_names(ctx)
+    shared_cards = _shared_cards()
+    card_names = _card_names(ctx, shared_cards)
     variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))
     decks = _DeckPictures()
     issues: list[Issue] = []
@@ -307,7 +308,7 @@ def build(ctx: Context) -> TargetResult:
         illustrations, card_ids = _card_candidates(ctx, own_cards.get(str(res_id), []))
         cards = _CachedCards(illustrations, card_ids, match_cache)
         guide_slug = slug(name, _SLUG_MAX_LENGTH)
-        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, variants_of, decks, overrides, labels, tab_name, guide_slug)
+        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, shared_cards, variants_of, decks, overrides, labels, tab_name, guide_slug)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -454,18 +455,29 @@ def _face_art(ctx: Context) -> dict[str, list[Path]]:
     return faces
 
 
-def _card_names(ctx: Context) -> dict[str, str]:
+def _shared_cards() -> dict[str, dict]:
+    """
+    The deck builder's shared pool of neutral and monster cards, whose ids differ from the client's.
+
+    Returns:
+        Card id -> its deck builder entry, with its name, cost and description.
+    """
+    return {card["id"]: card for card in json.loads((REPO_ROOT / neutral_cards.OUTPUT_PATH).read_text(encoding="utf-8"))}
+
+
+def _card_names(ctx: Context, shared_cards: dict[str, dict]) -> dict[str, str]:
     """
     The display name of every card a guide can list.
 
     Args:
         ctx: The run context.
+        shared_cards: The deck builder's shared pool, from `_shared_cards`.
 
     Returns:
-        Card id -> name, for character cards and for the deck builder's shared pool, whose ids differ from the client's.
+        Card id -> name, for character cards and for the shared pool.
     """
     names = {card_id: ctx.text(name, sentences=False) for card_id in ctx.client.cards if (name := ctx.resolver.card_name(card_id))}
-    names.update({card["id"]: card["name"] for card in json.loads((REPO_ROOT / neutral_cards.OUTPUT_PATH).read_text(encoding="utf-8"))})
+    names.update({card_id: card["name"] for card_id, card in shared_cards.items()})
     return names
 
 
@@ -564,7 +576,7 @@ class _GuideBuilder:
     """Turns one tab's cell grid into guide sections."""
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
-                 sift_cards: _CachedSift, card_names: dict[str, str], variants_of, decks: _DeckPictures, overrides: Overrides,
+                 sift_cards: _CachedSift, card_names: dict[str, str], shared_cards: dict[str, dict], variants_of, decks: _DeckPictures, overrides: Overrides,
                  labels: _PictureLabels, tab_name: str, guide_slug: str):
         """
         Args:
@@ -575,6 +587,7 @@ class _GuideBuilder:
             cards: Identifies this character's card renders.
             sift_cards: Identifies the card renders `cards` misses, among every card in the deck builder.
             card_names: Card id -> display name, written next to each listed card.
+            shared_cards: The deck builder's neutral and monster cards, which give those cards their cost and text.
             variants_of: Card id -> its `epiphany.variants`, shared by every tab.
             decks: Collects rated pictures and the deck cards to resolve once every tab is read.
             overrides: The guides overrides, whose entries can label one cell as "<tab>!<cell>".
@@ -589,6 +602,7 @@ class _GuideBuilder:
         self.cards = cards
         self.sift_cards = sift_cards
         self.card_names = card_names
+        self.shared_cards = shared_cards
         self.variants_of = variants_of
         self.decks = decks
         self.overrides = overrides
@@ -836,6 +850,8 @@ class _GuideBuilder:
                 item["name"] = self.card_names[card_id]
             if card_id in self.ctx.client.cards:
                 item["cost"] = epiphany.printed_cost(self.ctx, card_id)
+            elif shared := self.shared_cards.get(card_id):
+                item["cost"] = shared["cost"]
             item["note"] = {"en": ""}
             if card["col"] in ratings:
                 item["rating"] = ratings[card["col"]]
@@ -864,9 +880,12 @@ class _GuideBuilder:
         for card, picture in zip(deck["cards"], pictures):
             if picture:
                 self.decks.pending.append((card, *picture))
-            # A card with no epiphanies shows its own text, as there is no epiphany to read it from.
-            if card["cardId"] in self.ctx.client.cards and not self.variants_of(card["cardId"]):
-                card["text"] = {"en": epiphany.base_text(self.ctx, card["cardId"])}
+            # Shared-pool cards have no epiphanies and use the pool's text. A client card with no epiphanies shows its own base text.
+            card_id = card["cardId"]
+            if shared := self.shared_cards.get(card_id):
+                card["text"] = {"en": shared["description"]}
+            elif card_id in self.ctx.client.cards and not self.variants_of(card_id):
+                card["text"] = {"en": epiphany.base_text(self.ctx, card_id)}
         return deck
 
     def _face_block(self, face_rows: list[list[tuple[int, int]]], ratings: dict[int, str], names: dict[int, str]) -> tuple[dict, bool]:
