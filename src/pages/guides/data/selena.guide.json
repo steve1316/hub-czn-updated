@@ -7,28 +7,32 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/10",
   "sections": [
     {
-      "id": "part-1",
+      "id": "notes",
       "title": {
-        "en": "Part 1"
+        "en": "Notes"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Target Spotted I",
+                "text": {
+                  "en": "100% Damage. Attunement: 300% Damage to a random enemy."
+                }
               }
             }
           ]
@@ -46,20 +50,30 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Tactical Maneuver I",
+                "text": {
+                  "en": "225% Shield. 3 Tenacity Damage."
+                }
               }
             },
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Tactical Maneuver IV",
+                "text": {
+                  "en": "[Retain] If the target is in a Ravage state, recharge Tenacity."
+                }
               }
             }
           ]
@@ -77,21 +91,23 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Target Spotted IV",
+                "text": {
+                  "en": "150% Shield. Attunement: Draw 1."
+                }
               }
             },
             {
               "cardId": "n_0103",
-              "name": "Precision Aim",
-              "note": {
-                "en": ""
-              }
+              "name": "Precision Aim"
             }
           ]
         },
@@ -110,39 +126,24 @@
       ]
     },
     {
-      "id": "part-2",
-      "title": {
-        "en": "Part 2"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/10"
-          }
-        }
-      ]
-    },
-    {
       "id": "cycle-0-coord-attack-base-100-fm",
       "title": {
         "en": "Cycle 0 | Coord Attack Base | 100 FM"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Target Spotted IV",
+                "text": {
+                  "en": "150% Shield. Attunement: Draw 1."
+                }
               }
             }
           ]
@@ -177,14 +178,12 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -212,21 +211,24 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "High-Power Scope II",
+                "text": {
+                  "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
               }
             },
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         }
@@ -239,35 +241,69 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Tactical Maneuver IV",
+                "text": {
+                  "en": "[Retain] If the target is in a Ravage state, recharge Tenacity."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Tactical Maneuver IV",
+                "text": {
+                  "en": "[Retain] If the target is in a Ravage state, recharge Tenacity."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Tactical Maneuver IV",
+                "text": {
+                  "en": "[Retain] If the target is in a Ravage state, recharge Tenacity."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -295,35 +331,31 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Target Spotted IV",
+                "text": {
+                  "en": "150% Shield. Attunement: Draw 1."
+                }
               }
             },
             {
               "cardId": "n_0103",
-              "name": "Precision Aim",
-              "note": {
-                "en": ""
-              }
+              "name": "Precision Aim"
             },
             {
               "cardId": "n_0103",
-              "name": "Precision Aim",
-              "note": {
-                "en": ""
-              }
+              "name": "Precision Aim"
             },
             {
               "cardId": "n_0103",
-              "name": "Precision Aim",
-              "note": {
-                "en": ""
-              }
+              "name": "Precision Aim"
             }
           ]
         },
@@ -351,35 +383,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "High-Power Scope II",
+                "text": {
+                  "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
               }
             },
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "High-Power Scope II",
+                "text": {
+                  "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
               }
             },
             {
               "cardId": "c_1005_uni2",
               "name": "Drone Bombing",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
+                }
               }
             },
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -413,63 +458,60 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_srt1",
               "name": "Engagement Fire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1005_srt1",
               "name": "Engagement Fire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Target Spotted V",
+                "text": {
+                  "en": "On Ravage, 200% Coordinated Attack to the target."
+                }
               }
             },
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Tactical Maneuver II",
+                "text": {
+                  "en": "150% Damage. Increase Tenacity Damage of this card by 150%."
+                }
               }
             },
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "n_0007",
-              "name": "Ambush",
-              "note": {
-                "en": ""
-              }
+              "name": "Ambush"
             }
           ]
         }
@@ -489,7 +531,7 @@
               "name": "Ruixiang",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "3 EP Draw 3, 5 Starstat stick isn't that hard to Activate"
               }
             },
             {
@@ -497,7 +539,7 @@
               "name": "Marin",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Highest Damage, pretty good Ego"
               }
             },
             {
@@ -505,7 +547,7 @@
               "name": "Rosaria",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "RNG Moral, Conssitent Ego, easy to get dupes"
               }
             },
             {
@@ -513,7 +555,7 @@
               "name": "Solia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Can be slightly higher damage then Rosaria after you get dupes"
               }
             },
             {
@@ -521,16 +563,10 @@
               "name": "Daisy",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Rosaria but worse"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ruixiang: 3 EP Draw 3, 5 Starstat stick isn't that hard to Activate\nMarin: Highest Damage, pretty good Ego\nRosaria: RNG Moral, Conssitent Ego, easy to get dupes\nSolia: Can be slightly higher damage then Rosaria after you get dupes\nDaisy: Rosaria but worse"
-          }
         }
       ]
     },
@@ -541,16 +577,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Eventually loses to BattleField Evo if your Crit Rate is high enough"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BattleField Evo | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -559,10 +634,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Prelude | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Prelude",
+              "setId": 26,
+              "name": "Prelude to a Hero",
+              "pieces": 4,
+              "bonus": "When a Passion/Void Attack Card is Discarded, +15% Crit Chance for 1 turn (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_026.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -571,10 +661,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Passion | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Passion",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -641,17 +746,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -942,9 +1041,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -954,7 +1053,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "5/5"
             },
@@ -962,7 +1061,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
@@ -970,7 +1069,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
               "rating": "5/5"
             }
@@ -979,7 +1078,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
           }
         },
         {
@@ -988,69 +1087,72 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
+              "cost": 0,
+              "note": {
+                "en": "Increases Mark Damage by an POTENTIAL Additive, for ALL ALLIES"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "High-Power Scope I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "4 Mark is alot, but its on Scope"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "High-Power Scope II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Endless mark, an upgrade, and stackable, but only works on Selena's own attacks"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "High-Power Scope III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Increases Mark damage, dupes only stack duration, not damage increase"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "High-Power Scope IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Works on Allies Attack cards, dupes extend the buff duration, very good with draw divine"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "High-Power Scope V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Thins the deck, but no Mark on use, and only 1 AOE Mark per turn, kinda weak"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sniper's Domain: Increases Mark Damage by an POTENTIAL Additive, for ALL ALLIES"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1005_srt4",
-              "name": "High-Power Scope",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1005_srt4",
-              "name": "High-Power Scope",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_srt4",
-              "name": "High-Power Scope",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1005_srt4",
-              "name": "High-Power Scope",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_srt4",
-              "name": "High-Power Scope",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Scope1: 4 Mark is alot, but its on Scope\nScope 2: Endless mark, an upgrade, and stackable, but only works on Selena's own attacks\nScope 3: Increases Mark damage, dupes only stack duration, not damage increase\nScope 4: Works on Allies Attack cards, dupes extend the buff duration, very good with draw divine\nScope 5: Thins the deck, but no Mark on use, and only 1 AOE Mark per turn, kinda weak"
-          }
         },
         {
           "type": "card-list",
@@ -1059,48 +1161,62 @@
               "cardId": "c_1005_uni2",
               "name": "Drone Bombing",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1005_uni2",
-              "name": "Drone Bombing",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1005_uni2",
-              "name": "Drone Bombing",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1005_uni2",
-              "name": "Drone Bombing",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_uni2",
-              "name": "Drone Bombing",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Drone Bombing I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Passion Weaknes usually irrelevant"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Drone Bombing II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "2 AOE Mark, on an attack is very good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Drone Bombing III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Ramping damage but is a finisher, so if unlucky it can kill a combo turn when drawn"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Drone Bombing IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "1 Turn buff, triggers even if allies attack, opportunistically very good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Drone Bombing V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Better drone 3, thins your deck and is always a guranteed damage source"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Drone 1: Passion Weaknes usually irrelevant\nDrone 2: 2 AOE Mark, on an attack is very good\nDrone 3: Ramping damage but is a finisher, so if unlucky it can kill a combo turn when drawn\nDrone 4: 1 Turn buff, triggers even if allies attack, opportunistically very good\nDrone 5: Better drone 3, thins your deck and is always a guranteed damage source\nAll versions should include ally attacks (lmk if I'm wrong)"
+            "en": "All versions should include ally attacks (lmk if I'm wrong)"
           }
         },
         {
@@ -1110,49 +1226,57 @@
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1005_uni1",
-              "name": "Target Spotted",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_uni1",
-              "name": "Target Spotted",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1005_uni1",
-              "name": "Target Spotted",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1005_uni1",
-              "name": "Target Spotted",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Target Spotted I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Not worth much"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Target Spotted II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "4 Mark and also being an attack is a good rate"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Target Spotted III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 AOE Mark, but its on a skill, not attack"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Target Spotted IV",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "The best version, it cantrips, and also has Attunment synergies"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Target Spotted V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Upgrade, The effect is kinda hard to actually happen"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Target 1: Not worth much\nTarget 2: 4 Mark and also being an attack is a good rate\nTarget 3: 2 AOE Mark, but its on a skill, not attack\nTarget 4: The best version, it cantrips, and also has Attunment synergies\nTarget 5: Upgrade, The effect is kinda hard to actually happen"
-          }
         },
         {
           "type": "card-list",
@@ -1161,48 +1285,62 @@
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1005_uni3",
-              "name": "Tactical Maneuver",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_uni3",
-              "name": "Tactical Maneuver",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1005_uni3",
-              "name": "Tactical Maneuver",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1005_uni3",
-              "name": "Tactical Maneuver",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Tactical Maneuver I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Huge ammount of Tenacity Damage, also Doesn't care for Elemental Weakness"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Tactical Maneuver II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Damage and 2.5 Tenacity Damage vs Passion Weak, not bad"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Tactical Maneuver III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Worse Tactical 70% of the time, not recommended"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Tactical Maneuver IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Retain to thin deck or also Lets you recharge tenacity for more AP/Ravage effects"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Tactical Maneuver V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "AOE 1 Mark, but the AOE 1 Tenacity damage currently isn't that great"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Tactical 1: Huge ammount of Tenacity Damage, also Doesn't care for Elemental Weakness\nTactical 2: Damage and 2.5 Tenacity Damage vs Passion Weak, not bad\nTactical 1 vs 2 just means if you're against Passion Weak or not\nTactical 3: Worse Tactical 70% of the time, not recommended\nTactical 4: Retain to thin deck or also Lets you recharge tenacity for more AP/Ravage effects\nTactical 5: AOE 1 Mark, but the AOE 1 Tenacity damage currently isn't that great\nDraw Neutral is very good here"
+            "en": "Tactical 1 vs 2 just means if you're against Passion Weak or not\nDraw Neutral is very good here"
           }
         }
       ]
@@ -1217,80 +1355,179 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30075,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                1005,
-                30113
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                1005,
-                30113
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1005,
-                1050
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1005,
-                1050
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1005,
-                1050
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1302,58 +1539,148 @@
               "title": {
                 "en": "MainDPS"
               },
-              "faces": [
-                30048,
-                30075,
-                1027,
-                30093,
-                30113,
-                1004,
-                1060,
-                1061
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             },
             {
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003,
-                1040,
-                30075,
-                1052
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1056,
-                1062,
-                1050,
-                1055,
-                1039,
-                1064,
-                1057,
-                30097
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP"
               },
-              "faces": [
-                1039,
-                1055,
-                1033,
-                1003,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]

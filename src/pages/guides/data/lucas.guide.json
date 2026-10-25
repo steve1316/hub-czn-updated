@@ -15,28 +15,32 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1021_cre1",
+              "name": "Armor-Piercing Rounds",
+              "cost": 1
+            },
             {
               "cardId": "c_1021_cre2",
               "name": "Explosive Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1021_cre3",
               "name": "Dispersing Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
+            },
+            {
+              "cardId": "c_1021_cre4",
+              "name": "Cold Shot",
+              "cost": 1
             },
             {
               "cardId": "c_1021_cre5",
               "name": "Flame Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -69,35 +73,48 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Flashbang V",
+                "text": {
+                  "en": "When hitting a target that has Shield, increase Damage Amount by 30%."
+                }
               }
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -114,35 +131,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "S.S.S I",
+                "text": {
+                  "en": "200% Damage. For 1 turn, +40% Bullet card Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -159,35 +189,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Extended Magazine II",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 2 Launcher Bullet."
+                }
               }
             },
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Extended Magazine II",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 2 Launcher Bullet."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Flashbang III",
+                "text": {
+                  "en": "[Retain] 180% Damage to all enemies. 2 Passion Weakness."
+                }
               }
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         }
@@ -200,48 +243,78 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_uni2",
               "name": "Flame Thrower",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Flame Thrower III",
+                "text": {
+                  "en": "270% Damage to all enemies. On Critical Hit, 150% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1021_uni2",
               "name": "Flame Thrower",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Flame Thrower III",
+                "text": {
+                  "en": "270% Damage to all enemies. On Critical Hit, 150% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1021_uni2",
               "name": "Flame Thrower",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Flame Thrower III",
+                "text": {
+                  "en": "270% Damage to all enemies. On Critical Hit, 150% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1021_uni2",
               "name": "Flame Thrower",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Flame Thrower III",
+                "text": {
+                  "en": "270% Damage to all enemies. On Critical Hit, 150% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Flashbang III",
+                "text": {
+                  "en": "[Retain] 180% Damage to all enemies. 2 Passion Weakness."
+                }
               }
             }
           ]
@@ -259,49 +332,51 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Extended Magazine III",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet, and with a 50% chance, decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "S.S.S V",
+                "text": {
+                  "en": "100% Damage. For 1 turn(s), when a Bullet card is activated, 50% Fixed Damage to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -318,48 +393,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "S.S.S IV",
+                "text": {
+                  "en": "150% Damage. +120% Damage Amount to the next Bullet card activated."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flashbang IV",
+                "text": {
+                  "en": "180% Damage to all enemies. 2 Mark. If the target has Shield, +50% Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flashbang IV",
+                "text": {
+                  "en": "180% Damage to all enemies. 2 Mark. If the target has Shield, +50% Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flashbang IV",
+                "text": {
+                  "en": "180% Damage to all enemies. 2 Mark. If the target has Shield, +50% Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flashbang IV",
+                "text": {
+                  "en": "180% Damage to all enemies. 2 Mark. If the target has Shield, +50% Damage."
+                }
               }
             }
           ]
@@ -377,48 +482,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1021_srt4",
               "name": "Extended Magazine",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Extended Magazine IV",
+                "text": {
+                  "en": "[Lead] At the start of the turn, create 1 Launcher Bullet. 50% chance to Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "S.S.S I",
+                "text": {
+                  "en": "200% Damage. For 1 turn, +40% Bullet card Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "S.S.S I",
+                "text": {
+                  "en": "200% Damage. For 1 turn, +40% Bullet card Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "S.S.S I",
+                "text": {
+                  "en": "200% Damage. For 1 turn, +40% Bullet card Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "S.S.S I",
+                "text": {
+                  "en": "200% Damage. For 1 turn, +40% Bullet card Damage."
+                }
               }
             },
             {
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Flashbang III",
+                "text": {
+                  "en": "[Retain] 180% Damage to all enemies. 2 Passion Weakness."
+                }
               }
             }
           ]
@@ -445,7 +580,7 @@
               "name": "Yuri",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "You generally play Lucas as a Draw Support so Yuri Ego has best synergy"
               }
             },
             {
@@ -469,7 +604,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Yuri: You generally play Lucas as a Draw Support so Yuri Ego has best synergy\nAkad/Carroty both buff Lucas damage"
+            "en": "Akad/Carroty both buff Lucas damage"
           }
         },
         {
@@ -488,7 +623,7 @@
               "name": "Janet",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": ": Only buffs Lucas bullets, and requires you to use them, I wouldn't suggest it"
               }
             }
           ]
@@ -496,7 +631,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Serenthia: Crit Rate and Crit Dmg are great\nJanet:: Only buffs Lucas bullets, and requires you to use them, I wouldn't suggest it"
+            "en": "Serenthia: Crit Rate and Crit Dmg are great"
           }
         }
       ]
@@ -508,16 +643,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Atk% and Crt Dmg buff Fixed damage, and Cursed Corpse is relatively ok with Agony Rocket"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Justice | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -526,10 +705,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -618,9 +812,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -630,7 +824,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
               "rating": "5/5"
             },
@@ -638,7 +832,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Tutoring out a card and giving it retrieve is amazing"
               },
               "rating": "5/5"
             },
@@ -646,7 +840,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Pretty slow to scale"
               },
               "rating": "3/5"
             },
@@ -654,17 +848,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Can be pretty good, but it dies eventually which is unfortuate"
               },
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nGrave: Can be pretty good, but it dies eventually which is unfortuate"
-          }
         },
         {
           "type": "card-list",
@@ -672,6 +860,7 @@
             {
               "cardId": "c_1021_uni4",
               "name": "R.P.G-7",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -689,7 +878,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Can top Target 4 to redraw it, or other Attunement effects"
               },
               "rating": "4/5"
             },
@@ -697,68 +886,76 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
+                "en": "2 Moral is always great"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "RPG-7: Includes Bullets from Allies like Luke and Renoa\nQuick Shelling/Leap Attack: Cantrips that do damage, really good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "name": "Extended Magazine",
+              "note": {
                 "en": ""
               },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Extended Magazine I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Initiatio and 0 cost are okay, but rockets are butt"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Extended Magazine II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "+1 Launcher = even more garbage created"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Extended Magazine III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Makes Rockets usable, honestly pretty great"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Extended Magazine IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Extra draw every turn is great"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Extended Magazine V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "6 AP to use everything? That's hella bad, but hey, it has Exhaust and isn't an upgrade"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "RPG-7: Includes Bullets from Allies like Luke and Renoa\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nNegotiate: 2 Moral is always great"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1021_srt4",
-              "name": "Extended Magazine",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1021_srt4",
-              "name": "Extended Magazine",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1021_srt4",
-              "name": "Extended Magazine",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1021_srt4",
-              "name": "Extended Magazine",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1021_srt4",
-              "name": "Extended Magazine",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Extended 1: Initiatio and 0 cost are okay, but rockets are butt\nExtended 2: +1 Launcher = even more garbage created\nExtended 3: Makes Rockets usable, honestly pretty great\nExtended 4: Extra draw every turn is great\nExtended 5: 6 AP to use everything? That's hella bad, but hey, it has Exhaust and isn't an upgrade"
-          }
         },
         {
           "type": "card-list",
@@ -767,48 +964,62 @@
               "cardId": "c_1021_uni2",
               "name": "Flame Thrower",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1021_uni2",
-              "name": "Flame Thrower",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1021_uni2",
-              "name": "Flame Thrower",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1021_uni2",
-              "name": "Flame Thrower",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1021_uni2",
-              "name": "Flame Thrower",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Flame Thrower I",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 AP for low damage then creating 2 AP in rockets you most likely won't use"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Flame Thrower II",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Meh base, and draw discard nothing special"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Flame Thrower III",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "This does Massive damage on a Crit, its kinda nutty especially with Vuln"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Flame Thrower IV",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Flame 3 but more consistent, and also can deck thin basics"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Flame Thrower V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Rockets are butt"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Flame 1: 2 AP for low damage then creating 2 AP in rockets you most likely won't use\nFlame 2: Meh base, and draw discard nothing special\nFlame 3: This does Massive damage on a Crit, its kinda nutty especially with Vuln\nFlame 4: Flame 3 but more consistent, and also can deck thin basics\nFlame 5: Rockets are butt\n2 AP hurts Lucas viability"
+            "en": "2 AP hurts Lucas viability"
           }
         },
         {
@@ -818,41 +1029,55 @@
               "cardId": "c_1021_uni1",
               "name": "S.S.S",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1021_uni1",
-              "name": "S.S.S",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1021_uni1",
-              "name": "S.S.S",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1021_uni1",
-              "name": "S.S.S",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1021_uni1",
-              "name": "S.S.S",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "S.S.S I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "S.S.S II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "S.S.S III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "S.S.S IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "S.S.S V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -869,41 +1094,55 @@
               "cardId": "c_1021_uni3",
               "name": "Flashbang",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1021_uni3",
-              "name": "Flashbang",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1021_uni3",
-              "name": "Flashbang",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1021_uni3",
-              "name": "Flashbang",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1021_uni3",
-              "name": "Flashbang",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Flashbang I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Flashbang II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Flashbang III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Flashbang IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Flashbang V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -925,45 +1164,99 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1021,
-                1010,
-                1008
+              "members": [
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
-              "faces": [
-                1021,
-                1033,
-                1024
+              "members": [
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1021,
-                1039
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1021,
-                1049,
-                1039
+              "members": [
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1021,
-                1010,
-                1052
+              "members": [
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1021,
-                1049,
-                1052
+              "members": [
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -975,50 +1268,95 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1010,
-                1008,
-                1049,
-                1040,
-                1043
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vulnerable"
               },
-              "faces": [
-                1010,
-                1024,
-                1008
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1052,
-                1039,
-                1008
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
               "title": {
                 "en": "Bullets"
               },
-              "faces": [
-                1004,
-                1041
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                }
               ]
             },
             {
               "title": {
                 "en": "PassionEnjoyer"
               },
-              "faces": [
-                1027
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                }
               ]
             }
           ]

@@ -49,27 +49,42 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Armor II",
+                "text": {
+                  "en": "140% Damage. 2 Vulnerable."
+                }
               }
             },
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Armor II",
+                "text": {
+                  "en": "140% Damage. 2 Vulnerable."
+                }
               }
             },
             {
               "cardId": "c_1050_uni3",
               "name": "Wind Riding",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Wind Riding II",
+                "text": {
+                  "en": "When Wind Charge is activated, 120% Shield. 120% Damage to all enemies."
+                }
               }
             }
           ]
@@ -87,35 +102,39 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Armor I",
+                "text": {
+                  "en": "210% Damage. Decrease Fortitude by 4 for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1050_uni3",
               "name": "Wind Riding",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Wind Riding II",
+                "text": {
+                  "en": "When Wind Charge is activated, 120% Shield. 120% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              }
+              "name": "Residual Herb"
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              }
+              "name": "Residual Herb"
             }
           ]
         },
@@ -138,34 +157,54 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Armor II",
+                "text": {
+                  "en": "140% Damage. 2 Vulnerable."
+                }
               }
             },
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Armor II",
+                "text": {
+                  "en": "140% Damage. 2 Vulnerable."
+                }
               }
             },
             {
               "cardId": "c_1050_uni3",
               "name": "Wind Riding",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Wind Riding I",
+                "text": {
+                  "en": "220% Shield. Move 2 card(s) of this unit from Discard Pile to hand."
+                }
               }
             },
             {
               "cardId": "c_1050_uni3",
               "name": "Wind Riding",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Wind Riding I",
+                "text": {
+                  "en": "220% Shield. Move 2 card(s) of this unit from Discard Pile to hand."
+                }
               }
             }
           ]
@@ -192,7 +231,7 @@
               "name": "Ritochika",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego Skill"
               }
             },
             {
@@ -200,7 +239,7 @@
               "name": "Lillian",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Draw 1 Ego Skill"
               }
             },
             {
@@ -208,7 +247,7 @@
               "name": "Douglas",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Atk% Stat Stick"
               }
             },
             {
@@ -216,16 +255,10 @@
               "name": "Nyx",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Great Draw"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ritochika: 3 Moral Ego Skill\nLillian: Draw 1 Ego Skill\nDouglas: Atk% Stat Stick\nNyx: Great Draw"
-          }
         },
         {
           "type": "team-grid",
@@ -234,32 +267,44 @@
               "title": {
                 "en": "Westmaccot"
               },
-              "faces": [
-                30044
+              "members": [
+                {
+                  "charResId": 30044,
+                  "name": "Westmacott"
+                }
               ]
             },
             {
               "title": {
                 "en": "Marianne"
               },
-              "faces": [
-                20037
+              "members": [
+                {
+                  "charResId": 20037,
+                  "name": "Marianne"
+                }
               ]
             },
             {
               "title": {
                 "en": "Priscilla"
               },
-              "faces": [
-                20019
+              "members": [
+                {
+                  "charResId": 20019,
+                  "name": "Priscilla"
+                }
               ]
             },
             {
               "title": {
                 "en": "Scarlet"
               },
-              "faces": [
-                20034
+              "members": [
+                {
+                  "charResId": 20034,
+                  "name": "Scarlet"
+                }
               ]
             }
           ]
@@ -303,16 +348,50 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Seth's Scrab is okay\nCursed Corpse is higher potential damage"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -321,10 +400,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Passion | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Passion",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         }
       ]
     },
@@ -407,9 +501,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -419,7 +513,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "Amazing draw"
               },
               "rating": "5/5"
             },
@@ -427,7 +521,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Amazing Tutor"
               },
               "rating": "5/5"
             },
@@ -435,7 +529,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Very expensive memory wise and takes a long time to scale"
               },
               "rating": "3/5"
             },
@@ -460,7 +554,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
+            "en": "Residual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
           }
         },
         {
@@ -469,18 +563,13 @@
             {
               "cardId": "c_1050_uni4",
               "name": "Gale Strike",
+              "cost": 2,
               "note": {
-                "en": ""
+                "en": "2 Cost"
               },
               "rating": "0/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Gale: 2 Cost"
-          }
         },
         {
           "type": "prose",
@@ -495,86 +584,118 @@
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1050_uni2",
-              "name": "Break Armor",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1050_uni2",
-              "name": "Break Armor",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1050_uni2",
-              "name": "Break Armor",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1050_uni2",
-              "name": "Break Armor",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Break Armor I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "-4 Fort, only source"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Break Armor II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost = OP"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Break Armor III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Little bit of damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Break Armor IV",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Little bit of damage"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Break Armor V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Ig you could discard and draw it, but why"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Break 1: -4 Fort, only source\nBreak 2: 0 Cost = OP\nBreak 3: Little bit of damage\nBreak 4: Little bit of damage\nBreak 5: Ig you could discard and draw it, but why\n+2 Moral is a good neutral to get"
+            "en": "+2 Moral is a good neutral to get"
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_1050_uni1",
+              "name": "Wind Slash",
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Wind Slash II",
+                "text": {
+                  "en": "150% Damage × 3."
+                }
               }
             },
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Wind Slash III",
+                "text": {
+                  "en": "280% Damage to all enemies. Defeat: Activate effect 1 more time (max 1 time)."
+                }
               }
             },
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Wind Slash IV",
+                "text": {
+                  "en": "At the start of the turn, decrease AP by 1. At the end of the turn, 280% Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1050_uni1",
-              "name": "Wind Slash",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Wind Slash V",
+                "text": {
+                  "en": "280% Damage to all enemies. Increase Tenacity Damage by 100%."
+                }
               }
             }
           ]
@@ -622,49 +743,57 @@
               "cardId": "c_1050_uni3",
               "name": "Wind Riding",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1050_uni3",
-              "name": "Wind Riding",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1050_uni3",
-              "name": "Wind Riding",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1050_uni3",
-              "name": "Wind Riding",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1050_uni3",
-              "name": "Wind Riding",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Wind Riding I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "You can reuse your cards IG, its ok"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Wind Riding II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "It's an Upgrade"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Wind Riding III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "No"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Wind Riding IV",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "No"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Wind Riding V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "If you really wanted to proc Metallize for Amir"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Riding 1: You can reuse your cards IG, its ok\nRiding 2: It's an Upgrade\nRiding 3: No\nRiding 4: No\nRiding 5: If you really wanted to proc Metallize for Amir"
-          }
         }
       ]
     },
@@ -678,44 +807,95 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1027,
-                1050,
-                1033
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1050,
-                1040
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1050,
-                1033
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1040,
-                1050,
-                1024
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1050
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                1062,
-                1050,
-                1039
+              "members": [
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]
@@ -727,39 +907,72 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1040,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vuln Enjoyers"
               },
-              "faces": [
-                30047,
-                1062,
-                1040,
-                1064
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                }
               ]
             },
             {
               "title": {
                 "en": "PassionEnjoyer"
               },
-              "faces": [
-                1027
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1052,
-                1039
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]

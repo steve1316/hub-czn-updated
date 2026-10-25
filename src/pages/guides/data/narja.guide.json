@@ -15,21 +15,24 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "note": {
-                "en": ""
-              }
+              "cost": 6
             }
           ]
         },
@@ -48,42 +51,32 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -100,41 +93,45 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Voluntary Control I",
+                "text": {
+                  "en": "If Voracity is fewer than 6 stacks, gain 9 Voracity. If 6 or more stacks, gain 3 Predation."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             }
           ]
@@ -152,42 +149,32 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -204,42 +191,32 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -256,41 +233,38 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Voluntary Control V",
+                "text": {
+                  "en": "[Unique] Each time a Basic Attack Card inflicts a Hit, 1 Voracity. +50% Damage Amount to Basic Attack Cards."
+                }
               }
             }
           ]
@@ -308,41 +282,38 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Voluntary Control IV",
+                "text": {
+                  "en": "[Unique] 10 Voracity. Select 1 Attack Card(s). 1 Predation each time that card is moved to hand."
+                }
               }
             }
           ]
@@ -362,48 +333,64 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Bottomless Hunger IV",
+                "text": {
+                  "en": "[Retain] For 1 turn, +100% Defense-Based Damage."
+                }
               }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Voluntary Control I",
+                "text": {
+                  "en": "If Voracity is fewer than 6 stacks, gain 9 Voracity. If 6 or more stacks, gain 3 Predation."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1052_uni3",
               "name": "Domain of Voracity",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Domain of Voracity II",
+                "text": {
+                  "en": "100% Defense-Based Damage to all enemies. For 2 turn(s), +100% Defense-Based Damage taken by the target."
+                }
               }
             }
           ]
@@ -421,49 +408,44 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "note": {
-                "en": ""
-              }
+              "cost": 6
             }
           ]
         },
@@ -480,56 +462,63 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_1052_uni2",
+              "name": "Voluntary Control",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1052_uni2",
-              "name": "Voluntary Control",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "note": {
-                "en": ""
-              }
+              "cost": 6
             }
           ]
         },
@@ -555,7 +544,7 @@
               "name": "Gaya",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Tutoring Mealtime is OP, Mealtime gives teambuff, and also a good Narja damage increase"
               }
             },
             {
@@ -563,7 +552,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "4 EP Draw 4"
               }
             },
             {
@@ -587,7 +576,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gaya: Tutoring Mealtime is OP, Mealtime gives teambuff, and also a good Narja damage increase\nNyx: 4 EP Draw 4\nAlyssa/Yvonne: Def% Controller supports"
+            "en": "Alyssa/Yvonne: Def% Controller supports"
           }
         }
       ]
@@ -599,16 +588,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Tetra Def for heals and damage, Executioners for damage, flex for hp or more damage\n300 Def is really easy to get to"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Starlight | Tetra"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Starlight",
+              "setId": 27,
+              "name": "Starlight and Dreams",
+              "pieces": 4,
+              "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",
+              "icon": "/assets/pieces/icon_piece_set_027.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -617,10 +645,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Tetra"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -629,10 +672,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Judgement | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Judgement",
+              "setId": 23,
+              "name": "Judgment's Flames",
+              "pieces": 4,
+              "bonus": "+50% Instinct DMG against Ravaged targets",
+              "icon": "/assets/pieces/icon_piece_set_023.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -733,9 +791,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -745,13 +803,14 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "Amazing draw"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -778,7 +837,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nSpores are always okay, but Narja has no specific synergies"
+            "en": "Kefox: Amazing Tutor\nSpores are always okay, but Narja has no specific synergies"
           }
         },
         {
@@ -787,6 +846,7 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
+              "cost": 6,
               "note": {
                 "en": ""
               },
@@ -839,49 +899,57 @@
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_srt4",
-              "name": "Shackles of Hunger",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1052_srt4",
-              "name": "Shackles of Hunger",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1052_srt4",
-              "name": "Shackles of Hunger",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_srt4",
-              "name": "Shackles of Hunger",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Shackles of Hunger I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Attunement 6 is great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Shackles of Hunger II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Deck thins and has an insanely good Draw 2 Divine"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Shackles of Hunger III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Additional hits for Voracity, worthless"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Shackles of Hunger IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "+200% Additive is great, 3 Predation is just bonus"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Shackles of Hunger V",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Multiple Metalization procs per repeat, also strong with Resolve buffing"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shackles 1: Attunement 6 is great\nShackles 2: Deck thins and has an insanely good Draw 2 Divine\nShackles 3: Additional hits for Voracity, worthless\nShackles 4: +200% Additive is great, 3 Predation is just bonus\nShackles 5: Multiple Metalization procs per repeat, also strong with Resolve buffing"
-          }
         },
         {
           "type": "card-list",
@@ -890,49 +958,57 @@
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1052_uni2",
-              "name": "Voluntary Control",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1052_uni2",
-              "name": "Voluntary Control",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_uni2",
-              "name": "Voluntary Control",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_uni2",
-              "name": "Voluntary Control",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Voluntary Control I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "1 Cost 9 Voracity or 3 Predation, very good rate"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Voluntary Control II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Moving Mealtime to hand is great to start discounting it, 3 Moral is a good upside"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Voluntary Control III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Each time enemy action count down, 1 Voracity, very good rate, but slow voracity gain"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Voluntary Control IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "UNIQUE 10 Voracity and 1 predation each time its moved to hand, very good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Voluntary Control V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "UNIQUE Basic attack buff and Voracity too, good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Voluntary 1: 1 Cost 9 Voracity or 3 Predation, very good rate\nVoluntary 2: Moving Mealtime to hand is great to start discounting it, 3 Moral is a good upside\nVoluntary 3: Each time enemy action count down, 1 Voracity, very good rate, but slow voracity gain\nVoluntary 4: UNIQUE 10 Voracity and 1 predation each time its moved to hand, very good\nVoluntary 5: UNIQUE Basic attack buff and Voracity too, good"
-          }
         },
         {
           "type": "card-list",
@@ -941,49 +1017,57 @@
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1052_uni1",
-              "name": "Bottomless Hunger",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_uni1",
-              "name": "Bottomless Hunger",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1052_uni1",
-              "name": "Bottomless Hunger",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1052_uni1",
-              "name": "Bottomless Hunger",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Bottomless Hunger I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3 Voracity and 2 random cost reduction, very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Bottomless Hunger II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Unconditional 2 random cost reduction, but no Voracity its ok"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Bottomless Hunger III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "UNIQUE Upgrade, 1 cost reduction after the first 3 voracity used each turn (Max 1 a turn sad)"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Bottomless Hunger IV",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "RETAIN Increases Defense based damage by 100%, might be cracked with counterattacks"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Bottomless Hunger V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "1 cost Lead 7 Voracity, increases mealtime damage but that doesn't matter"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Bottomless 1: 3 Voracity and 2 random cost reduction, very good\nBottomless 2: Unconditional 2 random cost reduction, but no Voracity its ok\nBottomless 3: UNIQUE Upgrade, 1 cost reduction after the first 3 voracity used each turn (Max 1 a turn sad)\nBottomless 4: RETAIN Increases Defense based damage by 100%, might be cracked with counterattacks\nBottomless 5: 1 cost Lead 7 Voracity, increases mealtime damage but that doesn't matter"
-          }
         },
         {
           "type": "card-list",
@@ -992,49 +1076,57 @@
               "cardId": "c_1052_uni3",
               "name": "Domain of Voracity",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1052_uni3",
-              "name": "Domain of Voracity",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1052_uni3",
-              "name": "Domain of Voracity",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1052_uni3",
-              "name": "Domain of Voracity",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1052_uni3",
-              "name": "Domain of Voracity",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Domain of Voracity I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Extra Tenactiy taken"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Domain of Voracity II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Extra Def based damage"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Domain of Voracity III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Healing"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Domain of Voracity IV",
+                  "cost": 3,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Garbage high cost, activation condition isn't that easy"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Domain of Voracity V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Healing"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Domain 1: Extra Tenactiy taken\nDomain 2: Extra Def based damage\nDomain 3: Healing\nDomain 4: Garbage high cost, activation condition isn't that easy\nDomain 5: Healing"
-          }
         }
       ]
     },
@@ -1048,57 +1140,123 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1017,
-                1052,
-                1040
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                1052,
-                1043
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1052,
-                1033
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1052,
-                1056
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1010,
-                1052,
-                1028
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1052,
-                1040
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1052
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1052,
-                1033
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]
@@ -1110,48 +1268,108 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1033,
-                1043,
-                1049,
-                1004,
-                1040
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff Enjoyer"
               },
-              "faces": [
-                1017,
-                1043,
-                1060,
-                30075,
-                1004,
-                1018,
-                1027
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                }
               ]
             },
             {
               "title": {
                 "en": "I love Def Dmg"
               },
-              "faces": [
-                1017,
-                1010,
-                1028,
-                30047,
-                1008
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1056,
-                1050,
-                1024
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             }
           ]

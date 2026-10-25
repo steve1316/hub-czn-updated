@@ -9,20 +9,35 @@
   },
   "sections": [
     {
-      "id": "part-1",
+      "id": "notes",
       "title": {
-        "en": "Part 1"
+        "en": "Notes"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Echo of Sorrow I",
+                "text": {
+                  "en": "140% Damage. Create 2 Dirge Bullet Card(s)."
+                }
               }
+            },
+            {
+              "cardId": "c_1041_cre1",
+              "name": "Dirge Bullet",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1041_cre1",
+              "name": "Dirge Bullet",
+              "cost": 1
             }
           ]
         },
@@ -61,48 +76,78 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Echo of Sorrow IV",
+                "text": {
+                  "en": "Create 3 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Ballad of Pitch Black IV",
+                "text": {
+                  "en": "60% Damage × 3. Increase Damage Amount of Dirge Bullet's Extra Attack by 100% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             }
           ]
@@ -126,48 +171,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Echo of Sorrow IV",
+                "text": {
+                  "en": "Create 3 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Ballad of Pitch Black IV",
+                "text": {
+                  "en": "60% Damage × 3. Increase Damage Amount of Dirge Bullet's Extra Attack by 100% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Flower of Devoured Fate V",
+                "text": {
+                  "en": "Grant Retrieve to all Dirge Bullet in hand."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Flower of Devoured Fate V",
+                "text": {
+                  "en": "Grant Retrieve to all Dirge Bullet in hand."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Flower of Devoured Fate V",
+                "text": {
+                  "en": "Grant Retrieve to all Dirge Bullet in hand."
+                }
               }
             }
           ]
@@ -185,48 +260,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Ballad of Pitch Black IV",
+                "text": {
+                  "en": "60% Damage × 3. Increase Damage Amount of Dirge Bullet's Extra Attack by 100% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             }
           ]
@@ -244,63 +349,54 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt1",
               "name": "Annihilation Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1041_srt1",
               "name": "Annihilation Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1041_srt3",
               "name": "Black Veil",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Ballad of Pitch Black I",
+                "text": {
+                  "en": "90% Damage × 3. +30% base Damage Amount for each Dirge Bullet in hand."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -317,63 +413,82 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni1",
               "name": "Instant Judgment",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Instant Judgment IV",
+                "text": {
+                  "en": "180% Damage. When moved to Discard Pile, 250% Extra Attack to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Ballad of Pitch Black V",
+                "text": {
+                  "en": "60% Damage × 3. Exhaust all Dirge Bullet in the Graveyard, increase Damage Amount by 50% for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "name": "Flower of Devoured Fate",
+              "cost": 0
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "name": "Flower of Devoured Fate",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Flower of Devoured Fate II",
+                "text": {
+                  "en": "[Exhaust] Discard all other Combatant cards from hand. Create 2 Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1041_uni3",
-              "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1041_uni3",
-              "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Flower of Devoured Fate II",
+                "text": {
+                  "en": "[Exhaust] Discard all other Combatant cards from hand. Create 2 Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni4",
               "name": "Last-Ditch Assault",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -392,48 +507,78 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni1",
               "name": "Instant Judgment",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Instant Judgment V",
+                "text": {
+                  "en": "At the end of the turn, 200% Extra Attack to the enemy with lowest HP."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             }
           ]
@@ -451,48 +596,71 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_srt4",
               "name": "Echo of Sorrow",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Sorrow V",
+                "text": {
+                  "en": "[Initiation] Create 1 Dirge Bullet Card(s). At the start of the turn, create 1 Dirge Bullet Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni1",
               "name": "Instant Judgment",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Instant Judgment V",
+                "text": {
+                  "en": "At the end of the turn, 200% Extra Attack to the enemy with lowest HP."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "name": "Flower of Devoured Fate",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1041_uni3",
-              "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             }
           ]
@@ -556,7 +724,7 @@
               "name": "Kiara",
               "rating": "2/5",
               "note": {
-                "en": ""
+                "en": "Still very very conditional passive, that's why I rate her low, also hard to get dupes"
               }
             }
           ]
@@ -564,7 +732,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Janet can ctually be better then Serenthia at a base\nSerenthia with dupes is also 5/5 even more consistent then Akad\n(I just need to know how Serenthia's Crt Dmg Scales, if it works per discard or only on played cards)\nKiara: Still very very conditional passive, that's why I rate her low, also hard to get dupes"
+            "en": "Janet can ctually be better then Serenthia at a base\nSerenthia with dupes is also 5/5 even more consistent then Akad\n(I just need to know how Serenthia's Crt Dmg Scales, if it works per discard or only on played cards)"
           }
         }
       ]
@@ -576,16 +744,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Conqueror now is Able to boost the damage of Dirge Bullet Discard, which is all of Renoa's Damage"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Blackwing | Executioner | Cursed Corpse"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -594,10 +806,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Void | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Void",
+              "setId": 16,
+              "name": "Offering of the Void",
+              "pieces": 4,
+              "bonus": "+20% Void DMG after Exhaust (1 turn)",
+              "icon": "/assets/pieces/icon_piece_set_016.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -704,9 +931,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -716,7 +943,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "Amazing draw"
               },
               "rating": "5/5"
             },
@@ -724,13 +951,14 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Amazing Tutor"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -740,7 +968,7 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Can max out your Crit Chance"
               },
               "rating": "5/5"
             }
@@ -749,7 +977,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nHunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale\nGrave: Can max out your Crit Chance"
+            "en": "Hunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale"
           }
         },
         {
@@ -758,8 +986,9 @@
             {
               "cardId": "c_1041_uni4",
               "name": "Last-Ditch Assault",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Pretty good as a end of turn finisher, remove if you want, its fine"
               },
               "rating": "4/5"
             },
@@ -775,7 +1004,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Can top Target 4 to redraw it, or other Attunement effects"
               },
               "rating": "4/5"
             },
@@ -783,162 +1012,198 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
+                "en": "2 Moral"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling/Leap Attack: Cantrips that do damage, really good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "name": "Echo of Sorrow",
+              "note": {
                 "en": ""
               },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Echo of Sorrow I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "2 Bullets in hand"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Echo of Sorrow II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "3 Bullets but only 1 in hand to discard"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Echo of Sorrow III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "How do you even Activate this"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Echo of Sorrow IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3 Bullets, Allows for continuous Flower 1 max value"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Echo of Sorrow V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Scaling option, also an upgrade good"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Assault: Pretty good as a end of turn finisher, remove if you want, its fine\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nNegotiate: 2 Moral"
+            "en": "-1 Cost Divine is very good here, or moral on Upgrade"
           }
         },
         {
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1041_srt4",
-              "name": "Echo of Sorrow",
+              "cardId": "c_1041_uni2",
+              "name": "Ballad of Pitch Black",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1041_srt4",
-              "name": "Echo of Sorrow",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1041_srt4",
-              "name": "Echo of Sorrow",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1041_srt4",
-              "name": "Echo of Sorrow",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1041_srt4",
-              "name": "Echo of Sorrow",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Ballad of Pitch Black I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Good damage if you Ego Skill, or Flower"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Ballad of Pitch Black II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "It activates Peko..."
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Ballad of Pitch Black III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Mark is another source of Extra damage, just takes awhile to consume if you even can"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Ballad of Pitch Black IV",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "THE BEST Buffs Bullet damage in EVERY ZONE, Including Deck for Nia Combo"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Ballad of Pitch Black V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "If the boss can't be killed by one combo ig"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Echo 1: 2 Bullets in hand\nEcho 2: 3 Bullets but only 1 in hand to discard\nEcho 3: How do you even Activate this\nEcho 4: 3 Bullets, Allows for continuous Flower 1 max value\nEcho 5: Scaling option, also an upgrade good\n-1 Cost Divine is very good here, or moral on Upgrade"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1041_uni2",
-              "name": "Ballad of Pitch Black",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1041_uni2",
-              "name": "Ballad of Pitch Black",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1041_uni2",
-              "name": "Ballad of Pitch Black",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1041_uni2",
-              "name": "Ballad of Pitch Black",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1041_uni2",
-              "name": "Ballad of Pitch Black",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ballad 1: Good damage if you Ego Skill, or Flower\nBallad 2: It activates Peko...\nBallad 3: Mark is another source of Extra damage, just takes awhile to consume if you even can\nBallad 4: THE BEST Buffs Bullet damage in EVERY ZONE, Including Deck for Nia Combo\nBallad 5: If the boss can't be killed by one combo ig"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1041_uni1",
               "name": "Instant Judgment",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1041_uni1",
-              "name": "Instant Judgment",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1041_uni1",
-              "name": "Instant Judgment",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1041_uni1",
-              "name": "Instant Judgment",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1041_uni1",
-              "name": "Instant Judgment",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Instant Judgment I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Instant Judgment II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Instant Judgment III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Instant Judgment IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Instant Judgment V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -949,41 +1214,59 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Flower of Devoured Fate I",
+                "text": {
+                  "en": "Discard up to 3 Card(s) from hand. Create Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Flower of Devoured Fate II",
+                "text": {
+                  "en": "[Exhaust] Discard all other Combatant cards from hand. Create 2 Dirge Bullet for each."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "name": "Flower of Devoured Fate",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Flower of Devoured Fate IV",
+                "text": {
+                  "en": "Draw 2. If Dirge Bullet is in hand, Draw 1 additional card(s)."
+                }
               }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1041_uni3",
-              "name": "Flower of Devoured Fate",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Flower of Devoured Fate V",
+                "text": {
+                  "en": "Grant Retrieve to all Dirge Bullet in hand."
+                }
               }
             }
           ]
@@ -1036,27 +1319,51 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1041,
-                1056
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1049
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1061
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1005
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             }
           ]
@@ -1068,39 +1375,72 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1049,
-                1033,
-                1043
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buffers/Debuffers"
               },
-              "faces": [
-                1056,
-                1052,
-                1049,
-                1004,
-                1021
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Break Supports"
               },
-              "faces": [
-                30075,
-                1005
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub Dps"
               },
-              "faces": [
-                1061
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             }
           ]

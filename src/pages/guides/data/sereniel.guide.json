@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/2",
   "sections": [
     {
       "id": "what-is-tenacity-and-ravage-state",
@@ -15,27 +16,42 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Homing Laser II",
+                "text": {
+                  "en": "180% Damage. 3 Afterglow. On Ravage, move to hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Plasma Missile I",
+                "text": {
+                  "en": "180% Damage. 1 Tenacity Damage. If the target is not Ravaged, proc 1 more time."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Homing Laser",
+                "text": {
+                  "en": "120% Damage. 2 Afterglow. On Ravage, move from Graveyard to hand."
+                }
               }
             }
           ]
@@ -53,20 +69,30 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Plasma Missile I",
+                "text": {
+                  "en": "180% Damage. 1 Tenacity Damage. If the target is not Ravaged, proc 1 more time."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Homing Laser II",
+                "text": {
+                  "en": "180% Damage. 3 Afterglow. On Ravage, move to hand."
+                }
               }
             }
           ]
@@ -80,53 +106,62 @@
       ]
     },
     {
-      "id": "part-2",
-      "title": {
-        "en": "Part 2"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/2"
-          }
-        }
-      ]
-    },
-    {
       "id": "cycle-3-clog-draw-serenial-140-fm",
       "title": {
         "en": "Cycle +3 | Clog Draw Serenial | 140 FM"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Plasma Missile V",
+                "text": {
+                  "en": "[Unique] At the end of the turn, 50% Damage to a random enemy. +30% Damage Amount for each Homing Laser Moved to hand for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Shining Core",
+                "text": {
+                  "en": "Create 2 Homing Laser L."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             }
           ]
@@ -168,27 +203,63 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Shining Core",
+                "text": {
+                  "en": "Create 2 Homing Laser L."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             }
           ]
@@ -211,42 +282,60 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Homing Laser III",
+                "text": {
+                  "en": "225% Damage. 2 Afterglow. Create 2 Homing Laser L in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Homing Laser III",
+                "text": {
+                  "en": "225% Damage. 2 Afterglow. Create 2 Homing Laser L in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Shining Core V",
+                "text": {
+                  "en": "Select and create 1 Homing Laser with their own Signature Epiphanies."
+                }
               }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -265,49 +354,79 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Cobalt Light IV",
+                "text": {
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shining Core III",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 2 Homing Laser L. On Ravage, create 2 Homing Laser L."
+                }
               }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -335,55 +454,111 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Homing Laser V",
+                "text": {
+                  "en": "180% Damage. 2 Afterglow. Move all Homing Laser L in Graveyard to hand."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Homing Laser V",
+                "text": {
+                  "en": "180% Damage. 2 Afterglow. Move all Homing Laser L in Graveyard to hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Shining Core II",
+                "text": {
+                  "en": "Create 2 Homing Laser L, increase Exhaust of those cards by 2."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Shining Core II",
+                "text": {
+                  "en": "Create 2 Homing Laser L, increase Exhaust of those cards by 2."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Shining Core II",
+                "text": {
+                  "en": "Create 2 Homing Laser L, increase Exhaust of those cards by 2."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Cobalt Light IV",
+                "text": {
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
+                }
               }
             }
           ]
@@ -418,56 +593,105 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Shining Core",
+                "text": {
+                  "en": "Create 2 Homing Laser L."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Shining Core",
+                "text": {
+                  "en": "Create 2 Homing Laser L."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Shining Core",
+                "text": {
+                  "en": "Create 2 Homing Laser L."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -495,56 +719,70 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Homing Laser III",
+                "text": {
+                  "en": "225% Damage. 2 Afterglow. Create 2 Homing Laser L in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Homing Laser III",
+                "text": {
+                  "en": "225% Damage. 2 Afterglow. Create 2 Homing Laser L in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Shining Core V",
+                "text": {
+                  "en": "Select and create 1 Homing Laser with their own Signature Epiphanies."
+                }
               }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -563,49 +801,72 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shining Core III",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 2 Homing Laser L. On Ravage, create 2 Homing Laser L."
+                }
               }
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Cobalt Light IV",
+                "text": {
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -633,34 +894,75 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
               }
             },
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Homing Laser V",
+                "text": {
+                  "en": "180% Damage. 2 Afterglow. Move all Homing Laser L in Graveyard to hand."
+                }
               }
             },
             {
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Plasma Missile III",
+                "text": {
+                  "en": "120% Damage. 2 Instinct Weakness. +60% Damage Amount to Homing Laser for 1 turn(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
-              "note": {
-                "en": ""
+              "cost": -1,
+              "epiphany": {
+                "level": 4,
+                "name": "Shining Core IV",
+                "text": {
+                  "en": "Create X+1 Homing Laser L. Apply Haste to those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             }
           ]
@@ -704,7 +1006,7 @@
               "name": "Peko",
               "rating": "6/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stats, +30% Additive, +25% Crit Chance"
               }
             },
             {
@@ -712,7 +1014,7 @@
               "name": "Serithea",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "4.5 Star Stats 16% Crit Chance and 25% Crit Dmg"
               }
             },
             {
@@ -720,7 +1022,7 @@
               "name": "Janet",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stats, 9% Crit Chance to all 1<="
               }
             },
             {
@@ -728,16 +1030,10 @@
               "name": "Yuri",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "3 Star Stas, but okay passive 16% Multi, and good ego Draw 2 3 EP"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Peko: 5 Star Stats, +30% Additive, +25% Crit Chance\nSerithea: 4.5 Star Stats 16% Crit Chance and 25% Crit Dmg\nJanet: 5 Star Stats, 9% Crit Chance to all 1<=\nYuri: 3 Star Stas, but okay passive 16% Multi, and good ego Draw 2 3 EP"
-          }
         },
         {
           "type": "partner-list",
@@ -747,7 +1043,7 @@
               "name": "Carroty",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "4 Star Stats, 20% Multi and meh Ego"
               }
             },
             {
@@ -763,7 +1059,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Akad: 4 Star Stats. ego skill for +25% Crit, other passive useless\nCarroty: 4 Star Stats, 20% Multi and meh Ego"
+            "en": "Akad: 4 Star Stats. ego skill for +25% Crit, other passive useless"
           }
         }
       ]
@@ -775,16 +1071,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Eventually loses to BattleField Evo if your Crit Rate is high enough"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BattleField Evo | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -793,10 +1128,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Judgement | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Judgement",
+              "setId": 23,
+              "name": "Judgment's Flames",
+              "pieces": 4,
+              "bonus": "+50% Instinct DMG against Ravaged targets",
+              "icon": "/assets/pieces/icon_piece_set_023.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -869,17 +1219,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -1218,9 +1562,9 @@
       ]
     },
     {
-      "id": "part-12",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 12"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1230,7 +1574,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
@@ -1238,7 +1582,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "4/5"
             },
@@ -1246,7 +1590,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
               "rating": "3/5"
             }
@@ -1255,7 +1599,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
           }
         },
         {
@@ -1264,6 +1608,7 @@
             {
               "cardId": "c_30075_srt1",
               "name": "Pulse Fire",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1272,6 +1617,7 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1292,41 +1638,55 @@
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_srt4",
-              "name": "Homing Laser",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30075_srt4",
-              "name": "Homing Laser",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30075_srt4",
-              "name": "Homing Laser",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_srt4",
-              "name": "Homing Laser",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Homing Laser I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Homing Laser II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Homing Laser III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Homing Laser IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Homing Laser V",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1343,49 +1703,57 @@
               "cardId": "c_30075_uni2",
               "name": "Shining Core",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_uni2",
-              "name": "Shining Core",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_uni2",
-              "name": "Shining Core",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_30075_uni2",
-              "name": "Shining Core",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30075_uni2",
-              "name": "Shining Core",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Shining Core I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3 Homing Lazers is good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Shining Core II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Increasing the Exhaust Limit of this card, specifc Niche"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Shining Core III",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Absolutely amazing if you can chain breaks together"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Shining Core IV",
+                  "cost": -1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "The Ratio of Lazers to AP isn't very good, but there's niche strategies"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Shining Core V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Creates Permanent Homing Lazers, less good then Spam"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Core 1: 3 Homing Lazers is good\nCore 2: Increasing the Exhaust Limit of this card, specifc Niche\nCore 3: Absolutely amazing if you can chain breaks together\nCore 4: The Ratio of Lazers to AP isn't very good, but there's niche strategies\nCore 5: Creates Permanent Homing Lazers, less good then Spam"
-          }
         },
         {
           "type": "card-list",
@@ -1394,49 +1762,57 @@
               "cardId": "c_30075_uni1",
               "name": "Plasma Missile",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_uni1",
-              "name": "Plasma Missile",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30075_uni1",
-              "name": "Plasma Missile",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30075_uni1",
-              "name": "Plasma Missile",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30075_uni1",
-              "name": "Plasma Missile",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Plasma Missile I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Doubles the Tenacity Damage, good and also can make use of 2 Afterglow for 4 Break"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Plasma Missile II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Damage is too conditional"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Plasma Missile III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Increases Laser damage, (Stackable during the turn?) and 2 Instinct Weak is okay sometimes"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Plasma Missile IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Creating 3 Homing Lazers is very strong"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Plasma Missile V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Damage Scales on Lasers moved to hand, not very great, Besides that it's an Upgrade"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Missile 1: Doubles the Tenacity Damage, good and also can make use of 2 Afterglow for 4 Break\nMissile 2: Damage is too conditional\nMissile 3:Increases Laser damage, (Stackable during the turn?) and 2 Instinct Weak is okay sometimes\nMissile 4: Creating 3 Homing Lazers is very strong\nMissile 5: Damage Scales on Lasers moved to hand, not very great, Besides that it's an Upgrade"
-          }
         },
         {
           "type": "card-list",
@@ -1444,32 +1820,36 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
+              "cost": 3,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "1/5"
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
+              "cost": 3,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "1/5"
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
+              "cost": 3,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
+              "cost": 3,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "4/5"
             }
@@ -1493,31 +1873,67 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30075,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                30113,
-                1049
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                30113,
-                1005
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                1055,
-                1049
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1529,58 +1945,127 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1055,
-                1049,
-                1033,
-                1003,
-                1040,
-                1004
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1039,
-                30097,
-                1062,
-                1055,
-                1064,
-                1057,
-                1056
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub DPS"
               },
-              "faces": [
-                1005,
-                30113,
-                1049,
-                1043
+              "members": [
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
               "title": {
                 "en": "Tenacity Regen"
               },
-              "faces": [
-                1005,
-                1056
+              "members": [
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Generator"
               },
-              "faces": [
-                1052,
-                1039,
-                30084
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]

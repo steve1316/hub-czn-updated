@@ -13,3 +13,4 @@ jsonschema
 # Build tooling (not bundled into the sidecar)
 pyinstaller
 opencv-python-headless  # Guide picture matching in `python -m scripts.datagen guides`
+rapidocr_onnxruntime  # Guide deck epiphany text in `python -m scripts.datagen guides`

@@ -15,42 +15,53 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Rift of Severance I",
+                "text": {
+                  "en": "140% Damage and 3 Fracture, then activate Fracture inflicted by this unit."
+                }
               }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Dispersed Desire I",
+                "text": {
+                  "en": "140% Damage and 6 Agony, then activate Agony inflicted by this unit."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni4_lbk_mut1",
               "name": "Reckoning",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -75,9 +86,9 @@
       ]
     },
     {
-      "id": "part-2",
+      "id": "notes",
       "title": {
-        "en": "Part 2"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -107,63 +118,110 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Dispersed Desire IV",
+                "text": {
+                  "en": "80% Damage, 4 Agony, and 3 Scorched, then activate Agony inflicted by this unit and activate Scorched inflicted by allies."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Break Apart & Renew IV",
+                "text": {
+                  "en": "[Unique] Move 1 Rift of Severance to hand and apply Retrieve."
+                }
               }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Insatiable Cravings IV",
+                "text": {
+                  "en": "[Unique] At the start of the turn, 3 Scorched to all enemies. At the end of the turn, remove Scorched from all enemies, then apply Fracture for each Scorched removed to the enemy with the highest HP (max 7)."
+                }
               }
             },
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -191,70 +249,66 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -288,48 +342,50 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
               }
             }
           ]
@@ -358,56 +414,63 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -437,56 +500,112 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Rift of Severance IV",
+                "text": {
+                  "en": "100% Damage and 1 Fracture. 1 Fracture for each type of harmful effect the target has (max 3). Activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dispersed Desire II",
+                "text": {
+                  "en": "80% Damage and 5 Agony, then activate Agony inflicted by allies."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Break Apart & Renew IV",
+                "text": {
+                  "en": "[Unique] Move 1 Rift of Severance to hand and apply Retrieve."
+                }
               }
             },
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -514,49 +633,58 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Break Apart & Renew V",
+                "text": {
+                  "en": "[Unique] [Initiation] [Lead] 2 Brand of Fracture. 2 Brand of Agony. At the start of the turn, 1 Brand of Fracture or 1 Brand of Agony."
+                }
               }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -573,49 +701,79 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -652,7 +810,7 @@
               "name": "Emilie",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Really good for Olga increasing Crit Rate and damage of all ally Fracture & Scorch, okay Ego"
               }
             },
             {
@@ -660,7 +818,7 @@
               "name": "Bria",
               "rating": "4.5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat stick that has a situationally great ego, buy no passive"
               }
             },
             {
@@ -668,7 +826,7 @@
               "name": "Aria",
               "rating": "4.5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat Stick that still has some upside"
               }
             },
             {
@@ -676,7 +834,7 @@
               "name": "Eloise",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Classic good stat stick with some Gen Multi"
               }
             },
             {
@@ -684,16 +842,10 @@
               "name": "Anteia",
               "rating": "3.5/5",
               "note": {
-                "en": ""
+                "en": "Better Stat stick then Eloise eventually, but no Gen Multi, and okish ego"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Emilie: Really good for Olga increasing Crit Rate and damage of all ally Fracture & Scorch, okay Ego\nBria: 5 Star Stat stick that has a situationally great ego, buy no passive\nAria: 5 Star Stat Stick that still has some upside\nEloise: Classic good stat stick with some Gen Multi\nAnteia: Better Stat stick then Eloise eventually, but no Gen Multi, and okish ego"
-          }
         }
       ]
     },
@@ -704,16 +856,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Sanguine",
+              "setId": 29,
+              "name": "Sanguine Thorn",
+              "pieces": 4,
+              "bonus": "+25% Crit DMG for 1 turn when a card applies Fracture (max 2 stacks) | +15% Crit DMG to DoTs once 10 Fractures have been applied",
+              "icon": "/assets/pieces/icon_piece_set_029.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "25% Crt Dmg to everything, 40% Crt Dmg to DoTs"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -722,10 +913,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Judgement | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Judgement",
+              "setId": 23,
+              "name": "Judgment's Flames",
+              "pieces": 4,
+              "bonus": "+50% Instinct DMG against Ravaged targets",
+              "icon": "/assets/pieces/icon_piece_set_023.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -756,9 +962,9 @@
       ]
     },
     {
-      "id": "part-8",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 8"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -767,26 +973,22 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Veryimportant for Shattering aka 30/40% DoT Final Damage increase"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_30117_uni4_lbk_mut1",
               "name": "Reckoning",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "Large Single Hit and Activates Agony & Fracture of self"
               },
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "End of the Line: Veryimportant for Shattering aka 30/40% DoT Final Damage increase\nReckoning: Large Single Hit and Activates Agony & Fracture of self"
-          }
         },
         {
           "type": "card-list",
@@ -795,86 +997,112 @@
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30117_srt4",
-              "name": "Rift of Severance",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30117_srt4",
-              "name": "Rift of Severance",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30117_srt4",
-              "name": "Rift of Severance",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30117_srt4",
-              "name": "Rift of Severance",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Rift of Severance I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "3 Frac, 1 Activate"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Rift of Severance II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "2 Frac, Ally Activate"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Rift of Severance III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "2 Frac, 2 Activate"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Rift of Severance IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "4 Frac, 1 Activate"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Rift of Severance V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "3 Frac, 1 Activate"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Rift 1: 3 Frac, 1 Activate\nRift 2: 2 Frac, Ally Activate\nRift 3: 2 Frac, 2 Activate\nRift 4: 4 Frac, 1 Activate\nRift 5: 3 Frac, 1 Activate"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Break Apart & Renew II",
+                "text": {
+                  "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Break Apart & Renew IV",
+                "text": {
+                  "en": "[Unique] Move 1 Rift of Severance to hand and apply Retrieve."
+                }
               }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Break Apart & Renew V",
+                "text": {
+                  "en": "[Unique] [Initiation] [Lead] 2 Brand of Fracture. 2 Brand of Agony. At the start of the turn, 1 Brand of Fracture or 1 Brand of Agony."
+                }
               }
             }
           ]
@@ -922,41 +1150,55 @@
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30117_uni1",
-              "name": "Dispersed Desire",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30117_uni1",
-              "name": "Dispersed Desire",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30117_uni1",
-              "name": "Dispersed Desire",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30117_uni1",
-              "name": "Dispersed Desire",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dispersed Desire I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dispersed Desire II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dispersed Desire III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dispersed Desire IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dispersed Desire V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -967,20 +1209,30 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Insatiable Cravings IV",
+                "text": {
+                  "en": "[Unique] At the start of the turn, 3 Scorched to all enemies. At the end of the turn, remove Scorched from all enemies, then apply Fracture for each Scorched removed to the enemy with the highest HP (max 7)."
+                }
               }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Insatiable Cravings V",
+                "text": {
+                  "en": "[Unique] When a harmful effect is applied through an ability, increase Damage Amount by 1% for 1 turn (max 30%)."
+                }
               }
             }
           ]
@@ -1033,38 +1285,83 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30115,
-                30117,
-                30084
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                30117,
-                1039
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                30117,
-                1049
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                30117,
-                30075
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                1005,
-                30117
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                }
               ]
             }
           ]
@@ -1076,56 +1373,119 @@
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1056,
-                1050,
-                1055,
-                1039
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP"
               },
-              "faces": [
-                1039,
-                1055,
-                1033,
-                1003,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "Agony"
               },
-              "faces": [
-                30075,
-                1009,
-                1021,
-                1064
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                }
               ]
             },
             {
               "title": {
                 "en": "Fracture"
               },
-              "faces": [
-                30115,
-                30113
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             }
           ]
@@ -1133,19 +1493,28 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "teams",
       "title": {
-        "en": "Part 10"
+        "en": "Teams"
       },
       "blocks": [
         {
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30093,
-                1005,
-                30117
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30117,
+                  "name": "Olga"
+                }
               ]
             }
           ]
@@ -1154,16 +1523,31 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1057,
-                1004,
-                30097
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
-              "faces": [
-                30097,
-                30113
+              "members": [
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             }
           ]

@@ -26,6 +26,11 @@ describe('guides content', () => {
               expect(it.name?.trim(), `${ctx}.name`).not.toBe('')
               // A card's note is often empty, since the sheet writes one combined note under a row of cards.
               expect(typeof it.note.en, `${ctx}.note`).toBe('string')
+              for (const ep of it.epiphanies ?? []) {
+                expect(ep.level, `${ctx}.epiphanies[].level`).toBeGreaterThanOrEqual(1)
+                expect(ep.level, `${ctx}.epiphanies[].level`).toBeLessThanOrEqual(5)
+                expect(ep.name?.trim(), `${ctx}.epiphanies[].name`).not.toBe('')
+              }
             }
           }
           if (block.type === 'partner-list') {
@@ -51,10 +56,25 @@ describe('guides content', () => {
           if (block.type === 'team-grid') {
             for (const group of block.groups) {
               if (group.title) expectLocalized(group.title, `${ctx}.title`)
-              expect(Array.isArray(group.faces), `${ctx}.faces`).toBe(true)
-              for (const face of group.faces) {
-                expect(typeof face, `${ctx}.faces[]`).toBe('number')
+              expect(Array.isArray(group.members), `${ctx}.members`).toBe(true)
+              for (const member of group.members) {
+                expect(typeof member.charResId, `${ctx}.members[].charResId`).toBe('number')
+                expect(member.name?.trim(), `${ctx}.members[].name`).not.toBe('')
               }
+            }
+          }
+          if (block.type === 'deck') {
+            for (const card of block.cards) {
+              expect(card.cardId?.trim(), `${ctx}.cardId`).not.toBe('')
+              if (card.epiphany) {
+                expect(card.epiphany.level, `${ctx}.epiphany.level`).toBeGreaterThanOrEqual(0)
+                expect(card.epiphany.level, `${ctx}.epiphany.level`).toBeLessThanOrEqual(5)
+              }
+            }
+          }
+          if (block.type === 'set-list') {
+            for (const item of block.items) {
+              expect(item.label?.trim(), `${ctx}.label`).not.toBe('')
             }
           }
         }

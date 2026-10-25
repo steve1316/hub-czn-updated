@@ -1,0 +1,1110 @@
+{
+  "charResId": 1012,
+  "name": "Anika",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=128509108#gid=128509108",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "updated": "10/24",
+  "sections": [
+    {
+      "id": "anika-efficiency-shockwave-handlock",
+      "title": {
+        "en": "Anika Efficiency, Shockwave, Handlock"
+      },
+      "blocks": [
+        {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Ignition Slash I",
+                "text": {
+                  "en": "[Lead] [Weakness Attack] 550% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Shock Gun II",
+                "text": {
+                  "en": "[Bullet] [Lead] 200% Damage to all enemies. 1 Shockwave. Efficiency: 1 Tenacity Damage."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Reloading V",
+                "text": {
+                  "en": "[Finale] At the start of the next turn, Draw 5 card(s) of this unit, then Hand Lock for 1 turn."
+                }
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Efficency:\nIf cost reduced, activate efficency effect, Divines work for the condition\nShockwave:\nEnemies with Shockwave take 2x Tenacity damage, if ravaged +50% Additive\nHandlock:\nDebilitating self debuff that prevents Draw and Move, -1 stack end of turn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-moral-support-1-0-ap-180-fm",
+      "title": {
+        "en": "Cycle -2 | Moral Support | -1/0 AP | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shock Gun",
+                "text": {
+                  "en": "[Bullet] [Lead] 150% Damage. 1 Shockwave. Efficiency: 1 Tenacity Damage."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Reloading II",
+                "text": {
+                  "en": "[Finale] At the start of the next turn, Draw 2 Lead card(s) of this unit, then decrease Cost of those cards by 1 for 1 turn or until activated."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "cost": 1
+            },
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "16 Moral\n6 hits"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2avTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbYZ5WQqccA_kvyh9RdnK2p-q39HXhReTnQiLBRf3y3lP9K5voSLEOGsv1RntRTmy-GA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Basic Attack SubDPS | 0 AP | 180 FM"
+          }
+        },
+        {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Ignition Slash V",
+                "text": {
+                  "en": "[Unique] [Initiation] When a Basic Attack Card is activated, 100% Coordinated Attack and 1 Tenacity Damage to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shock Gun",
+                "text": {
+                  "en": "[Bullet] [Lead] 150% Damage. 1 Shockwave. Efficiency: 1 Tenacity Damage."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Reloading II",
+                "text": {
+                  "en": "[Finale] At the start of the next turn, Draw 2 Lead card(s) of this unit, then decrease Cost of those cards by 1 for 1 turn or until activated."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "cost": 1
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "13 Moral\n4 Hits\nJust setup and play normally with Chizuru"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2avTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbYZ5WRlg6tMFLt4i7rIAKZI7ftu1L28JfpKsHRfvcNSNsKJ8lf3d6uuQwlZhCMA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | 20 Moral | -6 AP | 180 FM"
+          }
+        },
+        {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shock Gun",
+                "text": {
+                  "en": "[Bullet] [Lead] 150% Damage. 1 Shockwave. Efficiency: 1 Tenacity Damage."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Reloading",
+                "text": {
+                  "en": "[Finale] At the start of the next turn, Draw 2 Lead card(s) of this unit."
+                }
+              },
+              "extra": {
+                "id": "com_0188",
+                "text": {
+                  "en": "1 Morale next turn."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "cost": 1
+            },
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20 Moral\n7 Hits\nNot worth the extra cycle or AP really"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l8UNy2ZPTR9FHP1_fr6nIDI2Koje4WzDinkiJNy2R3Ay3BZ96PP3hvK1qHCCfNLfcP8WRbgVcYBZBDMVk9d-HY4S4YriBecXMNdO_h5ATb3Iyc0mgr6rcaZw1h4Rkqrc6QILgsaY2KnDk"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "westmacott-lillian-scarlet-priscilla-ritochika",
+      "title": {
+        "en": "Westmacott | Lillian | Scarlet | Priscilla | Ritochika"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "5/5",
+              "note": {
+                "en": "5 Star stats + Draw Ego"
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "5/5",
+              "note": {
+                "en": "Draw Ego"
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "4/5",
+              "note": {
+                "en": "5 Starstats"
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "4/5",
+              "note": {
+                "en": "4.5 Star Stats"
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": "4 Star Stats, Moral Ego"
+              }
+            }
+          ]
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Standard Damage, EA can be good for her Subdps build"
+          }
+        },
+        {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can break under some circumstances"
+          }
+        },
+        {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can break under some circumstances"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nSometimes move Rampage trigger from deck to hand, ONLY DRAW so its mid\nE2:\nTeamwide +25% additive by playing normally\nE3:\nPotential levels, ok\nE4:\nBigger Shield, ok\nE5:\nPotential levels, ok\nE6:\nRavage is +2 AP 1 time each turn instead of 1"
+          }
+        }
+      ]
+    },
+    {
+      "id": "card-ratings",
+      "title": {
+        "en": "Card ratings"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0107",
+              "name": "Pulverize",
+              "note": {
+                "en": "3 Moral for 2 AP, cantrips isnt that bad"
+              }
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni4",
+              "name": "Rampage Trigger",
+              "cost": 2,
+              "note": {
+                "en": "If this was able to Move from Used pile it would be more interesting"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Ignition Slash I",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Just adds Weakness Attack meh"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Ignition Slash II",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Ravage for 2 AP, but no Efficiency is terrible"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Ignition Slash III",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Funny nuke idea, but its not base damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Ignition Slash IV",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Draw Ignition but only 2 cost"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Ignition Slash V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Extra Attack per basic can be quite a few hits, but why is it not Bullet?"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni2",
+              "name": "Reloading",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Reloading I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Can draw other's Lead cards, why would you?"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Reloading II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Really good saving 2 AP each turn and even enabling Efficency?"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Reloading III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Possibly a draw 5 each time, but you need to be able to generate Lead cards"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Reloading IV",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "This is just not good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Reloading V",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Handlock is debilitating limiting you to 10 cards maximum basically (5 being Anika)"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni1",
+              "name": "Shock Gun",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Shock Gun I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Just slight numbers buff"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Shock Gun II",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "AOE but 2 cost is bad"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Shock Gun III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Combo but no Shockwave is bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Shock Gun IV",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Exhaust but 2 cost ew"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Shock Gun V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Most bullets are 0 cost, and 50% Rng makes me wanna throw up"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1012_uni3",
+              "name": "Warming Up",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Warming Up I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "1 more cost decrease is eh"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Warming Up II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "just numbers buff isnt enough"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Warming Up III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Retain to draw instead of Efficency play"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Warming Up IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Reduces alot more AP possible then other versions"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Warming Up V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Cost reduces 3 but still eh"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "anika-example-teams",
+      "title": {
+        "en": "Anika Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1012,
+                  "name": "Anika"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "DPS"
+              },
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "SubDPS"
+              },
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "AP/Discount"
+              },
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "1 AP Bullet"
+              },
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

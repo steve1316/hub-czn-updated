@@ -15,27 +15,28 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Curse I",
+                "text": {
+                  "en": "For 1 turn, when a card is activated, 1 Agony to a random enemy."
+                }
               }
             }
           ]
@@ -87,48 +88,57 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Curse V",
+                "text": {
+                  "en": "When Agony is applied through a card, add 1 Agony on the target."
+                }
               }
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shadow Reload II",
+                "text": {
+                  "en": "Heal 150%. Create 1 Advanced Shadow Dagger."
+                }
               }
             }
           ]
@@ -163,27 +173,42 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Unsheathe Dagger III",
+                "text": {
+                  "en": "Create 1 Shadow Dagger. At the start of the turn, create 1 Shadow Dagger."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Curse IV",
+                "text": {
+                  "en": "[Initiation] 2 Agony on all enemies. At the start of turn, 2 Agony on all enemies."
+                }
               }
             },
             {
               "cardId": "c_1009_uni3",
               "name": "Vital Attack",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
               }
             }
           ]
@@ -212,28 +237,28 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Unsheathe Dagger III",
+                "text": {
+                  "en": "Create 1 Shadow Dagger. At the start of the turn, create 1 Shadow Dagger."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit",
-              "note": {
-                "en": ""
-              }
+              "name": "First Aid Kit"
             }
           ]
         },
@@ -261,70 +286,59 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt3",
               "name": "Touch of Darkness",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Unsheathe Dagger V",
+                "text": {
+                  "en": "[Exhaust] Create 4 Shadow Dagger."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_uni3",
               "name": "Vital Attack",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1009_uni4",
               "name": "Cursed Gouge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -343,48 +357,57 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "name": "Curse",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Curse I",
+                "text": {
+                  "en": "For 1 turn, when a card is activated, 1 Agony to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1009_uni1",
-              "name": "Curse",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Curse V",
+                "text": {
+                  "en": "When Agony is applied through a card, add 1 Agony on the target."
+                }
               }
             },
             {
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shadow Reload II",
+                "text": {
+                  "en": "Heal 150%. Create 1 Advanced Shadow Dagger."
+                }
               }
             }
           ]
@@ -413,28 +436,28 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Unsheathe Dagger III",
+                "text": {
+                  "en": "Create 1 Shadow Dagger. At the start of the turn, create 1 Shadow Dagger."
+                }
               }
             },
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit",
-              "note": {
-                "en": ""
-              }
+              "name": "First Aid Kit"
             }
           ]
         },
@@ -471,7 +494,7 @@
               "name": "Eloise",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Most synergy there is and relatively easy to dupe"
               }
             },
             {
@@ -479,7 +502,7 @@
               "name": "Bria",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Good synergy with Tressa, just need dupes to beat Eloise"
               }
             },
             {
@@ -487,16 +510,10 @@
               "name": "Zatera",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Easy to get dupes for Atk%"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Eloise: Most synergy there is and relatively easy to dupe\nZatera: Easy to get dupes for Atk%\nBria: Good synergy with Tressa, just need dupes to beat Eloise"
-          }
         },
         {
           "type": "team-grid",
@@ -505,16 +522,22 @@
               "title": {
                 "en": "Itsuku"
               },
-              "faces": [
-                30046
+              "members": [
+                {
+                  "charResId": 30046,
+                  "name": "Itsuku"
+                }
               ]
             },
             {
               "title": {
                 "en": "Anteia"
               },
-              "faces": [
-                20008
+              "members": [
+                {
+                  "charResId": 20008,
+                  "name": "Anteia"
+                }
               ]
             }
           ]
@@ -540,16 +563,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Agony is so so weak now, only being able to stack to 20, it's actually so sad"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Offering | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Offering",
+              "setId": 16,
+              "name": "Offering of the Void",
+              "pieces": 4,
+              "bonus": "+20% Void DMG after Exhaust (1 turn)",
+              "icon": "/assets/pieces/icon_piece_set_016.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -616,7 +678,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "4/5"
             },
@@ -624,17 +686,11 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Free Final Dmg Multi and Glory Set Activator"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
-          }
         },
         {
           "type": "prose",
@@ -979,9 +1035,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1007,7 +1063,7 @@
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
               "note": {
-                "en": ""
+                "en": "Tech that justbeats some bosses"
               },
               "rating": "4/5"
             },
@@ -1015,7 +1071,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -1023,7 +1079,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -1032,7 +1088,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nWanderer: Tech that justbeats some bosses\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag"
           }
         },
         {
@@ -1050,7 +1106,7 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             }
@@ -1059,7 +1115,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Cursed Gouge: Activating 20 Agony:laughingemoji:\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason"
+            "en": "Cursed Gouge: Activating 20 Agony:laughingemoji:\nFirst Aid: 2 Perma Moral but needs to be Heavened"
           }
         },
         {
@@ -1069,41 +1125,55 @@
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_srt4",
-              "name": "Unsheathe Dagger",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_srt4",
-              "name": "Unsheathe Dagger",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_srt4",
-              "name": "Unsheathe Dagger",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1009_srt4",
-              "name": "Unsheathe Dagger",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Unsheathe Dagger I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Unsheathe Dagger II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Unsheathe Dagger III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Unsheathe Dagger IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Unsheathe Dagger V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1120,49 +1190,57 @@
               "cardId": "c_1009_uni2",
               "name": "Shadow Reload",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1009_uni2",
-              "name": "Shadow Reload",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_uni2",
-              "name": "Shadow Reload",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1009_uni2",
-              "name": "Shadow Reload",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1009_uni2",
-              "name": "Shadow Reload",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Shadow Reload I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Lots of damage, lots of agony, compared to regular daggers"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Shadow Reload II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost 1 Dagger, is not bad at all"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Shadow Reload III",
+                  "cost": -1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "X Cost is hard to use, but theres potential"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Shadow Reload IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "ST Version damage comapred to Reload 1"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Shadow Reload V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Discarding your hand is stinky"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Reload 1: Lots of damage, lots of agony, compared to regular daggers\nReload 2: 0 Cost 1 Dagger, is not bad at all\nReload 3: X Cost is hard to use, but theres potential\nReload 4: ST Version damage comapred to Reload 1\nReload 5: Discarding your hand is stinky"
-          }
         },
         {
           "type": "card-list",
@@ -1171,49 +1249,57 @@
               "cardId": "c_1009_uni1",
               "name": "Curse",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_uni1",
-              "name": "Curse",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1009_uni1",
-              "name": "Curse",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1009_uni1",
-              "name": "Curse",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1009_uni1",
-              "name": "Curse",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Curse I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Lots of Agony"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Curse II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Not as easy to get Agony anymore, but its still possible"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Curse III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Terrible"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Curse IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Upgrade, for consistent Agony"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Curse V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Upgrade is expensive and same as Curse 2 otherwise"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Curse 1: Lots of Agony\nCurse 2: Not as easy to get Agony anymore, but its still possible\nCurse 3: Terrible\nCurse 4: Upgrade, for consistent Agony\nCurse 5: Upgrade is expensive and same as Curse 2 otherwise"
-          }
         },
         {
           "type": "card-list",
@@ -1222,49 +1308,57 @@
               "cardId": "c_1009_uni3",
               "name": "Vital Attack",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1009_uni3",
-              "name": "Vital Attack",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1009_uni3",
-              "name": "Vital Attack",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1009_uni3",
-              "name": "Vital Attack",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1009_uni3",
-              "name": "Vital Attack",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Vital Attack I",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Still garbo"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Vital Attack II",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Low Ratio, but easy condition"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Vital Attack III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "WTF is this?"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Vital Attack IV",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "High Ratio, Always Consistent"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Vital Attack V",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Highest high, can beat Vital 4 eventually, need around 13-14 Agony"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Vital 1: Still garbo\nVital 2: Low Ratio, but easy condition\nVital 3: WTF is this?\nVital 4: High Ratio, Always Consistent\nVital 5: Highest high, can beat Vital 4 eventually, need around 13-14 Agony"
-          }
         }
       ]
     },
@@ -1278,45 +1372,99 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1009,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                1043,
-                30097
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                1043,
-                1055
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                1043,
-                1056
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                1043,
-                30075
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                30048,
-                1049
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1328,62 +1476,143 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003,
-                1040,
-                30048
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub DPS"
               },
-              "faces": [
-                30048,
-                1043,
-                30113,
-                1005
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1062,
-                30097,
-                1064,
-                1056,
-                1055,
-                1052
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "Exhaust Lover"
               },
-              "faces": [
-                30047,
-                1064
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP"
               },
-              "faces": [
-                1039,
-                1052,
-                1003,
-                1055,
-                30048,
-                1033,
-                30084
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]

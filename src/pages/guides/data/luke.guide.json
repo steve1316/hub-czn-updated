@@ -20,6 +20,7 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
                 "en": ""
               }
@@ -27,6 +28,7 @@
             {
               "cardId": "c_1004_bhc1",
               "name": "HVAP Round",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -35,6 +37,7 @@
             {
               "cardId": "c_1004_cre2",
               "name": "Silver Shot",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -43,6 +46,7 @@
             {
               "cardId": "c_1004_cre3",
               "name": "Uranium Shot",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -51,6 +55,7 @@
             {
               "cardId": "c_1004_cre4",
               "name": "Tracer Shot",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -87,55 +92,102 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             },
             {
               "cardId": "c_1004_uni2",
               "name": "Seize the Opportunity",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Seize the Opportunity IV",
+                "text": {
+                  "en": "[Lead] 100% Shield. +100% Damage Amount to the next Attack Card activated."
+                }
               }
             }
           ]
@@ -159,48 +211,84 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Chain Fire V",
+                "text": {
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             }
           ]
@@ -224,62 +312,101 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Chain Fire II",
+                "text": {
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Stealth Reload III",
+                "text": {
+                  "en": "Create 3 Handgun Bullet. At the start of the next turn, create 2 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             },
             {
               "cardId": "c_1004_uni4",
               "name": "Finisher Round",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1004_uni2",
               "name": "Seize the Opportunity",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Seize the Opportunity IV",
+                "text": {
+                  "en": "[Lead] 100% Shield. +100% Damage Amount to the next Attack Card activated."
+                }
               }
             }
           ]
@@ -299,34 +426,66 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Stealth Reload II",
+                "text": {
+                  "en": "Create 3 Handgun Bullets."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             },
             {
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dance of the Demon II",
+                "text": {
+                  "en": "50% Damage. Add 1 Hit for each Attack Card activated this turn."
+                }
+              },
+              "extra": {
+                "id": "com_0212",
+                "text": {
+                  "en": "1 AP next turn."
+                }
               }
             },
             {
               "cardId": "c_1004_uni2",
               "name": "Seize the Opportunity",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Seize the Opportunity IV",
+                "text": {
+                  "en": "[Lead] 100% Shield. +100% Damage Amount to the next Attack Card activated."
+                }
               }
             }
           ]
@@ -344,49 +503,72 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Chain Fire V",
+                "text": {
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Chain Fire V",
+                "text": {
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Chain Fire V",
+                "text": {
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Chain Fire V",
+                "text": {
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
+                }
               }
             },
             {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Stealth Reload IV",
+                "text": {
+                  "en": "At the start of the turn, create 1 Handgun Bullet."
+                }
               }
             },
             {
               "cardId": "c_1004_uni4",
               "name": "Finisher Round",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -412,7 +594,7 @@
               "name": "Akad",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Insanely nuts Ego Skill +25% Crit rate is crazy, and the bullet damage is nice"
               }
             },
             {
@@ -420,16 +602,10 @@
               "name": "Yuri",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Atk% Stat Stick, if you really want the Draw Ego for Draw Luke"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Akad: Insanely nuts Ego Skill +25% Crit rate is crazy, and the bullet damage is nice\nYuri: Atk% Stat Stick, if you really want the Draw Ego for Draw Luke"
-          }
         },
         {
           "type": "partner-list",
@@ -439,7 +615,7 @@
               "name": "Janet",
               "rating": "6/5",
               "note": {
-                "en": ""
+                "en": "Lukes synergy: Makes extra bullets for Demon Dance, nuff said"
               }
             },
             {
@@ -455,7 +631,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Janet: Lukes synergy: Makes extra bullets for Demon Dance, nuff said\nSerenthia: Crit Rate and Crit Dmg absolutely insane"
+            "en": "Serenthia: Crit Rate and Crit Dmg absolutely insane"
           }
         }
       ]
@@ -467,16 +643,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Luke's best"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Order | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Order",
+              "setId": 15,
+              "name": "Bullet of Order",
+              "pieces": 4,
+              "bonus": "+10% Order DMG after Attack (2 max)",
+              "icon": "/assets/pieces/icon_piece_set_015.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -577,9 +797,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -589,7 +809,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
               "rating": "5/5"
             },
@@ -597,7 +817,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Tutoring out a card and giving it retrieve is amazing"
               },
               "rating": "5/5"
             },
@@ -605,7 +825,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Pretty slow to scale"
               },
               "rating": "3/5"
             },
@@ -613,7 +833,7 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "60% Crit rate is nice, then it just self deletes, not bad but wouldn't dupe"
               },
               "rating": "5/5"
             },
@@ -621,17 +841,11 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "2 Moral for 1, it's not great, but it's accessible"
               },
               "rating": "4/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nGrave: 60% Crit rate is nice, then it just self deletes, not bad but wouldn't dupe\nNegotiate: 2 Moral for 1, it's not great, but it's accessible"
-          }
         },
         {
           "type": "card-list",
@@ -639,8 +853,9 @@
             {
               "cardId": "c_1004_uni4",
               "name": "Finisher Round",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "This is so butt without E2, and even for a final build it isnt that great a draw"
               },
               "rating": "5/5"
             },
@@ -656,7 +871,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Can top Target 4 to redraw it, or other Attunement effects"
               },
               "rating": "4/5"
             },
@@ -664,7 +879,7 @@
               "cardId": "n_0007",
               "name": "Ambush",
               "note": {
-                "en": ""
+                "en": "If you can break ig, not especially good"
               },
               "rating": "3/5"
             }
@@ -673,7 +888,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Finisher: This is so butt without E2, and even for a final build it isnt that great a draw\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nAmbush: If you can break ig, not especially good"
+            "en": "Quick Shelling/Leap Attack: Cantrips that do damage, really good"
           }
         },
         {
@@ -682,32 +897,36 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "1/5"
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "1/5"
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "5/5"
             }
@@ -726,49 +945,57 @@
               "cardId": "c_1004_uni2",
               "name": "Seize the Opportunity",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1004_uni2",
-              "name": "Seize the Opportunity",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1004_uni2",
-              "name": "Seize the Opportunity",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1004_uni2",
-              "name": "Seize the Opportunity",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1004_uni2",
-              "name": "Seize the Opportunity",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Seize the Opportunity I",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "The highest Multi hit bullet is Rapid 4 and that's only 3, super mid"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Seize the Opportunity II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "480% only on bullets is not that fire"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Seize the Opportunity III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "You just need 7 bullets to beat Seize 2"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Seize the Opportunity IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "If used on Demon Dance, the damage is insane"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Seize the Opportunity V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Upgrade = Exhaust = Most consistent, always valuable"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Seize 1: The highest Multi hit bullet is Rapid 4 and that's only 3, super mid\nSeize 2: 480% only on bullets is not that fire\nSeize 3: You just need 7 bullets to beat Seize 2\nSeize 4: If used on Demon Dance, the damage is insane\nSeize 5: Upgrade = Exhaust = Most consistent, always valuable"
-          }
         },
         {
           "type": "card-list",
@@ -777,49 +1004,57 @@
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1004_uni1",
-              "name": "Stealth Reload",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1004_uni1",
-              "name": "Stealth Reload",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1004_uni1",
-              "name": "Stealth Reload",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1004_uni1",
-              "name": "Stealth Reload",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Stealth Reload I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Crit chance on bullets ain't bad"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Stealth Reload II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Is okay"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Stealth Reload III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "4 bullets, also can set up if this turn isnt combo turn"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Stealth Reload IV",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "0 cost upgrade, can get draw divine easy, and free turn based bullet gen"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Stealth Reload V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 AP is expensive, but it is alot of bullets and exhaustable ig"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Stealth 1: Crit chance on bullets ain't bad\nStealth 2: Is okay\nStealth 3: 4 bullets, also can set up if this turn isnt combo turn\nStealth 4: 0 cost upgrade, can get draw divine easy, and free turn based bullet gen\nStealth 5: 2 AP is expensive, but it is alot of bullets and exhaustable ig"
-          }
         },
         {
           "type": "card-list",
@@ -828,48 +1063,62 @@
               "cardId": "c_1004_uni3",
               "name": "Dance of the Demon",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1004_uni3",
-              "name": "Dance of the Demon",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1004_uni3",
-              "name": "Dance of the Demon",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1004_uni3",
-              "name": "Dance of the Demon",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1004_uni3",
-              "name": "Dance of the Demon",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dance of the Demon I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dance of the Demon II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "The best because its scales per all attacks done and the extra hits with additive buffs are best"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dance of the Demon III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dance of the Demon IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "If you really wanted Shield Luke"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dance of the Demon V",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Can cost 0, good enough"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Dance 2: The best because its scales per all attacks done and the extra hits with additive buffs are best\nDance 1/3: Because of additive buffs, the extra hits on Dance 2, out scale both bullet dances\nDance 4: If you really wanted Shield Luke\nDance 5: Can cost 0, good enough"
+            "en": "Dance 1/3: Because of additive buffs, the extra hits on Dance 2, out scale both bullet dances"
           }
         }
       ]
@@ -884,37 +1133,79 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1004,
-                1005,
-                1040
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1043,
-                1033
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1056
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1049,
-                1039
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1021,
-                1052
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -926,51 +1217,99 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1049,
-                1040,
-                1043
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1052,
-                1056,
-                1049,
-                1021
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub DPS"
               },
-              "faces": [
-                1005,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
               "title": {
                 "en": "Exhaust Lover"
               },
-              "faces": [
-                30047,
-                1064,
-                1060
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Generator"
               },
-              "faces": [
-                1052,
-                1039
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]

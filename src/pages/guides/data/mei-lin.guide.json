@@ -15,35 +15,48 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Unity of Attack and Defense",
+                "text": {
+                  "en": "Draw 2 Basic Card(s) of this unit, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Unity of Attack and Defense IV",
+                "text": {
+                  "en": "Create 2 Strike card(s). Decrease Cost of those cards by 1."
+                }
               }
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -88,62 +101,88 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni1",
               "name": "Rising Dragon Spire",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Rising Dragon Spire V",
+                "text": {
+                  "en": "150% Damage. Add 1 Hit for each Passion Card activated this turn."
+                }
               }
             },
             {
               "cardId": "c_1027_uni1",
               "name": "Rising Dragon Spire",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Rising Dragon Spire V",
+                "text": {
+                  "en": "150% Damage. Add 1 Hit for each Passion Card activated this turn."
+                }
               }
             },
             {
               "cardId": "c_1027_uni3",
               "name": "Spirit of the Aromata",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Spirit of the Aromata I",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a Passion Card is activated, +20% Damage Amount to this unit."
+                }
               }
             }
           ]
@@ -161,62 +200,88 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni1",
               "name": "Rising Dragon Spire",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Rising Dragon Spire V",
+                "text": {
+                  "en": "150% Damage. Add 1 Hit for each Passion Card activated this turn."
+                }
               }
             },
             {
               "cardId": "c_1027_uni3",
               "name": "Spirit of the Aromata",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Spirit of the Aromata I",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a Passion Card is activated, +20% Damage Amount to this unit."
+                }
               }
             }
           ]
@@ -234,62 +299,88 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1027_uni2",
+              "name": "Unity of Attack and Defense",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Unity of Attack and Defense II",
+                "text": {
+                  "en": "Move 2 Basic Card(s) of this unit to hand, then decrease Cost of those cards by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni1",
               "name": "Rising Dragon Spire",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Rising Dragon Spire IV",
+                "text": {
+                  "en": "100% Damage. Add 2 Hits to the next Basic Attack Card of this unit activated."
+                }
               }
             },
             {
               "cardId": "c_1027_uni3",
               "name": "Spirit of the Aromata",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Spirit of the Aromata V",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a card of this unit is activated, +50% Damage Amount to Basic Cards of this unit."
+                }
               }
             }
           ]
@@ -310,7 +401,7 @@
               "name": "Lillian",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Really really good also a 4 star, so easy to get dupes"
               }
             },
             {
@@ -318,7 +409,7 @@
               "name": "Scarlet",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Also really good, but needs dupes to beat Lillian"
               }
             },
             {
@@ -326,16 +417,10 @@
               "name": "Douglas",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Atk% Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lillian: Really really good also a 4 star, so easy to get dupes\nScarlet: Also really good, but needs dupes to beat Lillian\nDouglas: Atk% Stat Stick"
-          }
         },
         {
           "type": "team-grid",
@@ -344,24 +429,33 @@
               "title": {
                 "en": "Marianne"
               },
-              "faces": [
-                20037
+              "members": [
+                {
+                  "charResId": 20037,
+                  "name": "Marianne"
+                }
               ]
             },
             {
               "title": {
                 "en": "Priscilla"
               },
-              "faces": [
-                20019
+              "members": [
+                {
+                  "charResId": 20019,
+                  "name": "Priscilla"
+                }
               ]
             },
             {
               "title": {
                 "en": "Asteria"
               },
-              "faces": [
-                30045
+              "members": [
+                {
+                  "charResId": 30045,
+                  "name": "Asteria"
+                }
               ]
             }
           ]
@@ -399,22 +493,76 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Seth's Scrab is okay\nCursed Corpse is higher potential damage. Mei Lin damage is Rising Dragon Spire loaded, over Basics"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Justice | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Passion | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Passion",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         }
       ]
     },
@@ -509,9 +657,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -521,7 +669,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "Amazing draw"
               },
               "rating": "5/5"
             },
@@ -529,7 +677,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Amazing Tutor"
               },
               "rating": "5/5"
             },
@@ -537,7 +685,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Very expensive memory wise and takes a long time to scale"
               },
               "rating": "3/5"
             },
@@ -554,7 +702,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nHunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
+            "en": "Hunger: 2 Moral\nResidual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
           }
         },
         {
@@ -563,26 +711,22 @@
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Gonna be Used alot by Mei Lin through Unity"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1027_uni4",
               "name": "Flame Dragon's Sovereignty",
+              "cost": 2,
               "note": {
-                "en": ""
+                "en": "2 Cost is stinky"
               },
               "rating": "2/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Strike: Gonna be Used alot by Mei Lin through Unity\nSovereignty: 2 Cost is stinky"
-          }
         },
         {
           "type": "card-list",
@@ -590,6 +734,7 @@
             {
               "cardId": "c_1027_srt4",
               "name": "Flame Dragon's Jewel",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -610,49 +755,57 @@
               "cardId": "c_1027_uni1",
               "name": "Rising Dragon Spire",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1027_uni1",
-              "name": "Rising Dragon Spire",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1027_uni1",
-              "name": "Rising Dragon Spire",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1027_uni1",
-              "name": "Rising Dragon Spire",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1027_uni1",
-              "name": "Rising Dragon Spire",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "10/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Rising Dragon Spire I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Ain't good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Rising Dragon Spire II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Even worse"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Rising Dragon Spire III",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Even even worse"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Rising Dragon Spire IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "This one is kinda funny"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Rising Dragon Spire V",
+                  "cost": 2,
+                  "rating": "10/5",
+                  "note": {
+                    "en": "Other Epiphanies do not even compare to the ammount of damage this has potentially"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Spire 1: Ain't good\nSpire 2: Even worse\nSpire 3: Even even worse\nSpire 4: This one is kinda funny\nSpire 5: Other Epiphanies do not even compare to the ammount of damage this has potentially"
-          }
         },
         {
           "type": "card-list",
@@ -661,49 +814,57 @@
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1027_uni2",
-              "name": "Unity of Attack and Defense",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Unity of Attack and Defense I",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Draw = Stinky"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Unity of Attack and Defense II",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Her bread in butter, \"Moving\" strikes from \"Used pile\" Is a broken mechanic"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Unity of Attack and Defense III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Draw = Stinky, but ig it has Utility"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Unity of Attack and Defense IV",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Alternative, but it ends up clogging your deck after the first use"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Unity of Attack and Defense V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Supplement to other Unities, less spire hits and 2 AP upfront cost, but its ok"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Unity 1: Draw = Stinky\nUnity 2: Her bread in butter, \"Moving\" strikes from \"Used pile\" Is a broken mechanic\nUnity 3: Draw = Stinky, but ig it has Utility\nUnity 4: Alternative, but it ends up clogging your deck after the first use\nUnity 5: Supplement to other Unities, less spire hits and 2 AP upfront cost, but its ok"
-          }
         },
         {
           "type": "card-list",
@@ -712,49 +873,57 @@
               "cardId": "c_1027_uni3",
               "name": "Spirit of the Aromata",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1027_uni3",
-              "name": "Spirit of the Aromata",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1027_uni3",
-              "name": "Spirit of the Aromata",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1027_uni3",
-              "name": "Spirit of the Aromata",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1027_uni3",
-              "name": "Spirit of the Aromata",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Spirit of the Aromata I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Her BIS when comboed with Veronica to scale additional times"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Spirit of the Aromata II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Independantly good and regularly can outscale Spirit 1 otherwise"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Spirit of the Aromata III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Initiation isn't important, but ig 0 cost is okay"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Spirit of the Aromata IV",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Ember isn't important in general"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Spirit of the Aromata V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Only for my Meme Build"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Spirit 1: Her BIS when comboed with Veronica to scale additional times\nSpirit 2: Independantly good and regularly can outscale Spirit 1 otherwise\nSpirit 3: Initiation isn't important, but ig 0 cost is okay\nSpirit 4: Ember isn't important in general\nSpirit 5: Only for my Meme Build"
-          }
         }
       ]
     },
@@ -768,31 +937,67 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1027,
-                1033,
-                1056
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1050,
-                1033
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1043,
-                1052
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -804,51 +1009,99 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1043,
-                1049,
-                1040
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1052,
-                1050,
-                1049,
-                1056
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub DPS"
               },
-              "faces": [
-                1052,
-                1043,
-                1005
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "Passion"
               },
-              "faces": [
-                1033,
-                1050,
-                1005
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1052,
-                1039
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]

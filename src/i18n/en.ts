@@ -363,6 +363,13 @@ const en = {
     description: 'Character build and strategy guides.',
     backToList: 'All guides',
     sectionComingSoon: 'This section is coming soon.',
+    updated: 'Updated {{date}}',
+    team: 'Team {{n}}',
+    base: 'Base',
+    divine: 'Divine',
+    flex: 'Flex',
+    ratedIn: 'Rated {{rating}} in Card ratings',
+    sheetSays: 'Sheet says: {{label}}',
   },
   encyclopedia: {
     tabs: {

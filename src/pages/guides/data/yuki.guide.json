@@ -9,19 +9,24 @@
   },
   "sections": [
     {
-      "id": "part-1",
+      "id": "notes",
       "title": {
-        "en": "Part 1"
+        "en": "Notes"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1057_srt4",
               "name": "Prepare to Subdue",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Prepare to Subdue",
+                "text": {
+                  "en": "Draw 1 Attack Card(s) of this unit. Increase Damage Amount of those cards by 40% for 1 turn."
+                }
               }
             }
           ]
@@ -91,63 +96,61 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1057_srt1",
               "name": "Longsword Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1057_srt4",
               "name": "Prepare to Subdue",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Prepare to Subdue IV",
+                "text": {
+                  "en": "Draw 1 Attack Card(s) of this unit. Increase Damage Amount of those cards by 40% for 1 turn. Inspiration: Draw 1 Attack Card(s) of this unit."
+                }
               }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni3",
               "name": "Freezing Blade",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Freezing Blade III",
+                "text": {
+                  "en": "[Unique] When an Inspiration-enabled card of this unit is activated, 120% Damage × 2 to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -170,63 +173,68 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1057_srt4",
               "name": "Prepare to Subdue",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Prepare to Subdue II",
+                "text": {
+                  "en": "Draw 1 Attack Card(s) of this unit. Increase Damage Amount of Attack Cards of this unit by 30% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Trickery Strike V",
+                "text": {
+                  "en": "200% Damage. Inspiration: Add 1 Hit."
+                }
               }
             },
             {
               "cardId": "c_1057_uni3",
               "name": "Freezing Blade",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Freezing Blade IV",
+                "text": {
+                  "en": "[Unique] Increase Damage Amount of All-Target Attack Cards of this unit by 50%."
+                }
               }
             },
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -252,7 +260,7 @@
               "name": "Westmaccot",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "5 Star stat stick, good ego, slight passive buff, good"
               }
             },
             {
@@ -260,7 +268,7 @@
               "name": "Scarlet",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "5 Star stat stick, ego is pretty useless, but the passive buff is good"
               }
             },
             {
@@ -268,7 +276,7 @@
               "name": "Ritochika",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Ego Skill is amazing, and Ritochika's passive also works, kinda"
               }
             },
             {
@@ -276,7 +284,7 @@
               "name": "Lillian",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Never can go wrong with old reliable, good ego skill and the buffs are good enough"
               }
             },
             {
@@ -284,16 +292,10 @@
               "name": "Priscilla",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "4.5 Star stat stick, but less utility then Lillian so I wouldn't bother"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Westmaccot: 5 Star stat stick, good ego, slight passive buff, good\nScarlet: 5 Star stat stick, ego is pretty useless, but the passive buff is good\nRitochika: Ego Skill is amazing, and Ritochika's passive also works, kinda\nLillian: Never can go wrong with old reliable, good ego skill and the buffs are good enough\nPriscilla: 4.5 Star stat stick, but less utility then Lillian so I wouldn't bother"
-          }
         },
         {
           "type": "partner-list",
@@ -303,7 +305,7 @@
               "name": "Rosaria",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Just due to the fact Freezing 3 is so broken now, Tutoring for it is pretty good"
               }
             },
             {
@@ -311,16 +313,10 @@
               "name": "Douglas",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Babys first partner"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Douglas: Babys first partner\nRosaria: Just due to the fact Freezing 3 is so broken now, Tutoring for it is pretty good"
-          }
         }
       ]
     },
@@ -331,16 +327,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Majority Damage is from Trickery and Freezing aka no cost at all (Also not considered Extra Attacks)"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -349,10 +384,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Order | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Order",
+              "setId": 15,
+              "name": "Bullet of Order",
+              "pieces": 4,
+              "bonus": "+10% Order DMG after Attack (2 max)",
+              "icon": "/assets/pieces/icon_piece_set_015.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -517,9 +567,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -528,84 +578,95 @@
             {
               "cardId": "c_1057_srt1",
               "name": "Longsword Slash",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "0 Cost on inspiration, easily great"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1057_srt2",
               "name": "Rapid Slash",
+              "cost": 2,
               "note": {
-                "en": ""
+                "en": "2 AP is prohibitive, and should be remove usually"
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Very good if you're running Rei/Additive buffs to double dip additive buffs"
               },
               "rating": "5/5"
             }
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Longsword: 0 Cost on inspiration, easily great\nRapid Slash: 2 AP is prohibitive, and should be remove usually\nIceberg Cleave: Very good if you're running Rei/Additive buffs to double dip additive buffs"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1057_srt4",
               "name": "Prepare to Subdue",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1057_srt4",
-              "name": "Prepare to Subdue",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1057_srt4",
-              "name": "Prepare to Subdue",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1057_srt4",
-              "name": "Prepare to Subdue",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1057_srt4",
-              "name": "Prepare to Subdue",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Prepare to Subdue I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Prepare to Subdue II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Whole turn, all card damage boost, very good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Prepare to Subdue III",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Draw 2, but decrease damage, not good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Prepare to Subdue IV",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "DRAW 2, INCREASES DAMAGE, AND FREEZING BLADE TRIGGER Broken"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Prepare to Subdue V",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Terrible"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Preprare 1: Its okay, best one turn damage boost for the card\nPrepare 2: Whole turn, all card damage boost, very good\nPrepare 3: Draw 2, but decrease damage, not good\nPrepare 4: DRAW 2, INCREASES DAMAGE, AND FREEZING BLADE TRIGGER Broken\nPrepare 5: Terrible\n+1 AP Divine is somewhat often because its a 0 cost skill, can pick to fix AP lack"
+            "en": "Preprare 1: Its okay, best one turn damage boost for the card\n+1 AP Divine is somewhat often because its a 0 cost skill, can pick to fix AP lack"
           }
         },
         {
@@ -614,32 +675,36 @@
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "4/5"
             }
@@ -658,49 +723,57 @@
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Flash Slash I",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Best General epiphany otherwise"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Flash Slash II",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "0 Cost, is nice, just low damage"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Flash Slash III",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "-1 Cost Divine makes it pretty okay, otherwise 2 AP is too high for its damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Flash Slash IV",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Gimicky 400%+750%"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Flash Slash V",
+                  "cost": 3,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Very gimmicky only 30%higher base then Flash 1, absolutely terrible"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Flash 1: Best General epiphany otherwise\nFlash 2: 0 Cost, is nice, just low damage\nFlash 3: -1 Cost Divine makes it pretty okay, otherwise 2 AP is too high for its damage\nFlash 4: Gimicky 400%+750%\nFlash 5: Very gimmicky only 30%higher base then Flash 1, absolutely terrible"
-          }
         },
         {
           "type": "card-list",
@@ -708,16 +781,18 @@
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
+              "cost": 2,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "6/5"
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
+              "cost": 2,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             }
@@ -736,49 +811,57 @@
               "cardId": "c_1057_uni3",
               "name": "Freezing Blade",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1057_uni3",
-              "name": "Freezing Blade",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1057_uni3",
-              "name": "Freezing Blade",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1057_uni3",
-              "name": "Freezing Blade",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1057_uni3",
-              "name": "Freezing Blade",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Freezing Blade I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Just slight AOE damage increase not worht the 1 cost over Freezing 2 really"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Freezing Blade II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Intiation to stack your draw, and it being 0 is okay"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Freezing Blade III",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "+1 hit is 2x the damage increase with Moral Stacking, its actually Broken"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Freezing Blade IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Insanely tiny"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Freezing Blade V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Terrible"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Freezing 1: Just slight AOE damage increase not worht the 1 cost over Freezing 2 really\nFreezing 2: Intiation to stack your draw, and it being 0 is okay\nFreezing 3: +1 hit is 2x the damage increase with Moral Stacking, its actually Broken\nFreezing 4:Insanely tiny\nFreezing 5: Terrible"
-          }
         }
       ]
     },
@@ -792,80 +875,179 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1057,
-                1043,
-                1052
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1049,
-                1039
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1049,
-                1055
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1004,
-                1052
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1004,
-                1055
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                1039
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                1003
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                1033
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                1055
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                30084
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1043,
-                1004
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             }
           ]
@@ -877,52 +1059,124 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1049,
-                1043,
-                1003,
-                1033,
-                1004,
-                1055,
-                1041,
-                1040
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1056,
-                1050,
-                1052,
-                1010,
-                1024
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
               "title": {
                 "en": "SubDPS"
               },
-              "faces": [
-                1043,
-                1049,
-                1052,
-                1004
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Generator"
               },
-              "faces": [
-                1052,
-                1039,
-                30084,
-                30075,
-                1003,
-                1033
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]

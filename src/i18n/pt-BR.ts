@@ -354,6 +354,13 @@ const ptBR = {
     description: 'Guias de build e estratégia dos personagens.',
     backToList: 'Todos os guias',
     sectionComingSoon: 'Esta seção chega em breve.',
+    updated: 'Atualizado {{date}}',
+    team: 'Time {{n}}',
+    base: 'Base',
+    divine: 'Divina',
+    flex: 'Livre',
+    ratedIn: 'Nota {{rating}} em Card ratings',
+    sheetSays: 'A planilha diz: {{label}}',
   },
   encyclopedia: {
     tabs: {

@@ -27,6 +27,9 @@ export function GuidesPage() {
             {t('guides.backToList')}
           </button>
           <span className="text-sm font-bold text-[#ffffff]">{guide.name}</span>
+          {guide.updated && (
+            <span className="rounded-full bg-[#282828] px-2 py-0.5 text-[10px] text-[#b3b3b3]">{t('guides.updated', { date: guide.updated })}</span>
+          )}
           {guide.source && (
             <button
               type="button"

@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { getCharacterFaceUrl } from '@/lib/deck-builder-assets'
 import { resolveLang, localized } from '../../guides.utils'
 import type { LocalizedText } from '../../guides.types'
+import { RatingChip } from './RatingChip'
 
 type Item = { charResId: number; name: string; rating: string; note: LocalizedText }
 
@@ -32,9 +33,7 @@ export function PartnerListBlock({ items }: { items: Item[] }) {
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2">
                 <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name}</h4>
-                <span className="shrink-0 rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[10px] font-bold uppercase text-[#c084fc]">
-                  {item.rating}
-                </span>
+                <RatingChip rating={item.rating} />
               </div>
               <p className="mt-1 text-xs leading-relaxed text-[#b3b3b3]">
                 {localized(item.note, lang)}

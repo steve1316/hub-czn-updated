@@ -35,9 +35,9 @@
       ]
     },
     {
-      "id": "part-2",
+      "id": "notes",
       "title": {
-        "en": "Part 2"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -67,34 +67,53 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Scream For Me",
+                "text": {
+                  "en": "[Lead] 40% Damage and 2 Fracture to all enemies. 4 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
+                }
               }
             },
             {
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Sadistic Restraint V",
+                "text": {
+                  "en": "60% Damage, and activate Fracture inflicted by this unit 2 times. Add 1 Hit for each Fracture inflicted by this unit that was activated this turn (max 5 times)."
+                }
               }
             }
           ]
@@ -123,27 +142,62 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Scream For Me",
+                "text": {
+                  "en": "[Lead] 40% Damage and 2 Fracture to all enemies. 4 Fracture to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Observer's Pleasure IV",
+                "text": {
+                  "en": "[Unique] 1 Fracture Amplification. For 1 turn, +80% Damage Amount to this unit, and when allies defeat an enemy during that turn, transfer Fracture of that target to a random enemy."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             }
           ]
@@ -172,41 +226,80 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Scream For Me I",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. 6 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Observer's Pleasure V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, 1 Fracture Amplification and 6 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Hollow Verdict V",
+                "text": {
+                  "en": "100% Damage to all enemies, and remove all Fracture inflicted by allies. Apply the amount of Fracture removed ×2 to the target inflicted with Fracture Amplification."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Hollow Verdict V",
+                "text": {
+                  "en": "100% Damage to all enemies, and remove all Fracture inflicted by allies. Apply the amount of Fracture removed ×2 to the target inflicted with Fracture Amplification."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             }
           ]
@@ -237,41 +330,66 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Sadistic Restraint V",
+                "text": {
+                  "en": "60% Damage, and activate Fracture inflicted by this unit 2 times. Add 1 Hit for each Fracture inflicted by this unit that was activated this turn (max 5 times)."
+                }
               }
             },
             {
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Sadistic Restraint V",
+                "text": {
+                  "en": "60% Damage, and activate Fracture inflicted by this unit 2 times. Add 1 Hit for each Fracture inflicted by this unit that was activated this turn (max 5 times)."
+                }
               }
             },
             {
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Sadistic Restraint V",
+                "text": {
+                  "en": "60% Damage, and activate Fracture inflicted by this unit 2 times. Add 1 Hit for each Fracture inflicted by this unit that was activated this turn (max 5 times)."
+                }
               }
             }
           ]
@@ -300,49 +418,72 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Scream For Me II",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Increase Damage Amount of Attack Cards of this unit by 50% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
               }
             },
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Observer's Pleasure III",
+                "text": {
+                  "en": "[Unique] [Lead] 1 Fracture Amplification. 2 Fracture and 2 Vulnerable to all enemies. Increase Damage Amount of Attack Cards of this unit by 50% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Hollow Verdict IV",
+                "text": {
+                  "en": "60% Damage, 2 Fracture, and 4 Agony to all enemies. Fracture Amplification: Activate Agony inflicted by allies."
+                }
               }
             },
             {
               "cardId": "c_30115_uni4",
               "name": "The Art of Unmaking",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -370,48 +511,92 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Scream For Me I",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. 6 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Observer's Pleasure V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, 1 Fracture Amplification and 6 Fracture to the enemy with the highest HP."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hollow Verdict I",
+                "text": {
+                  "en": "[Unique] 60% Damage and 3 Fracture to all enemies. Fracture Amplification: Activate Fracture inflicted by allies."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Hollow Verdict V",
+                "text": {
+                  "en": "100% Damage to all enemies, and remove all Fracture inflicted by allies. Apply the amount of Fracture removed ×2 to the target inflicted with Fracture Amplification."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sadistic Restraint I",
+                "text": {
+                  "en": "[Unique] 100% Damage. Add 1 Hit for each type of harmful effect the target has (max 3 times). Fracture Amplification: Activate Fracture inflicted by allies."
+                }
               }
             }
           ]
@@ -449,7 +634,7 @@
               "name": "Licinia",
               "rating": "6/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat Stick, 16% Final Dmg Buff, 10% Crt, Great Ego Skill, Also Limited"
               }
             },
             {
@@ -457,7 +642,7 @@
               "name": "Scarlet",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat Stick, free damage passive"
               }
             },
             {
@@ -465,7 +650,7 @@
               "name": "Priscilla",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "4.5 Star Stat Stick, Atk% and Dmg Amnt are good, Passive meh, Ego Meh"
               }
             },
             {
@@ -473,7 +658,7 @@
               "name": "Westmacott",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat Stick, Ego isn't that terrible"
               }
             },
             {
@@ -481,16 +666,10 @@
               "name": "Lillian",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Just the greatest 4 Star Partner for Strikers"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Licinia: 5 Star Stat Stick, 16% Final Dmg Buff, 10% Crt, Great Ego Skill, Also Limited\nScarlet: 5 Star Stat Stick, free damage passive\nPriscilla: 4.5 Star Stat Stick, Atk% and Dmg Amnt are good, Passive meh, Ego Meh\nWestmacott: 5 Star Stat Stick, Ego isn't that terrible\nLillian: Just the greatest 4 Star Partner for Strikers"
-          }
         },
         {
           "type": "partner-list",
@@ -500,7 +679,7 @@
               "name": "Marianne",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat Stick"
               }
             },
             {
@@ -508,7 +687,7 @@
               "name": "Ritochika",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Worse 4 Star Stat Stick"
               }
             },
             {
@@ -516,16 +695,10 @@
               "name": "Douglas",
               "rating": "2/5",
               "note": {
-                "en": ""
+                "en": "3 Star Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Marianne: 5 Star Stat Stick\nRitochika: Worse 4 Star Stat Stick\nDouglas: 3 Star Stat Stick"
-          }
         }
       ]
     },
@@ -536,16 +709,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Sanguine",
+              "setId": 29,
+              "name": "Sanguine Thorn",
+              "pieces": 4,
+              "bonus": "+25% Crit DMG for 1 turn when a card applies Fracture (max 2 stacks) | +15% Crit DMG to DoTs once 10 Fractures have been applied",
+              "icon": "/assets/pieces/icon_piece_set_029.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "25% Crt Dmg to everything, 40% Crt Dmg to DoTs"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -554,10 +766,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Judgement | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Judgement",
+              "setId": 23,
+              "name": "Judgment's Flames",
+              "pieces": 4,
+              "bonus": "+50% Instinct DMG against Ravaged targets",
+              "icon": "/assets/pieces/icon_piece_set_023.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -599,6 +826,7 @@
             {
               "cardId": "c_30115_eps",
               "name": "Pathetic End",
+              "cost": 5,
               "note": {
                 "en": ""
               },
@@ -791,9 +1019,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -803,7 +1031,7 @@
               "cardId": "n_0111",
               "name": "Rage",
               "note": {
-                "en": ""
+                "en": "Potentially 0 AP 3 Moral"
               },
               "rating": "2/5"
             },
@@ -811,17 +1039,11 @@
               "cardId": "n_0079",
               "name": "Overwhelm",
               "note": {
-                "en": ""
+                "en": "3 hits for 0 AP"
               },
               "rating": "2/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Rage: Potentially 0 AP 3 Moral\nOverwhelm: 3 hits for 0 AP"
-          }
         },
         {
           "type": "card-list",
@@ -829,6 +1051,7 @@
             {
               "cardId": "c_30115_uni4",
               "name": "The Art of Unmaking",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -849,48 +1072,62 @@
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30115_srt4",
-              "name": "Scream For Me",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_srt4",
-              "name": "Scream For Me",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30115_srt4",
-              "name": "Scream For Me",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30115_srt4",
-              "name": "Scream For Me",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Scream For Me I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "9 Fracture, it isnt alot more damage, but at least its something"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Scream For Me II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Only for Art Builds"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Scream For Me III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Technically can be 7 fracture AOE, but like how?"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Scream For Me IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Draw 2 is always nice"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Scream For Me V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "2 Scorch is 2 more hits, and also Agony ig"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Scream 1: 9 Fracture, it isnt alot more damage, but at least its something\nScream 2: Only for Art Builds\nScream 3: Technically can be 7 fracture AOE, but like how?\nScream 4: Draw 2 is always nice\nScream 5: 2 Scorch is 2 more hits, and also Agony ig\nScream 0: Moral 2/6 Fracture, but 2 moral is already great"
+            "en": "Scream 0: Moral 2/6 Fracture, but 2 moral is already great"
           }
         },
         {
@@ -899,24 +1136,27 @@
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "4/5"
             }
@@ -935,41 +1175,55 @@
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30115_uni1",
-              "name": "Observer's Pleasure",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni1",
-              "name": "Observer's Pleasure",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni1",
-              "name": "Observer's Pleasure",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30115_uni1",
-              "name": "Observer's Pleasure",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Observer's Pleasure I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Observer's Pleasure II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Observer's Pleasure III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Observer's Pleasure IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Observer's Pleasure V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -986,49 +1240,57 @@
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni3",
-              "name": "Sadistic Restraint",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Sadistic Restraint I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Ally Fract Act"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Sadistic Restraint II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "4 hits, 2 Frac Act and Draw 1? this is great"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Sadistic Restraint III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Art Build Style, but defeat condition is like HUH? WHAT"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Sadistic Restraint IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "4-6 hits, 8-12 Fracture, but like why"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Sadistic Restraint V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "2 Frac Act, and up to 6 hits (Requires 4 other Frac Act first)"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sadistic 1: Ally Fract Act\nSadistic 2: 4 hits, 2 Frac Act and Draw 1? this is great\nSadistic 3: Art Build Style, but defeat condition is like HUH? WHAT\nSadistic 4: 4-6 hits, 8-12 Fracture, but like why\nSadistic 5: 2 Frac Act, and up to 6 hits (Requires 4 other Frac Act first)"
-          }
         }
       ]
     },
@@ -1042,59 +1304,131 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30115,
-                30113,
-                1049
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                30113,
-                30097
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                30113,
-                1052
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                30113,
-                1039
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                1055,
-                1049
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                1049,
-                1039
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                1055,
-                1039
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30115,
-                1050,
-                1049
+              "members": [
+                {
+                  "charResId": 30115,
+                  "name": "Arabella"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1106,64 +1440,151 @@
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1056,
-                1050,
-                1055,
-                1039,
-                1057,
-                30097
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003,
-                1004,
-                30113
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP"
               },
-              "faces": [
-                1039,
-                1055,
-                1033,
-                1003,
-                1052,
-                30097
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
               "title": {
                 "en": "Multi Buffer"
               },
-              "faces": [
-                1024,
-                30084,
-                1055
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vulnerable"
               },
-              "faces": [
-                1024,
-                1010,
-                1050,
-                1017,
-                30097,
-                1008
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             }
           ]

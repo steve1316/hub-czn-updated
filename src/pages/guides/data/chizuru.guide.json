@@ -15,20 +15,30 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Karmic Flames V",
+                "text": {
+                  "en": "[Initiation] [Exhaust] 1 Cursed Shackles. When a target inflicted with Cursed Shackles is defeated, create this card."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Tsukuyomi V",
+                "text": {
+                  "en": "[Unique] [Lead] When an Attack Card of this unit is activated, 2 Will-O'-Wisp."
+                }
               }
             }
           ]
@@ -46,13 +56,18 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bound At Dusk I",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. Decrease Cost of 2 random card(s) by 1 until activated."
+                }
               }
             }
           ]
@@ -86,55 +101,90 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Karmic Flames I",
+                "text": {
+                  "en": "[Initiation] 150% Damage. 1 Cursed Shackles. Cursed Shackles: Add 1 Hit."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bound At Dusk I",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. Decrease Cost of 2 random card(s) by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oni Hunt I",
+                "text": {
+                  "en": "[Haste] 60% Damage. +100% Damage Amount to the next Bind card activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oni Hunt I",
+                "text": {
+                  "en": "[Haste] 60% Damage. +100% Damage Amount to the next Bind card activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oni Hunt I",
+                "text": {
+                  "en": "[Haste] 60% Damage. +100% Damage Amount to the next Bind card activated."
+                }
               }
             }
           ]
@@ -152,55 +202,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Karmic Flames V",
+                "text": {
+                  "en": "[Initiation] [Exhaust] 1 Cursed Shackles. When a target inflicted with Cursed Shackles is defeated, create this card."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Tsukuyomi V",
+                "text": {
+                  "en": "[Unique] [Lead] When an Attack Card of this unit is activated, 2 Will-O'-Wisp."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Oni Hunt IV",
+                "text": {
+                  "en": "[Haste] Create 2 Moonslash. Apply Exhaust to those cards and decrease Cost by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Oni Hunt IV",
+                "text": {
+                  "en": "[Haste] Create 2 Moonslash. Apply Exhaust to those cards and decrease Cost by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Oni Hunt IV",
+                "text": {
+                  "en": "[Haste] Create 2 Moonslash. Apply Exhaust to those cards and decrease Cost by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Oni Hunt IV",
+                "text": {
+                  "en": "[Haste] Create 2 Moonslash. Apply Exhaust to those cards and decrease Cost by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bound At Dusk I",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. Decrease Cost of 2 random card(s) by 1 until activated."
+                }
               }
             }
           ]
@@ -224,55 +309,83 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Karmic Flames IV",
+                "text": {
+                  "en": "[Initiation] 1 Cursed Shackles. Create 1 Shadow of the Moon."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tsukuyomi III",
+                "text": {
+                  "en": "Add 2 Hit(s) to the next Shadow of the Moon, Shadow of the Moon+ activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bound At Dusk I",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. Decrease Cost of 2 random card(s) by 1 until activated."
+                }
               }
             }
           ]
@@ -290,55 +403,62 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Karmic Flames V",
+                "text": {
+                  "en": "[Initiation] [Exhaust] 1 Cursed Shackles. When a target inflicted with Cursed Shackles is defeated, create this card."
+                }
               }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Bound At Dusk II",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. When Shadow of the Moon+ is activated, decrease Cost of the next 1 card(s) activated by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Oni Hunt V",
+                "text": {
+                  "en": "[Unique] 80% Damage Amount to Shadow of the Moon+. At the start of the turn, 4 Will-O'-Wisp'."
+                }
               }
             }
           ]
@@ -358,27 +478,42 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Karmic Flames V",
+                "text": {
+                  "en": "[Initiation] [Exhaust] 1 Cursed Shackles. When a target inflicted with Cursed Shackles is defeated, create this card."
+                }
               }
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bound At Dusk I",
+                "text": {
+                  "en": "[Initiation] [Unique] At the start of the turn, gain Inhibit. Decrease Cost of 2 random card(s) by 1 until activated."
+                }
               }
             },
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Oni Hunt V",
+                "text": {
+                  "en": "[Unique] 80% Damage Amount to Shadow of the Moon+. At the start of the turn, 4 Will-O'-Wisp'."
+                }
               }
             }
           ]
@@ -405,7 +540,7 @@
               "name": "Aria",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "20% Crt Dmg if you do Oni Spam build"
               }
             },
             {
@@ -413,7 +548,7 @@
               "name": "Itsuku",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "5 Star Stat stick with additive upside for Chizuru"
               }
             },
             {
@@ -421,7 +556,7 @@
               "name": "Eloise",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "4 Star Stat Stick"
               }
             },
             {
@@ -429,7 +564,7 @@
               "name": "Anteia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "4.5 Star Stat Stick\nJust bad"
               }
             },
             {
@@ -437,7 +572,7 @@
               "name": "Zatera",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "3 Star Stat Stick"
               }
             }
           ]
@@ -445,13 +580,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Aria: 20% Crt Dmg if you do Oni Spam build\nItsuku: 5 Star Stat stick with additive upside for Chizuru\nEloise: 4 Star Stat Stick\nAnteia: 4.5 Star Stat Stick\nZatera: 3 Star Stat Stick"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Bria: Somewhat works with Chizuru\nAnteia: Just bad"
+            "en": "Bria: Somewhat works with Chizuru"
           }
         }
       ]
@@ -462,6 +591,35 @@
         "en": "Blackwing | Executioner | Cursed Corpse"
       },
       "blocks": [
+        {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
+        },
         {
           "type": "prose",
           "body": {
@@ -475,10 +633,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Inhibition | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Inhibition",
+              "setId": 22,
+              "name": "Orb of Inhibition",
+              "pieces": 4,
+              "bonus": "+30% DMG to Void cards with 2+ hits",
+              "icon": "/assets/pieces/icon_piece_set_022.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -487,10 +660,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -499,10 +687,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Void | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Void",
+              "setId": 16,
+              "name": "Offering of the Void",
+              "pieces": 4,
+              "bonus": "+20% Void DMG after Exhaust (1 turn)",
+              "icon": "/assets/pieces/icon_piece_set_016.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -609,9 +812,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -621,7 +824,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
               "rating": "5/5"
             },
@@ -629,17 +832,11 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Tutoring out a card and giving it retrieve is amazing"
               },
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing"
-          }
         },
         {
           "type": "card-list",
@@ -647,6 +844,7 @@
             {
               "cardId": "c_1060_srt1",
               "name": "Moonslash",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -655,6 +853,7 @@
             {
               "cardId": "c_1060_srt3",
               "name": "Spiritflame's Ward",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -663,16 +862,18 @@
             {
               "cardId": "c_1060_uni4",
               "name": "Shadow of the Moon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1060_uni4",
               "name": "Shadow of the Moon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "6/5"
             }
@@ -691,49 +892,57 @@
               "cardId": "c_1060_srt4",
               "name": "Karmic Flames",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1060_srt4",
-              "name": "Karmic Flames",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1060_srt4",
-              "name": "Karmic Flames",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1060_srt4",
-              "name": "Karmic Flames",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1060_srt4",
-              "name": "Karmic Flames",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Karmic Flames I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Extra hit is good for Wil o Wisp Stacking"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Karmic Flames II",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Refunds itself (only on enemies with shackle already), but requires Draw support"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Karmic Flames III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "ST = Bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Karmic Flames IV",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Expensive, but 5 wisps, is good with Bond5"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Karmic Flames V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Best, Exhausts and returns once you finish off the ST, worse others for Multi/Spawn Mobs"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Karmic 1: Extra hit is good for Wil o Wisp Stacking\nKarmic 2: Refunds itself (only on enemies with shackle already), but requires Draw support\nKarmic 3: ST = Bad\nKarmic 4: Expensive, but 5 wisps, is good with Bond5\nKarmic 5: Best, Exhausts and returns once you finish off the ST, worse others for Multi/Spawn Mobs"
-          }
         },
         {
           "type": "card-list",
@@ -741,32 +950,36 @@
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
+              "cost": 1,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
+              "cost": 1,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "0/5"
             }
@@ -785,49 +998,57 @@
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1060_uni1",
-              "name": "Tsukuyomi",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1060_uni1",
-              "name": "Tsukuyomi",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1060_uni1",
-              "name": "Tsukuyomi",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1060_uni1",
-              "name": "Tsukuyomi",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Tsukuyomi I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Best source of Will o Wisp"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Tsukuyomi II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "+1 Hit, but much less Will o Wisp creation"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Tsukuyomi III",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "+2 hit to moon,infinite stacking, with Rei or Orlea, its insane"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Tsukuyomi IV",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Because it only counts Chizuru cards its insanely hard to get much"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Tsukuyomi V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Insanely good with Oni4 and good if you have duped non epiphany Tsukuyomi"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Tsukuyomi 1: Best source of Will o Wisp\nTsukuyomi 2: +1 Hit, but much less Will o Wisp creation\nTsukuyomi 3: +2 hit to moon,infinite stacking, with Rei or Orlea, its insane\nTsukuyomi 4: Because it only counts Chizuru cards its insanely hard to get much\nTsukuyomi 5: Insanely good with Oni4 and good if you have duped non epiphany Tsukuyomi"
-          }
         },
         {
           "type": "card-list",
@@ -836,49 +1057,57 @@
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1060_uni3",
-              "name": "Oni Hunt",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1060_uni3",
-              "name": "Oni Hunt",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1060_uni3",
-              "name": "Oni Hunt",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1060_uni3",
-              "name": "Oni Hunt",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Oni Hunt I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "4 hits = 4 wisp and also addive damage synergy, also increases Moon damage INSANE"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Oni Hunt II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Alternate option to Oni 1, but base Oni + Neutral epiphany is better usually"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Oni Hunt III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Very conditional to reach 5 hits, does not boost Moon, very bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Oni Hunt IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Less good with Tsukuyomi and also requires basic potentials, but best damage otherwise"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Oni Hunt V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "40% Multi is not good, 3 Will o Wisp is not that much"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Oni 1: 4 hits = 4 wisp and also addive damage synergy, also increases Moon damage INSANE\nOni 2: Alternate option to Oni 1, but base Oni + Neutral epiphany is better usually\nOni 3: Very conditional to reach 5 hits, does not boost Moon, very bad\nOni 4: Less good with Tsukuyomi and also requires basic potentials, but best damage otherwise\nOni 5: 40% Multi is not good, 3 Will o Wisp is not that much"
-          }
         }
       ]
     },
@@ -892,30 +1121,63 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1060,
-                1043,
-                1052
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1033,
-                1056
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1004
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                30075,
-                1049
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -927,44 +1189,92 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1043,
-                1033,
-                1004,
-                1040,
-                1049
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
               "title": {
                 "en": "Card generators"
               },
-              "faces": [
-                1009,
-                1027,
-                1004,
-                30075
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buffers/Debuffers"
               },
-              "faces": [
-                1056,
-                1052,
-                1050
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
               "title": {
                 "en": "Multi Hits"
               },
-              "faces": [
-                1043,
-                1052,
-                1004,
-                30075
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             }
           ]

@@ -11,7 +11,8 @@ from __future__ import annotations
 from pathlib import Path
 
 from scripts.datagen import roster
-from scripts.datagen.naming import CARD_TYPES, ROMAN
+from scripts.datagen.epiphany import epiphany_name
+from scripts.datagen.naming import CARD_TYPES
 from scripts.datagen.overrides import Issue
 from scripts.datagen.runner import Context, TargetResult, json_bytes
 
@@ -100,7 +101,7 @@ def _variant_group(ctx: Context, res_id: int, character_name: str, base: str, de
         entries.append({
             "variant_id": f"{base}_epiphany_{level}",
             "level": level,
-            "name": f"{base_name} {ROMAN.get(level, level)}",
+            "name": epiphany_name(base_name, level, ctx.resolver.card_name(card_id)),
             "cost": int(card.get("cost", 0) or 0),
             "card_type": CARD_TYPES.get(card.get("card_category", ""), "Skill"),
             "tags": ctx.resolver.talent_tags(card),

@@ -20,6 +20,7 @@
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
+              "cost": 1,
               "note": {
                 "en": ""
               }
@@ -27,6 +28,15 @@
             {
               "cardId": "c_1049_cre1",
               "name": "Triple 0",
+              "cost": 0,
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre10",
+              "name": "Quest: Triple 1",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -34,13 +44,15 @@
             {
               "cardId": "c_1049_cre11",
               "name": "Quest: Straight",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "Play a 0, 1 and 2 cost card to recieve Straight"
               }
             },
             {
               "cardId": "c_1049_cre12",
               "name": "Quest: Full House",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -50,7 +62,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Cassius's gimmick is his Quests from Popper\nPopper has a pool of 4 Quests with different conditions required to finish\nQuest 0: Every 3 0 cost cards played, you get Triple 0\nQuest 1: Every 3 1 cost cards played, you get Triple 1\nStraight: Play a 0, 1 and 2 cost card to recieve Straight\nFull House: Play a card from every member of your team, recieve Full House\nMAX QUESTS YOU CAN COMPLETE PER TURN ARE 3"
+            "en": "Cassius's gimmick is his Quests from Popper\nPopper has a pool of 4 Quests with different conditions required to finish\nQuest 0: Every 3 0 cost cards played, you get Triple 0\nQuest 1: Every 3 1 cost cards played, you get Triple 1\nFull House: Play a card from every member of your team, recieve Full House\nMAX QUESTS YOU CAN COMPLETE PER TURN ARE 3"
           }
         },
         {
@@ -59,6 +71,15 @@
             {
               "cardId": "c_1049_cre1",
               "name": "Triple 0",
+              "cost": 0,
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre10",
+              "name": "Quest: Triple 1",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -66,13 +87,15 @@
             {
               "cardId": "c_1049_cre11",
               "name": "Quest: Straight",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "Hardest condition to finish, but 3 Moral can be very strong"
               }
             },
             {
               "cardId": "c_1049_cre12",
               "name": "Quest: Full House",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -82,7 +105,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Quest 0 is very easily spammable, so you can finish quests very easily for Moral\nQuest 1 required minimum of 3 AP per complete but its reward is okay now\nStraight: Hardest condition to finish, but 3 Moral can be very strong\nFull House: Relatively easy condition to finish and also good reward."
+            "en": "Quest 0 is very easily spammable, so you can finish quests very easily for Moral\nQuest 1 required minimum of 3 AP per complete but its reward is okay now\nFull House: Relatively easy condition to finish and also good reward."
           }
         }
       ]
@@ -120,63 +143,107 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -204,34 +271,59 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
               }
             }
           ]
@@ -260,63 +352,101 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Devil Dice V",
+                "text": {
+                  "en": "Draw 1. 80% Damage to all enemies equal to that card's Cost."
+                }
+              },
+              "extra": {
+                "id": "div_0144",
+                "god": "Vytor",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Devil Dice V",
+                "text": {
+                  "en": "Draw 1. 80% Damage to all enemies equal to that card's Cost."
+                }
+              },
+              "extra": {
+                "id": "div_0144",
+                "god": "Vytor",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Devil Dice V",
+                "text": {
+                  "en": "Draw 1. 80% Damage to all enemies equal to that card's Cost."
+                }
+              },
+              "extra": {
+                "id": "div_0144",
+                "god": "Vytor",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Dice Trick V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, create 1 empowered Quest card(s)."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -344,55 +474,74 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "com_0012",
+                "text": {
+                  "en": "For 1 turn, gain 2 Morale."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
               }
             }
           ]
@@ -416,55 +565,96 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shuffle III",
+                "text": {
+                  "en": "[Exhaust] Move all cards in hand and Discard Pile to Draw Pile. Draw 5."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shuffle III",
+                "text": {
+                  "en": "[Exhaust] Move all cards in hand and Discard Pile to Draw Pile. Draw 5."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shuffle III",
+                "text": {
+                  "en": "[Exhaust] Move all cards in hand and Discard Pile to Draw Pile. Draw 5."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Shuffle III",
+                "text": {
+                  "en": "[Exhaust] Move all cards in hand and Discard Pile to Draw Pile. Draw 5."
+                }
               }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
               }
             }
           ]
@@ -488,63 +678,68 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Devil Dice V",
+                "text": {
+                  "en": "Draw 1. 80% Damage to all enemies equal to that card's Cost."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Shuffle IV",
+                "text": {
+                  "en": "[Exhaust] Select up to 5 cards in Discard Pile and move to top of Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni4",
               "name": "Joker",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -563,56 +758,90 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -640,56 +869,62 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -717,56 +952,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Pop Eyed Popper IV",
+                "text": {
+                  "en": "Choose 1 out of 4 Quests to start."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Devil Dice",
+                "text": {
+                  "en": "160% Damage. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -803,7 +1072,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, just for the Ego Skill, Everything else is Extra"
               }
             },
             {
@@ -811,7 +1080,7 @@
               "name": "Ritochika",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego Skill"
               }
             },
             {
@@ -819,7 +1088,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral 1, Def% for heals"
               }
             },
             {
@@ -827,7 +1096,7 @@
               "name": "Arwen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "HP but passive kinda doodoo"
               }
             },
             {
@@ -841,12 +1110,6 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
-          }
-        },
-        {
           "type": "partner-list",
           "items": [
             {
@@ -854,7 +1117,7 @@
               "name": "Noel",
               "rating": "2/5",
               "note": {
-                "en": ""
+                "en": "Ig you could use her with Popper 2"
               }
             },
             {
@@ -862,16 +1125,10 @@
               "name": "Gaya",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Very slight dmg buff, healing buff and Draw 1 3 EP Ego"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Noel: Ig you could use her with Popper 2\nGaya: Very slight dmg buff, healing buff and Draw 1 3 EP Ego"
-          }
         }
       ]
     },
@@ -882,16 +1139,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "15% Damage Amount to all allies\n5% whenever an EXHAUST SKILL CARD is CREATED or USED (Max Stacks 3 Permanent)"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Healer | Scrab Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Healer",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "icon": "/assets/pieces/icon_piece_set_008.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -900,10 +1196,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Agony Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Agony Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -945,6 +1259,7 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -971,7 +1286,7 @@
               "cardId": "n_0027",
               "name": "Dream World",
               "note": {
-                "en": ""
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
               "rating": "4/5"
             }
@@ -980,7 +1295,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
           }
         },
         {
@@ -996,7 +1311,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "4/5"
             },
@@ -1004,17 +1319,11 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Free Final Dmg Multi and Glory Set Activator"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
-          }
         },
         {
           "type": "prose",
@@ -1299,9 +1608,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1319,7 +1628,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1327,7 +1636,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1335,7 +1644,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -1343,7 +1652,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -1352,7 +1661,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it"
           }
         },
         {
@@ -1361,8 +1670,9 @@
             {
               "cardId": "c_1049_uni4",
               "name": "Joker",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "1 Cost Tutor"
               },
               "rating": "4/5"
             },
@@ -1378,13 +1688,14 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_1049_eps",
               "name": "Death Trick",
+              "cost": 4,
               "note": {
                 "en": ""
               },
@@ -1395,7 +1706,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Joker: 1 Cost Tutor\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+            "en": "First Aid: 2 Perma Moral but needs to be Heavened\nWanderer: Tech that justbeats some bosses"
           }
         },
         {
@@ -1405,49 +1716,57 @@
               "cardId": "c_1049_srt4",
               "name": "Pop Eyed Popper",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_srt4",
-              "name": "Pop Eyed Popper",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1049_srt4",
-              "name": "Pop Eyed Popper",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1049_srt4",
-              "name": "Pop Eyed Popper",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1049_srt4",
-              "name": "Pop Eyed Popper",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Pop Eyed Popper I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Initiation means you can reset quickly"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Pop Eyed Popper II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Givin Quest Cards retain... I wouldn't say theres much reason to yet"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Pop Eyed Popper III",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Stronger Qust rewards are not worth going"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Pop Eyed Popper IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Picking your quest is basically always the right decision"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Pop Eyed Popper V",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Nowadays this is pretty okay, but your deck setup would be weird"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Popper 1: Initiation means you can reset quickly\nPopper 2: Givin Quest Cards retain... I wouldn't say theres much reason to yet\nPopper 3: Stronger Qust rewards are not worth going\nPopper 4: Picking your quest is basically always the right decision\nPopper 5: Nowadays this is pretty okay, but your deck setup would be weird"
-          }
         },
         {
           "type": "card-list",
@@ -1456,49 +1775,57 @@
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_uni2",
-              "name": "Shuffle",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_uni2",
-              "name": "Shuffle",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1049_uni2",
-              "name": "Shuffle",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1049_uni2",
-              "name": "Shuffle",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Shuffle I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Can fill your deck with trash"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Shuffle II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "You get to choose, but only exhaust 1"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Shuffle III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Honestly always nice"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Shuffle IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "You need to discard a little, but setting up your next turn is always good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Shuffle V",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "In the decks with high cost, its a 0 cost draw 3, very good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shuffle 1: Can fill your deck with trash\nShuffle 2: You get to choose, but only exhaust 1\nShuffle 3: Honestly always nice\nShuffle 4: You need to discard a little, but setting up your next turn is always good\nShuffle 5: In the decks with high cost, its a 0 cost draw 3, very good"
-          }
         },
         {
           "type": "card-list",
@@ -1507,48 +1834,62 @@
               "cardId": "c_1049_uni1",
               "name": "Devil Dice",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1049_uni1",
-              "name": "Devil Dice",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_uni1",
-              "name": "Devil Dice",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_uni1",
-              "name": "Devil Dice",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1049_uni1",
-              "name": "Devil Dice",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Devil Dice I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "3/4 Quest cards now draw, if you get Straight you're very very happy, otherwise meh"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Devil Dice II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Retrieve 3 is pretty great"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Devil Dice III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Draw again"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Devil Dice IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Draw + Discard synergy, situationally great"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Devil Dice V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Good old consistent 0 cost cantrips are great with Divines"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Devil 1: 3/4 Quest cards now draw, if you get Straight you're very very happy, otherwise meh\nDevil 2: Retrieve 3 is pretty great\nDevil 3: Draw again\nDevil 4: Draw + Discard synergy, situationally great\nDevil 5: Good old consistent 0 cost cantrips are great with Divines\n+2 Moral Devil Dice is also really good Devil 2-4 with -1 Cost Divine are op"
+            "en": "+2 Moral Devil Dice is also really good Devil 2-4 with -1 Cost Divine are op"
           }
         },
         {
@@ -1558,48 +1899,62 @@
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1049_uni3",
-              "name": "Dice Trick",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1049_uni3",
-              "name": "Dice Trick",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1049_uni3",
-              "name": "Dice Trick",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1049_uni3",
-              "name": "Dice Trick",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dice Trick I",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Big ST"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dice Trick II",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dice Trick III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Scaling for highest ST Damage, but its always 0 cost so great"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dice Trick IV",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Expensive Upgrade"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dice Trick V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Good upgrade cuz you get draw 3/4 times and Moral 1/4 times, but 2 cost and hansize difficulties"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Trick 1: Big ST\nTrickl 2: AOE\nTrick 3: Scaling for highest ST Damage, but its always 0 cost so great\nTrick 4: Expensive Upgrade\nTrick 5: Good upgrade cuz you get draw 3/4 times and Moral 1/4 times, but 2 cost and hansize difficulties\n3 Moral Trick is REALLY GOOD (Its a Neutral epiphany not on this list)"
+            "en": "Trickl 2: AOE\n3 Moral Trick is REALLY GOOD (Its a Neutral epiphany not on this list)"
           }
         }
       ]
@@ -1614,38 +1969,59 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1049
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1657,49 +2033,91 @@
               "title": {
                 "en": "Red DPS"
               },
-              "faces": [
-                30093,
-                1061,
-                1005
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "Purple DPS"
               },
-              "faces": [
-                1041,
-                1060,
-                30048,
-                1018,
-                1009
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                }
               ]
             },
             {
               "title": {
                 "en": "Yellow DPS"
               },
-              "faces": [
-                30075,
-                30113
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "Green DPS"
               },
-              "faces": [
-                1043,
-                1004,
-                1017
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                }
               ]
             },
             {
               "title": {
                 "en": "Blue DPS"
               },
-              "faces": [
-                1040
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             }
           ]

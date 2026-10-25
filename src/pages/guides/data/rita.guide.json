@@ -15,21 +15,24 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -46,14 +49,24 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Circle I",
+                "text": {
+                  "en": "Create 3 Fate Imprint."
+                }
               }
+            },
+            {
+              "cardId": "c_30097_cre1",
+              "name": "Fate Imprint",
+              "cost": 2
             }
           ]
         },
@@ -72,42 +85,46 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Chrono Circle III",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, move all Basic Cards of this unit to hand."
+                }
               }
             },
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -124,41 +141,59 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Chrono Circle V",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, Draw 3 2-Cost Attack Card(s)."
+                }
               }
             }
           ]
@@ -178,49 +213,58 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 3,
+                "name": "Time Axis Collapse III",
+                "text": {
+                  "en": "Increase Damage Amount to the next 3 Attack Card(s) of this unit activated by 100%."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Chrono Circle III",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, move all Basic Cards of this unit to hand."
+                }
               }
             },
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -243,48 +287,71 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Circle I",
+                "text": {
+                  "en": "Create 3 Fate Imprint."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Chrono Circle V",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, Draw 3 2-Cost Attack Card(s)."
+                }
               }
             }
           ]
@@ -302,63 +369,58 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Chrono Circle V",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, Draw 3 2-Cost Attack Card(s)."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -375,55 +437,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chrono Archon I",
+                "text": {
+                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                }
               }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
               }
             },
             {
               "cardId": "c_30097_uni2",
               "name": "Future Decreed",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Future Decreed II",
+                "text": {
+                  "en": "Proc 1 random 3-Cost Attack Card(s) in hand."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30097_uni2",
               "name": "Future Decreed",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Future Decreed II",
+                "text": {
+                  "en": "Proc 1 random 3-Cost Attack Card(s) in hand."
+                }
+              },
+              "extra": {
+                "id": "div_0150",
+                "god": "Vytor",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Chrono Circle V",
+                "text": {
+                  "en": "[Unique] When Chronal Ascension is gained, Draw 3 2-Cost Attack Card(s)."
+                }
               }
             }
           ]
@@ -444,7 +541,7 @@
               "name": "Ivy",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Undesputedly the best Rita Partner, so much Generic Multiplier thats easy to achieve"
               }
             },
             {
@@ -452,7 +549,7 @@
               "name": "Eloise",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Her Conditional Multiplier is not possible to achieve unless its Fate Imprint or Neutrals"
               }
             },
             {
@@ -460,16 +557,10 @@
               "name": "Zatera",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ivy: Undesputedly the best Rita Partner, so much Generic Multiplier thats easy to achieve\nEloise: Her Conditional Multiplier is not possible to achieve unless its Fate Imprint or Neutrals\nZatera: Stat Stick"
-          }
         },
         {
           "type": "partner-list",
@@ -479,16 +570,10 @@
               "name": "Bria",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Bria only works if you make Fate Imprints"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Bria: Bria only works if you make Fate Imprints"
-          }
         }
       ]
     },
@@ -499,16 +584,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Works with all forms of Rita"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Blackwing | Executioner | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -517,10 +641,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Beast | Executioner | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Beast",
+              "setId": 24,
+              "name": "Beast's Yearning",
+              "pieces": 4,
+              "bonus": "+30% Justice and Order Attack Card DMG (max 5 per turn)",
+              "icon": "/assets/pieces/icon_piece_set_024.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -589,9 +731,9 @@
       ]
     },
     {
-      "id": "part-8",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 8"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -632,16 +774,18 @@
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
+              "cost": 3,
               "note": {
-                "en": ""
+                "en": "492% Base Multiplier and usable up to 4 times with Circle 3, hmm"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "If this card didn't have Unique, wow would basic Rita stocks be up, its 6 Rita AP"
               },
               "rating": "5/5"
             },
@@ -674,7 +818,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Time Acceleration: 492% Base Multiplier and usable up to 4 times with Circle 3, hmm\nTime Paradox: If this card didn't have Unique, wow would basic Rita stocks be up, its 6 Rita AP\nRita is Psionic, so she can help Draw"
+            "en": "Rita is Psionic, so she can help Draw"
           }
         },
         {
@@ -683,32 +827,36 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "6/5"
             },
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
+              "cost": 1,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "2/5"
             }
@@ -727,49 +875,57 @@
               "cardId": "c_30097_uni2",
               "name": "Future Decreed",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30097_uni2",
-              "name": "Future Decreed",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni2",
-              "name": "Future Decreed",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30097_uni2",
-              "name": "Future Decreed",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30097_uni2",
-              "name": "Future Decreed",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Future Decreed I",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "If this hits Time Paradox, you're not happy"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Future Decreed II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Activates 1 random 3 Cost in hand, not that interesting"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Future Decreed III",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "3 AP for 3 AP? But it just targets Draw Pile? This ain't good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Future Decreed IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "2 AP for 2 x 2 AP worth of cards, pretty good rate, but no good Synergies rn, Potential man"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Future Decreed V",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "3 AP to setup is a very steep cost"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Decreed 1: If this hits Time Paradox, you're not happy\nDecreed 2: Activates 1 random 3 Cost in hand, not that interesting\nDecreed 3: 3 AP for 3 AP? But it just targets Draw Pile? This ain't good\nDecreed 4: 2 AP for 2 x 2 AP worth of cards, pretty good rate, but no good Synergies rn, Potential man\nDecreed 5: 3 AP to setup is a very steep cost"
-          }
         },
         {
           "type": "card-list",
@@ -778,49 +934,57 @@
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni1",
-              "name": "Time Axis Collapse",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Time Axis Collapse I",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just a insanely big hit"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Time Axis Collapse II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "If you're playing Rita on an Exhaust card spam team"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Time Axis Collapse III",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "100% Multiplier to next 3, but 3 cost is very high, only way pre Dupe that Rita can get Multi"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Time Axis Collapse IV",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Basically free 2 Vuln, but +1 to Cycle"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Time Axis Collapse V",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Changes Cost of Fate Imprints so you can go 4 5 6, but thats ALOT of AP"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Collapse 1: Just a insanely big hit\nCollapse 2: If you're playing Rita on an Exhaust card spam team\nCollapse 3: 100% Multiplier to next 3, but 3 cost is very high, only way pre Dupe that Rita can get Multi\nCollapse 4: Basically free 2 Vuln, but +1 to Cycle\nCollapse 5: Changes Cost of Fate Imprints so you can go 4 5 6, but thats ALOT of AP"
-          }
         },
         {
           "type": "card-list",
@@ -829,49 +993,57 @@
               "cardId": "c_30097_uni3",
               "name": "Chrono Circle",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni3",
-              "name": "Chrono Circle",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30097_uni3",
-              "name": "Chrono Circle",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30097_uni3",
-              "name": "Chrono Circle",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30097_uni3",
-              "name": "Chrono Circle",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Chrono Circle I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Creates 3 Fate Imprint, pretty good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Chrono Circle II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Upside is it Deck Thins, Downside is that it can Clog your hand"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Chrono Circle III",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Moves all of your basics (Ideally 2 Time Accel)"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Chrono Circle IV",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Creating alot of Fate Imprint seems to just clog your hand hard"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Chrono Circle V",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3 AP to setup is quite bad, but drawing 3 2 cost, using all your Ascension Chronicle is good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Circle 1: Creates 3 Fate Imprint, pretty good\nCircle 2: Upside is it Deck Thins, Downside is that it can Clog your hand\nCircle 3: Moves all of your basics (Ideally 2 Time Accel)\nCircle 4: Creating alot of Fate Imprint seems to just clog your hand hard\nCircle 5: 3 AP to setup is quite bad, but drawing 3 2 cost, using all your Ascension Chronicle is good"
-          }
         }
       ]
     },
@@ -885,44 +1057,83 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30047,
-                30084
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                1040,
-                1039
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30084
+              "members": [
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1039
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1024
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1056
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1049
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -934,47 +1145,104 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1033,
-                1049,
-                1040,
-                1056,
-                1041,
-                1004,
-                1005,
-                1021
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                30084,
-                1010,
-                1056,
-                1024
+              "members": [
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                30084,
-                1039
+              "members": [
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
               "title": {
                 "en": "2+ Cost Attacks"
               },
-              "faces": [
-                30047,
-                1062,
-                1040,
-                1010,
-                1008
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             }
           ]

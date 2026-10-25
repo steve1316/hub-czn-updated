@@ -4,10 +4,12 @@ import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
 import type { CardEntry } from '@/lib/types'
 import { cn } from '@/lib/utils'
-import { resolveLang, localized } from '../guides.utils'
+import { epiphanyRatings, resolveLang, localized } from '../guides.utils'
 import type { Guide } from '../guides.types'
 import { ProseBlock } from './blocks/ProseBlock'
 import { CardListBlock } from './blocks/CardListBlock'
+import { DeckBlock } from './blocks/DeckBlock'
+import { SetListBlock } from './blocks/SetListBlock'
 import { PartnerListBlock } from './blocks/PartnerListBlock'
 import { GearListBlock } from './blocks/GearListBlock'
 import { RatingListBlock } from './blocks/RatingListBlock'
@@ -28,6 +30,8 @@ export function GuidePage({ guide }: { guide: Guide }) {
     () => Object.fromEntries(cards.map(c => [c.card_id, c])) as Record<string, CardEntry>,
     [cards],
   )
+
+  const ratings = useMemo(() => epiphanyRatings(guide), [guide])
 
   const active = guide.sections.find(s => s.id === activeId) ?? guide.sections[0]
 
@@ -64,7 +68,10 @@ export function GuidePage({ guide }: { guide: Guide }) {
             ) : (
               <div className="flex max-w-3xl flex-col gap-6">
                 {active.blocks.map((block, i) => {
-                  if (block.type === 'prose') return <ProseBlock key={i} body={block.body} />
+                  if (block.type === 'prose') {
+                    const next = active.blocks[i + 1]
+                    return <ProseBlock key={i} body={block.body} beforeNonProse={next !== undefined && next.type !== 'prose'} />
+                  }
                   if (block.type === 'card-list')
                     return (
                       <CardListBlock
@@ -81,7 +88,10 @@ export function GuidePage({ guide }: { guide: Guide }) {
                   if (block.type === 'rating-list')
                     return <RatingListBlock key={i} items={block.items} />
                   if (block.type === 'team-grid')
-                    return <TeamGridBlock key={i} groups={block.groups} />
+                    return <TeamGridBlock key={i} groups={block.groups} selfId={guide.charResId} />
+                  if (block.type === 'deck')
+                    return <DeckBlock key={i} cards={block.cards} ratings={ratings} cardsById={cardsById} />
+                  if (block.type === 'set-list') return <SetListBlock key={i} items={block.items} />
                   return null
                 })}
               </div>

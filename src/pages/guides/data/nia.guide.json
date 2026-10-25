@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/10",
   "sections": [
     {
       "id": "good-card-draw-bad-card-draw",
@@ -15,27 +16,28 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Soul Riff I",
+                "text": {
+                  "en": "Heal 200%. 2 Decibel. 4 Elasticity. Proc even when Discarded."
+                }
               }
             }
           ]
@@ -53,28 +55,28 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
               }
             },
             {
               "cardId": "n_0115",
-              "name": "Reorganize",
-              "note": {
-                "en": ""
-              }
+              "name": "Reorganize"
             },
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -85,13 +87,18 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Target Spotted IV",
+                "text": {
+                  "en": "150% Shield. Attunement: Draw 1."
+                }
               }
             }
           ]
@@ -106,26 +113,6 @@
           "type": "prose",
           "body": {
             "en": "Eternal Hunger has Attunement Draw 1, AP 1\nAttunement Activates when the Card is Drawn\nAdagio is capable of Drawing Eternal Hungers, then Placing them on Top Deck\nAdagio + Eternal Hunger looping means ALOT of Positive Draw and AP\nIf it comes down to it, Nia is still capable of Discarding Eternal Hunger\nAnd Reusing it the Conventional way"
-          }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/10"
           }
         }
       ]
@@ -163,28 +150,35 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -206,28 +200,35 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -249,28 +250,36 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -300,28 +309,35 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -343,28 +359,36 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -394,28 +418,35 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -443,28 +474,35 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -492,49 +530,51 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Soul Riff",
+                "text": {
+                  "en": "[Retain] Heal 150%. For 1 turn, when a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -562,56 +602,77 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "G Chord IV",
+                "text": {
+                  "en": "3 Decibel. Discard the top 3 card(s) from Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1003_uni1",
               "name": "Mute Accent",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Mute Accent",
+                "text": {
+                  "en": "Discard 1 card(s) with the highest Cost. 150% Extra Attack to a random enemy by the Combatant who owns that card."
+                }
               }
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Soul Riff IV",
+                "text": {
+                  "en": "Heal 200%. 2 Decibel. Activate the next Decibel effect 1 more time(s)."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -647,42 +708,32 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt1",
               "name": "Stroke",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -710,28 +761,29 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Soul Riff V",
+                "text": {
+                  "en": "When a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -759,56 +811,84 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "G Chord I",
+                "text": {
+                  "en": "2 Decibel. Check the top 3 cards in Draw Pile. Select one to proc."
+                }
               }
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Soul Riff V",
+                "text": {
+                  "en": "When a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Adagio IV",
+                "text": {
+                  "en": "Discard the top 2 card(s) from Draw Pile. Draw 2. Decrease Cost by 1 for each Decibel in possession."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Adagio IV",
+                "text": {
+                  "en": "Discard the top 2 card(s) from Draw Pile. Draw 2. Decrease Cost by 1 for each Decibel in possession."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Adagio IV",
+                "text": {
+                  "en": "Discard the top 2 card(s) from Draw Pile. Draw 2. Decrease Cost by 1 for each Decibel in possession."
+                }
               }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Adagio IV",
+                "text": {
+                  "en": "Discard the top 2 card(s) from Draw Pile. Draw 2. Decrease Cost by 1 for each Decibel in possession."
+                }
               }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -845,7 +925,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, just for the Ego Skill, Everything else is Extra"
               }
             },
             {
@@ -853,7 +933,7 @@
               "name": "Ritochika",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego Skill"
               }
             },
             {
@@ -861,7 +941,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral 1, Def% for heals"
               }
             },
             {
@@ -869,7 +949,7 @@
               "name": "Arwen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "HP but passive kinda doodoo"
               }
             },
             {
@@ -881,12 +961,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
-          }
         }
       ]
     },
@@ -897,16 +971,58 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Healer",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "icon": "/assets/pieces/icon_piece_set_008.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "2/2/2 Generalist Support set if you can't use one of the 4/2 sets"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Tetra | Scrab Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -961,7 +1077,7 @@
               "cardId": "n_0027",
               "name": "Dream World",
               "note": {
-                "en": ""
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
               "rating": "4/5"
             }
@@ -970,7 +1086,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
           }
         },
         {
@@ -986,7 +1102,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "4/5"
             },
@@ -994,17 +1110,11 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Free Final Dmg Multi and Glory Set Activator"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
-          }
         },
         {
           "type": "prose",
@@ -1018,6 +1128,7 @@
             {
               "cardId": "c_1003_col",
               "name": "Charm",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1296,9 +1407,9 @@
       ]
     },
     {
-      "id": "part-14",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 14"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1307,6 +1418,7 @@
             {
               "cardId": "c_1003_col",
               "name": "Charm",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1316,7 +1428,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1324,7 +1436,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1332,7 +1444,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -1340,7 +1452,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -1349,7 +1461,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it"
           }
         },
         {
@@ -1358,8 +1470,9 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "0 AP Cantrip after E1, this is great, absolutely no reason to delete free Discard engine"
               },
               "rating": "5/5"
             },
@@ -1375,7 +1488,7 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             },
@@ -1383,203 +1496,237 @@
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
               "note": {
+                "en": "Tech that justbeats some bosses"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "First Aid: 2 Perma Moral but needs to be Heavened"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1003_srt4",
+              "name": "G Chord",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "G Chord I",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Undesputed best, allowing you to choose is a Huge Boost"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "G Chord II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Decibels are largely important, but this is a pretty good way of getting them"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "G Chord III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "A tiny bit of Extra Attack damage is unimportant"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "G Chord IV",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Only 2 Decibel and Discarding? No good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "G Chord V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Activate Top card twice, but 2 cost is prohibitive and requires Setup"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Soul Riff I",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Free Value"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Soul Riff II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Rather keep it unupgraded"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Soul Riff III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Conditional, but the peak of what you can do is very good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Soul Riff IV",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Activating Decibel again is terrible"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Soul Riff V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spi; 5: +1 cost, but turns into an Upgrade, its pretty nice"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Mute Accent I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Random discard is so terrible"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Mute Accent II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Lets you choose, but still a single Extra Attack isn't good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Mute Accent III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Lets you Activate a card and also a Heal, okay"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Mute Accent IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Discard every turn? Okay, but a 2 cost Upgrade is prohibitive"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Mute Accent V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Discard all highest cost has Synergy with Kayron and Renoa, Situational"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "note": {
                 "en": ""
               },
               "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Curiosity: 0 AP Cantrip after E1, this is great, absolutely no reason to delete free Discard engine\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1003_srt4",
-              "name": "G Chord",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1003_srt4",
-              "name": "G Chord",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1003_srt4",
-              "name": "G Chord",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1003_srt4",
-              "name": "G Chord",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1003_srt4",
-              "name": "G Chord",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Chord 1: Undesputed best, allowing you to choose is a Huge Boost\nChord 2: Decibels are largely important, but this is a pretty good way of getting them\nChord 3: A tiny bit of Extra Attack damage is unimportant\nChord 4: Only 2 Decibel and Discarding? No good\nChord 5: Activate Top card twice, but 2 cost is prohibitive and requires Setup"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1003_uni2",
-              "name": "Soul Riff",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1003_uni2",
-              "name": "Soul Riff",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1003_uni2",
-              "name": "Soul Riff",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1003_uni2",
-              "name": "Soul Riff",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1003_uni2",
-              "name": "Soul Riff",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Soul 1: Free Value\nSoul 2: Rather keep it unupgraded\nSoul 3: Conditional, but the peak of what you can do is very good\nSoul 4: Activating Decibel again is terrible\nSpi; 5: +1 cost, but turns into an Upgrade, its pretty nice"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1003_uni1",
-              "name": "Mute Accent",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1003_uni1",
-              "name": "Mute Accent",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1003_uni1",
-              "name": "Mute Accent",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1003_uni1",
-              "name": "Mute Accent",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1003_uni1",
-              "name": "Mute Accent",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Mute 1: Random discard is so terrible\nMute 2: Lets you choose, but still a single Extra Attack isn't good\nMute 3: Lets you Activate a card and also a Heal, okay\nMute 4: Discard every turn? Okay, but a 2 cost Upgrade is prohibitive\nMute 5: Discard all highest cost has Synergy with Kayron and Renoa, Situational"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1003_uni3",
-              "name": "Adagio",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "4/5"
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
+              "cost": 0,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
+              "cost": 0,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "0/5"
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
+              "cost": 0,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "1/5"
             }
@@ -1603,80 +1750,179 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1041,
-                1061,
-                1003
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1049,
-                1003
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1003,
-                30075
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1003,
-                1052
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1003,
-                30048
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1003,
-                30075
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1003,
-                1052
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1003,
-                30048
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                1005,
-                1003
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                30113,
-                1003
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1003,
-                1056
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             }
           ]
@@ -1691,58 +1937,127 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1041,
-                30075,
-                1049,
-                1005,
-                1033
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1052,
-                1062,
-                30113,
-                1039
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                30048,
-                30097,
-                30093,
-                30084
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                1056,
-                1052
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                30048
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                1039,
-                1055
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30048
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
-              "faces": [
-                30075
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             }
           ]

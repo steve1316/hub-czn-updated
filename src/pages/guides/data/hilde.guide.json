@@ -15,27 +15,42 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Quiver Reload",
+                "text": {
+                  "en": "[Lead] Create 3 Homing Arrow in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Plasma Rain",
+                "text": {
+                  "en": "60% Damage and 2 Ionization to all enemies."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Big Game Ranger",
+                "text": {
+                  "en": "[Unique] [Lead] On Hit, 2 Zero In."
+                }
               }
             }
           ]
@@ -47,23 +62,21 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_cre1",
               "name": "Homing Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         }
       ]
     },
     {
-      "id": "part-2",
+      "id": "notes",
       "title": {
-        "en": "Part 2"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -93,42 +106,60 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Plasma Rain V",
+                "text": {
+                  "en": "120% Damage to all enemies. Draw 1 Attack Card(s) of this unit. Streak: Decrease Cost by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -156,49 +187,79 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quiver Reload II",
+                "text": {
+                  "en": "[Lead] Create 3 Homing Arrow (Fracture) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Quiver Reload II",
+                "text": {
+                  "en": "[Lead] Create 3 Homing Arrow (Fracture) in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Quiver Reload II",
+                "text": {
+                  "en": "[Lead] Create 3 Homing Arrow (Fracture) in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Plasma Rain V",
+                "text": {
+                  "en": "120% Damage to all enemies. Draw 1 Attack Card(s) of this unit. Streak: Decrease Cost by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Big Game Ranger IV",
+                "text": {
+                  "en": "[Unique] [Lead] When a harmful effect is applied through an ability, 5 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -226,56 +287,98 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -303,49 +406,79 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -373,56 +506,105 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -446,35 +628,48 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Plasma Rain V",
+                "text": {
+                  "en": "120% Damage to all enemies. Draw 1 Attack Card(s) of this unit. Streak: Decrease Cost by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -502,49 +697,85 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Quiver Reload III",
+                "text": {
+                  "en": "[Lead] Create 1 Homing Arrow (Grand) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Quiver Reload III",
+                "text": {
+                  "en": "[Lead] Create 1 Homing Arrow (Grand) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Draw & Release V",
+                "text": {
+                  "en": "Increase Damage Amount of the next Attack Card of this unit by 30% for each card Drawn through an ability this turn (max 300%)."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Big Game Ranger I",
+                "text": {
+                  "en": "[Unique] [Lead] On Hit, 3 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism",
-              "note": {
-                "en": ""
-              }
+              "name": "Sadism"
             }
           ]
         },
@@ -572,56 +803,105 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Plasma Rain I",
+                "text": {
+                  "en": "[Lead] 100% Damage and 2 Ionization to all enemies. Attunement: 2 Ionization to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Draw & Release III",
+                "text": {
+                  "en": "Move all cards in hand to Draw Pile, then Draw for each moved."
+                }
               }
             },
             {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Big Game Ranger II",
+                "text": {
+                  "en": "[Unique] [Initiation] Draw 2. On Hit, 2 Zero In."
+                }
               }
             },
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -658,7 +938,7 @@
               "name": "Eunie",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Bad Ego, passive is purely damage 10% Crit and Extra Attack Buffing, hyper specific"
               }
             },
             {
@@ -666,7 +946,7 @@
               "name": "Marin",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Great Ego, some damage buffs passively, is a 5 star Stat stick, usable elsewhere"
               }
             },
             {
@@ -674,7 +954,7 @@
               "name": "Ruixiang",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "3 EP Draw 3 isn't super consistent since Hilde keeps a 1 Cost Attack, but its good"
               }
             },
             {
@@ -682,7 +962,7 @@
               "name": "Rosaria",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Always good, RNG way of getting Moral"
               }
             },
             {
@@ -690,16 +970,10 @@
               "name": "Solia",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Second Method on a Partner, butt Ego Skill but at least 4.5 Star Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Eunie: Bad Ego, passive is purely damage 10% Crit and Extra Attack Buffing, hyper specific\nMarin: Great Ego, some damage buffs passively, is a 5 star Stat stick, usable elsewhere\nRuixiang: 3 EP Draw 3 isn't super consistent since Hilde keeps a 1 Cost Attack, but its good\nRosaria: Always good, RNG way of getting Moral\nSolia: Second Method on a Partner, butt Ego Skill but at least 4.5 Star Stat Stick"
-          }
         },
         {
           "type": "partner-list",
@@ -709,16 +983,10 @@
               "name": "Daisy",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Rosaria but worse"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Daisy: Rosaria but worse"
-          }
         }
       ]
     },
@@ -729,16 +997,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Battlefield is crazy on Hilde 35% Crit DMG for free"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -747,10 +1054,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Judgement | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Judgement",
+              "setId": 23,
+              "name": "Judgment's Flames",
+              "pieces": 4,
+              "bonus": "+50% Instinct DMG against Ravaged targets",
+              "icon": "/assets/pieces/icon_piece_set_023.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -804,24 +1126,27 @@
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
+              "cost": 1,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "5/5"
             }
@@ -846,17 +1171,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -1199,9 +1518,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1211,13 +1530,14 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_30113_col2",
               "name": "Despair",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1227,7 +1547,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "4/5"
             },
@@ -1235,7 +1555,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
               "rating": "3/5"
             }
@@ -1244,7 +1564,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
           }
         },
         {
@@ -1253,6 +1573,7 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1267,34 +1588,54 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Quiver Reload II",
+                "text": {
+                  "en": "[Lead] Create 3 Homing Arrow (Fracture) in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Quiver Reload III",
+                "text": {
+                  "en": "[Lead] Create 1 Homing Arrow (Grand) in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Quiver Reload IV",
+                "text": {
+                  "en": "[Unique] [Lead] Create 2 Homing Arrow in Draw Pile. When an enemy is defeated, create 2 Homing Arrow in Draw Pile (5 time(s) per turn)."
+                }
               }
             }
           ]
@@ -1342,41 +1683,55 @@
               "cardId": "c_30113_uni2",
               "name": "Draw & Release",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30113_uni2",
-              "name": "Draw & Release",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Draw & Release I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Draw & Release II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Draw & Release III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Draw & Release IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Draw & Release V",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1393,48 +1748,62 @@
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30113_uni1",
-              "name": "Plasma Rain",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30113_uni1",
-              "name": "Plasma Rain",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30113_uni1",
-              "name": "Plasma Rain",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30113_uni1",
-              "name": "Plasma Rain",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Plasma Rain I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "4 Ionization in 1 card and can also be Attunement Looped"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Plasma Rain II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Plasma 0 D is just better, 1.5x Ionization gain isnt worth losing an Attack"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Plasma Rain III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Frature is very conditional"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Plasma Rain IV",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Really easy to be 0 cost, but Piercing damage is worthless"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Plasma Rain V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost TUTOR Cantrip that does damage, but no Ionization for another Debuff"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Plasma 1: 4 Ionization in 1 card and can also be Attunement Looped\nPlasma 2: Plasma 0 D is just better, 1.5x Ionization gain isnt worth losing an Attack\nPlasma 3: Frature is very conditional\nPlasma 4: Really easy to be 0 cost, but Piercing damage is worthless\nPlasma 5: 0 Cost TUTOR Cantrip that does damage, but no Ionization for another Debuff\nPlasma 0: With Draw honestly better then Plasma 2, since its an additional hit"
+            "en": "Plasma 0: With Draw honestly better then Plasma 2, since its an additional hit"
           }
         },
         {
@@ -1444,41 +1813,55 @@
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30113_uni3",
-              "name": "Big Game Ranger",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30113_uni3",
-              "name": "Big Game Ranger",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30113_uni3",
-              "name": "Big Game Ranger",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30113_uni3",
-              "name": "Big Game Ranger",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Big Game Ranger I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Big Game Ranger II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Big Game Ranger III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Big Game Ranger IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Big Game Ranger V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1500,66 +1883,147 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30048,
-                30113,
-                1049
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30075,
-                30113,
-                1049
+              "members": [
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                30113,
-                1062
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1055,
-                1039
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1049,
-                1055
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1005,
-                1049
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1057,
-                30113,
-                1055
+              "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1024,
-                30084
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]
@@ -1571,60 +2035,135 @@
               "title": {
                 "en": "MainDPS"
               },
-              "faces": [
-                30048,
-                30075,
-                1057
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                }
               ]
             },
             {
               "title": {
                 "en": "SubDPS"
               },
-              "faces": [
-                1043,
-                1005
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1056,
-                1062,
-                1050,
-                1055,
-                1039,
-                1064,
-                1057,
-                30097
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003,
-                1004
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP"
               },
-              "faces": [
-                1039,
-                1055,
-                1033,
-                1003,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -1636,10 +2175,19 @@
               "title": {
                 "en": "Multi Buffer"
               },
-              "faces": [
-                1024,
-                30084,
-                1055
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             }
           ]

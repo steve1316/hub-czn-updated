@@ -20,13 +20,15 @@
             {
               "cardId": "c_1024_cre1",
               "name": "Softie ★",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "The buffer"
               }
             },
             {
               "cardId": "c_1024_cre2",
               "name": "Softie ★★",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -34,6 +36,7 @@
             {
               "cardId": "c_1024_cre3",
               "name": "Softie ★★★",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -41,13 +44,15 @@
             {
               "cardId": "c_1024_cre4",
               "name": "Swiftie ★",
+              "cost": 0,
               "note": {
-                "en": ""
+                "en": "The Damage"
               }
             },
             {
               "cardId": "c_1024_cre7",
               "name": "Sturdie ★",
+              "cost": 0,
               "note": {
                 "en": ""
               }
@@ -57,7 +62,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Orlea's Gimmick is all about Retain and her Creations that Exhaust\nRetain means the card isn't discarded at the End of Turn\nSome of Orlea's Cards also have Activated Abilities by Retaining\nEnding turn, or Growth Acceleration can Activate these Abilities\nOrlea has 3 types of creations:\nSoftie: The buffer\nUse Effect: Multiplicative Damage Bonus to next attack used\nRetain Effect: Multiplicative Damage Bonus to next attack used\nSwiftie: The Damage\nUse Effect: Does Damage\nRetain Effect: Increases Swifties damage by a Additive Damage Ammount\nSturdie/Toughie: The Sustain\nUse Effect: Shields\nRetain Effect: Heals\n(Yes, Retain heal generates Tressa Daggers, End of Turn and Growth Accel)\nCreations have 3 star levels, Creations combine if Same Type, Increasing Star\nIncreasing Stars boost the Retain effect and Use strength\nExamples:\nSoft 1 + Soft 1 = Soft 2\nSoft 2 + Soft 1 = Soft 3\nSoft 2 + Soft 2 = Soft 2, Soft 2\nSoft 1+ Sturdie 1 = Can't happen"
+            "en": "Orlea's Gimmick is all about Retain and her Creations that Exhaust\nRetain means the card isn't discarded at the End of Turn\nSome of Orlea's Cards also have Activated Abilities by Retaining\nEnding turn, or Growth Acceleration can Activate these Abilities\nOrlea has 3 types of creations:\nUse Effect: Multiplicative Damage Bonus to next attack used\nRetain Effect: Multiplicative Damage Bonus to next attack used\nUse Effect: Does Damage\nRetain Effect: Increases Swifties damage by a Additive Damage Ammount\nSturdie/Toughie: The Sustain\nUse Effect: Shields\nRetain Effect: Heals\n(Yes, Retain heal generates Tressa Daggers, End of Turn and Growth Accel)\nCreations have 3 star levels, Creations combine if Same Type, Increasing Star\nIncreasing Stars boost the Retain effect and Use strength\nExamples:\nSoft 1 + Soft 1 = Soft 2\nSoft 2 + Soft 1 = Soft 3\nSoft 2 + Soft 2 = Soft 2, Soft 2\nSoft 1+ Sturdie 1 = Can't happen"
           }
         }
       ]
@@ -83,56 +88,62 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sacred Censer III",
+                "text": {
+                  "en": "[Initiation] Create 1 Softie★ and Creation★ each. When the next Softie is activated, create Softie★."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Growth Acceleration II",
+                "text": {
+                  "en": "[Exhaust] Heal 200%. Select 1 Creation of this unit in hand and duplicate it into hand."
+                }
               }
             },
             {
               "cardId": "c_1024_uni2",
               "name": "Annoying",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 3,
+                "name": "Annoying III",
+                "text": {
+                  "en": "[Retain] 450% Defense-Based Damage. Heal 200%. Retain: Decrease Cost by 1."
+                }
               }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": ""
-              }
+              "name": "Spore Harvester"
             }
           ]
         },
@@ -143,49 +154,72 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Sacred Censer II",
+                "text": {
+                  "en": "[Initiation] [Lead] Create 2 Creation★. At the start of the turn, create 1 Creation★."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -202,28 +236,36 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Sacred Censer II",
+                "text": {
+                  "en": "[Initiation] [Lead] Create 2 Creation★. At the start of the turn, create 1 Creation★."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growth Acceleration III",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Softie, 2 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -242,41 +284,45 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Sacred Censer II",
+                "text": {
+                  "en": "[Initiation] [Lead] Create 2 Creation★. At the start of the turn, create 1 Creation★."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growth Acceleration III",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Softie, 2 Vulnerable to all enemies."
+                }
               }
             }
           ]
@@ -294,42 +340,59 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Sacred Censer II",
+                "text": {
+                  "en": "[Initiation] [Lead] Create 2 Creation★. At the start of the turn, create 1 Creation★."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": ""
-              }
+              "name": "Spore Harvester"
             }
           ]
         }
@@ -349,7 +412,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, just for the Ego Skill, Everything else is Extra"
               }
             },
             {
@@ -357,7 +420,7 @@
               "name": "Noel",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Now has Def%, passive abilities are nice but Orlea's ratios aren't that high"
               }
             },
             {
@@ -365,7 +428,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Big Def%, okay Ego skill"
               }
             },
             {
@@ -373,7 +436,7 @@
               "name": "Yvonne",
               "rating": "2/5",
               "note": {
-                "en": ""
+                "en": "Alyssa but weaker after Dupes"
               }
             }
           ]
@@ -381,7 +444,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nTiana: Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash\nNoel: Now has Def%, passive abilities are nice but Orlea's ratios aren't that high\nAlyssa: Big Def%, okay Ego skill\nYvonne: Alyssa but weaker after Dupes"
+            "en": "Tiana: Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash"
           }
         },
         {
@@ -392,16 +455,10 @@
               "name": "Arwen",
               "rating": "1/5",
               "note": {
-                "en": ""
+                "en": "Not Def%"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Arwen: Not Def%"
-          }
         }
       ]
     },
@@ -412,10 +469,25 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Tetra"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -430,10 +502,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Blackwing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -442,10 +532,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Instinct | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Instinct",
+              "setId": 12,
+              "name": "Instinctual Growth",
+              "pieces": 4,
+              "bonus": "+20% Instinct DMG (4+ cards)",
+              "icon": "/assets/pieces/icon_piece_set_012.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -552,9 +657,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -564,7 +669,7 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Retain and makes alot of Spores the best"
               },
               "rating": "5/5"
             },
@@ -572,13 +677,14 @@
               "cardId": "n_0074",
               "name": "Nature's Gift",
               "note": {
-                "en": ""
+                "en": "The worst Spore creator but still makes spores"
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_1024_cre8",
               "name": "Sturdie ★★",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -588,7 +694,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "1 AP to draw 1 and give it retain is good, but somewhat more conditional"
               },
               "rating": "5/5"
             }
@@ -597,7 +703,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Harvester: Retain and makes alot of Spores the best\nNature's Gift: The worst Spore creator but still makes spores\nSalamander: 1 AP draw 4 is always good\nKefox: 1 AP to draw 1 and give it retain is good, but somewhat more conditional"
+            "en": "Salamander: 1 AP draw 4 is always good"
           }
         },
         {
@@ -606,8 +712,9 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "You only really need to Activate Softies, otherwise its a brick draw, kinda meh"
               },
               "rating": "3/5"
             },
@@ -640,7 +747,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Just remove your baiscs\nWill of Light: You only really need to Activate Softies, otherwise its a brick draw, kinda meh\nWanderer: Tech\nRally/Gear/Reorganize: Great draw"
+            "en": "Just remove your baiscs\nWanderer: Tech\nRally/Gear/Reorganize: Great draw"
           }
         },
         {
@@ -650,49 +757,57 @@
               "cardId": "c_1024_srt4",
               "name": "Sacred Censer",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1024_srt4",
-              "name": "Sacred Censer",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1024_srt4",
-              "name": "Sacred Censer",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1024_srt4",
-              "name": "Sacred Censer",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1024_srt4",
-              "name": "Sacred Censer",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Sacred Censer I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "3 Creations is good, but its RNG"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Sacred Censer II",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "UPGRADE VERY GOOD, but 2 Cost is high, hopefully it discounts or you have Lead Prism"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Sacred Censer III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "2 Softies for 1 AP, rate isn't bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Sacred Censer IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "40% on a low base multiplier isn't that important"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Sacred Censer V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "High Shield isn't required"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sacred 1: 3 Creations is good, but its RNG\nSacred 2: UPGRADE VERY GOOD, but 2 Cost is high, hopefully it discounts or you have Lead Prism\nSacred 3: 2 Softies for 1 AP, rate isn't bad\nSacred 4: 40% on a low base multiplier isn't that important\nSacred 5: High Shield isn't required"
-          }
         },
         {
           "type": "card-list",
@@ -701,48 +816,62 @@
               "cardId": "c_1024_uni2",
               "name": "Annoying",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1024_uni2",
-              "name": "Annoying",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1024_uni2",
-              "name": "Annoying",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1024_uni2",
-              "name": "Annoying",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1024_uni2",
-              "name": "Annoying",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Annoying I",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "0 Cost, damage and heal, nothing valuable"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Annoying II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Uselss damage"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Annoying III",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Useless damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Annoying IV",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "0 Cost and also makes Creations, good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Annoying V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Eventually high damage, but 1 cost isn't that great"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Annoying 1: 0 Cost, damage and heal, nothing valuable\nAnnoying 2: Uselss damage\nAnnoying 3: Useless damage\nAnnoying 4: 0 Cost and also makes Creations, good\nAnnoying 5: Eventually high damage, but 1 cost isn't that great\nNeutral Epiphanies are good, since the base card is already pretty good"
+            "en": "Neutral Epiphanies are good, since the base card is already pretty good"
           }
         },
         {
@@ -752,49 +881,57 @@
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1024_uni1",
-              "name": "Growth Acceleration",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1024_uni1",
-              "name": "Growth Acceleration",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1024_uni1",
-              "name": "Growth Acceleration",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1024_uni1",
-              "name": "Growth Acceleration",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Growth Acceleration I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost is insane, and also can work on other characters Retain aka Beryl"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Growth Acceleration II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 Cost is so bad"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Growth Acceleration III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "AOE Vuln and Activates Softie dmg buff twice, very good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Growth Acceleration IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just stack Swiftie fast"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Growth Acceleration V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "5 stress is terrible"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Growth 1: 0 Cost is insane, and also can work on other characters Retain aka Beryl\nGrowth 2: 2 Cost is so bad\nGrowth 3: AOE Vuln and Activates Softie dmg buff twice, very good\nGrowth 4: Just stack Swiftie fast\nGrowth 5: 5 stress is terrible"
-          }
         },
         {
           "type": "card-list",
@@ -802,6 +939,7 @@
             {
               "cardId": "c_1024_uni3",
               "name": "Growing Creature",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -827,43 +965,91 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30047,
-                1024,
-                1040
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1024,
-                1033
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1024,
-                1040
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                1017,
-                1024
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                1040,
-                1024,
-                1056
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1024,
-                1052
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -875,42 +1061,84 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1040,
-                1049,
-                1004
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "DPS"
               },
-              "faces": [
-                30047,
-                1018,
-                1040,
-                1017,
-                1062
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1056,
-                1008,
-                1010
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1039,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
