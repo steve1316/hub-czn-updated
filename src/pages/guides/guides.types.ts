@@ -63,6 +63,8 @@ export interface DeckCard {
   cost?: number
   /** The epiphany it shows. Absent when it could not be read or the card has none. */
   epiphany?: DeckEpiphany
+  /** The card's own text, set only when the card has no epiphanies. */
+  text?: LocalizedText
   /** The divine or common line added to it. */
   extra?: DeckExtra
 }

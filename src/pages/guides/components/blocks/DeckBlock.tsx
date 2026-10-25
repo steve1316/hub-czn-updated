@@ -65,13 +65,13 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
               key={legendKey(card)}
               className="grid grid-cols-[20px_170px_1fr_auto] items-start gap-2 rounded bg-[#1d1d1d] px-2 py-1.5 text-xs"
             >
-              <CostGem cost={card.cost} small />
+              {card.cost === undefined ? <span /> : <CostGem cost={card.cost} small />}
               <span className="font-bold text-[#ffffff]">
                 {card.epiphany?.name ?? card.name ?? card.cardId}
                 {level === 0 && <span className="ml-1.5 rounded border border-[#555] px-1 text-[10px] font-normal text-[#b3b3b3]">{t('guides.base')}</span>}
               </span>
               <span className="leading-relaxed text-[#b3b3b3]">
-                {card.epiphany && localized(card.epiphany.text, lang)}
+                {card.epiphany ? localized(card.epiphany.text, lang) : card.text && localized(card.text, lang)}
                 {card.extra && (
                   <span className={`block ${card.extra.god ? 'text-[#fcd34d]' : 'text-[#cbd5e1]'}`}>
                     {card.extra.god ? `✦ ${t('guides.divine')}: ` : ''}

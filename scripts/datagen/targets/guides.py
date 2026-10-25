@@ -843,6 +843,9 @@ class _GuideBuilder:
         for card, picture in zip(deck["cards"], pictures):
             if picture:
                 self.decks.pending.append((card, *picture))
+            # A card with no epiphanies shows its own text, as there is no epiphany to read it from.
+            if card["cardId"] in self.ctx.client.cards and not self.variants_of(card["cardId"]):
+                card["text"] = {"en": epiphany.base_text(self.ctx, card["cardId"])}
         return deck
 
     def _face_block(self, face_rows: list[list[tuple[int, int]]], ratings: dict[int, str], names: dict[int, str]) -> tuple[dict, bool]:

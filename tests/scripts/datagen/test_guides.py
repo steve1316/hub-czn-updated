@@ -433,6 +433,19 @@ def test_unrated_card_row_becomes_a_deck_with_every_copy():
     assert guides._as_deck({"type": "card-list", "items": [{**resonance, "rating": "4/5"}]}) is None
 
 
+def test_deck_card_with_no_epiphanies_shows_its_own_text(monkeypatch):
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={"c_1040_uni4": {}, "c_30134_uni2": {}}))
+    monkeypatch.setattr(guides.epiphany, "base_text", lambda ctx, card_id: "Create 1 Opening Found.")
+    specialist = {"cardId": "c_1040_uni4", "name": "Heavy Weapons Specialist", "cost": 1, "note": {"en": ""}}
+    flow = {"cardId": "c_30134_uni2", "name": "Radiant Sword Flow", "cost": 1, "note": {"en": ""}}
+    neutral = {"cardId": "n_0129", "name": "Spore Harvester", "note": {"en": ""}}
+    deck = builder._deck_or_list({"type": "card-list", "items": [specialist, flow, neutral]})
+    assert deck["cards"][0]["text"] == {"en": "Create 1 Opening Found."}
+    # A card with epiphanies gets its text from the one it shows, and a card the client does not have gets none.
+    assert "text" not in deck["cards"][1] and "text" not in deck["cards"][2]
+
+
 def test_rossweisse_deck_epiphanies():
     pytest.importorskip("rapidocr_onnxruntime")
     pictures = _rossweisse_deck()
