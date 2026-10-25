@@ -27,7 +27,10 @@
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1003_srt4",
@@ -82,7 +85,10 @@
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             }
           ]
         },
@@ -188,7 +194,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -238,7 +247,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -289,7 +301,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -345,7 +360,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -396,7 +414,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -452,7 +473,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -508,7 +532,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -580,7 +607,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -673,12 +703,18 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -717,12 +753,18 @@
             {
               "cardId": "c_1003_srt1",
               "name": "Stroke",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1003_srt4",
@@ -737,7 +779,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -782,12 +827,18 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             },
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             }
           ]
         },
@@ -892,7 +943,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },

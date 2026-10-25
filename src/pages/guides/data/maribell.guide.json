@@ -31,7 +31,10 @@
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             }
           ]
         },
@@ -97,22 +100,34 @@
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             }
           ]
         },
@@ -189,22 +204,34 @@
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Pulverize] Fixed Damage equal to Shield owned."
+              }
             }
           ]
         },

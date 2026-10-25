@@ -26,7 +26,10 @@
             {
               "cardId": "c_30084_cre1",
               "name": "Archetype: ○",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] Heal 50%. 1 AP."
+              }
             }
           ]
         },
@@ -59,7 +62,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -87,7 +93,10 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             }
           ]
         },
@@ -152,7 +161,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -185,7 +197,10 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_uni1",
@@ -207,7 +222,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -257,7 +275,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             },
             {
               "cardId": "n_0077",
@@ -294,7 +315,10 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_uni1",
@@ -316,7 +340,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -366,7 +393,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -399,17 +429,26 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -426,7 +465,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             },
             {
               "cardId": "c_30084_uni2",
@@ -510,7 +552,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -565,7 +610,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -620,7 +668,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -689,7 +740,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             }
           ]
         },
@@ -722,17 +776,26 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              }
             },
             {
               "cardId": "c_30084_uni1",
@@ -754,7 +817,10 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
             },
             {
               "cardId": "n_0035",

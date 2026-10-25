@@ -38,17 +38,26 @@
             {
               "cardId": "c_1064_cre1",
               "name": "Futility",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] 100% Damage. Heal 100%."
+              }
             },
             {
               "cardId": "c_1064_cre1",
               "name": "Futility",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] 100% Damage. Heal 100%."
+              }
             },
             {
               "cardId": "c_1064_eps",
               "name": "Rift of Nothingness",
-              "cost": 5
+              "cost": 5,
+              "text": {
+                "en": "200% Damage to all enemies. Exhaust all Futility in hand. +80% base Damage Amount for each Exhausted."
+              }
             }
           ]
         },
@@ -134,7 +143,10 @@
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             }
           ]
         },
@@ -208,7 +220,10 @@
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_uni2",
@@ -259,19 +274,31 @@
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_uni3",
@@ -306,7 +333,10 @@
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "240% Damage. Create 3 Futility. +40 base Damage Amount for each created."
+              }
             }
           ]
         },
@@ -338,19 +368,31 @@
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "n_0010",
@@ -395,19 +437,31 @@
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_tut1",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": ""
+              }
             },
             {
               "cardId": "c_1064_uni3",
@@ -424,7 +478,10 @@
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "240% Damage. Create 3 Futility. +40 base Damage Amount for each created."
+              }
             }
           ]
         },
@@ -720,7 +777,10 @@
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "240% Damage. Create 3 Futility. +40 base Damage Amount for each created."
+              }
             },
             {
               "cardId": "n_0136",

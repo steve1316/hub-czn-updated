@@ -347,7 +347,10 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             }
           ]
         },
@@ -436,7 +439,10 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             }
           ]
         },
@@ -696,12 +702,18 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             }
           ]
         },
@@ -782,17 +794,26 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             }
           ]
         },
@@ -869,12 +890,18 @@
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             },
             {
               "cardId": "c_30075_uni4",
               "name": "Pale Shooting Star",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "150% Damage. Proc 3 Homing Laser in Draw Pile and Graveyard."
+              }
             }
           ]
         },

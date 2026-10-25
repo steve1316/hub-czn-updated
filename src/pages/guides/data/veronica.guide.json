@@ -39,7 +39,10 @@
             {
               "cardId": "c_1033_cre1",
               "name": "Ballista",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Ephemeral] [Ballista] 150% Extra Attack to a random enemy. At the end of the turn, proc."
+              }
             },
             {
               "cardId": "c_1033_uni2",
@@ -425,7 +428,10 @@
             {
               "cardId": "c_1033_uni4",
               "name": "Bombardment Prep",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase max stack of Reload by 1. 2 Reload."
+              }
             }
           ]
         },
@@ -949,7 +955,14 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Pendant of Resolution IV",
+                "text": {
+                  "en": "When a Skill Card of a different Combatant is activated, 1 Reload. 50% chance to add 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni2",

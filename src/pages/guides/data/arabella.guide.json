@@ -491,7 +491,10 @@
             {
               "cardId": "c_30115_uni4",
               "name": "The Art of Unmaking",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 200% Damage to all enemies. Increase Damage Amount by 15% for each type of harmful effect the target has (max 120%). Fracture Amplification: 2x base Damage Amount."
+              }
             }
           ]
         },

@@ -27,7 +27,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             },
             {
               "cardId": "c_1005_uni1",
@@ -195,7 +198,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             }
           ]
         },
@@ -240,7 +246,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             }
           ]
         },
@@ -313,7 +322,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             }
           ]
         },
@@ -434,7 +446,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             }
           ]
         },
@@ -473,12 +488,18 @@
             {
               "cardId": "c_1005_srt1",
               "name": "Engagement Fire",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1005_srt1",
               "name": "Engagement Fire",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1005_srt4",
@@ -517,7 +538,10 @@
             {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] +80% Mark Damage."
+              }
             },
             {
               "cardId": "n_0007",

@@ -26,12 +26,18 @@
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] 80% Damage. 2 Agony."
+              }
             },
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] 80% Damage. 2 Agony."
+              }
             },
             {
               "cardId": "c_1009_uni1",
@@ -301,7 +307,10 @@
             {
               "cardId": "c_1009_srt3",
               "name": "Touch of Darkness",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1009_srt4",
@@ -348,7 +357,10 @@
             {
               "cardId": "c_1009_uni4",
               "name": "Cursed Gouge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Activate Agony inflicted by this unit on the target."
+              }
             }
           ]
         },

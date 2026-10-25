@@ -141,7 +141,10 @@
             {
               "cardId": "c_1008_uni4",
               "name": "Absolute Protection",
-              "cost": -1
+              "cost": -1,
+              "text": {
+                "en": "[Finale] 100% Shield for each X. For 1 turn, Retain all cards in hand (cannot stack)."
+              }
             }
           ]
         },

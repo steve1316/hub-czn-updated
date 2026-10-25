@@ -51,7 +51,10 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -146,7 +149,10 @@
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             },
             {
               "cardId": "c_30047_uni2",
@@ -235,7 +241,10 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0067",
@@ -293,17 +302,26 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -353,17 +371,26 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -413,22 +440,34 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0121",
@@ -482,22 +521,34 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0121",
@@ -558,7 +609,10 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "m_0007",
@@ -596,17 +650,26 @@
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -623,22 +686,34 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0012",

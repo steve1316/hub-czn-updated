@@ -38,12 +38,18 @@
             {
               "cardId": "c_1041_cre1",
               "name": "Dirge Bullet",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Bullet] [Exhaust] 160% Damage. When moved to Discard Pile, 120% Extra Attack to a random enemy."
+              }
             },
             {
               "cardId": "c_1041_cre1",
               "name": "Dirge Bullet",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Bullet] [Exhaust] 160% Damage. When moved to Discard Pile, 120% Extra Attack to a random enemy."
+              }
             }
           ]
         },
@@ -364,17 +370,26 @@
             {
               "cardId": "c_1041_srt1",
               "name": "Annihilation Shot",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1041_srt1",
               "name": "Annihilation Shot",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1041_srt3",
               "name": "Black Veil",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1041_uni2",
@@ -391,22 +406,50 @@
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             }
           ]
         },
@@ -464,12 +507,26 @@
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
@@ -498,7 +555,10 @@
             {
               "cardId": "c_1041_uni4",
               "name": "Last-Ditch Assault",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Retain] 300% Damage (+-50%). Discard all Dirge Bullet, +50% Damage Amount for each."
+              }
             }
           ]
         },
@@ -633,7 +693,14 @@
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",
@@ -1231,7 +1298,14 @@
             {
               "cardId": "c_1041_uni3",
               "name": "Flower of Devoured Fate",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Flower of Devoured Fate III",
+                "text": {
+                  "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
+                }
+              }
             },
             {
               "cardId": "c_1041_uni3",

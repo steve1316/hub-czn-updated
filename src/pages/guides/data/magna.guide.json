@@ -223,7 +223,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },
@@ -310,7 +313,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },
@@ -481,7 +487,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },

@@ -62,12 +62,18 @@
             {
               "cardId": "c_1040_col",
               "name": "Daze",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             }
           ]
         },
@@ -97,22 +103,50 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_uni1",
@@ -149,7 +183,10 @@
             {
               "cardId": "c_1040_uni4",
               "name": "Heavy Weapons Specialist",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Create 1 Opening Found or Charged Shot, then apply Exhaust to that card and decrease Cost by 1 until activated."
+              }
             }
           ]
         },
@@ -177,7 +214,14 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_uni2",
@@ -331,7 +375,14 @@
             {
               "cardId": "c_1040_uni3",
               "name": "Unlimited Firepower",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Unlimited Firepower III",
+                "text": {
+                  "en": "+160% Damage Amount to the next Attack Card of this unit activated."
+                }
+              }
             }
           ]
         },
@@ -353,7 +404,14 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
+              }
             },
             {
               "cardId": "c_1040_uni2",

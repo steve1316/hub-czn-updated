@@ -60,7 +60,14 @@
             {
               "cardId": "c_1062_uni3",
               "name": "Charge Energy",
-              "cost": 0
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Charge Energy III",
+                "text": {
+                  "en": "[Retain] +70% Damage Amount to Attack Cards of this unit for each card of this unit in hand for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni3",
@@ -371,12 +378,18 @@
             {
               "cardId": "c_1062_srt1",
               "name": "Anchor",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt2",
               "name": "Power Anchor",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "220% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt4",
@@ -488,7 +501,10 @@
             {
               "cardId": "c_1062_uni4",
               "name": "Lift Anchor",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Retain] Increase Damage Amount of Anchor Shot in hand by 80% for 1 turn until activated."
+              }
             }
           ]
         },
@@ -521,7 +537,10 @@
             {
               "cardId": "c_1062_srt1",
               "name": "Anchor",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt4",

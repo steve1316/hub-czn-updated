@@ -50,12 +50,18 @@
             {
               "cardId": "c_30093_cre1",
               "name": "Effulgent Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Linked] 120% Damage. When this card is Discarded, 120% Extra Attack to a random enemy. This card does not move to Draw Pile on Shuffle."
+              }
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Linked] [Retrieve 3] When moved to Graveyard, 1 Effulgent Light."
+              }
             }
           ]
         },
@@ -89,7 +95,10 @@
             {
               "cardId": "c_30093_cre1",
               "name": "Effulgent Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Linked] 120% Damage. When this card is Discarded, 120% Extra Attack to a random enemy. This card does not move to Draw Pile on Shuffle."
+              }
             },
             {
               "cardId": "c_30093_uni3",
@@ -106,12 +115,18 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Linked] [Retrieve 3] When moved to Graveyard, 1 Effulgent Light."
+              }
             },
             {
               "cardId": "c_30093_uni4_mut1",
               "name": "Effulgent Release",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] 500% Damage. Exhaust all Effulgent Blade in Graveyard, then +100% base Damage Amount for each Exhausted. At the end of the turn, change this card into Effulgent Compression."
+              }
             }
           ]
         },
@@ -349,7 +364,10 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Linked] [Retrieve 3] When moved to Graveyard, 1 Effulgent Light."
+              }
             }
           ]
         },
@@ -466,7 +484,10 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Linked] [Retrieve 3] When moved to Graveyard, 1 Effulgent Light."
+              }
             }
           ]
         },
@@ -918,7 +939,10 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Linked] [Retrieve 3] When moved to Graveyard, 1 Effulgent Light."
+              }
             }
           ]
         },

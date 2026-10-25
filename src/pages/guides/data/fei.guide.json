@@ -38,17 +38,26 @@
             {
               "cardId": "c_30048_cre2",
               "name": "Inferno Rhapsody",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "70% Damage. 1 Flame Arts. When Flame Arts is activated through this card, Draw 1."
+              }
             },
             {
               "cardId": "c_30048_cre2",
               "name": "Inferno Rhapsody",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "70% Damage. 1 Flame Arts. When Flame Arts is activated through this card, Draw 1."
+              }
             },
             {
               "cardId": "c_30048_cre1",
               "name": "Heavensfall",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Ephemeral] [Exhaust] 100% Damage × 3."
+              }
             }
           ]
         },
@@ -353,7 +362,10 @@
             {
               "cardId": "c_30048_uni4",
               "name": "Blazing War Dance",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] [Unique] Move Inferno Rhapsody to hand for each Descent gained this turn."
+              }
             }
           ]
         },
@@ -472,7 +484,10 @@
             {
               "cardId": "c_30048_uni4",
               "name": "Blazing War Dance",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] [Unique] Move Inferno Rhapsody to hand for each Descent gained this turn."
+              }
             }
           ]
         },
@@ -568,7 +583,10 @@
             {
               "cardId": "c_30048_uni4",
               "name": "Blazing War Dance",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] [Unique] Move Inferno Rhapsody to hand for each Descent gained this turn."
+              }
             }
           ]
         },

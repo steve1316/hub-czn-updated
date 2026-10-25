@@ -311,7 +311,10 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
@@ -418,12 +421,18 @@
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1056_srt4",
@@ -516,7 +525,10 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
@@ -610,7 +622,10 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
@@ -649,7 +664,10 @@
             {
               "cardId": "c_1056_uni4",
               "name": "Predator's Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "250% Damage. For 1 turn, 2 Morale."
+              }
             },
             {
               "cardId": "n_0054",

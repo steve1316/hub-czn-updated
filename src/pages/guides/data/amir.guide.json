@@ -68,7 +68,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",
@@ -192,7 +195,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",
@@ -373,7 +379,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",

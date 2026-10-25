@@ -139,17 +139,26 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "n_0129",
@@ -229,7 +238,10 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             }
           ]
         },
@@ -275,7 +287,10 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             }
           ]
         },

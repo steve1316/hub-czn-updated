@@ -39,7 +39,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -111,7 +114,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -206,7 +212,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -292,7 +301,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -392,7 +404,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -485,7 +500,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -557,7 +575,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },

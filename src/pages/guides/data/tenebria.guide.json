@@ -38,17 +38,26 @@
             {
               "cardId": "c_1069_cre2",
               "name": "Rhythm: Crescendo",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Rhythm Cards] 180% Damage. +40% base Damage Amount for each Rhythm in Graveyard. For 1 turn, decrease Cost of the next Rhythm card activated by 1."
+              }
             },
             {
               "cardId": "c_1069_cre4",
               "name": "Rhythm: Fortissimo",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Linked] [Retain] [Rhythm Cards] 90% Damage. +55% base Damage Amount for each Linked Rhythm before activation. When 3 or more cards are Linked, add 1 Hit."
+              }
             },
             {
               "cardId": "c_1069_cre5",
               "name": "Rhythm: Fermata",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] Select 1 of 4 Rhythm cards. Change all Rhythm cards into the selected card for 1 turn and Draw 2 of them."
+              }
             }
           ]
         },
@@ -70,22 +79,34 @@
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "cost": 4
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "cost": 4
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "cost": 4
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "cost": 4
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
             }
           ]
         },
@@ -101,7 +122,10 @@
             {
               "cardId": "c_1069_cre1",
               "name": "Rhythm",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Rhythm Cards] 60% Damage. +30% base Damage Amount for each Rhythm. Proc 1 Rhythm in hand."
+              }
             }
           ]
         }
@@ -125,12 +149,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -212,12 +242,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -356,12 +392,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -409,7 +451,10 @@
             {
               "cardId": "c_1069_uni4",
               "name": "Photo Time",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Retain] Performance Buzz. If a Rhythm card is activated or moved to hand, increase Performance Buzz by 1 until this card is activated (max 9 times)."
+              }
             }
           ]
         },
@@ -448,12 +493,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -559,12 +610,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -715,12 +772,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -840,12 +903,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",
@@ -951,12 +1020,18 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1069_srt4",

@@ -65,7 +65,14 @@
             {
               "cardId": "c_1018_uni1",
               "name": "Dark Mist Secret Art: Destruction",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Dark Mist Secret Art: Destruction I",
+                "text": {
+                  "en": "100% Shield. Draw 2 card(s) of this unit. Gain Dark Mist Stance."
+                }
+              }
             }
           ]
         },
@@ -107,12 +114,18 @@
             {
               "cardId": "c_1018_srt1",
               "name": "Dark Mist Sword: First Form",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] 60% Damage. +20% base Damage Amount for each Attack Card of this unit activated this turn. If there is no other Attack Card of this unit in hand, decrease Cost by 1."
+              }
             },
             {
               "cardId": "c_1018_uni2",
@@ -141,7 +154,10 @@
             {
               "cardId": "c_1018_uni4",
               "name": "Dark Mist Secret Art: Black Dance",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "120% Damage. Dark Mist Stance: Add 1 Hit(s) for each Skill Card in hand."
+              }
             }
           ]
         },
@@ -163,12 +179,18 @@
             {
               "cardId": "c_1018_srt1",
               "name": "Dark Mist Sword: First Form",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Haste] [Exhaust] [Ephemeral] 60% Damage. +20% base Damage Amount for each Attack Card of this unit activated this turn. If there is no other Attack Card of this unit in hand, decrease Cost by 1."
+              }
             },
             {
               "cardId": "c_1018_uni2",
@@ -185,12 +207,22 @@
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Dark Mist Inner Art I",
+                "text": {
+                  "en": "[Lead] Retain Dark Mist Stance for 1 turn. Dark Mist Stance: +80% Damage Amount to Attack Cards of this unit for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1018_uni4",
               "name": "Dark Mist Secret Art: Black Dance",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "120% Damage. Dark Mist Stance: Add 1 Hit(s) for each Skill Card in hand."
+              }
             }
           ]
         },

@@ -62,12 +62,18 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             },
             {
               "cardId": "c_30117_uni4_lbk_mut1",
               "name": "Reckoning",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 600% Damage. +30% base Damage Amount for each Rapacity. Activate Agony and Fracture inflicted by this unit. When this card is activated, change into End of the Line."
+              }
             }
           ]
         },
@@ -231,7 +237,10 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             }
           ]
         },
@@ -613,7 +622,10 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             }
           ]
         },

@@ -405,7 +405,10 @@
             {
               "cardId": "c_1004_uni4",
               "name": "Finisher Round",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Bullet] 500% Damage. When 5 Handgun Bullet cards are activated, remove Unactivatable."
+              }
             },
             {
               "cardId": "c_1004_uni2",
@@ -576,7 +579,10 @@
             {
               "cardId": "c_1004_uni4",
               "name": "Finisher Round",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Unique] [Bullet] 500% Damage. When 5 Handgun Bullet cards are activated, remove Unactivatable."
+              }
             }
           ]
         },

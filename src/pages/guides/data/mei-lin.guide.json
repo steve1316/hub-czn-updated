@@ -62,7 +62,10 @@
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             }
           ]
         },
@@ -116,12 +119,18 @@
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_uni2",
@@ -215,12 +224,18 @@
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_uni2",
@@ -314,12 +329,18 @@
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_srt1",
               "name": "Strike",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1027_uni2",

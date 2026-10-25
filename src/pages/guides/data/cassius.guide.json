@@ -749,7 +749,10 @@
             {
               "cardId": "c_1049_uni4",
               "name": "Joker",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Select and Draw 1 card(s) from Draw Pile."
+              }
             }
           ]
         },

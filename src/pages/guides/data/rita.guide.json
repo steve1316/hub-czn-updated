@@ -38,7 +38,10 @@
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] Decrease all Chronicle. Gain Chronal Ascension for each descreased."
+              }
             }
           ]
         },
@@ -72,7 +75,10 @@
             {
               "cardId": "c_30097_cre1",
               "name": "Fate Imprint",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "[Retain] [Exhaust] 120% Damage for each Cost of this card. Increase Cost of all Fate Imprint in hand by 1. When this card leaves the hand, change Cost to 2."
+              }
             }
           ]
         },
@@ -102,12 +108,18 @@
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": "350% Damage."
+              }
             },
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": "350% Damage."
+              }
             },
             {
               "cardId": "c_30097_srt4",
@@ -136,7 +148,10 @@
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] Decrease all Chronicle. Gain Chronal Ascension for each descreased."
+              }
             }
           ]
         },
@@ -228,12 +243,18 @@
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": "350% Damage."
+              }
             },
             {
               "cardId": "c_30097_srt1",
               "name": "Time Acceleration",
-              "cost": 3
+              "cost": 3,
+              "text": {
+                "en": "350% Damage."
+              }
             },
             {
               "cardId": "c_30097_srt4",
@@ -274,7 +295,10 @@
             {
               "cardId": "c_30097_uni4",
               "name": "Time Paradox",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] Decrease all Chronicle. Gain Chronal Ascension for each descreased."
+              }
             }
           ]
         },

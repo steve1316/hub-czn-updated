@@ -38,7 +38,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },
@@ -455,7 +458,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },
@@ -528,7 +534,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },

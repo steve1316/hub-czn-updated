@@ -111,7 +111,10 @@
             {
               "cardId": "c_1057_srt1",
               "name": "Longsword Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1057_srt4",
@@ -160,7 +163,10 @@
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "180% Damage to all enemies. Inspiration: Add 1 Hit."
+              }
             }
           ]
         },
@@ -244,7 +250,10 @@
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "180% Damage to all enemies. Inspiration: Add 1 Hit."
+              }
             }
           ]
         },

@@ -73,7 +73,10 @@
             {
               "cardId": "c_30113_cre1",
               "name": "Homing Arrow",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Exhaust] 120% Extra Attack to the enemy with the lowest HP. Draw 1. Attunement: Proc this card."
+              }
             }
           ]
         },
@@ -169,7 +172,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -269,7 +275,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -388,7 +397,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -488,7 +500,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -614,7 +629,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -677,7 +695,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -779,7 +800,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             },
             {
               "cardId": "n_0121",
@@ -909,7 +933,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },

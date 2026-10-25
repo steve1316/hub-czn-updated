@@ -27,7 +27,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             },
             {
               "cardId": "c_1039_uni2",
@@ -145,7 +148,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -212,7 +218,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             },
             {
               "cardId": "n_0054",
@@ -350,12 +359,18 @@
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1039_srt4",
@@ -425,7 +440,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -535,7 +553,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -594,7 +615,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
