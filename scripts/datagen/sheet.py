@@ -3,7 +3,7 @@ Read the community Google Sheet the Guides page is imported from.
 
 The sheet is public, so its HTML view needs no login. Each tab's HTML is one table whose cells hold text and images in
 the positions a reader sees, which is what the guide importer works from. Pages are fetched fresh every run, since the
-sheet is edited, while pictures are cached on disk so a re-run does not download them again.
+sheet is edited, while pictures are cached on disk by their tab's layout and cell, so a re-run does not download them again.
 """
 
 from __future__ import annotations
@@ -28,6 +28,9 @@ _TIMEOUT_SECONDS = 60
 # Google sometimes refuses or drops one of the thousands of picture requests in a run, so each request is tried a few times.
 _ATTEMPTS = 3
 _RETRY_DELAY_SECONDS = 5
+# A picture swapped for one of the same size with no other edit to its tab keeps its cache key, so it is picked up only once the
+# cached copy is this old. Each picture waits up to twice as long again, so the refresh is spread over several runs.
+PICTURE_MAX_AGE_SECONDS = 7 * 24 * 60 * 60
 
 
 @dataclass
@@ -50,30 +53,70 @@ class Cell:
 
 
 class Fetcher:
-    """Downloads sheet pages fresh and images through an on-disk cache keyed by URL."""
+    """Downloads sheet pages fresh and images through an on-disk cache keyed by the caller."""
 
     def __init__(self, cache_dir: Path):
         """
         Args:
-            cache_dir: Where images are kept between runs.
+            cache_dir: Where images are kept between runs. Only the cache may use it, as `prune` empties it.
         """
         self.cache_dir = cache_dir
+        # The cached files this run asked for, which `prune` keeps.
+        self._used: set[Path] = set()
 
-    def bytes(self, url: str) -> bytes:
+    def bytes(self, url: str, key: str) -> bytes:
         """
-        One image, from the cache when it has been fetched before.
+        One image, from the cache when it was fetched under the same key recently.
 
         Args:
-            url: The address. A changed picture gets a new address, so a cached one never goes stale.
+            url: The address. It changes from run to run, so it does not name the picture.
+            key: What names the picture across runs, such as its tab's `layout` and its cell.
 
         Returns:
             The response body.
         """
-        path = self.cache_dir / hashlib.sha1(url.encode("utf-8")).hexdigest()
-        if not path.is_file():
-            self.cache_dir.mkdir(parents=True, exist_ok=True)
-            path.write_bytes(self._download(url))
-        return path.read_bytes()
+        path = self._path(key)
+        max_age = PICTURE_MAX_AGE_SECONDS * (1 + int(path.name[:2], 16) / 256)
+        try:
+            if time.time() - path.stat().st_mtime <= max_age:
+                return path.read_bytes()
+        except FileNotFoundError:
+            pass
+        data = self._download(url)
+        self.store(key, data)
+        return data
+
+    def store(self, key: str, data: bytes):
+        """
+        Cache an image under a key, such as one this run already has from another cell under the same address.
+
+        Args:
+            key: What names the picture, as given to `bytes`.
+            data: The image.
+        """
+        self.cache_dir.mkdir(parents=True, exist_ok=True)
+        self._path(key).write_bytes(data)
+
+    def _path(self, key: str) -> Path:
+        """
+        Where an image is cached, which also spares it from `prune`.
+
+        Args:
+            key: What names the picture, as given to `bytes`.
+
+        Returns:
+            The cache file, which may not exist yet.
+        """
+        path = self.cache_dir / hashlib.sha1(key.encode("utf-8")).hexdigest()
+        self._used.add(path)
+        return path
+
+    def prune(self):
+        """Delete the cached images this run did not ask for, such as those of a tab whose layout changed."""
+        if self.cache_dir.is_dir():
+            for path in self.cache_dir.iterdir():
+                if path not in self._used:
+                    path.unlink()
 
     def text(self, url: str) -> str:
         """
@@ -141,6 +184,21 @@ def tabs(page: str) -> list[tuple[str, str]]:
         (tab name, gid) pairs in sheet order.
     """
     return [(html.unescape(name.replace("\\/", "/")), gid) for name, gid in _TAB_ENTRY.findall(page)]
+
+
+def layout(grid: dict[tuple[int, int], Cell]) -> str:
+    """
+    A fingerprint of a tab's text and picture sizes, the parts of it that stay put from run to run.
+
+    Args:
+        grid: The tab's cells, from `parse_grid`.
+
+    Returns:
+        A short hex digest that changes with any edit that moves pictures between cells, such as an inserted row.
+    """
+    # A picture's address changes every run except for the size it ends with, such as "=w133-h199".
+    cells = sorted((key, cell.text, [url.rpartition("=")[2] for url in cell.images]) for key, cell in grid.items())
+    return hashlib.sha1(repr(cells).encode("utf-8")).hexdigest()[:12]
 
 
 def parse_grid(page: str) -> dict[tuple[int, int], Cell]:

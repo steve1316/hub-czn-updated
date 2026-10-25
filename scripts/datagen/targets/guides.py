@@ -33,7 +33,7 @@ from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
 from scripts.datagen.targets import card_art, neutral_cards
-from scripts.datagen.sheet import EDIT_URL, HTMLVIEW_URL, TAB_URL, Cell, Fetcher, parse_grid, tabs
+from scripts.datagen.sheet import EDIT_URL, HTMLVIEW_URL, TAB_URL, Cell, Fetcher, layout, parse_grid, tabs
 
 NAME = "guides"
 OFFLINE = False
@@ -142,18 +142,22 @@ class _Downloads:
         self.fetcher = fetcher
         self._seen: dict[str, _Download] = {}
 
-    def get(self, url: str) -> _Download:
+    def get(self, url: str, key: str) -> _Download:
         """
         One picture.
 
         Args:
             url: The picture's address.
+            key: What names the picture in the cache across runs, from `_GuideBuilder._picture_key`.
 
         Returns:
             The decoded picture, shared by every use of the URL.
         """
         if url not in self._seen:
-            self._seen[url] = _Download(self.fetcher.bytes(url))
+            self._seen[url] = _Download(self.fetcher.bytes(url, key))
+        else:
+            # Two cells share an address on some runs and not on others, so each keeps its own copy for the runs they do not.
+            self.fetcher.store(key, self._seen[url].data)
         return self._seen[url]
 
 
@@ -273,7 +277,7 @@ def build(ctx: Context) -> TargetResult:
     """
     overrides = ctx.overrides(NAME)
     cache = ctx.client.root / ".cache" / "guides"
-    fetcher = Fetcher(cache)
+    fetcher = Fetcher(cache / "pictures")
     downloads = _Downloads(fetcher)
     faces = images.FaceMatcher(ctx.client.root / CLIENT_FACE_DIR)
     labels = _PictureLabels(overrides.directives.get("_pictures", {}))
@@ -348,6 +352,7 @@ def build(ctx: Context) -> TargetResult:
     (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies))
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
+    fetcher.prune()
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
     return TargetResult(files, f"{len(guides)} guides", issues)
 
@@ -592,6 +597,21 @@ class _GuideBuilder:
         self.guide_slug = guide_slug
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
+        # The tab's `layout`, set by `sections`, which keeps a cached picture from being served for a cell it has moved out of.
+        self._layout = ""
+
+    def _picture_key(self, cell: Cell, index: int) -> str:
+        """
+        What names one of a cell's pictures in the download cache, since its address changes every run.
+
+        Args:
+            cell: The cell holding the picture.
+            index: Which of the cell's pictures it is.
+
+        Returns:
+            A key such as "Olga!B3#0@<layout>".
+        """
+        return f"{self.tab_name}!{cell.ref}#{index}@{self._layout}"
 
     def sections(self, grid: dict[tuple[int, int], Cell]) -> tuple[list[dict], str | None]:
         """
@@ -603,6 +623,7 @@ class _GuideBuilder:
         Returns:
             The sections, in sheet order, without empty ones, and the sheet's edit date if it has one.
         """
+        self._layout = layout(grid)
         sections: list[dict] = []
         for band in _bands(grid):
             blocks, band = self._potentials(band)
@@ -647,7 +668,7 @@ class _GuideBuilder:
         notes = _EGO_LEVEL.split(ego.text) if ego else [""]
         image = f"{self.guide_slug}.webp" if tree else None
         if tree:
-            self.pictures[image] = self.downloads.get(tree.images[0])
+            self.pictures[image] = self.downloads.get(tree.images[0], self._picture_key(tree, 0))
         block = {"type": "potentials", "image": image, "legend": colours,
                  "ego": [{"level": level, "text": self._text(note.strip())} for level, note in enumerate(notes[1:], 1)]}
         if notes[0].strip():
@@ -742,8 +763,8 @@ class _GuideBuilder:
             face_row: list[tuple[int, int]] = []
             for cell in row:
                 ref = f"{self.tab_name}!{cell.ref}"
-                for url in cell.images:
-                    download = self.downloads.get(url)
+                for index, url in enumerate(cell.images):
+                    download = self.downloads.get(url, self._picture_key(cell, index))
                     kind = download.kind
                     found = {} if self.labels.empty else self.labels.find(download.hash)
                     label = {**found, **self.overrides.entries.get(ref, {})}
