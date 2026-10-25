@@ -26,6 +26,7 @@ from pathlib import Path
 from PIL import Image
 
 from scripts.datagen import images, roster
+from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import ROMAN, slug
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
@@ -50,6 +51,8 @@ _RATING = re.compile(r"^\d+(?:\.\d+)?(?:\s*/\s*\d+)?$")
 _LABEL_MAX_LENGTH = 40
 # Guide and section ids are cut to this length.
 _SLUG_MAX_LENGTH = 48
+# A section holding only these lines ("Last Edit", "10/24") is the sheet's edit date, shown as the guide's Updated badge instead.
+_LAST_EDIT = re.compile(r"^(?:last edit(?:ed)?|\d{1,2}/\d{1,2}(?:/\d{2,4})?)$", re.IGNORECASE)
 # A character's own cards, such as `c_1003_uni1`, whose digits are the character's res_id.
 _OWN_CARD = re.compile(r"^c_(\d+)_")
 
@@ -221,8 +224,11 @@ def build(ctx: Context) -> TargetResult:
             "charResId": res_id,
             "name": name,
             "source": {"url": EDIT_URL.format(gid=gid), "label": {"en": SOURCE_LABEL}},
-            "sections": builder.sections(grid),
         }
+        sections, updated = builder.sections(grid)
+        if updated:
+            guide["updated"] = updated
+        guide["sections"] = sections
         guide_slug = slug(name, _SLUG_MAX_LENGTH)
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
         guides.append((guide_slug, name))
@@ -455,7 +461,7 @@ class _GuideBuilder:
         self.labels = labels
         self.tab_name = tab_name
 
-    def sections(self, grid: dict[tuple[int, int], Cell]) -> list[dict]:
+    def sections(self, grid: dict[tuple[int, int], Cell]) -> tuple[list[dict], str | None]:
         """
         Every section of the guide, one per band of rows.
 
@@ -463,10 +469,9 @@ class _GuideBuilder:
             grid: The tab's cells.
 
         Returns:
-            The sections, in sheet order, without empty ones.
+            The sections, in sheet order, without empty ones, and the sheet's edit date if it has one.
         """
         sections: list[dict] = []
-        used_ids: set[str] = set()
         for band in _bands(grid):
             blocks: list[dict] = []
             title = None
@@ -480,10 +485,8 @@ class _GuideBuilder:
                 blocks.extend(panel_blocks)
             if not blocks:
                 continue
-            title = self.ctx.text(title, soften=True, sentences=False) if title else f"Part {len(sections) + 1}"
-            section_id = _unique(slug(title, _SLUG_MAX_LENGTH) or "part", used_ids)
-            sections.append({"id": section_id, "title": {"en": title}, "blocks": blocks})
-        return sections
+            sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
+        return _tidy_sections(sections)
 
     def _panel(self, cells: list[Cell]) -> tuple[str | None, list[dict], bool]:
         """
@@ -663,10 +666,13 @@ class _GuideBuilder:
             return {"type": "partner-list", "items": items}, bool(names)
         columns = sorted({col for row in face_rows for col, _ in row})
         if names and all(col in names for col in columns):
-            groups = [{"title": {"en": self.ctx.text(names[col], soften=True, sentences=False)}, "faces": [res_id for row in face_rows for c, res_id in row if c == col]}
+            groups = [{"title": {"en": self.ctx.text(names[col], soften=True, sentences=False)}, "members": self._members(res_id for row in face_rows for c, res_id in row if c == col)}
                       for col in columns]
             return {"type": "team-grid", "groups": groups}, True
-        return {"type": "team-grid", "groups": [{"faces": [res_id for _, res_id in row]} for row in face_rows]}, False
+        return {"type": "team-grid", "groups": [{"members": self._members(res_id for _, res_id in row)} for row in face_rows]}, False
+
+    def _members(self, res_ids) -> list[dict]:
+        return [{"charResId": res_id, "name": self._name(res_id)} for res_id in res_ids]
 
     def _name(self, res_id: int) -> str:
         character = roster.combatants().get(res_id)
@@ -682,6 +688,52 @@ class _GuideBuilder:
 # //////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////////////////////////////////////////////////////////////////////
 # Grid helpers
+
+
+def _tidy_sections(sections: list[dict]) -> tuple[list[dict], str | None]:
+    """
+    Sections as the page shows them.
+
+    Args:
+        sections: Each band's title (None when it has none) and blocks.
+
+    Returns:
+        The sections with ids, and the sheet's edit date. The "Last Edit" section is dropped for that date. An untitled section is
+        named for what it holds, and one-line lists of sets (as a title or a prose line) become set cards.
+    """
+    tidied: list[dict] = []
+    used_ids: set[str] = set()
+    updated = None
+    for section in sections:
+        blocks = section["blocks"]
+        texts = [block["body"]["en"].strip() if block["type"] == "prose" else "" for block in blocks]
+        if all(_LAST_EDIT.match(text) for text in texts):
+            updated = next((text for text in texts if any(char.isdigit() for char in text)), updated)
+            continue
+        title = section["title"] or _untitled_name(blocks)
+        blocks = [_set_block(block) for block in blocks]
+        if title_sets := set_line(title):
+            blocks.insert(0, {"type": "set-list", "items": title_sets})
+        tidied.append({"id": _unique(slug(title, _SLUG_MAX_LENGTH) or "part", used_ids), "title": {"en": title}, "blocks": blocks})
+    return tidied, updated
+
+
+def _untitled_name(blocks: list[dict]) -> str:
+    """A name for a section the sheet gives no heading, from what it holds."""
+    types = {block["type"] for block in blocks}
+    if any(block["type"] == "card-list" and any("rating" in item for item in block["items"]) for block in blocks):
+        return "Card ratings"
+    if "partner-list" in types:
+        return "Partners"
+    if "team-grid" in types:
+        return "Teams"
+    return "Notes"
+
+
+def _set_block(block: dict) -> dict:
+    """A prose line listing sets as a set-list block, any other block as it is."""
+    items = set_line(block["body"]["en"]) if block["type"] == "prose" else None
+    return {"type": "set-list", "items": items} if items else block
 
 
 def _bands(grid: dict[tuple[int, int], Cell]) -> list[list[Cell]]:

@@ -11,7 +11,7 @@ import random
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
-from scripts.datagen import images, naming
+from scripts.datagen import images, naming, set_names
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
 from scripts.datagen.targets import guides
 
@@ -142,6 +142,53 @@ def test_content_module_imports_every_guide_in_order():
     assert "import meiLinJson from './data/mei-lin.guide.json'" in module
     assert module.index("meiLinJson as Guide") < module.index("niaJson as Guide")
     assert "export function getGuide" in module
+
+
+def _prose(text: str) -> dict:
+    return {"type": "prose", "body": {"en": text}}
+
+
+def test_sections_drop_last_edit_and_name_parts():
+    rated = {"type": "card-list", "items": [{"cardId": "c_1_uni1", "rating": "4/5", "note": {"en": ""}}]}
+    teams = {"type": "team-grid", "groups": [{"members": [{"charResId": 1003, "name": "Mika"}]}]}
+    sections, updated = guides._tidy_sections([
+        {"title": None, "blocks": [rated]},
+        {"title": None, "blocks": [_prose("Last Edit"), _prose("10/24")]},
+        {"title": None, "blocks": [teams]},
+        {"title": "Notes", "blocks": [_prose("A")]},
+        {"title": None, "blocks": [_prose("B")]},
+    ])
+    assert updated == "10/24"
+    assert [section["title"]["en"] for section in sections] == ["Card ratings", "Teams", "Notes", "Notes"]
+    assert [section["id"] for section in sections] == ["card-ratings", "teams", "notes", "notes-2"]
+
+
+def test_set_named_section_title_leads_with_a_set_list():
+    sections, _ = guides._tidy_sections([{"title": "Radiance | Executioners", "blocks": [_prose("BlackWing | Executioners | Flex"), _prose("Crit")]}])
+    blocks = sections[0]["blocks"]
+    assert [block["type"] for block in blocks] == ["set-list", "set-list", "prose"]
+    assert [item.get("setId") for item in blocks[0]["items"]] == [30, 11]
+
+
+def test_find_set_reads_sheet_shorthand():
+    assert [set_names.find_set(label) for label in ("BlackWing", "Executioners", "BattleField Evo", "Scrab", "Radiance")] == [9, 11, 28, 10, 30]
+
+
+def test_find_set_refuses_ambiguous_and_unknown():
+    assert set_names.find_set("Flex") is None
+    assert set_names.find_set("") is None
+    assert set_names.find_set("Black Order") is None
+    # "Blink" is one letter off "Black", but "Flow" fits no word of Black Wing, so a deck heading is not a set.
+    assert set_names.set_line("Cycle -2 | Blink Flow | 180 FM") is None
+
+
+def test_set_line_needs_a_set_and_pipes():
+    items = set_names.set_line("BlackWing | Executioners | Flex")
+    assert items[0] == {"label": "BlackWing", "setId": 9, "name": "Black Wing", "pieces": 2, "bonus": "+12% Attack", "icon": "/assets/pieces/icon_piece_set_009.png"}
+    assert items[2] == {"label": "Flex"}
+    assert set_names.set_line("A | B") is None
+    assert set_names.set_line("BlackWing") is None
+    assert "icon" not in set_names.set_line("Wireth's Steel | Flex")[0]
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
