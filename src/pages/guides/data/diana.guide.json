@@ -15,13 +15,18 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "With All My Heart! I",
+                "text": {
+                  "en": "[Quietus] 150% Damage. Create 3 Heart Breaker."
+                }
               }
             }
           ]
@@ -39,6 +44,16 @@
           }
         },
         {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1061_cre2",
+              "name": "Heart Shaker",
+              "cost": 0
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Heart Shakers are the other Bullet Diana can make\nHeart Shakers are mainly used for Resonance\nResonance is a debuff enemies get from Diana\nResonance deals 80% Extra Attack Damage each time a card is discarded\nHeart Shaker since it gives Resonance is most Equivalent to a Multi Hit card\n1 Resonance x 80% and each Resonance can scale from Moral, so its strong\nUsing a Heart Shaker\nDiscards one random from Draw Pile\nAlso consumes the 1 Resonance it makes, if possible\nDiscarding Heart Shaker, gives 2 Resonance to someone random\nQuietus + Discarding Heart Shaker\n3 Resonance inliction\n1 Resonance Consumption\n3 hit x 80%, but 2 are just delayed"
@@ -51,14 +66,12 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_cre3",
               "name": "Cupid Shot",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -77,48 +90,78 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Blooming Love V",
+                "text": {
+                  "en": "[Quietus] [Unique] If no Quietus cards of this unit are in hand, Draw 1 Quietus card(s) of this unit. (1 time per turn)."
+                }
               }
             }
           ]
@@ -130,41 +173,66 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "With All My Heart! V",
+                "text": {
+                  "en": "[Quietus] At the start of the turn, create 2 Heart Breaker. If 5 or less Heart Bullets are owned, create 1 more."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "With All My Heart! V",
+                "text": {
+                  "en": "[Quietus] At the start of the turn, create 2 Heart Breaker. If 5 or less Heart Bullets are owned, create 1 more."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Blooming Love IV",
+                "text": {
+                  "en": "Discard all Bullet cards in hand. 80% Extra Attack × that amount to a random enemy."
+                }
               }
             }
           ]
@@ -188,48 +256,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blooming Love II",
+                "text": {
+                  "en": "Draw 1 Quietus card(s). Discard 2. 1 Resonance to all enemies for each combined Cost of the Discarded cards. (max 6)."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blooming Love II",
+                "text": {
+                  "en": "Draw 1 Quietus card(s). Discard 2. 1 Resonance to all enemies for each combined Cost of the Discarded cards. (max 6)."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blooming Love II",
+                "text": {
+                  "en": "Draw 1 Quietus card(s). Discard 2. 1 Resonance to all enemies for each combined Cost of the Discarded cards. (max 6)."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blooming Love II",
+                "text": {
+                  "en": "Draw 1 Quietus card(s). Discard 2. 1 Resonance to all enemies for each combined Cost of the Discarded cards. (max 6)."
+                }
               }
             }
           ]
@@ -241,35 +339,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Blooming Love V",
+                "text": {
+                  "en": "[Quietus] [Unique] If no Quietus cards of this unit are in hand, Draw 1 Quietus card(s) of this unit. (1 time per turn)."
+                }
               }
             },
             {
               "cardId": "c_1061_uni4",
               "name": "Liberated Feelings",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -286,34 +397,54 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni2",
               "name": "Pistol of Purification",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Pistol of Purification III",
+                "text": {
+                  "en": "[Quietus] 180% Damage. Activate Resonance inflicted on the target by this unit 10 time(s)."
+                }
               }
             }
           ]
@@ -333,41 +464,66 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Blooming Love V",
+                "text": {
+                  "en": "[Quietus] [Unique] If no Quietus cards of this unit are in hand, Draw 1 Quietus card(s) of this unit. (1 time per turn)."
+                }
               }
             }
           ]
@@ -379,48 +535,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "With All My Heart! I",
+                "text": {
+                  "en": "[Quietus] 150% Damage. Create 3 Heart Breaker."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "With All My Heart! I",
+                "text": {
+                  "en": "[Quietus] 150% Damage. Create 3 Heart Breaker."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "With All My Heart! I",
+                "text": {
+                  "en": "[Quietus] 150% Damage. Create 3 Heart Breaker."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "With All My Heart! I",
+                "text": {
+                  "en": "[Quietus] 150% Damage. Create 3 Heart Breaker."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blooming Love II",
+                "text": {
+                  "en": "Draw 1 Quietus card(s). Discard 2. 1 Resonance to all enemies for each combined Cost of the Discarded cards. (max 6)."
+                }
               }
             }
           ]
@@ -438,27 +624,42 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "C'mere, Milk & Pong! II",
+                "text": {
+                  "en": "Discard up to 2 cards in hand. Create Heart Shaker for each Discarded +1."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Blooming Love V",
+                "text": {
+                  "en": "[Quietus] [Unique] If no Quietus cards of this unit are in hand, Draw 1 Quietus card(s) of this unit. (1 time per turn)."
+                }
               }
             }
           ]
@@ -470,48 +671,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "With All My Heart! IV",
+                "text": {
+                  "en": "[Quietus] Create 2 Heart Breaker. Apply Quietus to all Exhaust Bullet cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "C'mere, Milk & Pong! I",
+                "text": {
+                  "en": "Create 2 Heart Shaker. For the next 3 Extra Attacks by a different Combatant, 1 Resonance to the target."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "C'mere, Milk & Pong! I",
+                "text": {
+                  "en": "Create 2 Heart Shaker. For the next 3 Extra Attacks by a different Combatant, 1 Resonance to the target."
+                }
               }
             },
             {
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "C'mere, Milk & Pong! I",
+                "text": {
+                  "en": "Create 2 Heart Shaker. For the next 3 Extra Attacks by a different Combatant, 1 Resonance to the target."
+                }
               }
             },
             {
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Blooming Love V",
+                "text": {
+                  "en": "[Quietus] [Unique] If no Quietus cards of this unit are in hand, Draw 1 Quietus card(s) of this unit. (1 time per turn)."
+                }
               }
             }
           ]
@@ -532,7 +763,7 @@
               "name": "Sophia",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Diana's Signature 20-40% Crt Damage is immense, and her Ego Skill is great"
               }
             },
             {
@@ -540,7 +771,7 @@
               "name": "Akad",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Pretty okay damage increase, but only affects the bullets, not Extra Attacks"
               }
             },
             {
@@ -548,16 +779,10 @@
               "name": "Yuri",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Never gonna feel bad about Yuri, because her Ego Skill is broken"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sophia: Diana's Signature 20-40% Crt Damage is immense, and her Ego Skill is great\nAkad: Pretty okay damage increase, but only affects the bullets, not Extra Attacks\nYuri: Never gonna feel bad about Yuri, because her Ego Skill is broken"
-          }
         },
         {
           "type": "partner-list",
@@ -567,7 +792,7 @@
               "name": "Serenthia",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Can't go wrong with Crt Rate, Crt Damage"
               }
             },
             {
@@ -575,16 +800,10 @@
               "name": "Janet",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "With the Atk% Buff, her Crit Rate has alot more Value, but you only get 1/2 Janet Procs each turn"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Janet: With the Atk% Buff, her Crit Rate has alot more Value, but you only get 1/2 Janet Procs each turn\nSerenthia: Can't go wrong with Crt Rate, Crt Damage"
-          }
         }
       ]
     },
@@ -595,16 +814,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Just the general best, since there is no specific synergies Diana is good with currently"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -613,10 +871,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Passion | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Passion",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -717,9 +990,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -728,6 +1001,7 @@
             {
               "cardId": "c_1061_uni4",
               "name": "Liberated Feelings",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -771,6 +1045,7 @@
             {
               "cardId": "c_1061_srt1",
               "name": "Disruption Fire",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -779,6 +1054,7 @@
             {
               "cardId": "c_1061_uni4",
               "name": "Liberated Feelings",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -799,41 +1075,55 @@
               "cardId": "c_1061_srt4",
               "name": "With All My Heart!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_srt4",
-              "name": "With All My Heart!",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1061_srt4",
-              "name": "With All My Heart!",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1061_srt4",
-              "name": "With All My Heart!",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1061_srt4",
-              "name": "With All My Heart!",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "With All My Heart! I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "With All My Heart! II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "With All My Heart! III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "With All My Heart! IV",
+                  "cost": 2,
+                  "rating": "6/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "With All My Heart! V",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -849,6 +1139,7 @@
             {
               "cardId": "c_1061_uni2",
               "name": "Pistol of Purification",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -869,41 +1160,55 @@
               "cardId": "c_1061_uni1",
               "name": "C'mere, Milk & Pong!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_uni1",
-              "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_uni1",
-              "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1061_uni1",
-              "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_uni1",
-              "name": "C'mere, Milk & Pong!",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "C'mere, Milk & Pong! I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "C'mere, Milk & Pong! II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "C'mere, Milk & Pong! III",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "C'mere, Milk & Pong! IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "C'mere, Milk & Pong! V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -920,41 +1225,55 @@
               "cardId": "c_1061_uni3",
               "name": "Blooming Love",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1061_uni3",
-              "name": "Blooming Love",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_uni3",
-              "name": "Blooming Love",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1061_uni3",
-              "name": "Blooming Love",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1061_uni3",
-              "name": "Blooming Love",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "6/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Blooming Love I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Blooming Love II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Blooming Love III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Blooming Love IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Blooming Love V",
+                  "cost": 3,
+                  "rating": "6/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -976,52 +1295,115 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1061,
-                1041,
-                1003
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1004,
-                1049
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1049,
-                1003
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1021,
-                1052
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1027,
-                1033
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1043,
-                1003
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1056,
-                1039
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]
@@ -1033,57 +1415,123 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1003,
-                1049,
-                1041,
-                1021,
-                1033,
-                1004,
-                1043
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
               "title": {
                 "en": "Discard"
               },
-              "faces": [
-                1003,
-                1049,
-                1041,
-                1021
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1056,
-                1049,
-                1050,
-                1021
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "DPS"
               },
-              "faces": [
-                1004,
-                1041,
-                1027,
-                1021,
-                1005
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1052,
-                1039
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]

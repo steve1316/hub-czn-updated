@@ -9,48 +9,59 @@
   },
   "sections": [
     {
-      "id": "part-1",
+      "id": "notes",
       "title": {
-        "en": "Part 1"
+        "en": "Notes"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Once Upon A Time I",
+                "text": {
+                  "en": "[Exhaust 2] Apply Blessing to 3 random card(s) in Draw Pile, then Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Friends from Fairy Tales",
+                "text": {
+                  "en": "[Unique] Select and create 1 of either Doggie or Teddy."
+                }
               }
             },
             {
               "cardId": "c_1055_cre1",
               "name": "Doggie",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1055_cre2",
               "name": "Teddy",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -67,21 +78,17 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1055_cre1",
               "name": "Doggie",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1055_cre2",
               "name": "Teddy",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         }
@@ -94,62 +101,95 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Once Upon A Time II",
+                "text": {
+                  "en": "[Initiation] [Exhaust 2] Select and Draw 1 from Draw Pile, then apply Blessing to those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Once Upon A Time II",
+                "text": {
+                  "en": "[Initiation] [Exhaust 2] Select and Draw 1 from Draw Pile, then apply Blessing to those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Once Upon A Time II",
+                "text": {
+                  "en": "[Initiation] [Exhaust 2] Select and Draw 1 from Draw Pile, then apply Blessing to those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni4",
               "name": "Garden of Secrets",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Friends from Fairy Tales IV",
+                "text": {
+                  "en": "[Unique] Create 1 Teddy. When Teddy is activated, 1 Counterattack, and for 1 turn, Retain Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1055_uni3",
               "name": "Truth Behind A Story",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Truth Behind A Story",
+                "text": {
+                  "en": "[Haste] 200% Defense-Based Damage. +100% Damage Amount taken by the target for 1 turn."
+                }
               }
             }
           ]
@@ -167,62 +207,95 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Once Upon A Time I",
+                "text": {
+                  "en": "[Exhaust 2] Apply Blessing to 3 random card(s) in Draw Pile, then Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Once Upon A Time I",
+                "text": {
+                  "en": "[Exhaust 2] Apply Blessing to 3 random card(s) in Draw Pile, then Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Protect Us IV",
+                "text": {
+                  "en": "[Blessing] Draw 1. If that card is a Blessing card, add 1 Draw."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Protect Us IV",
+                "text": {
+                  "en": "[Blessing] Draw 1. If that card is a Blessing card, add 1 Draw."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Protect Us IV",
+                "text": {
+                  "en": "[Blessing] Draw 1. If that card is a Blessing card, add 1 Draw."
+                }
               }
             },
             {
               "cardId": "c_1055_uni4",
               "name": "Garden of Secrets",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Friends from Fairy Tales IV",
+                "text": {
+                  "en": "[Unique] Create 1 Teddy. When Teddy is activated, 1 Counterattack, and for 1 turn, Retain Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1055_uni3",
               "name": "Truth Behind A Story",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Truth Behind A Story",
+                "text": {
+                  "en": "[Haste] 200% Defense-Based Damage. +100% Damage Amount taken by the target for 1 turn."
+                }
               }
             }
           ]
@@ -240,55 +313,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Once Upon A Time II",
+                "text": {
+                  "en": "[Initiation] [Exhaust 2] Select and Draw 1 from Draw Pile, then apply Blessing to those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Once Upon A Time II",
+                "text": {
+                  "en": "[Initiation] [Exhaust 2] Select and Draw 1 from Draw Pile, then apply Blessing to those cards."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Protect Us I",
+                "text": {
+                  "en": "[Blessing] For the next 3 Blessing cards activated, Draw 1 Blessing card."
+                }
               }
             },
             {
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Friends from Fairy Tales II",
+                "text": {
+                  "en": "[Unique] Create 1 Teddy. When Damage is taken, move Teddy to hand (1 time per turn)."
+                }
               }
             },
             {
               "cardId": "c_1055_uni3",
               "name": "Truth Behind A Story",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Truth Behind A Story III",
+                "text": {
+                  "en": "[Haste] 200% Defense-Based Damage. Increase Damage and Shield Gain Amounts of Doggie and Teddy by 100% for 1 turn."
+                }
               }
             }
           ]
@@ -315,7 +423,7 @@
               "name": "Clara",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Broken Ego, makes ADHD into a sub healer and also 20-40% Multi, shes great"
               }
             },
             {
@@ -323,7 +431,7 @@
               "name": "Rachel",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Always good Ego Skill + Free CounterAttack even without Teddy"
               }
             },
             {
@@ -331,7 +439,7 @@
               "name": "Erica",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "More agressive Rachel, but I rather have the Draw 1 cheap Ego"
               }
             },
             {
@@ -339,7 +447,7 @@
               "name": "Eishlen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Stat Stick"
               }
             },
             {
@@ -355,7 +463,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Clara: Broken Ego, makes ADHD into a sub healer and also 20-40% Multi, shes great\nRachel: Always good Ego Skill + Free CounterAttack even without Teddy\nErica: More agressive Rachel, but I rather have the Draw 1 cheap Ego\nEishlen: Stat Stick\nWilhelma Stat Stick"
+            "en": "Wilhelma Stat Stick"
           }
         }
       ]
@@ -367,16 +475,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Starlight",
+              "setId": 27,
+              "name": "Starlight and Dreams",
+              "pieces": 4,
+              "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",
+              "icon": "/assets/pieces/icon_piece_set_027.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Blessings easy stack Starlight\nIncreases Extra Attack and Counter Damage ONLY, not base card damage"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Tetra | Executioner's"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioner's",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -385,10 +537,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Executioner's | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioner's",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -419,9 +589,9 @@
       ]
     },
     {
-      "id": "part-6",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 6"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -431,17 +601,28 @@
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Protect Us I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Protect Us II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -451,6 +632,7 @@
             {
               "cardId": "c_1055_uni4",
               "name": "Garden of Secrets",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -471,41 +653,55 @@
               "cardId": "c_1055_srt4",
               "name": "Once Upon A Time",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1055_srt4",
-              "name": "Once Upon A Time",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1055_srt4",
-              "name": "Once Upon A Time",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_srt4",
-              "name": "Once Upon A Time",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1055_srt4",
-              "name": "Once Upon A Time",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Once Upon A Time I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Once Upon A Time II",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Once Upon A Time III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Once Upon A Time IV",
+                  "cost": -1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Once Upon A Time V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -522,40 +718,53 @@
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Friends from Fairy Tales I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Doggo does up to 1200% more at max Blessings (generally 720%)"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Friends from Fairy Tales II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Allows you to play 2 Teddy a turn potentially, or just 1 for free"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Friends from Fairy Tales III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Deals big damage, but also adds 3 more card to cycle through, requires Protect 1"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Friends from Fairy Tales IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just allows Adel to get Counter"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Friends 1: Doggo does up to 1200% more at max Blessings (generally 720%)\nFriends 2: Allows you to play 2 Teddy a turn potentially, or just 1 for free\nFriends 3: Deals big damage, but also adds 3 more card to cycle through, requires Protect 1\nFriends 4: Just allows Adel to get Counter\nFriends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
+            "en": "Friends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
           }
         },
         {
@@ -565,49 +774,57 @@
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Protect Us I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3 draw, per 3 blessing cards, very good rate Cycle +2 (Semi Card Tutoring)"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Protect Us II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "This is kinda a discard reload engine, but also requires setup that you gotta think of"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Protect Us III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "RNG Costs is no good Cycle +2"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Protect Us IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Cantrips, can go +1 and also get AP Divine, its good Cycle +0/1"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Protect Us V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Only draws Adel cards, not really recommended Cycle +1"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Protect 1: 3 draw, per 3 blessing cards, very good rate Cycle +2 (Semi Card Tutoring)\nProtect 2: This is kinda a discard reload engine, but also requires setup that you gotta think of\nProtect 3: RNG Costs is no good Cycle +2\nProtect 4: Cantrips, can go +1 and also get AP Divine, its good Cycle +0/1\nProtect 5: Only draws Adel cards, not really recommended Cycle +1"
-          }
         },
         {
           "type": "card-list",
@@ -616,48 +833,62 @@
               "cardId": "c_1055_uni3",
               "name": "Truth Behind A Story",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1055_uni3",
-              "name": "Truth Behind A Story",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1055_uni3",
-              "name": "Truth Behind A Story",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1055_uni3",
-              "name": "Truth Behind A Story",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1055_uni3",
-              "name": "Truth Behind A Story",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Truth Behind A Story I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Honestly, worse then a good Neutral like Vuln, Moral, Draw, AP"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Truth Behind A Story II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "This is +1 sometimes, but when would your blessing cards be in DISCARD"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Truth Behind A Story III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Truth Behind A Story IV",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "IG its a way to make Adel DPS"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Truth Behind A Story V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "What is this trash"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Truth 1: Honestly, worse then a good Neutral like Vuln, Moral, Draw, AP\nTruth 2: This is +1 sometimes, but when would your blessing cards be in DISCARD\nTruth 3\" Just increases Friends DMG/Shield, funny ig\nTruth 4: IG its a way to make Adel DPS\nTruth 5: What is this trash\nTruth 0, honestly just getting a good Neutral Epiphany is your best bet here"
+            "en": "Truth 3\" Just increases Friends DMG/Shield, funny ig\nTruth 0, honestly just getting a good Neutral Epiphany is your best bet here"
           }
         }
       ]
@@ -675,7 +906,7 @@
               "cardId": "n_0080",
               "name": "Persona",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "4/5"
             },
@@ -683,7 +914,7 @@
               "cardId": "n_0080",
               "name": "Persona",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "4/5"
             }
@@ -719,59 +950,131 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30093,
-                1055,
-                1049
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1017,
-                1055,
-                1052
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1062,
-                1055,
-                1052
+              "members": [
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1028,
-                1055,
-                1010
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1061,
-                1055
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1055,
-                1049
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1055,
-                1056
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1040,
-                1055,
-                1049
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -783,53 +1086,128 @@
               "title": {
                 "en": "DPS"
               },
-              "faces": [
-                30093,
-                1043,
-                1040,
-                1041,
-                1061,
-                1060,
-                1004,
-                1018,
-                1017,
-                1052
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "Shield/Counter"
               },
-              "faces": [
-                1028,
-                1017,
-                1010,
-                1008,
-                30084,
-                30047
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1052,
-                1056,
-                1050
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP/Discounts"
               },
-              "faces": [
-                1052,
-                30084,
-                1039,
-                1060,
-                30075
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             }
           ]
@@ -841,55 +1219,115 @@
               "title": {
                 "en": "Multi Hit"
               },
-              "faces": [
-                30093,
-                1043,
-                1040,
-                1041,
-                1061,
-                1060,
-                1004,
-                1018,
-                1052,
-                1017
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                }
               ]
             },
             {
               "title": {
                 "en": "Extra Attackers"
               },
-              "faces": [
-                30093,
-                1043,
-                1040,
-                1041,
-                1061
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             },
             {
               "title": {
                 "en": "Shield DPS"
               },
-              "faces": [
-                1028,
-                1010
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                }
               ]
             },
             {
               "title": {
                 "en": "Counter DPS"
               },
-              "faces": [
-                1010,
-                1028
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                }
               ]
             },
             {
               "title": {
                 "en": "Metallize"
               },
-              "faces": [
-                1017
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                }
               ]
             }
           ]
@@ -897,17 +1335,20 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "teams",
       "title": {
-        "en": "Part 9"
+        "en": "Teams"
       },
       "blocks": [
         {
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1027
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                }
               ]
             }
           ]

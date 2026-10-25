@@ -15,21 +15,24 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Strike of Darkness I",
+                "text": {
+                  "en": "[Lead] 150% Damage. Increases Damage Amount of Basic Attack Cards by 150% for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -46,21 +49,24 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -77,27 +83,42 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Strike of Darkness IV",
+                "text": {
+                  "en": "[Unique] Increase Damage Amount of Basic Attack Cards by 80%."
+                }
               }
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Strike of Darkness V",
+                "text": {
+                  "en": "[Retain] Proc all Basic Cards in hand."
+                }
               }
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Strike of Darkness I",
+                "text": {
+                  "en": "[Lead] 150% Damage. Increases Damage Amount of Basic Attack Cards by 150% for 1 turn."
+                }
               }
             }
           ]
@@ -143,35 +164,47 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Strike of Darkness IV",
+                "text": {
+                  "en": "[Unique] Increase Damage Amount of Basic Attack Cards by 80%."
+                }
               }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Resonating Darkness V",
+                "text": {
+                  "en": "Heal 100%. For 1 turn, +80% Damage Amount to 1-Cost cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -199,49 +232,43 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -269,63 +296,86 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Resonating Darkness V",
+                "text": {
+                  "en": "Heal 100%. For 1 turn, +80% Damage Amount to 1-Cost cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1056_uni1",
-              "name": "Resonating Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Resonating Darkness I",
+                "text": {
+                  "en": "[Unique] +60% Damage Amount to 1-Cost cards. At the end of the turn, Heal 90%."
+                }
               }
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Dark Condensation III",
+                "text": {
+                  "en": "For 1 turn, +50% Damage Amount of Void Attack Cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -355,70 +405,77 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Strike of Darkness IV",
+                "text": {
+                  "en": "[Unique] Increase Damage Amount of Basic Attack Cards by 80%."
+                }
               }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Resonating Darkness V",
+                "text": {
+                  "en": "Heal 100%. For 1 turn, +80% Damage Amount to 1-Cost cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0055",
-              "name": "Glorious Resistance",
-              "note": {
-                "en": ""
-              }
+              "name": "Glorious Resistance"
             }
           ]
         },
@@ -446,77 +503,73 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Dark Condensation V",
+                "text": {
+                  "en": "Choose 1 Attack Card(s) in hand, +50% Damage Amount."
+                }
               }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -544,84 +597,71 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
               }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1056_uni4",
               "name": "Predator's Blade",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -658,7 +698,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, just for the Ego Skill, Everything else is Extra"
               }
             },
             {
@@ -666,7 +706,7 @@
               "name": "Ritochika",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego Skill"
               }
             },
             {
@@ -674,7 +714,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral 1, Def% for heals"
               }
             },
             {
@@ -682,7 +722,7 @@
               "name": "Arwen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "HP but passive kinda doodoo"
               }
             },
             {
@@ -694,12 +734,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
-          }
         }
       ]
     },
@@ -710,16 +744,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "15% Damage Amount to all allies\n5% whenever an EXHAUST SKILL CARD is CREATED or USED (Max Stacks 3 Permanent)"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Healer | Scrab Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Healer",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "icon": "/assets/pieces/icon_piece_set_008.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -761,6 +834,7 @@
             {
               "cardId": "card_ds04_00007",
               "name": "Hand Enthralled by Light",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -787,7 +861,7 @@
               "cardId": "n_0027",
               "name": "Dream World",
               "note": {
-                "en": ""
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
               "rating": "4/5"
             }
@@ -796,7 +870,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
           }
         },
         {
@@ -812,7 +886,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "4/5"
             },
@@ -820,7 +894,7 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Free Final Dmg Multi and Glory Set Activator"
               },
               "rating": "3/5"
             },
@@ -828,17 +902,11 @@
               "cardId": "n_0028",
               "name": "Ebony Lumen",
               "note": {
-                "en": ""
+                "en": "Rei can easily Exhaust this (Event Neutral)"
               },
               "rating": "4/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator\nEbony: Rei can easily Exhaust this (Event Neutral)"
-          }
         },
         {
           "type": "prose",
@@ -853,7 +921,7 @@
               "cardId": "n_0046",
               "name": "Forced Learning Apparatus",
               "note": {
-                "en": ""
+                "en": "+1 Cycle"
               }
             },
             {
@@ -868,7 +936,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nForced: +1 Cycle\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
           }
         }
       ]
@@ -1136,9 +1204,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1156,7 +1224,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1164,7 +1232,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1172,7 +1240,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -1180,7 +1248,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -1189,7 +1257,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it"
           }
         },
         {
@@ -1198,6 +1266,7 @@
             {
               "cardId": "c_1056_uni4",
               "name": "Predator's Blade",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1215,7 +1284,7 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             },
@@ -1223,119 +1292,141 @@
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
               "note": {
+                "en": "Tech that justbeats some bosses"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pred Blade: -1 AP -1 Cycle but in exchange 4 Moral\nFirst Aid: 2 Perma Moral but needs to be Heavened"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
+              "note": {
                 "en": ""
               },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Strike of Darkness I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Lead Prism = Insane basic buffs for that one turn, but also can end up a dead draw sometimes"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Strike of Darkness II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Decreasing your damage fo the turn is terrible"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Strike of Darkness III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "There really is no upside to this"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Strike of Darkness IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Mei Lin loves this permanent buff, and its also an upgrade, so 5/5"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Strike of Darkness V",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Has retain, can just sit in hand to deck thin, or be fodder for other effects"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Pred Blade: -1 AP -1 Cycle but in exchange 4 Moral\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+            "en": "Neutral Epiphany Draw is pretty good, but conditional like Strike 1"
           }
         },
         {
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1056_srt4",
-              "name": "Strike of Darkness",
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1056_srt4",
-              "name": "Strike of Darkness",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1056_srt4",
-              "name": "Strike of Darkness",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1056_srt4",
-              "name": "Strike of Darkness",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1056_srt4",
-              "name": "Strike of Darkness",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Snack Time I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "+-0 card, but usable twice so it's good for Glory Set"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Snack Time II",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "+1 card, its the best version unless you have excess draw, or alot of basics that clog"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Snack Time III",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "-1 Card in hand technically, but lets you deck thin by 3"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Snack Time IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "-0 Cards, but deck thins by 2 very good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Snack Time V",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "-1 Card, Deck thins by 3, and can tutor into itself to go again"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Strike 1: Lead Prism = Insane basic buffs for that one turn, but also can end up a dead draw sometimes\nStrike 2: Decreasing your damage fo the turn is terrible\nStrike 3: There really is no upside to this\nStrike 4: Mei Lin loves this permanent buff, and its also an upgrade, so 5/5\nStrike 5: Has retain, can just sit in hand to deck thin, or be fodder for other effects\nNeutral Epiphany Draw is pretty good, but conditional like Strike 1"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni2",
-              "name": "Snack Time",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "6/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Snack 1: +-0 card, but usable twice so it's good for Glory Set\nSnack 2: +1 card, its the best version unless you have excess draw, or alot of basics that clog\nSnack 3: -1 Card in hand technically, but lets you deck thin by 3\nSnack 4: -0 Cards, but deck thins by 2 very good\nSnack 5: -1 Card, Deck thins by 3, and can tutor into itself to go again"
-          }
         },
         {
           "type": "card-list",
@@ -1344,48 +1435,62 @@
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni1",
-              "name": "Resonating Darkness",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1056_uni1",
-              "name": "Resonating Darkness",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1056_uni1",
-              "name": "Resonating Darkness",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni1",
-              "name": "Resonating Darkness",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Resonating Darkness I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "1 Cost +60% Additive Broken"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Resonating Darkness II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Void Cards +40% Additive Broken"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Resonating Darkness III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Resonating Darkness IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ">=1 +40% Additive Broken, most universal"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Resonating Darkness V",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Niot an upgrade, but there is a universe where you pref this over Resonate 1"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Resonating 1: 1 Cost +60% Additive Broken\nResonating 2: Void Cards +40% Additive Broken\nReonsating 3: Only affecting 1 cost cards for both shield and healing is unfortuante\nResonating 4: >=1 +40% Additive Broken, most universal\nResonating 5: Niot an upgrade, but there is a universe where you pref this over Resonate 1\n+1 Moral, is a very good universal buff unless your team specifically needs Resonate 4"
+            "en": "Reonsating 3: Only affecting 1 cost cards for both shield and healing is unfortuante\n+1 Moral, is a very good universal buff unless your team specifically needs Resonate 4"
           }
         },
         {
@@ -1395,49 +1500,57 @@
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni3",
-              "name": "Dark Condensation",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1056_uni3",
-              "name": "Dark Condensation",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni3",
-              "name": "Dark Condensation",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1056_uni3",
-              "name": "Dark Condensation",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Condensation I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Highest Possible Damage Buff for 1 Card"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Condensation II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Increasing the sheild gain for Narja's multi shield is kinda funny"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dark Condensation III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Buffs ALL VOID cards for the entire turn, unfortunately dupes only extend the duration"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dark Condensation IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Can pick an attack card from basically any zone, flexible but lower multiplier (Doesn't stack)"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dark Condensation V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "It's an upgrade, so its battle permanent and exhausts, but its a lower multiplier"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Dark 1: Highest Possible Damage Buff for 1 Card\nDark 2: Increasing the sheild gain for Narja's multi shield is kinda funny\nDark 3: Buffs ALL VOID cards for the entire turn, unfortunately dupes only extend the duration\nDark 4: Can pick an attack card from basically any zone, flexible but lower multiplier (Doesn't stack)\nDark 5: It's an upgrade, so its battle permanent and exhausts, but its a lower multiplier"
-          }
         }
       ]
     },
@@ -1451,66 +1564,147 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1018,
-                1056,
-                1055
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                30048
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                1052
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                30075
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1056,
-                1005
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
-              "faces": [
-                30048,
-                1056,
-                1049
+              "members": [
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1052,
-                1056
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1041,
-                1056,
-                1003
+              "members": [
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30097,
-                1056,
-                30113
+              "members": [
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             }
           ]
@@ -1522,68 +1716,167 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1043,
-                1049,
-                1003,
-                1040,
-                30048,
-                1004,
-                1041,
-                30113,
-                1052,
-                30075
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                }
               ]
             },
             {
               "title": {
                 "en": "Basic DPS"
               },
-              "faces": [
-                1069,
-                30097,
-                1060,
-                1027
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                }
               ]
             },
             {
               "title": {
                 "en": "MultiHit DPS"
               },
-              "faces": [
-                1018,
-                1027,
-                1004,
-                1060,
-                30075,
-                1017,
-                1040,
-                30093,
-                1009
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                }
               ]
             },
             {
               "title": {
                 "en": "Void DPS"
               },
-              "faces": [
-                1018,
-                1060,
-                1041,
-                1009,
-                30048
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP/Discounts"
               },
-              "faces": [
-                1039,
-                1052,
-                30084
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]
@@ -1595,13 +1888,31 @@
               "title": {
                 "en": "Divine AP"
               },
-              "faces": [
-                1033,
-                1055,
-                30075,
-                1003,
-                1040,
-                30048
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             }
           ]

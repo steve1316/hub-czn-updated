@@ -15,14 +15,12 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_cre1",
               "name": "Archetype: ○",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -33,28 +31,36 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Dual Creation V",
+                "text": {
+                  "en": "[Unique] [Initiation] When an Archetype card is moved to hand, duplicate that card and remove a random effect (5 time(s) per turn)."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -77,14 +83,12 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -123,28 +127,36 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -172,35 +184,41 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -228,35 +246,33 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0077",
-              "name": "One With All",
-              "note": {
-                "en": ""
-              }
+              "name": "One With All"
             }
           ]
         },
@@ -286,35 +302,41 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -342,28 +364,36 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -391,48 +421,50 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Dual Creation III",
+                "text": {
+                  "en": "[Unique] [Initiation] When Archetype: □ is activated, create 1 different Archetype card in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Creation and Destruction IV",
+                "text": {
+                  "en": "[Unique] When AP is 0, create 1 Creation and Destruction. Decrease Cost of those cards by 1 and apply Exhaust (1 time per turn)."
+                }
               }
             }
           ]
@@ -461,49 +493,51 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "note": {
-                "en": ""
+              "cost": 5,
+              "epiphany": {
+                "level": 2,
+                "name": "Creation and Destruction II",
+                "text": {
+                  "en": "550% Defense-Based Damage. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Dual Creation IV",
+                "text": {
+                  "en": "[Unique] Create 1 of each Archetype card. Create 1 of the next Archetype card Exhausted."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -533,35 +567,48 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Dual Creation I",
+                "text": {
+                  "en": "[Unique] [Initiation] When 2 Archetype cards are created, create 1 identical card in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -589,35 +636,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Dual Creation V",
+                "text": {
+                  "en": "[Unique] [Initiation] When an Archetype card is moved to hand, duplicate that card and remove a random effect (5 time(s) per turn)."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -645,35 +705,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Dual Creation I",
+                "text": {
+                  "en": "[Unique] [Initiation] When 2 Archetype cards are created, create 1 identical card in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -701,56 +774,48 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dual Creation II",
+                "text": {
+                  "en": "[Unique] [Initiation] When 3 Archetype cards are created, create 1 identical card in hand. Apply Retain to that card."
+                }
               }
             },
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit",
-              "note": {
-                "en": ""
-              }
+              "name": "First Aid Kit"
             }
           ]
         },
@@ -787,7 +852,7 @@
               "name": "Tiana",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Increases Crit Chance with Tiphera, Draws Archetypes, Buffs damage great"
               }
             },
             {
@@ -795,7 +860,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, her Ego skill can save your hand from bad draws"
               }
             },
             {
@@ -803,7 +868,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral 1, Def% for heals"
               }
             },
             {
@@ -811,7 +876,7 @@
               "name": "Arwen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "HP but passive kinda doodoo"
               }
             },
             {
@@ -825,12 +890,6 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Nyx: Best in class, her Ego skill can save your hand from bad draws\nTiana: Increases Crit Chance with Tiphera, Draws Archetypes, Buffs damage great\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
-          }
-        },
-        {
           "type": "partner-list",
           "items": [
             {
@@ -838,7 +897,7 @@
               "name": "Yuri",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Draw 2 Ego"
               }
             },
             {
@@ -846,16 +905,10 @@
               "name": "Ritochika",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Yuri: Draw 2 Ego\nRitochika: 3 Moral Ego"
-          }
         }
       ]
     },
@@ -866,16 +919,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Ego Recoveryis sought after to power Tiphera's great ego skill"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Executioners | Agony Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Agony Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -911,6 +1003,7 @@
             {
               "cardId": "card_ds04_00007",
               "name": "Hand Enthralled by Light",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -937,7 +1030,7 @@
               "cardId": "n_0027",
               "name": "Dream World",
               "note": {
-                "en": ""
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
               "rating": "4/5"
             }
@@ -946,7 +1039,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt"
           }
         },
         {
@@ -962,7 +1055,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "3/5"
             },
@@ -970,7 +1063,7 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Tiphera can technically Retain this lol"
               },
               "rating": "3/5"
             },
@@ -986,7 +1079,7 @@
               "cardId": "n_0028",
               "name": "Ebony Lumen",
               "note": {
-                "en": ""
+                "en": "Tiphera can Exhaust this (Event Neutral)"
               },
               "rating": "4/5"
             }
@@ -995,7 +1088,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Tiphera can technically Retain this lol\nOWA: Can cheat out 9 cost CnD for Nuke\nEbony: Tiphera can Exhaust this (Event Neutral)"
+            "en": "OWA: Can cheat out 9 cost CnD for Nuke"
           }
         },
         {
@@ -1010,6 +1103,7 @@
             {
               "cardId": "c_30084_col2",
               "name": "Gloom",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1019,7 +1113,7 @@
               "cardId": "n_0046",
               "name": "Forced Learning Apparatus",
               "note": {
-                "en": ""
+                "en": "+1 Cycle"
               }
             },
             {
@@ -1034,7 +1128,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nForced: +1 Cycle\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
           }
         }
       ]
@@ -1296,9 +1390,9 @@
       ]
     },
     {
-      "id": "part-12",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 12"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1316,7 +1410,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1324,7 +1418,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -1332,7 +1426,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -1340,7 +1434,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -1349,7 +1443,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it"
           }
         },
         {
@@ -1358,8 +1452,9 @@
             {
               "cardId": "c_30084_uni4",
               "name": "Event Horizon",
+              "cost": 2,
               "note": {
-                "en": ""
+                "en": "This is great, but is RNG if its cycle positive or generates AP"
               },
               "rating": "4/5"
             },
@@ -1375,7 +1470,7 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             },
@@ -1383,7 +1478,7 @@
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
               "note": {
-                "en": ""
+                "en": "Tech that justbeats some bosses"
               },
               "rating": "4/5"
             }
@@ -1392,7 +1487,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Event Horizon: This is great, but is RNG if its cycle positive or generates AP\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+            "en": "First Aid: 2 Perma Moral but needs to be Heavened"
           }
         },
         {
@@ -1401,16 +1496,18 @@
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
+              "cost": 0,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_30084_bhc",
               "name": "○ △ □",
+              "cost": 0,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "6/5"
             }
@@ -1429,41 +1526,55 @@
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30084_uni2",
-              "name": "Creation and Destruction",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30084_uni2",
-              "name": "Creation and Destruction",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_30084_uni2",
-              "name": "Creation and Destruction",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30084_uni2",
-              "name": "Creation and Destruction",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Creation and Destruction I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Creation and Destruction II",
+                  "cost": 5,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Creation and Destruction III",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Creation and Destruction IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Creation and Destruction V",
+                  "cost": 5,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1480,40 +1591,62 @@
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Form Convergence I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Being able to double up to 3 effects is very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Form Convergence II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Draw 4 Archetypes, Exhaust one Exhaust card in hand"
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni1",
-              "name": "Form Convergence",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni1",
-              "name": "Form Convergence",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Form Convergence I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Form Convergence II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Form 1: Being able to double up to 3 effects is very good\nForm 2: Draw 4 Archetypes, Exhaust one Exhaust card in hand\nForm 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
+            "en": "Form 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
           }
         },
         {
@@ -1523,41 +1656,55 @@
               "cardId": "c_30084_uni3",
               "name": "Dual Creation",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30084_uni3",
-              "name": "Dual Creation",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30084_uni3",
-              "name": "Dual Creation",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni3",
-              "name": "Dual Creation",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni3",
-              "name": "Dual Creation",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dual Creation I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dual Creation II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dual Creation III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dual Creation IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dual Creation V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1579,45 +1726,99 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30047,
-                30084,
-                1024
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                30084,
-                1024
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                30084,
-                1024
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                1017,
-                30084,
-                1052
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                30097,
-                30084,
-                1024
+              "members": [
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                30084,
-                1024
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             }
           ]
@@ -1629,47 +1830,104 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1003,
-                1040,
-                30048,
-                30113
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "Nuke DPS"
               },
-              "faces": [
-                30047,
-                30097,
-                30093,
-                1064,
-                30113,
-                1040
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vulnerable"
               },
-              "faces": [
-                1024,
-                1010,
-                1050,
-                1017,
-                30097,
-                1008
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
               "title": {
                 "en": "Likes Shields"
               },
-              "faces": [
-                1017
+              "members": [
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                }
               ]
             }
           ]

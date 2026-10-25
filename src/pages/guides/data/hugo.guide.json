@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/10",
   "sections": [
     {
       "id": "how-to-manipulate-initiation-rng",
@@ -15,21 +16,24 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -48,61 +52,54 @@
       ]
     },
     {
-      "id": "part-2",
-      "title": {
-        "en": "Part 2"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/10"
-          }
-        }
-      ]
-    },
-    {
       "id": "standard-hunt-base",
       "title": {
         "en": "Standard Hunt Base"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
               }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Dingo Howling III",
+                "text": {
+                  "en": "Upon gaining Commence the Hunt, Draw 1 Attack card(s) (1 per turn)."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -127,49 +124,79 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Dingo Howling V",
+                "text": {
+                  "en": "2 Commence the Hunt. Draw 2 attack card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -197,49 +224,65 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Dingo Howling V",
+                "text": {
+                  "en": "2 Commence the Hunt. Draw 2 attack card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -267,49 +310,79 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Quick Fix V",
+                "text": {
+                  "en": "[Haste] 120% Damage. Add 1 Hit(s) for each Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Quick Fix V",
+                "text": {
+                  "en": "[Haste] 120% Damage. Add 1 Hit(s) for each Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Dingo Howling V",
+                "text": {
+                  "en": "2 Commence the Hunt. Draw 2 attack card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -339,49 +412,72 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Dingo Howling III",
+                "text": {
+                  "en": "Upon gaining Commence the Hunt, Draw 1 Attack card(s) (1 per turn)."
+                }
               }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -409,49 +505,51 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quick Fix III",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. If in a Commence the Hunt state, Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -488,7 +586,7 @@
               "name": "Tina",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Draw 1 Ego, and just massive Passive Damage Increases"
               }
             },
             {
@@ -496,7 +594,7 @@
               "name": "Ruixiang",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Draw 3 Ego, 5 star stat stick but no Passive damage Increase"
               }
             },
             {
@@ -504,7 +602,7 @@
               "name": "Marin",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Draw 1 Skill ego, 5 star stat stick and +25% Additive"
               }
             },
             {
@@ -512,16 +610,10 @@
               "name": "Solia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Just worse Marin"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Tina: Draw 1 Ego, and just massive Passive Damage Increases\nRuixiang: Draw 3 Ego, 5 star stat stick but no Passive damage Increase\nMarin: Draw 1 Skill ego, 5 star stat stick and +25% Additive\nSolia: Just worse Marin"
-          }
         },
         {
           "type": "partner-list",
@@ -531,7 +623,7 @@
               "name": "Rosaria",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "4 Star statstick, and potential Moral, but hugo isnt that great at it"
               }
             },
             {
@@ -539,7 +631,7 @@
               "name": "Daisy",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "4 Star statstick, 1 Moral and Moral Passive, actually as good as Rosaria for Hugo"
               }
             },
             {
@@ -547,16 +639,10 @@
               "name": "Nakia",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "3 Star Statstick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Rosaria: 4 Star statstick, and potential Moral, but hugo isnt that great at it\nDaisy: 4 Star statstick, 1 Moral and Moral Passive, actually as good as Rosaria for Hugo\nNakia: 3 Star Statstick"
-          }
         }
       ]
     },
@@ -567,16 +653,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Between this and 2/2/2 just depends on your Substat Ratios\n53% Crit Rate is around where this is better roughly"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -585,10 +710,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Starlight | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Starlight",
+              "setId": 27,
+              "name": "Starlight and Dreams",
+              "pieces": 4,
+              "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",
+              "icon": "/assets/pieces/icon_piece_set_027.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -597,10 +737,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BattleField Evo | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         }
       ]
     },
@@ -661,17 +816,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -685,6 +834,7 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -999,9 +1149,9 @@
       ]
     },
     {
-      "id": "part-12",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 12"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1011,7 +1161,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "5/5"
             },
@@ -1019,7 +1169,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
@@ -1027,7 +1177,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
               "rating": "5/5"
             }
@@ -1036,7 +1186,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
           }
         },
         {
@@ -1045,18 +1195,13 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Great damage increase to Hugo and an Upgrade so why not"
               },
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Fixer's Approach: Great damage increase to Hugo and an Upgrade so why not"
-          }
         },
         {
           "type": "card-list",
@@ -1065,41 +1210,55 @@
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1043_srt4",
-              "name": "Hunting Instincts",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1043_srt4",
-              "name": "Hunting Instincts",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1043_srt4",
-              "name": "Hunting Instincts",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1043_srt4",
-              "name": "Hunting Instincts",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hunting Instincts I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hunting Instincts II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Hunting Instincts III",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Hunting Instincts IV",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Hunting Instincts V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1116,48 +1275,62 @@
               "cardId": "c_1043_uni2",
               "name": "Quick Fix",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni2",
-              "name": "Quick Fix",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Quick Fix I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Draws only 1 card, but it is a tutor into more Fixes"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Quick Fix II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "3 hits and targeted, but not what you use this card for"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Quick Fix III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "DRAW 2 IS SO GOOD, Its also targeted"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Quick Fix IV",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Increasing Action Count... maybe one day it'll matter"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Quick Fix V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Consumes all hunt to do alot of attacks"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Quick 1: Draws only 1 card, but it is a tutor into more Fixes\nQuick 2: 3 hits and targeted, but not what you use this card for\nQuick 3: DRAW 2 IS SO GOOD, Its also targeted\nQuick 4: Increasing Action Count... maybe one day it'll matter\nQuick 5: Consumes all hunt to do alot of attacks\nCan get Draw Common"
+            "en": "Can get Draw Common"
           }
         },
         {
@@ -1167,49 +1340,57 @@
               "cardId": "c_1043_uni1",
               "name": "Fan of Daggers",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1043_uni1",
-              "name": "Fan of Daggers",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni1",
-              "name": "Fan of Daggers",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1043_uni1",
-              "name": "Fan of Daggers",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1043_uni1",
-              "name": "Fan of Daggers",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Fan of Daggers I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Rng Hunt gain"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Fan of Daggers II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Consistently 2 Hunt gain, and also targets to trigger Hunt"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Fan of Daggers III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "It's Targeted, and makes an ally Coord attack, I don't see why"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Fan of Daggers IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Doubles damage if in hunt, but isn't targeting"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Fan of Daggers V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 cost upgrade is kinda stinker"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Fan 1: Rng Hunt gain\nFan 2: Consistently 2 Hunt gain, and also targets to trigger Hunt\nFan 3: It's Targeted, and makes an ally Coord attack, I don't see why\nFan 4: Doubles damage if in hunt, but isn't targeting\nFan 5: 2 cost upgrade is kinda stinker"
-          }
         },
         {
           "type": "card-list",
@@ -1218,48 +1399,62 @@
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1043_uni3",
-              "name": "Dingo Howling",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni3",
-              "name": "Dingo Howling",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1043_uni3",
-              "name": "Dingo Howling",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1043_uni3",
-              "name": "Dingo Howling",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dingo Howling I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "3 Hunt"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dingo Howling II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "2 Hunt but alot of shield"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dingo Howling III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "+1 Card each turn for free after setup"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dingo Howling IV",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "4 Hunt, but needs to Combo"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dingo Howling V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Draw 2 is pretty good"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Dingo 1: 3 Hunt\nDingo 2: 2 Hunt but alot of shield\nDingo 3: +1 Card each turn for free after setup\nDingo 4: 4 Hunt, but needs to Combo\nDingo 5: Draw 2 is pretty good\nCan get Draw Common"
+            "en": "Can get Draw Common"
           }
         }
       ]
@@ -1274,94 +1469,211 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30093,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1043,
-                1039
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1043,
-                1055
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1043,
-                1055
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30113,
-                1043,
-                1062
+              "members": [
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1009,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1060,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1043,
-                1003
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1061,
-                1043,
-                1052
+              "members": [
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -1373,61 +1685,160 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1055,
-                1033,
-                1049,
-                1003,
-                1052,
-                1040,
-                30048,
-                1004,
-                1041,
-                30113
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "Hunt DPS"
               },
-              "faces": [
-                30093,
-                30113,
-                1004,
-                1009,
-                1060,
-                1018,
-                1027,
-                1061
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             },
             {
               "title": {
                 "en": "Moral/EQ"
               },
-              "faces": [
-                1049,
-                1062,
-                30097,
-                1055,
-                1057,
-                1056,
-                1039
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engine"
               },
-              "faces": [
-                30084,
-                1039,
-                1033,
-                1055,
-                30075,
-                1003,
-                1040,
-                30048
+              "members": [
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 30075,
+                  "name": "Sereniel"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30048,
+                  "name": "Fei"
+                }
               ]
             }
           ]

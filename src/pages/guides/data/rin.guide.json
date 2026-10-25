@@ -15,28 +15,29 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Dark Mist Inner Art V",
+                "text": {
+                  "en": "[Lead] If in a Dark Mist Stance state, increase Damage Amount of Attack Cards of this unit by 50%."
+                }
               }
             },
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -53,14 +54,12 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1018_uni1",
               "name": "Dark Mist Secret Art: Destruction",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -93,42 +92,46 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1018_srt1",
               "name": "Dark Mist Sword: First Form",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1018_uni2",
               "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Mist Secret Art: Annihilation",
+                "text": {
+                  "en": "[Haste] 200% Damage. Dark Mist Stance: Add 1 Hit(s)."
+                }
               }
             },
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Dark Mist Inner Art V",
+                "text": {
+                  "en": "[Lead] If in a Dark Mist Stance state, increase Damage Amount of Attack Cards of this unit by 50%."
+                }
               }
             },
             {
               "cardId": "c_1018_uni4",
               "name": "Dark Mist Secret Art: Black Dance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -145,42 +148,46 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1018_srt1",
               "name": "Dark Mist Sword: First Form",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1018_uni2",
               "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Dark Mist Secret Art: Annihilation II",
+                "text": {
+                  "en": "[Haste] 100% Damage × 2. Dark Mist Stance: Add 2 Hit(s)."
+                }
               }
             },
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Dark Mist Inner Art I",
+                "text": {
+                  "en": "[Lead] Retain Dark Mist Stance for 1 turn. Dark Mist Stance: +80% Damage Amount to Attack Cards of this unit for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1018_uni4",
               "name": "Dark Mist Secret Art: Black Dance",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -206,7 +213,7 @@
               "name": "Lillian",
               "rating": "6/5",
               "note": {
-                "en": ""
+                "en": "Best generally"
               }
             },
             {
@@ -214,7 +221,7 @@
               "name": "Douglas",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Easiest to get dupes"
               }
             }
           ]
@@ -222,7 +229,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lillian: Best generally\nDouglas: Easiest to get dupes\nComparison is everyone at Max Dupes"
+            "en": "Comparison is everyone at Max Dupes"
           }
         },
         {
@@ -241,7 +248,7 @@
               "name": "Scarlet",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Best damage, but needs dupes to beat Lillian"
               }
             },
             {
@@ -249,7 +256,7 @@
               "name": "Priscilla",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Ravage conditional not very good"
               }
             }
           ]
@@ -257,7 +264,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Westcamott: Great Draw\nScarlet: Best damage, but needs dupes to beat Lillian\nPriscilla: Ravage conditional not very good"
+            "en": "Westcamott: Great Draw"
           }
         }
       ]
@@ -269,16 +276,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Annihilation and Black Mist both are 1 Cost, Very Strong\nVoid>Atk% VERY VERY SMALL Average dmg increase\nTechnically Atk% is stronger, but that's only till 1k Atk, then Void% wins out"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Blackwing | Executioner | Cursed Corpse"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -287,10 +338,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Inhibition | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Inhibition",
+              "setId": 22,
+              "name": "Orb of Inhibition",
+              "pieces": 4,
+              "bonus": "+30% DMG to Void cards with 2+ hits",
+              "icon": "/assets/pieces/icon_piece_set_022.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -385,9 +451,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -397,7 +463,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
               "rating": "5/5"
             },
@@ -405,7 +471,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Tutoring out a card and giving it retrieve is amazing"
               },
               "rating": "5/5"
             },
@@ -413,7 +479,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Pretty slow to scale"
               },
               "rating": "3/5"
             },
@@ -421,7 +487,7 @@
               "cardId": "n_0079",
               "name": "Overwhelm",
               "note": {
-                "en": ""
+                "en": "Makes up for Rin's AOE Weakness in runs, it's really nice to have"
               },
               "rating": "4/5"
             },
@@ -438,7 +504,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nOverwhelm: Makes up for Rin's AOE Weakness in runs, it's really nice to have\nBeligerence: Pretty good on Rin, its a skill card for blackdance, or finds more destructions"
+            "en": "Beligerence: Pretty good on Rin, its a skill card for blackdance, or finds more destructions"
           }
         },
         {
@@ -447,6 +513,7 @@
             {
               "cardId": "c_1018_srt1",
               "name": "Dark Mist Sword: First Form",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -455,6 +522,7 @@
             {
               "cardId": "c_1018_srt2",
               "name": "Dark Mist Sword: Third Form",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -463,6 +531,7 @@
             {
               "cardId": "c_1018_uni4",
               "name": "Dark Mist Secret Art: Black Dance",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -482,32 +551,36 @@
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
+              "cost": 1,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
+              "cost": 1,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_1018_bhc1",
               "name": "Sheathe Sword",
+              "cost": 1,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "0/5"
             }
@@ -526,48 +599,62 @@
               "cardId": "c_1018_uni2",
               "name": "Dark Mist Secret Art: Annihilation",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1018_uni2",
-              "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1018_uni2",
-              "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1018_uni2",
-              "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1018_uni2",
-              "name": "Dark Mist Secret Art: Annihilation",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Secret Art: Annihilation I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Good Base Multiplier, and 2 hits Most strong and consistent"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Secret Art: Annihilation II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dark Mist Secret Art: Annihilation III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Just worse then 1, less potential then 2, and scales from Crit Rate NG"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dark Mist Secret Art: Annihilation IV",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "2nd most consistent, but loses to Annihilation 2 relatively easily"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dark Mist Secret Art: Annihilation V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Low damage, but decreases all of Rin's cards in hand, useless really"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Annihilation 1: Good Base Multiplier, and 2 hits Most strong and consistent\nAnnhiliation 2: Requires upwards of 225% Additive to beat Annihilation 1\nAnnihilation 3: Just worse then 1, less potential then 2, and scales from Crit Rate NG\nAnnihilation 4: 2nd most consistent, but loses to Annihilation 2 relatively easily\nAnnihilation 5: Low damage, but decreases all of Rin's cards in hand, useless really"
+            "en": "Annhiliation 2: Requires upwards of 225% Additive to beat Annihilation 1"
           }
         },
         {
@@ -577,32 +664,53 @@
               "cardId": "c_1018_uni1",
               "name": "Dark Mist Secret Art: Destruction",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Secret Art: Destruction I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "0 Cost Draw 2 is good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Secret Art: Destruction II",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Draw 1 is not good"
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_1018_uni1",
               "name": "Dark Mist Secret Art: Destruction",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1018_uni1",
-              "name": "Dark Mist Secret Art: Destruction",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Secret Art: Destruction I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Destruction 1: 0 Cost Draw 2 is good\nDestruction 2: Draw 1 is not good\nDestruction 3: Draw 1 is not good\nDestruction 4: Move is BROKEN\nDestruction 5: Upgrade, but 2 cost so not very ideal"
+            "en": "Destruction 3: Draw 1 is not good\nDestruction 4: Move is BROKEN\nDestruction 5: Upgrade, but 2 cost so not very ideal"
           }
         },
         {
@@ -612,40 +720,62 @@
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Inner Art I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Huge Additive damage increase and retains stance"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Inner Art II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "0 Cost Additive Damage Increase, also okay"
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1018_uni3",
-              "name": "Dark Mist Inner Art",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1018_uni3",
-              "name": "Dark Mist Inner Art",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Inner Art I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Inner Art II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Inner 1: Huge Additive damage increase and retains stance\nInner 2: 0 Cost Additive Damage Increase, also okay\nInner 3: Insanely bad 2 AP Total is a terrible rate\nInner 4: Gaining Stance when you know hot to play/built Rin is not hard, but its an Upgrade\nInner 5: 50% Multiplicative is very consistent and strong"
+            "en": "Inner 3: Insanely bad 2 AP Total is a terrible rate\nInner 4: Gaining Stance when you know hot to play/built Rin is not hard, but its an Upgrade\nInner 5: 50% Multiplicative is very consistent and strong"
           }
         }
       ]
@@ -660,30 +790,63 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1018,
-                1033,
-                1039
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1024,
-                1040
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1040
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1033,
-                1056
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             }
           ]
@@ -695,47 +858,104 @@
               "title": {
                 "en": "Draw/Discard"
               },
-              "faces": [
-                1033,
-                1040,
-                1049,
-                1043,
-                1004
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1040,
-                1056,
-                1049,
-                1024,
-                1050,
-                1052
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "Skill Cards"
               },
-              "faces": [
-                1033,
-                1040,
-                1039,
-                1052,
-                1024,
-                1056
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Gen"
               },
-              "faces": [
-                1039,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]

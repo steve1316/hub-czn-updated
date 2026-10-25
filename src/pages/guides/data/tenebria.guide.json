@@ -15,35 +15,34 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Music, Start!",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create and give each ally 2 of their own Rhythm in Draw Pile. Apply Haste to Rhythm cards of this unit."
+                }
               }
             },
             {
               "cardId": "c_1069_cre2",
               "name": "Rhythm: Crescendo",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1069_cre4",
               "name": "Rhythm: Fortissimo",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1069_cre5",
               "name": "Rhythm: Fermata",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -60,35 +59,27 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "note": {
-                "en": ""
-              }
+              "cost": 4
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "note": {
-                "en": ""
-              }
+              "cost": 4
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "note": {
-                "en": ""
-              }
+              "cost": 4
             },
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
-              "note": {
-                "en": ""
-              }
+              "cost": 4
             }
           ]
         },
@@ -99,14 +90,12 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_cre1",
               "name": "Rhythm",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         }
@@ -119,41 +108,59 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Music, Start! V",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 7,
+              "epiphany": {
+                "level": 5,
+                "name": "Call & Response V",
+                "text": {
+                  "en": "[Retain] [Haste] 700% Damage. If in hand, also treat as a Rhythm card. When a Rhythm card is activated, decrease Cost of this card by 1 until this card is activated."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             }
           ]
@@ -188,62 +195,116 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Music, Start! V",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 7,
+              "epiphany": {
+                "level": 5,
+                "name": "Call & Response V",
+                "text": {
+                  "en": "[Retain] [Haste] 700% Damage. If in hand, also treat as a Rhythm card. When a Rhythm card is activated, decrease Cost of this card by 1 until this card is activated."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             }
           ]
@@ -278,49 +339,65 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Music, Start! V",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Spotlight III",
+                "text": {
+                  "en": "350% Damage. Select and move up to 2 Rhythm cards to hand, then proc those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Encore II",
+                "text": {
+                  "en": "[Unique] For every 2 Rhythm cards activated, 100% Damage to the enemy with the lowest HP (15 times per turn)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni4",
               "name": "Photo Time",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -354,69 +431,100 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Music, Start! IV",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create and give each ally 2 of their own Rhythm: Fermata in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Spotlight II",
+                "text": {
+                  "en": "When 3 Rhythm cards are activated in a turn, create 1 Spotlight with Exhaust in hand and decrease Cost of those cards by 1 (1 time per turn)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Call & Response I",
+                "text": {
+                  "en": "[Haste] 250% Damage. If in hand, treat as a Rhythm card. Attunement: Draw 2 Rhythm card(s)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
               }
             }
           ]
@@ -436,69 +544,128 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Music, Start! V",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Spotlight III",
+                "text": {
+                  "en": "350% Damage. Select and move up to 2 Rhythm cards to hand, then proc those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 7,
+              "epiphany": {
+                "level": 5,
+                "name": "Call & Response V",
+                "text": {
+                  "en": "[Retain] [Haste] 700% Damage. If in hand, also treat as a Rhythm card. When a Rhythm card is activated, decrease Cost of this card by 1 until this card is activated."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             }
           ]
@@ -533,55 +700,97 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Music, Start! V",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Spotlight III",
+                "text": {
+                  "en": "350% Damage. Select and move up to 2 Rhythm cards to hand, then proc those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 7,
+              "epiphany": {
+                "level": 5,
+                "name": "Call & Response V",
+                "text": {
+                  "en": "[Retain] [Haste] 700% Damage. If in hand, also treat as a Rhythm card. When a Rhythm card is activated, decrease Cost of this card by 1 until this card is activated."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Encore I",
+                "text": {
+                  "en": "120% Damage. If the last card activated was a Rhythm card, proc that card 2 times."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
               }
             }
           ]
@@ -616,69 +825,100 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Music, Start! IV",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create and give each ally 2 of their own Rhythm: Fermata in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Call & Response I",
+                "text": {
+                  "en": "[Haste] 250% Damage. If in hand, treat as a Rhythm card. Attunement: Draw 2 Rhythm card(s)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Encore V",
+                "text": {
+                  "en": "Draw 1. If that card was a Rhythm card, increase Damage Amount by 100% until activated for 1 turn and repeat 1 more time (max 2 times)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Encore V",
+                "text": {
+                  "en": "Draw 1. If that card was a Rhythm card, increase Damage Amount by 100% until activated for 1 turn and repeat 1 more time (max 2 times)."
+                }
               }
             }
           ]
@@ -696,69 +936,100 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Music, Start! IV",
+                "text": {
+                  "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create and give each ally 2 of their own Rhythm: Fermata in Draw Pile."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
               }
             },
             {
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Call & Response I",
+                "text": {
+                  "en": "[Haste] 250% Damage. If in hand, treat as a Rhythm card. Attunement: Draw 2 Rhythm card(s)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Encore V",
+                "text": {
+                  "en": "Draw 1. If that card was a Rhythm card, increase Damage Amount by 100% until activated for 1 turn and repeat 1 more time (max 2 times)."
+                }
               }
             },
             {
               "cardId": "c_1069_uni3",
               "name": "Encore",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Encore V",
+                "text": {
+                  "en": "Draw 1. If that card was a Rhythm card, increase Damage Amount by 100% until activated for 1 turn and repeat 1 more time (max 2 times)."
+                }
               }
             }
           ]
@@ -785,7 +1056,7 @@
               "name": "Aria",
               "rating": "4.5",
               "note": {
-                "en": ""
+                "en": "20% Crit Dmg"
               }
             },
             {
@@ -793,7 +1064,7 @@
               "name": "Eloise",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Classic good stat stick with some Gen Multi"
               }
             },
             {
@@ -801,16 +1072,10 @@
               "name": "Anteia",
               "rating": "3.5/5",
               "note": {
-                "en": ""
+                "en": "Better Stat stick then Eloise eventually, but no Gen Multi, and okish ego"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Aria: 20% Crit Dmg\nEloise: Classic good stat stick with some Gen Multi\nAnteia: Better Stat stick then Eloise eventually, but no Gen Multi, and okish ego"
-          }
         }
       ]
     },
@@ -821,16 +1086,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Scrab",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "icon": "/assets/pieces/icon_piece_set_010.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "2/2/2 does everything Tene wants, since her main damage comes from Basics luv Scrab"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Passion | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Passion",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -925,9 +1234,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 9"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -971,6 +1280,7 @@
             {
               "cardId": "c_1069_srt1",
               "name": "Sound Check",
+              "cost": 1,
               "note": {
                 "en": ""
               }
@@ -978,8 +1288,9 @@
             {
               "cardId": "c_1069_uni4",
               "name": "Photo Time",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Tell me you have bad design without telling me, look here and also Encore 2, like hello?"
               }
             }
           ]
@@ -987,7 +1298,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Only Remove Basic Shield, cuz Basic Attacks are removed by Music, Start!\nPhoto Time: Tell me you have bad design without telling me, look here and also Encore 2, like hello?\nMax is 10x 100%/150% 1000% dmg, only boosted by moral, no card based buffs\nWhy is this thing not an Upgrade? and giving it an arbitrary cap"
+            "en": "Only Remove Basic Shield, cuz Basic Attacks are removed by Music, Start!\nMax is 10x 100%/150% 1000% dmg, only boosted by moral, no card based buffs\nWhy is this thing not an Upgrade? and giving it an arbitrary cap"
           }
         },
         {
@@ -997,45 +1308,60 @@
               "cardId": "c_1069_srt4",
               "name": "Music, Start!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1069_srt4",
-              "name": "Music, Start!",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_srt4",
-              "name": "Music, Start!",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_srt4",
-              "name": "Music, Start!",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_srt4",
-              "name": "Music, Start!",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Music, Start! I",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Music, Start! II",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Music, Start! III",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Music, Start! IV",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Music, Start! V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_1069_cre2",
               "name": "Rhythm: Crescendo",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1044,6 +1370,7 @@
             {
               "cardId": "c_1069_cre4",
               "name": "Rhythm: Fortissimo",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1052,6 +1379,7 @@
             {
               "cardId": "c_1069_cre5",
               "name": "Rhythm: Fermata",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1060,6 +1388,7 @@
             {
               "cardId": "c_1069_cre10",
               "name": "Rhythm: Arpeggio",
+              "cost": 4,
               "note": {
                 "en": ""
               },
@@ -1080,41 +1409,55 @@
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1069_uni2",
-              "name": "Call & Response",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_uni2",
-              "name": "Call & Response",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni2",
-              "name": "Call & Response",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni2",
-              "name": "Call & Response",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Call & Response I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Call & Response II",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Call & Response III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Call & Response IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Call & Response V",
+                  "cost": 7,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1131,56 +1474,80 @@
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Spotlight I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Spotlight II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Basically 1 free Rhythm draw each turn, not very impresive"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Spotlight III",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Spotlight IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Spotlight V",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "0 cost Draw 2, but discards non Rhythms, its okay"
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Spotlight I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Spotlight 1: Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting\nSpotlight 2: Basically 1 free Rhythm draw each turn, not very impresive\nSpotlight 3: Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense\nSpotlight 4: Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing\nSpotlight 5: 0 cost Draw 2, but discards non Rhythms, its okay\nSpotlight 0: Actually not too bad, to just get a Moral Epiphany on this"
+            "en": "Spotlight 0: Actually not too bad, to just get a Moral Epiphany on this"
           }
         },
         {
@@ -1190,49 +1557,57 @@
               "cardId": "c_1069_uni3",
               "name": "Encore",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1069_uni3",
-              "name": "Encore",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni3",
-              "name": "Encore",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1069_uni3",
-              "name": "Encore",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_uni3",
-              "name": "Encore",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Encore I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Honestly I'd just consider this a better Spotlight 3"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Encore II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "15 hits max, but that requires 30 Rhytmn activates, wthat the heck? Boosted by Moral"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Encore III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "3 hits and also 3 AP saved (Also can get Draw Divine)"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Encore IV",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "3 Cost is a high bar, but activating 6 Rhythms is good damage"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Encore V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Draw, never bad because 0 cost cantrip minimum, and Tene has alot of Uniques"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Encore 1: Honestly I'd just consider this a better Spotlight 3\nEncore 2: 15 hits max, but that requires 30 Rhytmn activates, wthat the heck? Boosted by Moral\nEncore 3: 3 hits and also 3 AP saved (Also can get Draw Divine)\nEncore 4: 3 Cost is a high bar, but activating 6 Rhythms is good damage\nEncore 5: Draw, never bad because 0 cost cantrip minimum, and Tene has alot of Uniques"
-          }
         }
       ]
     },
@@ -1246,59 +1621,131 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1069,
-                1056,
-                1033
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                1055
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                1052
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1069,
-                1056,
-                1003
+              "members": [
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1069,
-                1003
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1069,
-                1056
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1069,
-                1033
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1027,
-                1069,
-                1052
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1069,
+                  "name": "Tenebria"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             }
           ]
@@ -1310,51 +1757,120 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1003,
-                1055,
-                1040,
-                1043,
-                30093,
-                1041,
-                1004
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1056,
-                1052,
-                1049,
-                1050,
-                1010
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                }
               ]
             },
             {
               "title": {
                 "en": "DPS"
               },
-              "faces": [
-                1027,
-                30093,
-                1005,
-                1043,
-                30097
+              "members": [
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1033,
-                1003,
-                1052,
-                1039,
-                30084
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]

@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/10",
   "sections": [
     {
       "id": "veronica-s-ballistas-and-reload",
@@ -15,21 +16,29 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Firing Preparation",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Ballista card(s). At the start of the turn, create 1 Ballista card(s)."
+                }
               }
+            },
+            {
+              "cardId": "c_1033_cre1",
+              "name": "Ballista",
+              "cost": 0
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -46,14 +55,11 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "n_0103",
-              "name": "Precision Aim",
-              "note": {
-                "en": ""
-              }
+              "name": "Precision Aim"
             }
           ]
         },
@@ -66,68 +72,59 @@
       ]
     },
     {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/10"
-          }
-        }
-      ]
-    },
-    {
       "id": "cycle-7-draw-divine-no-firing-ap-0-fm-160",
       "title": {
         "en": "Cycle +7 | Draw Divine no Firing | AP 0 | FM 160"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -155,42 +152,74 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -220,55 +249,83 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Firing Preparation IV",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Giant Ballista. At the start of the turn, create 1 Giant Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sir Kowalski I",
+                "text": {
+                  "en": "Select 1 Ballista card in hand and +150% Damage Amount until activated. Draw 2."
+                }
               }
             }
           ]
@@ -297,63 +354,68 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Firing Preparation III",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Enhanced Ballista. At the start of the turn, create 1 Enhanced Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Repose I",
+                "text": {
+                  "en": "Draw 2 other Combatant's card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sir Kowalski III",
+                "text": {
+                  "en": "Draw 2. When a Skill card is Drawn, create 1 Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni4",
               "name": "Bombardment Prep",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -381,55 +443,55 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Firing Preparation III",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Enhanced Ballista. At the start of the turn, create 1 Enhanced Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sir Kowalski I",
+                "text": {
+                  "en": "Select 1 Ballista card in hand and +150% Damage Amount until activated. Draw 2."
+                }
               }
             }
           ]
@@ -467,7 +529,7 @@
               "name": "Marin",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Highest Damage, pretty good Ego"
               }
             },
             {
@@ -475,7 +537,7 @@
               "name": "Rosaria",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "RNG Moral, Consisitent Ego, easy to get dupes"
               }
             },
             {
@@ -483,7 +545,7 @@
               "name": "Solia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Can be slightly higher damage then Rosaria after you get dupes"
               }
             },
             {
@@ -491,16 +553,10 @@
               "name": "Daisy",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Rosaria but worse"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Marin: Highest Damage, pretty good Ego\nRosaria: RNG Moral, Consisitent Ego, easy to get dupes\nSolia: Can be slightly higher damage then Rosaria after you get dupes\nDaisy: Rosaria but worse"
-          }
         }
       ]
     },
@@ -511,16 +567,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Agony Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "2/2/2 Generalist Atk based DPS set, can be swapped among all members\nAgony technically is the best if enabled, but honestly just cherry pick relics with great substats"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BattleField Evo | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BattleField Evo",
+              "setId": 28,
+              "name": "Battlefield Evolution",
+              "pieces": 4,
+              "bonus": "Extra Attack, or an Attack Card created in or drawn from the Draw Pile, grants Evolving Battlefield: +10% Crit DMG (max 3 stacks, +5% more at 3)",
+              "icon": "/assets/pieces/icon_piece_set_028.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -529,10 +624,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Starlight | Tetra"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Starlight",
+              "setId": 27,
+              "name": "Starlight and Dreams",
+              "pieces": 4,
+              "bonus": "When Shield is gained via ability, +5% ally Counterattack/Extra Attack DMG (max 25%)",
+              "icon": "/assets/pieces/icon_piece_set_027.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -541,10 +651,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Spark | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Spark",
+              "setId": 18,
+              "name": "Spark of Passion",
+              "pieces": 4,
+              "bonus": "+20% Passion DMG after Upgrade (5 times)",
+              "icon": "/assets/pieces/icon_piece_set_018.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -598,6 +723,7 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -624,17 +750,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -965,9 +1085,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "notes",
       "title": {
-        "en": "Part 10"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -991,9 +1111,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1003,7 +1123,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "5/5"
             },
@@ -1011,7 +1131,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
@@ -1019,7 +1139,7 @@
               "cardId": "n_0103",
               "name": "Precision Aim",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
               "rating": "5/5"
             }
@@ -1028,7 +1148,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
           }
         },
         {
@@ -1037,55 +1157,75 @@
             {
               "cardId": "c_1033_uni4",
               "name": "Bombardment Prep",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Honestly the Remove between this and Pendant doesnt matter"
               },
               "rating": "4/5"
             }
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Bombardment Prep: Honestly the Remove between this and Pendant doesnt matter"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Firing Preparation I",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Ballista card(s). At the start of the turn, create 1 Ballista card(s), with a 50% chance to additionally create 1 more."
+                }
               }
             },
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Firing Preparation II",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Piercing Ballista. At the start of the turn, create 1 Piercing Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Firing Preparation III",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Enhanced Ballista. At the start of the turn, create 1 Enhanced Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Firing Preparation IV",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Giant Ballista. At the start of the turn, create 1 Giant Ballista card(s)."
+                }
               }
             },
             {
               "cardId": "c_1033_srt4",
               "name": "Firing Preparation",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Firing Preparation V",
+                "text": {
+                  "en": "[Unique] [Initiation] Create 1 Shelling Ballista card(s). At the start of the turn, create 1 Shelling Ballista card(s)."
+                }
               }
             }
           ]
@@ -1127,41 +1267,45 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Pendant of Resolution III",
+                "text": {
+                  "en": "[Exhaust 2] For 1 turn(s), when a card is activated, 1 Reload."
+                }
               }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1033_uni2",
-              "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1033_uni2",
-              "name": "Pendant of Resolution",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Pendant of Resolution V",
+                "text": {
+                  "en": "[Retain] [Retrieve 4] Reload 2."
+                }
               }
             }
           ]
@@ -1209,49 +1353,57 @@
               "cardId": "c_1033_uni1",
               "name": "Repose",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1033_uni1",
-              "name": "Repose",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1033_uni1",
-              "name": "Repose",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1033_uni1",
-              "name": "Repose",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1033_uni1",
-              "name": "Repose",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Repose I",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "ZERO COST, can get +AP Divines but doesn't give Shield"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Repose II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Still draws 2, but the reload increase isn't required"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Repose III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "1 cost so less good, and might reduce cost and break memory set bonuses"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Repose IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Lots of reload, but getting reload is easy"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Repose V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "GETTING RELOAD IS EASY"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Repose 1: ZERO COST, can get +AP Divines but doesn't give Shield\nRepose 2: Still draws 2, but the reload increase isn't required\nRepose 3: 1 cost so less good, and might reduce cost and break memory set bonuses\nRepose 4: Lots of reload, but getting reload is easy\nRepose 5: GETTING RELOAD IS EASY"
-          }
         },
         {
           "type": "card-list",
@@ -1260,49 +1412,57 @@
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1033_uni3",
-              "name": "Sir Kowalski",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1033_uni3",
-              "name": "Sir Kowalski",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1033_uni3",
-              "name": "Sir Kowalski",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1033_uni3",
-              "name": "Sir Kowalski",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Sir Kowalski I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Doesnt clog your hand with Ballistas"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Sir Kowalski II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Only draw 1"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Sir Kowalski III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Compared to Kowalski 1, Trades Handclog for more damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Sir Kowalski IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Just for damage, so I don't like it"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Sir Kowalski V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Just for damage + Exhaust synergy, but I don't like it"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Kowalski 1: Doesnt clog your hand with Ballistas\nKowalski 2: Only draw 1\nKowalski 3: Compared to Kowalski 1, Trades Handclog for more damage\nKowalski 4: Just for damage, so I don't like it\nKowalski 5: Just for damage + Exhaust synergy, but I don't like it"
-          }
         }
       ]
     },
@@ -1322,57 +1482,147 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]
@@ -1384,65 +1634,155 @@
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]
@@ -1454,65 +1794,155 @@
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
               "title": {
                 "en": "Veronica"
               },
-              "faces": [
-                1033,
-                1033,
-                1033,
-                1033,
-                1033,
-                1033
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]

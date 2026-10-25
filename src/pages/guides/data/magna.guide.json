@@ -15,20 +15,23 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Frost Charge",
+                "text": {
+                  "en": "140% Shield. 3 Vulnerable to all enemies."
+                }
               }
             }
           ]
@@ -74,42 +77,52 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Fragment II",
+                "text": {
+                  "en": "[Lead] 3 Crystallization. At the start of the turn, 2 Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Frost Charge III",
+                "text": {
+                  "en": "4 Crystallization. 3 Vulnerable to targets hit by Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Frost Charge III",
+                "text": {
+                  "en": "4 Crystallization. 3 Vulnerable to targets hit by Counterattack."
+                }
               }
             },
             {
               "cardId": "n_0012",
-              "name": "Belligerence",
-              "note": {
-                "en": ""
-              }
+              "name": "Belligerence"
             }
           ]
         },
@@ -126,27 +139,35 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Ice Fragment V",
+                "text": {
+                  "en": "[Lead] 4 Counterattack. Increase Damage Amount of the next Counterattack of this unit activated by 100%."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Frost Charge III",
+                "text": {
+                  "en": "4 Crystallization. 3 Vulnerable to targets hit by Counterattack."
+                }
               }
             }
           ]
@@ -158,35 +179,41 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Ice Fragment IV",
+                "text": {
+                  "en": "[Unique] [Lead] 3 Crystallization. At the end of the turn, 200% Defense-Based Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Frost Charge III",
+                "text": {
+                  "en": "4 Crystallization. 3 Vulnerable to targets hit by Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -205,56 +232,77 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Ice Fragment IV",
+                "text": {
+                  "en": "[Unique] [Lead] 3 Crystallization. At the end of the turn, 200% Defense-Based Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "name": "Frost Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Frost Charge II",
+                "text": {
+                  "en": "210% Shield. 4 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Frost Charge II",
+                "text": {
+                  "en": "210% Shield. 4 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Frost Charge II",
+                "text": {
+                  "en": "210% Shield. 4 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Frost Charge II",
+                "text": {
+                  "en": "210% Shield. 4 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -271,41 +319,66 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Fragment II",
+                "text": {
+                  "en": "[Lead] 3 Crystallization. At the start of the turn, 2 Counterattack."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Frost Charge IV",
+                "text": {
+                  "en": "100% Defense-Based Damage × 3 to random enemies. 1 Vulnerable to targets that were Hit."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Frost Charge IV",
+                "text": {
+                  "en": "100% Defense-Based Damage × 3 to random enemies. 1 Vulnerable to targets that were Hit."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Frost Charge IV",
+                "text": {
+                  "en": "100% Defense-Based Damage × 3 to random enemies. 1 Vulnerable to targets that were Hit."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Frost Charge IV",
+                "text": {
+                  "en": "100% Defense-Based Damage × 3 to random enemies. 1 Vulnerable to targets that were Hit."
+                }
               }
             }
           ]
@@ -323,56 +396,84 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Ice Fragment IV",
+                "text": {
+                  "en": "[Unique] [Lead] 3 Crystallization. At the end of the turn, 200% Defense-Based Damage to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Glacial Iron Fist III",
+                "text": {
+                  "en": "450% Defense-Based Damage. When Shield is owned, increases Damage Amount by 50%."
+                }
               }
             },
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Glacial Iron Fist III",
+                "text": {
+                  "en": "450% Defense-Based Damage. When Shield is owned, increases Damage Amount by 50%."
+                }
               }
             },
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Glacial Iron Fist III",
+                "text": {
+                  "en": "450% Defense-Based Damage. When Shield is owned, increases Damage Amount by 50%."
+                }
               }
             },
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Glacial Iron Fist III",
+                "text": {
+                  "en": "450% Defense-Based Damage. When Shield is owned, increases Damage Amount by 50%."
+                }
               }
             },
             {
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Frost Charge II",
+                "text": {
+                  "en": "210% Shield. 4 Vulnerable to all enemies."
+                }
               }
             },
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -404,7 +505,7 @@
               "name": "Wilhelmina",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Easiest to get Def% high"
               }
             },
             {
@@ -412,7 +513,7 @@
               "name": "Erica",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Helps with CounterAttack generation and also highest CounterAttack dmg buffer"
               }
             },
             {
@@ -420,7 +521,7 @@
               "name": "Rachel",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "The supporty option that increases Shield%, still a great Ego Skill"
               }
             },
             {
@@ -428,16 +529,10 @@
               "name": "Raidel",
               "rating": "0/5",
               "note": {
-                "en": ""
+                "en": "Trash"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Wilhelmina: Easiest to get Def% high\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel: The supporty option that increases Shield%, still a great Ego Skill\nRaidel: Trash"
-          }
         },
         {
           "type": "partner-list",
@@ -455,7 +550,7 @@
               "name": "Alsea",
               "rating": "2/5",
               "note": {
-                "en": ""
+                "en": "Actually can work with Fisting builds, but the lack of dupes make her less good then Wilhelmina"
               }
             }
           ]
@@ -463,7 +558,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Eishelen: Easier to get dupes then Erica, Increases damage after gaining Counters\nAlsea: Actually can work with Fisting builds, but the lack of dupes make her less good then Wilhelmina"
+            "en": "Eishelen: Easier to get dupes then Erica, Increases damage after gaining Counters"
           }
         }
       ]
@@ -475,16 +570,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Def for Shield and Damage, Crit Dmg, HP for larger max shield, or Atk/Agony for Dmg"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Justice | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -493,10 +627,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Beast | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Beast",
+              "setId": 24,
+              "name": "Beast's Yearning",
+              "pieces": 4,
+              "bonus": "+30% Justice and Order Attack Card DMG (max 5 per turn)",
+              "icon": "/assets/pieces/icon_piece_set_024.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -603,9 +752,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -622,6 +771,7 @@
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -638,6 +788,7 @@
             {
               "cardId": "c_1010_col",
               "name": "Impulse",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -657,8 +808,9 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Upgrade + Lead and even Initiation at E1 is amazing (Gaining shield through ability includes allies)"
               },
               "rating": "4/5"
             },
@@ -674,7 +826,7 @@
               "cardId": "n_0121",
               "name": "Sadism",
               "note": {
-                "en": ""
+                "en": "A way to make sure your Prism always works, it can be pretty good with some neutral epi"
               },
               "rating": "4/5"
             }
@@ -683,7 +835,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Just remove basics\nStorm: Upgrade + Lead and even Initiation at E1 is amazing (Gaining shield through ability includes allies)\nBelligerence is a great draw Neutral because Magna can thin her deck and remove her attacks\nSadism: A way to make sure your Prism always works, it can be pretty good with some neutral epi"
+            "en": "Just remove basics\nBelligerence is a great draw Neutral because Magna can thin her deck and remove her attacks"
           }
         },
         {
@@ -693,41 +845,55 @@
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1010_srt4",
-              "name": "Ice Fragment",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1010_srt4",
-              "name": "Ice Fragment",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1010_srt4",
-              "name": "Ice Fragment",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1010_srt4",
-              "name": "Ice Fragment",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Ice Fragment I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Ice Fragment II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Ice Fragment III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Ice Fragment IV",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Ice Fragment V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -738,42 +904,52 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Wall II",
+                "text": {
+                  "en": "300% Shield. 2 Counterattack. +30% Shield Gain Amount for each Counterattack of this unit."
+                }
+              },
+              "extra": {
+                "id": "com_0035",
+                "text": {
+                  "en": "Counterattack 1."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
+              "cost": 2
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "name": "Ice Wall",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Ice Wall IV",
+                "text": {
+                  "en": "200% Shield. Inflict Fixed Damage to all enemies equal to Shield held."
+                }
               }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1010_uni2",
-              "name": "Ice Wall",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1010_uni2",
-              "name": "Ice Wall",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -819,6 +995,7 @@
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -839,49 +1016,57 @@
               "cardId": "c_1010_uni3",
               "name": "Frost Charge",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1010_uni3",
-              "name": "Frost Charge",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Frost Charge I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "AOE Vuln + Shield, good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Frost Charge II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "More AOE Vuln, but smaller Shield"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Frost Charge III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "UPGRADE When hit by a counter, enemy gets Vuln (Affects all allies counters)"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Frost Charge IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "3x Def Damage, Vuln for every hit, ok"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Frost Charge V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "AOE Vuln + 2 Counter, good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Charge 1: AOE Vuln + Shield, good\nCharge 2: More AOE Vuln, but smaller Shield\nCharge 3: UPGRADE When hit by a counter, enemy gets Vuln (Affects all allies counters)\nCharge 4: 3x Def Damage, Vuln for every hit, ok\nCharge 5: AOE Vuln + 2 Counter, good"
-          }
         }
       ]
     },
@@ -895,24 +1080,51 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1010,
-                1052,
-                1033
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1010,
-                1064,
-                1039
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1010,
-                1017,
-                1040
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             }
           ]
@@ -924,57 +1136,123 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1033,
-                1049,
-                1040,
-                1021
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "AOE"
               },
-              "faces": [
-                1033,
-                1064,
-                1008,
-                1017,
-                1021
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vuln Abusers"
               },
-              "faces": [
-                1033,
-                1064,
-                1062,
-                1040,
-                1017,
-                30047,
-                1021
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1052,
-                1060,
-                1039
+              "members": [
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
               "title": {
                 "en": "Shielders"
               },
-              "faces": [
-                1008,
-                30047,
-                1028
+              "members": [
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                }
               ]
             }
           ]

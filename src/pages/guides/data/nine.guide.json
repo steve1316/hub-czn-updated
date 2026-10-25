@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/10",
   "sections": [
     {
       "id": "nine-hew-levels-incinerate-and-ignition",
@@ -15,35 +16,36 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 0,
+                "name": "Hew",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 350% Defense-Based Damage. Incinerate: Create 1 Hew Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
-              "note": {
-                "en": ""
+              "cost": 5,
+              "epiphany": {
+                "level": 3,
+                "name": "Fatal Strike III",
+                "text": {
+                  "en": "[Unique] [Ignition] [Retain] Change Hew in hand to its final level."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -68,68 +70,38 @@
       ]
     },
     {
-      "id": "part-2",
-      "title": {
-        "en": "Part 2"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/10"
-          }
-        }
-      ]
-    },
-    {
       "id": "cycle-1-flash-dps-fm-160",
       "title": {
         "en": "Cycle -1 | Flash DPS | FM 160"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "note": {
-                "en": ""
-              }
-            },
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall",
-              "note": {
-                "en": ""
-              }
+              "name": "Iron Wall"
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall",
-              "note": {
-                "en": ""
-              }
+              "name": "Iron Wall"
             }
           ]
         },
@@ -157,42 +129,51 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
-              "note": {
-                "en": ""
+              "cost": 5,
+              "epiphany": {
+                "level": 3,
+                "name": "Fatal Strike III",
+                "text": {
+                  "en": "[Unique] [Ignition] [Retain] Change Hew in hand to its final level."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism",
-              "note": {
-                "en": ""
-              }
+              "name": "Sadism"
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism",
-              "note": {
-                "en": ""
-              }
+              "name": "Sadism"
             }
           ]
         },
@@ -220,42 +201,44 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 2,
+                "name": "Hew (Extreme)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 300% Defense-Based Damage. Incinerate: Create 1 Hew (Extreme) Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Counterblade IV",
+                "text": {
+                  "en": "[Unique] When Counterattack is gained, 1 Honed Edge+."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall",
-              "note": {
-                "en": ""
-              }
+              "name": "Iron Wall"
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall",
-              "note": {
-                "en": ""
-              }
+              "name": "Iron Wall"
             }
           ]
         },
@@ -285,42 +268,46 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Counterblade V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, proc the Hew card in hand 1 times."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -348,42 +335,46 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Counterblade V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, proc the Hew card in hand 1 times."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -413,56 +404,55 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism",
-              "note": {
-                "en": ""
-              }
+              "name": "Sadism"
             }
           ]
         },
@@ -490,56 +480,55 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism",
-              "note": {
-                "en": ""
-              }
+              "name": "Sadism"
             }
           ]
         },
@@ -567,63 +556,52 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "note": {
-                "en": ""
-              }
-            },
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Fatal Strike I",
+                "text": {
+                  "en": "210% Defense-Based Damage. Increase Damage Amount by 30% for each Cost of the highest-Cost Exhaust card in hand, then Exhaust that card."
+                }
               }
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton",
-              "note": {
-                "en": ""
-              }
+              "name": "Cyborg Automaton"
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton",
-              "note": {
-                "en": ""
-              }
+              "name": "Cyborg Automaton"
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton",
-              "note": {
-                "en": ""
-              }
+              "name": "Cyborg Automaton"
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton",
-              "note": {
-                "en": ""
-              }
+              "name": "Cyborg Automaton"
             }
           ]
         },
@@ -640,70 +618,58 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Counterblade I",
+                "text": {
+                  "en": "[Unique] When a card is Exhausted, 1 Honed Edge."
+                }
               }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0012",
-              "name": "Belligerence",
-              "note": {
-                "en": ""
-              }
+              "name": "Belligerence"
             }
           ]
         },
@@ -729,7 +695,7 @@
               "name": "Alcea",
               "rating": "6/5",
               "note": {
-                "en": ""
+                "en": "5 Star Statstick, 20% Multiplier and 30% Final Damage on Ego"
               }
             },
             {
@@ -737,7 +703,7 @@
               "name": "Erica",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "5 Star Statstick, can generate you Counterattack and also buff them"
               }
             },
             {
@@ -753,7 +719,7 @@
               "name": "Wilhelma",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "4 Star Statstick, Passive is just Additive so not really good"
               }
             }
           ]
@@ -761,7 +727,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Alcea: 5 Star Statstick, 20% Multiplier and 30% Final Damage on Ego\nErica: 5 Star Statstick, can generate you Counterattack and also buff them\nEishelen: 4.5 Star Statstick\nWilhelma: 4 Star Statstick, Passive is just Additive so not really good"
+            "en": "Eishelen: 4.5 Star Statstick"
           }
         }
       ]
@@ -773,16 +739,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Beast",
+              "setId": 24,
+              "name": "Beast's Yearning",
+              "pieces": 4,
+              "bonus": "+30% Justice and Order Attack Card DMG (max 5 per turn)",
+              "icon": "/assets/pieces/icon_piece_set_024.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "30% Multiplier but only to first 5 Exhaust Justice/Order Cards"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Executioners | Agony Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Agony Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -791,10 +796,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Justice | Executioners | Agony Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Justice",
+              "setId": 20,
+              "name": "Line of Justice",
+              "pieces": 4,
+              "bonus": "+20% Crit Rate for cards that cost 2 or more",
+              "icon": "/assets/pieces/icon_piece_set_020.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Agony Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -860,16 +883,18 @@
             {
               "cardId": "c_30047_eps",
               "name": "Reflection: Zero",
+              "cost": 6,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30047_eps",
               "name": "Reflection: Zero",
+              "cost": 6,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "4/5"
             }
@@ -1122,9 +1147,9 @@
       ]
     },
     {
-      "id": "part-12",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 12"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1134,7 +1159,7 @@
               "cardId": "n_0067",
               "name": "Iron Wall",
               "note": {
-                "en": ""
+                "en": "1 CounterAttack each turn"
               },
               "rating": "4/5"
             },
@@ -1142,7 +1167,7 @@
               "cardId": "n_0121",
               "name": "Sadism",
               "note": {
-                "en": ""
+                "en": "AOE Vuln and technically 0 AP if it cost reduces the right card"
               },
               "rating": "4/5"
             },
@@ -1150,17 +1175,11 @@
               "cardId": "n_0031",
               "name": "Energy Barrier",
               "note": {
-                "en": ""
+                "en": "1 Time AP and Perma CounterAttack"
               },
               "rating": "4/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Iron Wall: 1 CounterAttack each turn\nSadism: AOE Vuln and technically 0 AP if it cost reduces the right card\nEnergy Barrier: 1 Time AP and Perma CounterAttack"
-          }
         },
         {
           "type": "card-list",
@@ -1168,18 +1187,13 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Cheats out 3 or 2 Cost Hews, but can't get Draw Divine Unfortunately"
               },
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Fighting Spirit: Cheats out 3 or 2 Cost Hews, but can't get Draw Divine Unfortunately"
-          }
         },
         {
           "type": "card-list",
@@ -1188,13 +1202,24 @@
               "cardId": "c_30047_srt4",
               "name": "Hew",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hew (Ironclad)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Shield Hew"
+                  }
+                }
+              ]
             },
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1204,32 +1229,35 @@
               "cardId": "c_30047_srt4",
               "name": "Hew",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hew (Ironclad)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hew (Extreme)",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "5 Hew's instead of 3"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Hew 1: Shield Hew\nHew 2: 5 Hew's instead of 3\nHew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
+            "en": "Hew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
           }
         },
         {
@@ -1239,49 +1267,57 @@
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30047_uni2",
-              "name": "Fatal Strike",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_30047_uni2",
-              "name": "Fatal Strike",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30047_uni2",
-              "name": "Fatal Strike",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30047_uni2",
-              "name": "Fatal Strike",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Fatal Strike I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Helps Exhaust Hew once IG, not that great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Fatal Strike II",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Terrible since 2 cost"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Fatal Strike III",
+                  "cost": 5,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Changing to last form isn't really required, since it's Ignition synergy, but it has Unique + Retain"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Fatal Strike IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Support Ability that can help Kayron exhaust Futilities"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Fatal Strike V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "240% for 3 CounterAttacks, but it doesn't gain shield or anything, only damage not great"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Fatal 1: Helps Exhaust Hew once IG, not that great\nFatal 2: Terrible since 2 cost\nFatal 3: Changing to last form isn't really required, since it's Ignition synergy, but it has Unique + Retain\nFatal 4: Support Ability that can help Kayron exhaust Futilities\nFatal 5: 240% for 3 CounterAttacks, but it doesn't gain shield or anything, only damage not great"
-          }
         },
         {
           "type": "card-list",
@@ -1289,6 +1325,7 @@
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1297,6 +1334,7 @@
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1317,41 +1355,55 @@
               "cardId": "c_30047_uni3",
               "name": "Counterblade",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_uni3",
-              "name": "Counterblade",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30047_uni3",
-              "name": "Counterblade",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30047_uni3",
-              "name": "Counterblade",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30047_uni3",
-              "name": "Counterblade",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Counterblade I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Counterblade II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Counterblade III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Counterblade IV",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Counterblade V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1373,94 +1425,211 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30047,
-                1024,
-                30084
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                30084,
-                1055
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1024,
-                1055
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1033,
-                30084
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1033,
-                1024
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1024,
-                30097
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1050,
-                1024
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1050,
-                30084
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1050,
-                1055
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1010,
-                1055
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1010,
-                1060
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1040,
-                30084
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1040,
-                1024
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             }
           ]
@@ -1472,63 +1641,147 @@
               "title": {
                 "en": "Draw"
               },
-              "faces": [
-                1033,
-                1055,
-                1003,
-                1040,
-                1004,
-                1041,
-                30113
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "Multi% Buffer"
               },
-              "faces": [
-                1024,
-                30084,
-                1040,
-                1055
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             },
             {
               "title": {
                 "en": "Vulnerable"
               },
-              "faces": [
-                1024,
-                1010,
-                1050,
-                1017,
-                30097,
-                1008
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             },
             {
               "title": {
                 "en": "Exhaust Fodder"
               },
-              "faces": [
-                1024,
-                30084,
-                1040
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engine"
               },
-              "faces": [
-                30097,
-                30084,
-                1060,
-                1033,
-                1055,
-                1003,
-                1039,
-                1040
+              "members": [
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                }
               ]
             }
           ]
@@ -1540,18 +1793,30 @@
               "title": {
                 "en": "Extra Hit"
               },
-              "faces": [
-                1050
+              "members": [
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
               "title": {
                 "en": "CounterAttack"
               },
-              "faces": [
-                1010,
-                1028,
-                1055
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                }
               ]
             }
           ]

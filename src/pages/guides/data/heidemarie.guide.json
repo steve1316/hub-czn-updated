@@ -15,28 +15,41 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hero to All I",
+                "text": {
+                  "en": "[Linked] [Quietus] Draw 3. Apply Linked to those cards for this turn."
+                }
               }
+            },
+            {
+              "cardId": "c_30093_cre1",
+              "name": "Effulgent Blade",
+              "cost": 1
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -53,28 +66,46 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
+            },
+            {
+              "cardId": "c_30093_cre1",
+              "name": "Effulgent Blade",
+              "cost": 1
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Effulgent Expansion I",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 2 Effulgent Blade. +70% Damage Amount to Effulgent Blade for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
+            },
+            {
+              "cardId": "c_30093_uni4_mut1",
+              "name": "Effulgent Release",
+              "cost": 0
             }
           ]
         },
@@ -87,9 +118,9 @@
       ]
     },
     {
-      "id": "part-2",
+      "id": "notes",
       "title": {
-        "en": "Part 2"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -119,55 +150,69 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Hero to All IV",
+                "text": {
+                  "en": "[Exhaust 2] Select 1 card from either Draw Pile or Discard Pile, then apply Linked to that card and move to hand."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Thread of Light III",
+                "text": {
+                  "en": "[Linked] [Quietus] 100% Damage. If this card is in hand or Graveyard, +80% Damage Amount to Linked cards."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             }
           ]
@@ -196,56 +241,105 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Sword Rain V",
+                "text": {
+                  "en": "[Exhaust] [Finale] [Retain] [Unique] 500% Damage to all enemies. If Effulgent Release is in hand, Exhaust it, and +100% Damage Amount to this card for each Effulgent Blade in Graveyard."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Hero to All IV",
+                "text": {
+                  "en": "[Exhaust 2] Select 1 card from either Draw Pile or Discard Pile, then apply Linked to that card and move to hand."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -273,63 +367,96 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hero to All I",
+                "text": {
+                  "en": "[Linked] [Quietus] Draw 3. Apply Linked to those cards for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Thread of Light III",
+                "text": {
+                  "en": "[Linked] [Quietus] 100% Damage. If this card is in hand or Graveyard, +80% Damage Amount to Linked cards."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Effulgent Expansion V",
+                "text": {
+                  "en": "[Quietus] [Unique] At the start of the turn, create 2 Effulgent Blade. +50% Damage Amount to Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -346,48 +473,78 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Sword Rain",
+                "text": {
+                  "en": "[Linked] 80% Damage × 2. Attunement: Create 1 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Hero to All IV",
+                "text": {
+                  "en": "[Exhaust 2] Select 1 card from either Draw Pile or Discard Pile, then apply Linked to that card and move to hand."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Effulgent Expansion IV",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 6 Effulgent Blade in Discard Pile."
+                }
               }
             }
           ]
@@ -411,55 +568,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Sword Rain I",
+                "text": {
+                  "en": "[Linked] [Quietus] 80% Damage × 2. Attunement: Create 2 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hero to All I",
+                "text": {
+                  "en": "[Linked] [Quietus] Draw 3. Apply Linked to those cards for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Thread of Light IV",
+                "text": {
+                  "en": "[Linked] [Exhaust] Proc all Linked cards in hand without Discarding them."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Thread of Light II",
+                "text": {
+                  "en": "[Linked] [Haste] 300% Damage. If 3 or more Linked cards are in hand before activation, 3x the Damage."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Thread of Light II",
+                "text": {
+                  "en": "[Linked] [Haste] 300% Damage. If 3 or more Linked cards are in hand before activation, 3x the Damage."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Thread of Light II",
+                "text": {
+                  "en": "[Linked] [Haste] 300% Damage. If 3 or more Linked cards are in hand before activation, 3x the Damage."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Effulgent Expansion V",
+                "text": {
+                  "en": "[Quietus] [Unique] At the start of the turn, create 2 Effulgent Blade. +50% Damage Amount to Effulgent Blade."
+                }
               }
             }
           ]
@@ -479,55 +671,69 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Hero to All IV",
+                "text": {
+                  "en": "[Exhaust 2] Select 1 card from either Draw Pile or Discard Pile, then apply Linked to that card and move to hand."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Thread of Light III",
+                "text": {
+                  "en": "[Linked] [Quietus] 100% Damage. If this card is in hand or Graveyard, +80% Damage Amount to Linked cards."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Effulgent Expansion I",
+                "text": {
+                  "en": "[Linked] [Quietus] Create 2 Effulgent Blade. +70% Damage Amount to Effulgent Blade for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Effulgent Expansion V",
+                "text": {
+                  "en": "[Quietus] [Unique] At the start of the turn, create 2 Effulgent Blade. +50% Damage Amount to Effulgent Blade."
+                }
               }
             }
           ]
@@ -556,41 +762,66 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hero to All I",
+                "text": {
+                  "en": "[Linked] [Quietus] Draw 3. Apply Linked to those cards for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hero to All I",
+                "text": {
+                  "en": "[Linked] [Quietus] Draw 3. Apply Linked to those cards for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Thread of Light IV",
+                "text": {
+                  "en": "[Linked] [Exhaust] Proc all Linked cards in hand without Discarding them."
+                }
               }
             },
             {
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
-              "note": {
-                "en": ""
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Thread of Light IV",
+                "text": {
+                  "en": "[Linked] [Exhaust] Proc all Linked cards in hand without Discarding them."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Effulgent Expansion V",
+                "text": {
+                  "en": "[Quietus] [Unique] At the start of the turn, create 2 Effulgent Blade. +50% Damage Amount to Effulgent Blade."
+                }
               }
             }
           ]
@@ -602,56 +833,84 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Sword Rain",
+                "text": {
+                  "en": "[Linked] 80% Damage × 2. Attunement: Create 1 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Sword Rain",
+                "text": {
+                  "en": "[Linked] 80% Damage × 2. Attunement: Create 1 Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Hero to All V",
+                "text": {
+                  "en": "[Haste] Draw 2 Attack Cards of this unit. Apply Linked to all Attack Cards in hand for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Hero to All V",
+                "text": {
+                  "en": "[Haste] Draw 2 Attack Cards of this unit. Apply Linked to all Attack Cards in hand for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Hero to All V",
+                "text": {
+                  "en": "[Haste] Draw 2 Attack Cards of this unit. Apply Linked to all Attack Cards in hand for this turn."
+                }
               }
             },
             {
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Effulgent Expansion V",
+                "text": {
+                  "en": "[Quietus] [Unique] At the start of the turn, create 2 Effulgent Blade. +50% Damage Amount to Effulgent Blade."
+                }
               }
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             }
           ]
         },
@@ -677,7 +936,7 @@
               "name": "Sylvia",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Greater then base Solia and Max Rosaria by 15% roughly"
               }
             },
             {
@@ -685,7 +944,7 @@
               "name": "Solia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Base dmg is slightly better then Rosaria, but bad Ego Skill"
               }
             },
             {
@@ -693,7 +952,7 @@
               "name": "Rosaria",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Always gonna be the Default Ranger Partner"
               }
             },
             {
@@ -701,7 +960,7 @@
               "name": "Daisy",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral on Ego, instead of Draw, largely preference"
               }
             },
             {
@@ -709,16 +968,10 @@
               "name": "Nakia",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Weak Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sylvia: Greater then base Solia and Max Rosaria by 15% roughly\nSolia: Base dmg is slightly better then Rosaria, but bad Ego Skill\nRosaria: Always gonna be the Default Ranger Partner\nDaisy: Moral on Ego, instead of Draw, largely preference\nNakia: Weak Stat Stick"
-          }
         }
       ]
     },
@@ -729,16 +982,52 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "The majority of Heide's damage comes from 1 cost Effulgent Blades or Sword Rain\nEspecially good increase, if you aren't running Sylvia, but still best with Sylvia"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Prelude | Executioners"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Prelude",
+              "setId": 26,
+              "name": "Prelude to a Hero",
+              "pieces": 4,
+              "bonus": "When a Passion/Void Attack Card is Discarded, +15% Crit Chance for 1 turn (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_026.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -747,10 +1036,28 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "BlackWing | Executioners | Flex"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "BlackWing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioners",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Flex"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -792,6 +1099,7 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -830,17 +1138,11 @@
               "cardId": "n_0048",
               "name": "Forgotten Grave",
               "note": {
-                "en": ""
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },
               "rating": "2/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-          }
         },
         {
           "type": "prose",
@@ -1203,9 +1505,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -1215,7 +1517,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "If you need the moral to reach cap, this is always good"
               },
               "rating": "5/5"
             },
@@ -1223,13 +1525,14 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but stronger and more conditional"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1240,7 +1543,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
           }
         },
         {
@@ -1249,6 +1552,7 @@
             {
               "cardId": "c_30093_uni4",
               "name": "Effulgent Compression",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1269,48 +1573,62 @@
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_srt4",
-              "name": "Sword Rain",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30093_srt4",
-              "name": "Sword Rain",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_srt4",
-              "name": "Sword Rain",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30093_srt4",
-              "name": "Sword Rain",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Sword Rain I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Attunement for 2 blades is great, but having Quietus means you can't abuse Attunement"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Sword Rain II",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Able to be Attunement Abused, but 2 cost is very very bad, I'd take Rain 0 over this"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Sword Rain III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "This is actually a pretty funny build around"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Sword Rain IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Spending AP to create Blades feels bad, and retrieve is not very important"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Sword Rain V",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Extremely Niche, basically just turns Effulgent Release into an AOE, but it has Retain Exhaust"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Rain 1: Attunement for 2 blades is great, but having Quietus means you can't abuse Attunement\nRain 2: Able to be Attunement Abused, but 2 cost is very very bad, I'd take Rain 0 over this\nRain 3: This is actually a pretty funny build around\nRain 4: Spending AP to create Blades feels bad, and retrieve is not very important\nRain 5: Extremely Niche, basically just turns Effulgent Release into an AOE, but it has Retain Exhaust\nRain 0 is actually good, since it doesn't have Quietus and Thus can be Abused for Attunement Blades"
+            "en": "Rain 0 is actually good, since it doesn't have Quietus and Thus can be Abused for Attunement Blades"
           }
         },
         {
@@ -1320,49 +1638,57 @@
               "cardId": "c_30093_uni2",
               "name": "Thread of Light",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30093_uni2",
-              "name": "Thread of Light",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30093_uni2",
-              "name": "Thread of Light",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_uni2",
-              "name": "Thread of Light",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30093_uni2",
-              "name": "Thread of Light",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Thread of Light I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Alot of damage"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Thread of Light II",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Alot Alot of damage but is 2 Cost so stinky"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Thread of Light III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Great way to buff Effulgent Blades, and also has Quietus so its free activation damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Thread of Light IV",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Stinky, why does this have Exhaust? Like actually ruined potential because of it"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Thread of Light V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Source of AOE for Heide but not exactly interesting beyond that"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Thread 1: Alot of damage\nThread 2: Alot Alot of damage but is 2 Cost so stinky\nThread 3: Great way to buff Effulgent Blades, and also has Quietus so its free activation damage\nThread 4: Stinky, why does this have Exhaust? Like actually ruined potential because of it\nThread 5: Source of AOE for Heide but not exactly interesting beyond that"
-          }
         },
         {
           "type": "card-list",
@@ -1371,49 +1697,57 @@
               "cardId": "c_30093_uni1",
               "name": "Hero to All",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_uni1",
-              "name": "Hero to All",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30093_uni1",
-              "name": "Hero to All",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30093_uni1",
-              "name": "Hero to All",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_uni1",
-              "name": "Hero to All",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hero to All I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Gives it link so its even easier to make it a 0 cost draw 3, great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hero to All II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "On average very very bad, since you run your hand dry and have to start using 2+ cost draw"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Hero to All III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just a cantrip that makes you able to discard all of Diana's cards"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Hero to All IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Hero to All V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hero 1: Gives it link so its even easier to make it a 0 cost draw 3, great\nHero 2: On average very very bad, since you run your hand dry and have to start using 2+ cost draw\nHero 3: Just a cantrip that makes you able to discard all of Diana's cards\nHero 4: 0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good\nHero 5: Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
-          }
         },
         {
           "type": "card-list",
@@ -1422,49 +1756,57 @@
               "cardId": "c_30093_uni3",
               "name": "Effulgent Expansion",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30093_uni3",
-              "name": "Effulgent Expansion",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30093_uni3",
-              "name": "Effulgent Expansion",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30093_uni3",
-              "name": "Effulgent Expansion",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30093_uni3",
-              "name": "Effulgent Expansion",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "6/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Effulgent Expansion I",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Linked makes it easy to discard, great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Effulgent Expansion II",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "no link, but damage comes out faster 2 vs 6 blades, but also is capped at 400%"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Effulgent Expansion III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Can feel very very bad, not a consistent way of making Blades"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Effulgent Expansion IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "The highest Blade per card from Heide, but you can't get Discard damage"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Effulgent Expansion V",
+                  "cost": 2,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "QUIETUS UNIQUE UPGRADE, Amazingly consistent blade generation and deck thinning"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Expansion 1: Linked makes it easy to discard, great\nExpansion 2: no link, but damage comes out faster 2 vs 6 blades, but also is capped at 400%\nExpansion 3: Can feel very very bad, not a consistent way of making Blades\nExpansion 4: The highest Blade per card from Heide, but you can't get Discard damage\nExpansion 5: QUIETUS UNIQUE UPGRADE, Amazingly consistent blade generation and deck thinning"
-          }
         }
       ]
     },
@@ -1478,59 +1820,131 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                30093,
-                1049,
-                1043
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1049,
-                1005
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1056,
-                1003
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1049,
-                1003
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1049,
-                30084
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1003,
-                1005
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1061,
-                1003
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
               ]
             },
             {
-              "faces": [
-                30093,
-                1061,
-                1049
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -1542,60 +1956,135 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1003,
-                1049,
-                1055,
-                1033,
-                1043,
-                1004
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "Discard"
               },
-              "faces": [
-                1049,
-                1003,
-                1061
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff/Debuff"
               },
-              "faces": [
-                1049,
-                1055,
-                1056,
-                1062,
-                1050,
-                1039,
-                30097,
-                1005,
-                1021
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
               ]
             },
             {
               "title": {
                 "en": "Sub DPS"
               },
-              "faces": [
-                1043,
-                1005,
-                30113
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                1003,
-                1033,
-                1039,
-                30084
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             }
           ]

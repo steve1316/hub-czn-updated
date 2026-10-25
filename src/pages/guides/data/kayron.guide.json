@@ -15,35 +15,34 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Echo of Futility I",
+                "text": {
+                  "en": "480% Damage. Create 3 Futility."
+                }
               }
             },
             {
               "cardId": "c_1064_cre1",
               "name": "Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_cre1",
               "name": "Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_eps",
               "name": "Rift of Nothingness",
-              "note": {
-                "en": ""
-              }
+              "cost": 5
             }
           ]
         },
@@ -60,20 +59,30 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oath of Vanity I",
+                "text": {
+                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 150% Damage and Heal effects."
+                }
               }
             },
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Oath of Vanity II",
+                "text": {
+                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                }
               }
             }
           ]
@@ -85,27 +94,41 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
               }
             },
             {
               "cardId": "c_1064_uni2",
               "name": "Black Hole",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Black Hole II",
+                "text": {
+                  "en": "360% Damage. +60% base Damage Amount for each Futility Exhausted."
+                }
+              },
+              "extra": {
+                "id": "com_0132",
+                "text": {
+                  "en": "1 Immunity."
+                }
               }
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             }
           ]
         },
@@ -144,47 +167,55 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
               }
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_uni2",
               "name": "Black Hole",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Black Hole II",
+                "text": {
+                  "en": "360% Damage. +60% base Damage Amount for each Futility Exhausted."
+                }
+              },
+              "extra": {
+                "id": "com_0132",
+                "text": {
+                  "en": "1 Immunity."
+                }
               }
             }
           ]
@@ -202,59 +233,70 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
+              "cost": -1,
+              "epiphany": {
+                "level": 4,
+                "name": "Echo of Futility IV",
+                "text": {
+                  "en": "150% Damage. +150% Damage Amount for each X. Create X+1 Futility."
+                }
               }
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Oath of Vanity II",
+                "text": {
+                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                }
               }
             },
             {
               "cardId": "c_1064_uni2",
               "name": "Black Hole",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Black Hole II",
+                "text": {
+                  "en": "360% Damage. +60% base Damage Amount for each Futility Exhausted."
+                }
+              },
+              "extra": {
+                "id": "com_0132",
+                "text": {
+                  "en": "1 Immunity."
+                }
               }
             },
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -277,59 +319,40 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "n_0010",
-              "name": "Attack!",
-              "note": {
-                "en": ""
-              }
+              "name": "Attack!"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -348,52 +371,52 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
               }
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_tut1",
-              "note": {
-                "en": ""
-              }
+              "cost": 3
             },
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Oath of Vanity II",
+                "text": {
+                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                }
               }
             },
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             }
           ]
         },
@@ -419,7 +442,7 @@
               "name": "Bria",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "With the addition of Tiphera, we have a good support to exhaust futilities, a dump isn't as required"
               }
             },
             {
@@ -427,7 +450,7 @@
               "name": "Eloise",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Really good damage for Kayron and the ego isn't too bad"
               }
             },
             {
@@ -435,16 +458,10 @@
               "name": "Zatera",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Atk% Stat stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Bria: With the addition of Tiphera, we have a good support to exhaust futilities, a dump isn't as required\nEloise: Really good damage for Kayron and the ego isn't too bad\nZatera: Atk% Stat stick"
-          }
         },
         {
           "type": "partner-list",
@@ -474,16 +491,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Void",
+              "setId": 16,
+              "name": "Offering of the Void",
+              "pieces": 4,
+              "bonus": "+20% Void DMG after Exhaust (1 turn)",
+              "icon": "/assets/pieces/icon_piece_set_016.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Void set goes crazy with Kayron's Multiplicative scaling"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Blackwing | Executioner | Cursed Corpse"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -492,10 +553,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -564,9 +640,9 @@
       ]
     },
     {
-      "id": "part-9",
+      "id": "notes",
       "title": {
-        "en": "Part 9"
+        "en": "Notes"
       },
       "blocks": [
         {
@@ -610,9 +686,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -622,7 +698,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "1 AP Draw 4 with 2 exhaust is amazing"
               },
               "rating": "4/5"
             },
@@ -630,7 +706,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Tutoring out a card and giving it retrieve is amazing"
               },
               "rating": "4/5"
             },
@@ -638,7 +714,7 @@
               "cardId": "m_0026",
               "name": "Vine Lord",
               "note": {
-                "en": ""
+                "en": "Drawing 6 exhaust cards is a bit excessive, but Vinelord isn't terrible"
               },
               "rating": "4/5"
             },
@@ -646,7 +722,7 @@
               "cardId": "m_0022",
               "name": "Soldier Prime",
               "note": {
-                "en": ""
+                "en": "Celestial Activator that refunds"
               },
               "rating": "4/5"
             }
@@ -655,46 +731,32 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nVine Lord: Drawing 6 exhaust cards is a bit excessive, but Vinelord isn't terrible\nSoldier Prime: Celestial Activator that refunds\nHunger: 2 Moral if you're going support"
+            "en": "Hunger: 2 Moral if you're going support"
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
-              "note": {
-                "en": ""
-              }
+              "cost": 2
             },
             {
               "cardId": "n_0136",
-              "name": "Wanderer of the Void",
-              "note": {
-                "en": ""
-              }
+              "name": "Wanderer of the Void"
             },
             {
               "cardId": "n_0112",
-              "name": "Rally",
-              "note": {
-                "en": ""
-              }
+              "name": "Rally"
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             },
             {
               "cardId": "n_0115",
-              "name": "Reorganize",
-              "note": {
-                "en": ""
-              }
+              "name": "Reorganize"
             }
           ]
         },
@@ -741,49 +803,57 @@
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1064_srt4",
-              "name": "Echo of Futility",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1064_srt4",
-              "name": "Echo of Futility",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_srt4",
-              "name": "Echo of Futility",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1064_srt4",
-              "name": "Echo of Futility",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Echo of Futility I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "1 AP is bad, but VERY HIGH base damage and also 3 instead of 2 Futility faster scaling"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Echo of Futility II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "1 AP and Slow scaling is bad"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Echo of Futility III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "1 Ap, 2 Ephemeral for 2 Futility scaling for free, great value"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Echo of Futility IV",
+                  "cost": -1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Compensates for your team having Excess AP, but not enough draw for other Echo versions"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Echo of Futility V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "ZERO COST? AND SCALING DAMAGE? THATS CRAZY"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Echo 1: 1 AP is bad, but VERY HIGH base damage and also 3 instead of 2 Futility faster scaling\nEcho 2: 1 AP and Slow scaling is bad\nEcho 3: 1 Ap, 2 Ephemeral for 2 Futility scaling for free, great value\nEcho 4: Compensates for your team having Excess AP, but not enough draw for other Echo versions\nEcho 5: ZERO COST? AND SCALING DAMAGE? THATS CRAZY"
-          }
         },
         {
           "type": "card-list",
@@ -792,85 +862,98 @@
               "cardId": "c_1064_uni2",
               "name": "Black Hole",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1064_uni2",
-              "name": "Black Hole",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1064_uni2",
-              "name": "Black Hole",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1064_uni2",
-              "name": "Black Hole",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1064_uni2",
-              "name": "Black Hole",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Black Hole I",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Only if you don't have Bria and/or Kayron E3, or Oath 4, and you don't have AP to play them"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Black Hole II",
+                  "cost": 2,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Scaling damage option, big number and higher damage per Futility then Upgrade"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Black Hole III",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Funny 5 hit if you wanna go additive for Kayron"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Black Hole IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "The scaling on this is only VERY slightly higher then Hole 2, and not infinite, but its Multi hit"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Black Hole V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Set it and forget it"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hole 1: Only if you don't have Bria and/or Kayron E3, or Oath 4, and you don't have AP to play them\nHole 2: Scaling damage option, big number and higher damage per Futility then Upgrade\nHole 3: Funny 5 hit if you wanna go additive for Kayron\nHole 4: The scaling on this is only VERY slightly higher then Hole 2, and not infinite, but its Multi hit\nHole 5: Set it and forget it"
-          }
         },
         {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1064_tut1",
+              "cost": 3,
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1064_tut1",
+              "cost": 3,
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1064_tut1",
+              "cost": 3,
               "note": {
-                "en": "Epiphany III"
+                "en": ""
               },
               "rating": "5/5"
             },
             {
               "cardId": "c_1064_tut1",
+              "cost": 3,
               "note": {
-                "en": "Epiphany IV"
+                "en": ""
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1064_tut1",
+              "cost": 3,
               "note": {
-                "en": "Epiphany V"
+                "en": ""
               },
               "rating": "0/5"
             }
@@ -889,32 +972,44 @@
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_uni3",
-              "name": "Oath of Vanity",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_uni3",
-              "name": "Oath of Vanity",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Oath of Vanity I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Just upgraded, if you want Heals as well as damage"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Oath of Vanity II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Oath of Vanity III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "The best Futility use Oath, increasing the damage by over double"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Oath 1: Just upgraded, if you want Heals as well as damage\nOath 2: Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3\nOath 3: The best Futility use Oath, increasing the damage by over double\nOath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
+            "en": "Oath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
           }
         }
       ]
@@ -929,58 +1024,127 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1064,
-                1008,
-                1039
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1033,
-                1039
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1056,
-                1039
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1024,
-                1033
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                30047
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1056,
-                1009
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                }
               ]
             },
             {
-              "faces": [
-                1064,
-                1049,
-                1039
+              "members": [
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
-              "faces": [
-                1004,
-                1064,
-                1033
+              "members": [
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1064,
+                  "name": "Kayron"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                }
               ]
             }
           ]
@@ -992,51 +1156,99 @@
               "title": {
                 "en": "Draw/Discard"
               },
-              "faces": [
-                1033,
-                1008,
-                1049,
-                1004
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buff Debuff"
               },
-              "faces": [
-                1056,
-                1010,
-                1050,
-                1024
+              "members": [
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
               "title": {
                 "en": "Exhaust Support"
               },
-              "faces": [
-                1008,
-                1010,
-                30047
+              "members": [
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                }
               ]
             },
             {
               "title": {
                 "en": "Spam Exhaust"
               },
-              "faces": [
-                1024,
-                1004,
-                1009,
-                1060
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1009,
+                  "name": "Tressa"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Gen"
               },
-              "faces": [
-                1039
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]

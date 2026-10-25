@@ -15,21 +15,17 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -62,49 +58,51 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni3",
               "name": "Oh... I see.",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Oh... I see. IV",
+                "text": {
+                  "en": "At the end of the turn, Fixed Damage equal to 50% of Shield owned to the enemy with the lowest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -138,49 +136,65 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Wolves' Dome IV",
+                "text": {
+                  "en": "2 Counterattack. For 1 turn, 2 Resolve."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1028_uni3",
               "name": "Oh... I see.",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Oh... I see. IV",
+                "text": {
+                  "en": "At the end of the turn, Fixed Damage equal to 50% of Shield owned to the enemy with the lowest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -210,35 +224,47 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Resolute Blitz V",
+                "text": {
+                  "en": "At the end of the turn, 1 Counterattack. 210% Defense-Based Damage to random enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
               }
             },
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1028_uni3",
               "name": "Oh... I see.",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Oh... I see. V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, 25% Fixed Shield equal to number of the own Counterattack."
+                }
               }
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
-              "note": {
-                "en": ""
-              }
+              "name": "Residual Herb"
             }
           ]
         },
@@ -266,27 +292,42 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resolute Blitz IV",
+                "text": {
+                  "en": "[Pulverize] 210% Defense-Based Damage. 20% DMG-Based Shield. Increases Damage Amount equal to 30% of Shield owned."
+                }
               }
             },
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Wolves' Dome V",
+                "text": {
+                  "en": "[Lead] At the start of the turn, 2 Counterattack. +20% Damage Amount to Counterattacks of this unit."
+                }
               }
             },
             {
               "cardId": "c_1028_uni3",
               "name": "Oh... I see.",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Oh... I see. V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, 25% Fixed Shield equal to number of the own Counterattack."
+                }
               }
             }
           ]
@@ -313,7 +354,7 @@
               "name": "Eishlen",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Buffs Def and HP to enable higher Shield Maximum 4 EP Shield Retain is backup"
               }
             },
             {
@@ -321,7 +362,7 @@
               "name": "Erica",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Helps with CounterAttack generation and also highest CounterAttack dmg buffer"
               }
             },
             {
@@ -329,7 +370,7 @@
               "name": "Rachel",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "You only use her for the Draw Ego"
               }
             },
             {
@@ -337,16 +378,10 @@
               "name": "Wilhelmina",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Basic Stat Stick"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Eishlen: Buffs Def and HP to enable higher Shield Maximum 4 EP Shield Retain is backup\nWilhelmina: Basic Stat Stick\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel:You only use her for the Draw Ego"
-          }
         },
         {
           "type": "partner-list",
@@ -356,7 +391,7 @@
               "name": "Alsea",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "Only a Stat Stick, nothing else at all"
               }
             },
             {
@@ -364,7 +399,7 @@
               "name": "Akad",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "If you're really afraid Shelter Strike won't crit, he has a good Ego ig"
               }
             },
             {
@@ -372,16 +407,10 @@
               "name": "Raidel",
               "rating": "0/5",
               "note": {
-                "en": ""
+                "en": "Trash"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Alsea: Only a Stat Stick, nothing else at all\nAkad: If you're really afraid Shelter Strike won't crit, he has a good Ego ig\nRaidel: Trash"
-          }
         }
       ]
     },
@@ -392,10 +421,25 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -410,10 +454,33 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tetra | Executioner | Healer's"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Healer's",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "icon": "/assets/pieces/icon_piece_set_008.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -422,10 +489,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Prelude | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Prelude",
+              "setId": 26,
+              "name": "Prelude to a Hero",
+              "pieces": 4,
+              "bonus": "When a Passion/Void Attack Card is Discarded, +15% Crit Chance for 1 turn (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_026.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -532,9 +614,9 @@
       ]
     },
     {
-      "id": "part-10",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 10"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -544,7 +626,7 @@
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
               "note": {
-                "en": ""
+                "en": "Amazing draw"
               },
               "rating": "5/5"
             },
@@ -552,7 +634,7 @@
               "cardId": "m_0024",
               "name": "Spirit Kefox",
               "note": {
-                "en": ""
+                "en": "Amazing Tutor"
               },
               "rating": "5/5"
             },
@@ -560,7 +642,7 @@
               "cardId": "m_0009",
               "name": "Dominion",
               "note": {
-                "en": ""
+                "en": "Very expensive memory wise and takes a long time to scale"
               },
               "rating": "3/5"
             },
@@ -585,7 +667,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
+            "en": "Residual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
           }
         },
         {
@@ -594,8 +676,9 @@
             {
               "cardId": "c_1028_uni4",
               "name": "Shelter Strike",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Fixed damage, that can be huge"
               },
               "rating": "4/5"
             },
@@ -611,59 +694,72 @@
               "cardId": "n_0121",
               "name": "Sadism",
               "note": {
+                "en": "A way to make sure your Prism always works, it can be pretty good with some neutral epi"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Belligerence is a great draw Neutral because Mari can thin her deck and remove her attacks"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
+              "note": {
                 "en": ""
               },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Resolute Blitz I",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 Counter + High base"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Resolute Blitz II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "1 but worse"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Resolute Blitz III",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "AOE but expensive"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Resolute Blitz IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Gain dmg off of Shield"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Shelter Strike: Fixed damage, that can be huge\nBelligerence is a great draw Neutral because Mari can thin her deck and remove her attacks\nSadism: A way to make sure your Prism always works, it can be pretty good with some neutral epi"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "note": {
-                "en": "Epiphany I"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Resolute 1: 2 Counter + High base\nResolute 2: 1 but worse\nResolute 3: AOE but expensive\nResolute 4: Gain dmg off of Shield\nResolute 5: Upgrade that gains counterattack"
+            "en": "Resolute 5: Upgrade that gains counterattack"
           }
         },
         {
@@ -673,41 +769,55 @@
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1028_uni2",
-              "name": "Wolves' Dome",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1028_uni2",
-              "name": "Wolves' Dome",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_uni2",
-              "name": "Wolves' Dome",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1028_uni2",
-              "name": "Wolves' Dome",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Wolves' Dome I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Wolves' Dome II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Wolves' Dome III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Wolves' Dome IV",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Wolves' Dome V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -724,49 +834,57 @@
               "cardId": "c_1028_uni1",
               "name": "Maribell Shelter MK.II",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_uni1",
-              "name": "Maribell Shelter MK.II",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_uni1",
-              "name": "Maribell Shelter MK.II",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1028_uni1",
-              "name": "Maribell Shelter MK.II",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1028_uni1",
-              "name": "Maribell Shelter MK.II",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Maribell Shelter MK.II I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "AOE"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Maribell Shelter MK.II II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "1 cost"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Maribell Shelter MK.II III",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 Cost"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Maribell Shelter MK.II IV",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "+500% is kinda funny"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Maribell Shelter MK.II V",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "0 Cost"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shelter 1: AOE\nShelter 2: 1 cost\nShelter 3: 2 Cost\nShelter 4: +500% is kinda funny\nShelter 5: 0 Cost"
-          }
         },
         {
           "type": "card-list",
@@ -775,41 +893,55 @@
               "cardId": "c_1028_uni3",
               "name": "Oh... I see.",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_uni3",
-              "name": "Oh... I see.",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_uni3",
-              "name": "Oh... I see.",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1028_uni3",
-              "name": "Oh... I see.",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1028_uni3",
-              "name": "Oh... I see.",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Oh... I see. I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Oh... I see. II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Oh... I see. III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Oh... I see. IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Oh... I see. V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -831,38 +963,83 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1028,
-                1033,
-                30084
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
               ]
             },
             {
-              "faces": [
-                1028,
-                1052,
-                1050
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                1028,
-                1033,
-                1052
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
-              "faces": [
-                1028,
-                1055,
-                1050
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
-              "faces": [
-                1028,
-                1010,
-                1008
+              "members": [
+                {
+                  "charResId": 1028,
+                  "name": "Maribell"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                }
               ]
             }
           ]
@@ -874,52 +1051,103 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1055,
-                1033,
-                1003,
-                1049
+              "members": [
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
               "title": {
                 "en": "Shield Gen"
               },
-              "faces": [
-                1033,
-                1055,
-                1052,
-                30084,
-                1050
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engines"
               },
-              "faces": [
-                30084,
-                1052,
-                1039
+              "members": [
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             },
             {
               "title": {
                 "en": "Extra Hit"
               },
-              "faces": [
-                1050
+              "members": [
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                }
               ]
             },
             {
               "title": {
                 "en": "CounterAttack"
               },
-              "faces": [
-                1010,
-                1008,
-                30047,
-                1017
+              "members": [
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1008,
+                  "name": "Khalipe"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                }
               ]
             }
           ]

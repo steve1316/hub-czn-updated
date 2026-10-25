@@ -15,42 +15,53 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Opening Found V",
+                "text": {
+                  "en": "When a card of this unit is Retained, 150% Extra Attack to random enemies."
+                }
               }
             },
             {
               "cardId": "c_1040_uni1",
               "name": "Charged Shot",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Charged Shot I",
+                "text": {
+                  "en": "[Retain] 360% Damage. Retain: +180% Damage Amount."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_col",
               "name": "Daze",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -69,70 +80,64 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1040_uni1",
               "name": "Charged Shot",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Charged Shot I",
+                "text": {
+                  "en": "[Retain] 360% Damage. Retain: +180% Damage Amount."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Guilty Pleasure V",
+                "text": {
+                  "en": "[Unique] [Exhaust 2] Draw 3."
+                }
               }
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": ""
-              }
+              "name": "Spore Harvester"
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": ""
-              }
+              "name": "Spore Harvester"
             },
             {
               "cardId": "c_1040_uni4",
               "name": "Heavy Weapons Specialist",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -155,48 +160,71 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Guilty Pleasure I",
+                "text": {
+                  "en": "[Exhaust] Draw 3. 1 Morale."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Guilty Pleasure I",
+                "text": {
+                  "en": "[Exhaust] Draw 3. 1 Morale."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Guilty Pleasure I",
+                "text": {
+                  "en": "[Exhaust] Draw 3. 1 Morale."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Guilty Pleasure I",
+                "text": {
+                  "en": "[Exhaust] Draw 3. 1 Morale."
+                }
               }
             },
             {
               "cardId": "c_1040_uni3",
               "name": "Unlimited Firepower",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Unlimited Firepower V",
+                "text": {
+                  "en": "Increases Damage Amount of Attacks Cards of this unit by 30%."
+                }
               }
             }
           ]
@@ -214,56 +242,84 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Opening Found III",
+                "text": {
+                  "en": "[Retain] 110% Damage. Retain: Add 2 Hit(s) for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1040_uni1",
               "name": "Charged Shot",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Charged Shot I",
+                "text": {
+                  "en": "[Retain] 360% Damage. Retain: +180% Damage Amount."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni3",
               "name": "Unlimited Firepower",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -280,56 +336,76 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Guilty Pleasure IV",
+                "text": {
+                  "en": "Draw 1. Activate all Retain effects of cards of this unit in hand."
+                }
               }
             },
             {
               "cardId": "c_1040_uni3",
               "name": "Unlimited Firepower",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Unlimited Firepower V",
+                "text": {
+                  "en": "Increases Damage Amount of Attacks Cards of this unit by 30%."
+                }
               }
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": ""
-              }
+              "name": "Spore Harvester"
             }
           ]
         },
@@ -355,7 +431,7 @@
               "name": "Rosaria",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "is god"
               }
             },
             {
@@ -363,7 +439,7 @@
               "name": "Daisy",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Beats Nakia if you have max dupes"
               }
             },
             {
@@ -371,7 +447,7 @@
               "name": "Nakia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Don't go this over Rosaria"
               }
             },
             {
@@ -379,16 +455,10 @@
               "name": "Ritochika",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "3 EP Ego Skill (Technically Rosaria can generate this much each time, but its RNG)"
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Rosaria: is god\nDaisy: Beats Nakia if you have max dupes\nNakia: Don't go this over Rosaria\nRitochika: 3 EP Ego Skill (Technically Rosaria can generate this much each time, but its RNG)"
-          }
         },
         {
           "type": "partner-list",
@@ -398,7 +468,7 @@
               "name": "Solia",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "If you go AFK Retain, then Solia rises up in Value, Rosaria wins if she can gen Moral tho"
               }
             },
             {
@@ -406,7 +476,7 @@
               "name": "Marin",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "You mainly play her for her Ego Skill to pull Guilty Pleasure, 3 EP to Tutor is great"
               }
             }
           ]
@@ -414,7 +484,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Solia: If you go AFK Retain, then Solia rises up in Value, Rosaria wins if she can gen Moral tho\nMarin: You mainly play her for her Ego Skill to pull Guilty Pleasure, 3 EP to Tutor is great\nAlso she requires dupes to reach the same Atk%"
+            "en": "Also she requires dupes to reach the same Atk%"
           }
         }
       ]
@@ -426,16 +496,60 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Blackwing",
+              "setId": 9,
+              "name": "Black Wing",
+              "pieces": 2,
+              "bonus": "+12% Attack",
+              "icon": "/assets/pieces/icon_piece_set_009.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            },
+            {
+              "label": "Cursed Corpse",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "icon": "/assets/pieces/icon_piece_set_019.png"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Increases Opening Found Upgrade, or everything in general"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -444,10 +558,25 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Conqueror | Executioner"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Conqueror",
+              "setId": 6,
+              "name": "Conqueror's Aspect",
+              "pieces": 4,
+              "bonus": "+35% Crit DMG of 1-cost cards",
+              "icon": "/assets/pieces/icon_piece_set_006.png"
+            },
+            {
+              "label": "Executioner",
+              "setId": 11,
+              "name": "Executioner's Tool",
+              "pieces": 2,
+              "bonus": "+25% Crit Damage",
+              "icon": "/assets/pieces/icon_piece_set_011.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -548,9 +677,9 @@
       ]
     },
     {
-      "id": "part-8",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 8"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -584,7 +713,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Helps exhaust Forgotten Grave"
               },
               "rating": "4/5"
             },
@@ -592,7 +721,7 @@
               "cardId": "n_0011",
               "name": "Azure Lumen",
               "note": {
-                "en": ""
+                "en": "Ig it exists to exaust stuff"
               },
               "rating": "2/5"
             }
@@ -601,7 +730,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Spores are very good at triggering opening found\nAnd you could use Guilty 4 to create a ton\nMushroom Ammo + Guilty 4 + Spore is a funny idea, but the ratios aren't that high\nNutrient: Helps exhaust Forgotten Grave\nAzure: Ig it exists to exaust stuff"
+            "en": "Spores are very good at triggering opening found\nAnd you could use Guilty 4 to create a ton\nMushroom Ammo + Guilty 4 + Spore is a funny idea, but the ratios aren't that high"
           }
         },
         {
@@ -610,8 +739,9 @@
             {
               "cardId": "c_1040_uni4",
               "name": "Heavy Weapons Specialist",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Creates you fodder for Opening Found Upgrade, or is just free damage, good"
               },
               "rating": "5/5"
             },
@@ -619,7 +749,7 @@
               "cardId": "n_0062",
               "name": "Hidden Bullet",
               "note": {
-                "en": ""
+                "en": "Just a good Retain Neutral"
               },
               "rating": "5/5"
             },
@@ -627,7 +757,7 @@
               "cardId": "n_0109",
               "name": "Quick Shelling",
               "note": {
-                "en": ""
+                "en": "Cantrips with damage, never bad"
               },
               "rating": "5/5"
             },
@@ -635,7 +765,7 @@
               "cardId": "n_0070",
               "name": "Leap Attack",
               "note": {
-                "en": ""
+                "en": "Quick Shelling but more conditional"
               },
               "rating": "4/5"
             },
@@ -643,7 +773,7 @@
               "cardId": "n_0075",
               "name": "Negotiate",
               "note": {
-                "en": ""
+                "en": "2 Moral"
               },
               "rating": "4/5"
             }
@@ -652,7 +782,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Beryl basics aren't very good\nSpecialist: Creates you fodder for Opening Found Upgrade, or is just free damage, good\nHidden Bullet: Just a good Retain Neutral\nQuick Shelling: Cantrips with damage, never bad\nLeap Attack: Quick Shelling but more conditional\nNegotiate: 2 Moral"
+            "en": "Beryl basics aren't very good"
           }
         },
         {
@@ -661,6 +791,7 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -669,6 +800,7 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -689,48 +821,62 @@
               "cardId": "c_1040_uni2",
               "name": "Guilty Pleasure",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1040_uni2",
-              "name": "Guilty Pleasure",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Guilty Pleasure I",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "0 AP Draw 3, then 1 Permanent Moral, Very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Guilty Pleasure II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Cost Reduction unimportant"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Guilty Pleasure III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Delayed Draw 2, it's ok"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Guilty Pleasure IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Activates Beryl only retain, not allies, it's ok since it Cantrips, not card positive"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Guilty Pleasure V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Unique, 0 AP Draw 3, good for Run and to not dupe it, it's ok"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Guilty 1: 0 AP Draw 3, then 1 Permanent Moral, Very good\nGuilty 2: Cost Reduction unimportant\nGuilty 3: Delayed Draw 2, it's ok\nGuilty 4: Activates Beryl only retain, not allies, it's ok since it Cantrips, not card positive\nGuilty 5: Unique, 0 AP Draw 3, good for Run and to not dupe it, it's ok\nMoral Neutral Epiphany is great, AP or Draw are also very good"
+            "en": "Moral Neutral Epiphany is great, AP or Draw are also very good"
           }
         },
         {
@@ -740,49 +886,57 @@
               "cardId": "c_1040_uni1",
               "name": "Charged Shot",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1040_uni1",
-              "name": "Charged Shot",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1040_uni1",
-              "name": "Charged Shot",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1040_uni1",
-              "name": "Charged Shot",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1040_uni1",
-              "name": "Charged Shot",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Charged Shot I",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Highest Retain Damage Increase"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Charged Shot II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Terrible"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Charged Shot III",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Eventually can be 0 cost, but bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Charged Shot IV",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "One time Increase, also just weak, terrible"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Charged Shot V",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Worse Scaling then Charged 1, besides that it can Double Dip Buffs"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Charged 1: Highest Retain Damage Increase\nCharged 2: Terrible\nCharged 3: Eventually can be 0 cost, but bad\nCharged 4: One time Increase, also just weak, terrible\nCharged 5: Worse Scaling then Charged 1, besides that it can Double Dip Buffs"
-          }
         },
         {
           "type": "card-list",
@@ -791,49 +945,57 @@
               "cardId": "c_1040_uni3",
               "name": "Unlimited Firepower",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1040_uni3",
-              "name": "Unlimited Firepower",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1040_uni3",
-              "name": "Unlimited Firepower",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1040_uni3",
-              "name": "Unlimited Firepower",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1040_uni3",
-              "name": "Unlimited Firepower",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Unlimited Firepower I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Gives Shield but lower damage increase"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Unlimited Firepower II",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Beryl doesn't spam attacks"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Unlimited Firepower III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Largest Damage Increase for Found Combo"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Unlimited Firepower IV",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Meh (Its the only version that buffs allies)"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Unlimited Firepower V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "It's an Upgrade"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Firepower 1: Gives Shield but lower damage increase\nFirepower 2: Beryl doesn't spam attacks\nFirepower 3: Largest Damage Increase for Found Combo\nFirepower 4: Meh (Its the only version that buffs allies)\nFirepower 5: It's an Upgrade"
-          }
         }
       ]
     },
@@ -847,24 +1009,51 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1040,
-                1024,
-                1056
+              "members": [
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                }
               ]
             },
             {
-              "faces": [
-                1018,
-                1040,
-                1024
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                }
               ]
             },
             {
-              "faces": [
-                30047,
-                1040,
-                1049
+              "members": [
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1040,
+                  "name": "Beryl"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             }
           ]
@@ -876,46 +1065,100 @@
               "title": {
                 "en": "Draw Engines"
               },
-              "faces": [
-                1033,
-                1043,
-                1049
+              "members": [
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
               ]
             },
             {
               "title": {
                 "en": "Buffers/Debuffers"
               },
-              "faces": [
-                1024,
-                1056,
-                1010,
-                1017,
-                1050,
-                1052
+              "members": [
+                {
+                  "charResId": 1024,
+                  "name": "Orlea"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1010,
+                  "name": "Magna"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "AP Engine"
               },
-              "faces": [
-                1039,
-                1052
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 1052,
+                  "name": "Narja"
+                }
               ]
             },
             {
               "title": {
                 "en": "DPS"
               },
-              "faces": [
-                1018,
-                30047,
-                1004,
-                1027,
-                1017,
-                1060,
-                1041
+              "members": [
+                {
+                  "charResId": 1018,
+                  "name": "Rin"
+                },
+                {
+                  "charResId": 30047,
+                  "name": "Nine"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                },
+                {
+                  "charResId": 1027,
+                  "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1017,
+                  "name": "Amir"
+                },
+                {
+                  "charResId": 1060,
+                  "name": "Chizuru"
+                },
+                {
+                  "charResId": 1041,
+                  "name": "Renoa"
+                }
               ]
             }
           ]

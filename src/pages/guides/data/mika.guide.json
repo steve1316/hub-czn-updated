@@ -7,6 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
+  "updated": "8/2",
   "sections": [
     {
       "id": "mika-wave",
@@ -15,20 +16,23 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Tactical Analysis V",
+                "text": {
+                  "en": "2 Wave. +50% Heal Amount."
+                }
               }
             }
           ]
@@ -42,68 +46,94 @@
       ]
     },
     {
-      "id": "part-2",
-      "title": {
-        "en": "Part 2"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Last Edit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "8/2"
-          }
-        }
-      ]
-    },
-    {
       "id": "cycle-0-5-6-ap-140-fm",
       "title": {
         "en": "Cycle 0 | 5/6 AP | 140 FM"
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tactical Analysis I",
+                "text": {
+                  "en": "Heal 50%. 1 Wave. +50% Heal Amount for 2 turns."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -131,49 +161,50 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Tactical Analysis",
+                "text": {
+                  "en": "1 Wave. +50% Heal Amount for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0099",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
               }
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag",
-              "note": {
-                "en": ""
-              }
+              "name": "Gear Bag"
             }
           ]
         },
@@ -201,55 +232,90 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Tactical Analysis III",
+                "text": {
+                  "en": "2 Wave. +100% Heal Amount of this unit for 1 turn."
+                }
               }
             },
             {
               "cardId": "c_1039_uni3",
               "name": "Whirlpool",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Whirlpool V",
+                "text": {
+                  "en": "Heal 100%. 100% Damage to all enemies. Increase Damage Amount equal to Heal Amount of this card."
+                }
               }
             },
             {
               "cardId": "c_1039_uni3",
               "name": "Whirlpool",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Whirlpool V",
+                "text": {
+                  "en": "Heal 100%. 100% Damage to all enemies. Increase Damage Amount equal to Heal Amount of this card."
+                }
               }
             },
             {
               "cardId": "c_1039_uni3",
               "name": "Whirlpool",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Whirlpool V",
+                "text": {
+                  "en": "Heal 100%. 100% Damage to all enemies. Increase Damage Amount equal to Heal Amount of this card."
+                }
               }
             },
             {
               "cardId": "c_1039_uni3",
               "name": "Whirlpool",
-              "note": {
-                "en": ""
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Whirlpool V",
+                "text": {
+                  "en": "Heal 100%. 100% Damage to all enemies. Increase Damage Amount equal to Heal Amount of this card."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Blessing of Waves III",
+                "text": {
+                  "en": "[Retain] Heal 150%. Increase Heal Amount of the next card activated by 20% for each AP."
+                }
               }
             }
           ]
@@ -267,70 +333,87 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "note": {
-                "en": ""
+              "cost": 1
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "name": "Source of Water",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
-            },
-            {
-              "cardId": "c_1039_srt4",
-              "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blessing of Waves II",
+                "text": {
+                  "en": "[Retain] Heal 150%. Increase Heal Amount by 30% for each AP. 1 Wave."
+                }
               }
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -349,49 +432,100 @@
       },
       "blocks": [
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Source of Water II",
+                "text": {
+                  "en": "Heal 150%. Gain 2 AP. On Recover, decrease Cost by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
               }
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Tactical Analysis V",
+                "text": {
+                  "en": "2 Wave. +50% Heal Amount."
+                }
               }
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -413,49 +547,44 @@
           }
         },
         {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "note": {
-                "en": ""
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Tactical Analysis V",
+                "text": {
+                  "en": "2 Wave. +50% Heal Amount."
+                }
               }
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "note": {
-                "en": ""
-              }
+              "cost": 1
             }
           ]
         },
@@ -492,7 +621,7 @@
               "name": "Nyx",
               "rating": "5/5",
               "note": {
-                "en": ""
+                "en": "Best in class, just for the Ego Skill, Everything else is Extra"
               }
             },
             {
@@ -500,7 +629,7 @@
               "name": "Ritochika",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "3 Moral Ego Skill"
               }
             },
             {
@@ -508,7 +637,7 @@
               "name": "Alyssa",
               "rating": "4/5",
               "note": {
-                "en": ""
+                "en": "Moral 1, Def% for heals"
               }
             },
             {
@@ -516,7 +645,7 @@
               "name": "Arwen",
               "rating": "3/5",
               "note": {
-                "en": ""
+                "en": "HP but passive kinda doodoo"
               }
             },
             {
@@ -528,12 +657,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
-          }
         }
       ]
     },
@@ -544,16 +667,55 @@
       },
       "blocks": [
         {
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            },
+            {
+              "label": "Healer",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "icon": "/assets/pieces/icon_piece_set_008.png"
+            },
+            {
+              "label": "Scrab Flex"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Sub stats are more important then full\nScrab/Healer set"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Glory | Tetra"
-          }
+          "type": "set-list",
+          "items": [
+            {
+              "label": "Glory",
+              "setId": 25,
+              "name": "Glory's Reign",
+              "pieces": 4,
+              "bonus": "When an Exhaust Skill Card is created or used, +5% ally DMG (max 15%)",
+              "icon": "/assets/pieces/icon_piece_set_025.png"
+            },
+            {
+              "label": "Tetra",
+              "setId": 7,
+              "name": "Tetra's Authority",
+              "pieces": 2,
+              "bonus": "+12% Defense",
+              "icon": "/assets/pieces/icon_piece_set_007.png"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -608,7 +770,7 @@
               "cardId": "n_0027",
               "name": "Dream World",
               "note": {
-                "en": ""
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
               "rating": "4/5"
             }
@@ -617,7 +779,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
           }
         },
         {
@@ -633,7 +795,7 @@
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
               "note": {
-                "en": ""
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
               "rating": "4/5"
             },
@@ -641,17 +803,11 @@
               "cardId": "n_0129",
               "name": "Spore Harvester",
               "note": {
-                "en": ""
+                "en": "Free Final Dmg Multi and Glory Set Activator"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
-          }
         },
         {
           "type": "prose",
@@ -665,6 +821,7 @@
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -943,9 +1100,9 @@
       ]
     },
     {
-      "id": "part-11",
+      "id": "card-ratings",
       "title": {
-        "en": "Part 11"
+        "en": "Card ratings"
       },
       "blocks": [
         {
@@ -963,7 +1120,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -971,7 +1128,7 @@
               "cardId": "n_0010",
               "name": "Attack!",
               "note": {
-                "en": "Epiphany II"
+                "en": ""
               },
               "rating": "5/5"
             },
@@ -979,7 +1136,7 @@
               "cardId": "n_0115",
               "name": "Reorganize",
               "note": {
-                "en": ""
+                "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
               "rating": "4/5"
             },
@@ -987,7 +1144,7 @@
               "cardId": "n_0055",
               "name": "Glorious Resistance",
               "note": {
-                "en": ""
+                "en": "+1 AP but rng if it works"
               },
               "rating": "4/5"
             }
@@ -996,7 +1153,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it"
           }
         },
         {
@@ -1005,8 +1162,9 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
+              "cost": 1,
               "note": {
-                "en": ""
+                "en": "1/3rd of an AP each turn, but Initiation can be a liability to early cycling"
               },
               "rating": "4/5"
             },
@@ -1022,7 +1180,7 @@
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
               "note": {
-                "en": ""
+                "en": "If you need Ego Points for some reason"
               },
               "rating": "2/5"
             },
@@ -1030,7 +1188,7 @@
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
               "note": {
-                "en": ""
+                "en": "Tech that justbeats some bosses"
               },
               "rating": "4/5"
             }
@@ -1039,7 +1197,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Deluge: 1/3rd of an AP each turn, but Initiation can be a liability to early cycling\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+            "en": "First Aid: 2 Perma Moral but needs to be Heavened"
           }
         },
         {
@@ -1049,48 +1207,62 @@
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1039_srt4",
-              "name": "Source of Water",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_1039_srt4",
-              "name": "Source of Water",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1039_srt4",
-              "name": "Source of Water",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1039_srt4",
-              "name": "Source of Water",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Source of Water I",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Most basic, very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Source of Water II",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "+2 AP instead of just 1/3rd with Source 1 when setup by healing lost HP"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Source of Water III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Can save the AP in hand till needed with Haru, Kayron etc"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Source of Water IV",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "-2 Stress is butt"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Source of Water V",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Big Burst of AP usable with mainly Kayron and a little Haru"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Source 1: Most basic, very good\nSource 2: +2 AP instead of just 1/3rd with Source 1 when setup by healing lost HP\nSource 3: Can save the AP in hand till needed with Haru, Kayron etc\nSource 4: -2 Stress is butt\nSource 5: Big Burst of AP usable with mainly Kayron and a little Haru\nIF YOU GET DRAW DIVINE ON 1-3 BUILD IT, +AP Divine is also ok, but not as good"
+            "en": "IF YOU GET DRAW DIVINE ON 1-3 BUILD IT, +AP Divine is also ok, but not as good"
           }
         },
         {
@@ -1100,86 +1272,119 @@
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1039_uni2",
-              "name": "Tactical Analysis",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1039_uni2",
-              "name": "Tactical Analysis",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1039_uni2",
-              "name": "Tactical Analysis",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1039_uni2",
-              "name": "Tactical Analysis",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Tactical Analysis I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Increases healing and is a heal"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Tactical Analysis II",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Boost healing of whole team"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Tactical Analysis III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Increases only Mika's healing"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Tactical Analysis IV",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Conditional can be better then others but condition is hard to get"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Tactical Analysis V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Upgrade = Best"
+                  }
+                }
+              ]
             }
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Tactical 1: Increases healing and is a heal\nTactical 2: Boost healing of whole team\nTactical 3: Increases only Mika's healing\nTactical 4: Conditional can be better then others but condition is hard to get\nTactical 5: Upgrade = Best"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "deck",
+          "cards": [
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Blessing of Waves I",
+                "text": {
+                  "en": "[Retain] Heal 150%. Increase Heal Amount by 30% for each AP. Gain Shield equal to Heal Amount overflow."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Blessing of Waves II",
+                "text": {
+                  "en": "[Retain] Heal 150%. Increase Heal Amount by 30% for each AP. 1 Wave."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Blessing of Waves III",
+                "text": {
+                  "en": "[Retain] Heal 150%. Increase Heal Amount of the next card activated by 20% for each AP."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Blessing of Waves IV",
+                "text": {
+                  "en": "[Retain] Heal 150%. Inflict Damage equal to Heal Amount to a random enemy."
+                }
               }
             },
             {
               "cardId": "c_1039_uni1",
               "name": "Blessing of Waves",
-              "note": {
-                "en": ""
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Blessing of Waves V",
+                "text": {
+                  "en": "[Finale] Heal 50%. Heal Amount +50% for each AP used this turn."
+                }
               }
             }
           ]
@@ -1227,41 +1432,55 @@
               "cardId": "c_1039_uni3",
               "name": "Whirlpool",
               "note": {
-                "en": "Epiphany I"
+                "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1039_uni3",
-              "name": "Whirlpool",
-              "note": {
-                "en": "Epiphany II"
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1039_uni3",
-              "name": "Whirlpool",
-              "note": {
-                "en": "Epiphany III"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1039_uni3",
-              "name": "Whirlpool",
-              "note": {
-                "en": "Epiphany IV"
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1039_uni3",
-              "name": "Whirlpool",
-              "note": {
-                "en": "Epiphany V"
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Whirlpool I",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Whirlpool II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Whirlpool III",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Whirlpool IV",
+                  "cost": 4,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Whirlpool V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
@@ -1289,8 +1508,11 @@
           "type": "team-grid",
           "groups": [
             {
-              "faces": [
-                1039
+              "members": [
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                }
               ]
             }
           ]
