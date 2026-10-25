@@ -133,6 +133,17 @@ def common_epiphanies() -> list[Extra]:
     return [Extra(row["id"], None, row["description"]) for row in _catalog(COMMON_FILE)]
 
 
+@cache
+def divine_gods() -> dict[str, str]:
+    """
+    The divine gods' display names.
+
+    Returns:
+        Lowercase client god name (the stem of its icon file, such as "vitor") -> display name ("Vytor").
+    """
+    return {row["god"].lower(): row["display_god"] for row in _catalog(DIVINE_FILE)}
+
+
 def _catalog(name: str) -> list[dict]:
     return json.loads((EPIPHANY_DATA_DIR / name).read_text(encoding="utf-8"))
 
