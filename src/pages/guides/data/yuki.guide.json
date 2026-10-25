@@ -19,6 +19,7 @@
           "items": [
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": ""
               }
@@ -94,48 +95,56 @@
           "items": [
             {
               "cardId": "c_1057_srt1",
+              "name": "Longsword Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni4",
+              "name": "Iceberg Cleave",
               "note": {
                 "en": ""
               }
@@ -165,48 +174,56 @@
           "items": [
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1057_uni4",
+              "name": "Iceberg Cleave",
               "note": {
                 "en": ""
               }
@@ -510,6 +527,7 @@
           "items": [
             {
               "cardId": "c_1057_srt1",
+              "name": "Longsword Slash",
               "note": {
                 "en": ""
               },
@@ -517,6 +535,7 @@
             },
             {
               "cardId": "c_1057_srt2",
+              "name": "Rapid Slash",
               "note": {
                 "en": ""
               },
@@ -524,6 +543,7 @@
             },
             {
               "cardId": "c_1057_uni4",
+              "name": "Iceberg Cleave",
               "note": {
                 "en": ""
               },
@@ -542,6 +562,7 @@
           "items": [
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": "Epiphany I"
               },
@@ -549,6 +570,7 @@
             },
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": "Epiphany II"
               },
@@ -556,6 +578,7 @@
             },
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": "Epiphany III"
               },
@@ -563,6 +586,7 @@
             },
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -570,6 +594,7 @@
             },
             {
               "cardId": "c_1057_srt4",
+              "name": "Prepare to Subdue",
               "note": {
                 "en": "Epiphany V"
               },
@@ -588,6 +613,7 @@
           "items": [
             {
               "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
               "note": {
                 "en": "Epiphany I"
               },
@@ -595,6 +621,7 @@
             },
             {
               "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
               "note": {
                 "en": "Epiphany II"
               },
@@ -602,6 +629,7 @@
             },
             {
               "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
               "note": {
                 "en": "Epiphany I"
               },
@@ -609,6 +637,7 @@
             },
             {
               "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
               "note": {
                 "en": "Epiphany II"
               },
@@ -627,6 +656,7 @@
           "items": [
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany I"
               },
@@ -634,6 +664,7 @@
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany II"
               },
@@ -641,6 +672,7 @@
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany III"
               },
@@ -648,6 +680,7 @@
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -655,6 +688,7 @@
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany V"
               },
@@ -673,6 +707,7 @@
           "items": [
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany I"
               },
@@ -680,6 +715,7 @@
             },
             {
               "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
               "note": {
                 "en": "Epiphany II"
               },
@@ -698,6 +734,7 @@
           "items": [
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": "Epiphany I"
               },
@@ -705,6 +742,7 @@
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": "Epiphany II"
               },
@@ -712,6 +750,7 @@
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": "Epiphany III"
               },
@@ -719,6 +758,7 @@
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -726,6 +766,7 @@
             },
             {
               "cardId": "c_1057_uni3",
+              "name": "Freezing Blade",
               "note": {
                 "en": "Epiphany V"
               },

@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
@@ -64,36 +66,42 @@
           "items": [
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
@@ -134,36 +142,42 @@
           "items": [
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               }
@@ -200,18 +214,28 @@
           "items": [
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
               "note": {
                 "en": ""
               }
@@ -246,18 +270,21 @@
           "items": [
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": ""
               }
@@ -279,16 +306,76 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30054,
+              "name": "Erica",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20032,
+              "name": "Rachel",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20024,
+              "name": "Wilhelmina",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Eishlen: Buffs Def and HP to enable higher Shield Maximum 4 EP Shield Retain is backup\nWilhelmina: Basic Stat Stick\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel:You only use her for the Draw Ego"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Alsea | Akad | Raidel"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30091,
+              "name": "Alsea",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20007,
+              "name": "Akad",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20013,
+              "name": "Raidel",
+              "rating": "0/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -451,6 +538,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0009",
+              "name": "Dominion",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
@@ -461,10 +593,27 @@
           "items": [
             {
               "cardId": "c_1028_uni4",
+              "name": "Shelter Strike",
               "note": {
                 "en": ""
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -479,6 +628,7 @@
           "items": [
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": "Epiphany I"
               },
@@ -486,6 +636,7 @@
             },
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": "Epiphany II"
               },
@@ -493,6 +644,7 @@
             },
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": "Epiphany III"
               },
@@ -500,6 +652,7 @@
             },
             {
               "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -518,6 +671,7 @@
           "items": [
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": "Epiphany I"
               },
@@ -525,6 +679,7 @@
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": "Epiphany II"
               },
@@ -532,6 +687,7 @@
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": "Epiphany III"
               },
@@ -539,6 +695,7 @@
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -546,6 +703,7 @@
             },
             {
               "cardId": "c_1028_uni2",
+              "name": "Wolves' Dome",
               "note": {
                 "en": "Epiphany V"
               },
@@ -564,6 +722,7 @@
           "items": [
             {
               "cardId": "c_1028_uni1",
+              "name": "Maribell Shelter MK.II",
               "note": {
                 "en": "Epiphany I"
               },
@@ -571,6 +730,7 @@
             },
             {
               "cardId": "c_1028_uni1",
+              "name": "Maribell Shelter MK.II",
               "note": {
                 "en": "Epiphany II"
               },
@@ -578,6 +738,7 @@
             },
             {
               "cardId": "c_1028_uni1",
+              "name": "Maribell Shelter MK.II",
               "note": {
                 "en": "Epiphany III"
               },
@@ -585,6 +746,7 @@
             },
             {
               "cardId": "c_1028_uni1",
+              "name": "Maribell Shelter MK.II",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -592,6 +754,7 @@
             },
             {
               "cardId": "c_1028_uni1",
+              "name": "Maribell Shelter MK.II",
               "note": {
                 "en": "Epiphany V"
               },
@@ -610,6 +773,7 @@
           "items": [
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": "Epiphany I"
               },
@@ -617,6 +781,7 @@
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": "Epiphany II"
               },
@@ -624,6 +789,7 @@
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": "Epiphany III"
               },
@@ -631,6 +797,7 @@
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -638,6 +805,7 @@
             },
             {
               "cardId": "c_1028_uni3",
+              "name": "Oh... I see.",
               "note": {
                 "en": "Epiphany V"
               },

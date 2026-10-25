@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -76,24 +78,28 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -125,36 +131,42 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -189,36 +201,42 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -253,36 +271,42 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -319,36 +343,42 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -383,36 +413,42 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               }
@@ -619,6 +655,19 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
@@ -635,6 +684,7 @@
           "items": [
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               },
@@ -955,6 +1005,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
@@ -965,6 +1044,7 @@
           "items": [
             {
               "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
               "note": {
                 "en": ""
               },
@@ -983,6 +1063,7 @@
           "items": [
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": "Epiphany I"
               },
@@ -990,6 +1071,7 @@
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": "Epiphany II"
               },
@@ -997,6 +1079,7 @@
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1004,6 +1087,7 @@
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1011,6 +1095,7 @@
             },
             {
               "cardId": "c_1043_srt4",
+              "name": "Hunting Instincts",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1029,6 +1114,7 @@
           "items": [
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1036,6 +1122,7 @@
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1043,6 +1130,7 @@
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1050,6 +1138,7 @@
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1057,6 +1146,7 @@
             },
             {
               "cardId": "c_1043_uni2",
+              "name": "Quick Fix",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1075,6 +1165,7 @@
           "items": [
             {
               "cardId": "c_1043_uni1",
+              "name": "Fan of Daggers",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1082,10 +1173,35 @@
             },
             {
               "cardId": "c_1043_uni1",
+              "name": "Fan of Daggers",
               "note": {
                 "en": "Epiphany II"
               },
               "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni1",
+              "name": "Fan of Daggers",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1043_uni1",
+              "name": "Fan of Daggers",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1043_uni1",
+              "name": "Fan of Daggers",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
             }
           ]
         },
@@ -1100,6 +1216,7 @@
           "items": [
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1107,6 +1224,7 @@
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1114,6 +1232,7 @@
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1121,6 +1240,7 @@
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1128,6 +1248,7 @@
             },
             {
               "cardId": "c_1043_uni3",
+              "name": "Dingo Howling",
               "note": {
                 "en": "Epiphany V"
               },

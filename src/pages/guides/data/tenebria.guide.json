@@ -19,18 +19,28 @@
           "items": [
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_cre2",
+              "name": "Rhythm: Crescendo",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_cre4",
+              "name": "Rhythm: Fortissimo",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_cre5",
+              "name": "Rhythm: Fermata",
               "note": {
                 "en": ""
               }
@@ -54,24 +64,28 @@
           "items": [
             {
               "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
               "note": {
                 "en": ""
               }
@@ -89,6 +103,7 @@
           "items": [
             {
               "cardId": "c_1069_cre1",
+              "name": "Rhythm",
               "note": {
                 "en": ""
               }
@@ -108,18 +123,35 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -160,18 +192,56 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -212,24 +282,42 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni4",
+              "name": "Photo Time",
               "note": {
                 "en": ""
               }
@@ -270,48 +358,63 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -337,24 +440,63 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -395,18 +537,49 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -447,30 +620,63 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -494,30 +700,63 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": ""
               }
@@ -692,6 +931,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearvag and Reorganize never disappoint\nAttack! Also can get some great Neutral + Divine Epiphanies since you have the FM left"
@@ -702,6 +970,14 @@
           "items": [
             {
               "cardId": "c_1069_srt1",
+              "name": "Sound Check",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1069_uni4",
+              "name": "Photo Time",
               "note": {
                 "en": ""
               }
@@ -719,6 +995,7 @@
           "items": [
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": "Epiphany I"
               },
@@ -726,6 +1003,7 @@
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": "Epiphany II"
               },
@@ -733,6 +1011,7 @@
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": "Epiphany III"
               },
@@ -740,6 +1019,7 @@
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -747,6 +1027,7 @@
             },
             {
               "cardId": "c_1069_srt4",
+              "name": "Music, Start!",
               "note": {
                 "en": "Epiphany V"
               },
@@ -754,13 +1035,23 @@
             },
             {
               "cardId": "c_1069_cre2",
+              "name": "Rhythm: Crescendo",
               "note": {
                 "en": ""
               },
               "rating": "3/5"
             },
             {
+              "cardId": "c_1069_cre4",
+              "name": "Rhythm: Fortissimo",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
               "cardId": "c_1069_cre5",
+              "name": "Rhythm: Fermata",
               "note": {
                 "en": ""
               },
@@ -768,6 +1059,7 @@
             },
             {
               "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
               "note": {
                 "en": ""
               },
@@ -786,15 +1078,41 @@
           "items": [
             {
               "cardId": "c_1069_uni2",
+              "name": "Call & Response",
               "note": {
                 "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1069_uni2",
+              "name": "Call & Response",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "4/5"
             }
@@ -811,6 +1129,7 @@
           "items": [
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
                 "en": "Epiphany I"
               },
@@ -818,6 +1137,7 @@
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
                 "en": "Epiphany II"
               },
@@ -825,6 +1145,7 @@
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
                 "en": "Epiphany III"
               },
@@ -832,13 +1153,23 @@
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_1069_uni1",
+              "name": "Spotlight",
               "note": {
                 "en": "Epiphany I"
               },
@@ -857,6 +1188,7 @@
           "items": [
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": "Epiphany I"
               },
@@ -864,6 +1196,7 @@
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": "Epiphany II"
               },
@@ -871,6 +1204,7 @@
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": "Epiphany III"
               },
@@ -878,6 +1212,7 @@
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -885,6 +1220,7 @@
             },
             {
               "cardId": "c_1069_uni3",
+              "name": "Encore",
               "note": {
                 "en": "Epiphany V"
               },

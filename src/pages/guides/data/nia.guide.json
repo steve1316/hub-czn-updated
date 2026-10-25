@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_1003_srt2",
+              "name": "Amp Therapy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
@@ -54,12 +57,21 @@
           "items": [
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_col",
+              "name": "Charm",
               "note": {
                 "en": ""
               }
@@ -71,6 +83,18 @@
           "body": {
             "en": "Nia has very good card draw in Adagio 5\nBecause it Tutors for cards of a specific character\nThe only problem with that is, its not card positive\nExample situation:\n5 Card hand, you use Adagio 5\nAdagio use + discard 1 = 3 cards, Adagio effect brings you back up to 5\nEffectively you went +0 cards, sometimes this can be bad\nExample 2:\n2 Cards in hand, Adagio 5 + Good card\nIf you use the good card you're left with 1 card in hand\nAt that point Adagio 5 can no longer be used\nThis problem comes along with all of Nia's Adagio's some versions card negative\nAdding Neutrals like Reorganize or Gearbag go card positive\nSome characters also like having 10 cards in hand, Adagio is not good at that"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -143,18 +167,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -183,18 +210,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -223,18 +253,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -271,18 +304,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -311,18 +347,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -359,18 +398,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -405,18 +447,21 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -451,18 +496,42 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -497,42 +566,49 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -575,30 +651,35 @@
           "items": [
             {
               "cardId": "c_1003_srt1",
+              "name": "Stroke",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_srt2",
+              "name": "Amp Therapy",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -633,18 +714,21 @@
           "items": [
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_col",
+              "name": "Charm",
               "note": {
                 "en": ""
               }
@@ -679,42 +763,49 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               }
@@ -864,6 +955,19 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
@@ -874,6 +978,27 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -892,6 +1017,7 @@
           "items": [
             {
               "cardId": "c_1003_col",
+              "name": "Charm",
               "note": {
                 "en": ""
               },
@@ -1180,10 +1306,43 @@
           "items": [
             {
               "cardId": "c_1003_col",
+              "name": "Charm",
               "note": {
                 "en": ""
               },
               "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -1198,10 +1357,35 @@
           "items": [
             {
               "cardId": "c_1003_uni4",
+              "name": "Nia's Curiosity",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -1216,6 +1400,7 @@
           "items": [
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1223,6 +1408,7 @@
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1230,6 +1416,7 @@
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1237,6 +1424,7 @@
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1244,6 +1432,7 @@
             },
             {
               "cardId": "c_1003_srt4",
+              "name": "G Chord",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1262,6 +1451,7 @@
           "items": [
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1269,6 +1459,7 @@
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1276,6 +1467,7 @@
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1283,6 +1475,7 @@
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1290,6 +1483,7 @@
             },
             {
               "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1308,6 +1502,7 @@
           "items": [
             {
               "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1315,6 +1510,7 @@
             },
             {
               "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1322,6 +1518,7 @@
             },
             {
               "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1329,10 +1526,19 @@
             },
             {
               "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
               "note": {
                 "en": "Epiphany IV"
               },
               "rating": "3/5"
+            },
+            {
+              "cardId": "c_1003_uni1",
+              "name": "Mute Accent",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -1347,6 +1553,7 @@
           "items": [
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1354,6 +1561,7 @@
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1361,6 +1569,7 @@
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1368,6 +1577,7 @@
             },
             {
               "cardId": "c_1003_uni3",
+              "name": "Adagio",
               "note": {
                 "en": "Epiphany IV"
               },

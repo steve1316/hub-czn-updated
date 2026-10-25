@@ -71,18 +71,28 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
                 "en": ""
               }
@@ -117,18 +127,21 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
@@ -163,30 +176,35 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
@@ -222,25 +240,36 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
                 "en": ""
               }
@@ -275,30 +304,42 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni4",
+              "name": "The Art of Unmaking",
               "note": {
                 "en": ""
               }
@@ -333,30 +374,42 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
                 "en": ""
               }
@@ -398,6 +451,38 @@
               "note": {
                 "en": ""
               }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30044,
+              "name": "Westmacott",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
             }
           ]
         },
@@ -408,10 +493,33 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Marianne | Ritochika | Douglas"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20037,
+              "name": "Marianne",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -490,6 +598,7 @@
           "items": [
             {
               "cardId": "c_30115_eps",
+              "name": "Pathetic End",
               "note": {
                 "en": ""
               },
@@ -688,6 +797,27 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0111",
+              "name": "Rage",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0079",
+              "name": "Overwhelm",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Rage: Potentially 0 AP 3 Moral\nOverwhelm: 3 hits for 0 AP"
@@ -698,6 +828,7 @@
           "items": [
             {
               "cardId": "c_30115_uni4",
+              "name": "The Art of Unmaking",
               "note": {
                 "en": ""
               },
@@ -716,6 +847,7 @@
           "items": [
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
                 "en": "Epiphany I"
               },
@@ -723,22 +855,33 @@
             },
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "2/5"
             },
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany IV"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
               "note": {
-                "en": "Epiphany III"
+                "en": "Epiphany V"
               },
               "rating": "4/5"
             }
@@ -755,6 +898,7 @@
           "items": [
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": "Epiphany I"
               },
@@ -762,6 +906,7 @@
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": "Epiphany I"
               },
@@ -769,6 +914,7 @@
             },
             {
               "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
               "note": {
                 "en": "Epiphany II"
               },
@@ -787,6 +933,7 @@
           "items": [
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": "Epiphany I"
               },
@@ -794,6 +941,7 @@
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": "Epiphany II"
               },
@@ -801,6 +949,7 @@
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": "Epiphany III"
               },
@@ -808,6 +957,7 @@
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -815,6 +965,7 @@
             },
             {
               "cardId": "c_30115_uni1",
+              "name": "Observer's Pleasure",
               "note": {
                 "en": "Epiphany V"
               },
@@ -833,8 +984,41 @@
           "items": [
             {
               "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
               "note": {
-                "en": ""
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "5/5"
             }

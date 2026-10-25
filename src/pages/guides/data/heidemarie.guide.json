@@ -19,12 +19,21 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               }
@@ -48,18 +57,21 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               }
@@ -111,36 +123,49 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
@@ -175,36 +200,49 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               }
@@ -239,42 +277,56 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               }
@@ -298,30 +350,42 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
@@ -351,36 +415,49 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
@@ -406,36 +483,49 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
@@ -469,19 +559,36 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30093_uni2",
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
@@ -499,24 +606,49 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               }
@@ -659,6 +791,7 @@
           "items": [
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               },
@@ -689,6 +822,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1066,7 +1212,24 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               },
@@ -1085,6 +1248,7 @@
           "items": [
             {
               "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
               "note": {
                 "en": ""
               },
@@ -1103,6 +1267,7 @@
           "items": [
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1110,6 +1275,7 @@
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1117,6 +1283,7 @@
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1124,6 +1291,7 @@
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1131,6 +1299,7 @@
             },
             {
               "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1149,6 +1318,7 @@
           "items": [
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1156,6 +1326,7 @@
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1163,6 +1334,7 @@
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1170,8 +1342,17 @@
             },
             {
               "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
               "note": {
                 "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "1/5"
             }
@@ -1184,6 +1365,51 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Hero 1: Gives it link so its even easier to make it a 0 cost draw 3, great\nHero 2: On average very very bad, since you run your hand dry and have to start using 2+ cost draw\nHero 3: Just a cantrip that makes you able to discard all of Diana's cards\nHero 4: 0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good\nHero 5: Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
@@ -1194,6 +1420,7 @@
           "items": [
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1201,6 +1428,7 @@
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1208,6 +1436,7 @@
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1215,6 +1444,7 @@
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1222,6 +1452,7 @@
             },
             {
               "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
               "note": {
                 "en": "Epiphany V"
               },

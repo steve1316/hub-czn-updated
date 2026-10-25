@@ -19,24 +19,28 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_cre1",
+              "name": "Triple 0",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_cre11",
+              "name": "Quest: Straight",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_cre12",
+              "name": "Quest: Full House",
               "note": {
                 "en": ""
               }
@@ -54,18 +58,21 @@
           "items": [
             {
               "cardId": "c_1049_cre1",
+              "name": "Triple 0",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_cre11",
+              "name": "Quest: Straight",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_cre12",
+              "name": "Quest: Full House",
               "note": {
                 "en": ""
               }
@@ -117,36 +124,56 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -181,24 +208,28 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
@@ -233,36 +264,56 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -297,42 +348,49 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
@@ -362,42 +420,49 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
@@ -427,48 +492,56 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni4",
+              "name": "Joker",
               "note": {
                 "en": ""
               }
@@ -494,36 +567,49 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -558,36 +644,49 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -622,36 +721,49 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -832,6 +944,7 @@
           "items": [
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": ""
               },
@@ -852,6 +965,19 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
@@ -862,6 +988,27 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1158,6 +1305,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
@@ -1168,13 +1360,31 @@
           "items": [
             {
               "cardId": "c_1049_uni4",
+              "name": "Joker",
               "note": {
                 "en": ""
               },
               "rating": "4/5"
             },
             {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
               "cardId": "c_1049_eps",
+              "name": "Death Trick",
               "note": {
                 "en": ""
               },
@@ -1193,6 +1403,7 @@
           "items": [
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1200,6 +1411,7 @@
             },
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1207,6 +1419,7 @@
             },
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1214,10 +1427,19 @@
             },
             {
               "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
               "note": {
                 "en": "Epiphany IV"
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "c_1049_srt4",
+              "name": "Pop Eyed Popper",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
             }
           ]
         },
@@ -1232,6 +1454,7 @@
           "items": [
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1239,6 +1462,7 @@
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1246,6 +1470,7 @@
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1253,6 +1478,7 @@
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1260,6 +1486,7 @@
             },
             {
               "cardId": "c_1049_uni2",
+              "name": "Shuffle",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1278,6 +1505,7 @@
           "items": [
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1285,6 +1513,7 @@
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1292,6 +1521,7 @@
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1299,6 +1529,7 @@
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1306,6 +1537,7 @@
             },
             {
               "cardId": "c_1049_uni1",
+              "name": "Devil Dice",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1324,6 +1556,7 @@
           "items": [
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1331,6 +1564,7 @@
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1338,6 +1572,7 @@
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1345,6 +1580,7 @@
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1352,6 +1588,7 @@
             },
             {
               "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
               "note": {
                 "en": "Epiphany V"
               },

@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni4",
+              "name": "Time Paradox",
               "note": {
                 "en": ""
               }
@@ -48,6 +50,7 @@
           "items": [
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
@@ -73,30 +76,35 @@
           "items": [
             {
               "cardId": "c_30097_srt1",
+              "name": "Time Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_srt1",
+              "name": "Time Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni4",
+              "name": "Time Paradox",
               "note": {
                 "en": ""
               }
@@ -120,30 +128,35 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
@@ -169,36 +182,42 @@
           "items": [
             {
               "cardId": "c_30097_srt1",
+              "name": "Time Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_srt1",
+              "name": "Time Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni4",
+              "name": "Time Paradox",
               "note": {
                 "en": ""
               }
@@ -228,36 +247,42 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
@@ -281,30 +306,56 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -328,42 +379,49 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": ""
               }
@@ -388,6 +446,22 @@
               "note": {
                 "en": ""
               }
+            },
+            {
+              "charResId": 20027,
+              "name": "Eloise",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20012,
+              "name": "Zatera",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
             }
           ]
         },
@@ -398,10 +472,17 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Bria"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20021,
+              "name": "Bria",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -517,7 +598,40 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0074",
+              "name": "Nature's Gift",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0028",
+              "name": "Ebony Lumen",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
               "cardId": "c_30097_srt1",
+              "name": "Time Acceleration",
               "note": {
                 "en": ""
               },
@@ -525,10 +639,35 @@
             },
             {
               "cardId": "c_30097_uni4",
+              "name": "Time Paradox",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0112",
+              "name": "Rally",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -543,6 +682,7 @@
           "items": [
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": "Epiphany I"
               },
@@ -550,6 +690,7 @@
             },
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": "Epiphany II"
               },
@@ -557,8 +698,17 @@
             },
             {
               "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
               "note": {
                 "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "2/5"
             }
@@ -575,6 +725,7 @@
           "items": [
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": "Epiphany I"
               },
@@ -582,6 +733,7 @@
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": "Epiphany II"
               },
@@ -589,6 +741,7 @@
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": "Epiphany III"
               },
@@ -596,6 +749,7 @@
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -603,6 +757,7 @@
             },
             {
               "cardId": "c_30097_uni2",
+              "name": "Future Decreed",
               "note": {
                 "en": "Epiphany V"
               },
@@ -621,6 +776,7 @@
           "items": [
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": "Epiphany I"
               },
@@ -628,6 +784,7 @@
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": "Epiphany II"
               },
@@ -635,6 +792,7 @@
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
                 "en": "Epiphany III"
               },
@@ -642,8 +800,17 @@
             },
             {
               "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "name": "Time Axis Collapse",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "0/5"
             }
@@ -660,6 +827,7 @@
           "items": [
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": "Epiphany I"
               },
@@ -667,6 +835,7 @@
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": "Epiphany II"
               },
@@ -674,6 +843,7 @@
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": "Epiphany III"
               },
@@ -681,6 +851,7 @@
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -688,6 +859,7 @@
             },
             {
               "cardId": "c_30097_uni3",
+              "name": "Chrono Circle",
               "note": {
                 "en": "Epiphany V"
               },
@@ -710,10 +882,102 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw | Buff/Debuff | AP Engines | 2+ Cost Attacks"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30047,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                1040,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30084
+              ]
+            },
+            {
+              "faces": [
+                1033,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1004,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1033,
+                1049,
+                1040,
+                1056,
+                1041,
+                1004,
+                1005,
+                1021
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                30084,
+                1010,
+                1056,
+                1024
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                30084,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "2+ Cost Attacks"
+              },
+              "faces": [
+                30047,
+                1062,
+                1040,
+                1010,
+                1008
+              ]
+            }
+          ]
         }
       ]
     }

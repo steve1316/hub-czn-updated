@@ -8,7 +8,7 @@ export type Block =
   | {
       type: 'card-list'
       intro?: LocalizedText
-      items: { cardId: string; rating?: string; note: LocalizedText }[]
+      items: { cardId: string; name?: string; rating?: string; note: LocalizedText }[]
     }
   | {
       type: 'partner-list'

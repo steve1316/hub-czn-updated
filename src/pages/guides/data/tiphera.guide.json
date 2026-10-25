@@ -19,6 +19,7 @@
           "items": [
             {
               "cardId": "c_30084_cre1",
+              "name": "Archetype: ○",
               "note": {
                 "en": ""
               }
@@ -36,12 +37,21 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -71,6 +81,7 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
@@ -116,12 +127,21 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -156,18 +176,28 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -201,7 +231,29 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0077",
+              "name": "One With All",
               "note": {
                 "en": ""
               }
@@ -238,18 +290,28 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -284,12 +346,21 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -324,24 +395,42 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
               "note": {
                 "en": ""
               }
@@ -376,12 +465,42 @@
           "items": [
             {
               "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -418,18 +537,28 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -464,18 +593,28 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -509,7 +648,29 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
               "note": {
                 "en": ""
               }
@@ -544,30 +705,49 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
               "note": {
                 "en": ""
               }
@@ -726,6 +906,19 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_00007",
+              "name": "Hand Enthralled by Light",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
@@ -738,6 +931,19 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nUmbra: 60% Dmg Amnt\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
@@ -748,6 +954,43 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0077",
+              "name": "One With All",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0028",
+              "name": "Ebony Lumen",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -766,10 +1009,25 @@
           "items": [
             {
               "cardId": "c_30084_col2",
+              "name": "Gloom",
               "note": {
                 "en": ""
               },
               "rating": "3/5"
+            },
+            {
+              "cardId": "n_0046",
+              "name": "Forced Learning Apparatus",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0122",
+              "name": "Self-Generating Experiment",
+              "note": {
+                "en": ""
+              }
             }
           ]
         },
@@ -1044,10 +1302,92 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30084_uni4",
+              "name": "Event Horizon",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1060,6 +1400,7 @@
           "items": [
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1067,6 +1408,7 @@
             },
             {
               "cardId": "c_30084_bhc",
+              "name": "○ △ □",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1085,6 +1427,7 @@
           "items": [
             {
               "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1092,6 +1435,7 @@
             },
             {
               "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1099,10 +1443,27 @@
             },
             {
               "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
               "note": {
                 "en": "Epiphany III"
               },
               "rating": "0/5"
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -1117,6 +1478,7 @@
           "items": [
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1124,10 +1486,27 @@
             },
             {
               "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "note": {
                 "en": "Epiphany II"
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
             }
           ]
         },
@@ -1142,6 +1521,7 @@
           "items": [
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1149,6 +1529,7 @@
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1156,6 +1537,7 @@
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1163,6 +1545,7 @@
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1170,6 +1553,7 @@
             },
             {
               "cardId": "c_30084_uni3",
+              "name": "Dual Creation",
               "note": {
                 "en": "Epiphany V"
               },

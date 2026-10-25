@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": ""
               }
@@ -44,6 +46,25 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Selena \"Tenacity Damage\", \"Ravage\" and \"Recharge Tenacity\""
@@ -60,6 +81,14 @@
           "items": [
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
               "note": {
                 "en": ""
               }
@@ -111,6 +140,7 @@
           "items": [
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": ""
               }
@@ -151,6 +181,7 @@
           "items": [
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               }
@@ -185,12 +216,14 @@
           "items": [
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               }
@@ -210,24 +243,28 @@
           "items": [
             {
               "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               }
@@ -262,6 +299,28 @@
           "items": [
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
               "note": {
                 "en": ""
               }
@@ -296,24 +355,28 @@
           "items": [
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               }
@@ -354,36 +417,56 @@
           "items": [
             {
               "cardId": "c_1005_srt1",
+              "name": "Engagement Fire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_srt1",
+              "name": "Engagement Fire",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0007",
+              "name": "Ambush",
               "note": {
                 "en": ""
               }
@@ -550,6 +633,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -852,6 +948,35 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
@@ -862,6 +987,7 @@
           "items": [
             {
               "cardId": "c_1005_uni4",
+              "name": "Sniper's Domain",
               "note": {
                 "en": ""
               },
@@ -880,6 +1006,7 @@
           "items": [
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": "Epiphany I"
               },
@@ -887,6 +1014,7 @@
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": "Epiphany II"
               },
@@ -894,6 +1022,7 @@
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": "Epiphany III"
               },
@@ -901,6 +1030,7 @@
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -908,6 +1038,7 @@
             },
             {
               "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "note": {
                 "en": "Epiphany V"
               },
@@ -926,6 +1057,7 @@
           "items": [
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": "Epiphany I"
               },
@@ -933,6 +1065,7 @@
             },
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": "Epiphany II"
               },
@@ -940,6 +1073,7 @@
             },
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": "Epiphany III"
               },
@@ -947,6 +1081,7 @@
             },
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -954,6 +1089,7 @@
             },
             {
               "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
               "note": {
                 "en": "Epiphany V"
               },
@@ -972,6 +1108,7 @@
           "items": [
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": "Epiphany I"
               },
@@ -979,6 +1116,7 @@
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": "Epiphany II"
               },
@@ -986,6 +1124,7 @@
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": "Epiphany III"
               },
@@ -993,6 +1132,7 @@
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1000,6 +1140,7 @@
             },
             {
               "cardId": "c_1005_uni1",
+              "name": "Target Spotted",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1012,6 +1153,51 @@
           "body": {
             "en": "Target 1: Not worth much\nTarget 2: 4 Mark and also being an attack is a good rate\nTarget 3: 2 AOE Mark, but its on a skill, not attack\nTarget 4: The best version, it cantrips, and also has Attunment synergies\nTarget 5: Upgrade, The effect is kinda hard to actually happen"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "name": "Tactical Maneuver",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",

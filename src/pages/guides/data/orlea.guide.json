@@ -19,30 +19,35 @@
           "items": [
             {
               "cardId": "c_1024_cre1",
+              "name": "Softie ★",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_cre2",
+              "name": "Softie ★★",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_cre3",
+              "name": "Softie ★★★",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_cre4",
+              "name": "Swiftie ★",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_cre7",
+              "name": "Sturdie ★",
               "note": {
                 "en": ""
               }
@@ -82,36 +87,49 @@
           "items": [
             {
               "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni2",
+              "name": "Annoying",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
               "note": {
                 "en": ""
               }
@@ -128,31 +146,43 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1024_uni1",
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               }
@@ -175,7 +205,22 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               }
@@ -200,7 +245,36 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
@@ -223,19 +297,36 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1024_uni1",
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
               "note": {
                 "en": ""
               }
@@ -251,16 +342,60 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30052,
+              "name": "Noel",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20003,
+              "name": "Alyssa",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20026,
+              "name": "Yvonne",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nTiana: Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash\nNoel: Now has Def%, passive abilities are nice but Orlea's ratios aren't that high\nAlyssa: Big Def%, okay Ego skill\nYvonne: Alyssa but weaker after Dupes"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Arwen"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20001,
+              "name": "Arwen",
+              "rating": "1/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -426,7 +561,32 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0074",
+              "name": "Nature's Gift",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "c_1024_cre8",
+              "name": "Sturdie ★★",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
               "note": {
                 "en": ""
               },
@@ -445,10 +605,35 @@
           "items": [
             {
               "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               },
               "rating": "3/5"
+            },
+            {
+              "cardId": "n_0112",
+              "name": "Rally",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
             }
           ]
         },
@@ -463,22 +648,41 @@
           "items": [
             {
               "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
-                "en": ""
+                "en": "Epiphany I"
               },
               "rating": "3/5"
             },
             {
               "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
-                "en": ""
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
+              "note": {
+                "en": "Epiphany III"
               },
               "rating": "4/5"
             },
             {
               "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
               "note": {
-                "en": ""
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1024_srt4",
+              "name": "Sacred Censer",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "3/5"
             }
@@ -495,6 +699,7 @@
           "items": [
             {
               "cardId": "c_1024_uni2",
+              "name": "Annoying",
               "note": {
                 "en": "Epiphany I"
               },
@@ -502,6 +707,7 @@
             },
             {
               "cardId": "c_1024_uni2",
+              "name": "Annoying",
               "note": {
                 "en": "Epiphany II"
               },
@@ -509,6 +715,7 @@
             },
             {
               "cardId": "c_1024_uni2",
+              "name": "Annoying",
               "note": {
                 "en": "Epiphany III"
               },
@@ -516,10 +723,19 @@
             },
             {
               "cardId": "c_1024_uni2",
+              "name": "Annoying",
               "note": {
                 "en": "Epiphany IV"
               },
               "rating": "3/5"
+            },
+            {
+              "cardId": "c_1024_uni2",
+              "name": "Annoying",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
             }
           ]
         },
@@ -534,6 +750,7 @@
           "items": [
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": "Epiphany I"
               },
@@ -541,8 +758,33 @@
             },
             {
               "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "note": {
                 "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "1/5"
             }
@@ -559,6 +801,7 @@
           "items": [
             {
               "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
               "note": {
                 "en": ""
               },
@@ -581,10 +824,96 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | DPS | Buff/Debuff | AP Engines"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30047,
+                1024,
+                1040
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1024,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1024,
+                1040
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                1040,
+                1024,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1024,
+                1052
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1040,
+                1049,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "DPS"
+              },
+              "faces": [
+                30047,
+                1018,
+                1040,
+                1017,
+                1062
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1056,
+                1008,
+                1010
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1039,
+                1052
+              ]
+            }
+          ]
         }
       ]
     }

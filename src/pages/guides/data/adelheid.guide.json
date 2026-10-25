@@ -18,25 +18,36 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_cre1",
+              "name": "Doggie",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_cre2",
+              "name": "Teddy",
               "note": {
                 "en": ""
               }
@@ -60,12 +71,14 @@
           "items": [
             {
               "cardId": "c_1055_cre1",
+              "name": "Doggie",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_cre2",
+              "name": "Teddy",
               "note": {
                 "en": ""
               }
@@ -85,48 +98,56 @@
           "items": [
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni4",
+              "name": "Garden of Secrets",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": ""
               }
@@ -149,37 +170,57 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1055_uni1",
+              "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni4",
+              "name": "Garden of Secrets",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": ""
               }
@@ -203,42 +244,49 @@
           "items": [
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": ""
               }
@@ -259,6 +307,51 @@
         "en": "Clara | Rachel | Erica | Eishlen | Wilhelma"
       },
       "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30095,
+              "name": "Clara",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20032,
+              "name": "Rachel",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30054,
+              "name": "Erica",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20024,
+              "name": "Wilhelma",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
         {
           "type": "prose",
           "body": {
@@ -336,6 +429,7 @@
           "items": [
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany I"
               },
@@ -343,6 +437,7 @@
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany II"
               },
@@ -355,6 +450,7 @@
           "items": [
             {
               "cardId": "c_1055_uni4",
+              "name": "Garden of Secrets",
               "note": {
                 "en": ""
               },
@@ -373,22 +469,41 @@
           "items": [
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
                 "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
+              "note": {
+                "en": "Epiphany II"
               },
               "rating": "6/5"
             },
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "1/5"
             },
             {
               "cardId": "c_1055_srt4",
+              "name": "Once Upon A Time",
               "note": {
-                "en": "Epiphany II"
+                "en": "Epiphany V"
               },
               "rating": "1/5"
             }
@@ -405,6 +520,7 @@
           "items": [
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": "Epiphany I"
               },
@@ -412,6 +528,7 @@
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
                 "en": "Epiphany II"
               },
@@ -419,8 +536,17 @@
             },
             {
               "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
               "note": {
-                "en": "Epiphany I"
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
+              "note": {
+                "en": "Epiphany IV"
               },
               "rating": "4/5"
             }
@@ -437,6 +563,7 @@
           "items": [
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany I"
               },
@@ -444,6 +571,7 @@
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany II"
               },
@@ -451,6 +579,7 @@
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany III"
               },
@@ -458,6 +587,7 @@
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -465,6 +595,7 @@
             },
             {
               "cardId": "c_1055_uni1",
+              "name": "Protect Us",
               "note": {
                 "en": "Epiphany V"
               },
@@ -483,6 +614,7 @@
           "items": [
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": "Epiphany I"
               },
@@ -490,6 +622,7 @@
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": "Epiphany II"
               },
@@ -497,6 +630,7 @@
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": "Epiphany III"
               },
@@ -504,6 +638,7 @@
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -511,6 +646,7 @@
             },
             {
               "cardId": "c_1055_uni3",
+              "name": "Truth Behind A Story",
               "note": {
                 "en": "Epiphany V"
               },
@@ -532,6 +668,27 @@
         "en": "Skill Persona"
       },
       "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0080",
+              "name": "Persona",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0080",
+              "name": "Persona",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
         {
           "type": "prose",
           "body": {
@@ -559,16 +716,201 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "DPS | Shield/Counter | Buff/Debuff | AP/Discounts"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30093,
+                1055,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1055,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1062,
+                1055,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1028,
+                1055,
+                1010
+              ]
+            },
+            {
+              "faces": [
+                1041,
+                1061,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1055,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1055,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1040,
+                1055,
+                1049
+              ]
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Multi Hit | Extra Attackers | Shield DPS | Counter DPS | Metallize"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "DPS"
+              },
+              "faces": [
+                30093,
+                1043,
+                1040,
+                1041,
+                1061,
+                1060,
+                1004,
+                1018,
+                1017,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "Shield/Counter"
+              },
+              "faces": [
+                1028,
+                1017,
+                1010,
+                1008,
+                30084,
+                30047
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1052,
+                1056,
+                1050
+              ]
+            },
+            {
+              "title": {
+                "en": "AP/Discounts"
+              },
+              "faces": [
+                1052,
+                30084,
+                1039,
+                1060,
+                30075
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Multi Hit"
+              },
+              "faces": [
+                30093,
+                1043,
+                1040,
+                1041,
+                1061,
+                1060,
+                1004,
+                1018,
+                1052,
+                1017
+              ]
+            },
+            {
+              "title": {
+                "en": "Extra Attackers"
+              },
+              "faces": [
+                30093,
+                1043,
+                1040,
+                1041,
+                1061
+              ]
+            },
+            {
+              "title": {
+                "en": "Shield DPS"
+              },
+              "faces": [
+                1028,
+                1010
+              ]
+            },
+            {
+              "title": {
+                "en": "Counter DPS"
+              },
+              "faces": [
+                1010,
+                1028
+              ]
+            },
+            {
+              "title": {
+                "en": "Metallize"
+              },
+              "faces": [
+                1017
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1027
+              ]
+            }
+          ]
         }
       ]
     }

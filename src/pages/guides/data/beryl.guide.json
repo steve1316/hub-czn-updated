@@ -19,24 +19,35 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_col",
+              "name": "Daze",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1024_uni4",
+              "name": "Will of Light",
               "note": {
                 "en": ""
               }
@@ -62,42 +73,63 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni4",
+              "name": "Heavy Weapons Specialist",
               "note": {
                 "en": ""
               }
@@ -127,36 +159,42 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": ""
               }
@@ -180,42 +218,49 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": ""
               }
@@ -239,36 +284,49 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
               "note": {
                 "en": ""
               }
@@ -290,16 +348,68 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20010,
+              "name": "Nakia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Rosaria: is god\nDaisy: Beats Nakia if you have max dupes\nNakia: Don't go this over Rosaria\nRitochika: 3 EP Ego Skill (Technically Rosaria can generate this much each time, but its RNG)"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Solia | Marin"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30051,
+              "name": "Marin",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -444,6 +554,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0073",
+              "name": "Mushroom Ammo",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0011",
+              "name": "Azure Lumen",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Spores are very good at triggering opening found\nAnd you could use Guilty 4 to create a ton\nMushroom Ammo + Guilty 4 + Spore is a funny idea, but the ratios aren't that high\nNutrient: Helps exhaust Forgotten Grave\nAzure: Ig it exists to exaust stuff"
@@ -454,10 +609,43 @@
           "items": [
             {
               "cardId": "c_1040_uni4",
+              "name": "Heavy Weapons Specialist",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "n_0062",
+              "name": "Hidden Bullet",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0109",
+              "name": "Quick Shelling",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -472,6 +660,7 @@
           "items": [
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               },
@@ -479,6 +668,7 @@
             },
             {
               "cardId": "c_1040_srt4",
+              "name": "Opening Found",
               "note": {
                 "en": ""
               },
@@ -497,6 +687,7 @@
           "items": [
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": "Epiphany I"
               },
@@ -504,6 +695,7 @@
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": "Epiphany II"
               },
@@ -511,6 +703,7 @@
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": "Epiphany III"
               },
@@ -518,6 +711,7 @@
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -525,6 +719,7 @@
             },
             {
               "cardId": "c_1040_uni2",
+              "name": "Guilty Pleasure",
               "note": {
                 "en": "Epiphany V"
               },
@@ -543,6 +738,7 @@
           "items": [
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": "Epiphany I"
               },
@@ -550,6 +746,7 @@
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": "Epiphany II"
               },
@@ -557,6 +754,7 @@
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": "Epiphany III"
               },
@@ -564,6 +762,7 @@
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -571,6 +770,7 @@
             },
             {
               "cardId": "c_1040_uni1",
+              "name": "Charged Shot",
               "note": {
                 "en": "Epiphany V"
               },
@@ -589,6 +789,7 @@
           "items": [
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": "Epiphany I"
               },
@@ -596,6 +797,7 @@
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": "Epiphany II"
               },
@@ -603,6 +805,7 @@
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": "Epiphany III"
               },
@@ -610,6 +813,7 @@
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -617,6 +821,7 @@
             },
             {
               "cardId": "c_1040_uni3",
+              "name": "Unlimited Firepower",
               "note": {
                 "en": "Epiphany V"
               },
@@ -639,10 +844,81 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw Engines | Buffers/Debuffers | AP Engine | DPS"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1040,
+                1024,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1040,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1040,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1033,
+                1043,
+                1049
+              ]
+            },
+            {
+              "title": {
+                "en": "Buffers/Debuffers"
+              },
+              "faces": [
+                1024,
+                1056,
+                1010,
+                1017,
+                1050,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engine"
+              },
+              "faces": [
+                1039,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "DPS"
+              },
+              "faces": [
+                1018,
+                30047,
+                1004,
+                1027,
+                1017,
+                1060,
+                1041
+              ]
+            }
+          ]
         }
       ]
     }

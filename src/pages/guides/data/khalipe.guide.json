@@ -19,6 +19,7 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
@@ -50,42 +51,49 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni4",
+              "name": "Absolute Protection",
               "note": {
                 "en": ""
               }
@@ -109,36 +117,49 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0047",
+              "name": "Forest's Hunger",
               "note": {
                 "en": ""
               }
@@ -162,36 +183,42 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
@@ -209,36 +236,42 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": ""
               }
@@ -253,6 +286,43 @@
         "en": "Zeta | Rachel | Wilhelma | Eishlen"
       },
       "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20009,
+              "name": "Zeta",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20032,
+              "name": "Rachel",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20024,
+              "name": "Wilhelma",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
         {
           "type": "prose",
           "body": {
@@ -402,6 +472,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "m_0022",
+              "name": "Soldier Prime",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0047",
+              "name": "Forest's Hunger",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nSoldier Prime: Activates Celestial, and also refunds\nSpores are always okay, but no specific Synergies\nForest's Hunger, great synergy with Kayron"
@@ -412,10 +527,27 @@
           "items": [
             {
               "cardId": "c_1008_uni4",
+              "name": "Absolute Protection",
               "note": {
                 "en": ""
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "n_0012",
+              "name": "Belligerence",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -430,6 +562,7 @@
           "items": [
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": "Epiphany I"
               },
@@ -437,6 +570,7 @@
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": "Epiphany II"
               },
@@ -444,6 +578,7 @@
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": "Epiphany III"
               },
@@ -451,6 +586,7 @@
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -458,6 +594,7 @@
             },
             {
               "cardId": "c_1008_srt4",
+              "name": "Vulture Ejection",
               "note": {
                 "en": "Epiphany V"
               },
@@ -476,6 +613,7 @@
           "items": [
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": "Epiphany I"
               },
@@ -483,6 +621,7 @@
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": "Epiphany II"
               },
@@ -490,6 +629,7 @@
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": "Epiphany III"
               },
@@ -497,6 +637,7 @@
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -504,6 +645,7 @@
             },
             {
               "cardId": "c_1008_uni2",
+              "name": "Overpower",
               "note": {
                 "en": "Epiphany V"
               },
@@ -522,6 +664,7 @@
           "items": [
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
               "note": {
                 "en": "Epiphany I"
               },
@@ -529,6 +672,7 @@
             },
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
               "note": {
                 "en": "Epiphany II"
               },
@@ -536,6 +680,7 @@
             },
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
               "note": {
                 "en": "Epiphany III"
               },
@@ -543,6 +688,7 @@
             },
             {
               "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -561,6 +707,7 @@
           "items": [
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": "Epiphany I"
               },
@@ -568,6 +715,7 @@
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": "Epiphany II"
               },
@@ -575,6 +723,7 @@
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": "Epiphany III"
               },
@@ -582,6 +731,7 @@
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -589,6 +739,7 @@
             },
             {
               "cardId": "c_1008_uni3",
+              "name": "Rally",
               "note": {
                 "en": "Epiphany V"
               },
@@ -611,10 +762,91 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw | Celestial Luv | Buff/Debuff | AP Gen"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1062,
+                1008,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1008,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1008,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1017,
+                1008,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1040,
+                1008,
+                1024
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1033,
+                1049,
+                1040
+              ]
+            },
+            {
+              "title": {
+                "en": "Celestial Luv"
+              },
+              "faces": [
+                1062,
+                30047,
+                1064,
+                1040,
+                1017,
+                1010
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1024,
+                1050,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Gen"
+              },
+              "faces": [
+                1039,
+                1052
+              ]
+            }
+          ]
         }
       ]
     }

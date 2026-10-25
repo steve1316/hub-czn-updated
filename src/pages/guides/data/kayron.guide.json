@@ -19,24 +19,28 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_cre1",
+              "name": "Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_cre1",
+              "name": "Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_eps",
+              "name": "Rift of Nothingness",
               "note": {
                 "en": ""
               }
@@ -60,12 +64,14 @@
           "items": [
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": ""
               }
@@ -83,12 +89,14 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": ""
               }
@@ -140,24 +148,28 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
@@ -170,6 +182,7 @@
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": ""
               }
@@ -193,6 +206,7 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
@@ -223,18 +237,21 @@
             },
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_uni4",
+              "name": "Echoes of True Abyss",
               "note": {
                 "en": ""
               }
@@ -264,6 +281,7 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
@@ -288,6 +306,27 @@
             },
             {
               "cardId": "c_1064_tut1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -313,6 +352,7 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": ""
               }
@@ -343,12 +383,14 @@
             },
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1064_uni4",
+              "name": "Echoes of True Abyss",
               "note": {
                 "en": ""
               }
@@ -370,16 +412,52 @@
       },
       "blocks": [
         {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20021,
+              "name": "Bria",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20027,
+              "name": "Eloise",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20012,
+              "name": "Zatera",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Bria: With the addition of Tiphera, we have a good support to exhaust futilities, a dump isn't as required\nEloise: Really good damage for Kayron and the ego isn't too bad\nZatera: Atk% Stat stick"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Anteia"
-          }
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20008,
+              "name": "Anteia",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -538,6 +616,43 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "m_0012",
+              "name": "Evil Spirit Salamander",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "m_0024",
+              "name": "Spirit Kefox",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "m_0026",
+              "name": "Vine Lord",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "m_0022",
+              "name": "Soldier Prime",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nVine Lord: Drawing 6 exhaust cards is a bit excessive, but Vinelord isn't terrible\nSoldier Prime: Celestial Activator that refunds\nHunger: 2 Moral if you're going support"
@@ -548,6 +663,35 @@
           "items": [
             {
               "cardId": "c_1064_uni4",
+              "name": "Echoes of True Abyss",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0112",
+              "name": "Rally",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
               "note": {
                 "en": ""
               }
@@ -595,6 +739,7 @@
           "items": [
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": "Epiphany I"
               },
@@ -602,6 +747,7 @@
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": "Epiphany II"
               },
@@ -609,6 +755,7 @@
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": "Epiphany III"
               },
@@ -616,6 +763,7 @@
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -623,6 +771,7 @@
             },
             {
               "cardId": "c_1064_srt4",
+              "name": "Echo of Futility",
               "note": {
                 "en": "Epiphany V"
               },
@@ -641,6 +790,7 @@
           "items": [
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": "Epiphany I"
               },
@@ -648,6 +798,7 @@
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": "Epiphany II"
               },
@@ -655,6 +806,7 @@
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": "Epiphany III"
               },
@@ -662,6 +814,7 @@
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -669,6 +822,7 @@
             },
             {
               "cardId": "c_1064_uni2",
+              "name": "Black Hole",
               "note": {
                 "en": "Epiphany V"
               },
@@ -733,6 +887,7 @@
           "items": [
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": "Epiphany I"
               },
@@ -740,6 +895,7 @@
             },
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": "Epiphany II"
               },
@@ -747,6 +903,7 @@
             },
             {
               "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
               "note": {
                 "en": "Epiphany III"
               },
@@ -769,10 +926,120 @@
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Draw/Discard | Buff Debuff | Exhaust Support | Spam Exhaust | AP Gen"
-          }
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1064,
+                1008,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1033,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1056,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1024,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                30047
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1056,
+                1009
+              ]
+            },
+            {
+              "faces": [
+                1064,
+                1049,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1004,
+                1064,
+                1033
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw/Discard"
+              },
+              "faces": [
+                1033,
+                1008,
+                1049,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff Debuff"
+              },
+              "faces": [
+                1056,
+                1010,
+                1050,
+                1024
+              ]
+            },
+            {
+              "title": {
+                "en": "Exhaust Support"
+              },
+              "faces": [
+                1008,
+                1010,
+                30047
+              ]
+            },
+            {
+              "title": {
+                "en": "Spam Exhaust"
+              },
+              "faces": [
+                1024,
+                1004,
+                1009,
+                1060
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Gen"
+              },
+              "faces": [
+                1039
+              ]
+            }
+          ]
         }
       ]
     }

@@ -19,12 +19,14 @@
           "items": [
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
@@ -48,12 +50,14 @@
           "items": [
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
                 "en": ""
               }
@@ -77,18 +81,21 @@
           "items": [
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
@@ -140,18 +147,28 @@
           "items": [
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -186,12 +203,42 @@
           "items": [
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -226,24 +273,56 @@
           "items": [
             {
               "cardId": "c_1056_srt3",
+              "name": "Material Regeneration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -280,36 +359,63 @@
           "items": [
             {
               "cardId": "c_1056_srt1",
+              "name": "Dark Blade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt1",
+              "name": "Dark Blade",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
               "note": {
                 "en": ""
               }
@@ -344,30 +450,70 @@
           "items": [
             {
               "cardId": "c_1056_srt3",
+              "name": "Material Regeneration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -402,30 +548,77 @@
           "items": [
             {
               "cardId": "c_1056_srt3",
+              "name": "Material Regeneration",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_1056_uni4",
+              "name": "Predator's Blade",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
               "note": {
                 "en": ""
               }
@@ -563,6 +756,19 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_00007",
+              "name": "Hand Enthralled by Light",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
@@ -573,6 +779,19 @@
           "body": {
             "en": "Season 3 | Song Rippling through the Stars"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -587,6 +806,35 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "n_0028",
+              "name": "Ebony Lumen",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator\nEbony: Rei can easily Exhaust this (Event Neutral)"
@@ -597,6 +845,25 @@
           "body": {
             "en": "Season 1 | Forbidden Catalyst"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0046",
+              "name": "Forced Learning Apparatus",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0122",
+              "name": "Self-Generating Experiment",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -875,6 +1142,51 @@
       },
       "blocks": [
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0054",
+              "name": "Gear Bag",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0010",
+              "name": "Attack!",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0115",
+              "name": "Reorganize",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0055",
+              "name": "Glorious Resistance",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
@@ -885,6 +1197,31 @@
           "items": [
             {
               "cardId": "c_1056_uni4",
+              "name": "Predator's Blade",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0035",
+              "name": "First Aid Kit",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0130",
+              "name": "Strategic Starting Point",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "n_0136",
+              "name": "Wanderer of the Void",
               "note": {
                 "en": ""
               },
@@ -903,6 +1240,7 @@
           "items": [
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": "Epiphany I"
               },
@@ -910,6 +1248,7 @@
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": "Epiphany II"
               },
@@ -917,6 +1256,7 @@
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": "Epiphany III"
               },
@@ -924,6 +1264,7 @@
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -931,6 +1272,7 @@
             },
             {
               "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "note": {
                 "en": "Epiphany V"
               },
@@ -949,8 +1291,41 @@
           "items": [
             {
               "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "note": {
-                "en": ""
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "6/5"
             }
@@ -967,6 +1342,7 @@
           "items": [
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": "Epiphany I"
               },
@@ -974,6 +1350,7 @@
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": "Epiphany II"
               },
@@ -981,6 +1358,7 @@
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": "Epiphany III"
               },
@@ -988,6 +1366,7 @@
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -995,6 +1374,7 @@
             },
             {
               "cardId": "c_1056_uni1",
+              "name": "Resonating Darkness",
               "note": {
                 "en": "Epiphany V"
               },
@@ -1013,6 +1393,7 @@
           "items": [
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1020,6 +1401,7 @@
             },
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1027,6 +1409,7 @@
             },
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1034,6 +1417,7 @@
             },
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1041,6 +1425,7 @@
             },
             {
               "cardId": "c_1056_uni3",
+              "name": "Dark Condensation",
               "note": {
                 "en": "Epiphany V"
               },

@@ -19,18 +19,21 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
@@ -48,6 +51,7 @@
           "items": [
             {
               "cardId": "c_30113_cre1",
+              "name": "Homing Arrow",
               "note": {
                 "en": ""
               }
@@ -93,30 +97,35 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -151,36 +160,42 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -215,42 +230,49 @@
           "items": [
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -285,36 +307,42 @@
           "items": [
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -349,18 +377,49 @@
           "items": [
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -391,24 +450,28 @@
           "items": [
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -443,24 +506,42 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "n_0121",
+              "name": "Sadism",
               "note": {
                 "en": ""
               }
@@ -494,37 +575,50 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30113_uni2",
+              "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               }
@@ -709,6 +803,7 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": "Epiphany I"
               },
@@ -716,6 +811,7 @@
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": "Epiphany II"
               },
@@ -723,6 +819,7 @@
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": "Epiphany III"
               },
@@ -741,6 +838,19 @@
           "body": {
             "en": "Season 2 | Seed of Karmic Fire"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1098,11 +1208,36 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30113_col2",
+              "cardId": "n_0075",
+              "name": "Negotiate",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "c_30113_col2",
+              "name": "Despair",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0103",
+              "name": "Precision Aim",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -1117,6 +1252,7 @@
           "items": [
             {
               "cardId": "c_30113_uni4",
+              "name": "Vortex Arrow",
               "note": {
                 "en": ""
               },
@@ -1135,24 +1271,28 @@
           "items": [
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
             },
             {
               "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "note": {
                 "en": ""
               }
@@ -1200,6 +1340,7 @@
           "items": [
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1207,6 +1348,7 @@
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1214,10 +1356,27 @@
             },
             {
               "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
               "note": {
                 "en": "Epiphany III"
               },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": "Epiphany IV"
+              },
               "rating": "3/5"
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
             }
           ]
         },
@@ -1232,6 +1391,7 @@
           "items": [
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1239,13 +1399,15 @@
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": "Epiphany II"
               },
-              "rating": "1/5"
+              "rating": "3/5"
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1253,8 +1415,17 @@
             },
             {
               "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
               "note": {
                 "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "name": "Plasma Rain",
+              "note": {
+                "en": "Epiphany V"
               },
               "rating": "5/5"
             }
@@ -1271,6 +1442,7 @@
           "items": [
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": "Epiphany I"
               },
@@ -1278,6 +1450,7 @@
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": "Epiphany II"
               },
@@ -1285,6 +1458,7 @@
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": "Epiphany III"
               },
@@ -1292,6 +1466,7 @@
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": "Epiphany IV"
               },
@@ -1299,6 +1474,7 @@
             },
             {
               "cardId": "c_30113_uni3",
+              "name": "Big Game Ranger",
               "note": {
                 "en": "Epiphany V"
               },
