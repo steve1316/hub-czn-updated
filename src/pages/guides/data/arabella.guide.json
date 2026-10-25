@@ -100,7 +100,21 @@
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Observer's Pleasure I",
+                "text": {
+                  "en": "[Unique] 1 Fracture Amplification. For each enemy present, +30% Damage Amount to this unit for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30115_uni3",
@@ -362,7 +376,21 @@
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Observer's Pleasure I",
+                "text": {
+                  "en": "[Unique] 1 Fracture Amplification. For each enemy present, +30% Damage Amount to this unit for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30115_uni3",
@@ -491,7 +519,10 @@
             {
               "cardId": "c_30115_uni4",
               "name": "The Art of Unmaking",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 200% Damage to all enemies. Increase Damage Amount by 15% for each type of harmful effect the target has (max 120%). Fracture Amplification: 2x base Damage Amount."
+              }
             }
           ]
         },
@@ -890,6 +921,7 @@
             {
               "cardId": "n_0111",
               "name": "Rage",
+              "cost": 2,
               "note": {
                 "en": "Potentially 0 AP 3 Moral"
               },
@@ -898,6 +930,7 @@
             {
               "cardId": "n_0079",
               "name": "Overwhelm",
+              "cost": 0,
               "note": {
                 "en": "3 hits for 0 AP"
               },

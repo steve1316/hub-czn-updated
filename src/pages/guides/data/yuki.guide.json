@@ -111,7 +111,10 @@
             {
               "cardId": "c_1057_srt1",
               "name": "Longsword Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1057_srt4",
@@ -128,22 +131,74 @@
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni3",
@@ -160,7 +215,10 @@
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "180% Damage to all enemies. Inspiration: Add 1 Hit."
+              }
             }
           ]
         },
@@ -200,22 +258,74 @@
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0228",
+                "text": {
+                  "en": "Apply Vulnerable 2 to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0228",
+                "text": {
+                  "en": "Apply Vulnerable 2 to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0228",
+                "text": {
+                  "en": "Apply Vulnerable 2 to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Flash Slash",
+                "text": {
+                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 1."
+                }
+              },
+              "extra": {
+                "id": "com_0228",
+                "text": {
+                  "en": "Apply Vulnerable 2 to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1057_uni2",
@@ -244,7 +354,10 @@
             {
               "cardId": "c_1057_uni4",
               "name": "Iceberg Cleave",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "180% Damage to all enemies. Inspiration: Add 1 Hit."
+              }
             }
           ]
         },

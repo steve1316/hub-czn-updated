@@ -27,12 +27,26 @@
             {
               "cardId": "c_1017_srt4",
               "name": "Hovering Metal",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hovering Metal I",
+                "text": {
+                  "en": "3 Damage Reduction. 4 Metallization."
+                }
+              }
             },
             {
               "cardId": "c_1017_uni2",
               "name": "Metal Extraction",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Metal Extraction II",
+                "text": {
+                  "en": "3 Metallization. For 1 turn, 3 Resolve."
+                }
+              }
             }
           ]
         },
@@ -68,7 +82,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",
@@ -192,7 +209,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",
@@ -334,7 +354,21 @@
             {
               "cardId": "c_1017_srt4",
               "name": "Hovering Metal",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hovering Metal I",
+                "text": {
+                  "en": "3 Damage Reduction. 4 Metallization."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             }
           ]
         },
@@ -373,7 +407,10 @@
             {
               "cardId": "c_1017_srt3",
               "name": "Steel Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Shield."
+              }
             },
             {
               "cardId": "c_1017_srt4",
@@ -778,6 +815,7 @@
             {
               "cardId": "n_0067",
               "name": "Iron Wall",
+              "cost": 1,
               "note": {
                 "en": "1 CounterAttack each turn"
               },
@@ -786,6 +824,7 @@
             {
               "cardId": "n_0121",
               "name": "Sadism",
+              "cost": 1,
               "note": {
                 "en": "AOE Vuln and technically 0 AP if it cost reduces the right card"
               },
@@ -794,6 +833,7 @@
             {
               "cardId": "n_0031",
               "name": "Energy Barrier",
+              "cost": 0,
               "note": {
                 "en": "1 Time AP and Perma CounterAttack"
               },
@@ -1368,6 +1408,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1376,6 +1417,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1384,6 +1426,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },

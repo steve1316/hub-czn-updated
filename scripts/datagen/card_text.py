@@ -39,6 +39,10 @@ GOD_ICON_DIR = EPIPHANY_DATA_DIR / "divine-gods"
 MIN_SCORE = 0.75
 LETTER_MARGIN = 0.05
 DIGIT_MARGIN = 0.02
+# A number the card shows as a percentage, such as "150%".
+_PERCENTAGE = re.compile(r"(\d+)\s*%")
+# The read may run this much longer than the level it matches by percentages. Longer means an added line it cannot place.
+MAX_TEXT_GROWTH = 1.25
 
 _engine = None
 
@@ -98,11 +102,10 @@ def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> M
         return None
     scored.sort(key=lambda entry: (entry[0], entry[1]), reverse=True)
     best = scored[0]
-    if best[0] < MIN_SCORE:
-        return None
     other_level = next((entry for entry in scored if entry[2] != best[2]), None)
-    if other_level and best[0] - other_level[0] < LETTER_MARGIN and best[1] - other_level[1] < DIGIT_MARGIN:
-        return None
+    if best[0] < MIN_SCORE or (other_level and best[0] - other_level[0] < LETTER_MARGIN and best[1] - other_level[1] < DIGIT_MARGIN):
+        # A god's emblem means a divine line is on the card, which the percentages cannot place.
+        return None if any(extra.god for extra in extras) else _match_percentages(text, variants)
     # Another line at the same level, such as "Apply 1 Weaken" against "Apply 2 Weaken". One digit barely moves the score, so any
     # digit lead settles it, and no lead means the digit was not read. Lines with the same text are the same read, whatever their
     # ids. No line against a short line is left to the ranking, as they score close even on a clean read.
@@ -110,6 +113,27 @@ def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> M
     if other_line and best[0] - other_line[0] < LETTER_MARGIN and best[1] <= other_line[1]:
         return None
     return Match(best[2], best[3])
+
+
+def _match_percentages(text: str, variants: list[Variant]) -> Match | None:
+    """
+    The one level whose percentages are exactly the ones on the card, for older pictures whose wording a patch has since changed.
+
+    Args:
+        text: The OCR text.
+        variants: The card at every level.
+
+    Returns:
+        The match with no added line. None when the card shows no percentages, not exactly one level has them, or the read runs
+        well past that level's text.
+    """
+    shown = _percentages(text)
+    if not shown:
+        return None
+    fits = [variant for variant in variants if _percentages(variant.text) == shown]
+    if len(fits) != 1 or len(_letters(text)) > len(_letters(fits[0].text)) * MAX_TEXT_GROWTH:
+        return None
+    return Match(fits[0].level, None)
 
 
 def match_god(picture: Image.Image) -> str | None:
@@ -161,6 +185,10 @@ def _ocr():
 
 def _letters(text: str) -> str:
     return re.sub(r"[^a-z]", "", text.lower())
+
+
+def _percentages(text: str) -> list[int]:
+    return sorted(int(number) for number in _PERCENTAGE.findall(text))
 
 
 def _digits(text: str) -> str:

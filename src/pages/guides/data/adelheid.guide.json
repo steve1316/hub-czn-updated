@@ -62,12 +62,18 @@
             {
               "cardId": "c_1055_cre1",
               "name": "Doggie",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Blessing] 60% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_1055_cre2",
               "name": "Teddy",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Blessing] 200% Shield. 2 Damage Reduction."
+              }
             }
           ]
         },
@@ -89,12 +95,18 @@
             {
               "cardId": "c_1055_cre1",
               "name": "Doggie",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Blessing] 60% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_1055_cre2",
               "name": "Teddy",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Haste] [Blessing] 200% Shield. 2 Damage Reduction."
+              }
             }
           ]
         }
@@ -178,7 +190,10 @@
             {
               "cardId": "c_1055_uni4",
               "name": "Garden of Secrets",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 200% Shield. 25% Shield Retention."
+              }
             },
             {
               "cardId": "c_1055_uni2",
@@ -284,7 +299,10 @@
             {
               "cardId": "c_1055_uni4",
               "name": "Garden of Secrets",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 200% Shield. 25% Shield Retention."
+              }
             },
             {
               "cardId": "c_1055_uni2",
@@ -1374,6 +1392,7 @@
             {
               "cardId": "n_0080",
               "name": "Persona",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1382,6 +1401,7 @@
             {
               "cardId": "n_0080",
               "name": "Persona",
+              "cost": 1,
               "note": {
                 "en": ""
               },

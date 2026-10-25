@@ -139,21 +139,34 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester"
+              "name": "Spore Harvester",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."
+              }
             }
           ]
         },
@@ -229,7 +242,10 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             }
           ]
         },
@@ -275,7 +291,10 @@
             {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
             }
           ]
         },
@@ -309,17 +328,38 @@
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",
@@ -400,7 +440,11 @@
             },
             {
               "cardId": "n_0129",
-              "name": "Spore Harvester"
+              "name": "Spore Harvester",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."
+              }
             }
           ]
         }
@@ -668,6 +712,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Retain and makes alot of Spores the best"
               },
@@ -676,6 +721,7 @@
             {
               "cardId": "n_0074",
               "name": "Nature's Gift",
+              "cost": 1,
               "note": {
                 "en": "The worst Spore creator but still makes spores"
               },
@@ -693,6 +739,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "1 AP to draw 1 and give it retain is good, but somewhat more conditional"
               },
@@ -721,6 +768,7 @@
             {
               "cardId": "n_0112",
               "name": "Rally",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -729,6 +777,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -737,6 +786,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": ""
               },

@@ -27,12 +27,22 @@
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "G Chord I",
+                "text": {
+                  "en": "2 Decibel. Check the top 3 cards in Draw Pile. Select one to proc."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -77,12 +87,19 @@
             },
             {
               "cardId": "n_0115",
-              "name": "Reorganize"
+              "name": "Reorganize",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] Draw 3."
+              }
             },
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             }
           ]
         },
@@ -165,7 +182,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -188,7 +219,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -215,7 +249,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -238,7 +286,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -265,7 +316,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -289,7 +354,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -322,7 +390,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -345,7 +427,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -372,7 +457,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -396,7 +495,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -429,7 +531,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -452,7 +568,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -485,7 +604,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -508,7 +641,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -541,7 +677,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -565,22 +715,67 @@
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -673,12 +868,18 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -717,27 +918,64 @@
             {
               "cardId": "c_1003_srt1",
               "name": "Stroke",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1003_srt2",
               "name": "Amp Therapy",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Soul Riff III",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a card in hand is Discarded, 100% Extra Attack to a random enemy by the Combatant who owns that card."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -782,12 +1020,18 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             },
             {
               "cardId": "c_1003_col",
               "name": "Charm",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             }
           ]
         },
@@ -892,7 +1136,10 @@
             {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
             }
           ]
         },
@@ -1133,6 +1380,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1141,6 +1389,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1149,6 +1398,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -1157,6 +1407,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -1185,6 +1436,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1193,6 +1445,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -1201,6 +1454,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -1800,6 +2054,7 @@
             {
               "cardId": "n_0027",
               "name": "Dream World",
+              "cost": 3,
               "note": {
                 "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
@@ -1825,6 +2080,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1833,6 +2089,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },

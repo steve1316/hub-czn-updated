@@ -62,12 +62,18 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             },
             {
               "cardId": "c_30117_uni4_lbk_mut1",
               "name": "Reckoning",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 600% Damage. +30% base Damage Amount for each Rapacity. Activate Agony and Fracture inflicted by this unit. When this card is activated, change into End of the Line."
+              }
             }
           ]
         },
@@ -133,7 +139,21 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
@@ -231,7 +251,10 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             }
           ]
         },
@@ -264,17 +287,59 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
@@ -298,27 +363,97 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Insatiable Cravings I",
+                "text": {
+                  "en": "[Unique] [Initiation] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0028",
+                "god": "Kyrken",
+                "text": {
+                  "en": "Harmonization: 2 AP on the next turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             }
           ]
         },
@@ -357,22 +492,78 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
@@ -429,22 +620,38 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
-            },
-            {
-              "cardId": "c_30117_uni2",
-              "name": "Break Apart & Renew",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 3,
-                "name": "Break Apart & Renew III",
+                "level": 0,
+                "name": "Dispersed Desire",
                 "text": {
-                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
                 }
               }
             },
@@ -475,12 +682,52 @@
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Break Apart & Renew III",
+                "text": {
+                  "en": "[Exhaust] 2 Brand of Fracture. 2 Brand of Agony. 3 Fracture and 6 Agony to the enemy with the highest HP."
+                }
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "name": "Break Apart & Renew",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Insatiable Cravings I",
+                "text": {
+                  "en": "[Unique] [Initiation] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             }
           ]
         },
@@ -613,7 +860,10 @@
             {
               "cardId": "c_30117_uni4",
               "name": "End of the Line",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] [Rapacity 30] 2 Shattering, 200% Damage, 2 Fracture, and 4 Agony. When this card is activated, change into Reckoning."
+              }
             }
           ]
         },
@@ -646,17 +896,59 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
@@ -692,7 +984,21 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Insatiable Cravings I",
+                "text": {
+                  "en": "[Unique] [Initiation] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             }
           ]
         },
@@ -714,12 +1020,40 @@
             {
               "cardId": "c_30117_srt4",
               "name": "Rift of Severance",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Rift of Severance",
+                "text": {
+                  "en": "80% Damage and 2 Fracture, then activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni1",
               "name": "Dispersed Desire",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dispersed Desire",
+                "text": {
+                  "en": "80% Damage and 4 Agony, then activate Agony inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",
@@ -781,7 +1115,21 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Insatiable Cravings I",
+                "text": {
+                  "en": "[Unique] [Initiation] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             }
           ]
         },
@@ -1119,7 +1467,14 @@
             {
               "cardId": "c_30117_uni2",
               "name": "Break Apart & Renew",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Break Apart & Renew I",
+                "text": {
+                  "en": "1 Brand of Agony. 4 Agony to the enemy with the highest HP."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni2",

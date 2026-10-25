@@ -73,7 +73,10 @@
             {
               "cardId": "c_30113_cre1",
               "name": "Homing Arrow",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Exhaust] 120% Extra Attack to the enemy with the lowest HP. Draw 1. Attunement: Proc this card."
+              }
             }
           ]
         },
@@ -169,7 +172,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -269,7 +275,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -302,7 +311,20 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Plasma Rain",
+                "text": {
+                  "en": "60% Damage and 2 Ionization to all enemies."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30113_uni2",
@@ -388,7 +410,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -421,7 +446,20 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Plasma Rain",
+                "text": {
+                  "en": "60% Damage and 2 Ionization to all enemies."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30113_uni2",
@@ -488,7 +526,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -521,7 +562,20 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Plasma Rain",
+                "text": {
+                  "en": "60% Damage and 2 Ionization to all enemies."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30113_uni2",
@@ -614,7 +668,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -677,7 +734,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -779,11 +839,18 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -909,7 +976,10 @@
             {
               "cardId": "c_30113_uni4",
               "name": "Vortex Arrow",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
+              }
             }
           ]
         },
@@ -1178,6 +1248,7 @@
             {
               "cardId": "n_0075",
               "name": "Negotiate",
+              "cost": 1,
               "note": {
                 "en": "If you need the moral to reach cap, this is always good"
               },
@@ -1195,6 +1266,7 @@
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
+              "cost": 1,
               "note": {
                 "en": "Quick Shelling but stronger and more conditional"
               },
@@ -1203,6 +1275,7 @@
             {
               "cardId": "n_0103",
               "name": "Precision Aim",
+              "cost": 0,
               "note": {
                 "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
@@ -1917,6 +1990,7 @@
             {
               "cardId": "n_0048",
               "name": "Forgotten Grave",
+              "cost": 6,
               "note": {
                 "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },

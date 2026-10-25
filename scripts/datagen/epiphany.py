@@ -111,6 +111,20 @@ def variants(ctx: Context, base_id: str) -> list[Variant]:
     return found
 
 
+def base_text(ctx: Context, card_id: str) -> str:
+    """
+    A card's own text.
+
+    Args:
+        ctx: The run context.
+        card_id: A client card id.
+
+    Returns:
+        The resolved text, for a card that has no epiphanies to take it from.
+    """
+    return _text(ctx, card_id, None)
+
+
 def printed_cost(ctx: Context, card_id: str) -> int:
     """
     The cost printed on a card.

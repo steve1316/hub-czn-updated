@@ -55,7 +55,10 @@
             {
               "cardId": "c_1061_cre2",
               "name": "Heart Shaker",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Bullet] [Haste] [Exhaust] 1 Resonance. Discard 1 random card(s) in Draw Pile. When this card is Discarded, 2 Resonance to a random enemy."
+              }
             }
           ]
         },
@@ -77,7 +80,10 @@
             {
               "cardId": "c_1061_cre3",
               "name": "Cupid Shot",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Bullet] [Quietus] 120% Damage. 60% Extra Attack × Bullet card count in hand to a random enemy."
+              }
             }
           ]
         },
@@ -392,7 +398,10 @@
             {
               "cardId": "c_1061_uni4",
               "name": "Liberated Feelings",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "Draw 2 Exhaust Bullet card(s). 300% Damage. Increase base Damage Amount by 30% for each different Bullet card in hand."
+              }
             }
           ]
         },
@@ -1006,6 +1015,7 @@
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1014,6 +1024,7 @@
             {
               "cardId": "n_0103",
               "name": "Precision Aim",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1022,6 +1033,7 @@
             {
               "cardId": "n_0075",
               "name": "Negotiate",
+              "cost": 1,
               "note": {
                 "en": ""
               },

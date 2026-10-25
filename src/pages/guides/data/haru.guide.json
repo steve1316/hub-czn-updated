@@ -26,7 +26,14 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Anchor Shot I",
+                "text": {
+                  "en": "[Pulverize] 400% Damage. +150% Damage Amount for each activation of this card (max 10)."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
@@ -60,7 +67,14 @@
             {
               "cardId": "c_1062_uni3",
               "name": "Charge Energy",
-              "cost": 0
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Charge Energy III",
+                "text": {
+                  "en": "[Retain] +70% Damage Amount to Attack Cards of this unit for each card of this unit in hand for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni3",
@@ -77,7 +91,14 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Anchor Shot I",
+                "text": {
+                  "en": "[Pulverize] 400% Damage. +150% Damage Amount for each activation of this card (max 10)."
+                }
+              }
             }
           ]
         },
@@ -131,7 +152,21 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Anchor Shot IV",
+                "text": {
+                  "en": "[Pulverize] 380% Damage. +100% Damage Amount for each activation of this card (max 10). Create this card in Draw Pile (2 time(s) per battle)."
+                }
+              },
+              "extra": {
+                "id": "div_0097",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Always Attack Weakness."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
@@ -257,7 +292,21 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Anchor Shot",
+                "text": {
+                  "en": "[Pulverize] 300% Damage. +100% Damage Amount for each activation of this card (max 10)."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
@@ -371,12 +420,18 @@
             {
               "cardId": "c_1062_srt1",
               "name": "Anchor",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt2",
               "name": "Power Anchor",
-              "cost": 2
+              "cost": 2,
+              "text": {
+                "en": "220% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt4",
@@ -488,7 +543,10 @@
             {
               "cardId": "c_1062_uni4",
               "name": "Lift Anchor",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Retain] Increase Damage Amount of Anchor Shot in hand by 80% for 1 turn until activated."
+              }
             }
           ]
         },
@@ -521,7 +579,10 @@
             {
               "cardId": "c_1062_srt1",
               "name": "Anchor",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1062_srt4",
@@ -907,6 +968,7 @@
             {
               "cardId": "n_0111",
               "name": "Rage",
+              "cost": 2,
               "note": {
                 "en": "Potentially 0 AP 3 Moral"
               },
@@ -915,6 +977,7 @@
             {
               "cardId": "n_0079",
               "name": "Overwhelm",
+              "cost": 0,
               "note": {
                 "en": "3 hits for 0 AP"
               },
@@ -1432,6 +1495,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": "Technically Haru is an candidate to carry this too, for her Moral Build"
               },
@@ -1440,6 +1504,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },

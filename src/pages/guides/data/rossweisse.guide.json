@@ -39,17 +39,34 @@
             {
               "cardId": "c_30134_srt4_mut1",
               "name": "Shard:Light",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Shard:Light (Amped)",
+                "text": {
+                  "en": "[Light] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 1 card of this unit is activated, activate effect (2 times per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30134_srt4_mut2",
               "name": "Shard:Dark",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Shard:Dark (Amped)",
+                "text": {
+                  "en": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 2 cards of other Combatants are activated, activate effect (2 times per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30134_cre1",
               "name": "Sword Tassel",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Retain] When coalesced into the Equilux card, for each stack, +80% base Damage Amount to the Equilux card for 1 turn (currently%)."
+              }
             },
             {
               "cardId": "c_30134_uni3",
@@ -83,7 +100,10 @@
             {
               "cardId": "c_30134_uni4",
               "name": "Kyrken's Apostle",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] [Initiation] Draw 2. 1 Kyrken's Aegis."
+              }
             }
           ]
         },
@@ -231,7 +251,10 @@
             {
               "cardId": "c_30134_uni4",
               "name": "Kyrken's Apostle",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] [Initiation] Draw 2. 1 Kyrken's Aegis."
+              }
             }
           ]
         },
@@ -365,7 +388,10 @@
             {
               "cardId": "c_30134_uni4",
               "name": "Kyrken's Apostle",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Unique] [Initiation] Draw 2. 1 Kyrken's Aegis."
+              }
             }
           ]
         },

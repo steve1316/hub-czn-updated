@@ -48,6 +48,30 @@ def test_match_epiphany_refuses_garbage():
     assert match_epiphany("zzzz", [BRAND_4, BRAND_1], [VULNERABLE]) is None
 
 
+def test_match_epiphany_falls_back_on_the_percentages():
+    # An older picture of Opening Found V, worded before a patch. Only level V has exactly these percentages.
+    found = [
+        Variant(0, "c_1040_srt4", "Opening Found", 1, "[Retain] 160% Damage. Retain: Add 1 Hit(s) for 1 turn."),
+        Variant(3, "c_1040_srt4_rsp3", "Opening Found III", 1, "[Retain] 110% Damage. Retain: Add 2 Hit(s) for 1 turn."),
+        Variant(5, "c_1040_srt4_rsp5", "Opening Found V", 1, "When a card of this unit is Retained, 150% Extra Attack to random enemies."),
+    ]
+    text = "When Retain owned cards, 150%6 Extra Attack to random cnemies"
+    assert match_epiphany(text, found, [VULNERABLE]) == Match(5, None)
+    # A god's emblem means a divine line the percentages cannot place.
+    assert match_epiphany(text, found, [Extra("div_0098", "Nihilum", "Reduce Cost of this card by 1.")]) is None
+
+
+def test_match_epiphany_percentages_must_pick_one_level():
+    shield = [
+        Variant(1, "c_1_uni3_rsp1", "Firepower I", 1, "150% Shield. +120% Damage Amount to the next Attack Card."),
+        Variant(4, "c_1_uni3_rsp4", "Firepower IV", 1, "150% Shield. +120% Damage Amount to the next Attack Card activated."),
+    ]
+    assert match_epiphany("+150% Shicld +120% Attack Damage of next own card", shield, []) is None
+    assert match_epiphany("Draw 2 cards", [BRAND_4, BRAND_1], []) is None
+    # Far more text than the level means an added line the percentages cannot place.
+    assert match_epiphany("+150% Shicld +120% Attack Damage of next own card used. For 1 turn, gain 2 Morale. Reduce Cost of this card by 1", shield[:1], []) is None
+
+
 def test_read_card_text_reads_and_caches(monkeypatch):
     pytest.importorskip("rapidocr_onnxruntime")
     image = Image.new("RGB", (246, 364), (0, 0, 0))

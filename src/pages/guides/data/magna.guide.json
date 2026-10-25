@@ -26,7 +26,14 @@
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Fragment II",
+                "text": {
+                  "en": "[Lead] 3 Crystallization. At the start of the turn, 2 Counterattack."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -104,7 +111,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -132,7 +146,11 @@
             },
             {
               "cardId": "n_0012",
-              "name": "Belligerence"
+              "name": "Belligerence",
+              "cost": 0,
+              "text": {
+                "en": "If there are no Attack Cards in hand, Draw 2."
+              }
             }
           ]
         },
@@ -166,7 +184,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -206,7 +231,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Ice Wall I",
+                "text": {
+                  "en": "300% Shield. 3 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -223,7 +255,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },
@@ -257,7 +292,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -310,7 +352,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },
@@ -481,7 +526,10 @@
             {
               "cardId": "c_1010_uni4",
               "name": "Storm of Bitter Cold",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 2 Crystallization. When Shield is gained, 1 Counterattack."
+              }
             }
           ]
         },
@@ -751,6 +799,7 @@
             {
               "cardId": "n_0028",
               "name": "Ebony Lumen",
+              "cost": 3,
               "note": {
                 "en": ""
               },
@@ -768,6 +817,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -805,6 +855,7 @@
             {
               "cardId": "n_0012",
               "name": "Belligerence",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -813,6 +864,7 @@
             {
               "cardId": "n_0121",
               "name": "Sadism",
+              "cost": 1,
               "note": {
                 "en": "A way to make sure your Prism always works, it can be pretty good with some neutral epi"
               },
@@ -897,17 +949,38 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Ice Wall I",
+                "text": {
+                  "en": "300% Shield. 3 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Wall II",
+                "text": {
+                  "en": "300% Shield. 2 Counterattack. +30% Shield Gain Amount for each Counterattack of this unit."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
@@ -924,7 +997,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Ice Wall",
+                "text": {
+                  "en": "200% Shield. 2 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             }
           ]
         },

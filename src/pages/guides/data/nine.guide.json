@@ -51,7 +51,10 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -93,7 +96,21 @@
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Experienced Strike",
+                "text": {
+                  "en": "140% Defense-Based Damage. 20% DMG-Based Shield. Increase Damage Amount of Exhaust cards by 20% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -109,11 +126,19 @@
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             }
           ]
         },
@@ -146,7 +171,10 @@
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             },
             {
               "cardId": "c_30047_uni2",
@@ -181,11 +209,19 @@
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -218,7 +254,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Hew (Ambush)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Retain] 400% Defense-Based Damage. On ally Counterattack, proc this card. Incinerate: Create 1 Hew (Ambush) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -235,15 +278,26 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             },
             {
               "cardId": "n_0067",
-              "name": "Iron Wall"
+              "name": "Iron Wall",
+              "cost": 1,
+              "text": {
+                "en": "[Initiation] 1 Resolve. 1 Fortitude."
+              }
             }
           ]
         },
@@ -276,7 +330,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -293,17 +354,26 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -336,7 +406,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Hew (Massacre)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage to all enemies. Decrease Damage Amount by 10% for each target. Incinerate: Create1 Hew (Massacre) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -353,17 +430,26 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             }
           ]
         },
@@ -396,7 +482,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -413,26 +506,42 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -465,7 +574,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Hew (Massacre)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage to all enemies. Decrease Damage Amount by 10% for each target. Incinerate: Create1 Hew (Massacre) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -482,26 +598,42 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0121",
-              "name": "Sadism"
+              "name": "Sadism",
+              "cost": 1,
+              "text": {
+                "en": "[Lead] 1 Vulnerable to all enemies. Decrease Cost of 1 random Attack Card(s) in hand by 1 for 1 turn until activated."
+              }
             }
           ]
         },
@@ -558,23 +690,42 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             },
             {
               "cardId": "m_0007",
-              "name": "Cyborg Automaton"
+              "name": "Cyborg Automaton",
+              "cost": 5,
+              "text": {
+                "en": "600% Defense-Based Damage. Incinerate: Proc this card."
+              }
             }
           ]
         },
@@ -596,17 +747,26 @@
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_30047_srt1",
               "name": "Slash",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Defense-Based Damage."
+              }
             },
             {
               "cardId": "c_30047_col2",
               "name": "Impulse",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Has a low chance for unexpected results to occur on use."
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -623,26 +783,42 @@
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "c_30047_uni4",
               "name": "Fighting Spirit",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Proc 1 highest-Cost Attack Card(s) of this unit in hand, then Exhaust those cards."
+              }
             },
             {
               "cardId": "n_0012",
-              "name": "Belligerence"
+              "name": "Belligerence",
+              "cost": 0,
+              "text": {
+                "en": "If there are no Attack Cards in hand, Draw 2."
+              }
             }
           ]
         },
@@ -888,6 +1064,7 @@
             {
               "cardId": "n_0067",
               "name": "Iron Wall",
+              "cost": 1,
               "note": {
                 "en": "1 CounterAttack each turn"
               },
@@ -896,6 +1073,7 @@
             {
               "cardId": "n_0121",
               "name": "Sadism",
+              "cost": 1,
               "note": {
                 "en": "AOE Vuln and technically 0 AP if it cost reduces the right card"
               },
@@ -904,6 +1082,7 @@
             {
               "cardId": "n_0031",
               "name": "Energy Barrier",
+              "cost": 0,
               "note": {
                 "en": "1 Time AP and Perma CounterAttack"
               },

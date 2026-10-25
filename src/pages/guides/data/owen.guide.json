@@ -140,11 +140,19 @@
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb"
+              "name": "Residual Herb",
+              "cost": 0,
+              "text": {
+                "en": "[Retrieve 2] [Exhaust 3] 60% Shield. Incinerate: Create 1 Contaminated Spore."
+              }
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb"
+              "name": "Residual Herb",
+              "cost": 0,
+              "text": {
+                "en": "[Retrieve 2] [Exhaust 3] 60% Shield. Incinerate: Create 1 Contaminated Spore."
+              }
             }
           ]
         },
@@ -526,6 +534,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "Amazing draw"
               },
@@ -534,6 +543,7 @@
             {
               "cardId": "m_0024",
               "name": "Spirit Kefox",
+              "cost": 1,
               "note": {
                 "en": "Amazing Tutor"
               },
@@ -542,6 +552,7 @@
             {
               "cardId": "m_0009",
               "name": "Dominion",
+              "cost": 2,
               "note": {
                 "en": "Very expensive memory wise and takes a long time to scale"
               },
@@ -550,6 +561,7 @@
             {
               "cardId": "n_0117",
               "name": "Residual Herb",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -558,6 +570,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -662,7 +675,14 @@
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "cost": 2
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Wind Slash I",
+                "text": {
+                  "en": "280% Damage to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1050_uni1",

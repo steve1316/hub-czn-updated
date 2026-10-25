@@ -26,12 +26,18 @@
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] 80% Damage. 2 Agony."
+              }
             },
             {
               "cardId": "c_1009_cre1",
               "name": "Shadow Dagger",
-              "cost": 0
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] 80% Damage. 2 Agony."
+              }
             },
             {
               "cardId": "c_1009_uni1",
@@ -103,17 +109,59 @@
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
@@ -264,11 +312,29 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Curse",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card is activated, 1 Agony to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit"
+              "name": "First Aid Kit",
+              "cost": 2,
+              "text": {
+                "en": "[Celestial] [Exhaust] Heal 250%."
+              }
             }
           ]
         },
@@ -301,7 +367,10 @@
             {
               "cardId": "c_1009_srt3",
               "name": "Touch of Darkness",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1009_srt4",
@@ -318,7 +387,14 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Curse II",
+                "text": {
+                  "en": "For 2 turns, when an Attack Card is activated, 1 Agony to the target."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni2",
@@ -343,12 +419,22 @@
             {
               "cardId": "c_1009_uni3",
               "name": "Vital Attack",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Vital Attack",
+                "text": {
+                  "en": "80% Damage × 3. If the target is in an Agony state, +50% Damage Amount."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni4",
               "name": "Cursed Gouge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Activate Agony inflicted by this unit on the target."
+              }
             }
           ]
         },
@@ -370,17 +456,59 @@
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni1",
@@ -461,11 +589,29 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Curse",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card is activated, 1 Agony to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "n_0035",
-              "name": "First Aid Kit"
+              "name": "First Aid Kit",
+              "cost": 2,
+              "text": {
+                "en": "[Celestial] [Exhaust] Heal 250%."
+              }
             }
           ]
         },
@@ -717,6 +863,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -725,6 +872,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -733,6 +881,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -741,6 +890,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -749,6 +899,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -768,6 +919,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -776,6 +928,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -1332,6 +1485,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1340,6 +1494,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },

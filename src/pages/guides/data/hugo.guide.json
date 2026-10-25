@@ -39,7 +39,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -111,7 +114,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -139,12 +145,40 @@
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Hunting Instincts I",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni2",
@@ -206,7 +240,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -239,17 +276,59 @@
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hunting Instincts II",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. 50% chance of an additional 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Hunting Instincts II",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. 50% chance of an additional 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni2",
@@ -292,7 +371,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -325,12 +407,40 @@
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hunting Instincts II",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. 50% chance of an additional 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni2",
@@ -392,7 +502,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -425,12 +538,40 @@
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Hunting Instincts I",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni2",
@@ -485,7 +626,10 @@
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -518,12 +662,40 @@
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Hunting Instincts III",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt. If Commence the Hunt is activated, 50% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_srt4",
               "name": "Hunting Instincts",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Hunting Instincts I",
+                "text": {
+                  "en": "[Initiation] When an Upgrade or Skill Card of a different Combatant is activated, 1 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni2",
@@ -547,17 +719,48 @@
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dingo Howling",
+                "text": {
+                  "en": "100% Shield. 2 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni3",
               "name": "Dingo Howling",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dingo Howling",
+                "text": {
+                  "en": "100% Shield. 2 Commence the Hunt."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase Damage Amount of Commence the Hunt's Extra Attacks by 40%."
+              }
             }
           ]
         },
@@ -855,6 +1058,7 @@
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
+              "cost": 1,
               "note": {
                 "en": "Quick Shelling but stronger and more conditional"
               },
@@ -863,6 +1067,7 @@
             {
               "cardId": "n_0075",
               "name": "Negotiate",
+              "cost": 1,
               "note": {
                 "en": "If you need the moral to reach cap, this is always good"
               },
@@ -871,6 +1076,7 @@
             {
               "cardId": "n_0103",
               "name": "Precision Aim",
+              "cost": 0,
               "note": {
                 "en": "Quick Shelling but for Attunement Synergies (Attunment Draw)"
               },
@@ -1582,6 +1788,7 @@
             {
               "cardId": "n_0048",
               "name": "Forgotten Grave",
+              "cost": 6,
               "note": {
                 "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
               },

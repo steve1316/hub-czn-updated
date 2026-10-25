@@ -38,7 +38,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             }
           ]
         },
@@ -72,7 +79,14 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Snack Time III",
+                "text": {
+                  "en": "[Exhaust] Heal 150%. Select and Exhaust up to 2 card(s) in hand, then Draw for each Exhausted."
+                }
+              }
             }
           ]
         },
@@ -179,7 +193,21 @@
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Strike of Darkness",
+                "text": {
+                  "en": "[Lead] 100% Damage. Increase Damage Amount of Basic Attack Cards by 100% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1056_srt4",
@@ -214,7 +242,11 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -247,7 +279,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -264,21 +303,67 @@
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -311,7 +396,10 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
@@ -377,15 +465,27 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -418,17 +518,37 @@
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1056_srt1",
               "name": "Dark Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "100% Damage."
+              }
             },
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Strike of Darkness",
+                "text": {
+                  "en": "[Lead] 100% Damage. Increase Damage Amount of Basic Attack Cards by 100% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1056_srt4",
@@ -475,15 +595,27 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0055",
-              "name": "Glorious Resistance"
+              "name": "Glorious Resistance",
+              "cost": 3,
+              "text": {
+                "en": "At the start of the turn, deal 10% Max HP Fixed Damage to each ally. Gain 1 AP."
+              }
             }
           ]
         },
@@ -516,12 +648,22 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -561,23 +703,43 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -610,12 +772,22 @@
             {
               "cardId": "c_1056_srt3",
               "name": "Material Regeneration",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -644,32 +816,69 @@
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni4",
               "name": "Predator's Blade",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "250% Damage. For 1 turn, 2 Morale."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -898,6 +1107,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -906,6 +1116,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -914,6 +1125,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -922,6 +1134,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -930,6 +1143,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -958,6 +1172,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -966,6 +1181,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -974,6 +1190,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -1646,6 +1863,7 @@
             {
               "cardId": "n_0027",
               "name": "Dream World",
+              "cost": 3,
               "note": {
                 "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
@@ -1671,6 +1889,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1679,6 +1898,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },
@@ -1687,6 +1907,7 @@
             {
               "cardId": "n_0028",
               "name": "Ebony Lumen",
+              "cost": 3,
               "note": {
                 "en": "Rei can easily Exhaust this (Event Neutral)"
               },
@@ -1706,6 +1927,7 @@
             {
               "cardId": "n_0046",
               "name": "Forced Learning Apparatus",
+              "cost": 2,
               "note": {
                 "en": "+1 Cycle"
               }
@@ -1713,6 +1935,7 @@
             {
               "cardId": "n_0122",
               "name": "Self-Generating Experiment",
+              "cost": 2,
               "note": {
                 "en": ""
               }

@@ -227,7 +227,20 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
@@ -249,11 +262,19 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -316,7 +337,20 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
@@ -436,7 +470,20 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
@@ -452,11 +499,19 @@
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -519,22 +574,78 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Shuffle I",
+                "text": {
+                  "en": "[Exhaust 2] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Shuffle I",
+                "text": {
+                  "en": "[Exhaust 2] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Shuffle I",
+                "text": {
+                  "en": "[Exhaust 2] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Shuffle I",
+                "text": {
+                  "en": "[Exhaust 2] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0139",
+                "god": "Vytor",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
@@ -729,27 +840,58 @@
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Dice Trick V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, create 1 empowered Quest card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Dice Trick V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, create 1 empowered Quest card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Dice Trick V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, create 1 empowered Quest card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Dice Trick V",
+                "text": {
+                  "en": "[Unique] At the start of the turn, create 1 empowered Quest card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni4",
               "name": "Joker",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Select and Draw 1 card(s) from Draw Pile."
+              }
             }
           ]
         },
@@ -840,16 +982,47 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -913,26 +1086,85 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -1034,16 +1266,47 @@
             {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Shuffle",
+                "text": {
+                  "en": "[Exhaust] Discard all cards in hand. Draw for each Discarded."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1049_uni3",
               "name": "Dice Trick",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Dice Trick",
+                "text": {
+                  "en": "240% Damage. Decrease Morale by 1 for 1 turn. Decrease Cost by the number of completed Quests."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -1329,6 +1592,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -1337,6 +1601,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1345,6 +1610,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1353,6 +1619,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -1361,6 +1628,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -1389,6 +1657,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -1397,6 +1666,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -1878,6 +2148,7 @@
             {
               "cardId": "n_0027",
               "name": "Dream World",
+              "cost": 3,
               "note": {
                 "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
@@ -1903,6 +2174,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1911,6 +2183,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },

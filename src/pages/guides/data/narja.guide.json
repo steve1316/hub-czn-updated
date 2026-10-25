@@ -38,7 +38,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },
@@ -68,27 +71,96 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shackles of Hunger II",
+                "text": {
+                  "en": "30% Defense-Based Damage × 2. At the start of the turn, if Voracity was activated 3 or more times in the previous turn, move to hand. Attunement: 1 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Voluntary Control",
+                "text": {
+                  "en": "If Voracity is fewer than 6 stacks, gain 6 Voracity. If 6 or more stacks, gain 2 Predation."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             }
           ]
         },
@@ -110,22 +182,78 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
@@ -166,27 +294,96 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shackles of Hunger II",
+                "text": {
+                  "en": "30% Defense-Based Damage × 2. At the start of the turn, if Voracity was activated 3 or more times in the previous turn, move to hand. Attunement: 1 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Bottomless Hunger II",
+                "text": {
+                  "en": "Decrease Cost of 2 random cards in hand by 1 for 1 turn(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Bottomless Hunger II",
+                "text": {
+                  "en": "Decrease Cost of 2 random cards in hand by 1 for 1 turn(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Bottomless Hunger II",
+                "text": {
+                  "en": "Decrease Cost of 2 random cards in hand by 1 for 1 turn(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Voluntary Control",
+                "text": {
+                  "en": "If Voracity is fewer than 6 stacks, gain 6 Voracity. If 6 or more stacks, gain 2 Predation."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             }
           ]
         },
@@ -208,27 +405,96 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Shackles of Hunger IV",
+                "text": {
+                  "en": "[Retain] Decrease Voracity by up to 5. +40% Damage Amount to the next Attack Card activated for each amount decreased. If 5 is decreased, 3 Predation."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Shackles of Hunger IV",
+                "text": {
+                  "en": "[Retain] Decrease Voracity by up to 5. +40% Damage Amount to the next Attack Card activated for each amount decreased. If 5 is decreased, 3 Predation."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Voluntary Control",
+                "text": {
+                  "en": "If Voracity is fewer than 6 stacks, gain 6 Voracity. If 6 or more stacks, gain 2 Predation."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             }
           ]
         },
@@ -250,22 +516,78 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shackles of Hunger II",
+                "text": {
+                  "en": "30% Defense-Based Damage × 2. At the start of the turn, if Voracity was activated 3 or more times in the previous turn, move to hand. Attunement: 1 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
@@ -299,22 +621,78 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shackles of Hunger II",
+                "text": {
+                  "en": "30% Defense-Based Damage × 2. At the start of the turn, if Voracity was activated 3 or more times in the previous turn, move to hand. Attunement: 1 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
@@ -348,17 +726,59 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Shackles of Hunger V",
+                "text": {
+                  "en": "60% Shield. Decrease Voracity by max 3. Repeat for each amount decreased."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
@@ -423,22 +843,78 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Shackles of Hunger II",
+                "text": {
+                  "en": "30% Defense-Based Damage × 2. At the start of the turn, if Voracity was activated 3 or more times in the previous turn, move to hand. Attunement: 1 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
               "name": "Voluntary Control",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Voluntary Control II",
+                "text": {
+                  "en": "If Mealtime is in Draw Pile, move to hand. If in Graveyard, 3 Morale for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
@@ -455,7 +931,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },
@@ -477,17 +956,59 @@
             {
               "cardId": "c_1052_srt4",
               "name": "Shackles of Hunger",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Shackles of Hunger I",
+                "text": {
+                  "en": "30% Defense-Based Damage × 4. Attunement: 6 Voracity."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni1",
               "name": "Bottomless Hunger",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Bottomless Hunger I",
+                "text": {
+                  "en": "3 Voracity. The next 2 times Voracity is activated, decrease Cost of 1 random card in hand by 1 for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1052_uni2",
@@ -528,7 +1049,10 @@
             {
               "cardId": "c_1052_uni4",
               "name": "Mealtime",
-              "cost": 6
+              "cost": 6,
+              "text": {
+                "en": "[Retain] [Unique] If Voracity is decreased, decrease Cost by 1 and +30% Heal Amount (max 10) until activated. 160% Defense-Based Damage to all enemies. Heal 100%. 4 Predation."
+              }
             }
           ]
         },
@@ -798,6 +1322,7 @@
             {
               "cardId": "m_0012",
               "name": "Evil Spirit Salamander",
+              "cost": 1,
               "note": {
                 "en": "Amazing draw"
               },
@@ -815,6 +1340,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -823,6 +1349,7 @@
             {
               "cardId": "n_0074",
               "name": "Nature's Gift",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -851,6 +1378,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -859,6 +1387,7 @@
             {
               "cardId": "n_0112",
               "name": "Rally",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -867,6 +1396,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -875,6 +1405,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": ""
               },

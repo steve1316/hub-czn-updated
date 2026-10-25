@@ -175,11 +175,29 @@
             {
               "cardId": "c_1012_uni3",
               "name": "Warming Up",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Warming Up",
+                "text": {
+                  "en": "[Lead] [Retain] For 1 turn, decrease Cost of the next card of this unit activated by 1. Efficiency: Draw 1 Lead Attack Card(s) of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "n_0107",
-              "name": "Pulverize"
+              "name": "Pulverize",
+              "cost": 2,
+              "text": {
+                "en": "[Weakness Attack] 150% Damage × 2. Draw 1."
+              }
             }
           ]
         },
@@ -311,7 +329,21 @@
             {
               "cardId": "c_1012_uni3",
               "name": "Warming Up",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Warming Up",
+                "text": {
+                  "en": "[Lead] [Retain] For 1 turn, decrease Cost of the next card of this unit activated by 1. Efficiency: Draw 1 Lead Attack Card(s) of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             }
           ]
         },
@@ -418,11 +450,29 @@
             {
               "cardId": "c_1012_uni3",
               "name": "Warming Up",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Warming Up",
+                "text": {
+                  "en": "[Lead] [Retain] For 1 turn, decrease Cost of the next card of this unit activated by 1. Efficiency: Draw 1 Lead Attack Card(s) of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "n_0107",
-              "name": "Pulverize"
+              "name": "Pulverize",
+              "cost": 2,
+              "text": {
+                "en": "[Weakness Attack] 150% Damage × 2. Draw 1."
+              }
             }
           ]
         },
@@ -691,6 +741,7 @@
             {
               "cardId": "n_0107",
               "name": "Pulverize",
+              "cost": 2,
               "note": {
                 "en": "3 Moral for 2 AP, cantrips isnt that bad"
               }

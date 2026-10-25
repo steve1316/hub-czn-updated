@@ -5,15 +5,18 @@ Everything runs on synthetic inputs, so no network or extracted client is needed
 
 from __future__ import annotations
 
+import hashlib
 import io
+import os
 import random
+import urllib.error
 from types import SimpleNamespace
 
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
 from api.client_db import client_output_dir, have_client_db, have_client_text
-from scripts.datagen import card_text, epiphany, images, naming, set_names
+from scripts.datagen import card_text, epiphany, images, naming, set_names, sheet
 from scripts.datagen.epiphany import Variant
 from scripts.datagen.runner import Context
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
@@ -42,17 +45,24 @@ def _variants_of(card_id: str) -> list[Variant]:
     return {"c_30134_uni2": FLOW, "c_30134_srt4": FLICKER}.get(card_id, [])
 
 
-# The Rossweisse "Cycle -2 | Unbound Nuke | 180 FM" deck: its cell, card, and the start of its picture's cache file name.
-RW_DECK = [("B10", "c_30134_srt4", "c13817e1ee68"), *[(f"{col}10", "c_30134_uni1", "ee78230fbe93") for col in "CDEF"],
-           ("B11", "c_30134_uni2", "3d35f72c9e80"), ("C11", "c_30134_uni3", "19095618d73b")]
+# The Rossweisse "Cycle -2 | Unbound Nuke | 180 FM" deck: its cell, card, and the start of its picture's sha1.
+RW_DECK = [("B10", "c_30134_srt4", "f8ae3a4126e2"), *[(f"{col}10", "c_30134_uni1", "c92c557f20ef") for col in "CDEF"],
+           ("B11", "c_30134_uni2", "f25269e88665"), ("C11", "c_30134_uni3", "dfd4da2efaee")]
+
+
+# A neutral card as the deck builder's shared pool lists it.
+SPORE_HARVESTER = {"id": "n_0129", "name": "Spore Harvester", "cost": 0,
+                   "description": "[Retain] [Exhaust] Incinerate: Create 2 Contaminated Spore. Retain: Create 1 Contaminated Spore."}
 
 
 def _rossweisse_deck() -> list[bytes] | None:
     if not (have_client_db() and have_client_text()):
         return None
-    cache = client_output_dir() / ".cache" / "guides"
-    found = [next(cache.glob(f"{prefix}*"), None) for _, _, prefix in RW_DECK]
-    return [path.read_bytes() for path in found] if all(found) else None
+    # Found by content, as the cache names a picture by its tab's layout, which changes whenever the sheet is edited.
+    cache = client_output_dir() / ".cache" / "guides" / "pictures"
+    by_sha1 = {hashlib.sha1(data).hexdigest()[:12]: data for data in (path.read_bytes() for path in cache.glob("*"))}
+    found = [by_sha1.get(prefix) for _, _, prefix in RW_DECK]
+    return found if all(found) else None
 
 
 def _cell(row: int, col: int, text: str = "", pictures: int = 0) -> Cell:
@@ -116,18 +126,107 @@ def test_grid_tracks_spans_line_breaks_and_images():
     assert (1, 0) not in grid
 
 
-def test_fetcher_refetches_pages_but_caches_pictures(tmp_path, monkeypatch):
+def _counting_fetcher(tmp_path, monkeypatch) -> tuple[Fetcher, list[str]]:
+    """
+    A fetcher whose downloads are recorded instead of sent.
+
+    Args:
+        tmp_path: The cache folder.
+        monkeypatch: Replaces the network call.
+
+    Returns:
+        The fetcher and the list of URLs it downloads.
+    """
     calls: list[str] = []
+    monkeypatch.setattr(Fetcher, "_download", staticmethod(lambda url: calls.append(url) or url.encode("utf-8")))
+    return Fetcher(tmp_path), calls
 
-    def download(url: str) -> bytes:
-        calls.append(url)
-        return f"{url}#{len(calls)}".encode("utf-8")
 
-    monkeypatch.setattr(Fetcher, "_download", staticmethod(download))
-    fetcher = Fetcher(tmp_path)
-    assert fetcher.text("page") != fetcher.text("page")
-    assert fetcher.bytes("picture") == fetcher.bytes("picture")
+def test_fetcher_refetches_pages_but_caches_pictures(tmp_path, monkeypatch):
+    fetcher, calls = _counting_fetcher(tmp_path, monkeypatch)
+    fetcher.text("page")
+    fetcher.text("page")
+    assert fetcher.bytes("picture", "Olga!B3#0") == fetcher.bytes("picture", "Olga!B3#0")
     assert calls == ["page", "page", "picture"]
+
+
+def test_fetcher_keeps_a_picture_whose_address_changed(tmp_path, monkeypatch):
+    # Google hands out a new address for every picture on later runs, so the key is what names it.
+    fetcher, calls = _counting_fetcher(tmp_path, monkeypatch)
+    assert fetcher.bytes("address-1", "Olga!B3#0") == fetcher.bytes("address-2", "Olga!B3#0") == b"address-1"
+    assert calls == ["address-1"]
+
+
+def test_fetcher_refetches_an_old_picture(tmp_path, monkeypatch):
+    fetcher, calls = _counting_fetcher(tmp_path, monkeypatch)
+    fetcher.bytes("address-1", "Olga!B3#0")
+    (path,) = tmp_path.iterdir()
+    os.utime(path, (0, 0))
+    assert fetcher.bytes("address-2", "Olga!B3#0") == b"address-2"
+    assert calls == ["address-1", "address-2"]
+
+
+def test_fetcher_prunes_the_pictures_a_run_did_not_use(tmp_path, monkeypatch):
+    fetcher, _ = _counting_fetcher(tmp_path, monkeypatch)
+    fetcher.bytes("address-1", "Olga!B3#0")
+    fetcher.bytes("address-2", "Olga!B4#0")
+    fetcher, _ = _counting_fetcher(tmp_path, monkeypatch)
+    assert fetcher.bytes("address-3", "Olga!B3#0") == b"address-1"
+    fetcher.prune()
+    assert len(list(tmp_path.iterdir())) == 1
+
+
+def test_downloads_cache_a_shared_address_under_every_cell(tmp_path, monkeypatch):
+    # Two cells share an address on some runs and not on others, so the second cell needs its own copy for the next run.
+    fetcher, calls = _counting_fetcher(tmp_path, monkeypatch)
+    monkeypatch.setattr(guides, "_Download", lambda data: SimpleNamespace(data=data))
+    downloads = guides._Downloads(fetcher)
+    downloads.get("address-1", "Olga!C10#0")
+    downloads.get("address-1", "Olga!D10#0")
+    fetcher.prune()
+    fetcher, calls = _counting_fetcher(tmp_path, monkeypatch)
+    assert fetcher.bytes("address-2", "Olga!D10#0") == b"address-1"
+    assert calls == []
+
+
+def test_layout_ignores_picture_addresses_but_not_moved_pictures():
+    def grid(*rows: tuple[str, str]) -> dict[tuple[int, int], Cell]:
+        return {(row, 0): Cell(row, 0, text, [url] if url else []) for row, (text, url) in enumerate(rows)}
+
+    before = sheet.layout(grid(("Deck", ""), ("", "https://x/AAAA=w133-h199")))
+    assert sheet.layout(grid(("Deck", ""), ("", "https://x/BBBB=w133-h199"))) == before
+    # An inserted row moves the picture down, so the picture now at B2 may be a different one.
+    assert sheet.layout(grid(("Deck", ""), ("New note", ""), ("", "https://x/BBBB=w133-h199"))) != before
+    assert sheet.layout(grid(("Deck", ""), ("", "https://x/BBBB=w371-h20"))) != before
+
+
+def test_fetcher_retries_a_failed_download(monkeypatch):
+    attempts: list[str] = []
+
+    class Response(io.BytesIO):
+        def __exit__(self, *args):
+            return False
+
+    def urlopen(request, timeout):
+        attempts.append(request.full_url)
+        if len(attempts) < 3:
+            raise urllib.error.URLError("The handshake operation timed out")
+        return Response(b"picture")
+
+    monkeypatch.setattr(sheet.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(sheet.time, "sleep", lambda seconds: None)
+    assert Fetcher._download("https://example.com/a.png") == b"picture"
+    assert len(attempts) == 3
+
+
+def test_fetcher_gives_up_after_its_attempts(monkeypatch):
+    def urlopen(request, timeout):
+        raise urllib.error.URLError("down")
+
+    monkeypatch.setattr(sheet.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(sheet.time, "sleep", lambda seconds: None)
+    with pytest.raises(urllib.error.URLError):
+        Fetcher._download("https://example.com/a.png")
 
 
 def test_column_letters():
@@ -293,8 +392,8 @@ def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._G
     # Every picture is the same banner, so nothing needs a matcher.
     banner = guides._Download(_png(_pattern(5, picture_size)))
     ctx = SimpleNamespace(text=lambda text, **_: text)
-    downloads = SimpleNamespace(get=lambda url: banner)
-    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
+    downloads = SimpleNamespace(get=lambda url, key: banner)
+    return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
                                 guides._PictureLabels({}), "Tab", "tab")
 
 
@@ -431,6 +530,32 @@ def test_unrated_card_row_becomes_a_deck_with_every_copy():
     deck = guides._as_deck({"type": "card-list", "items": [dict(resonance) for _ in range(4)]})
     assert deck == {"type": "deck", "cards": [{"cardId": "c_30134_uni1", "name": "Sword Resonance", "cost": 1}] * 4}
     assert guides._as_deck({"type": "card-list", "items": [{**resonance, "rating": "4/5"}]}) is None
+
+
+def test_deck_card_with_no_epiphanies_shows_its_own_text(monkeypatch):
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={"c_1040_uni4": {}, "c_30134_uni2": {}}))
+    builder.shared_cards = {"n_0129": SPORE_HARVESTER}
+    monkeypatch.setattr(guides.epiphany, "base_text", lambda ctx, card_id: "Create 1 Opening Found.")
+    specialist = {"cardId": "c_1040_uni4", "name": "Heavy Weapons Specialist", "cost": 1, "note": {"en": ""}}
+    flow = {"cardId": "c_30134_uni2", "name": "Radiant Sword Flow", "cost": 1, "note": {"en": ""}}
+    neutral = {"cardId": "n_0129", "name": "Spore Harvester", "note": {"en": ""}}
+    unknown = {"cardId": "n_9999", "name": "Unknown", "note": {"en": ""}}
+    deck = builder._deck_or_list({"type": "card-list", "items": [specialist, flow, neutral, unknown]})
+    assert deck["cards"][0]["text"] == {"en": "Create 1 Opening Found."}
+    # A card with epiphanies gets its text from the one it shows, and a card no data knows gets none.
+    assert "text" not in deck["cards"][1] and "text" not in deck["cards"][3]
+    # A neutral or monster card takes its text from the deck builder's shared pool.
+    assert deck["cards"][2]["text"] == {"en": SPORE_HARVESTER["description"]}
+
+
+def test_neutral_card_takes_its_cost_from_the_shared_pool():
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={}))
+    builder.card_names = {"n_0129": "Spore Harvester"}
+    builder.shared_cards = {"n_0129": SPORE_HARVESTER}
+    block = builder._card_list([{"cardId": "n_0129", "col": 1, "picture": None, "epiphany": 0}], {})
+    assert block["items"][0]["cost"] == 0
 
 
 def test_rossweisse_deck_epiphanies():

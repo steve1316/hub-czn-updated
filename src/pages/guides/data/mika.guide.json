@@ -27,7 +27,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             },
             {
               "cardId": "c_1039_uni2",
@@ -145,7 +148,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -178,17 +184,59 @@
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni2",
@@ -212,11 +260,18 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             },
             {
               "cardId": "n_0054",
-              "name": "Gear Bag"
+              "name": "Gear Bag",
+              "cost": 1,
+              "text": {
+                "en": "[Exhaust] [Combo] Draw 2."
+              }
             }
           ]
         },
@@ -350,12 +405,18 @@
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "Heal 100%."
+              }
             },
             {
               "cardId": "c_1039_srt4",
@@ -420,12 +481,22 @@
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tactical Analysis I",
+                "text": {
+                  "en": "Heal 50%. 1 Wave. +50% Heal Amount for 2 turns."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -535,7 +606,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -562,22 +636,78 @@
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni2",
@@ -594,7 +724,10 @@
             {
               "cardId": "c_1039_uni4",
               "name": "Deluge",
-              "cost": 1
+              "cost": 1,
+              "text": {
+                "en": "[Unique] 1 Wave. At the start of the turn, 1 Wave."
+              }
             }
           ]
         },
@@ -823,6 +956,7 @@
             {
               "cardId": "n_0054",
               "name": "Gear Bag",
+              "cost": 1,
               "note": {
                 "en": ""
               },
@@ -831,6 +965,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -839,6 +974,7 @@
             {
               "cardId": "n_0010",
               "name": "Attack!",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -847,6 +983,7 @@
             {
               "cardId": "n_0115",
               "name": "Reorganize",
+              "cost": 1,
               "note": {
                 "en": "1 AP for 3 Cards compared to 0/2 for Gearbag"
               },
@@ -855,6 +992,7 @@
             {
               "cardId": "n_0055",
               "name": "Glorious Resistance",
+              "cost": 3,
               "note": {
                 "en": "+1 AP but rng if it works"
               },
@@ -883,6 +1021,7 @@
             {
               "cardId": "n_0035",
               "name": "First Aid Kit",
+              "cost": 2,
               "note": {
                 "en": ""
               },
@@ -891,6 +1030,7 @@
             {
               "cardId": "n_0130",
               "name": "Strategic Starting Point",
+              "cost": 1,
               "note": {
                 "en": "If you need Ego Points for some reason"
               },
@@ -899,6 +1039,7 @@
             {
               "cardId": "n_0136",
               "name": "Wanderer of the Void",
+              "cost": 0,
               "note": {
                 "en": "Tech that justbeats some bosses"
               },
@@ -1261,6 +1402,7 @@
             {
               "cardId": "n_0027",
               "name": "Dream World",
+              "cost": 3,
               "note": {
                 "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
               },
@@ -1286,6 +1428,7 @@
             {
               "cardId": "n_0076",
               "name": "Nutrient Absorption",
+              "cost": 0,
               "note": {
                 "en": "Exhausts any card and can Cost Reduce cards for Move"
               },
@@ -1294,6 +1437,7 @@
             {
               "cardId": "n_0129",
               "name": "Spore Harvester",
+              "cost": 0,
               "note": {
                 "en": "Free Final Dmg Multi and Glory Set Activator"
               },
