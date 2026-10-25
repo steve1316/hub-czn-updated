@@ -214,6 +214,14 @@ def test_fold_leaves_cards_without_variants_alone():
     assert guides._fold([tassel, _rated("c_30134_cre1", "Sword Tassel", "4/5", 2)], _variants_of) == [tassel, {**tassel, "rating": "4/5"}]
 
 
+def test_only_a_complete_rated_run_gets_levels():
+    # An unidentified picture or another card in the middle restarts the count, and a short run misses levels.
+    runs = [("c_30134_uni2", position) for position in range(1, 6)] + [("c_30134_srt4", position) for position in (1, 1, 2, 3, 4)]
+    cards = [{"cardId": card_id, "epiphany": position} for card_id, position in runs + [("c_30134_cre1", 1), ("c_30134_cre1", 2)]]
+    assert guides._complete_runs(cards, _variants_of) == {"c_30134_uni2"}
+    assert guides._complete_runs([{"cardId": "c_30134_uni2", "epiphany": position} for position in (1, 2, 3)], _variants_of) == set()
+
+
 def test_notes_attach_by_name_number_and_game_name():
     cards = {"type": "card-list", "items": guides._fold(
         [_rated("c_30134_uni2", "Radiant Sword Flow", "5/5", level) for level in range(1, 6)]
@@ -270,10 +278,23 @@ def test_unresolved_deck_card_is_listed_for_review():
     card = {"cardId": "c_30134_uni2", "cost": 1}
     assert not guides._resolve_deck_card(card, picture, "Tab!D10", guides._DeckPictures(), {}, lambda data: "zzzz", _variants_of)
     assert "epiphany" not in card
-    unknown = guides._PictureLabels({})
-    unknown.unidentify(picture.hash, picture.data, "card", "Tab!D10")
-    page = guides._review_page({}, unknown.unidentified).decode("utf-8")
-    assert "Deck cards with an unknown epiphany" in page and "Tab!D10" in page
+    unknown: dict[str, guides._Picture] = {}
+    guides._add_unknown_epiphany(unknown, picture, "Tab!D10")
+    page = guides._review_page({}, unknown).decode("utf-8")
+    assert "Deck cards with an unknown epiphany" in page and "Tab!D10" in page and "cell override" in page
+
+
+def test_unknown_deck_pictures_are_listed_by_exact_file():
+    # Two levels of one card hash almost alike, so only an identical file is the same entry.
+    image = _textured(5)
+    other = image.copy()
+    other.putpixel((0, 0), (255, 0, 0))
+    first, second = guides._Download(_png(image)), guides._Download(_png(other))
+    assert (first.hash ^ second.hash).bit_count() <= guides.PICTURE_LABEL_DISTANCE
+    unknown: dict[str, guides._Picture] = {}
+    for download, ref in ((first, "Tab!B10"), (second, "Tab!C10"), (first, "Tab!D10")):
+        guides._add_unknown_epiphany(unknown, download, ref)
+    assert [picture.refs for picture in unknown.values()] == [["Tab!B10", "Tab!D10"], ["Tab!C10"]]
 
 
 def test_deck_copies_of_one_picture_are_matched_once():

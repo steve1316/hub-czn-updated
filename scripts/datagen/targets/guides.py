@@ -292,10 +292,10 @@ def build(ctx: Context) -> TargetResult:
     # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
     text_cache_path = cache / CARD_TEXT_CACHE
     text_cache: dict[str, str] = json.loads(text_cache_path.read_text(encoding="utf-8")) if text_cache_path.is_file() else {}
-    unknown_epiphanies = _PictureLabels({})
+    unknown_epiphanies: dict[str, _Picture] = {}
     for card, download, ref in decks.pending:
         if not _resolve_deck_card(card, download, ref, decks, overrides.entries, lambda data: card_text.read_card_text(data, text_cache), variants_of):
-            unknown_epiphanies.unidentify(download.hash, download.data, "card", ref)
+            _add_unknown_epiphany(unknown_epiphanies, download, ref)
     for guide_slug, _, guide in guides:
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
 
@@ -308,15 +308,15 @@ def build(ctx: Context) -> TargetResult:
             f"{NAME}: {len(labels.unidentified)} distinct picture(s) used {uses} times were not identified and are left out. "
             f"Label them in the `_pictures` directive of {OVERRIDES_FILE}, using the review page {cache / REVIEW_PAGE}"
         )))
-    if unknown_epiphanies.unidentified:
-        uses = sum(len(picture.refs) for picture in unknown_epiphanies.unidentified.values())
+    if unknown_epiphanies:
+        uses = sum(len(picture.refs) for picture in unknown_epiphanies.values())
         issues.append(Issue("warning", (
             f"{NAME}: {uses} deck card(s) show an epiphany that could not be read and get no badge. Set it with a cell override such as "
             f'{{"epiphany": 2, "divine": "div_0098"}} in {OVERRIDES_FILE}, using the review page {cache / REVIEW_PAGE}'
         )))
     # These are caches for the next run and for review, not outputs, so they are written here rather than compared.
     cache.mkdir(parents=True, exist_ok=True)
-    (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies.unidentified))
+    (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies))
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
@@ -712,7 +712,7 @@ class _GuideBuilder:
             A card-list block. Consecutive rated renders of the same card are its epiphany levels, folded into one item.
         """
         # Only rated rows list a card's epiphany variants. Elsewhere a repeated card is just another copy in a deck.
-        variants = {card["cardId"] for card in cards if card["epiphany"] > 1} if ratings else set()
+        variants = _complete_runs(cards, self.variants_of) if ratings else set()
         items = []
         for card in cards:
             card_id = card["cardId"]
@@ -842,6 +842,24 @@ def _set_block(block: dict) -> dict:
     return {"type": "set-list", "items": items} if items else block
 
 
+def _complete_runs(cards: list[dict], variants_of) -> set[str]:
+    """
+    The cards whose rated renders are one whole run of their epiphany levels, so each render's position is its level.
+
+    Args:
+        cards: Identified cards with their epiphany position in the row.
+        variants_of: Card id -> its `epiphany.variants`.
+
+    Returns:
+        The card ids whose positions are exactly 1 to their last level. A run that was cut short, restarted or split gives
+        no levels, as a wrong level is worse than none.
+    """
+    positions: dict[str, list[int]] = {}
+    for card in cards:
+        positions.setdefault(card["cardId"], []).append(card["epiphany"])
+    return {card_id for card_id, found in positions.items() if found == list(range(1, len(variants_of(card_id))))}
+
+
 def _fold(items: list[dict], variants_of) -> list[dict]:
     """
     Each rated run of one card's renders as one item that lists its epiphanies.
@@ -966,6 +984,19 @@ def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPi
     return True
 
 
+def _add_unknown_epiphany(unknown: dict[str, _Picture], download: _Download, ref: str) -> None:
+    """
+    Record a deck card whose epiphany could not be read, for the review page.
+
+    Args:
+        unknown: Picture sha1 -> the picture and its cells. Updated in place.
+        download: The card's picture.
+        ref: Its cell.
+    """
+    # Keyed by the exact file, as two levels of one card hash almost alike and one entry must not stand for both.
+    unknown.setdefault(download.sha1, _Picture("card", download.data)).refs.append(ref)
+
+
 def _extra(extra_id: str | None) -> Extra | None:
     """The divine or common epiphany line with this id, or None when there is none."""
     return next((line for line in [*epiphany.divine_epiphanies(), *epiphany.common_epiphanies()] if line.id == extra_id), None)
@@ -1070,35 +1101,37 @@ def _unique(candidate: str, used: set[str]) -> str:
     return result
 
 
-def _review_page(pictures: dict[int, _Picture], unknown_epiphanies: dict[int, _Picture] | None = None) -> bytes:
+def _review_page(pictures: dict[int, _Picture], unknown_epiphanies: dict[str, _Picture] | None = None) -> bytes:
     """
     A local page listing every picture that still needs a label, most used first.
 
     Args:
         pictures: Picture hash -> the picture and where it is used.
-        unknown_epiphanies: Deck card pictures whose epiphany could not be read, listed under their own heading.
+        unknown_epiphanies: Picture sha1 -> a deck card picture whose epiphany could not be read, listed under their own heading.
 
     Returns:
-        The HTML page. Each entry shows the picture, the hash to use as its `_pictures` key, and where it appears.
+        The HTML page. Each entry shows the picture, how to label it (the hash to use as its `_pictures` key, or a cell override
+        for a deck card), and where it appears.
     """
     style = "body{font-family:sans-serif;background:#111;color:#ddd}figure{display:inline-block;width:260px;margin:8px;vertical-align:top}"
     style += "img{max-width:250px;max-height:200px}code{font-size:10px;word-break:break-all;color:#c084fc}"
     title = f"{len(pictures)} unidentified guide pictures"
-    page = f"<!doctype html><meta charset=utf-8><title>{title}</title><style>{style}</style><h1>{title}</h1>{_review_entries(pictures)}"
+    entries = _review_entries(pictures, lambda key: f'<code>"{key:064x}"</code>')
+    page = f"<!doctype html><meta charset=utf-8><title>{title}</title><style>{style}</style><h1>{title}</h1>{entries}"
     if unknown_epiphanies:
-        page += f"<h1>Deck cards with an unknown epiphany</h1>{_review_entries(unknown_epiphanies)}"
+        page += f"<h1>Deck cards with an unknown epiphany</h1>{_review_entries(unknown_epiphanies, lambda key: 'Set with a cell override')}"
     return f"{page}\n".encode("utf-8")
 
 
-def _review_entries(pictures: dict[int, _Picture]) -> str:
-    """The review page entries for some pictures, most used first."""
+def _review_entries(pictures: dict, how_to_label) -> str:
+    """The review page entries for some pictures, most used first, each captioned with `how_to_label(key)` as HTML."""
     entries = []
     for key, picture in sorted(pictures.items(), key=lambda item: (-len(item[1].refs), item[0])):
         mime = Image.MIME.get(Image.open(io.BytesIO(picture.data)).format or "", "image/png")
         source = f"data:{mime};base64,{base64.b64encode(picture.data).decode('ascii')}"
         refs = ", ".join(picture.refs[:8]) + (f" and {len(picture.refs) - 8} more" if len(picture.refs) > 8 else "")
         entries.append(
-            f'<figure><img src="{source}" alt=""><figcaption><code>"{key:064x}"</code><br>{picture.kind}, used {len(picture.refs)} time(s): '
+            f'<figure><img src="{source}" alt=""><figcaption>{how_to_label(key)}<br>{picture.kind}, used {len(picture.refs)} time(s): '
             f"{html.escape(refs)}</figcaption></figure>"
         )
     return "".join(entries)
