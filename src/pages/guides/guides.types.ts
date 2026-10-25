@@ -3,12 +3,108 @@ import type { LocalizedText } from '@/lib/localized-text'
 // Guides are imported from an English-only sheet, so `pt-BR` is usually absent and English is shown instead.
 export type { Lang, LocalizedText } from '@/lib/localized-text'
 
+/** One epiphany level of a rated card, folded from the sheet's run of renders. */
+export interface EpiphanyRating {
+  /** The epiphany level, 1-5. */
+  level: number
+  /** The game's name for this level ("Flicker Blade (Unbound)"), or the base name with a numeral ("Sword Resonance II"). */
+  name: string
+  /** The cost printed on this level, -1 for an X cost. */
+  cost: number
+  /** The author's rating, such as "5/5". */
+  rating?: string
+  /** The author's comment on this level, from a "Flow 2:" style line under the cards. */
+  note: LocalizedText
+}
+
+/** One card in a card-list. */
+export interface CardItem {
+  /** The client card id, such as `c_30134_uni2`. */
+  cardId: string
+  /** The card's display name. */
+  name?: string
+  /** The cost printed on the card, -1 for an X cost. Absent when the card is folded into `epiphanies`. */
+  cost?: number
+  /** The author's rating, such as "4/5". */
+  rating?: string
+  /** The author's comment on the card. */
+  note: LocalizedText
+  /** Every rated epiphany level, when the sheet rates the card's levels one by one. */
+  epiphanies?: EpiphanyRating[]
+}
+
+/** The epiphany a deck card shows, read off its sheet picture. */
+export interface DeckEpiphany {
+  /** 0 for the base card, else the epiphany level 1-5. */
+  level: number
+  /** The level's display name. */
+  name: string
+  /** The level's card text. */
+  text: LocalizedText
+}
+
+/** A divine or common epiphany line added to a deck card. */
+export interface DeckExtra {
+  /** The catalog id, such as "div_0098" or "com_0065". */
+  id: string
+  /** The divine god's display name, absent for a common epiphany. */
+  god?: string
+  /** The line as the card shows it. */
+  text: LocalizedText
+}
+
+/** One card in a deck strip. Every copy is listed. */
+export interface DeckCard {
+  /** The client card id. */
+  cardId: string
+  /** The card's display name. */
+  name?: string
+  /** The cost the card shows, after any extra line that reduces it. -1 for an X cost. */
+  cost?: number
+  /** The epiphany it shows. Absent when it could not be read or the card has none. */
+  epiphany?: DeckEpiphany
+  /** The divine or common line added to it. */
+  extra?: DeckExtra
+}
+
+/** One part of a sheet line listing sets, such as "BlackWing | Executioners | Flex". */
+export interface SetItem {
+  /** The sheet's own text for this part. */
+  label: string
+  /** The memory fragment set id, absent when the part names no set (such as "Flex"). */
+  setId?: number
+  /** The set's full name. */
+  name?: string
+  /** How many pieces the set bonus needs. */
+  pieces?: number
+  /** The set bonus text. */
+  bonus?: string
+  /** The set icon path, served by the sidecar. */
+  icon?: string
+}
+
+/** One character in a team-grid group. */
+export interface TeamMember {
+  /** The character or partner res_id. */
+  charResId: number
+  /** The display name. */
+  name: string
+}
+
 export type Block =
   | { type: 'prose'; body: LocalizedText }
   | {
       type: 'card-list'
       intro?: LocalizedText
-      items: { cardId: string; name?: string; rating?: string; note: LocalizedText }[]
+      items: CardItem[]
+    }
+  | {
+      type: 'deck'
+      cards: DeckCard[]
+    }
+  | {
+      type: 'set-list'
+      items: SetItem[]
     }
   | {
       type: 'partner-list'
@@ -25,7 +121,7 @@ export type Block =
     }
   | {
       type: 'team-grid'
-      groups: { title?: LocalizedText; faces: number[] }[]
+      groups: { title?: LocalizedText; members: TeamMember[] }[]
     }
 
 export interface GuideSection {
@@ -43,5 +139,7 @@ export interface Guide {
   charResId: number
   name: string
   source?: GuideSource
+  /** The sheet's last edit date, such as "10/24". */
+  updated?: string
   sections: GuideSection[]
 }
