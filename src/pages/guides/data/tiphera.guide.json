@@ -36,14 +36,7 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -132,14 +125,7 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -194,14 +180,7 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -312,14 +291,7 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -369,14 +341,7 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -572,26 +537,12 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -641,26 +592,12 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
-                "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -712,10 +649,10 @@
               "name": "Form Convergence",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
+                "level": 4,
+                "name": "Form Convergence IV",
                 "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                  "en": "[Retain] Select and Exhaust up to 3 Exhaust cards from All Piles. Draw an Exhaust card for each Exhausted."
                 }
               }
             },
@@ -724,10 +661,10 @@
               "name": "Form Convergence",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Form Convergence I",
+                "level": 4,
+                "name": "Form Convergence IV",
                 "text": {
-                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                  "en": "[Retain] Select and Exhaust up to 3 Exhaust cards from All Piles. Draw an Exhaust card for each Exhausted."
                 }
               }
             },
@@ -1590,63 +1527,45 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Form Convergence I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Being able to double up to 3 effects is very good"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Form Convergence II",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Draw 4 Archetypes, Exhaust one Exhaust card in hand"
-                  }
-                }
-              ]
+              "rating": "5/5"
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Form Convergence I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Form Convergence II",
-                  "cost": 1,
-                  "rating": "0/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Form 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
+            "en": "Form 1: Being able to double up to 3 effects is very good\nForm 2: Draw 4 Archetypes, Exhaust one Exhaust card in hand\nForm 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
           }
         },
         {

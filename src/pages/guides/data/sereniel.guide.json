@@ -402,12 +402,12 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "cost": 2,
+              "cost": 1,
               "epiphany": {
-                "level": 3,
-                "name": "Cobalt Light III",
+                "level": 4,
+                "name": "Cobalt Light IV",
                 "text": {
-                  "en": "140% Damage × 4 to random enemies. Create 1 Homing Laser L for each target Hit."
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
                 }
               }
             },
@@ -552,12 +552,12 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "cost": 2,
+              "cost": 1,
               "epiphany": {
-                "level": 3,
-                "name": "Cobalt Light III",
+                "level": 4,
+                "name": "Cobalt Light IV",
                 "text": {
-                  "en": "140% Damage × 4 to random enemies. Create 1 Homing Laser L for each target Hit."
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
                 }
               }
             }
@@ -849,12 +849,12 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "cost": 2,
+              "cost": 1,
               "epiphany": {
-                "level": 3,
-                "name": "Cobalt Light III",
+                "level": 4,
+                "name": "Cobalt Light IV",
                 "text": {
-                  "en": "140% Damage × 4 to random enemies. Create 1 Homing Laser L for each target Hit."
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
                 }
               }
             },
@@ -1820,54 +1820,45 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
+              "cost": 3,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Cobalt Light I",
-                  "cost": 3,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "5.5-7 Bars of Tenacity, -1 cost permanently till 0 cost"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Cobalt Light II",
-                  "cost": 3,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "Retain to add hits, but always 3 cost and low ratio, pretty terrible"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Cobalt Light III",
-                  "cost": 2,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Creates Homing Lazers per unique target hit, okay"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Cobalt Light IV",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Potential man of Cobalt Lights"
-                  }
-                }
-              ]
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "cost": 3,
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "cost": 3,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "cost": 3,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Cobalt 5: 3 AP for 3 Break, but it is indeed quite a bit of damage"
+            "en": "Cobalt 1: 5.5-7 Bars of Tenacity, -1 cost permanently till 0 cost\nCobalt 2: Retain to add hits, but always 3 cost and low ratio, pretty terrible\nCobalt 3: Creates Homing Lazers per unique target hit, okay\nCobalt 4: Potential man of Cobalt Lights\nCobalt 5: 3 AP for 3 Break, but it is indeed quite a bit of damage"
           }
         }
       ]

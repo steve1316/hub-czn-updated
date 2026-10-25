@@ -914,20 +914,7 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2,
-              "epiphany": {
-                "level": 2,
-                "name": "Ice Wall II",
-                "text": {
-                  "en": "300% Shield. 2 Counterattack. +30% Shield Gain Amount for each Counterattack of this unit."
-                }
-              },
-              "extra": {
-                "id": "com_0035",
-                "text": {
-                  "en": "Counterattack 1."
-                }
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1010_uni2",

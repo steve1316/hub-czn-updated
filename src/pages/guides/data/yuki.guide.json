@@ -190,60 +190,32 @@
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2,
-              "epiphany": {
-                "level": 2,
-                "name": "Flash Slash II",
-                "text": {
-                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 2."
-                }
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2,
-              "epiphany": {
-                "level": 2,
-                "name": "Flash Slash II",
-                "text": {
-                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 2."
-                }
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2,
-              "epiphany": {
-                "level": 2,
-                "name": "Flash Slash II",
-                "text": {
-                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 2."
-                }
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
-              "cost": 2,
-              "epiphany": {
-                "level": 2,
-                "name": "Flash Slash II",
-                "text": {
-                  "en": "220% Damage to all enemies. If there is only a single target, increase Damage Amount by 50%. Inspiration: Decrease Cost by 2."
-                }
-              }
+              "cost": 2
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
               "cost": 1,
               "epiphany": {
-                "level": 2,
-                "name": "Trickery Strike II",
+                "level": 5,
+                "name": "Trickery Strike V",
                 "text": {
-                  "en": "[Retain] [Retrieve] 240% Damage. Enable the Inspiration effect for 1 random card(s) of this unit in hand."
+                  "en": "200% Damage. Inspiration: Add 1 Hit."
                 }
               }
             },
@@ -703,56 +675,38 @@
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Trickery Strike I",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Trickery Strike II",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "2/5"
             },
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Trickery Strike I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Trickery Strike II",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
@@ -827,29 +781,20 @@
             {
               "cardId": "c_1057_uni1",
               "name": "Flash Slash",
+              "cost": 2,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Flash Slash I",
-                  "cost": 2,
-                  "rating": "6/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Flash Slash II",
-                  "cost": 2,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "name": "Flash Slash",
+              "cost": 2,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
             }
           ]
         },

@@ -473,10 +473,10 @@
               "name": "Hollow Verdict",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Hollow Verdict I",
+                "level": 4,
+                "name": "Hollow Verdict IV",
                 "text": {
-                  "en": "[Unique] 60% Damage and 3 Fracture to all enemies. Fracture Amplification: Activate Fracture inflicted by allies."
+                  "en": "60% Damage, 2 Fracture, and 4 Agony to all enemies. Fracture Amplification: Activate Agony inflicted by allies."
                 }
               }
             },
@@ -1136,54 +1136,36 @@
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Hollow Verdict I",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Ally Frac Act"
-                  }
-                }
-              ]
+              "rating": "3/5"
             },
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Hollow Verdict I",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Hollow Verdict II",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Double Frac Act"
-                  }
-                }
-              ]
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Hollow 3: Big base like Art build style\nHollow 4: Agony Act\nHollow 5: Its alot of Fracture"
+            "en": "Hollow 1: Ally Frac Act\nHollow 2: Double Frac Act\nHollow 3: Big base like Art build style\nHollow 4: Agony Act\nHollow 5: Its alot of Fracture"
           }
         },
         {

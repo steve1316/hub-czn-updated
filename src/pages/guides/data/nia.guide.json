@@ -26,20 +26,7 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1,
-              "epiphany": {
-                "level": 1,
-                "name": "G Chord I",
-                "text": {
-                  "en": "2 Decibel. Check the top 3 cards in Draw Pile. Select one to proc."
-                }
-              },
-              "extra": {
-                "id": "com_0175",
-                "text": {
-                  "en": "Fortitude 1."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_1003_uni2",
@@ -1710,54 +1697,45 @@
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
+              "cost": 0,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Adagio I",
-                  "cost": 0,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "When a broken Attunement comes back, this will be broken again"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Adagio II",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Pretty great with Yuki"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Adagio III",
-                  "cost": 0,
-                  "rating": "0/5",
-                  "note": {
-                    "en": "1 cost is bad, Decibels and healing for it's cost not good enough"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Adagio IV",
-                  "cost": 3,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "Potentially a gear bag, but 3 decibel is kinda hard to get, and it discards making it last shorter"
-                  }
-                }
-              ]
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Adagio 5: Always gonna give you a Card you want 9/10 times, tutoring is very strong\nAdagio never goes card positive usually, so Gear bag is a very good include"
+            "en": "Adagio 1: When a broken Attunement comes back, this will be broken again\nAdagio 2: Pretty great with Yuki\nAdagio 3: 1 cost is bad, Decibels and healing for it's cost not good enough\nAdagio 4: Potentially a gear bag, but 3 decibel is kinda hard to get, and it discards making it last shorter\nAdagio 5: Always gonna give you a Card you want 9/10 times, tutoring is very strong\nAdagio never goes card positive usually, so Gear bag is a very good include"
           }
         }
       ]

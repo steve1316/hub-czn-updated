@@ -99,10 +99,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -111,10 +111,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -123,10 +123,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -216,12 +216,12 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Chain Fire IV",
+                "level": 5,
+                "name": "Chain Fire V",
                 "text": {
-                  "en": "[Bullet] 100% Damage × 3. +50% Critical Chance."
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
                 }
               }
             },
@@ -319,10 +319,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -331,10 +331,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -343,10 +343,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -355,10 +355,10 @@
               "name": "Chain Fire",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Chain Fire I",
+                "level": 2,
+                "name": "Chain Fire II",
                 "text": {
-                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                  "en": "30% Damage × 3. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
                 }
               }
             },
@@ -508,48 +508,48 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Chain Fire IV",
+                "level": 5,
+                "name": "Chain Fire V",
                 "text": {
-                  "en": "[Bullet] 100% Damage × 3. +50% Critical Chance."
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
                 }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Chain Fire IV",
+                "level": 5,
+                "name": "Chain Fire V",
                 "text": {
-                  "en": "[Bullet] 100% Damage × 3. +50% Critical Chance."
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
                 }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Chain Fire IV",
+                "level": 5,
+                "name": "Chain Fire V",
                 "text": {
-                  "en": "[Bullet] 100% Damage × 3. +50% Critical Chance."
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
                 }
               }
             },
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 0,
+              "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Chain Fire IV",
+                "level": 5,
+                "name": "Chain Fire V",
                 "text": {
-                  "en": "[Bullet] 100% Damage × 3. +50% Critical Chance."
+                  "en": "100% Damage × 2. For each Critical Hit, Draw. +70% Critical Chance."
                 }
               }
             },
@@ -897,47 +897,38 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Chain Fire I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Chain Fire II",
-                  "cost": 1,
-                  "rating": "1/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Chain Fire III",
-                  "cost": 1,
-                  "rating": "1/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Chain Fire IV",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
             }
           ]
         },

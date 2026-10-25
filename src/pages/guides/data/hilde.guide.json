@@ -292,20 +292,7 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1,
-              "epiphany": {
-                "level": 0,
-                "name": "Plasma Rain",
-                "text": {
-                  "en": "60% Damage and 2 Ionization to all enemies."
-                }
-              },
-              "extra": {
-                "id": "com_0026",
-                "text": {
-                  "en": "Draw 1."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30113_uni2",
@@ -424,20 +411,7 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1,
-              "epiphany": {
-                "level": 0,
-                "name": "Plasma Rain",
-                "text": {
-                  "en": "60% Damage and 2 Ionization to all enemies."
-                }
-              },
-              "extra": {
-                "id": "com_0026",
-                "text": {
-                  "en": "Draw 1."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30113_uni2",
@@ -537,20 +511,7 @@
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
-              "cost": 1,
-              "epiphany": {
-                "level": 0,
-                "name": "Plasma Rain",
-                "text": {
-                  "en": "60% Damage and 2 Ionization to all enemies."
-                }
-              },
-              "extra": {
-                "id": "com_0026",
-                "text": {
-                  "en": "Draw 1."
-                }
-              }
+              "cost": 1
             },
             {
               "cardId": "c_30113_uni2",
@@ -1165,38 +1126,29 @@
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Quiver Reload I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Quiver Reload II",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Quiver Reload III",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
             }
           ]
         },

@@ -950,54 +950,45 @@
             {
               "cardId": "c_1060_uni2",
               "name": "Bound At Dusk",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Bound At Dusk I",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "+2 AP technically but is RNG and can break Conqueror set, very good"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Bound At Dusk II",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Moon+ Spam, you do need alot of draw and luck to support this"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Bound At Dusk III",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Good with teammates who don't have 0 cost skills IE Hugo is amazing here"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Bound At Dusk IV",
-                  "cost": 1,
-                  "rating": "0/5",
-                  "note": {
-                    "en": "Too RNG Dependant to be good"
-                  }
-                }
-              ]
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "name": "Bound At Dusk",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Bound 5:Karmic4 IG? No real worthy synergy for this Currently"
+            "en": "Bound 1: +2 AP technically but is RNG and can break Conqueror set, very good\nBound 2: Moon+ Spam, you do need alot of draw and luck to support this\nBound 3: Good with teammates who don't have 0 cost skills IE Hugo is amazing here\nBound 4: Too RNG Dependant to be good\nBound 5:Karmic4 IG? No real worthy synergy for this Currently"
           }
         },
         {

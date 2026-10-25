@@ -173,10 +173,10 @@
               "name": "Friends from Fairy Tales",
               "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Friends from Fairy Tales IV",
+                "level": 5,
+                "name": "Friends from Fairy Tales V",
                 "text": {
-                  "en": "[Unique] Create 1 Teddy. When Teddy is activated, 1 Counterattack, and for 1 turn, Retain Counterattack."
+                  "en": "[Unique] Create 1 Doggie (Morphed)."
                 }
               }
             },
@@ -279,10 +279,10 @@
               "name": "Friends from Fairy Tales",
               "cost": 1,
               "epiphany": {
-                "level": 4,
-                "name": "Friends from Fairy Tales IV",
+                "level": 5,
+                "name": "Friends from Fairy Tales V",
                 "text": {
-                  "en": "[Unique] Create 1 Teddy. When Teddy is activated, 1 Counterattack, and for 1 turn, Retain Counterattack."
+                  "en": "[Unique] Create 1 Doggie (Morphed)."
                 }
               }
             },
@@ -380,10 +380,10 @@
               "name": "Friends from Fairy Tales",
               "cost": 1,
               "epiphany": {
-                "level": 2,
-                "name": "Friends from Fairy Tales II",
+                "level": 3,
+                "name": "Friends from Fairy Tales III",
                 "text": {
-                  "en": "[Unique] Create 1 Teddy. When Damage is taken, move Teddy to hand (1 time per turn)."
+                  "en": "[Unique] Create 4 Doggie (Pack) in Draw Pile."
                 }
               }
             },
@@ -600,29 +600,20 @@
             {
               "cardId": "c_1055_uni1",
               "name": "Protect Us",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Protect Us I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Protect Us II",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "name": "Protect Us",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
             }
           ]
         },
@@ -717,54 +708,45 @@
             {
               "cardId": "c_1055_uni2",
               "name": "Friends from Fairy Tales",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Friends from Fairy Tales I",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Doggo does up to 1200% more at max Blessings (generally 720%)"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Friends from Fairy Tales II",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Allows you to play 2 Teddy a turn potentially, or just 1 for free"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Friends from Fairy Tales III",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Deals big damage, but also adds 3 more card to cycle through, requires Protect 1"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Friends from Fairy Tales IV",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Just allows Adel to get Counter"
-                  }
-                }
-              ]
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Friends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
+            "en": "Friends 1: Doggo does up to 1200% more at max Blessings (generally 720%)\nFriends 2: Allows you to play 2 Teddy a turn potentially, or just 1 for free\nFriends 3: Deals big damage, but also adds 3 more card to cycle through, requires Protect 1\nFriends 4: Just allows Adel to get Counter\nFriends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
           }
         },
         {

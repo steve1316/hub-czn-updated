@@ -868,47 +868,38 @@
             {
               "cardId": "c_1008_uni1",
               "name": "Greatsword Aquila",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Greatsword Aquila I",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Greatsword Aquila II",
-                  "cost": 2,
-                  "rating": "1/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Greatsword Aquila III",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Greatsword Aquila IV",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1008_uni1",
+              "name": "Greatsword Aquila",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },

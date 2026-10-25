@@ -297,12 +297,12 @@
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "cost": 1,
+              "cost": 2,
               "epiphany": {
-                "level": 4,
-                "name": "Resolute Blitz IV",
+                "level": 5,
+                "name": "Resolute Blitz V",
                 "text": {
-                  "en": "[Pulverize] 210% Defense-Based Damage. 20% DMG-Based Shield. Increases Damage Amount equal to 30% of Shield owned."
+                  "en": "At the end of the turn, 1 Counterattack. 210% Defense-Based Damage to random enemies."
                 }
               }
             },
@@ -712,54 +712,45 @@
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Resolute Blitz I",
-                  "cost": 1,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "2 Counter + High base"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Resolute Blitz II",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "1 but worse"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Resolute Blitz III",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "AOE but expensive"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Resolute Blitz IV",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Gain dmg off of Shield"
-                  }
-                }
-              ]
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1028_srt4",
+              "name": "Resolute Blitz",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Resolute 5: Upgrade that gains counterattack"
+            "en": "Resolute 1: 2 Counter + High base\nResolute 2: 1 but worse\nResolute 3: AOE but expensive\nResolute 4: Gain dmg off of Shield\nResolute 5: Upgrade that gains counterattack"
           }
         },
         {

@@ -1473,81 +1473,63 @@
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Spotlight I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Spotlight II",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Basically 1 free Rhythm draw each turn, not very impresive"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Spotlight III",
-                  "cost": 2,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Spotlight IV",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing"
-                  }
-                },
-                {
-                  "level": 5,
-                  "name": "Spotlight V",
-                  "cost": 0,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "0 cost Draw 2, but discards non Rhythms, its okay"
-                  }
-                }
-              ]
+              "rating": "4/5"
             },
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Spotlight I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": ""
-                  }
-                }
-              ]
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Spotlight 0: Actually not too bad, to just get a Moral Epiphany on this"
+            "en": "Spotlight 1: Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting\nSpotlight 2: Basically 1 free Rhythm draw each turn, not very impresive\nSpotlight 3: Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense\nSpotlight 4: Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing\nSpotlight 5: 0 cost Draw 2, but discards non Rhythms, its okay\nSpotlight 0: Actually not too bad, to just get a Moral Epiphany on this"
           }
         },
         {

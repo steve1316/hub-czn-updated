@@ -206,14 +206,7 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
-              "epiphany": {
-                "level": 2,
-                "name": "Hew (Extreme)",
-                "text": {
-                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 300% Defense-Based Damage. Incinerate: Create 1 Hew (Extreme) Lv. 1."
-                }
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30047_uni3",
@@ -273,14 +266,7 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
-              "epiphany": {
-                "level": 1,
-                "name": "Hew (Ironclad)",
-                "text": {
-                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
-                }
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30047_uni3",
@@ -340,14 +326,7 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
-              "epiphany": {
-                "level": 1,
-                "name": "Hew (Ironclad)",
-                "text": {
-                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
-                }
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30047_uni3",
@@ -409,14 +388,7 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
-              "epiphany": {
-                "level": 1,
-                "name": "Hew (Ironclad)",
-                "text": {
-                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
-                }
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30047_uni3",
@@ -485,14 +457,7 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
-              "epiphany": {
-                "level": 1,
-                "name": "Hew (Ironclad)",
-                "text": {
-                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
-                }
-              }
+              "cost": 3
             },
             {
               "cardId": "c_30047_uni3",
@@ -1201,20 +1166,11 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
+              "cost": 3,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Hew (Ironclad)",
-                  "cost": 3,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Shield Hew"
-                  }
-                }
-              ]
+              "rating": "5/5"
             },
             {
               "cardId": "c_30047_col2",
@@ -1228,36 +1184,27 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
+              "cost": 3,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Hew (Ironclad)",
-                  "cost": 3,
-                  "rating": "5/5",
-                  "note": {
-                    "en": ""
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Hew (Extreme)",
-                  "cost": 3,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "5 Hew's instead of 3"
-                  }
-                }
-              ]
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "cost": 3,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Hew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
+            "en": "Hew 1: Shield Hew\nHew 2: 5 Hew's instead of 3\nHew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
           }
         },
         {

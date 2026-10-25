@@ -66,10 +66,10 @@
               "name": "Oath of Vanity",
               "cost": 1,
               "epiphany": {
-                "level": 1,
-                "name": "Oath of Vanity I",
+                "level": 3,
+                "name": "Oath of Vanity III",
                 "text": {
-                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 150% Damage and Heal effects."
+                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 200% Damage."
                 }
               }
             },
@@ -78,10 +78,10 @@
               "name": "Oath of Vanity",
               "cost": 0,
               "epiphany": {
-                "level": 2,
-                "name": "Oath of Vanity II",
+                "level": 4,
+                "name": "Oath of Vanity IV",
                 "text": {
-                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                  "en": "[Exhaust] [Retain] Exhaust all Futility, Status Ailment, and Curse Cards in hand. Draw for each."
                 }
               }
             }
@@ -268,10 +268,10 @@
               "name": "Oath of Vanity",
               "cost": 0,
               "epiphany": {
-                "level": 2,
-                "name": "Oath of Vanity II",
+                "level": 4,
+                "name": "Oath of Vanity IV",
                 "text": {
-                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                  "en": "[Exhaust] [Retain] Exhaust all Futility, Status Ailment, and Curse Cards in hand. Draw for each."
                 }
               }
             },
@@ -406,10 +406,10 @@
               "name": "Oath of Vanity",
               "cost": 0,
               "epiphany": {
-                "level": 2,
-                "name": "Oath of Vanity II",
+                "level": 4,
+                "name": "Oath of Vanity IV",
                 "text": {
-                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                  "en": "[Exhaust] [Retain] Exhaust all Futility, Status Ailment, and Curse Cards in hand. Draw for each."
                 }
               }
             },
@@ -971,45 +971,36 @@
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Oath of Vanity I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Just upgraded, if you want Heals as well as damage"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Oath of Vanity II",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Oath of Vanity III",
-                  "cost": 1,
-                  "rating": "0/5",
-                  "note": {
-                    "en": "The best Futility use Oath, increasing the damage by over double"
-                  }
-                }
-              ]
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Oath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
+            "en": "Oath 1: Just upgraded, if you want Heals as well as damage\nOath 2: Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3\nOath 3: The best Futility use Oath, increasing the damage by over double\nOath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
           }
         }
       ]

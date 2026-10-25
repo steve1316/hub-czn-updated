@@ -827,54 +827,45 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
+              "cost": 1,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Chrono Archon I",
-                  "cost": 1,
-                  "rating": "6/5",
-                  "note": {
-                    "en": "This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Chrono Archon II",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Pretty insignificant amount of extra damage unless moral stacking for some reason"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Chrono Archon III",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Removing the base epiphany seems really bad"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Chrono Archon IV",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Discarding is not very easy to do"
-                  }
-                }
-              ]
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "name": "Chrono Archon",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Archon 5: Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"
+            "en": "Archon 1: This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox\nArchon 2: Pretty insignificant amount of extra damage unless moral stacking for some reason\nArchon 3: Removing the base epiphany seems really bad\nArchon 4: Discarding is not very easy to do\nArchon 5: Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"
           }
         },
         {

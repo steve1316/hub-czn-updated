@@ -26,20 +26,7 @@
             {
               "cardId": "c_1017_uni2",
               "name": "Metal Extraction",
-              "cost": 1,
-              "epiphany": {
-                "level": 2,
-                "name": "Metal Extraction II",
-                "text": {
-                  "en": "3 Metallization. For 1 turn, 3 Resolve."
-                }
-              },
-              "extra": {
-                "id": "com_0175",
-                "text": {
-                  "en": "Fortitude 1."
-                }
-              }
+              "cost": 1
             }
           ]
         },
@@ -1319,54 +1306,45 @@
             {
               "cardId": "c_1017_uni3",
               "name": "Full Metal Hurricane",
+              "cost": 2,
               "note": {
                 "en": ""
               },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Full Metal Hurricane I",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Makes Metalization AOE"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Full Metal Hurricane II",
-                  "cost": 2,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Buffs ST Metalization damage"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Full Metal Hurricane III",
-                  "cost": 2,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Upgrade End of turn AOE Dmg"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Full Metal Hurricane IV",
-                  "cost": 2,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "4 hit + Buffs Metallization damage"
-                  }
-                }
-              ]
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
+              "cost": 2,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
+              "cost": 2,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1017_uni3",
+              "name": "Full Metal Hurricane",
+              "cost": 2,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Hurricane 5: 5 big hits, very strong"
+            "en": "Hurricane 1: Makes Metalization AOE\nHurricane 2: Buffs ST Metalization damage\nHurricane 3: Upgrade End of turn AOE Dmg\nHurricane 4: 4 hit + Buffs Metallization damage\nHurricane 5: 5 big hits, very strong"
           }
         }
       ]
