@@ -4,5 +4,1174 @@
     "Babybell": 1028
   },
   "_pictures": {},
-  "_sections": {}
+  "_sections": {},
+  "Amir!B3": {
+    "epiphany": 1,
+    "_why": "Hovering Metal: reads 4 Metalize, the old wording of 4 Metallization"
+  },
+  "Amir!C3": {
+    "epiphany": 2,
+    "_why": "Metal Extraction: 3 Metallization and 3 Resolve for 1 turn"
+  },
+  "Amir!N10": {
+    "epiphany": 1,
+    "divine": "div_0125",
+    "_why": "Hovering Metal: 4 Metallization; Draw 1 under a Sekred emblem"
+  },
+  "Anika!B11": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Warming Up: base Lead/Retain card; Sekred Reduce Cost"
+  },
+  "Anika!I11": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Warming Up: base Lead/Retain card; Sekred Reduce Cost"
+  },
+  "Anika!O11": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Warming Up: base Lead/Retain card; Sekred Reduce Cost"
+  },
+  "Arabella!C10": {
+    "epiphany": 1,
+    "divine": "div_0074",
+    "_why": "Observer's Pleasure: +30% per enemy; Diallos Draw 1"
+  },
+  "Arabella!C16": {
+    "epiphany": 1,
+    "divine": "div_0074",
+    "_why": "Observer's Pleasure: +30% per enemy; Diallos Draw 1"
+  },
+  "Babybell!B11": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Wolves' Dome: Initiation tag; Sekred first-card Draw 2"
+  },
+  "Babybell!C18": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Wolves' Dome: Initiation tag; Sekred first-card Draw 2"
+  },
+  "Babybell!B3": {
+    "epiphany": 2,
+    "_why": "Resolute Blitz: 2 Counterattack"
+  },
+  "Cassius!AI12": {
+    "epiphany": 5,
+    "_why": "Dice Trick: old wording that creates a Quest card, closest to V"
+  },
+  "Cassius!AJ12": {
+    "epiphany": 5,
+    "_why": "Dice Trick: old wording that creates a Quest card, closest to V"
+  },
+  "Cassius!AF13": {
+    "epiphany": 5,
+    "_why": "Dice Trick: old wording that creates a Quest card, closest to V"
+  },
+  "Cassius!AG13": {
+    "epiphany": 5,
+    "_why": "Dice Trick: old wording that creates a Quest card, closest to V"
+  },
+  "Cassius!B19": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dice Trick: 274% sits on the 240% base; Vytor Weakness Attack line"
+  },
+  "Cassius!K18": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dice Trick: 274% sits on the 240% base; Vytor Weakness Attack line"
+  },
+  "Cassius!L18": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dice Trick: 274% sits on the 240% base; Vytor Weakness Attack line"
+  },
+  "Cassius!H19": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dice Trick: 274% sits on the 240% base; Vytor Weakness Attack line"
+  },
+  "Cassius!N19": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dice Trick: 274% sits on the 240% base; Vytor Weakness Attack line"
+  },
+  "Cassius!F12": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!J12": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!R12": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!F18": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!J18": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!R18": {
+    "epiphany": 0,
+    "common": "com_0001",
+    "_why": "Shuffle: Exhaust, discard all; Morale 1"
+  },
+  "Cassius!V12": {
+    "epiphany": 1,
+    "divine": "div_0139",
+    "_why": "Shuffle: Exhaust 2; Vytor Reduce Cost"
+  },
+  "Cassius!W12": {
+    "epiphany": 1,
+    "divine": "div_0139",
+    "_why": "Shuffle: Exhaust 2; Vytor Reduce Cost"
+  },
+  "Cassius!X12": {
+    "epiphany": 1,
+    "divine": "div_0139",
+    "_why": "Shuffle: Exhaust 2; Vytor Reduce Cost"
+  },
+  "Cassius!T13": {
+    "epiphany": 1,
+    "divine": "div_0139",
+    "_why": "Shuffle: Exhaust 2; Vytor Reduce Cost"
+  },
+  "Chizuru!AA11": {
+    "epiphany": 1,
+    "_why": "Tsukuyomi: 4 Will-O-Wisp"
+  },
+  "Chizuru!AB11": {
+    "epiphany": 1,
+    "_why": "Tsukuyomi: 4 Will-O-Wisp"
+  },
+  "Chizuru!AC11": {
+    "epiphany": 1,
+    "_why": "Tsukuyomi: 4 Will-O-Wisp"
+  },
+  "Chizuru!AD11": {
+    "epiphany": 1,
+    "_why": "Tsukuyomi: 4 Will-O-Wisp"
+  },
+  "Chizuru!T12": {
+    "epiphany": 1,
+    "_why": "Oni Hunt: +100% to the next Bind card"
+  },
+  "Fei!N10": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Soliloquy: Draw 3; Caligo Neutral Card line"
+  },
+  "Fei!O10": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Soliloquy: Draw 3; Caligo Neutral Card line"
+  },
+  "Fei!P10": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Soliloquy: Draw 3; Caligo Neutral Card line"
+  },
+  "Fei!U15": {
+    "epiphany": 1,
+    "divine": "div_0007",
+    "_why": "Soliloquy: Draw 3; Caligo Gain 1 AP"
+  },
+  "Fei!V15": {
+    "epiphany": 1,
+    "divine": "div_0007",
+    "_why": "Soliloquy: Draw 3; Caligo Gain 1 AP"
+  },
+  "Fei!W15": {
+    "epiphany": 1,
+    "divine": "div_0007",
+    "_why": "Soliloquy: Draw 3; Caligo Gain 1 AP"
+  },
+  "Haru!B11": {
+    "epiphany": 4,
+    "divine": "div_0097",
+    "_why": "Anchor Shot: creates itself in Draw Pile 2 times per battle; Nihilum Always Attack Weakness"
+  },
+  "Haru!B3": {
+    "epiphany": 1,
+    "_why": "Anchor Shot: 400% Damage"
+  },
+  "Haru!K3": {
+    "epiphany": 1,
+    "_why": "Anchor Shot: 400% Damage"
+  },
+  "Haru!H11": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Anchor Shot: +100% per use and nothing more; Vytor Weakness Attack line"
+  },
+  "Heidemarie!B11": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Heidemarie!C11": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Heidemarie!D11": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Heidemarie!B17": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Heidemarie!C17": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Heidemarie!D17": {
+    "epiphany": 3,
+    "divine": "div_0090",
+    "_why": "Sword Rain: procs 5 Effulgent Blade from Graveyard; Nihilum Draw 1"
+  },
+  "Hilde!AA10": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Plasma Rain: 2 Ionization to all enemies; Draw 1"
+  },
+  "Hilde!O10": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Plasma Rain: 2 Ionization to all enemies; Draw 1"
+  },
+  "Hilde!U10": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Plasma Rain: 2 Ionization to all enemies; Draw 1"
+  },
+  "Hugo!B16": {
+    "epiphany": 3,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% Coordinated Attack on Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!H16": {
+    "epiphany": 3,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% Coordinated Attack on Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!N16": {
+    "epiphany": 3,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% Coordinated Attack on Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!B22": {
+    "epiphany": 3,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% Coordinated Attack on Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!H22": {
+    "epiphany": 3,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% Coordinated Attack on Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!C16": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Hunting Instincts: cost 0 picks I over the base; Sekred first-card Draw 2"
+  },
+  "Hugo!C22": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Hunting Instincts: cost 0 picks I over the base; Sekred first-card Draw 2"
+  },
+  "Hugo!I22": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Hunting Instincts: cost 0 picks I over the base; Sekred first-card Draw 2"
+  },
+  "Hugo!I16": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Hunting Instincts: 50% chance of an extra Commence the Hunt; Sekred first-card Draw 2"
+  },
+  "Hugo!J16": {
+    "epiphany": 2,
+    "divine": "div_0118",
+    "_why": "Hunting Instincts: 50% chance of an extra Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!K22": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Dingo Howling: 100% Shield and 2 Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!L22": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Dingo Howling: 100% Shield and 2 Commence the Hunt; Sekred Reduce Cost"
+  },
+  "Hugo!O16": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Hunting Instincts: 50% chance of an extra Commence the Hunt; Sekred first-card Draw 2"
+  },
+  "Kayron!B11": {
+    "epiphany": 5,
+    "divine": "div_0010",
+    "_why": "Echo of Futility: +30% per Futility created; Caligo 2 Vulnerable"
+  },
+  "Kayron!C11": {
+    "epiphany": 5,
+    "divine": "div_0010",
+    "_why": "Echo of Futility: +30% per Futility created; Caligo 2 Vulnerable"
+  },
+  "Kayron!D11": {
+    "epiphany": 5,
+    "divine": "div_0010",
+    "_why": "Echo of Futility: +30% per Futility created; Caligo 2 Vulnerable"
+  },
+  "Kayron!N11": {
+    "epiphany": 5,
+    "divine": "div_0015",
+    "_why": "Echo of Futility: +30% per Futility created; Caligo Neutral Card line"
+  },
+  "Magna!B3": {
+    "epiphany": 2,
+    "_why": "Ice Fragment: 2 Counterattack at the start of the turn"
+  },
+  "Magna!C11": {
+    "epiphany": 3,
+    "_why": "Ice Wall: Lead, Counterattack targets all enemies"
+  },
+  "Magna!I11": {
+    "epiphany": 3,
+    "_why": "Ice Wall: Lead, Counterattack targets all enemies"
+  },
+  "Magna!C15": {
+    "epiphany": 3,
+    "_why": "Ice Wall: Lead, Counterattack targets all enemies"
+  },
+  "Magna!J52": {
+    "epiphany": 3,
+    "_why": "Ice Wall: Lead, Counterattack targets all enemies"
+  },
+  "Magna!I52": {
+    "epiphany": 2,
+    "_why": "Ice Wall: +30% Shield per Counterattack"
+  },
+  "Magna!L52": {
+    "epiphany": 0,
+    "_why": "Ice Wall: 200% Shield, 2 Counterattack for 2 turns"
+  },
+  "Magna!P11": {
+    "epiphany": 1,
+    "_why": "Ice Wall: 300% Shield and 3 Counterattack"
+  },
+  "Magna!H52": {
+    "epiphany": 1,
+    "_why": "Ice Wall: 300% Shield and 3 Counterattack"
+  },
+  "Mika!H12": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!I12": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!J12": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!H18": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!I18": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!J18": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!K18": {
+    "epiphany": 0,
+    "divine": "div_0090",
+    "_why": "Source of Water: Heal and 1 AP with no Wave; Nihilum Draw 1"
+  },
+  "Mika!V13": {
+    "epiphany": 1,
+    "_why": "Tactical Analysis: Heal 50%, +50% healing for 2 turns"
+  },
+  "Narja!B8": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Shackles of Hunger: moves to hand after 3 Voracity; Sekred first-card Draw 2"
+  },
+  "Narja!N8": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Shackles of Hunger: moves to hand after 3 Voracity; Sekred first-card Draw 2"
+  },
+  "Narja!Z8": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Shackles of Hunger: moves to hand after 3 Voracity; Sekred first-card Draw 2"
+  },
+  "Narja!AF8": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Shackles of Hunger: moves to hand after 3 Voracity; Sekred first-card Draw 2"
+  },
+  "Narja!H12": {
+    "epiphany": 2,
+    "divine": "div_0102",
+    "_why": "Shackles of Hunger: moves to hand after 3 Voracity; Sekred first-card Draw 2"
+  },
+  "Narja!C8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!D8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!E8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!K8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!V8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!W8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AA8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AB8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AC8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AG8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AH8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!AI8": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Nihilum Draw 1"
+  },
+  "Narja!F8": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Voluntary Control: 6 Voracity or 2 Predation; Draw 1"
+  },
+  "Narja!R8": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Voluntary Control: 6 Voracity or 2 Predation; Draw 1"
+  },
+  "Narja!X8": {
+    "epiphany": 0,
+    "common": "com_0026",
+    "_why": "Voluntary Control: 6 Voracity or 2 Predation; Draw 1"
+  },
+  "Narja!H8": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!I8": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!J8": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!B12": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!C12": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!D12": {
+    "epiphany": 5,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: 60% Shield per Voracity spent; Nihilum Draw 1"
+  },
+  "Narja!I12": {
+    "epiphany": 2,
+    "divine": "div_0015",
+    "_why": "Voluntary Control: moves Mealtime to hand; Caligo Neutral Card line"
+  },
+  "Narja!J12": {
+    "epiphany": 2,
+    "divine": "div_0015",
+    "_why": "Voluntary Control: moves Mealtime to hand; Caligo Neutral Card line"
+  },
+  "Narja!K12": {
+    "epiphany": 2,
+    "divine": "div_0015",
+    "_why": "Voluntary Control: moves Mealtime to hand; Caligo Neutral Card line"
+  },
+  "Narja!N12": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Shackles of Hunger: Attunement: 6 Voracity; Caligo Neutral Card line"
+  },
+  "Narja!O12": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Caligo Neutral Card line"
+  },
+  "Narja!P12": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Bottomless Hunger: opens with 3 Voracity; Caligo Neutral Card line"
+  },
+  "Narja!O8": {
+    "epiphany": 2,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: lowers the Cost of 2 random cards; Nihilum Draw 1"
+  },
+  "Narja!P8": {
+    "epiphany": 2,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: lowers the Cost of 2 random cards; Nihilum Draw 1"
+  },
+  "Narja!Q8": {
+    "epiphany": 2,
+    "divine": "div_0090",
+    "_why": "Bottomless Hunger: lowers the Cost of 2 random cards; Nihilum Draw 1"
+  },
+  "Narja!T8": {
+    "epiphany": 4,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: Retain, spends Voracity for damage; Nihilum Draw 1"
+  },
+  "Narja!U8": {
+    "epiphany": 4,
+    "divine": "div_0090",
+    "_why": "Shackles of Hunger: Retain, spends Voracity for damage; Nihilum Draw 1"
+  },
+  "Nia!B13": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "G Chord: procs the top card; Reduce Cost under a Diallos emblem"
+  },
+  "Nia!H13": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "G Chord: procs the top card; Reduce Cost under a Diallos emblem"
+  },
+  "Nia!H19": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "G Chord: procs the top card; Reduce Cost under a Diallos emblem"
+  },
+  "Nia!B25": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "G Chord: procs the top card; Reduce Cost under a Diallos emblem"
+  },
+  "Nia!H25": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "G Chord: procs the top card; Reduce Cost under a Diallos emblem"
+  },
+  "Nia!C3": {
+    "epiphany": 1,
+    "_why": "G Chord: checks the top 3 cards"
+  },
+  "Nia!D32": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "G Chord: procs the top card; Caligo Neutral Card line"
+  },
+  "Nia!E32": {
+    "epiphany": 3,
+    "divine": "div_0015",
+    "_why": "Soul Riff: Extra Attack on Discard; Caligo Neutral Card line"
+  },
+  "Nia!P25": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Adagio: Draw 1, Discard 1; Caligo Neutral Card line"
+  },
+  "Nia!Q25": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Adagio: Draw 1, Discard 1; Caligo Neutral Card line"
+  },
+  "Nia!R25": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Adagio: Draw 1, Discard 1; Caligo Neutral Card line"
+  },
+  "Nia!T13": {
+    "epiphany": 0,
+    "divine": "div_0074",
+    "_why": "G Chord: procs the top card; Diallos Draw 1"
+  },
+  "Nia!T19": {
+    "epiphany": 0,
+    "divine": "div_0074",
+    "_why": "G Chord: procs the top card; Diallos Draw 1"
+  },
+  "Nia!N25": {
+    "epiphany": 0,
+    "divine": "div_0074",
+    "_why": "G Chord: procs the top card; Diallos Draw 1"
+  },
+  "Nine!B16": {
+    "epiphany": 1,
+    "_why": "Hew: 200% Shield, Hew (Ironclad)"
+  },
+  "Nine!B21": {
+    "epiphany": 1,
+    "_why": "Hew: 200% Shield, Hew (Ironclad)"
+  },
+  "Nine!C11": {
+    "epiphany": 0,
+    "divine": "div_0118",
+    "_why": "Experienced Strike: +20% to Exhaust cards; Sekred Reduce Cost"
+  },
+  "Nine!H16": {
+    "epiphany": 4,
+    "_why": "Hew: Hew (Massacre)"
+  },
+  "Nine!H21": {
+    "epiphany": 4,
+    "_why": "Hew: Hew (Massacre)"
+  },
+  "Nine!N11": {
+    "epiphany": 5,
+    "_why": "Hew: Hew (Ambush)"
+  },
+  "Olga!AA10": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dispersed Desire: 4 Agony activated once; Vytor Weakness Attack line"
+  },
+  "Olga!AA11": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Insatiable Cravings: Unique/Initiation; Sekred first-card Draw 2"
+  },
+  "Olga!B10": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "Rift of Severance: 2 Fracture activated once; Diallos Reduce Cost"
+  },
+  "Olga!H10": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Rift of Severance: 2 Fracture activated once; Caligo Neutral Card line"
+  },
+  "Olga!H17": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Rift of Severance: 2 Fracture activated once; Caligo Neutral Card line"
+  },
+  "Olga!H51": {
+    "epiphany": 1,
+    "_why": "Break Apart & Renew: cost 0 picks I over the base"
+  },
+  "Olga!I10": {
+    "epiphany": 0,
+    "divine": "div_0102",
+    "_why": "Dispersed Desire: 4 Agony activated once; Sekred first-card Draw 2"
+  },
+  "Olga!H11": {
+    "epiphany": 0,
+    "divine": "div_0102",
+    "_why": "Dispersed Desire: 4 Agony activated once; Sekred first-card Draw 2"
+  },
+  "Olga!I11": {
+    "epiphany": 0,
+    "divine": "div_0028",
+    "_why": "Dispersed Desire: 4 Agony activated once; Kyrken Harmonization"
+  },
+  "Olga!J10": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Break Apart & Renew: cost 0 picks I over the base; Caligo Neutral Card line"
+  },
+  "Olga!J17": {
+    "epiphany": 1,
+    "divine": "div_0015",
+    "_why": "Break Apart & Renew: cost 0 picks I over the base; Caligo Neutral Card line"
+  },
+  "Olga!J11": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Dispersed Desire: 4 Agony activated once; Caligo Neutral Card line"
+  },
+  "Olga!K11": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dispersed Desire: 4 Agony activated once; Vytor Weakness Attack line"
+  },
+  "Olga!O10": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dispersed Desire: 4 Agony activated once; Vytor Weakness Attack line"
+  },
+  "Olga!I17": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dispersed Desire: 4 Agony activated once; Vytor Weakness Attack line"
+  },
+  "Olga!O17": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Dispersed Desire: 4 Agony activated once; Vytor Weakness Attack line"
+  },
+  "Olga!L10": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Insatiable Cravings: Unique/Initiation; Sekred first-card Draw 2"
+  },
+  "Olga!H18": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Insatiable Cravings: Unique/Initiation; Sekred first-card Draw 2"
+  },
+  "Olga!N18": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Insatiable Cravings: Unique/Initiation; Sekred first-card Draw 2"
+  },
+  "Olga!N10": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Rift of Severance: 2 Fracture activated once; Vytor Weakness Attack line"
+  },
+  "Olga!N17": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Rift of Severance: 2 Fracture activated once; Vytor Weakness Attack line"
+  },
+  "Olga!P10": {
+    "epiphany": 1,
+    "divine": "div_0074",
+    "_why": "Break Apart & Renew: cost 0 picks I over the base; Diallos Draw 1"
+  },
+  "Olga!Q10": {
+    "epiphany": 1,
+    "divine": "div_0074",
+    "_why": "Break Apart & Renew: cost 0 picks I over the base; Diallos Draw 1"
+  },
+  "Olga!Z10": {
+    "epiphany": 0,
+    "divine": "div_0130",
+    "_why": "Rift of Severance: 2 Fracture activated once; Vytor Weakness Attack line"
+  },
+  "Olga!Z11": {
+    "epiphany": 1,
+    "divine": "div_0074",
+    "_why": "Break Apart & Renew: cost 0 picks I over the base; Diallos Draw 1"
+  },
+  "Orlea!C16": {
+    "epiphany": 4,
+    "_why": "Growth Acceleration: a Swiftie triggers Retain 3 times"
+  },
+  "Orlea!D16": {
+    "epiphany": 4,
+    "_why": "Growth Acceleration: a Swiftie triggers Retain 3 times"
+  },
+  "Orlea!E16": {
+    "epiphany": 4,
+    "_why": "Growth Acceleration: a Swiftie triggers Retain 3 times"
+  },
+  "Owen!N40": {
+    "epiphany": 1,
+    "_why": "Wind Slash: cost 1 picks I over the base"
+  },
+  "Rei!B11": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Strike of Darkness: +100% to Basic Attack Cards; Caligo Neutral Card line"
+  },
+  "Rei!D17": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Strike of Darkness: +100% to Basic Attack Cards; Caligo Neutral Card line"
+  },
+  "Rei!C3": {
+    "epiphany": 4,
+    "_why": "Resonating Darkness: old wording of +40% to 1-Cost or lower cards"
+  },
+  "Rei!H11": {
+    "epiphany": 4,
+    "_why": "Resonating Darkness: old wording of +40% to 1-Cost or lower cards"
+  },
+  "Rei!I17": {
+    "epiphany": 4,
+    "_why": "Resonating Darkness: old wording of +40% to 1-Cost or lower cards"
+  },
+  "Rei!O17": {
+    "epiphany": 4,
+    "_why": "Resonating Darkness: old wording of +40% to 1-Cost or lower cards"
+  },
+  "Rei!I3": {
+    "epiphany": 3,
+    "_why": "Snack Time: Exhaust up to 2, draw for each"
+  },
+  "Rei!J11": {
+    "epiphany": 0,
+    "divine": "div_0008",
+    "_why": "Dark Condensation: +100% until used; Caligo Reduce Cost"
+  },
+  "Rei!K11": {
+    "epiphany": 0,
+    "divine": "div_0008",
+    "_why": "Dark Condensation: +100% until used; Caligo Reduce Cost"
+  },
+  "Rei!L11": {
+    "epiphany": 0,
+    "divine": "div_0008",
+    "_why": "Dark Condensation: +100% until used; Caligo Reduce Cost"
+  },
+  "Rei!N18": {
+    "epiphany": 0,
+    "divine": "div_0011",
+    "_why": "Dark Condensation: +100% until used; Caligo Draw 1"
+  },
+  "Rin!D4": {
+    "epiphany": 1,
+    "_why": "Dark Mist Inner Art: old +60% sits on the higher stance bonus"
+  },
+  "Rin!E4": {
+    "epiphany": 0,
+    "_why": "Dark Mist Inner Art: old +30% sits on the base stance bonus"
+  },
+  "Rita!I11": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Time Axis Collapse: 450% Damage; Sekred first-card Draw 2"
+  },
+  "Rita!I15": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Time Axis Collapse: 450% Damage; Sekred first-card Draw 2"
+  },
+  "Rita!U15": {
+    "epiphany": 1,
+    "divine": "div_0102",
+    "_why": "Time Axis Collapse: 450% Damage; Sekred first-card Draw 2"
+  },
+  "Rita!O15": {
+    "epiphany": 0,
+    "divine": "div_0102",
+    "_why": "Time Axis Collapse: 300% Damage; Sekred first-card Draw 2"
+  },
+  "Rita!P15": {
+    "epiphany": 0,
+    "divine": "div_0152",
+    "_why": "Time Axis Collapse: 300% Damage; Vytor 2 Vulnerable"
+  },
+  "Rita!Q15": {
+    "epiphany": 0,
+    "divine": "div_0152",
+    "_why": "Time Axis Collapse: 300% Damage; Vytor 2 Vulnerable"
+  },
+  "Rita!V15": {
+    "epiphany": 1,
+    "_why": "Time Axis Collapse: 540% Damage is nearer 450% than 300%"
+  },
+  "Rossweisse!C3": {
+    "epiphany": 1,
+    "_why": "Shard:Light: 120% Damage, triggers on 1 card of this unit"
+  },
+  "Rossweisse!D3": {
+    "epiphany": 1,
+    "_why": "Shard:Dark: 120% Damage, triggers on 2 cards of other Combatants"
+  },
+  "Selena!V17": {
+    "epiphany": 2,
+    "_why": "High-Power Scope: 1 Mark on each Attack Card"
+  },
+  "Selena!W17": {
+    "epiphany": 2,
+    "_why": "High-Power Scope: 1 Mark on each Attack Card"
+  },
+  "Tiphera!H4": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!F11": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!L11": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!F17": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!L17": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!E23": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!F23": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!K23": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!L23": {
+    "epiphany": 1,
+    "_why": "Form Convergence: Draw 3 Archetype cards"
+  },
+  "Tiphera!Q11": {
+    "epiphany": 1,
+    "divine": "div_0118",
+    "_why": "Form Convergence: Draw 3 Archetype cards; Sekred Reduce Cost"
+  },
+  "Tiphera!U17": {
+    "epiphany": 2,
+    "divine": "div_0117",
+    "_why": "Creation and Destruction: cost drops on Exhaust; Always Attack Weakness under a Sekred emblem"
+  },
+  "Tiphera!V17": {
+    "epiphany": 2,
+    "divine": "div_0117",
+    "_why": "Creation and Destruction: cost drops on Exhaust; Always Attack Weakness under a Sekred emblem"
+  },
+  "Tiphera!W17": {
+    "epiphany": 2,
+    "divine": "div_0117",
+    "_why": "Creation and Destruction: cost drops on Exhaust; Always Attack Weakness under a Sekred emblem"
+  },
+  "Tiphera!W23": {
+    "epiphany": 0,
+    "divine": "div_0015",
+    "_why": "Form Convergence: Draw 2 Archetype cards; Caligo Neutral Card line"
+  },
+  "Tressa!AB11": {
+    "epiphany": 2,
+    "_why": "Curse: for 2 turns"
+  },
+  "Tressa!AB12": {
+    "epiphany": 0,
+    "_why": "Vital Attack: old wording of 80% x 3 with +50% against Agony"
+  },
+  "Tressa!B11": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!C11": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!D11": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!B18": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!C18": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!D18": {
+    "epiphany": 1,
+    "divine": "div_0090",
+    "_why": "Unsheathe Dagger: cost 0 picks I over the base; Nihilum Draw 1"
+  },
+  "Tressa!O11": {
+    "epiphany": 0,
+    "divine": "div_0011",
+    "_why": "Curse: 1 Agony for 1 turn; Caligo Draw 1"
+  },
+  "Tressa!O18": {
+    "epiphany": 0,
+    "divine": "div_0011",
+    "_why": "Curse: 1 Agony for 1 turn; Caligo Draw 1"
+  },
+  "Veronica!D4": {
+    "epiphany": 0,
+    "_why": "Pendant of Resolution: another Combatant's Skill Card"
+  },
+  "Veronica!E12": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!K12": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!B18": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!J17": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!N18": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!H59": {
+    "epiphany": 1,
+    "_why": "Pendant of Resolution: any Skill Card"
+  },
+  "Veronica!F12": {
+    "epiphany": 1,
+    "divine": "div_0070",
+    "_why": "Sir Kowalski: +150% and Draw 2; Diallos Reduce Cost"
+  },
+  "Veronica!L12": {
+    "epiphany": 1,
+    "divine": "div_0070",
+    "_why": "Sir Kowalski: +150% and Draw 2; Diallos Reduce Cost"
+  },
+  "Veronica!I59": {
+    "epiphany": 2,
+    "_why": "Pendant of Resolution: Micro Ballista after 3 Skill Cards"
+  },
+  "Veronica!K17": {
+    "epiphany": 3,
+    "divine": "div_0070",
+    "_why": "Sir Kowalski: Ballista on a Skill draw; Diallos Reduce Cost"
+  },
+  "Veronica!L17": {
+    "epiphany": 3,
+    "divine": "div_0070",
+    "_why": "Sir Kowalski: Ballista on a Skill draw; Diallos Reduce Cost"
+  },
+  "Veronica!H18": {
+    "epiphany": 3,
+    "divine": "div_0070",
+    "_why": "Sir Kowalski: Ballista on a Skill draw; Diallos Reduce Cost"
+  },
+  "Veronica!O17": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "Repose: 100% Shield, draw 2; Diallos Reduce Cost"
+  },
+  "Veronica!P17": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "Repose: 100% Shield, draw 2; Diallos Reduce Cost"
+  },
+  "Veronica!Q17": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "Repose: 100% Shield, draw 2; Diallos Reduce Cost"
+  },
+  "Veronica!R17": {
+    "epiphany": 0,
+    "divine": "div_0070",
+    "_why": "Repose: 100% Shield, draw 2; Diallos Reduce Cost"
+  },
+  "Yuki!D11": {
+    "epiphany": 0,
+    "common": "com_0013",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; For 1 turn, gain 3 Morale"
+  },
+  "Yuki!E11": {
+    "epiphany": 0,
+    "common": "com_0013",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; For 1 turn, gain 3 Morale"
+  },
+  "Yuki!F11": {
+    "epiphany": 0,
+    "common": "com_0013",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; For 1 turn, gain 3 Morale"
+  },
+  "Yuki!B12": {
+    "epiphany": 0,
+    "common": "com_0013",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; For 1 turn, gain 3 Morale"
+  },
+  "Yuki!I11": {
+    "epiphany": 0,
+    "common": "com_0228",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; Apply Vulnerable 2 to all enemies"
+  },
+  "Yuki!J11": {
+    "epiphany": 0,
+    "common": "com_0228",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; Apply Vulnerable 2 to all enemies"
+  },
+  "Yuki!K11": {
+    "epiphany": 0,
+    "common": "com_0228",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; Apply Vulnerable 2 to all enemies"
+  },
+  "Yuki!L11": {
+    "epiphany": 0,
+    "common": "com_0228",
+    "_why": "Flash Slash: Inspiration: decrease Cost by 1; Apply Vulnerable 2 to all enemies"
+  }
 }
