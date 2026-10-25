@@ -104,11 +104,25 @@ def variants(ctx: Context, base_id: str) -> list[Variant]:
     if not levels or base_id not in ctx.client.cards:
         return []
     base_name = ctx.resolver.card_name(base_id) or base_id
-    found = [Variant(0, base_id, base_name, _cost(ctx, base_id), _text(ctx, base_id, None))]
+    found = [Variant(0, base_id, base_name, printed_cost(ctx, base_id), _text(ctx, base_id, None))]
     for level, card_id in levels:
         name = epiphany_name(base_name, level, ctx.resolver.card_name(card_id))
-        found.append(Variant(level, card_id, name, _cost(ctx, card_id), _text(ctx, card_id, base_id)))
+        found.append(Variant(level, card_id, name, printed_cost(ctx, card_id), _text(ctx, card_id, base_id)))
     return found
+
+
+def printed_cost(ctx: Context, card_id: str) -> int:
+    """
+    The cost printed on a card.
+
+    Args:
+        ctx: The run context.
+        card_id: A client card id.
+
+    Returns:
+        The cost, -1 for an X cost.
+    """
+    return int(ctx.client.cards[card_id].get("cost", 0) or 0)
 
 
 @cache
@@ -148,8 +162,6 @@ def _catalog(name: str) -> list[dict]:
     return json.loads((EPIPHANY_DATA_DIR / name).read_text(encoding="utf-8"))
 
 
-def _cost(ctx: Context, card_id: str) -> int:
-    return int(ctx.client.cards[card_id].get("cost", 0) or 0)
 
 
 def _text(ctx: Context, card_id: str, base_id: str | None) -> str:

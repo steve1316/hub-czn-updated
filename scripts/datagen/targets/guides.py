@@ -25,9 +25,10 @@ from pathlib import Path
 
 from PIL import Image
 
-from scripts.datagen import images, roster
+from scripts.datagen import epiphany, images, roster
+from scripts.datagen.epiphany import Variant
 from scripts.datagen.set_names import set_line
-from scripts.datagen.naming import ROMAN, slug
+from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
 from scripts.datagen.targets import card_art, neutral_cards
@@ -55,6 +56,12 @@ _SLUG_MAX_LENGTH = 48
 _LAST_EDIT = re.compile(r"^(?:last edit(?:ed)?|\d{1,2}/\d{1,2}(?:/\d{2,4})?)$", re.IGNORECASE)
 # A character's own cards, such as `c_1003_uni1`, whose digits are the character's res_id.
 _OWN_CARD = re.compile(r"^c_(\d+)_")
+# A prose line that notes one listed card or partner, such as "Tassel: BASE DAMAGE" or "Flow 2: Its great".
+_NOTE_LINE = re.compile(r"^([^:]{1,40}):\s*(.+)$")
+# A note label naming one epiphany level by number, such as "Flow 2".
+_NUMBERED_LABEL = re.compile(r"^(.*?)\s*(\d)$")
+# The part of an epiphany's game name that tells it apart, such as "Unbound" in "Flicker Blade (Unbound)".
+_GAME_NAME_PART = re.compile(r"\((.+)\)$")
 
 # Two picture hashes this close (out of 256 bits) are the same picture, re-encoded or resized by the sheet.
 PICTURE_LABEL_DISTANCE = 12
@@ -460,6 +467,7 @@ class _GuideBuilder:
         self.overrides = overrides
         self.labels = labels
         self.tab_name = tab_name
+        self._variants: dict[str, list[Variant]] = {}
 
     def sections(self, grid: dict[tuple[int, int], Cell]) -> tuple[list[dict], str | None]:
         """
@@ -483,6 +491,7 @@ class _GuideBuilder:
                     # A later panel's heading would otherwise be lost, so it leads that panel's blocks instead.
                     panel_blocks.insert(0, self._prose(panel_title))
                 blocks.extend(panel_blocks)
+            blocks = _attach_notes(blocks)
             if not blocks:
                 continue
             sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
@@ -623,27 +632,46 @@ class _GuideBuilder:
 
     def _card_list(self, cards: list[dict], ratings: dict[int, str]) -> dict:
         """
-        Cards with their names and the rating under each one.
+        Cards with their names, costs and the rating under each one.
 
         Args:
             cards: Identified cards with their column and epiphany position.
             ratings: column -> rating text.
 
         Returns:
-            A card-list block. Consecutive renders of the same card are its epiphany variants, noted as "Epiphany II" etc.
+            A card-list block. Consecutive rated renders of the same card are its epiphany levels, folded into one item.
         """
         # Only rated rows list a card's epiphany variants. Elsewhere a repeated card is just another copy in a deck.
         variants = {card["cardId"] for card in cards if card["epiphany"] > 1} if ratings else set()
         items = []
         for card in cards:
-            item = {"cardId": card["cardId"]}
-            if card["cardId"] in self.card_names:
-                item["name"] = self.card_names[card["cardId"]]
-            item["note"] = {"en": f"Epiphany {ROMAN.get(card['epiphany'], card['epiphany'])}" if card["cardId"] in variants else ""}
+            card_id = card["cardId"]
+            item = {"cardId": card_id}
+            if card_id in self.card_names:
+                item["name"] = self.card_names[card_id]
+            if card_id in self.ctx.client.cards:
+                item["cost"] = epiphany.printed_cost(self.ctx, card_id)
+            item["note"] = {"en": ""}
             if card["col"] in ratings:
                 item["rating"] = ratings[card["col"]]
+            if card_id in variants:
+                item["level"] = card["epiphany"]
             items.append(item)
-        return {"type": "card-list", "items": items}
+        return {"type": "card-list", "items": _fold(items, self._variants_of)}
+
+    def _variants_of(self, card_id: str) -> list[Variant]:
+        """
+        A card's epiphany variants, looked up once per tab.
+
+        Args:
+            card_id: The client card id.
+
+        Returns:
+            The card's `epiphany.variants`, empty when it has none.
+        """
+        if card_id not in self._variants:
+            self._variants[card_id] = epiphany.variants(self.ctx, card_id)
+        return self._variants[card_id]
 
     def _face_block(self, face_rows: list[list[tuple[int, int]]], ratings: dict[int, str], names: dict[int, str]) -> tuple[dict, bool]:
         """
@@ -734,6 +762,105 @@ def _set_block(block: dict) -> dict:
     """A prose line listing sets as a set-list block, any other block as it is."""
     items = set_line(block["body"]["en"]) if block["type"] == "prose" else None
     return {"type": "set-list", "items": items} if items else block
+
+
+def _fold(items: list[dict], variants_of) -> list[dict]:
+    """
+    Each rated run of one card's renders as one item that lists its epiphanies.
+
+    Args:
+        items: Card-list items. Those in a rated run carry their epiphany `level`, by position.
+        variants_of: Card id -> its `epiphany.variants`.
+
+    Returns:
+        The items, each run folded into one item whose `epiphanies` hold every level's name, cost, rating and note. A card with
+        no variants is kept as it is, without its level.
+    """
+    folded: list[dict] = []
+    for item in items:
+        item = dict(item)
+        level = item.pop("level", None)
+        variant = next((variant for variant in variants_of(item["cardId"]) if variant.level == level), None) if level else None
+        if variant is None:
+            folded.append(item)
+            continue
+        entry = {"level": level, "name": variant.name, "cost": variant.cost}
+        if "rating" in item:
+            entry["rating"] = item["rating"]
+        entry["note"] = {"en": ""}
+        last = folded[-1] if folded else None
+        if last and last["cardId"] == item["cardId"] and last.get("epiphanies") and last["epiphanies"][-1]["level"] < level:
+            last["epiphanies"].append(entry)
+        else:
+            head = {key: item[key] for key in ("cardId", "name") if key in item}
+            folded.append({**head, "note": {"en": ""}, "epiphanies": [entry]})
+    return folded
+
+
+def _attach_notes(blocks: list[dict]) -> list[dict]:
+    """
+    "Name: note" prose lines moved onto the card or partner they name.
+
+    Args:
+        blocks: A section's blocks.
+
+    Returns:
+        The blocks. Prose straight after a card-list or partner-list gives up each line that names one of its items, and the
+        rest stays in order. A prose block left empty is dropped.
+    """
+    kept: list[dict] = []
+    for block in blocks:
+        previous = kept[-1] if kept else None
+        if block["type"] != "prose" or not previous or previous["type"] not in ("card-list", "partner-list"):
+            kept.append(block)
+            continue
+        rest = []
+        for line in block["body"]["en"].split("\n"):
+            match = _NOTE_LINE.match(line)
+            target = _note_target(previous["items"], match.group(1)) if match else None
+            if target is None:
+                rest.append(line)
+                continue
+            note = target["note"]["en"]
+            target["note"] = {"en": f"{note}\n{match.group(2)}" if note else match.group(2)}
+        if any(line.strip() for line in rest):
+            kept.append({**block, "body": {"en": "\n".join(rest)}})
+    return kept
+
+
+def _note_target(items: list[dict], label: str) -> dict | None:
+    """
+    The item, or epiphany of one, that a note label names.
+
+    Args:
+        items: The listed cards or partners.
+        label: The text before the colon, such as "Tassel", "Flow 2" or "Unbound".
+
+    Returns:
+        The epiphany named by its game name ("Unbound") or by a word of the card's name and its level ("Flow 2"), else the item
+        whose name or a word of it is the label. None when nothing fits.
+    """
+    wanted = label.strip().lower()
+    if not wanted:
+        return None
+    numbered = _NUMBERED_LABEL.match(wanted)
+    for item in items:
+        epiphanies = item.get("epiphanies", [])
+        for entry in epiphanies:
+            part = _GAME_NAME_PART.search(entry["name"])
+            if part and part.group(1).lower() == wanted:
+                return entry
+        name = item.get("name", "").lower()
+        words = re.split(r"[\s:]+", name)
+        if numbered:
+            base, level = numbered.group(1), int(numbered.group(2))
+            if base in words or base == name:
+                found = next((entry for entry in epiphanies if entry["level"] == level), None)
+                if found:
+                    return found
+        elif name == wanted or wanted in words:
+            return item
+    return None
 
 
 def _bands(grid: dict[tuple[int, int], Cell]) -> list[list[Cell]]:

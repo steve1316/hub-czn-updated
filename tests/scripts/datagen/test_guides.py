@@ -12,6 +12,7 @@ import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
 from scripts.datagen import images, naming, set_names
+from scripts.datagen.epiphany import Variant
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
 from scripts.datagen.targets import guides
 
@@ -26,6 +27,16 @@ GRID = """
 <tr><th>5</th><td>3.5/5</td><td></td></tr>
 </tbody></table>
 """
+
+
+FLOW = [Variant(level, f"c_30134_uni2_rsp{level}" if level else "c_30134_uni2", "Radiant Sword Flow" + (f" {numeral}" if level else ""), 1, "")
+        for level, numeral in enumerate(["", "I", "II", "III", "IV", "V"])]
+FLICKER = [Variant(level, f"c_30134_srt4_rsp{level}" if level else "c_30134_srt4", "Flicker Blade" + (f" ({name})" if level else ""), 0, "")
+           for level, name in enumerate(["", "Amped", "Cycle", "Aegis", "Blink", "Unbound"])]
+
+
+def _variants_of(card_id: str) -> list[Variant]:
+    return {"c_30134_uni2": FLOW, "c_30134_srt4": FLICKER}.get(card_id, [])
 
 
 def _cell(row: int, col: int, text: str = "", pictures: int = 0) -> Cell:
@@ -168,6 +179,45 @@ def test_set_named_section_title_leads_with_a_set_list():
     blocks = sections[0]["blocks"]
     assert [block["type"] for block in blocks] == ["set-list", "set-list", "prose"]
     assert [item.get("setId") for item in blocks[0]["items"]] == [30, 11]
+
+
+def _rated(card_id: str, name: str, rating: str, level: int | None = None) -> dict:
+    item = {"cardId": card_id, "name": name, "cost": 1, "rating": rating, "note": {"en": ""}}
+    return item if level is None else {**item, "level": level}
+
+
+def test_fold_makes_one_item_per_epiphany_set():
+    ratings = ["1/5", "5/5", "1/5", "3/5", "5/5"]
+    [item] = guides._fold([_rated("c_30134_uni2", "Radiant Sword Flow", rating, level) for level, rating in enumerate(ratings, 1)], _variants_of)
+    assert "cost" not in item and "rating" not in item
+    assert [(ep["level"], ep["rating"]) for ep in item["epiphanies"]] == list(enumerate(ratings, 1))
+    assert item["epiphanies"][1] == {"level": 2, "name": "Radiant Sword Flow II", "cost": 1, "rating": "5/5", "note": {"en": ""}}
+
+
+def test_fold_leaves_cards_without_variants_alone():
+    tassel = _rated("c_30134_cre1", "Sword Tassel", "5/5")
+    assert guides._fold([tassel, _rated("c_30134_cre1", "Sword Tassel", "4/5", 2)], _variants_of) == [tassel, {**tassel, "rating": "4/5"}]
+
+
+def test_notes_attach_by_name_number_and_game_name():
+    cards = {"type": "card-list", "items": guides._fold(
+        [_rated("c_30134_uni2", "Radiant Sword Flow", "5/5", level) for level in range(1, 6)]
+        + [_rated("c_30134_srt4", "Flicker Blade", "5/5", level) for level in range(1, 6)]
+        + [_rated("c_30134_cre1", "Sword Tassel", "5/5")], _variants_of)}
+    partners = {"type": "partner-list", "items": [{"charResId": 30135, "name": "Sig", "rating": "6/5", "note": {"en": ""}}]}
+    blocks = guides._attach_notes([cards, _prose("Flow 2: Its great\nUnbound: Ap and 1 Cost\nTassel: BASE DAMAGE"), partners, _prose("Sig: busted")])
+    assert [block["type"] for block in blocks] == ["card-list", "partner-list"]
+    flow, flicker, tassel = cards["items"]
+    assert flow["epiphanies"][1]["note"] == {"en": "Its great"}
+    assert flicker["epiphanies"][4]["note"] == {"en": "Ap and 1 Cost"}
+    assert tassel["note"] == {"en": "BASE DAMAGE"}
+    assert partners["items"][0]["note"] == {"en": "busted"}
+
+
+def test_unmatched_note_lines_stay_in_prose():
+    cards = {"type": "card-list", "items": [_rated("c_30134_cre1", "Sword Tassel", "5/5")]}
+    blocks = guides._attach_notes([cards, _prose("Equilux: Start of turn\nTassel: base\nPlain line")])
+    assert blocks[1] == _prose("Equilux: Start of turn\nPlain line")
 
 
 def test_find_set_reads_sheet_shorthand():
