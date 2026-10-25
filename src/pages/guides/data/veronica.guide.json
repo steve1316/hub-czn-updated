@@ -1,0 +1,1202 @@
+{
+  "charResId": 1033,
+  "name": "Veronica",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=731845342#gid=731845342",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "veronica-s-ballistas-and-reload",
+      "title": {
+        "en": "Veronica's Ballistas and Reload"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Veronica's Main Gimmick is her Ballistas and Reload Stacks\nBallistas are Unique created cards with 0 cost, that Activate when turn is ended\nActivating a Ballista makes an \"Extra Attack\" and Exhausts it\nBallista's \"Extra Attacks\" Can Crit\nBallista's \"Extra Attacks\" Can be affected by Elemental Weakness Now\nReload is how Veronica increases the damage of Ballistas\nEvery stack of Reload is 50% Multiplicative damage for Ballistas that turn\nMax Reload Stacks is 3 base, 4 with Bombarment Prep and 5 with E4\nExample:\n150% Ballista with 2 Reload = 150% x 200% = 300% not 150% + 100% = 250%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Precision Aim and Eternal Hunger"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eternal Hunger has Attunement Draw 1, AP 1\nAttunement Activates when the Card is Drawn\nPrecision Aim can Draw Eternal Hungers, and Placing it on Top of theDeck\nPrecision Aim + Eternal Hunger means Positive Draw and AP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-7-draw-divine-no-firing-ap-0-fm-160",
+      "title": {
+        "en": "Cycle +7 | Draw Divine no Firing | AP 0 | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw focused"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7IhZypoNJ6f-itjzYPaafAixhvU1KyoPR6wJXBnmqgmSPrjvEc4M7gvCxGFM-dt92_0A9NzcUVeEiFh16"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +4 | AP Divine no Firing | AP +3 | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Creates AP Divine Firing doesnt add any more AP"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7IhZypoNJ6f-itjzYPaafAixhvU1Kz4PR6wJXBnmvgmSPrjvEc4M7h_CxGFM-dt92_0A9NzcUVeEiFh16"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-8-draw-divine-w-firing-ap-1-fm-160",
+      "title": {
+        "en": "Cycle +8 | Draw Divine w Firing | AP -1 | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Another Draw Divine is Cycle +9 thats crazy"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7IhZzpoNJ6f-itjzYPqafQTV6_lJRL3WJxSQQGWJPdHtLy_DhNJwgZwau3HLvU9hm5AM-LDfrSdEEFhthJU-c9eskpOZa"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +5 | DPS Veronica | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just make alot of Ballista, and let Vero shoot em all"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7IhZzpoNJ6f-itjzYPqafQTR6vlJRL3WJI9dT0r1Q47Oq6RDfknVjsNax2U8OUN-M59TuM9fVSiFHwcR-xod51zUapeZa"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +5 | Shield Resolve Veronica | FM 180"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I guess its used for Maribell, Could use Repose 3 instead for 4 AP equivalent"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7IhZzpoNJ6f-itjzYPqafQTR6_lJRLQSzwSQQGWJNBUFPy_DhNJwgZXeU2HLvU5hm5AFPFtboSiEDx8R-_YebIjE7eiReqPs"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "marin-rosaria-solia-daisy",
+      "title": {
+        "en": "Marin | Rosaria | Solia | Daisy"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30051,
+              "name": "Marin",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Marin: Highest Damage, pretty good Ego\nRosaria: RNG Moral, Consisitent Ego, easy to get dupes\nSolia: Can be slightly higher damage then Rosaria after you get dupes\nDaisy: Rosaria but worse"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-agony-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Agony Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 Generalist Atk based DPS set, can be swapped among all members\nAgony technically is the best if enabled, but honestly just cherry pick relics with great substats"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BattleField Evo | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If your Crit Rate is 52%> then this can pull away from 2/2/2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Starlight | Tetra"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Damage Amount to CounterAttacks and Extra Attacks\n5% when you gain Shield by Ability (Max Stacks 5 Permanent whole team)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Spark | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "After 1 Upgrade, 20% Multiplier forever"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\n+2 Reload on Bombardment prep, not important\nE2:\nAllows Targetting of Ballistas technically, also damage increase\nE3:\nMaking another Ballista is actually pretty great damage\nE4:\nAnother Max Reload is very good\nE5:\nPotential levels are good since Veronica has very high multipliers and multiplicatives\nE6:\nFloral Scent now gives Mark too, its ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw 2 Cord: 1 AP Draw 2 is great, you can even use Discard Activate instead of dmg buff\n12 Mark: 12 Mark is alot of Extra hits that scale off of Moral\nDraw 2 Move Persona: Persona Looping for your DPS can always be good\nDraw 2 Blessing: 10 Lux Blessing or 10 Individual Moral/Resolve to Cards\nDraw 1: Just worse version of Draw 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger: Veronica can be a carrier ig"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: If Action Count of enemy increased +50% Dmg to ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At Start of Battle Draw 1 Exhaust Card"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C7 Burning Life The selction here, honestly is not good at all"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bombardment Prep: Honestly the Remove between this and Pendant doesnt matter"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tech"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Firing 1: Rng, but its potentially the best damage\nFiring 2: Tech for Shield boss\nFiring 3: Nothing special\nFiring 4: AOE DAMAGE so good\nFiring 5: Double dips for additive buffs like Moral or Kowalski\nAgony at start of turn neutral epiphany is VERY GOOD, enables Cursed Memory Set on self + allies"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1033_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Combo"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pendant 1: Veronica Skills can now make Reload, VERY VERY GOOD\nPendant 2: Micro Ballista are very weak, and Unique's matter less now\nPendant 3: It's an Exhaust Skill card for Glory set ig\nPendant 4: Getting reload is easy with Pendant 1, also it's Rng, me no likey\nPendant 5: For Mei Lin Combo, but you really really need -1 AP Divine, or its pretty mid"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1033_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Repose 1: ZERO COST, can get +AP Divines but doesn't give Shield\nRepose 2: Still draws 2, but the reload increase isn't required\nRepose 3: 1 cost so less good, and might reduce cost and break memory set bonuses\nRepose 4: Lots of reload, but getting reload is easy\nRepose 5: GETTING RELOAD IS EASY"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1033_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Kowalski 1: Doesnt clog your hand with Ballistas\nKowalski 2: Only draw 1\nKowalski 3: Compared to Kowalski 1, Trades Handclog for more damage\nKowalski 4: Just for damage, so I don't like it\nKowalski 5: Just for damage + Exhaust synergy, but I don't like it"
+          }
+        }
+      ]
+    },
+    {
+      "id": "veronica-veronica-veronica-veronica-veronica",
+      "title": {
+        "en": "Veronica | Veronica | Veronica | Veronica | Veronica"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Veronica Team Examples don't exist, Cuz its Every character"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Veronica | Veronica | Veronica | Veronica | Veronica"
+          }
+        }
+      ]
+    }
+  ]
+}

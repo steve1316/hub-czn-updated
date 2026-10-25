@@ -1,0 +1,732 @@
+{
+  "charResId": 1061,
+  "name": "Diana",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1255749337#gid=1255749337",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "diana-heart-breakers-and-quietus",
+      "title": {
+        "en": "Diana Heart Breakers and Quietus"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Heart Breakers are the most simple type of Heart Bullet that Diana makes\nHeart Breakers are just for damage, or to discard bullets (Shaker>Breaker)\nUsing a Heart Breaker\n80% Damage\nAlso discards a random Bullet that is in hand\nDiscarding Heart Breaker (Not very good idea)\n120% Extra Attack Damage to random enemy\nQuietus + Discarding Heart Breaker\n80% Damage\n120% Extra Attack Damage\n2 hits\nQuietus is Diana's Keyword that just means \"Activate upon Discard\"\nIf the card has a discard effect, both effects will activate"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Heart Shakers and Resonance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Heart Shakers are the other Bullet Diana can make\nHeart Shakers are mainly used for Resonance\nResonance is a debuff enemies get from Diana\nResonance deals 80% Extra Attack Damage each time a card is discarded\nHeart Shaker since it gives Resonance is most Equivalent to a Multi Hit card\n1 Resonance x 80% and each Resonance can scale from Moral, so its strong\nUsing a Heart Shaker\nDiscards one random from Draw Pile\nAlso consumes the 1 Resonance it makes, if possible\nDiscarding Heart Shaker, gives 2 Resonance to someone random\nQuietus + Discarding Heart Shaker\n3 Resonance inliction\n1 Resonance Consumption\n3 hit x 80%, but 2 are just delayed"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Diana Ego Skill and Cupid Shot"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_cre3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Using Diana's Ego Skill to create Cupid Shot early is a good idea, since it doesn't have exhaust\nOtherwise it can create discard fodder of 2 Heart Bullets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heart-bullet-use",
+      "title": {
+        "en": "Heart Bullet Use"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Upgrade Heart"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Low Cycle so that you can Cycle Ego Skill's Cupid Shot"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inspiration"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Diana Draw Support"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bullet Diversity"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hit funny big Liberated Feelings"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pistol Combo"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inspiration"
+          }
+        }
+      ]
+    },
+    {
+      "id": "heart-shaker-resonance",
+      "title": {
+        "en": "Heart Shaker Resonance"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nia Combo or Die"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You will clog yourself full with a billion Heart Bullets"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pistol Resonance"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo Bait"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sophia-akad-yuri",
+      "title": {
+        "en": "Sophia | Akad | Yuri"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sophia: Diana's Signature 20-40% Crt Damage is immense, and her Ego Skill is great\nAkad: Pretty okay damage increase, but only affects the bullets, not Extra Attacks\nYuri: Never gonna feel bad about Yuri, because her Ego Skill is broken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Serenthia | Janet"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Janet: With the Atk% Buff, her Crit Rate has alot more Value, but you only get 1/2 Janet Procs each turn\nSerenthia: Can't go wrong with Crt Rate, Crt Damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-flex",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just the general best, since there is no specific synergies Diana is good with currently"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Technically Glory can be activated by heart Shaker, to team buff if you don't have a controller"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passion | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You wouldn't regularly run this set, and 20% Multi is not as good as Atk% for low multipliers"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nThis bad is butt, but technically makes it as a Build around more interesting\nE2:\nBig Extra Attack, requires discarding 10 Cards to do 400% Damage\nE3:\nThis is a pretty worthless Ego anyway\nE4:\nOnly adds Additive damage to Diana's Extra Attacks, +30%-50%, its okay\nE5:\nLow base Multipliers = Not much Value\nE6:\nMax 30 Fluters, but now that only requires 8 Discards, also bonus Extra Attack at 30"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling: Never gonna feel bad\nLeap and Precision aim are okay\nNegotiate for Moral is always good too"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1061_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Disruption its an okay basic, but still remove it\nLiberated Feelings, very gimmicky build around"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Heart 1: 3 Heart Breaker is great, but it also leads to Clogging your Deck really quickly\nHeart 2: Can help clean out your draw/discard piles\nHeart 3: Can change Exhaust Fodder into Heart Bullets, its gimmicky\nHeart 4: The Best version, because it makes it so you don't clog up your deck with Bullets\nHeart 5: Can generate 3 5 7 Heart Breaker per turn, Very quickly can clog up your draw pile"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni2",
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pistol 1: Equivalent to 180% + 80% x 3\nPistol 2: Equivalent to 180% + 80% x 5, but the condition is much harder to achieve consistently\nPistol 3: Activating 10 Resonance at a time is a bit excessive, and also doesnt generate Resonance\nPistol 4: This requires roughly 3 bullet discards before beating Pistol 1, after that Moral is required\nPistol 5: Completely Unnessicary, because discarding already activates Resonance gradually"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1061_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C'mere 1: Just worse then Heart besides the slight upside of making extra Resonance\nC'mere 2: This is great, discarded 2 to make 3 Shakers but also maybe activing Quietus\nC'mere 3: Its a pretty good way to convert Exhaust Fodder\nC'mere 4: Guranteed 3 Resonance 2 from Cmere, 1 from Breaker discarding Shaker\nC'mere 5: Retains to make 1 Shaker each turn, its pretty nice"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1061_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bloom 1: Tutors Quietus and gives you an option to instantly discard it, or someone else for Heart Bullet\nBloom 2: Tutors Quietus and also Inflicts AOE Resonance\nBloom 3: Discards 3 Bullets, pretty good with Renoa\nBloom 4: This can be pretty funny with alot of Moral\nBloom 5: Really nice, Upgrade to deck thin and always gurantees a Quietus card each turn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "diana-example-teams",
+      "title": {
+        "en": "Diana Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Discard | Buff/Debuff | DPS | AP Engines"
+          }
+        }
+      ]
+    }
+  ]
+}

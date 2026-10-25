@@ -1,0 +1,721 @@
+{
+  "charResId": 30097,
+  "name": "Rita",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1323386740#gid=1323386740",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "rita-chronical-and-chrono-ascension",
+      "title": {
+        "en": "Rita Chronical and Chrono Ascension"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Chronical is Rita's own self made and stored AP\nChronicle is gained through Chrono Archon\nChronicle itself can't be spent as AP, first Rita has to Ascend\nRita has 2 ways to Ascend, Ending the turn with Chronicle, or Time Paradox\nIf Rita has any Chronicle at the end of the turn, she will Ascend it next turn start\n6 Chronicle -> 6 Chronical Ascension (Aka Rita AP)\nThe only way to Ascend early is Time Paradox which forcefully\nConverts all Chronicle into Chronical Ascension\nDue to the fact that Chronical Ascension state is lost upon its used up\nAny overflow AP Used will be converted into Chronical\nRita can end turn Chronicle Ascend 6 AP\nRita Generates 6 Chronicle (Only 3 Required if you have Archon 1)\nRita Time Paradoxes for 6 Ascension AP\nRita Generate 6 Chronicle (Only 3 Required if you have Archon 1)\nSo in total, Rita can generate 12 AP, if you use 12 AP in optimal cases\nChrono Archon 1 is broken, you naturally get 6 Chronicle so you only need 6 AP\nTo get 12 Chronical Ascension"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fate Imprint AP Cost Breakpoints"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fate Imprint is a very very interesting concept\n144% per AP\n120% x 9 = 1296% Max is not impressive compared to Tipheras CnD"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-basic-rita-base",
+      "title": {
+        "en": "Cycle -1 | Basic Rita Base"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Turn Start Ascension = Move 2 Time Acceleration\nUse 2 Time Acceleration with 6 Chronical Ascension\nReturns 3 Chronicle, create 3 Chronicle some way\nTime Paradox -> Ascension = Move 2 Time Acceleration\nReturns 3 Chronicle, create 3 Chronicle some way"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Time Axis Collapse Base"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "This Chrono Circle doesn't Move, so Time Axis Collapse is gone when used\nSo you have no more ways to use Chronicle Ascension, no point in Time Paradox"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-basic-rita-dedicated",
+      "title": {
+        "en": "Cycle -2 | Basic Rita dedicated"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Turn Start Ascension = Move 2 Time Acceleration\nUse 2 Time Acceleration with 6 Chronical Ascension\nReturns 3 Chronicle, create 3 Chronicle some way\nTime Paradox -> Ascension = Move 2 Time Acceleration\nReturns 3 Chronicle, create 3 Chronicle some way\nTime Axis Collapse can make the 3 Chronicle and buffs 3/4 of the Time Accelerations"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "https://youtu.be/3 WuEvJ5TDpA?si=DNYhNgoRUsLdLViA"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Time Axis Collapse + Imprints"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Make sure Time Axis Collapses are the only 2 cost Attack Cards among your team\nOtherwise you can sometimes not get the +2 draw\nFate Imprint Making is really up to you"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Moral Buffer Rita"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "9 Moral from Time Axis\nGear bags are nice, but you could do with another Time Axis if you wanted\nCould also just go no Divines on Rita and instead add more Neutral Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Collapse DPS Rita Nine Support | Divine Cycle 0"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ivy-eloise-zatera",
+      "title": {
+        "en": "Ivy | Eloise | Zatera"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 1025,
+              "name": "Ivy",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ivy: Undesputedly the best Rita Partner, so much Generic Multiplier thats easy to achieve\nEloise: Her Conditional Multiplier is not possible to achieve unless its Fate Imprint or Neutrals\nZatera: Stat Stick"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bria"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bria: Bria only works if you make Fate Imprints"
+          }
+        }
+      ]
+    },
+    {
+      "id": "justice-executioners",
+      "title": {
+        "en": "Justice | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Works with all forms of Rita"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blackwing | Executioner | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rita naturally has alot of Atk%, but little Multiplier, and Crit Rate is just very strong"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Beast | Executioner | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only works with Fate Imprint versions of Rita"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nTime Paradox now makes 8 Chronical Ascension (2 more AP basically) lowkey bricky\nE2:\nGives you a buff card upon entering Ascension, It's a pretty decent multi (60%+ Average)\nE3:\nIncreases max damage buff to 300% (100% more) thats quite a substantial Multi\nE4:\nUp to 30% Multi, but it it's incremental\nE5:\nRita has very high base Multipliers, so potential levels are good (Not Fate Imprint)\nE6:\nWhat the heck? You can get 12 Ascension? One time per battle, but still great setup"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-8",
+      "title": {
+        "en": "Part 8"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Time Acceleration: 492% Base Multiplier and usable up to 4 times with Circle 3, hmm\nTime Paradox: If this card didn't have Unique, wow would basic Rita stocks be up, its 6 Rita AP\nRita is Psionic, so she can help Draw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30097_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Archon 1: This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox\nArchon 2: Pretty insignificant amount of extra damage unless moral stacking for some reason\nArchon 3: Removing the base epiphany seems really bad\nArchon 4: Discarding is not very easy to do\nArchon 5: Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30097_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Decreed 1: If this hits Time Paradox, you're not happy\nDecreed 2: Activates 1 random 3 Cost in hand, not that interesting\nDecreed 3: 3 AP for 3 AP? But it just targets Draw Pile? This ain't good\nDecreed 4: 2 AP for 2 x 2 AP worth of cards, pretty good rate, but no good Synergies rn, Potential man\nDecreed 5: 3 AP to setup is a very steep cost"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Collapse 1: Just a insanely big hit\nCollapse 2: If you're playing Rita on an Exhaust card spam team\nCollapse 3: 100% Multiplier to next 3, but 3 cost is very high, only way pre Dupe that Rita can get Multi\nCollapse 4: Basically free 2 Vuln, but +1 to Cycle\nCollapse 5: Changes Cost of Fate Imprints so you can go 4 5 6, but thats ALOT of AP"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30097_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Circle 1: Creates 3 Fate Imprint, pretty good\nCircle 2: Upside is it Deck Thins, Downside is that it can Clog your hand\nCircle 3: Moves all of your basics (Ideally 2 Time Accel)\nCircle 4: Creating alot of Fate Imprint seems to just clog your hand hard\nCircle 5: 3 AP to setup is quite bad, but drawing 3 2 cost, using all your Ascension Chronicle is good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rita-example-teams",
+      "title": {
+        "en": "Rita Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw | Buff/Debuff | AP Engines | 2+ Cost Attacks"
+          }
+        }
+      ]
+    }
+  ]
+}

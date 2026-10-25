@@ -7,7 +7,7 @@ import {
 } from '@/pages/deck-builder/deck-builder-items.utils'
 import type { DeckBuilderItem } from '@/pages/deck-builder/deck-builder.types'
 import { findClarification } from '../encyclopedia-content'
-import { resolveLang } from '../encyclopedia.utils'
+import { localized, resolveLang } from '../encyclopedia.utils'
 import { FilterSection } from './FilterSection'
 import { RichDescription } from './RichDescription'
 
@@ -20,7 +20,7 @@ function ClarifiedDescription({ item }: { item: DeckBuilderItem }) {
   const clar = findClarification('equipment', item.id)
 
   if (!clar) {
-    return <RichDescription text={item.description[lang]} className="text-xs leading-relaxed text-[#d4d4d4]" />
+    return <RichDescription text={localized(item.description, lang)} className="text-xs leading-relaxed text-[#d4d4d4]" />
   }
   return (
     <div className="flex flex-col gap-2">
@@ -28,13 +28,13 @@ function ClarifiedDescription({ item }: { item: DeckBuilderItem }) {
         <p className="text-[10px] font-bold uppercase tracking-wide text-[#c084fc]">
           {t('encyclopedia.clarification')}
         </p>
-        <RichDescription text={clar.text[lang]} className="text-xs leading-relaxed text-[#e5e7eb]" />
+        <RichDescription text={localized(clar.text, lang)} className="text-xs leading-relaxed text-[#e5e7eb]" />
       </div>
       <div>
         <p className="text-[10px] font-bold uppercase tracking-wide text-[#555]">
           {t('encyclopedia.gameText')}
         </p>
-        <p className="text-xs leading-relaxed text-[#777]">{item.description[lang]}</p>
+        <p className="text-xs leading-relaxed text-[#777]">{localized(item.description, lang)}</p>
       </div>
     </div>
   )

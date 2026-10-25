@@ -9,15 +9,19 @@ preserved (merge-by-id); auto-derived fields (counts, links, params_used) are
 refreshed.
 
 Run:
-  python scripts/build_eff_catalog_scaffold.py
+  python scripts/build_eff_catalog_scaffold.py [CLIENT_DIR]
+
+CLIENT_DIR is the extracted client folder holding `db/`. It defaults to the
+configured one (`api.client_db.client_output_dir()`). The datagen
+`eff_type_catalog` target reuses `group_by_type()` and `build_entries()`.
 """
 import json
 import re
+import sys
 from collections import Counter, defaultdict
 from pathlib import Path
 
 REPO = Path(__file__).resolve().parent.parent
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
 SNAPSHOT_DIR = REPO / "api" / "snapshots"
 CAPTURE_DIR = Path.home() / "AppData" / "Local" / "hub-czn" / "snapshots"
 OUTPUT_PATH = REPO / "api" / "data" / "eff_type_catalog.json"
@@ -63,10 +67,10 @@ def load_existing_catalog() -> dict:
     return {}
 
 
-def load_skill_eff_instances() -> list[dict]:
-    """Read all *skill_eff.json shards and flatten to one big list."""
+def load_skill_eff_instances(client_db: Path) -> list[dict]:
+    """Read all *skill_eff.json shards under `client_db` and flatten to one big list."""
     instances = []
-    for shard in CLIENT_DB.glob("*skill_eff.json"):
+    for shard in sorted(client_db.glob("*skill_eff.json")):
         if shard.stat().st_size <= 2:
             continue
         data = json.loads(shard.read_text(encoding="utf-8"))
@@ -138,16 +142,21 @@ def sample_ids(instances: list[dict], n: int = 5) -> list[str]:
     return sorted({inst.get("id", "") for inst in instances if inst.get("id")})[:n]
 
 
-def build() -> dict:
-    print(f"Loading client SkillEff instances from {CLIENT_DB} ...")
-    all_instances = load_skill_eff_instances()
-    print(f"  loaded {len(all_instances)} instances")
-
+def group_by_type(instances: list[dict]) -> dict[str, list[dict]]:
+    """Group SkillEff instances by their `eff` type, dropping rows without one."""
     by_type: dict[str, list[dict]] = defaultdict(list)
-    for inst in all_instances:
+    for inst in instances:
         eff = inst.get("eff")
         if eff:
             by_type[eff].append(inst)
+    return by_type
+
+
+def build(client_db: Path) -> dict:
+    print(f"Loading client SkillEff instances from {client_db} ...")
+    all_instances = load_skill_eff_instances(client_db)
+    print(f"  loaded {len(all_instances)} instances")
+    by_type = group_by_type(all_instances)
 
     observed = load_observed_counts()
     print(f"  observed {sum(observed.values())} SkillEff lines across {len(observed)} types")
@@ -156,7 +165,21 @@ def build() -> dict:
     scope &= set(by_type)
     print(f"  catalog scope: {len(scope)} eff_types")
 
-    existing = load_existing_catalog()
+    return build_entries(by_type, scope, load_existing_catalog(), observed)
+
+
+def build_entries(by_type: dict[str, list[dict]], scope: set[str], existing: dict, observed: dict[str, int]) -> dict:
+    """Build one catalog entry per eff type in `scope`.
+
+    Args:
+        by_type: eff type -> its client SkillEff instances.
+        scope: The eff types to include. Each must be in `by_type`.
+        existing: The current catalog, whose hand-filled fields are kept.
+        observed: eff type -> how often captures saw it.
+
+    Returns:
+        eff type -> entry, with the auto-derived fields refreshed.
+    """
     out = {}
     for eff_type in sorted(scope):
         instances = by_type[eff_type]
@@ -202,14 +225,23 @@ def write_audit(catalog: dict):
     )
 
 
-def main():
+def render(catalog: dict) -> str:
+    """Serialise the catalog the way the committed file is written."""
+    return json.dumps(catalog, indent=2, sort_keys=True) + "\n"
+
+
+def main(argv: list[str]):
+    sys.path.insert(0, str(REPO))
+    from api.client_db import client_output_dir
+
+    client_db = (Path(argv[0]) if argv else client_output_dir()) / "db"
     OUTPUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    catalog = build()
-    OUTPUT_PATH.write_text(json.dumps(catalog, indent=2, sort_keys=True) + "\n", encoding="utf-8")
+    catalog = build(client_db)
+    OUTPUT_PATH.write_text(render(catalog), encoding="utf-8")
     write_audit(catalog)
     print(f"Wrote {len(catalog)} entries to {OUTPUT_PATH}")
     print(f"Wrote audit to {AUDIT_PATH}")
 
 
 if __name__ == "__main__":
-    main()
+    main(sys.argv[1:])

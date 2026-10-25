@@ -70,4 +70,8 @@ describe('resolveLang / localized', () => {
     expect(localized({ en: 'Hello', 'pt-BR': 'Olá' }, 'pt-BR')).toBe('Olá')
     expect(localized({ en: 'Hello', 'pt-BR': 'Olá' }, 'en')).toBe('Hello')
   })
+
+  it('localized falls back to en when the requested language is missing', () => {
+    expect(localized({ en: 'Hello' }, 'pt-BR')).toBe('Hello')
+  })
 })

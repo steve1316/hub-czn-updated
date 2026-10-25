@@ -1,0 +1,1227 @@
+{
+  "charResId": 1056,
+  "name": "Rei",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=584022015#gid=584022015",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "rei-snacktime-draw-vs-exhausting",
+      "title": {
+        "en": "Rei Snacktime, Draw vs Exhausting"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rei Additive/Multiplicative Damage Bonuses"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rei is one of the best pure Damage Buffers in the game\nVoid, Basics, Multi Hit and 1 cost or lower are her buff Synergies\nRei usually increases damage through Additive Damage Increases\nAdditive Damage Increases have amazing synergy with Multi Hit/Attack Spam\nExamples:\nChizuru Oni 1 Base\n50% x 4 = 200%\nBut with a 40% Additve Damage Increases from Rei\n(50%+40%) x 4 = 360%, from only 40% Additive, a 1.8x Damage Increase!\nWhile 40% Multplicative Damage would only be\n(50%x140%) x4 = 280% from 40% Multiplicative, only 1.4x Damage Increase\nRei is Capable of a huge ammount of Additive Damage Increase\n60/40% from Resonating Darkness\n150-50% from Resonating Darkness\n80% from 4 Moral\n290% for a Multi hit Attack or 140% Permanently Possible before Dupes"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rei's other strength is her ability to Deck Thin\nRei's Snacktime is capable of Exhausting Cards\nExhaust means the card will be gone for the rest of the Combat\nSnacktime means you can keep bad cards like Basics, but just get rid of them\nExhausting 2 cards with Snacktime is strong\nExample:\nYour 24 card deck after Exhausting 3 (2+Itself) means you have a 21 card deck\nThe only possible problem with Snacktime, is it isn't a card positive usually\nExample:\n5 Cards in hand\n2 Cards in hand, Snacktime Exhausts 3 (2+Itself) 5-3\n4 Cards in hand, Snacktime draws 2 2 + 2\n-1 Card in hand compared to before Snacktime\nYou need supplemental Card positive draw most times"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Upgrade and Retain can also mean Exhaust"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Exhaust means the card can't be Used/Drawn again for the rest of combat\nUpgrades are used up and become permanent efffects, effectively Exhaust\nRetain cards stay in Hand until used/discarded, effectively Exhaust\nRei as a character has a very thin deck once you use everything\nUp to 4 Thinner deck (Strike, Resonating, Condensation) and Snacktime"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just Healing buff to Snacktime, its okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/8"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-rei-basic-buffer-fm-160",
+      "title": {
+        "en": "Cycle +1 | Rei Basic Buffer | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "100+150+80 = 330% Basic Attack Multi\nResonating to Activate Clover"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZypp1F6Z2utlrUfsSTQ1NALLwSiKmW3yfG92Zup8Om6XDgc3Znytqxv3B-V5we6ANiE8_oSrkIFn92"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +0 | Multi Hit Buffing | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "100% 3 times for a big Multi hit\n40% or equivalent to 2 Moral +1 = 3"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZzpp1F6Z2utlrUP8STQ1NAvjRdLya2I7Vf0u5v492m60TliHVj3tqzjXUUUN-Mp7riMYPvsSIAN8DBLpuD96Ye"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +0 | 1 Cost Rei (Renoa/Rin) | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "190% Additive thats not Moral\n4 Moral"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZ1pp1F6Z2ut1rUPcSTAkptvR91voSRjQ5XUEZPgWcd4fJQVlCXb9I5GVDOMWal4I3KohLK9QgDDcLtA5uD96YepyBc5to"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-tenebria-basic-buffer-fm-160",
+      "title": {
+        "en": "Cycle -1 | Tenebria Basic Buffer | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "330% Basic Attack Multi, Resonating to Activate Flower\nAP Gearbags to help setup\nGlorious to help pay for Strikes, Ego for Tenebria Ego"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZ3pp1F6Z2ut1rUPcSTQkptvR51LBKeIpZy1dVHoOyO6dHHwF8k7_KxGFNWet89wANVOzTRSJMlFdt8tb2b7jeogThFd2wFevnulp4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Moral Rei | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6 Moral Perma\n+40% to 1<=\nSnacktime Basic Heal"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZ3pp1F6Z2ut1rUPcSTQkptvR51LBKeIpZy1dVHoOyO6dHHwF8k7_KxGFNWet89wANVOzTRSJMlFdt8tb2b7jeogThFd2wFevnulp4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Moral but Greedier | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1056_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "11 Moral\n+40% to 1<=\nSnacktime Basic Heal"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CxZ2pp1F6Z2ut1rUPcSTQkptvR51LBKeIpZy1dVHoOyO6dHHwF8k7_KxGBNWet0yxf_IMojCSRsCheV9PZoL0DYgpqh7duQi6sc"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyx-ritochika-alyssa-arwen-yvonne",
+      "title": {
+        "en": "Nyx | Ritochika | Alyssa | Arwen | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20003,
+              "name": "Alyssa",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20001,
+              "name": "Arwen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20026,
+              "name": "Yvonne",
+              "rating": "1/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "glory-tetra",
+      "title": {
+        "en": "Glory | Tetra"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Damage Amount to all allies\n5% whenever an EXHAUST SKILL CARD is CREATED or USED (Max Stacks 3 Permanent)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Healer | Scrab Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 Generalist Support set if you can't use one of the 4/2 sets"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\n4 moral is double 2\nE2:\nAdds Healing to attack cards, pretty nice\nE3:\nPotential levels, not very important\nE4:\nBuffs Ego Skill Uselss\nE5:\nPotential levels, not very important\nE6:\n+20% Additive just for Rei Existing, really nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator\nEbony: Rei can easily Exhaust this (Event Neutral)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nForced: +1 Cycle\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pred Blade: -1 AP -1 Cycle but in exchange 4 Moral\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Strike 1: Lead Prism = Insane basic buffs for that one turn, but also can end up a dead draw sometimes\nStrike 2: Decreasing your damage fo the turn is terrible\nStrike 3: There really is no upside to this\nStrike 4: Mei Lin loves this permanent buff, and its also an upgrade, so 5/5\nStrike 5: Has retain, can just sit in hand to deck thin, or be fodder for other effects\nNeutral Epiphany Draw is pretty good, but conditional like Strike 1"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni2",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Snack 1: +-0 card, but usable twice so it's good for Glory Set\nSnack 2: +1 card, its the best version unless you have excess draw, or alot of basics that clog\nSnack 3: -1 Card in hand technically, but lets you deck thin by 3\nSnack 4: -0 Cards, but deck thins by 2 very good\nSnack 5: -1 Card, Deck thins by 3, and can tutor into itself to go again"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Resonating 1: 1 Cost +60% Additive Broken\nResonating 2: Void Cards +40% Additive Broken\nReonsating 3: Only affecting 1 cost cards for both shield and healing is unfortuante\nResonating 4: >=1 +40% Additive Broken, most universal\nResonating 5: Niot an upgrade, but there is a universe where you pref this over Resonate 1\n+1 Moral, is a very good universal buff unless your team specifically needs Resonate 4"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1056_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dark 1: Highest Possible Damage Buff for 1 Card\nDark 2: Increasing the sheild gain for Narja's multi shield is kinda funny\nDark 3: Buffs ALL VOID cards for the entire turn, unfortunately dupes only extend the duration\nDark 4: Can pick an attack card from basically any zone, flexible but lower multiplier (Doesn't stack)\nDark 5: It's an upgrade, so its battle permanent and exhausts, but its a lower multiplier"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rei-team-examples",
+      "title": {
+        "en": "Rei Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1018,
+                1056,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1069,
+                1056,
+                30048
+              ]
+            },
+            {
+              "faces": [
+                1069,
+                1056,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1069,
+                1056,
+                30075
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1056,
+                1005
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1056,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1052,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1041,
+                1056,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                30097,
+                1056,
+                30113
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003,
+                1040,
+                30048,
+                1004,
+                1041,
+                30113,
+                1052,
+                30075
+              ]
+            },
+            {
+              "title": {
+                "en": "Basic DPS"
+              },
+              "faces": [
+                1069,
+                30097,
+                1060,
+                1027
+              ]
+            },
+            {
+              "title": {
+                "en": "MultiHit DPS"
+              },
+              "faces": [
+                1018,
+                1027,
+                1004,
+                1060,
+                30075,
+                1017,
+                1040,
+                30093,
+                1009
+              ]
+            },
+            {
+              "title": {
+                "en": "Void DPS"
+              },
+              "faces": [
+                1018,
+                1060,
+                1041,
+                1009,
+                30048
+              ]
+            },
+            {
+              "title": {
+                "en": "AP/Discounts"
+              },
+              "faces": [
+                1039,
+                1052,
+                30084
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Divine AP"
+              },
+              "faces": [
+                1033,
+                1055,
+                30075,
+                1003,
+                1040,
+                30048
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

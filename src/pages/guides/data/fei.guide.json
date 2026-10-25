@@ -1,0 +1,1214 @@
+{
+  "charResId": 30048,
+  "name": "Fei",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1082744815#gid=1082744815",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "fei-flame-arts-and-descent",
+      "title": {
+        "en": "Fei Flame Arts and Descent"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_cre2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_cre2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_cre1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flame Arts:\nGained by using Inferno Rhapsody, as well as Night Rain and Soulfire\nEvery 3 Flame Arts = 1 Extra Attack\nActivating the 3rd Flame Art with Inferno Rhapsody has additional effects\nDescent:\nGained whenever ANY ally effect causes draw\nEvery 8 Descent, generate a Heavensfall (Maximum 10 times, or 80 Descent)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "7/8 Added"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-7-0-cost-ap-draw-engine-fei-100-fm",
+      "title": {
+        "en": "Cycle +7 | 0 Cost AP Draw Engine Fei | 100 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "This is actually only 100/180 Faint Memory\nFrom this base you can actually do alot\nAP/Common Draw Divines on Soliloquy\n4th Soliloquy\nNeutrals like Negotiate/Quickshelling/Precision Aim\nPersona/Forbiddens"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7S_R5rT2u6z9DtP47P2F9Q-eroZqkLaFGPAGm0GafvGSP7gHCc4c4Z_PyzlLvqsM8xQAXMTcVVgCDEw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +7 | AP Variant | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7S_R5rT2u6z9DtP47P2F9Q-erodqkLaFGPP51lZdNoLSyEdLAUhDVZdJhJajNcv7uFwHq6ytbbwP9FMChOpgb8A"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +7 | Common Draw Variant | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "For Clog decks like Renoa"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7S_R5rT2u6z9DtP47P2F9Q-erodqkLaFGPJdylZdNoLSyeNXAUhDVZdJhJcHKcv7uFwHq6ytbbwP9FMChOpgb8A"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-flame-art-3x-160-fm",
+      "title": {
+        "en": "Cycle | Flame Art 3x | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "7 Inferno = 7 hits\n6 + 6 + 7 = 19/3 = 6 Flame Art Activates x 3 hits = 18 Hits\n3 AP Soulfire = 3 x 2 = 6/3 = 2 Activates x 3 hits =6 Hits\n3 Soliloquy 6 Flame Art Activate + Draw X = 10 Draw Ideally\n3 AP Soulfire = Draw 3, 3 Descent\nTotal Draw 13 possible, total Descent possible 15 + 3 = 2 Heavens fall = 6 Hits\n7 + 18 + 6 + 6 = 37 Hits technically possible (Even more possible if more AP into Soulfire)\n(This build scales quite well with extra AP into Soulfire)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7S_R5rD2u6z9DtP47P2B9Q-eroZqkLaFGPEWg0GaZvPWLrgfCc4E49vexGBcYcN91_JLPMxbJtwIAydx525qYKyk7hTrdcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle rng | Rhapsody Activate Flame Art 2x | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "7 Inferno = 7 hits\n6 + 6 + 7 + 7 +1 Flame Art =27/3 = 9 Flame Art Activates x 2 hits = 18 Hits\nSoulfire 7 Hit+ 7 Activate = 14 Hits\n6 Soliloquy 6 Flame Art Activate= 12 Draw ideally\n39 Hits (Non Blazing War Dance)\nTotal Descent 12 = 1 Heaven fall = 3 hits\n39 + 3 = 42 Hits possible (Technically)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7S_R5rD2u6z9DtP47P2B9Q-eroZqkLaFGPAGm0GafvGSPqgfCc4E49vf2zlLvpMM8xQPLdMDIStgch-V-B5tl9zXmuDrdcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Heavensfall E2, E3, E6 spikes"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30048_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "9 Descent Soliloquy\n6 x 3 Descent Rhapsody Flame Art Activate = 18\nTotal current 27 Soliloquy\nRequires 5 more to be 32 aka 4 Heavenfalls, so Soulfire for 3 AP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ruixiang-rosaria-solia-daisy",
+      "title": {
+        "en": "Ruixiang | Rosaria | Solia | Daisy"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30092,
+              "name": "Ruixiang",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ruixiang: Amazing passive for Fei 20% CDMG and +25% Additive, Draw 3 Ego is amazing\nRosaria: Draw Utility Ego, and Moral, Multilicative isn't that important\nSolia: Statstick for damage, no utility\nDaisy: The 1 Moral Ego can be nice, but Rosaria is just more consistent"
+          }
+        }
+      ]
+    },
+    {
+      "id": "battlefield-evo-executioners",
+      "title": {
+        "en": "BattleField Evo | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "35% CrtDmg from Battle goes Crazy and condition is easier then Prelude"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Prelude | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean this technically works, but you'll need some way of discarding"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 is Universal and never can be broken\nFei doesn't really have any synergies with other sets"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sub stats are more important in general\nThen Cursed set, if required"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nNot important, just small damage boost\nE2:\nMaking Heavenfall becomes easier and small damage buff to Inferno Rhapsodies\nE3:\nMakes Soulfire 3, more interesting ig, otherwise pretty eh\nE4:\nOnly boosts Heavensfall damage\nE5:\nPotential levels, not super important, but kinda adds up for Heavensfall\nE6:\nNow this is lowkey crazy 6 Moral for Inferno Rhapsodies 120%\nEvery 3rd Heavensfall (technically) gets +3 hits doubling its damage (Soulfire 3)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_col",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_cre2",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean Ranger/Hunter can always Attunment Abuse with Precision Aim"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_col2",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blazing: This is an insanely perfect card for Fei, but why the heck has it Exhaust??????"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30048_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30048_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Formation 1: 2.5 Moral for Rhapsody alone isn't worth much\nFormation 2: Cycle -1, permanently, so very good, besides for turn 1\nFormation 3: Great version if you're trying to OTK for consistentcy\nFormation 4: The Extra hits that scale off of moral are great\nFormation 5: Creates a different Inferno version, creates 3 Descent instead of 1, but no Draw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Night 1: Cycle +1\nNight 2: technically 6 Flame Arts, and easily lines up Rhapsody chains\nNight 3: 1 cost = bad, and Flame Art is harder to Achieve then Rain 2\nNight 4: Completely free 2 Flame Art and self deck thins, its pretty good\nNight 5: Is equivalent to 2 AP for Soulfire basically"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Soliloguy 1: Cycle +2 is insane, and the condition isn't very hard\nSoliloguy 2: Tutors specifically for Fei, but is only +1\nSoliloguy 3: Dead once Infernos are in Discard or Used, but is 6 descent ig\nSoliloguy 4: Gambling version of 1, can be +2, and cheat AP, but breaks if don't draw Fei\nSoliloguy 5: Does nothing if you already used your X cost card or its in hand"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30048_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Soulfire 1: X = hits+1 and Draw, this is fine\nSoulfire 2: Activating Rhapsody can also result in Draw, or Descent as well as Flame Dance\nSoulfire 3: Not very interesting since base damage of Haeavens fall is pretty low\nSoulfire 4: Compared to Soulfire 1, you activate flame arts instead of adding hits\nSoulfire 5: Adds only 1 extra hit to Flame Art procs\nSoulfire 0: Is probably just good enough, but I need to see what neutral epi it can get first"
+          }
+        }
+      ]
+    },
+    {
+      "id": "fei-teams",
+      "title": {
+        "en": "Fei Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30048,
+                1033,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1003,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1033,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1003,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                30113,
+                1062
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                30113,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1005,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1033,
+                1003,
+                1055,
+                1049,
+                1056,
+                1040,
+                1004,
+                1041
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1062,
+                1050,
+                1055,
+                1039,
+                1064,
+                1057,
+                30097
+              ]
+            },
+            {
+              "title": {
+                "en": "SubDPS"
+              },
+              "faces": [
+                1005,
+                30113,
+                1043,
+                1041,
+                1061
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1033,
+                1003,
+                1039,
+                30084
+              ]
+            },
+            {
+              "title": {
+                "en": "Card Shuffle"
+              },
+              "faces": [
+                30113,
+                30084
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

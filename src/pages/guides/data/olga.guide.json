@@ -1,0 +1,1081 @@
+{
+  "charResId": 30117,
+  "name": "Olga",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1254256024#gid=1254256024",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "brand-move-guide",
+      "title": {
+        "en": "Brand Move Guide"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni4_lbk_mut1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Brand Fracture/Agony, Rift Disperse, Shattering, Rapacity"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Olga's main gimmick is her 2 Brands, Fracture and Agony\nBrands are a buff that Olga applies to herself\nBrands trigger whenever Agony and or Fracture Activate\nActivations can be from Forced (Cards) or Naturally (Turn End)\nThe turn end Moved Rift/Disperse stays in hand beginning of the next turn\nBrand Fracture moves Disperse which Activates Agony\nBrand Agony moves Rift which Activates Fracture\nWhen Brands move a card they'll also be -1 Cost\nShattering is a Unique Debuff that End of the Line (EOTL) Applies\nEnemies with Shattering take 1.3/1.4x damage from DoTs\n(Enemies take DoT damage, then Shattering deals a% as Fixed)\nRapacity on EOTL and Reckoning\nCards with this Keyword turn the damage attribute into DoT"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lets go over a couple examples\n2 Fracture Brand\n2 Agony Brand\nRift -> Disperse -> Rift -> Disperse -> Rift or\nDisperse -> Rift -> Disperse -> Rift -> Disperse\nNow lets change up the timing of when you apply the Brands\nDraw Rift & Disperse\nRift/Disperse\n2 Fracture Brand\n2 Agony Brand\nRift/Disperse -> Chain move x4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Released 9/9"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "9/9"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-scorch-multi-hit-ap-1-5-180-fm",
+      "title": {
+        "en": "Cycle -3 | Scorch Multi Hit | AP -1.5 | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Scorch = 3x3 +3 = 12\nFracture = 2x2 +2x3 +7 +2 = 19\nAgony = 4x4 +4 = 20\nHits = 2 + 3 + 12 + 3 + 1 = 21-23"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNqfdzwd5bz8N7H72ReyrtB0zwiRbEmYwmFFOU2lreM3R7cS8_kAjZ02BExiotg6ZF5Xrn9IJNkUWB4YZ4bT4rRvboZ5ie9Tf8YvVOO3hwqvuCqokwywifn7VQ2Bxlo3fHolIujk"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +1-3 | Draw Olga Variants | AP 0-2+ | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | AP +2 | Cycle +1 | Fort -2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The variant of Dispersed Desire you choose is up to you and what you expect\nThis is honestly pretty solid and very easy to pilot\nAlways gonna be +2 Moral minimum"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNq_dzwd5bz8N7H72ReyrtB0zwiRbEmYwmFFOU2nrec3BBjtrAKnOhPDHMfNkcFo-JJHtXKSn09pdvpJr_5cakepPNiaMCCA5ArC7G3HIclYv01sqwHdKloyat7awsCmiGA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0/-1 | Additive Buffer | AP -1 | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Moral 1 +1x4 = 5\nNeg Fort = 2 + 2x4 = 10"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNrfdzwd5bz8N7H72ReyrtB0zwiRbEmYwmFFOU2nreM3RLcB89IykVzlkI9TewvOhvy7O6oCFBwPZ7FkU2Gm256KOOMOyKJ-PCIzWTVLY1jfoWhR8lWQ29ah5SuPBPCH8GA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3/4 | OTK Additive Buffer Greedier | AP -1 | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Moral 1 + 4x4 = 17\nNeg Fort = 2 + 8x4 = 20 (Cap)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNqfdzwd5bz8N7H72ReyrtB0zwiRbEmYwmFFOU2nreM3RLcB89IykVzlkI9TewvOhvy7O6oCFBwPZ7BkUZBp8hPZH0WEHbKz0h49ei6qSv3JVmluGz6rNj7vyAXqwNm6ZGA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-ally-agony-activate-180-fm",
+      "title": {
+        "en": "Cycle -3 | Ally Agony Activate | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fracture = 2x4 +2x4 + 2 = 18\nAgony = 5x3 + 3x4 + 4 = 31\nHits = 2x2 + 1x3 +1 +1 = 9"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNqfdzwd5bz8N7H72ReyrtB0zwiRbEmZCV51NgEEpDGY55prh-k9M2intQPgU35Jo88yL6oARVdlz1ZU_9heWoyFFzG-I97LlNwx2ML3LUT8ESZwkZz7gtACyX_xwVuvqeO9N"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +1-2 | Draw Olga Upgrade Variant | AP 0-4+ | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BAR Upgrade allows you to recast 1 of Rift/Dispersed Extra\nIts a little Rng if you get the Draw from Rift again, or Disperse's AP/-Fort/Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0/-1 | OTK Additive Buffer | AP -1 | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Moral 1 + 4x3 = 13\nNeg Fort = 2 + 8x3 = 20 (Cap)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OTiNrfdzwd5bz8N7H72ReyrtB0zwiRbEmYwmFFOU2nreM3RLcB89IykVzlkI9TewvOhvy7O6oCFBwPZ7FkU2Gm256KOOMOyKJ-PCIzWTVLY1jfoWhR8lWQ29ah5SuPBPCH8GA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "emilie-bria-aria-eloise-anteia",
+      "title": {
+        "en": "Emilie | Bria | Aria | Eloise | Anteia"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30118,
+              "name": "Emilie",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20021,
+              "name": "Bria",
+              "rating": "4.5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1070,
+              "name": "Aria",
+              "rating": "4.5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20027,
+              "name": "Eloise",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20008,
+              "name": "Anteia",
+              "rating": "3.5/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Emilie: Really good for Olga increasing Crit Rate and damage of all ally Fracture & Scorch, okay Ego\nBria: 5 Star Stat stick that has a situationally great ego, buy no passive\nAria: 5 Star Stat Stick that still has some upside\nEloise: Classic good stat stick with some Gen Multi\nAnteia: Better Stat stick then Eloise eventually, but no Gen Multi, and okish ego"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanguine-executioners",
+      "title": {
+        "en": "Sanguine | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Crt Dmg to everything, 40% Crt Dmg to DoTs"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12% Attack isnt as good as Can be better then Sanguine, depending on Crt Ratio"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean this technically works, but why?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nSaves 1 AP 1st turn and then every second Cycle, very very good\nE2:\n10% more DoT damage, and also healing for 20% Max HP Each turn is pretty good\nE3:\nI dunno, big damage, becomes bigger\nE4:\nBuffs DoT dmg by up to 30% (probably doesnt effect agony)\nE5:\nOlga doesn't mainly do damage through cards\nE6:\nBroken broken broken, Tutors End of the Line/Reckoning turn start and +50% Crt Dmg"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-8",
+      "title": {
+        "en": "Part 8"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30117_uni4_lbk_mut1",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "End of the Line: Veryimportant for Shattering aka 30/40% DoT Final Damage increase\nReckoning: Large Single Hit and Activates Agony & Fracture of self"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30117_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rift 1: 3 Frac, 1 Activate\nRift 2: 2 Frac, Ally Activate\nRift 3: 2 Frac, 2 Activate\nRift 4: 4 Frac, 1 Activate\nRift 5: 3 Frac, 1 Activate"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "OTK"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BAR 1: Agony Brand (Rift)\nBAR 2: Fracture Brand (Disperse)\nBAR 3: Exhaust\nBAR 4: Move Rift 2x (No cost discount)\nBAR 5: Upgrade that gives you 1 Brand per turn at no cost, just that its rng and BAR 1st turn is min 1"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30117_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Disperse 1: 6 Agony, 1 Activate\nDisperse 2: 5 Agony, Ally Activate\nDisperse 3: 5 Agony, 2 Activate\nDisperse 4: 4 Agony, 3 Scorch, Agony + Scorch Activate\nDisperse 5: 5 Agony, Activate"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "??"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Insatiable 1: 6 Frac 9 Agony\nInsatiable 2: 8 Frac 12 Agony\nInsatiable 3: 7 Frac 14 Agony\nInsatiable 4: 3 Scorched 7? Frac\nInsatiable 5: Why?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "olga-example-teams",
+      "title": {
+        "en": "Olga Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30115,
+                30117,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                30117,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                30117,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                30117,
+                30075
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                1005,
+                30117
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1050,
+                1055,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1039,
+                1055,
+                1033,
+                1003,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "Agony"
+              },
+              "faces": [
+                30075,
+                1009,
+                1021,
+                1064
+              ]
+            },
+            {
+              "title": {
+                "en": "Fracture"
+              },
+              "faces": [
+                30115,
+                30113
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30093,
+                1005,
+                30117
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1057,
+                1004,
+                30097
+              ]
+            },
+            {
+              "faces": [
+                30097,
+                30113
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

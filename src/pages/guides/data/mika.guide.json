@@ -1,0 +1,1129 @@
+{
+  "charResId": 1039,
+  "name": "Mika",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=2005990900#gid=2005990900",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "mika-wave",
+      "title": {
+        "en": "Mika Wave"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Mika's unique Mechanic is Wave\nEvery 3 Wave from Mika she converts to 1 AP\nSo 1 Wave is 1/3rd of an AP"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-0-5-6-ap-140-fm",
+      "title": {
+        "en": "Cycle 0 | 5/6 AP | 140 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5.33/6.33 AP per turn\n40 FM gives you room for 2 Neutrals or a Neutral + Persona (S3)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7JBZypsJE6cGvtn_UfuOTQQFEW7sSr6mWxiex8GZu5-Sm6RbhlXUkRtI3MRNjet9cweXIM6XCS5gI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Moral 3 AP | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3.33 AP per turn\nLast 20 FM can be any other Neutral, or a Persona\nTotal Moral per turn 5"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7JBZzpsJE6cGvtn_UfuOTQ3tAW7sSr6mUvCOx8GZu5-Sm62zllXUkRtI3MRNjet0xxeXIM6XCS5gIFdt8tb0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't | Cursed DPS Mika"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ngl that's kinda funny"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | All Heal Mika"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8 Heals on Mika, means 8/16/24/32 Daggers just from Mika\nLots of room for Neutrals"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-0-7-8-ap-4-source-180-fm",
+      "title": {
+        "en": "Cycle 0 | 7/8 AP 4 Source | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7JBZzpsJE6cGvtn_UfuOTQQFEW7sSr6mWxiex8GZu5-Sm6RbhlXUkRpUxMVAJUzmP4CLqtT_JxggA4-F-tJCZbT0"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Moral 4 AP | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 AP while cycling, but less Moral and no FM for Persona"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l7JBZzpsJE6cGvtn_UfuOTQ3tAW7sSr6mUvCOx8GZu5-Sm62zllXUkRpUxMVJzVzmP4CLqtT_JxggA4-F-tJCZbT0"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyx-ritochika-alyssa-arwen-yvonne",
+      "title": {
+        "en": "Nyx | Ritochika | Alyssa | Arwen | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20003,
+              "name": "Alyssa",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20001,
+              "name": "Arwen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20026,
+              "name": "Yvonne",
+              "rating": "1/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetra-healer-scrab-flex",
+      "title": {
+        "en": "Tetra | Healer | Scrab Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sub stats are more important then full\nScrab/Healer set"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Tetra"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Damage Amount to all allies\n5% whenever an EXHAUST SKILL CARD is CREATED or USED (Max Stacks 3 Permanent whole team)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nInitiation to Deluge, its okay\nE2:\nFree heal for Chaos sometimes, it's nice\nE3:\nPotential levels, not very important\nE4:\nAdds Retain to Sources of water made, actually really nice\nE5:\nPotential levels, not very important\nE6:\nStart of battle 2 Wave, it's okay, lets you play Deluge at no downside"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt2",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Portrait: 1 AP Draw 3\nHungry: Hunger stuff\nGuidance: tiny bit of healing"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Deluge: 1/3rd of an AP each turn, but Initiation can be a liability to early cycling\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1039_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Source 1: Most basic, very good\nSource 2: +2 AP instead of just 1/3rd with Source 1 when setup by healing lost HP\nSource 3: Can save the AP in hand till needed with Haru, Kayron etc\nSource 4: -2 Stress is butt\nSource 5: Big Burst of AP usable with mainly Kayron and a little Haru\nIF YOU GET DRAW DIVINE ON 1-3 BUILD IT, +AP Divine is also ok, but not as good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1039_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tactical 1: Increases healing and is a heal\nTactical 2: Boost healing of whole team\nTactical 3: Increases only Mika's healing\nTactical 4: Conditional can be better then others but condition is hard to get\nTactical 5: Upgrade = Best"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1039_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blessing 1: Shields too\nBlessing 2: 1 wave\nBlessing 3: Bit of healing\nBlessing 4: Bit of damage\nBlessing 5: Don't"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1039_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Whirl 1: Heal and Damage but 2 cost\nWhiirl 2: 1 cost and refunds with wave\nWhirl 3: Increases healing\nWhirl 4: Recovery Dps Mika someday\nWhirl 5: Heal -> Damage\nThey should just Rework this card to always have Recovery"
+          }
+        }
+      ]
+    },
+    {
+      "id": "mika-example-teams",
+      "title": {
+        "en": "Mika Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Honestly, there isnt really any team THAT NEEDS MIKA\nShes just the beginner AP Engine\nThe little Flexibility she has is generating tiny Moral while doing it"
+          }
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1039
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

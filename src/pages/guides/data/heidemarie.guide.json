@@ -1,0 +1,1375 @@
+{
+  "charResId": 30093,
+  "name": "Heidemarie",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=698100458#gid=698100458",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "heidemarie-linked-and-quietus",
+      "title": {
+        "en": "Heidemarie Linked and Quietus"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Linked is Hide's main Mechanic\nIf Cards are Linked together that means\nIf one of the Linked cards are used, the rest are discarded\nThe discard happens on cast, not on card resolution\nSo you cannot use a Linked card, then try to affect another Linked card\nThis does make Nia a bit more unfortunate with Hero to All"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Effulgent Blades Compression and Release"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Effulgent Blades are Heide's main created cards\nThey can be discarded for Extra Attack Damage\nBut the main fact about them is how they infinitly stack inside your Discard Pile\nWhile not bricking and filling your draw pile reshuffles\nEffulgent Compression once turned into Release becomes a MASSIVE NUKE\nThat scales based on the amount of Effulgent Blades you have in discard pile"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/29 Added"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Updated"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/4"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-activation-rain-160-fm",
+      "title": {
+        "en": "Cycle -3 | Activation Rain | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "DUPE CHANCE IS NOT GURANTEED\nEither Unique Thread -> Repiphany or Delete Hero to All and Readd later\nEffulgent Compression can be kept if you want for a final turn nuke\nBUT it increases your average cycle\n21 Hits (20 Activations)\nDepending on Supports, go for -AP Divine instead of Draw"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7JvV5rD3E7D8ts_5ROCAXROeCoX93aC2TIOFLNERPgSMi7PAnb7EGZ_O2tVXvlcOtwQB4NjcnVgOYE8CPOpsG8DXMuDv6cA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Release Nuke | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just Create 24 Blades per turn, scaling your Compression as high as possible"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7JvV5rD3E7D8ts_5ROGAXROeMoZrHKqF7PATP12agvCcw7PA3b7EGIEy0OafzlP2twUR0Njc9VuYiFuF5uJ2YByk7hTr6cA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Attunement Rain"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "10 Effulgent Blades a turn discarded\nPotential Buff of 130% to each (80% + 50%)\n10 x 270% = 2700%\nHero 5 can replace to make Cycle -5, but at the cost of 1 AP"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | Variant of Aco's G3P1 Deck"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sword Rain 0 is required, Sword Rain 1 has Quietus and can't be Nia cycled\nCompression is bad since it exhausts all the Swords we're building for Cassius Nia Combo\nRelies heavily on Draw Divine"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Aco's GR S3P1 Guide"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Overcooked | Thread Nuke"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just Thread of Light, for alot of damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-activation-rain-alt-160-fm",
+      "title": {
+        "en": "Cycle -2 | Activation Rain Alt | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "18 Hits\nBlades have +120% Damage Amount\nBut Activating 5 more blades is just more damage"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7JvV5rD3E7D8ts_5ROCAXROeCoX93aC2TIOFLNERPgSMi7PAnb7EGZ_Oyq1Xvn8OueAbqwivJ1AUA5Nx5uJ2YAyk7hTv6cA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not good | Link Activator"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not good | Discard Rains"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You draw your Rains with Hero, discard through linked swords, repeat"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sylvia-solia-rosaria-daisy-nakia",
+      "title": {
+        "en": "Sylvia | Solia | Rosaria | Daisy | Nakia"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30094,
+              "name": "Sylvia",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20010,
+              "name": "Nakia",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sylvia: Greater then base Solia and Max Rosaria by 15% roughly\nSolia: Base dmg is slightly better then Rosaria, but bad Ego Skill\nRosaria: Always gonna be the Default Ranger Partner\nDaisy: Moral on Ego, instead of Draw, largely preference\nNakia: Weak Stat Stick"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conqueror-executioners",
+      "title": {
+        "en": "Conqueror | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "The majority of Heide's damage comes from 1 cost Effulgent Blades or Sword Rain\nEspecially good increase, if you aren't running Sylvia, but still best with Sylvia"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Prelude | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Very very slight damage increase at E0 with Sylvia\nE2, Resonance, Mark, Sylvia all slowly buffs Prelude value"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12% Attack isnt as good as 35% Crit DMG"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nSlight Effulgent Release damage increase, largely unimportant\nE2:\nTutoring Compression is great, 600%+ in more Extra Attacks also is great\nE3:\nPurely a damage, ego and purely a damage buff, unimportant\nE4:\nExtra +5-50% Additive Damage buff to Heide, it's unimportant\nE5:\nLow base Multipliers = Not much Value\nE6:\nEffulgent Blades now always attack Weakness, E2 damage increase is ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4",
+      "title": {
+        "en": "Season 4"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean Ranger/Hunter can always Attunment Abuse with Precision Aim"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c8-theatre-of-illusions-event-chaos",
+      "title": {
+        "en": "C8 Theatre of Illusions/Event Chaos"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Effulgent Compression is generally good, since its 0 cost free damage as well as 3 discard fodder"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30093_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rain 1: Attunement for 2 blades is great, but having Quietus means you can't abuse Attunement\nRain 2: Able to be Attunement Abused, but 2 cost is very very bad, I'd take Rain 0 over this\nRain 3: This is actually a pretty funny build around\nRain 4: Spending AP to create Blades feels bad, and retrieve is not very important\nRain 5: Extremely Niche, basically just turns Effulgent Release into an AOE, but it has Retain Exhaust\nRain 0 is actually good, since it doesn't have Quietus and Thus can be Abused for Attunement Blades"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Thread 1: Alot of damage\nThread 2: Alot Alot of damage but is 2 Cost so stinky\nThread 3: Great way to buff Effulgent Blades, and also has Quietus so its free activation damage\nThread 4: Stinky, why does this have Exhaust? Like actually ruined potential because of it\nThread 5: Source of AOE for Heide but not exactly interesting beyond that"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hero 1: Gives it link so its even easier to make it a 0 cost draw 3, great\nHero 2: On average very very bad, since you run your hand dry and have to start using 2+ cost draw\nHero 3: Just a cantrip that makes you able to discard all of Diana's cards\nHero 4: 0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good\nHero 5: Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30093_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Expansion 1: Linked makes it easy to discard, great\nExpansion 2: no link, but damage comes out faster 2 vs 6 blades, but also is capped at 400%\nExpansion 3: Can feel very very bad, not a consistent way of making Blades\nExpansion 4: The highest Blade per card from Heide, but you can't get Discard damage\nExpansion 5: QUIETUS UNIQUE UPGRADE, Amazingly consistent blade generation and deck thinning"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hdmi-example-teams",
+      "title": {
+        "en": "HDMI Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30093,
+                1049,
+                1043
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1049,
+                1005
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1056,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1049,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1049,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1003,
+                1005
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1061,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1061,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1003,
+                1049,
+                1055,
+                1033,
+                1043,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "Discard"
+              },
+              "faces": [
+                1049,
+                1003,
+                1061
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1055,
+                1056,
+                1062,
+                1050,
+                1039,
+                30097,
+                1005,
+                1021
+              ]
+            },
+            {
+              "title": {
+                "en": "Sub DPS"
+              },
+              "faces": [
+                1043,
+                1005,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "faces": [
+                1003,
+                1033,
+                1039,
+                30084
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

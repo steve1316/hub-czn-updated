@@ -1,0 +1,1178 @@
+{
+  "charResId": 1005,
+  "name": "Selena",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=2113247395#gid=2113247395",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "part-1",
+      "title": {
+        "en": "Part 1"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena \"Extra Attacks\" Mark and Coordinated Attack"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena's gimmick is mainly about \"Extra Attacks\"\nSelena has two forms, Coordinated Attack and Mark, but Mark is the main one\nMark is a debuff inflicted upon enemies\nWhenever any Ally uses an attack card, the owner of a Mark, Extra Attacks\nEvery single target with a Mark owned by them one time ( Allies include self)\nMulti Hit Attack Cards still only trigger Mark once\nThe enemy takes Equivalent to a 0 cost 100% base Multiplier card\nMarks specifically damages Tenacity as well to help \"Ravage/Break\"\nRegular Extra Attacks like Coordinated Attack do not do damage Tenacity\nExtra Attacks can Crit\nTarget Spotted 1: Attunement random enemy is not an Extra Attack\nBut it is also not an attack card used, so it doesn't trigger Mark"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena \"Tenacity Damage\", \"Ravage\" and \"Recharge Tenacity\""
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Another of Selena's Mechanics is Tenacity Damage on Tactical Manuveur\nTenacity Damage means it deals 1 Full Bar of Tenacity regardless of Weakness\nTenacity is also decreased by Attack cards in different ammounts\nExamples:\n2 Cost Attack against Weakness = 2 Full Bars of Tenacity\n1 Cost Attack against Weakness = 1 Full Bar of Tenacity\n0 Cost Attack against Weakness = 1/2 Bar of Tenacity\nIf the enemy is not weak, characters do 1/3rd of the usual damage to Tenacity\nNon Targeted Attacks deal 1/2 of the usual damage to Tenacity\nWhen the enemy Tenacity bar is fully broken, they enter the Ravaged State\nRavaging an enemy grants the team +1 AP and delays enemy action count +1\nCharacters unless they specifically have an Anti Ravage effects\nDo not deal extra damage to enemies that are Ravaged\nTactical Manuveur 4 is capable of Recharging Tenacity of an enemy\nEnemies only Recharge Tenacity on turn Start\nBy using Tactical 4, you can Ravage 2 times per turn, or just chip away earlier"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena \"Attunement\", Precision Aim and Eternal Hunger"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Selena also has Attunement on Target Spotted\nAttunement is activated whenever the Card is Drawn\n\"Move\" from Confiscate is Draw only if Eternal Hunger comes from Deck\nPrecision Aim is capable of Drawing an Attunement Card then placing it on top\nUsual Flow Chart of Effects:\nPrecision Aim\nDraw Target Spotted -> Attunment Triggers -> Draw Card/Damage Etc\nPrecision Aim then can put Target Spotted back on top\nTo be able to be Drawn again\nPrecision Aim isn't bad, but Eternal Hunger is stronger because its adds AP too"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-0-coord-attack-base-100-fm",
+      "title": {
+        "en": "Cycle 0 | Coord Attack Base | 100 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Common Draw>Draw since it helps tutor into your 2 setup cards\nBut then running Neutrals can be RNG"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7Rhlwpo5E6YqvtknVftWSQV9ELLxWk6iWnycUEG9PYkU_zPAIelfqbg"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Luke Selena Coord Attack"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Passion Coord Attack | 100 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passion Weakness Apply is optional, -1 AP to cycle, but guranteed Weakness"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7Rhlypo5E6YqvtknVftWSQV9EWLtVk6iV4g9VZkMIYm2uK9ElUVcFYBC4OZXOcv6tKArr_T4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Attack Mark Base | 100 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-0-serenial-coord-attacks-160-fm",
+      "title": {
+        "en": "Cycle 0 | Serenial Coord Attacks | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If you go for 4x Tactical, then you cant get Common Draw on HPS and Drone"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7Rhlypo5E6YqvtknVftWSQV9ELLxXk6iWnycUEG9PYkU_zLMIelftRhOTfpjmchaMISHqEnACQwDJNwFcJrmZOzw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Precision Aim Attunement | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last 20 FM can either have Forbidden hunger here itself, or on someone else and a persona for dmg"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7Rhl1po5E6YqvtknVftWSQV9ELLxWk6iWnydUEG9NFEHpK_nAsXa1QtKQPpLmchqM4CLq-z7KhAkDMsKWA5u8990epx9cndo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Attack Mark | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2 HPS = 12 Mark each turn"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7Rhl2po5E6YqvtknVPtWSQVFEui9cLxe3ICdVbm9PH0WtK_nAtnZjpdux-3EKUN-MosvjM_7riyIB2Ml9Kppw0DQ3pTdfeQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The OG"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rangowo Style Ambush/Attack Cantrip Selena"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ruixiang-marin-rosaria-solia-daisy",
+      "title": {
+        "en": "Ruixiang | Marin | Rosaria | Solia | Daisy"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30092,
+              "name": "Ruixiang",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30051,
+              "name": "Marin",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ruixiang: 3 EP Draw 3, 5 Starstat stick isn't that hard to Activate\nMarin: Highest Damage, pretty good Ego\nRosaria: RNG Moral, Conssitent Ego, easy to get dupes\nSolia: Can be slightly higher damage then Rosaria after you get dupes\nDaisy: Rosaria but worse"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eventually loses to BattleField Evo if your Crit Rate is high enough"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BattleField Evo | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If your Crit Rate is 52%> then this can pull away from 2/2/2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Prelude | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Crit Chance but you need to enable it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passion | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20% Multiplier is not enough"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1\nInitiation added to Sniper's Domain, good and bad since its gurantee draw\nE2:\nMarks get +20% Potential Additive, Very good\nE3:\nPotential Levels, Meh\nE4:\nUpgrades Ego Skill. Not good\nE5:\nPotential Levels, Meh\nE6:\nWhen Selena Mark Triggers, 30% Chance at another Extra Attack, Good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sniper's Domain: Increases Mark Damage by an POTENTIAL Additive, for ALL ALLIES"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Scope1: 4 Mark is alot, but its on Scope\nScope 2: Endless mark, an upgrade, and stackable, but only works on Selena's own attacks\nScope 3: Increases Mark damage, dupes only stack duration, not damage increase\nScope 4: Works on Allies Attack cards, dupes extend the buff duration, very good with draw divine\nScope 5: Thins the deck, but no Mark on use, and only 1 AOE Mark per turn, kinda weak"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Drone 1: Passion Weaknes usually irrelevant\nDrone 2: 2 AOE Mark, on an attack is very good\nDrone 3: Ramping damage but is a finisher, so if unlucky it can kill a combo turn when drawn\nDrone 4: 1 Turn buff, triggers even if allies attack, opportunistically very good\nDrone 5: Better drone 3, thins your deck and is always a guranteed damage source\nAll versions should include ally attacks (lmk if I'm wrong)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1005_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Target 1: Not worth much\nTarget 2: 4 Mark and also being an attack is a good rate\nTarget 3: 2 AOE Mark, but its on a skill, not attack\nTarget 4: The best version, it cantrips, and also has Attunment synergies\nTarget 5: Upgrade, The effect is kinda hard to actually happen"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tactical 1: Huge ammount of Tenacity Damage, also Doesn't care for Elemental Weakness\nTactical 2: Damage and 2.5 Tenacity Damage vs Passion Weak, not bad\nTactical 1 vs 2 just means if you're against Passion Weak or not\nTactical 3: Worse Tactical 70% of the time, not recommended\nTactical 4: Retain to thin deck or also Lets you recharge tenacity for more AP/Ravage effects\nTactical 5: AOE 1 Mark, but the AOE 1 Tenacity damage currently isn't that great\nDraw Neutral is very good here"
+          }
+        }
+      ]
+    },
+    {
+      "id": "selena-example-teams",
+      "title": {
+        "en": "Selena Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30075,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1004,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                1005,
+                30113
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                1005,
+                30113
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1005,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1005,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1061,
+                1005,
+                1050
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1005,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "MainDPS"
+              },
+              "faces": [
+                30048,
+                30075,
+                1027,
+                30093,
+                30113,
+                1004,
+                1060,
+                1061
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003,
+                1040,
+                30075,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1062,
+                1050,
+                1055,
+                1039,
+                1064,
+                1057,
+                30097
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1039,
+                1055,
+                1033,
+                1003,
+                1052
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

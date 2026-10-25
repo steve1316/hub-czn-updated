@@ -1,0 +1,576 @@
+{
+  "charResId": 1055,
+  "name": "Adelheid",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1008597044#gid=1008597044",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "part-1",
+      "title": {
+        "en": "Part 1"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_cre2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Adelheid (ADHD) Blessings and Friends Doggie/Teddy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blessing is Adel's main mechanic\nIt's a specific tag that you add to cards for Protect Us to have draw synergies\nOtherwise Blessing Cards will just additionally Fixed Shield 60% on cast\n(Fixed Shield just means no buff/debuff effects like impair or resolve)\nBlessing is considered an Ability, so Rachel, Metallize etc trigger\nAdel's Friends Doggie/Teddy are Unique Created Cards\nYour choice between Damage/Shielding"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_cre2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-4-general-draw",
+      "title": {
+        "en": "Cycle +4 | General Draw"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3rd card is up to you, Truth 0/1 for 5 Moral equivalent or Friends for Shield/Dmg or both\n8/9 Blessings if you have E4 you can instead go 2/3 OUAT vs Protect\nProtect Us with -1 AP is great\nFriends/Truth/Garden all have their Niche as the 3rd card, or more\nGarden is the default because its an Upgrade\nTruth is equivalent to 5 Moral, if you can Cycle it\nFriends although an Upgrade, adds a card back in so isn't nessicarily good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0/+3 | Protect Us 4 aka AP Divine"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Protect Us 4 is the only version able to get AP Divine it also goes +0 and even potentially +1, so its not a bad idea\nThe more Blessing you have (More OUAT), the higher likely Protect Us draws extra\nRatio of OUAT or PU is up to you and your use case"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Doggo 3 Subdps"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Protect 1 + Pack Doggos can be used individually to keep digging\nOr to be a burst of Draw + Damage with Protect Us stacked and triggering together\nYou could also instead go 4 Protect instead, (Especially good with E4)\n11 Blessings"
+          }
+        }
+      ]
+    },
+    {
+      "id": "clara-rachel-erica-eishlen-wilhelma",
+      "title": {
+        "en": "Clara | Rachel | Erica | Eishlen | Wilhelma"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Clara: Broken Ego, makes ADHD into a sub healer and also 20-40% Multi, shes great\nRachel: Always good Ego Skill + Free CounterAttack even without Teddy\nErica: More agressive Rachel, but I rather have the Draw 1 cheap Ego\nEishlen: Stat Stick\nWilhelma Stat Stick"
+          }
+        }
+      ]
+    },
+    {
+      "id": "starlight-tetra",
+      "title": {
+        "en": "Starlight | Tetra"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blessings easy stack Starlight\nIncreases Extra Attack and Counter Damage ONLY, not base card damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Tetra | Executioner's"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Adel doesn't create Exhaust Skill cards so she will run out eventually\nBut OUAT counts while you still can use it, for a more universal way of buffing over Starlight\nExe can replace Tetra if you wanna build her as more DPS for some reason"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Executioner's | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 for dediccated DPS"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nMaking Garden 0 Cost is nice, but it isn't important for general use (draw)\nWhy does this also not add Blessing? Huh?\nE2:\nGrants Adel's team up to 30% Multi Damage, It's okay, but a dedicated buffer is better\nE3:\nBuffs Ego Skill Uselss\nE4:\nYou can forgo more OUAT for more Protect Us\nE5:\nPotential levels, not very important\nE6:\nNow the buff is up to 40% Multi, but also way easier to stack\n+1 Draw each turn as well, this is really good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-6",
+      "title": {
+        "en": "Part 6"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Shield Retention perma, its also an Upgrade so it deck thins, just not always best"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1055_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "OUAT 1, 1 cost is bad, cantrips and is 6 blessings (I'm not suire if it can try to rebless cards)\nOUAT 2: Allows you to scuplt your starting hand as well as is 2 Blessings, VERY GOOD\nOUAT 3: 0 cost, enables Quietus, and 6 blessings\nOUAT 4: Potentially alot of Draw, but then you're left without AP, not good\nOUAT 5: 5 Blessing each turn, but why would you want to make it this way? Protect 4?"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Friends 1: Doggo does up to 1200% more at max Blessings (generally 720%)\nFriends 2: Allows you to play 2 Teddy a turn potentially, or just 1 for free\nFriends 3: Deals big damage, but also adds 3 more card to cycle through, requires Protect 1\nFriends 4: Just allows Adel to get Counter\nFriends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1055_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Protect 1: 3 draw, per 3 blessing cards, very good rate Cycle +2 (Semi Card Tutoring)\nProtect 2: This is kinda a discard reload engine, but also requires setup that you gotta think of\nProtect 3: RNG Costs is no good Cycle +2\nProtect 4: Cantrips, can go +1 and also get AP Divine, its good Cycle +0/1\nProtect 5: Only draws Adel cards, not really recommended Cycle +1"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1055_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Truth 1: Honestly, worse then a good Neutral like Vuln, Moral, Draw, AP\nTruth 2: This is +1 sometimes, but when would your blessing cards be in DISCARD\nTruth 3\" Just increases Friends DMG/Shield, funny ig\nTruth 4: IG its a way to make Adel DPS\nTruth 5: What is this trash\nTruth 0, honestly just getting a good Neutral Epiphany is your best bet here"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skill-persona",
+      "title": {
+        "en": "Skill Persona"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free\nPersona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free\nPersona 4: For Shield Stack/Counter Team if you really wanted to\nThe Persona cards themselves are good, but on Average Engravings are bad"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Persona"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks\nPersona 2: Potentially CounterAttack, but usually nothing burger\nPersona cards themself are bad, but the engravings are good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "adelheid-team-examples",
+      "title": {
+        "en": "Adelheid Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "DPS | Shield/Counter | Buff/Debuff | AP/Discounts"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Multi Hit | Extra Attackers | Shield DPS | Counter DPS | Metallize"
+          }
+        }
+      ]
+    }
+  ]
+}

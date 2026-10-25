@@ -1,0 +1,1413 @@
+{
+  "charResId": 30075,
+  "name": "Sereniel",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1077415703#gid=1077415703",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "what-is-tenacity-and-ravage-state",
+      "title": {
+        "en": "What is Tenacity and Ravage State"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sereniel's Afterglow, Tenacity Damage and Homing Lazers"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Afterglow is Serenial's Unique Buff\nNext Attack Card: +1 Tenacity Damage and +50% Dmg on Ravaged Enemies\nAfterglow is consumed on every attack card that uses it, no limit of stacks\nTenacity Damage is another way of Damaging Tenacity\n1 Tenacity Damage is equal to 1 Bar of Tenacity\nWeakness does not change the ammount of Tenacity Damage\nHoming Lazers are Serenial's main pay off for Ravage\nThey Move themself into hand on Ravage to be used again"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tenacity is the Bar Underneath some enemies\nTenacity is broken up into Segments, different on each enemy\nNot all Enemies have Tenacity Bars to be Ravage\nTenacity is decreased by Attack cards in different ammounts\nExamples:\n2 Cost Attack against Weakness = 2 Full Bars of Tenacity\n1 Cost Attack against Weakness = 1 Full Bar of Tenacity\n0 Cost Attack against Weakness = 1/2 Bar of Tenacity\nIf the enemy is not weak, characters do 1/3rd of the usual damage to Tenacity\nNon Targeted Attacks deal 1/2 of the usual damage to Tenacity\nRavage is the state an enemy enters if their Tenacity is Broken\nRavaging an enemy grants the team +1 AP and delays enemy action count +1\nCharacters unless they specifically have an Anti Ravage effects\nDo not deal extra damage to enemies that are Ravaged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-clog-draw-serenial-140-fm",
+      "title": {
+        "en": "Cycle +3 | Clog Draw Serenial | 140 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +3, Common Draw at Turn Start chaining\n+1 AP"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Deck Code"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "v6l7UPR5rT2k4T9Nvv4xNSB3SefVnR1waE2eILZ3MkRPgSNC4fBwU8YBZ_Oyy1jvxP_uGAvohxIraAL-HsC-Bpgc_g"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "OG Stompy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "https://cznmetadecks.com/decks/draw-sereniel-draw-fei/qq3xjc"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +3 | Draw Serenial Instinct Weakness | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rD2k4T9Nvv4xNWB3SefWnZ65J6ElAAZ20ZRHoNCOqgjIc-8EifD2wVjvyv9DwgPLdM_CSrgg-OJ-B5pm_TX6hDrafg"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Theory | Pale Shooting Star"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shining Core should make Laser 5\nPale Shooting Star is a bit expensive, so extra AP would be good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-move-laser-default-160-fm",
+      "title": {
+        "en": "Cycle -1 | Move Laser Default | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "AP Laser is if you need it\nVuln Lasers are just higher damage if you dont need the AP\nCommon Draw instead of Draw 2 is also an option"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rD2k4T9Nvv4xNSB3SefVnR1waE2eILZ3I0RPgSNC4fBwU6YGZ_O21Vjvwv-twQAYOzd-agP4HsDFBptm_TX6hDrafg"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Exhaust 4, Grave Move | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "27 Hits from 1 Break\nCobalt Light -1 Cycle -1 AP + 8 Hits Possible"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rD2k4T9Nvv4xNWB3SefWnZ65J6ElAAZ20ZRHoNCOqgjIc-8EifD2wVjvyv9DwgPLdM_CSrgg-OJ-B5pm_TX6hDrafg"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pathfinder"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Hugo Serenial | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just Skill -> Attack Cards"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rD2k4T9Nvv4xNSB3SefVnR1wLFOeILJ3kZ5HotCLCNKHi18m0_dQG1DONSel4rfP0hXKawL-HsC-Bpkc_jC_rzt_"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Theory | Pale Shooting Star"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shining Core should make Laser 5\nPale Shooting Star is a bit expensive, so extra AP would be good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-e1-e2-pale-2x-160-fm",
+      "title": {
+        "en": "Cycle -2 | E1/E2 Pale 2x | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1 = +4 Lasers used\nE2 = Start of Hand no Clog since 3 +2 + 5 = 10\nCommon Draw instead of Draw 2 is also an option"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rD2k4T9Nvv4xNSB3SefVnR1waE2eILZ3I0RPgSNC4fBwU6YGZ_Oyy1jvxv-uGAvqiBfJtAgA1-B_opOdcT47hQ"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | X Core | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Play X Cost Core, 2x Cobalt light then Lasers and then move all back to Hand\nWorks even if enemy has no Weakness bar to break"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7UPR5rT2k4T9Nvv4xNSB3SefVnR1wKE2eILV30kcMUmyuXdAuURTcb9ILGbbNMSGl4MLK3RWNtAgA1-CQBJi59bEw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Pathfinder"
+          }
+        }
+      ]
+    },
+    {
+      "id": "peko-serithea-janet-yuri",
+      "title": {
+        "en": "Peko | Serithea | Janet | Yuri"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30076,
+              "name": "Peko",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20014,
+              "name": "Serithea",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20004,
+              "name": "Janet",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20016,
+              "name": "Yuri",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Peko: 5 Star Stats, +30% Additive, +25% Crit Chance\nSerithea: 4.5 Star Stats 16% Crit Chance and 25% Crit Dmg\nJanet: 5 Star Stats, 9% Crit Chance to all 1<=\nYuri: 3 Star Stas, but okay passive 16% Multi, and good ego Draw 2 3 EP"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20007,
+              "name": "Carroty",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20036,
+              "name": "Carroty",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Akad: 4 Star Stats. ego skill for +25% Crit, other passive useless\nCarroty: 4 Star Stats, 20% Multi and meh Ego"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eventually loses to BattleField Evo if your Crit Rate is high enough"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BattleField Evo | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean Technically Serenial can activate all 3 with Plasma 4\nBut even at 2/3 (20% Crt Dmg) It can eventually win out over 2/2/2 with 52%> Crit Rate"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Set is good as a base, but half the time it can be turned off, also +50% Additive isn't alot\nIn comparison to Final Dmg Multipliers like Atk% and Crits"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Purple: Main Damage Boosts\nGold: QOL\nBlue: Irrelevant usually"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nPale Shooting Star now activates 2 more Lasers, honestly very nice buff\nE2:\nCreates Extra Lasers turn one, very helpful in breaking an enemy\nE3:\nEgo Skill damage increase, Haste could be good, but usually isn't important\nE4:\nVery big damage Increase for the turn, very good\nE5:\nPotential Levels: It's ok\nE6:\nVery Strong Scaling with Additive Buffs"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "35"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-forbidden-ruins",
+      "title": {
+        "en": "C5 Forbidden Ruins"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-12",
+      "title": {
+        "en": "Part 12"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just remove basics\nPale Shooting Star is nice, it's alot of Tenacity break depending on your build, but 2 cost high\nQuick Shelling and Leap Attack, free damage, cantrips, can't go wrong\nPrecision Aim: Mainly if you have synergies like Forbidden hunger or Selena"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lazer 1: You lose Afterglow, so you need help, but with buffs double dipping is SO STRONG\nLazer 2: Moves itself to hand on Ravage and 3 Afterglow is good\nLazer 3: Creates 2 homing lazer, but costs AP, unfortunate so Niche Build\nLazer 4: Moves to hand at start of turn, very good\nLazer 5: Move all Lazer L to hand from Grave, Niche Build\n+1 Mark Laser is the best of all worlds, double dipping hits while also having afterglow+mark to break"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30075_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Core 1: 3 Homing Lazers is good\nCore 2: Increasing the Exhaust Limit of this card, specifc Niche\nCore 3: Absolutely amazing if you can chain breaks together\nCore 4: The Ratio of Lazers to AP isn't very good, but there's niche strategies\nCore 5: Creates Permanent Homing Lazers, less good then Spam"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30075_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Missile 1: Doubles the Tenacity Damage, good and also can make use of 2 Afterglow for 4 Break\nMissile 2: Damage is too conditional\nMissile 3:Increases Laser damage, (Stackable during the turn?) and 2 Instinct Weak is okay sometimes\nMissile 4: Creating 3 Homing Lazers is very strong\nMissile 5: Damage Scales on Lasers moved to hand, not very great, Besides that it's an Upgrade"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cobalt 1: 5.5-7 Bars of Tenacity, -1 cost permanently till 0 cost\nCobalt 2: Retain to add hits, but always 3 cost and low ratio, pretty terrible\nCobalt 3: Creates Homing Lazers per unique target hit, okay\nCobalt 4: Potential man of Cobalt Lights\nCobalt 5: 3 AP for 3 Break, but it is indeed quite a bit of damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "serenial-example-teams",
+      "title": {
+        "en": "Serenial Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30075,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                30113,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                30113,
+                1005
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                1055,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1055,
+                1049,
+                1033,
+                1003,
+                1040,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1039,
+                30097,
+                1062,
+                1055,
+                1064,
+                1057,
+                1056
+              ]
+            },
+            {
+              "title": {
+                "en": "Sub DPS"
+              },
+              "faces": [
+                1005,
+                30113,
+                1049,
+                1043
+              ]
+            },
+            {
+              "title": {
+                "en": "Tenacity Regen"
+              },
+              "faces": [
+                1005,
+                1056
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Generator"
+              },
+              "faces": [
+                1052,
+                1039,
+                30084
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

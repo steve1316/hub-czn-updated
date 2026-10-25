@@ -1,0 +1,741 @@
+{
+  "charResId": 1021,
+  "name": "Lucas",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=71577397#gid=71577397",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "lucas-and-his-launcher-bullets-rockets",
+      "title": {
+        "en": "Lucas and his Launcher Bullets (Rockets)"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_cre2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_cre3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_cre5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lucas's gimmick is his Launcher Bullets (Rockets)\nThey're 1 cost Bullets that do ST and Spread AOE\nThe passive abilities of the Launchers are all pretty bad, and useless\nYou should rather do something else with your AP then fire a Rocket"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unchanged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "passive-draw",
+      "title": {
+        "en": "Passive draw"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just use all your upgrades, use rockets if you have extra AP, otherwise just use neutrals"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bullet Buff"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passive draw, buff yours bullets and you get a bit of free Fixed Damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bullet Buff"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "celestial-flame-thrower",
+      "title": {
+        "en": "Celestial Flame Thrower"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Flamethrower crits, its kinda crazy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bullet Fixed Damage"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If you really really wished to use Rockets"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "AOE Mark"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "IG this works with Selena to buff Mark damage lol"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Prob doesn't work | Bullet Buff"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I'm not sure that SSS stacks in the same turn, it probably doesn't"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yuri-akad-akad",
+      "title": {
+        "en": "Yuri | Akad | Akad"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Yuri: You generally play Lucas as a Draw Support so Yuri Ego has best synergy\nAkad/Carroty both buff Lucas damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Serithea | Janet"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Serenthia: Crit Rate and Crit Dmg are great\nJanet:: Only buffs Lucas bullets, and requires you to use them, I wouldn't suggest it"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-corpse",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Corpse"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Atk% and Crt Dmg buff Fixed damage, and Cursed Corpse is relatively ok with Agony Rocket"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice helps you Crit on your Flame 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Buffs all Rockets and even Flame Thrower if it's -1 Cost"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nHey ig the Fixed damage adds up over time\nE2:\nBuffing Rockets +20% are good... if only they weren't 1 AP\nE3:\nPotentials can be pretty good on Flamethrower\nE4:\nHonestly, Lucas Ego is pretty good, if only it was cheaper\nE3:\nPotentials can be pretty good on Flamethrower\nE6:\nLAUNCHER IS 0 COST NOW Only the first one each turn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nGrave: Can be pretty good, but it dies eventually which is unfortuate"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "RPG-7: Includes Bullets from Allies like Luke and Renoa\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nNegotiate: 2 Moral is always great"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1021_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Extended 1: Initiatio and 0 cost are okay, but rockets are butt\nExtended 2: +1 Launcher = even more garbage created\nExtended 3: Makes Rockets usable, honestly pretty great\nExtended 4: Extra draw every turn is great\nExtended 5: 6 AP to use everything? That's hella bad, but hey, it has Exhaust and isn't an upgrade"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1021_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flame 1: 2 AP for low damage then creating 2 AP in rockets you most likely won't use\nFlame 2: Meh base, and draw discard nothing special\nFlame 3: This does Massive damage on a Crit, its kinda nutty especially with Vuln\nFlame 4: Flame 3 but more consistent, and also can deck thin basics\nFlame 5: Rockets are butt\n2 AP hurts Lucas viability"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1021_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "SSS 1:A tiny bit of extra base damage\nSSS 2: This bad is butt, but it's the onyl version that can get Draw Divine\nSSS 3: Ig the base damage could be high, but why\nSSS 4: I guess it boosts the damage, stlil butt\nSSS 5: Fixed damage hurts this so bad, it isn't even AOE Either\nHonestly, best bet would just to get a good Neutral epiphany like Draw or Moral"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1021_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flash 1: Increasing damage to shield, eh\nFlash 2:Increasing damage to shield even more eh\nFlash 3: Passion Weakness apply is pretty good, also it has Retain\nFlash 4: 2 Mark is quite a good damage\nFlash 5: Upgrade, so its great"
+          }
+        }
+      ]
+    },
+    {
+      "id": "maribell-example-teams",
+      "title": {
+        "en": "Maribell Example teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Vulnerable | AP Engines | Bullets | PassionEnjoyer"
+          }
+        }
+      ]
+    }
+  ]
+}

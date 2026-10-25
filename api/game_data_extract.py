@@ -23,6 +23,9 @@ from api import client_db
 # The archive folders that feed the app and the extraction scripts. See docs/adding-a-character.md.
 FOLDERS = ("db", "face/character", "text/en", "tp_skill")
 
+# Art the dev-mode generators (`python -m scripts.datagen`) also need, about 480 MB. The installed app never reads it.
+ART_FOLDERS = ("card_illustration", "collapse/collapse_illustration")
+
 # STOVE registers the game under this uninstall key. Its `DisplayIcon` points at the loader inside `bin`.
 UNINSTALL_KEYS = (
     r"SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\Stove App STOVE_CHAOSZERO",
@@ -38,12 +41,15 @@ DEFAULT_BIN = Path(r"C:\Program Files (x86)\Games\ChaosZeroNightmare\bin")
 
 ADD_CHARACTER_SCRIPT = client_db.REPO_ROOT / "scripts" / "add_character.py"
 
+# How the apply step runs the game data generators, after the interpreter. Tests swap in a stub.
+DATAGEN_COMMAND = ["-m", "scripts.datagen"]
+
 # How many log lines a job keeps.
 LOG_LIMIT = 500
 
 # The CLI's exit codes, per its --help.
 EXIT_MESSAGES = {
-    0: "Extracted all four folders.",
+    0: "Extracted every folder.",
     1: "The CLI rejected the arguments (usage error).",
     2: "Could not open or scan the pack. Check the game path, and that the game is not mid-update.",
     3: "Some folders were missing or failed. See czn_ripper.log in the output folder.",
@@ -325,7 +331,7 @@ class ExtractRunner:
 
     def start_extract(self) -> None:
         """
-        Start extracting the four folders, chaining a dry-run apply in dev mode.
+        Start extracting the client folders, plus the art folders and a chained dry-run apply in dev mode.
 
         Raises:
             RuntimeError: A job is already running.
@@ -340,7 +346,7 @@ class ExtractRunner:
         if not out:
             raise ValueError("Pick an output folder.")
         cmd = [cli, "--pack", pack, "--out", out]
-        for folder in FOLDERS:
+        for folder in FOLDERS + (ART_FOLDERS if is_dev_mode() else ()):
             cmd += ["--folder", folder]
         self._begin(Job(kind="extract"), lambda: self._run_extract(cmd, Path(out)))
 
@@ -410,16 +416,26 @@ class ExtractRunner:
         self._run_apply(out, dry_run=True)
 
     def _run_apply(self, out: Path, dry_run: bool) -> None:
+        env = {**os.environ, "PYTHONIOENCODING": "utf-8"}
         cmd = [sys.executable, "-u", str(ADD_CHARACTER_SCRIPT), str(out)] + (["--dry-run"] if dry_run else [])
-        code = self._run_process(cmd, cwd=client_db.REPO_ROOT, env={**os.environ, "PYTHONIOENCODING": "utf-8"})
+        code = self._run_process(cmd, cwd=client_db.REPO_ROOT, env=env)
         if code is None:
             return
         if code != 0:
             self._finish("failed", f"add_character.py exited with code {code}.")
+            return
+        # Then regenerate the rest of the game data. In a dry run `--check` exits 1 when something would change, which is
+        # the expected answer there, so only a crash counts as a failure.
+        cmd = [sys.executable, "-u", *DATAGEN_COMMAND, "--client", str(out)] + (["--check"] if dry_run else [])
+        code = self._run_process(cmd, cwd=client_db.REPO_ROOT, env=env)
+        if code is None:
+            return
+        if code not in ((0, 1) if dry_run else (0,)):
+            self._finish("failed", f"Generating the game data exited with code {code}. See the log for the target that failed.")
         elif dry_run:
-            self._finish("ok", "Dry run finished. Review the log, then Apply to write any new entries.")
+            self._finish("ok", "Dry run finished. Review the log, then Apply to write any new entries and regenerate the game data.")
         else:
-            self._finish("ok", "New entries written to the source tree. Review the diff and restart the sidecar to load them.")
+            self._finish("ok", "New entries and regenerated game data written to the source tree. Review the diff and restart the sidecar.")
 
     def _run_process(self, cmd: list[str], cwd: Path, env: dict | None = None) -> int | None:
         """

@@ -1,0 +1,1474 @@
+{
+  "charResId": 30113,
+  "name": "Hilde",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=575510979#gid=575510979",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "hilde-arrows-ionization-zero-in",
+      "title": {
+        "en": "Hilde Arrows, Ionization & Zero In"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Homing Arrows:\nAttack Cards that Hilde Creates in the Draw Pile\nEach Arrow has Attunement (On Draw): Activate itself\nActivating it then does an Extra Attack + Draws 1 Card\nARROWS ARE NOT CARD POSTIVE OR NEGATIVE THEY ARE NEUTRAL\nUnusable Cards also are considered 0 Cost\nIonization:\nFor every Ionization Stack the enemy takes +8% and +4% (Hilde only)\nMax Stacks 12, so +8% x 12 = +96% which is barely 5 moral\nNot very important at all\nZero In:\nFor every stack of Zero +35% into a SINGLE Extra Attack on Highest HP Opp\nMax Stack 60, so +35% x 60 = 2100%"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_cre1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Added 7/29"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-4-16-arrow-180-fm",
+      "title": {
+        "en": "Cycle +4 | 16 Arrow | 180 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4x4 Arrows = 16 Arrows + Plasma + Vortex + Sample = 19 Hits (Single Target)\nBGR 2 = 38 Zero In (Not including AOE or other combatants)\nBGR 1 = 57 Zero In (Not including AOE or other combatants)\nBGR 3 = 60+ Zero In\n16 Arrows for Fei Heaven"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOCAuROeYoXd3aBSTIPtLPERPgSMb7PA9b7kGZ_O2jFXvj8OtwQBRNjdOVQPBE8D4OZtf8DW2uzqTcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +1 | Fracture Arrows | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15 Fracture Application"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOCAuROeZoXh3KBSTIPpL0kdIFWGuFezAUlSfYtAFHBMud98r_-LIdPbPSoYf9-J-B5tf8DW0uzqTcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Heaven Reshuffle | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Total cards to Cycle 3 + 5 + 1 = 9\nMaximum DnR Reshuffle Draw is gonna be 4 x 9 = 36\nThats alot of Heaven\nPlasma 5 can brick sometimes since we'd only have 4 Hilde Attack Cards"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOGAuROfkopruKqMiBUWW12bGv5yMrjHFc947n_CxGFcud98k_wPLdPbPSokf7uJ-B5tf8DW3uzqTcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Funger Reshuffle | 180 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 DnR 1 Hunger = 3 AP + 5 = 8 AP\n3 DnR 2 Hunger = 2 AP + 8 = 10 AP"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5qz3j7D8Ws_5uOGAuROfkopruKqMiBUWW12bGv5yMrjHFc947n_CxGFcud98k_wPLMPDPSowfFw17JwOb8K44pBo"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +6 | Trash Butt Draw Engine | Dont"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOGAuROfkopruKqMiBUWW12bJv5-MrjHFc9E7nPCxGBcud98r__jIMxaNiwUAkN-FBJi59vI-pLZBdDIl"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-4-15-arrow-but-saves-20-fm-160-fm",
+      "title": {
+        "en": "Cycle +4 | 15 Arrow but saves 20 FM | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3 + 4x3 Arrows = 15 Arrows + Plasma + Vortex + Sample = 18 Hits (Single Target)\nBGR 1 = 36 Zero In (Not including AOE or other combatants)\nBGR 1 = 54 Zero In (Not including AOE or other combatants)\nBGR 3 = 60+ Zero In\nLast 20 can be used for S3 Persona, or -1 Cost on DnR/Plasma Rainn 0 Moral"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOCAuROeYoXd3aBSTIPtLPERPgSMb7PA9b7kGZ_O2jFXv88CtwQBRNjdOVQPBE8D4OZtf8DW2uzqTcA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Grand Arrows | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Its really hard to get Zero In with Grand arrow\nVuln is the best way to buff Grand Arrows after DnR"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOCAuROeaoXx3aBSTIPlLN0RPgWYV7PBDbBTlYtI6JrHNNR6o4Iv10hXKawPHE8D0OZlV8DYPpo97"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Ionization Reshuffle | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5 Attunments + 1 Play = 12 Ionization or 5 Moral already\nKinda funny but then its a brick"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7CvV5rD3j7D8Ws_5uOGAuROfkopruKqEWP0WW12bGv5yMrjHFc947n_CxGFcud98k_wPLdPbPSokf7uJ-B5tf8DW3uzqTcA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eunie-marin-ruixiang-rosaria-solia",
+      "title": {
+        "en": "Eunie | Marin | Ruixiang | Rosaria | Solia"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30114,
+              "name": "Eunie",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30051,
+              "name": "Marin",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30092,
+              "name": "Ruixiang",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eunie: Bad Ego, passive is purely damage 10% Crit and Extra Attack Buffing, hyper specific\nMarin: Great Ego, some damage buffs passively, is a 5 star Stat stick, usable elsewhere\nRuixiang: 3 EP Draw 3 isn't super consistent since Hilde keeps a 1 Cost Attack, but its good\nRosaria: Always good, RNG way of getting Moral\nSolia: Second Method on a Partner, butt Ego Skill but at least 4.5 Star Stat Stick"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Daisy: Rosaria but worse"
+          }
+        }
+      ]
+    },
+    {
+      "id": "battlefield-evo-executioners",
+      "title": {
+        "en": "BattleField Evo | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Battlefield is crazy on Hilde 35% Crit DMG for free"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12% Attack isnt as good as 35% Crit DMG"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean this technically works, but why? Hilde base damage isnt even that low"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\n+1 Draw to Vortext Arrow is great\nE2:\n+10% Crit Chance and Mobbing Bonus Extra Attacks are good\nE3:\n10% (Weakness Final Damage) is pretty good, but only for one turn\nE4:\n40% Multi for Hilde Extra Attacks (Everything basically) is great\nE5:\nPotential Levels: It's ok\nE6:\n+15% Crit Chance to ALL INSTINCT ALLIES After 8 Find the Gap (E4 Buff)\nMax Stack of Zero is now 100 (get 15 for free) can get 85 not (15 more then old)\n+35% x 100 = 3500% AS WELL as +45% Crit Dmg to this Zero Hit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDiscard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3\nGuidance: Healer Hilde anyone?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_col2",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1 AP Draw 3 is great, it being Unique is good, the extra damage is bonus"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5?"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quiver 1: Amazing 4 Arrows + Cantrips itself basically by Drawing an Arrow\nQuiver 2: Yet to be seen with Arabella synergy\nQuiver 3: Single Huge Hit, but its very gimmicky\nQuiver 4: Very Situationally strong with 10 Arrows each turn, but its situational\nQuiver 5: Upgrade = Deck thinning and AP Thinning, Turn Draw turned off is good too"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "DnR 1: SPECIFIC Draw 2 and tiny damage buff\nDnR 2: Draw 2 and Debuff Application if you have synergy/requirement\nDnR 3: Reshuffling and Draw is a good bonus, also AP Divine is possible but Cycle -1\nDnR 4: If they're in Hand it doesn't Discount which is stink, but with Discard is good\nDnR 5: Gimmicky with G Arrows and being 2 Cost is REALLY REALLY BAD"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30113_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Plasma 1: 4 Ionization in 1 card and can also be Attunement Looped\nPlasma 2: Plasma 0 D is just better, 1.5x Ionization gain isnt worth losing an Attack\nPlasma 3: Frature is very conditional\nPlasma 4: Really easy to be 0 cost, but Piercing damage is worthless\nPlasma 5: 0 Cost TUTOR Cantrip that does damage, but no Ionization for another Debuff\nPlasma 0: With Draw honestly better then Plasma 2, since its an additional hit"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_30113_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BGR 1: No real reason to go this over BGR 2, for 1.5x Zero In gain\nBGR 2: Best QOL there is, Intiation Draw 2 for 0 Cost\nBGR 3: Only Requires 15 Arrows to reach 60 Zero In\nBGR 4: Ally debuffs do not work, Hilde debuffs exclusively aka Fracture Arrow\nBGR 5: Zero In is so easy to get using other methods, this really doesnt have a purpose"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hilde-example-teams",
+      "title": {
+        "en": "Hilde Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30048,
+                30113,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30075,
+                30113,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30048,
+                30113,
+                1062
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1055,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1049,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1005,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                30113,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1024,
+                30084
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "MainDPS"
+              },
+              "faces": [
+                30048,
+                30075,
+                1057
+              ]
+            },
+            {
+              "title": {
+                "en": "SubDPS"
+              },
+              "faces": [
+                1043,
+                1005
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1062,
+                1050,
+                1055,
+                1039,
+                1064,
+                1057,
+                30097
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1039,
+                1055,
+                1033,
+                1003,
+                1052
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Multi Buffer"
+              },
+              "faces": [
+                1024,
+                30084,
+                1055
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

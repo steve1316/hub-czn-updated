@@ -1,0 +1,761 @@
+{
+  "charResId": 1010,
+  "name": "Magna",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=864188111#gid=864188111",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "lead-prism",
+      "title": {
+        "en": "Lead Prism"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Magna Lead. CounterAttack, Crystallization and Vulnerable"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lead\nLead is a RNG Keyword that can reduce the card's cost 1 AP 50% of the time\nThe discount can only happen if it's the first card you play that turn\nTop of deck manipulation with Cassius/Nia or Precision aim can help\nCounterAttack\nWhen an enemy attacks your team, for every hit they deal\n1 CounterAttack is consumed, and the owner deals Defense Based Damage\nCounterAttacks are not fixed damage, so they are effected by buffs/debuffs\nCOUNTERS CAN CRIT NOW YAY\nCrystallization:\nEnd of your turn gain a tiny bit of FIXED shield for every Crystallization Stack\nVulnerable:\nWhen damage is dealt, Vuln is consumed and recieves 1.5x dmg multiplier"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Multifacted Parallel Universe Nexus or Lead Prism is INSANE on Magna\nActivating 1 random Lead card (Prism's owner only) is a big AP Cheat\nEspecially so on Magna, where her Lead cards can be 2 Cost!"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "THEY GAVE ICEWALL 3 LEAD? THATS SO BROKEN\nAll Glacial fists and IceWalls got numbers buffs, its ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "vuln-counter-draw-support",
+      "title": {
+        "en": "Vuln Counter Draw Support"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passive AOE Vuln + Draw Support from whatever Neutrals you want\nStorm>Icewall if you don't need AOE"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Counter Passive damage"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ap Heavy | Shielder Magna"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can use other forms of Ice Wall too and add more Ice Wall if you want"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aoe-vuln-support",
+      "title": {
+        "en": "AOE Vuln Support"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Can add more/less Charges depending on how much you consume\nAlso could replace Charge 2 with Charge 1\nRemoving Ice Wall is also okay if you want to"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "gimmicky | Multi Hit Charge"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "More or less Frost Charges, depends on your wants/needs"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ap Heavy | Fisting"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fist really needs -1 AP\nCan use other versions of Fist for AOE, up to you"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fisting Example"
+          }
+        }
+      ]
+    },
+    {
+      "id": "wilhelmina-erica-rachel-raidel",
+      "title": {
+        "en": "Wilhelmina | Erica | Rachel | Raidel"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Wilhelmina: Easiest to get Def% high\nErica: Helps with CounterAttack generation and also highest CounterAttack dmg buffer\nRachel: The supporty option that increases Shield%, still a great Ego Skill\nRaidel: Trash"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eishlen | Alsea"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eishelen: Easier to get dupes then Erica, Increases damage after gaining Counters\nAlsea: Actually can work with Fisting builds, but the lack of dupes make her less good then Wilhelmina"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tetra-executioners-flex",
+      "title": {
+        "en": "Tetra | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Def for Shield and Damage, Crit Dmg, HP for larger max shield, or Atk/Agony for Dmg"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "For Fist Build if 2 cost"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Beast | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only Fist 5 works"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nGives Initiation to Storm SO GOOD\nE2:\nCounters now apply Freeze debuff, stacking damage buff for Magna, its ok\nE3:\nIncreased Damage, its ok\nE4:\nCounters no longer reduce vuln is okay\nE5:\nPotential Levels, it's ok\nE6:\nGains 1 Enhanced Counter at start of turn, it's ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1010_col",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ebony Nutrient is a universally good combo to draw and reduce AP costs\nSalamander and Kefox are premier Draw support Monster cards"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just remove basics\nStorm: Upgrade + Lead and even Initiation at E1 is amazing (Gaining shield through ability includes allies)\nBelligerence is a great draw Neutral because Magna can thin her deck and remove her attacks\nSadism: A way to make sure your Prism always works, it can be pretty good with some neutral epi"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1010_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Frag 1: 4 Crystallization, isn't very good\nFrag 2: 2 Counterattack is good\nFrag 3: 0 Cost + Initiation, very nice\nFrag 4:UPGRADE. End of turn huge AOE Dmg, but 2 Cost, funny\nFrag 5: Lead, 4 Counter and increases Counter dmg, but turns into a skill, meh"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1010_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gimmick"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Wall 1: 3 Counter, Counters are AOE for 1 turn, it's ok\nWall 3: Huge shield gain, but EXPENSIVE, also needs Counter Attack\nWall 3: UPGRADE, Counters will be AOE, very good\nWall 4: Dmg to all equal to shield, ok\nWall 5: Counters are AOE for 2 Turns'"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_uni1",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fist 1: Big dmg, get shield\nFist 2: Medium dmg, apply Vuln\nFist 3: Big dmg, increase damage by 1.5x if you have shield, pretty good\nFist 4: Medium dmg, AOE gain shield\nFist 5: Retains Shield now, its okay\nHonestly, just not a good card, expensive AF, need Cost Reduction Excess AP or Divines"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1010_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charge 1: AOE Vuln + Shield, good\nCharge 2: More AOE Vuln, but smaller Shield\nCharge 3: UPGRADE When hit by a counter, enemy gets Vuln (Affects all allies counters)\nCharge 4: 3x Def Damage, Vuln for every hit, ok\nCharge 5: AOE Vuln + 2 Counter, good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "magna-example-teams",
+      "title": {
+        "en": "Magna Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw | AOE | Vuln Abusers | AP Engines | Shielders"
+          }
+        }
+      ]
+    }
+  ]
+}

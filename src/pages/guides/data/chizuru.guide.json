@@ -1,0 +1,822 @@
+{
+  "charResId": 1060,
+  "name": "Chizuru",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=90678469#gid=90678469",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "important-chizuru-glossary-mechanics",
+      "title": {
+        "en": "Important Chizuru Glossary/Mechanics"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Karmic Flames is the most important skill for Chizuru\nKarmic Flames applies the permanent \"Cursed Shackles\" Debuff\nOnly ONE CURSED SHACKLE can exist at a time, among all enemies.\nCursed Shackled enemies either buff Karmic Flames (Unimportant)\nCursed Shackled enemies genererate \"Will o Wisp\" whenever they're hit\nAny ally, multi hits count multiple times, \"Extra Attacks\" do not count\n(Exception is from \"Bind\" Cards, currently only \"Shadow of the Moon\")\nEvery 5 Will o Wisp generated creates 1 Bind = 1 Shadow of the Moon\nThe other source of Will o Wisp is Tsukuyomi and its epiphanies\nMultiple copies merge Bind/Moon cards together, max stack is 5 Bind\n(Technically considered Created, before they're merged together)\nWhen \"Bind\" is stacked, the damage of Moon increases\nAt 3 Bind or more, Shadow of the Moon evolve into Shadow of the Moon+\nThe best damage comes from using Moon+ immediately when its created"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "To use, or not to use Bound at Dusk"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bound at Dusk gives Inhibit\nInhibit disables all AP sources besides for Start of Turn, or Ravage\nInhibit is technically a buff, so immunity doesn't work\nNo Fates, No Upgrades, No Divines, No Mika wave/source, nothing\nFor Chizuru specifically, if built well, ITS NOT A BIG ISSUE\nInhibit limits AP, but adds AP through its cost reduction mechanics\nBesides for the cost reductions/ap limitation\nInhibits only benefit is +1 Hit to Moon, or Moon+\nThis is not the biggest benefit in general, but the damage does stack up"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Massive buffs to Chizuru\nMoon+ now merges in ANY ZONE\nOverall Wisp + Damage + AP Decreases, Insane"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-5-tsuki-oni-mixed",
+      "title": {
+        "en": "Cycle -5 | Tsuki Oni Mixed"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3 Tsuki, 2 Oni is Optimal Ratio, (Except if the boss has Elasticity 7)\n2 Tsuki, 3 Oni is also fine, 4 of one or the other is bad\nKeeping Shadow of the moon decreases your dupe chances"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Oni 4 Basic Spam"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lower potential damage then Tsuki Oni Mix, and also much higher AP cost per turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Basic Spam"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Funny | All in Moon Combo Chizuru"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Focus is for you to stack hits on Moon for 10 hits, then to spam Buffs onto it, worse then mixed\nVery hard to generate Wisp without Oni Copies"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "WAIT THIS TECHNICALLY WORKS NOW"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Requires E2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-0-sub-dps-discounter",
+      "title": {
+        "en": "Cycle 0 | Sub DPS, Discounter"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Choose your flavor of Bound, the deck could just be Bound as well, up to you"
+          }
+        }
+      ]
+    },
+    {
+      "id": "aria-itsuku-eloise-anteia-zatera",
+      "title": {
+        "en": "Aria | Itsuku | Eloise | Anteia | Zatera"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 1070,
+              "name": "Aria",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30046,
+              "name": "Itsuku",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20027,
+              "name": "Eloise",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20008,
+              "name": "Anteia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20012,
+              "name": "Zatera",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Aria: 20% Crt Dmg if you do Oni Spam build\nItsuku: 5 Star Stat stick with additive upside for Chizuru\nEloise: 4 Star Stat Stick\nAnteia: 4.5 Star Stat Stick\nZatera: 3 Star Stat Stick"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bria: Somewhat works with Chizuru\nAnteia: Just bad"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-corpse",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Corpse"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 is Universal and never can be broken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sub stats are more important in general\nThen Cursed set, if required"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inhibition | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Buffed, but still not strong enough due to how broke Atk% is"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bound 3, never messes with Chizuru's costs herself, so you can keep up Conq Value indefinetely"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Void | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Weak and Conditional and just worse then inhibition since Chizuru has low base Multipliers\nSo 20% Multiplier < 20% Additive from Inhibition"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nBit of damage, bit of healing, Whatever\nE2: Refunds Moon+ with Moon so 5 wisp, not bad\nE3:\nBuffs Ego Skill Uselss\nE4:\n30% Additive is pretty nice\nE5:\nPotential levels, not very important\nE6:\n+1 hit to Moon, not very exciting"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1060_srt3",
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1060_uni4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1060_uni4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "6/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just remove basics\nMoon = 5 Will o Wisp, basically we want to draw all of them every turn\nMoon+ When Bind is 5, or its your Last AP use Moon+"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1060_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Karmic 1: Extra hit is good for Wil o Wisp Stacking\nKarmic 2: Refunds itself (only on enemies with shackle already), but requires Draw support\nKarmic 3: ST = Bad\nKarmic 4: Expensive, but 5 wisps, is good with Bond5\nKarmic 5: Best, Exhausts and returns once you finish off the ST, worse others for Multi/Spawn Mobs"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bound 1: +2 AP technically but is RNG and can break Conqueror set, very good\nBound 2: Moon+ Spam, you do need alot of draw and luck to support this\nBound 3: Good with teammates who don't have 0 cost skills IE Hugo is amazing here\nBound 4: Too RNG Dependant to be good\nBound 5:Karmic4 IG? No real worthy synergy for this Currently"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1060_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tsukuyomi 1: Best source of Will o Wisp\nTsukuyomi 2: +1 Hit, but much less Will o Wisp creation\nTsukuyomi 3: +2 hit to moon,infinite stacking, with Rei or Orlea, its insane\nTsukuyomi 4: Because it only counts Chizuru cards its insanely hard to get much\nTsukuyomi 5: Insanely good with Oni4 and good if you have duped non epiphany Tsukuyomi"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1060_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Oni 1: 4 hits = 4 wisp and also addive damage synergy, also increases Moon damage INSANE\nOni 2: Alternate option to Oni 1, but base Oni + Neutral epiphany is better usually\nOni 3: Very conditional to reach 5 hits, does not boost Moon, very bad\nOni 4: Less good with Tsukuyomi and also requires basic potentials, but best damage otherwise\nOni 5: 40% Multi is not good, 3 Will o Wisp is not that much"
+          }
+        }
+      ]
+    },
+    {
+      "id": "chizuru-team-examples",
+      "title": {
+        "en": "Chizuru Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Card generators | Buffers/Debuffers | Multi Hits"
+          }
+        }
+      ]
+    }
+  ]
+}

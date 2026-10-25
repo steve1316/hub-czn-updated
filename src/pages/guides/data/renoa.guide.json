@@ -1,0 +1,883 @@
+{
+  "charResId": 1041,
+  "name": "Renoa",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1248050829#gid=1248050829",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "part-1",
+      "title": {
+        "en": "Part 1"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Renoa Dirge Bullets, Discard and Draw Killing"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Renoa's main gimmick is her Dirge Bullets\nDirge Bullets are attack cards with Exhaust\nThey deal an Extra Attack on Discard\nDiscarding Dirge Bullets instead of Using them is more optimal\nThe main problem that Renoa comes to is actually her Dirge Bullets\nBecause if you discard Dirge Bullets they never exhaust\nIf they end up shuffling back into your deck\nYou could just end up killing your redraws and dying"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dirge Bullets got slight Discard damage buffs\nThey also now can deal Weakness Damage\nUnfortunately at the cost of Dimensional Cube having legs cut off"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flower-3-self-discard",
+      "title": {
+        "en": "Flower 3 Self Discard"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Echo 1 for 3 bullets, repeatedly Flower to acrew a total of 15 boolets\nUse Nia skill to discard hand full of Dirge\nYou could keep Last Ditch if you wanted, but Nia skll is better\nCould also just use Instant Judgement Upgrade for a tiny bit more damage too"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Renoa 9/9 OTK | Renoa Standard"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Retrieve Bullet Renoa"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6 x 4 = 24 Bullet Discards each turn from Retrieve"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't | Upgrade Echo Scaling"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Just setup Echos, wait a few turns for bullets until they're all in your draw pille, Nia Ego Skill win game"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | Kayron Flower 3"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flower 3 discards either Kayron 7 Cost brand, or Ecstasy\n1 discard of Brand = 280% bonus, now just discard 2, 560%!, now do it 4 times, 2240%!\nNow just use Ecstasy and that's 2390% x 4! 9560%! THATS ALOT OF DAMAGE"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | Kayron Renoa build"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flower 3 buff used to stay even as Renoa discarded Dirge Bullets, unfortunately buff is used now"
+          }
+        }
+      ]
+    },
+    {
+      "id": "draw-support-renoa",
+      "title": {
+        "en": "Draw Support Renoa"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "-1 Divine on this flower is what makes this playable (Doesn't mean it's better then Veronica)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't | Buffer Renoa"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "akad-yuri",
+      "title": {
+        "en": "Akad | Yuri"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Akad is compeltely nuts, his Ego Skill + Nia Ego = Enemy Delete\nYuri if you really want the Draw Ego"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Janet | Serenthia | Kiara"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Janet can ctually be better then Serenthia at a base\nSerenthia with dupes is also 5/5 even more consistent then Akad\n(I just need to know how Serenthia's Crt Dmg Scales, if it works per discard or only on played cards)\nKiara: Still very very conditional passive, that's why I rate her low, also hard to get dupes"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conqueror-executioner",
+      "title": {
+        "en": "Conqueror | Executioner"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror now is Able to boost the damage of Dirge Bullet Discard, which is all of Renoa's Damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blackwing | Executioner | Cursed Corpse"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Used to be the best in the past until Conqueror got fixed, still usable"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Void | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Renoa does not like playing her bullets bcs it wastes AP and doesnt help her scale\nSet effect is also just weak"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nBuffing last Ditch is okay\nE2:\nMakes every 4th bullet instead a stronger bullet, really nice\nE3:\nIncreases Ego Skill damage by a bit, meh\nE4:\n40% Additive, is okay, but lossing it on Shuffle is a pain\nE5:\nPotential Levels: It's ok\nE6:\nPretty broken with Shuffle Cassius for OTKs, otherwise not good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nHunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale\nGrave: Can max out your Crit Chance"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Assault: Pretty good as a end of turn finisher, remove if you want, its fine\nQuick Shelling/Leap Attack: Cantrips that do damage, really good\nPrecision Aim: Can top Target 4 to redraw it, or other Attunement effects\nNegotiate: 2 Moral"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1041_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Echo 1: 2 Bullets in hand\nEcho 2: 3 Bullets but only 1 in hand to discard\nEcho 3: How do you even Activate this\nEcho 4: 3 Bullets, Allows for continuous Flower 1 max value\nEcho 5: Scaling option, also an upgrade good\n-1 Cost Divine is very good here, or moral on Upgrade"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1041_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ballad 1: Good damage if you Ego Skill, or Flower\nBallad 2: It activates Peko...\nBallad 3: Mark is another source of Extra damage, just takes awhile to consume if you even can\nBallad 4: THE BEST Buffs Bullet damage in EVERY ZONE, Including Deck for Nia Combo\nBallad 5: If the boss can't be killed by one combo ig"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1041_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement 1: Meh\nJudgement 3: Meh\nJudgement 3: Double dips Rei buffs, okay damage\nJudgement 4: Discard fodder that is also free damage, very good\nJudgement 5: Upgrade = Exhaust = Good, Free Value every turn after deck thinning"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1041_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Weird"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flower 1: 3 Bullet discard, 3 bull gen, 0 AP, best to Combo repeatedly\nFlower 2: 10 Bullets easily, takes turns to get max value, because it can break combo extensions\nFlower 3: Text is bad, Buffs next card by +40% per AP cost of cards discarded, Interaction got fixed\nFlower 4: 1 Cost makes this very difficult to play, but with -1 Cost Divine, it can be very good\nFlower 5: Pretty low Value on Aver and doesn't make bullets, not recommended"
+          }
+        }
+      ]
+    },
+    {
+      "id": "renoa-team-examples",
+      "title": {
+        "en": "Renoa Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Buffers/Debuffers | Break Supports | Sub Dps"
+          }
+        }
+      ]
+    }
+  ]
+}

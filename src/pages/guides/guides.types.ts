@@ -1,6 +1,7 @@
-export type Lang = 'en' | 'pt-BR'
+import type { LocalizedText } from '@/lib/localized-text'
 
-export type LocalizedText = Record<Lang, string>
+// Guides are imported from an English-only sheet, so `pt-BR` is usually absent and English is shown instead.
+export type { Lang, LocalizedText } from '@/lib/localized-text'
 
 export type Block =
   | { type: 'prose'; body: LocalizedText }

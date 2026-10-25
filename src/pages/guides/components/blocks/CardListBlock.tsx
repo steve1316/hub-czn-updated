@@ -24,7 +24,7 @@ export function CardListBlock({
         <p className="text-sm leading-relaxed text-[#cbd5e1]">{localized(intro, lang)}</p>
       )}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-        {items.map(item => {
+        {items.map((item, index) => {
           const card =
             cardsById[item.cardId] ??
             ({
@@ -39,7 +39,7 @@ export function CardListBlock({
             } satisfies CardEntry)
           return (
             <article
-              key={item.cardId}
+              key={`${item.cardId}-${index}`}
               className="flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3"
             >
               <CardImage card={card} className="h-24 w-16 shrink-0 rounded" />

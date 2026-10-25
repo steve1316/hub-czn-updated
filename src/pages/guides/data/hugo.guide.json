@@ -1,0 +1,1317 @@
+{
+  "charResId": 1043,
+  "name": "Hugo",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1551192794#gid=1551192794",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "how-to-manipulate-initiation-rng",
+      "title": {
+        "en": "How to Manipulate Initiation RNG"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo: Hunt, Coord Attack and Extra Attack"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo's Gimmick is his Commence the Hunt\nCommence the Hunt in gained mainly from Hunting Instinct\nHunting Instinct gains Commence the Hunt from Skill/Upgrade card use\nFROM ALLIES, Unless you get Instinct 5 which adds his own cards too\nCommence the Hunt is an Extra Attack\nIt triggers whenever anyone on your team uses a Single Target Attack Card\nCommence the Hunt deals Additional damage based on the number of stacks\nTry to keep yourself at 5 stacks of Hunt, and slowly chip at it for max damage"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "standard-hunt-base",
+      "title": {
+        "en": "Standard Hunt Base"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You could go 3 Instinct if you wanted, but it really kills your turn 1\nQuick fixes are good additions if you have the AP\nDingo 4 is also an okay Alternative, more draw but more AP Required"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo Tressa Example"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-draw-hugo-fm-160",
+      "title": {
+        "en": "Cycle +3 | Draw Hugo | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Balance between Commence gain and Draw\nOther Hunting Instincts can work better depending on your team"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7OBZypqBJ6aCitl_YfsOfQVh6bbsSj6WWnRnT92ZuoMKqqlzEc547t_D2lVTvu8B9wgPLcIXOSs4fxuJ_npw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | 2x Commence Hugo | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Much more Focused on Gaining Commence per skill card"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7OBZypqBJ6aCitl_YfsOfQVh6bbsSj6WWnBnT92Zu58Sq6Uzfo3UkRtIXPRNDdt9k_9PIcIXOSs4fxuJ_npw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +3 | Quick Fix DPS | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean, Hugo now can do 6 More fits more then before on a Haste card IG"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7OBZypqBJ6aCitl_YfsOfQVh6bbsSj6WWnBnT92Zu4sKq6TPfo3Vny9ax8k8_UJgB5AMhLOfoSiFDpMR-6IdI1zSDoA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-draw-hugo-upgrade-fm-140",
+      "title": {
+        "en": "Cycle +3 | Draw Hugo Upgrade | FM 140"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "More room for Neutrals/Persona but -1 Skill so -2 Commence"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7OBZypqBJ6aCitl_YfsOfQVh6bbsSj6WWnRnT92ZuoMKqqlzEc547t_D2lVTvu8B9wgPLMIXOSswfF3h6"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +1 | Hugo Proccing Starlight... | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2 Dingo = 3 Turns to Stack Starlight\n1 Dingo = 5 Turns to Stack Starlight"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7OBZypqBJ6aCitl_YfsOfQVh6bbsSj6WWnRnT92ZuoMKqqlzEc547t_Dyi1Ttxvp9wkRYNzV-b9AiFuF_npw"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tina-ruixiang-marin-solia",
+      "title": {
+        "en": "Tina | Ruixiang | Marin | Solia"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20038,
+              "name": "Tina",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30092,
+              "name": "Ruixiang",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30051,
+              "name": "Marin",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 1058,
+              "name": "Solia",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tina: Draw 1 Ego, and just massive Passive Damage Increases\nRuixiang: Draw 3 Ego, 5 star stat stick but no Passive damage Increase\nMarin: Draw 1 Skill ego, 5 star stat stick and +25% Additive\nSolia: Just worse Marin"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20011,
+              "name": "Daisy",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20010,
+              "name": "Nakia",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rosaria: 4 Star statstick, and potential Moral, but hugo isnt that great at it\nDaisy: 4 Star statstick, 1 Moral and Moral Passive, actually as good as Rosaria for Hugo\nNakia: 3 Star Statstick"
+          }
+        }
+      ]
+    },
+    {
+      "id": "battlefield-evo-executioners",
+      "title": {
+        "en": "BattleField Evo | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Between this and 2/2/2 just depends on your Substat Ratios\n53% Crit Rate is around where this is better roughly"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Comparable to Battlefield depending on Base Stats"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Starlight | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Damage Amount to CounterAttacks and Extra Attacks\n5% when you gain Shield by Ability (Max Stacks 5 Permanent whole team)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BattleField Evo | Executioners"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nVery nice damage increase\nE2:\nNice damage increase, thats it Moral or Additive Extra Attack gets alot\nE3:\nIncreasing Hunt max stacks is amazing\nE4:\n+40% Additive is so good on Hugo\nE5:\nWorthless\nE6:\n1 Moral each turn, really nice"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Forgotten: Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Increase Dmg Amnt of Haste Card by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Cards w Cost 1<= +30% Dmg Amnt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-forbidden-ruins",
+      "title": {
+        "en": "C5 Forbidden Ruins"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-12",
+      "title": {
+        "en": "Part 12"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nLeap Attack: Quick Shelling but stronger and more conditional\nNegotiate: If you need the moral to reach cap, this is always good\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fixer's Approach: Great damage increase to Hugo and an Upgrade so why not"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1043_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Instinct 1: 0 Cost, great\nInstinct 2: Additional Commence gain can be nice\nInstinct 3: Extra Hit that scales with Moral each Commence Trigger\nInstinct 4: No\nInstinct 5: Includes Hugo's cards now too, not very nessicary\n-1 Cost Divine, Draw 2 If first Used, 2 Mark each turn, Moral are all Great Divines"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick 1: Draws only 1 card, but it is a tutor into more Fixes\nQuick 2: 3 hits and targeted, but not what you use this card for\nQuick 3: DRAW 2 IS SO GOOD, Its also targeted\nQuick 4: Increasing Action Count... maybe one day it'll matter\nQuick 5: Consumes all hunt to do alot of attacks\nCan get Draw Common"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1043_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fan 1: Rng Hunt gain\nFan 2: Consistently 2 Hunt gain, and also targets to trigger Hunt\nFan 3: It's Targeted, and makes an ally Coord attack, I don't see why\nFan 4: Doubles damage if in hunt, but isn't targeting\nFan 5: 2 cost upgrade is kinda stinker"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1043_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dingo 1: 3 Hunt\nDingo 2: 2 Hunt but alot of shield\nDingo 3: +1 Card each turn for free after setup\nDingo 4: 4 Hunt, but needs to Combo\nDingo 5: Draw 2 is pretty good\nCan get Draw Common"
+          }
+        }
+      ]
+    },
+    {
+      "id": "hugo-recommended-teams",
+      "title": {
+        "en": "Hugo Recommended Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30093,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1043,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30093,
+                1043,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1043,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30113,
+                1043,
+                1062
+              ]
+            },
+            {
+              "faces": [
+                1004,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1060,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1018,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1027,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1061,
+                1043,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                1061,
+                1043,
+                1052
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1049,
+                1003,
+                1052,
+                1040,
+                30048,
+                1004,
+                1041,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Hunt DPS"
+              },
+              "faces": [
+                30093,
+                30113,
+                1004,
+                1009,
+                1060,
+                1018,
+                1027,
+                1061
+              ]
+            },
+            {
+              "title": {
+                "en": "Moral/EQ"
+              },
+              "faces": [
+                1049,
+                1062,
+                30097,
+                1055,
+                1057,
+                1056,
+                1039
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engine"
+              },
+              "faces": [
+                30084,
+                1039,
+                1033,
+                1055,
+                30075,
+                1003,
+                1040,
+                30048
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

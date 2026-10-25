@@ -5,7 +5,7 @@ import type { DeckBuilderPersonaEngraving } from '@/pages/deck-builder/deck-buil
 import { findClarification } from '../encyclopedia-content'
 import { FilterSection } from './FilterSection'
 import { RichDescription } from './RichDescription'
-import { resolveLang } from '../encyclopedia.utils'
+import { localized, resolveLang } from '../encyclopedia.utils'
 
 const ALL_ENGRAVINGS: DeckBuilderPersonaEngraving[] =
   DECK_BUILDER_PERSONA_ENGRAVING_CARDS.flatMap(card => card.engravings)
@@ -111,7 +111,7 @@ export function EngravingsTab() {
                       {t('encyclopedia.clarification')}
                     </p>
                     <RichDescription
-                      text={clar.text[lang]}
+                      text={localized(clar.text, lang)}
                       className="text-xs leading-relaxed text-[#e5e7eb]"
                     />
                   </div>

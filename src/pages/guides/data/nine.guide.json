@@ -1,0 +1,1329 @@
+{
+  "charResId": 30047,
+  "name": "Nine",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=2104050151#gid=2104050151",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "nine-hew-levels-incinerate-and-ignition",
+      "title": {
+        "en": "Nine Hew levels, Incinerate and Ignition"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nine's whole kit resolves around Hew\nHew can be leveled up by Incinerating\nIncinerate is triggered whenever the card is Exhausted\nIncinerate in the case of Hew creates you a Hew +1 level, unless it's maxed\nEphmeral, Fighting Spirit, Rei Exhaust, Fatal Strike\nAll are ways to Exhaust your Hew to level it up\nAt Max level Hew no longer Incinerates to make a Hew the same turn\nInstead it generates a new Hew at the start of the turn, so you potentially can run out\nIgnition:\nDecreases cost of the card with Ignition by 1 whenever any ally Exhausts a card"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flash Hew = Best because you can play 4 Hews for 0 AP\nIronclad/Massacre>Extreme\nReasoning\nExtreme requires 6 cycles so you need to play Fatal\nSo +1 AP and +1 Draw required to cycle\nAt that the AP/Damage Ratio Extreme loses to Ironclad/Massacre without the Utility"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hew Math"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/10"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-flash-dps-fm-160",
+      "title": {
+        "en": "Cycle -1 | Flash DPS | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Honestly you could also do without Exp Strike"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5rT3S7z8HsP5_O2A5R-eLo9rpKaNJBdZ10qRJo6yo6Q3ec5kiJMaz_nVrV5y54sTP4xU"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | Extreme Sub DPS | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_col2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sadism can reduce Hew Lv 5 to 0 BUT IT HAS TO BE LEVEL 5 ALREADY"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5rT3S7z8HsP5_O2A5R-eKo9vpKaFlPt11kaRJoJyweNXDu1Ekmsyx91asRt0WxdrIdAPI8SXZNMBf"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "CounterAttack Ambush | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "More Fighting Spirit copies are if you dont think you can get 4 Ambushes off each turn"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5rT3S7z8HsP5_O2A5R-eVo5npKaFUJgWf1GaxvmVg77PUcZAB4_fyLVIoVzGP"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-ironclad-thin-fm-60",
+      "title": {
+        "en": "Cycle -3 | IronClad Thin | FM 60"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 Hew each turn that gives Shield, but missing Counterblade 60% Multi"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5rT3S7z8HsP5_O2A5R-eJo5npKaFUJgWf1GbOgWVg7_UOdVcFYhy3OXE"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Massacre Thin | FM 60"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4 AOE Hew each turn, but missing Counterblade 60% Multi"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5rT3S7z8HsP5_O2A5R-eUo5npKaFUJgWf1GbOgWVg7_UOdVcFYhy3OXE"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-4-ironclad-fm-160",
+      "title": {
+        "en": "Cycle -4 | Ironclad | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sadism can reduce Hew Lv 5 to 0 BUT IT HAS TO BE LEVEL 5 ALREADY"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5qz3S7z8HsP5_O2A5R-eJo5npKaFUJgWf1GayvmVg7_UOdVcFYhy3OXHqvNmtwUDeMYzvkyI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Massacre | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sadism can reduce Hew Lv 5 to 0 BUT IT HAS TO BE LEVEL 5 ALREADY"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7dPR5qz3S7z8HsP5_O2A5R-eUo5npKaFUJgWf1GayvmVg7_UOdVcFYhy3OXHqvNmtwUDeMYzvkyI"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Don't | Cyborg funny"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fighting Spirit can activate Cyborg, Nutrient Absorption also works\nBasically just Flash Alt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bro... | 185s cursed max damage build"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_col2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Max out of Belligenrences that you can take"
+          }
+        }
+      ]
+    },
+    {
+      "id": "alcea-erica-eishlen-wilhelma",
+      "title": {
+        "en": "Alcea | Erica | Eishlen | Wilhelma"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30091,
+              "name": "Alcea",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 30054,
+              "name": "Erica",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20005,
+              "name": "Eishlen",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20024,
+              "name": "Wilhelma",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Alcea: 5 Star Statstick, 20% Multiplier and 30% Final Damage on Ego\nErica: 5 Star Statstick, can generate you Counterattack and also buff them\nEishelen: 4.5 Star Statstick\nWilhelma: 4 Star Statstick, Passive is just Additive so not really good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "beast-executioners",
+      "title": {
+        "en": "Beast | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "30% Multiplier but only to first 5 Exhaust Justice/Order Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Executioners | Agony Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 Generalist Def based DPS set, can be swapped among all members\nAgony technically is the best if enabled, but honestly just cherry pick relics with great substats"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Justice | Executioners | Agony Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20% Crit Chance to cards of cost 2>=\nDoesn't work for Flash or if you Cost Reduce Hew with Sadism"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nAmazing QOL, but not always gonna matter, if the Boss doesn't spawn mobs\nE2:\n2 Vuln on demand, never gonna be bad, but good supports make it irrelevant\nE3:\nJust a damage increase, not important\nE4:\nIf this was Multiplicative it would be beyond broken, but 150% Additive isn't that much\nE5:\nPotential Levels are actually pretty great on Nine because of her high base Multipliers\nE6:\nSizable damage increase"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good but its an attack card so can waste buffs"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Moral: 60% Multiplier for free is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_eps",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30047_eps",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Residual Herb: I mean Nine doesnt really have much to do with her FM Anyway"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing is really good here"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Dmg Amnt of Exhaust Cards of this unit by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Exhaust Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At Start of Battle Draw 1 Exhaust Card"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When a 3 cost or higher is Activated gain 1 AP (Once per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-12",
+      "title": {
+        "en": "Part 12"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Iron Wall: 1 CounterAttack each turn\nSadism: AOE Vuln and technically 0 AP if it cost reduces the right card\nEnergy Barrier: 1 Time AP and Perma CounterAttack"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fighting Spirit: Cheats out 3 or 2 Cost Hews, but can't get Draw Divine Unfortunately"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_col2",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hew 1: Shield Hew\nHew 2: 5 Hew's instead of 3\nHew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30047_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fatal 1: Helps Exhaust Hew once IG, not that great\nFatal 2: Terrible since 2 cost\nFatal 3: Changing to last form isn't really required, since it's Ignition synergy, but it has Unique + Retain\nFatal 4: Support Ability that can help Kayron exhaust Futilities\nFatal 5: 240% for 3 CounterAttacks, but it doesn't gain shield or anything, only damage not great"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni1",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30047_uni1",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Xp 1: Increases Damage Multipler of Hew, very good\nXp 2: 30% onto 210% is not very good\nXp 3: There's no real reason to ever increase Shield\nXp 4: Highest potential is 540% from this, but uh, conditional\nXp 5: Generates you Counter Attack from Spirit, pretty great"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30047_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Counter 1: Easiest Activation Requirement\nCounter 2: Increasing Shield gain isn't that nessicary\nCounter 3: Gain Honed from Shield, it's ok Counter 2 or Neutra Epiphany do about the same\nCounter 4: Honed Edge+ for team support\nCounter 5: You might run out of Hews unless you have Extreme"
+          }
+        }
+      ]
+    },
+    {
+      "id": "nine-recommded-teams",
+      "title": {
+        "en": "Nine Recommded Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30047,
+                1024,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                30084,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1024,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1033,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1033,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1024,
+                30097
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1050,
+                1024
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1050,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1050,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1010,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1010,
+                1060
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1040,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                30047,
+                1040,
+                1024
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1033,
+                1055,
+                1003,
+                1040,
+                1004,
+                1041,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Multi% Buffer"
+              },
+              "faces": [
+                1024,
+                30084,
+                1040,
+                1055
+              ]
+            },
+            {
+              "title": {
+                "en": "Vulnerable"
+              },
+              "faces": [
+                1024,
+                1010,
+                1050,
+                1017,
+                30097,
+                1008
+              ]
+            },
+            {
+              "title": {
+                "en": "Exhaust Fodder"
+              },
+              "faces": [
+                1024,
+                30084,
+                1040
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engine"
+              },
+              "faces": [
+                30097,
+                30084,
+                1060,
+                1033,
+                1055,
+                1003,
+                1039,
+                1040
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Extra Hit"
+              },
+              "faces": [
+                1050
+              ]
+            },
+            {
+              "title": {
+                "en": "CounterAttack"
+              },
+              "faces": [
+                1010,
+                1028,
+                1055
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

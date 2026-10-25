@@ -1,10 +1,10 @@
 import type {
   DescriptionSegment,
   GlossaryEntry,
-  Lang,
-  LocalizedText,
   Matcher,
 } from './encyclopedia.types'
+
+export { localized, resolveLang } from '@/lib/localized-text'
 
 function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
@@ -68,14 +68,4 @@ export function linkDescription(text: string, matcher: Matcher): DescriptionSegm
     segments.push({ kind: 'text', value: text.slice(last) })
   }
   return segments
-}
-
-/** Maps an i18next language code to one of the two supported content languages. */
-export function resolveLang(lng: string): Lang {
-  return lng === 'en' ? 'en' : 'pt-BR'
-}
-
-/** Picks the localized string for the given language. */
-export function localized(text: LocalizedText, lang: Lang): string {
-  return text[lang]
 }

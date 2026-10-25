@@ -1,0 +1,1180 @@
+{
+  "charResId": 1009,
+  "name": "Tressa",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=192429934#gid=192429934",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "tressa-and-agony-why",
+      "title": {
+        "en": "Tressa and Agony | Why?"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Agony is Tressa's main mechanic\nAgony is a debuff applied to enemies\nAt the end of the turn enemies take 50% Fixed Damage for each Agony Stack\nAfterwards Agony decreases in half\nMax Agony Stacks is 20\nFixed Damage is unaffected by any buffs or debuffs\nThis mechanic is gutted at 20 max stacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "WHY, WHY DID THEY HAVE TO MAKE AGONY CAP AT 20\nITS SO BAD, MY GIRL, WHAT HAVE THEY DONE TO YOU"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tressa got Murdered"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-1-hugo-tressa-fm-160",
+      "title": {
+        "en": "Cycle -1 | Hugo Tressa | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shes just Hugo Bait\n6x4+5 = 29 Agony"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7WhlzpuVE6eSvtiTVfr6SQShEW7sS8qiW7yex8GZu57mn6T_hlXUkRtVsMFAgU9-M4-DjM-HrSekJFhhfJHeR9dQapM5X"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hugo Tressa Example"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -4 | Vital Strike | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "A bit of Vuln"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7WhlzpuVE6eSvtiTVPr6SQTZEvnpcL3a3IO9ekYlGoIWPFNKHnF4khvNMG1DONTCk4OLLzhXKawfvH8CfB5i59cAy"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Moral? Tressa | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3 Moral -12 Fort = 15 Moral\n2 Costs for Cassius Quest but where are you gonna get AP"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7WhlzpuVE6eSvtiTVPr6SQTZE_npcLT2z3CRXO28MT22uCNFAVhDLbtJQGNDKcv7qDwrq0hZKbwAhFjV3JauaZxA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | Heal Reload Tressa"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Use all your upgrades, run through your Orlea/Nia/Mika Healing cards to generate daggers.\nStack up Agony using Cursed Gouge + Curse to make 3 seperate Agony per dagger.\nUse Vital 3 whenever, or Vital 4 or 5 near the end for a huge damage burst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "don-t-lol-agony-tressa-fm-160",
+      "title": {
+        "en": "Don't lol | Agony Tressa | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20+ Agony, which you can then Activate"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7WhlzpuVE6eSvtiTVPr6SQTZE_npcLT2z3CRXO28MT22uCNE9URDLbtJQGK3Ncv7qDwrq0hY3aAAhFjV3JauaZxA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Vuln Tressa | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "A bit of Vuln"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7WhlzpuVE6eSvtiTVPr6SQTZE_npcLT2z3CRXO28MT22uCNE9URDLbtJQGK3Ncv7qDwrq0hY3aAAhFjV3JauaZxA"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "eloise-bria-zatera",
+      "title": {
+        "en": "Eloise | Bria | Zatera"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eloise: Most synergy there is and relatively easy to dupe\nZatera: Easy to get dupes for Atk%\nBria: Good synergy with Tressa, just need dupes to beat Eloise"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Itsuku | Anteia"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bad | Bad"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Itsuku: Lost her synergy with Tressa besides for Ego Skill\nAnteia: Dmg buff is too low,Atk% is harder to get then Eloise"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioners-flex",
+      "title": {
+        "en": "BlackWing | Executioners | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Agony is so so weak now, only being able to stack to 20, it's actually so sad"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Offering | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "20% Multi isnt alot especially for Tressa low base ratio daggers"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nGOUGE IS SO GARBAGE NOW IT DOESNT MATTER\nE2:\nThis is still nice, but we don't have the Dagger gen we used to\nE3:\nPotential levels, not very important\nE4:\n4 more agony, butt\nE5:\nPotential levels, not very important\nE6:\nGives a dagger on Agonied enemy defeat, its good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization: 3.75 Moral for 1 turn\nSample: 1 AP draw 2\nForbidden: 1 AP Cantrip and random debuffs\nGilded Nest: 6 Agony (Why?) and Scorch (Yet to be seen how much Olga buffs)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "150% +(+30% x 20) 600% x 5 = 3000% dmg 4 times before exhausted\nDiscard 2 for +120% and 60% Multi for Attack Cards\nDraw 1 for 60% Multi\nDraw 2 if discarded"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Eternal: Tressa can always just hold it"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Feralization"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gilded"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Dmg Amnt of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c4-swamp-of-judgement",
+      "title": {
+        "en": "C4 Swamp of Judgement"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nWanderer: Tech that justbeats some bosses\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cursed Gouge: Activating 20 Agony:laughingemoji:\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1009_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "1/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sheathe 1: 2 Daggers for 0 very good\nSheathe 2: 3 Daggers for 1, not as good but still good\nSheathe 3: Upgrade = Free daggers, never bad\nSheathe 4: 2 Daggers but 8 Agony, not nessicary\nSheathe 5: Exhaust, no longer required"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1009_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Reload 1: Lots of damage, lots of agony, compared to regular daggers\nReload 2: 0 Cost 1 Dagger, is not bad at all\nReload 3: X Cost is hard to use, but theres potential\nReload 4: ST Version damage comapred to Reload 1\nReload 5: Discarding your hand is stinky"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1009_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Curse 1: Lots of Agony\nCurse 2: Not as easy to get Agony anymore, but its still possible\nCurse 3: Terrible\nCurse 4: Upgrade, for consistent Agony\nCurse 5: Upgrade is expensive and same as Curse 2 otherwise"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Vital 1: Still garbo\nVital 2: Low Ratio, but easy condition\nVital 3: WTF is this?\nVital 4: High Ratio, Always Consistent\nVital 5: Highest high, can beat Vital 4 eventually, need around 13-14 Agony"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tressa-team-examples",
+      "title": {
+        "en": "Tressa Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1009,
+                1043,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                1043,
+                30097
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                1043,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                1043,
+                1056
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                1043,
+                30075
+              ]
+            },
+            {
+              "faces": [
+                1009,
+                30048,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003,
+                1040,
+                30048
+              ]
+            },
+            {
+              "title": {
+                "en": "Sub DPS"
+              },
+              "faces": [
+                30048,
+                1043,
+                30113,
+                1005
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1062,
+                30097,
+                1064,
+                1056,
+                1055,
+                1052
+              ]
+            },
+            {
+              "title": {
+                "en": "Exhaust Lover"
+              },
+              "faces": [
+                30047,
+                1064
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1039,
+                1052,
+                1003,
+                1055,
+                30048,
+                1033,
+                30084
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

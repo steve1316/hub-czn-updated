@@ -1,0 +1,539 @@
+{
+  "charResId": 1018,
+  "name": "Rin",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1691621330#gid=1691621330",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "rin-dark-mist-and-retain-dark-mist",
+      "title": {
+        "en": "Rin Dark Mist, and Retain Dark Mist"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rin plays around her gimmick Dark Mist Stance\nDark Mist is gained from certain Rin Cards before Character Dupes\n1st Form, 3rd Form and Drawing Slash.\nRin Loses Dark Mist whenever a Different Ally Uses an Attack Card\nExtra Attacks do not make you loses Stance, but Activated Attack Cards yes\nWhen Rin is has Dark Mist Her Attack cards are Buffed\nRetain Dark Mist from Inner Art can skip 1 Ally Attack Card Use\nIdeally you just Never Lose Dark Mist instead"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Move vs Draw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Base Destruction version only \"Draws\" the Cards\nDrawing is different from Moving, and can only be taken from the Deck\nBut if your Cards are in your \"Discard\" \"Draw\" can force a \"Reshuffle\"\nOnce your Cards are in the Deck from Reshuffle, it Draws your Cards\n\"Move\" transfers the Card directly from zones into Hand\n\"Move\" can transfer from \"Deck\" \"Discard and \"Used\" Pile\n\"Move\" counts as Draw, Only if Moving the card from Deck, not Discard/Used"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Really nice buff to Black Dance\nInner 1 is now okay, but Inner 5 is too consistent\nOverall nothing changed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "standard-rin",
+      "title": {
+        "en": "Standard Rin"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "All about using Destruction to repeatedly use Black Dance\nAnnihilation isn't as important, and should only be used with excess AP and nothing better to do\n+AP Divine on Destructions is VERY STRONG"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Standard Edit"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1018_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "More effort cuz you need to cycle Inner Art as well, for minimal damage increase"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lillian-douglas",
+      "title": {
+        "en": "Lillian | Douglas"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lillian: Best generally\nDouglas: Easiest to get dupes\nComparison is everyone at Max Dupes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmacott | Scarlet | Priscilla"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westcamott: Great Draw\nScarlet: Best damage, but needs dupes to beat Lillian\nPriscilla: Ravage conditional not very good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conqueror-executioner",
+      "title": {
+        "en": "Conqueror | Executioner"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Annihilation and Black Mist both are 1 Cost, Very Strong\nVoid>Atk% VERY VERY SMALL Average dmg increase\nTechnically Atk% is stronger, but that's only till 1k Atk, then Void% wins out"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Blackwing | Executioner | Cursed Corpse"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Alternate build for when Blackdance or Annihilation get cost discounts"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inhibition | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Buffed but still not strong due to it being% based and not Crit or Atk"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potentials",
+      "title": {
+        "en": "Potentials"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nIncreases Black Dance Base Multiplier, Very Strong\nE2:\nAdds an additional source of damage, its okay\nE3:\nIncreases Ego Skill damage and Vuln by a bit, it's ok\nE4:\nAllows every card to make you enter Stance, not very important if played well\nE5:\nPotential Levels: It's ok\nE6:\nStart fights in Stance, if start of turn in stance, gain 2 Moral, Really good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life-stinky",
+      "title": {
+        "en": "C7 Burning Life Stinky"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: 1 AP Draw 4 with 2 exhaust is amazing\nKefox: Tutoring out a card and giving it retrieve is amazing\nDominion: Pretty slow to scale\nOverwhelm: Makes up for Rin's AOE Weakness in runs, it's really nice to have\nBeligerence: Pretty good on Rin, its a skill card for blackdance, or finds more destructions"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1018_srt2",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1018_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "First Form: Cheap way to get into form, but low Damage\nThird Form: 2 AP, Big Damage, but high cost way to get into form\nBlack Dance: Very strong Multi hit card, Rin's Main Damage Card"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1018_bhc1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw 1: Bad, Low Multiplier, No multi hit\nDraw 2: Good 2 hits\nDraw 3: Insanely high base multiplier, very strong, but can't bring you into Stance\nDraw 4: Conditionally beats Draw 2/3, requires upwards of 7+ cards in hand\nDraw 5: 2 Cost is insanely expensive and not worth at all"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1018_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Annihilation 1: Good Base Multiplier, and 2 hits Most strong and consistent\nAnnhiliation 2: Requires upwards of 225% Additive to beat Annihilation 1\nAnnihilation 3: Just worse then 1, less potential then 2, and scales from Crit Rate NG\nAnnihilation 4: 2nd most consistent, but loses to Annihilation 2 relatively easily\nAnnihilation 5: Low damage, but decreases all of Rin's cards in hand, useless really"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Destruction 1: 0 Cost Draw 2 is good\nDestruction 2: Draw 1 is not good\nDestruction 3: Draw 1 is not good\nDestruction 4: Move is BROKEN\nDestruction 5: Upgrade, but 2 cost so not very ideal"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1018_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inner 1: Huge Additive damage increase and retains stance\nInner 2: 0 Cost Additive Damage Increase, also okay\nInner 3: Insanely bad 2 AP Total is a terrible rate\nInner 4: Gaining Stance when you know hot to play/built Rin is not hard, but its an Upgrade\nInner 5: 50% Multiplicative is very consistent and strong"
+          }
+        }
+      ]
+    },
+    {
+      "id": "rin-team-examples",
+      "title": {
+        "en": "Rin Team Examples"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw/Discard | Buff/Debuff | Skill Cards | AP Gen"
+          }
+        }
+      ]
+    }
+  ]
+}

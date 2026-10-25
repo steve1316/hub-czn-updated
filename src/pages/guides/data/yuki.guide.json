@@ -1,0 +1,892 @@
+{
+  "charResId": 1057,
+  "name": "Yuki",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1249583402#gid=1249583402",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "part-1",
+      "title": {
+        "en": "Part 1"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Yuki's Inpsiration and Flash Slash Neutral Epiphanies"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Yuki's Gimmick is all about the \"Inspiration\" Keyword\nInspiration is Activated whenever the card is Drawn through an Ability\nCard effect, Ego Skill Card Effect, Equipment Effects are all considered Abilities\nTurn draw does not count for Inspiration\nFlash Slash Epiphanies\nBecause Flash Slash at a base is a 2 cost attack before Inpsiration\nIt is able to pick up extra strong Neutral epiphanies like +3 Moral or +2 Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "ONE DAY YUKI WILL BE GOOD SURELY\nInspiration on Neutrals WHEN\n(That Yuki can actually use)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "6-17-patch",
+      "title": {
+        "en": "6/17 Patch"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing changed, Moral Slash is still around 2x better then any alternative\nIf anything"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/8 Patch"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing changed, Moral Slash is still around 2x better then any alternative\nIf anything"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/4 Patch"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Freezing 3 got OMEGA BUFFED, so Yuki's ST damage increased alot\nTrickery 3 is also AMAZING for Yuki\nYuki's ST damage got increased ALOT\nIf the build is played well Yuki's ST damage is around 2x it used to be"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-7-moral-st",
+      "title": {
+        "en": "Cycle - 7 | Moral ST"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_srt1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Keeping Rapid Slash is optional, since its another Yuki Inspiration"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Yuki 9/9 OTK"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle - 7 | Vuln Yuki"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1057_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If you have a source of Vuln\nYou instead would dupe Flash1, if E1, then dupe Iceberg (If you can deal with 2x vuln use)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "westmaccot-scarlet-ritochika-lillian-priscilla",
+      "title": {
+        "en": "Westmaccot | Scarlet | Ritochika | Lillian | Priscilla"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30044,
+              "name": "Westmaccot",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20034,
+              "name": "Scarlet",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20033,
+              "name": "Lillian",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20019,
+              "name": "Priscilla",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmaccot: 5 Star stat stick, good ego, slight passive buff, good\nScarlet: 5 Star stat stick, ego is pretty useless, but the passive buff is good\nRitochika: Ego Skill is amazing, and Ritochika's passive also works, kinda\nLillian: Never can go wrong with old reliable, good ego skill and the buffs are good enough\nPriscilla: 4.5 Star stat stick, but less utility then Lillian so I wouldn't bother"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20025,
+              "name": "Rosaria",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20015,
+              "name": "Douglas",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Douglas: Babys first partner\nRosaria: Just due to the fact Freezing 3 is so broken now, Tutoring for it is pretty good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-flex",
+      "title": {
+        "en": "Blackwing | Executioner | Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Majority Damage is from Trickery and Freezing aka no cost at all (Also not considered Extra Attacks)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Conqueror | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flash Slash and Iceberg are both 1 cost, Free Crit Damage Value"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Order | Executioner"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "The Multiplier isn't that strong with Yuki's low base"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1\nAfter 6/16 this is actually pretty good, 50% Multi is quite big\nE2:\nIt's nice QOL for Chaos, but ideally you wouldn't need it\nE3:\nOnly Ego Skill Damage Increase meh\nE4:\nIts ok damage increase\nE5:\nPotential Levels, Meh\nE6:\nIts ok damage increase"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-2-notable-refinements",
+      "title": {
+        "en": "Season 2: Notable Refinements"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of a card of this unit, when drawn by Ability, Increase Damage Amount of that card by 50% for 1 turn (I have no clue how this one works exactly)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-3-engravings-and-personas",
+      "title": {
+        "en": "Season 3: Engravings and Personas"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Action Count Increase can come from Equipment, does not affect Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ig its a damage buff"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only real feasable and also good equipment engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Crit rate needs SO MUCH in generic buffs dilution to beat 30% Damage from only 7 cards in Grave"
+          }
+        }
+      ]
+    },
+    {
+      "id": "skill-personas",
+      "title": {
+        "en": "Skill Personas"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Honestly wouldn't really bother with the Draw 1, but 2 Moral is nice, 60% Multi is okay\n120% Additive isn't really nessicary since it only buffs ATTACK CARDS not Trickery/Freezing"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Personas"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1 Cost, 5 Hit Attack card, is a very good pay off for your Moral Stacking, dmg buff is a bonus"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c5-forbidden-ruins",
+      "title": {
+        "en": "C5 Forbidden Ruins"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_srt1",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1057_srt2",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Longsword: 0 Cost on inspiration, easily great\nRapid Slash: 2 AP is prohibitive, and should be remove usually\nIceberg Cleave: Very good if you're running Rei/Additive buffs to double dip additive buffs"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1057_srt4",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Preprare 1: Its okay, best one turn damage boost for the card\nPrepare 2: Whole turn, all card damage boost, very good\nPrepare 3: Draw 2, but decrease damage, not good\nPrepare 4: DRAW 2, INCREASES DAMAGE, AND FREEZING BLADE TRIGGER Broken\nPrepare 5: Terrible\n+1 AP Divine is somewhat often because its a 0 cost skill, can pick to fix AP lack"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1057_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Trick 1: Selects to unbrick, also has Retain\nTrick 2: Retain + Retrieve, so you can unbrick twice, its nice\nTrick 3: Absolutely insane what this does with Moral stack\nTrick 4: Its a cantrip that does damage, its never gonna feel bad\nTrick 5: Double Hit with an okay base Multiplier"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Flash 1: Best General epiphany otherwise\nFlash 2: 0 Cost, is nice, just low damage\nFlash 3: -1 Cost Divine makes it pretty okay, otherwise 2 AP is too high for its damage\nFlash 4: Gimicky 400%+750%\nFlash 5: Very gimmicky only 30%higher base then Flash 1, absolutely terrible"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1057_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Moral: 12 Moral over 4 Flash Slash, for every sigle Trickery and Freezing Blade trigger is crazy good\nVuln: If Yuki doesn't have a Vuln support independantly this is higher dmg then Flash 1"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1057_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Freezing 1: Just slight AOE damage increase not worht the 1 cost over Freezing 2 really\nFreezing 2: Intiation to stack your draw, and it being 0 is okay\nFreezing 3: +1 hit is 2x the damage increase with Moral Stacking, its actually Broken\nFreezing 4:Insanely tiny\nFreezing 5: Terrible"
+          }
+        }
+      ]
+    },
+    {
+      "id": "yuki-example-teams",
+      "title": {
+        "en": "Yuki Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1057,
+                1043,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1049,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1049,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1004,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1004,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                1003
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                1033
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                1055
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                30084
+              ]
+            },
+            {
+              "faces": [
+                1057,
+                1043,
+                1004
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "faces": [
+                1049,
+                1043,
+                1003,
+                1033,
+                1004,
+                1055,
+                1041,
+                1040
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1050,
+                1052,
+                1010,
+                1024
+              ]
+            },
+            {
+              "title": {
+                "en": "SubDPS"
+              },
+              "faces": [
+                1043,
+                1049,
+                1052,
+                1004
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Generator"
+              },
+              "faces": [
+                1052,
+                1039,
+                30084,
+                30075,
+                1003,
+                1033
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

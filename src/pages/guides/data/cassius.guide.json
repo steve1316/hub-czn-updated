@@ -1,0 +1,1473 @@
+{
+  "charResId": 1049,
+  "name": "Cassius",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=389103782#gid=389103782",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "cassius-quests-and-rewards",
+      "title": {
+        "en": "Cassius, Quests and Rewards"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre11",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre12",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cassius's gimmick is his Quests from Popper\nPopper has a pool of 4 Quests with different conditions required to finish\nQuest 0: Every 3 0 cost cards played, you get Triple 0\nQuest 1: Every 3 1 cost cards played, you get Triple 1\nStraight: Play a 0, 1 and 2 cost card to recieve Straight\nFull House: Play a card from every member of your team, recieve Full House\nMAX QUESTS YOU CAN COMPLETE PER TURN ARE 3"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_cre1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre11",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_cre12",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quest 0 is very easily spammable, so you can finish quests very easily for Moral\nQuest 1 required minimum of 3 AP per complete but its reward is okay now\nStraight: Hardest condition to finish, but 3 Moral can be very strong\nFull House: Relatively easy condition to finish and also good reward."
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cassius old style got removed\nBut every Quest 1 and straight got buffed heavy\nNot as nerfed as Tressa since Cassius can still be a Moral Engine"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/6"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-moral-trick-fm-160",
+      "title": {
+        "en": "Cycle +2 | Moral Trick | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15 = 15 Moral\n0 AP Requirement"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZ0pupL6eagtiXaPrmdQW5E_nlTLT6zmCQQMmBNP0EWy_DhNLciZU2UgXLvU9xL5gF5FjQmTAKeM8CMIJuD96YeoyBc5togWA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Dice Tricks | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "18 Moral"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZzpupL6eagtiXaPrmdQW5EvnlTLT6zI-BR0PVq44io627l4nJji9Szp3V-V9-Mp-_sManv2yUAN8eSIJoG0DUapMlY"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +3 | AP Dice | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3 AP to help complete Straight Quest for total\n9 Moral (+3 Sometimes from Dice Trick)"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZ0pupL6eagtiXaPrmdQW5E_nlTLy63myQQMmBPL0UVy_DhNLciZ12QgnLvU9xL5gF5FjQmTACZN8CMIJuD96YepyBc5to"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -2 | Multi Shuffle | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You can keep Joker if you wanted\nIf you don't get Moral Dice you could just remove it but its really good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Variant of Aco's S3P1 GR Heide support deck"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Dice Trick 5 instead of Devil Dice if you want to have even smaller Cycle\nDice Trick 0 is quite a bit of Moral, but also you have to cycle it\nQuest pick would be Straight, because its the most Moral and you play 2 costs of Heide free"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Aco's GR S3P1 Guide"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Historical | Quest Spam Cassius"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Set up Popper, Dice Tricks, and start going ham with all your quest cards from 0 or Full House\nJoker is always good to search for Popper, because setting it up early is important\nMore Dice Tricks is okay, but excessive and VERY HIGH AP Investment if no -cost Divines\nI personally prefer Shuffle 3 because it can continue my combo with Tressa Mika"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-2-moral-trick-weakness-alt-fm-160",
+      "title": {
+        "en": "Cycle +2 | Moral Trick Weakness Alt | FM 160"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "14 Moral -2 Fort =16 Moral\n0 AP Requirement"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZzpupL6eagtiXaPrmdQW5E_nlTLT6zmCQQMmBNP0EWy_DhNLciZU2UgXLvU9xL5gF5FnQmTAKeM0BbJmqe9i45Nx4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle 0 | Weakness Dice Trick | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "16 Moral -6 Fort = 22 Moral\n0 AP Requirement"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZzpupL6eagtiXaPrmdQW5E_nlTLT6zmCRUNGBNM0HtBfbC7XKkQpVdP1JxV1-I4CKt3zHI1CWAM8BfJmqe9i45Nx4"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle +2 | Weakness Devil Dice | FM 160"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "14 Moral -8 Fort = 22 Moral\n3 AP Requirement"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l7MhZzpupL6eagtiXaPrmdQW5E_nlTLT6zoCMQMmBNP0EuzPDhNLciZU2UuXXvU9xL5gF5FnQmTAKeM0BbJmqe9i45Nx4"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "nyx-ritochika-alyssa-arwen-yvonne",
+      "title": {
+        "en": "Nyx | Ritochika | Alyssa | Arwen | Yvonne"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 20006,
+              "name": "Nyx",
+              "rating": "5/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20035,
+              "name": "Ritochika",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20003,
+              "name": "Alyssa",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20001,
+              "name": "Arwen",
+              "rating": "3/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20026,
+              "name": "Yvonne",
+              "rating": "1/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nyx: Best in class, just for the Ego Skill, Everything else is Extra\nRitochika: 3 Moral Ego Skill\nAlyssa: Moral 1, Def% for heals\nArwen: HP but passive kinda doodoo"
+          }
+        },
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30052,
+              "name": "Noel",
+              "rating": "2/5",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "charResId": 20002,
+              "name": "Gaya",
+              "rating": "4/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Noel: Ig you could use her with Popper 2\nGaya: Very slight dmg buff, healing buff and Draw 1 3 EP Ego"
+          }
+        }
+      ]
+    },
+    {
+      "id": "glory-tetra",
+      "title": {
+        "en": "Glory | Tetra"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Damage Amount to all allies\n5% whenever an EXHAUST SKILL CARD is CREATED or USED (Max Stacks 3 Permanent)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Tetra | Healer | Scrab Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/2/2 Generalist Support set if you can't use one of the 4/2 sets"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Agony Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If you're running Tenacity Recharge Selena, this is often better, cuz Judgement no Uptime"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nLets Joker see into discard as well (Not Used pile)\nE2:\nHeal 40% Fixed each time Cassius draws a card\nE3:\nPotentials, meh\nE4:\n2 more Moral reduction, meh\nE5:\nPotentials, meh\nE6:\nMoral Reduction on Quest complete or -40% Additive each quest complete, meh"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops\nDream World: 4 Moral each, but getting 2 in a run from shop is hard rng"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nutrient: Exhausts any card and can Cost Reduce cards for Move\nSpore: Free Final Dmg Multi and Glory Set Activator"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3\nGuidance: Kinda nut healing with Reshuffle"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-11",
+      "title": {
+        "en": "Part 11"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gearbag: 0 AP Draw 2\nAttack: If you for some reason to need have continuous cards to draw compared to Gearbag\nDivine Attack!: Repeatable source of AP each turn if you need it\nReorganize: 1 AP for 3 Cards compared to 0/2 for Gearbag\nGlorious: +1 AP but rng if it works"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_eps",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Joker: 1 Cost Tutor\nFirst Aid: 2 Perma Moral but needs to be Heavened\nStrategic: If you need Ego Points for some reason\nWanderer: Tech that justbeats some bosses"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_1049_srt4",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Popper 1: Initiation means you can reset quickly\nPopper 2: Givin Quest Cards retain... I wouldn't say theres much reason to yet\nPopper 3: Stronger Qust rewards are not worth going\nPopper 4: Picking your quest is basically always the right decision\nPopper 5: Nowadays this is pretty okay, but your deck setup would be weird"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_1049_uni2",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shuffle 1: Can fill your deck with trash\nShuffle 2: You get to choose, but only exhaust 1\nShuffle 3: Honestly always nice\nShuffle 4: You need to discard a little, but setting up your next turn is always good\nShuffle 5: In the decks with high cost, its a 0 cost draw 3, very good"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1049_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Devil 1: 3/4 Quest cards now draw, if you get Straight you're very very happy, otherwise meh\nDevil 2: Retrieve 3 is pretty great\nDevil 3: Draw again\nDevil 4: Draw + Discard synergy, situationally great\nDevil 5: Good old consistent 0 cost cantrips are great with Divines\n+2 Moral Devil Dice is also really good Devil 2-4 with -1 Cost Divine are op"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "1/5"
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Trick 1: Big ST\nTrickl 2: AOE\nTrick 3: Scaling for highest ST Damage, but its always 0 cost so great\nTrick 4: Expensive Upgrade\nTrick 5: Good upgrade cuz you get draw 3/4 times and Moral 1/4 times, but 2 cost and hansize difficulties\n3 Moral Trick is REALLY GOOD (Its a Neutral epiphany not on this list)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cassius-example-teams",
+      "title": {
+        "en": "Cassius Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            },
+            {
+              "faces": [
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Red DPS"
+              },
+              "faces": [
+                30093,
+                1061,
+                1005
+              ]
+            },
+            {
+              "title": {
+                "en": "Purple DPS"
+              },
+              "faces": [
+                1041,
+                1060,
+                30048,
+                1018,
+                1009
+              ]
+            },
+            {
+              "title": {
+                "en": "Yellow DPS"
+              },
+              "faces": [
+                30075,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "Green DPS"
+              },
+              "faces": [
+                1043,
+                1004,
+                1017
+              ]
+            },
+            {
+              "title": {
+                "en": "Blue DPS"
+              },
+              "faces": [
+                1040
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

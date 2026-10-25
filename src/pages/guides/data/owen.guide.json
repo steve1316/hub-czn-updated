@@ -1,0 +1,464 @@
+{
+  "charResId": 1050,
+  "name": "Owen",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=285961241#gid=285961241",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "tf-would-i-say-for-owen",
+      "title": {
+        "en": "TF would I say for Owen"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Owen and Multi Attacks\nOwen has alot of cards such as Wind Charge or Wind Riding\nWhich adds hits to HIS OWN cards\nOwens Expensive high multiplier cards can use it semi effectively\nOwen also has Vulnerable\nA flat 1.5x Multiplier which is also good on high Multiplier cards\nHe's a pretty okay support to Characters with high Multipliers like Nine or Haru\nWith only a single hit mainly"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Honestly Rework this guy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "2-4-patch-notes",
+      "title": {
+        "en": "2/4 Patch notes"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Unchanged"
+          }
+        }
+      ]
+    },
+    {
+      "id": "extra-hit-vuln-owen",
+      "title": {
+        "en": "Extra Hit Vuln Owen"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Mainly for Nine\nYou can modify it how you want"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Good Kush Owen"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You can use other versions of Charge/Riding and more Herb Dupes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Herb x Metallize Amir"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Theoretical | Budget Mei Lin (Hugo Bait)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Works if Wind Riding is true Move, dunno if it is"
+          }
+        }
+      ]
+    },
+    {
+      "id": "ritochika-lillian-douglas-nyx",
+      "title": {
+        "en": "Ritochika | Lillian | Douglas | Nyx"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ritochika: 3 Moral Ego Skill\nLillian: Draw 1 Ego Skill\nDouglas: Atk% Stat Stick\nNyx: Great Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmaccot | Marianne | Priscilla | Scarlet"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not worth"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Not worth"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Westmacott: Draw Ego Skill\nMarianne: Stinky\nPriscilla: Pretty good if you can break\nScarlet: Consistentcy"
+          }
+        }
+      ]
+    },
+    {
+      "id": "blackwing-executioner-cursed-flex",
+      "title": {
+        "en": "Blackwing | Executioner | Cursed Flex"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Seth's Scrab is okay\nCursed Corpse is higher potential damage"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Glory | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "You would need spores, or alot of neutrals for this, but it alligns with his supportive nature"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Passion | Executioner"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nThis bad is butt\nE2:\nThis bad is butt\nE3:\nPotentials on high multipliers are ok\nE4:\nThis bad is butt\nE3:\nPotentials on high multipliers are ok\nE6:\nThis bad is butt"
+          }
+        }
+      ]
+    },
+    {
+      "id": "notable-refinements",
+      "title": {
+        "en": "Notable Refinements:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        }
+      ]
+    },
+    {
+      "id": "c7-burning-life",
+      "title": {
+        "en": "C7 Burning Life"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-9",
+      "title": {
+        "en": "Part 9"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Salamander: Amazing draw\nKefox: Amazing Tutor\nDominion: Very expensive memory wise and takes a long time to scale\nResidual Herb can be great, just boosting allies damage (Glory Set), or 6 Skills for Mei Lin"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "0/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Gale: 2 Cost"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Charge 1: No\nCharge 2: ONLY ONE THAT AFFECTS ALLIES TOO\nCharge 3: It's an Upgrade\nCharge 4: Exhaust is just good, especially if used on a strong Draw Exhaust card\nCharge 5 No"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Break 1: -4 Fort, only source\nBreak 2: 0 Cost = OP\nBreak 3: Little bit of damage\nBreak 4: Little bit of damage\nBreak 5: Ig you could discard and draw it, but why\n+2 Moral is a good neutral to get"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_1050_uni1",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "-1000/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "0/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Slash 1: 1 Cost\nSlash 2: 2 Cost\nSlash 3: 2 Cost\nSlash 4: IT ACTUALLY DECREASES YOUR AP BY 1 EACH TURN\nSlash 5: 2 Cost"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "0/5"
+            },
+            {
+              "cardId": "c_1050_uni3",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Riding 1: You can reuse your cards IG, its ok\nRiding 2: It's an Upgrade\nRiding 3: No\nRiding 4: No\nRiding 5: If you really wanted to proc Metallize for Amir"
+          }
+        }
+      ]
+    },
+    {
+      "id": "owen-example-teams",
+      "title": {
+        "en": "Owen Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Engines | Vuln Enjoyers | PassionEnjoyer | AP Engines"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -25,9 +25,9 @@ import sys
 from pathlib import Path
 from typing import NamedTuple
 
-# The client wraps text in its own markup, e.g. <color_ego_norms_light>Order</>. scripts/ko_pipeline/
-# detemplatize.py is the fuller version of this, but it also rewrites $term$ and {cal} markup that set
-# descriptions do not use, and importing it would cost this standalone script its stdlib-only imports.
+# The client wraps text in its own markup, e.g. <color_ego_norms_light>Order</>. scripts/datagen/templates.py
+# is the fuller version of this, but it also resolves placeholders and {cal} markup that set descriptions do not
+# use, and importing it would cost this standalone script its stdlib-only imports.
 MARKUP = re.compile(r"<[^>]+>")
 
 # The client's stat identifiers, mapped to the names the optimizer scores in calculate_build_stats.

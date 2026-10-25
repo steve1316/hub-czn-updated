@@ -1,5 +1,11 @@
 [
   {
+    "id": "3000499_01",
+    "name": "Aavarck",
+    "def": 47,
+    "has_weak": false
+  },
+  {
     "id": "1001020_01",
     "name": "Abyssal Bug",
     "def": 47,
@@ -10,6 +16,12 @@
     "name": "Achurus",
     "def": 47,
     "has_weak": false
+  },
+  {
+    "id": "3000504_01",
+    "name": "Anis",
+    "def": 47,
+    "has_weak": true
   },
   {
     "id": "1006019_01",
@@ -56,6 +68,12 @@
   {
     "id": "1003010_01",
     "name": "Automata Reaper",
+    "def": 47,
+    "has_weak": false
+  },
+  {
+    "id": "3000500_01",
+    "name": "Avaritia",
     "def": 47,
     "has_weak": false
   },
@@ -186,6 +204,12 @@
     "has_weak": false
   },
   {
+    "id": "3000511_01",
+    "name": "Chaos Core",
+    "def": 47,
+    "has_weak": false
+  },
+  {
     "id": "2104103_01",
     "name": "Chief Priest Critias",
     "def": 47,
@@ -228,12 +252,6 @@
     "has_weak": false
   },
   {
-    "id": "3000401_01",
-    "name": "Corruption Luminus",
-    "def": 47,
-    "has_weak": false
-  },
-  {
     "id": "2104114_01",
     "name": "Critias Tactical Officer",
     "def": 47,
@@ -247,7 +265,7 @@
   },
   {
     "id": "3000320_01",
-    "name": "Cruel Bone",
+    "name": "Cruelborn",
     "def": 47,
     "has_weak": false
   },
@@ -672,6 +690,12 @@
     "has_weak": false
   },
   {
+    "id": "3000514_01",
+    "name": "Ironrain Soldier",
+    "def": 47,
+    "has_weak": false
+  },
+  {
     "id": "3000305_01",
     "name": "Judge Dominion",
     "def": 47,
@@ -726,14 +750,8 @@
     "has_weak": false
   },
   {
-    "id": "3000402_01",
-    "name": "Luminous of Oblivion",
-    "def": 47,
-    "has_weak": false
-  },
-  {
-    "id": "3000398_01",
-    "name": "Luminous of Origin",
+    "id": "3000401_01",
+    "name": "Luminus of Corruption",
     "def": 47,
     "has_weak": false
   },
@@ -746,6 +764,18 @@
   {
     "id": "3000399_01",
     "name": "Luminus of Judgment",
+    "def": 47,
+    "has_weak": false
+  },
+  {
+    "id": "3000402_01",
+    "name": "Luminus of Oblivion",
+    "def": 47,
+    "has_weak": false
+  },
+  {
+    "id": "3000398_01",
+    "name": "Luminus of Origin",
     "def": 47,
     "has_weak": false
   },
@@ -834,6 +864,12 @@
     "has_weak": false
   },
   {
+    "id": "3000541_01",
+    "name": "Pharanes's Fragment",
+    "def": 47,
+    "has_weak": true
+  },
+  {
     "id": "1005009_01",
     "name": "Phoenix Seed",
     "def": 47,
@@ -860,6 +896,18 @@
   {
     "id": "1001017_01",
     "name": "Porde",
+    "def": 47,
+    "has_weak": false
+  },
+  {
+    "id": "3000438_01",
+    "name": "Punisher of Resentment",
+    "def": 47,
+    "has_weak": true
+  },
+  {
+    "id": "3000509_01",
+    "name": "Rabagagh",
     "def": 47,
     "has_weak": false
   },
@@ -1225,7 +1273,7 @@
   },
   {
     "id": "1005010_01",
-    "name": "Volcanic Shot",
+    "name": "Volcanic Bomb",
     "def": 47,
     "has_weak": false
   },
@@ -1284,6 +1332,12 @@
     "has_weak": false
   },
   {
+    "id": "3000439_01",
+    "name": "Woman Within the Fog",
+    "def": 47,
+    "has_weak": true
+  },
+  {
     "id": "1003002_01",
     "name": "Wrecker",
     "def": 47,
@@ -1294,6 +1348,12 @@
     "name": "Alice",
     "def": 49,
     "has_weak": true
+  },
+  {
+    "id": "3000500_02",
+    "name": "Avaritia",
+    "def": 49,
+    "has_weak": false
   },
   {
     "id": "2104110_02",
@@ -1336,12 +1396,6 @@
     "name": "Centurion",
     "def": 49,
     "has_weak": true
-  },
-  {
-    "id": "3000401_02",
-    "name": "Corruption Luminus",
-    "def": 49,
-    "has_weak": false
   },
   {
     "id": "3000384_02",
@@ -1428,6 +1482,12 @@
     "has_weak": true
   },
   {
+    "id": "3000514_02",
+    "name": "Ironrain Soldier",
+    "def": 49,
+    "has_weak": false
+  },
+  {
     "id": "3000305_02",
     "name": "Judge Dominion",
     "def": 49,
@@ -1458,6 +1518,12 @@
     "has_weak": false
   },
   {
+    "id": "3000401_02",
+    "name": "Luminus of Corruption",
+    "def": 49,
+    "has_weak": false
+  },
+  {
     "id": "1002013_02",
     "name": "Maggot",
     "def": 49,
@@ -1466,6 +1532,12 @@
   {
     "id": "1004012_02",
     "name": "Pale Messenger",
+    "def": 49,
+    "has_weak": false
+  },
+  {
+    "id": "3000509_02",
+    "name": "Rabagagh",
     "def": 49,
     "has_weak": false
   },
@@ -1551,6 +1623,12 @@
     "id": "3000321_02",
     "name": "Venom Spirit Kefox",
     "def": 49,
+    "has_weak": false
+  },
+  {
+    "id": "3000500_03",
+    "name": "Avaritia",
+    "def": 50,
     "has_weak": false
   },
   {
@@ -1842,6 +1920,24 @@
     "has_weak": false
   },
   {
+    "id": "3000499_10",
+    "name": "Aavarck",
+    "def": 68,
+    "has_weak": true
+  },
+  {
+    "id": "3000504_10",
+    "name": "Anis",
+    "def": 68,
+    "has_weak": true
+  },
+  {
+    "id": "3000500_10",
+    "name": "Avaritia",
+    "def": 68,
+    "has_weak": true
+  },
+  {
     "id": "3000340_10",
     "name": "Beginning of Desire",
     "def": 68,
@@ -1851,25 +1947,37 @@
     "id": "3000383_10",
     "name": "Colossus",
     "def": 68,
-    "has_weak": false
-  },
-  {
-    "id": "3000389_10",
-    "name": "Colossus",
-    "def": 68,
-    "has_weak": false
+    "has_weak": true
   },
   {
     "id": "3000390_10",
-    "name": "Colossus",
+    "name": "Colossus's Left Arm",
     "def": 68,
-    "has_weak": false
+    "has_weak": true
+  },
+  {
+    "id": "3000389_10",
+    "name": "Colossus's Right Arm",
+    "def": 68,
+    "has_weak": true
   },
   {
     "id": "2302107_10",
     "name": "Darkstar Assault Trooper",
     "def": 68,
     "has_weak": false
+  },
+  {
+    "id": "3000183_10",
+    "name": "Golden Mane",
+    "def": 68,
+    "has_weak": true
+  },
+  {
+    "id": "3000416_10",
+    "name": "Golden Mane",
+    "def": 68,
+    "has_weak": true
   },
   {
     "id": "3000291_10",
@@ -1888,6 +1996,18 @@
     "name": "Loyal Nanny",
     "def": 68,
     "has_weak": false
+  },
+  {
+    "id": "3000541_10",
+    "name": "Pharanes's Fragment",
+    "def": 68,
+    "has_weak": true
+  },
+  {
+    "id": "3000438_10",
+    "name": "Punisher of Resentment",
+    "def": 68,
+    "has_weak": true
   },
   {
     "id": "1007004_10",
@@ -1914,8 +2034,50 @@
     "has_weak": false
   },
   {
+    "id": "3000439_10",
+    "name": "Woman Within the Fog",
+    "def": 68,
+    "has_weak": true
+  },
+  {
+    "id": "3000499_11",
+    "name": "Aavarck",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000504_11",
+    "name": "Anis",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000500_11",
+    "name": "Avaritia",
+    "def": 73,
+    "has_weak": true
+  },
+  {
     "id": "3000340_11",
     "name": "Beginning of Desire",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000383_11",
+    "name": "Colossus",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000390_11",
+    "name": "Colossus's Left Arm",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000389_11",
+    "name": "Colossus's Right Arm",
     "def": 73,
     "has_weak": true
   },
@@ -1932,6 +2094,24 @@
     "has_weak": false
   },
   {
+    "id": "3000292_11",
+    "name": "Judas",
+    "def": 73,
+    "has_weak": false
+  },
+  {
+    "id": "3000541_11",
+    "name": "Pharanes's Fragment",
+    "def": 73,
+    "has_weak": true
+  },
+  {
+    "id": "3000438_11",
+    "name": "Punisher of Resentment",
+    "def": 73,
+    "has_weak": true
+  },
+  {
     "id": "1001025_11",
     "name": "Single-edged Reptatus",
     "def": 73,
@@ -1942,6 +2122,18 @@
     "name": "Suppressed Servant",
     "def": 73,
     "has_weak": false
+  },
+  {
+    "id": "1004019_11",
+    "name": "Wailing Prodigal",
+    "def": 73,
+    "has_weak": false
+  },
+  {
+    "id": "3000439_11",
+    "name": "Woman Within the Fog",
+    "def": 73,
+    "has_weak": true
   },
   {
     "id": "2302107_12",
@@ -2070,6 +2262,36 @@
     "has_weak": false
   },
   {
+    "id": "1004001_40",
+    "name": "Pale Guard Dog",
+    "def": 167,
+    "has_weak": false
+  },
+  {
+    "id": "1004017_40",
+    "name": "Sorrowful Godfather",
+    "def": 167,
+    "has_weak": false
+  },
+  {
+    "id": "1004009_40",
+    "name": "Sweet Dream",
+    "def": 167,
+    "has_weak": false
+  },
+  {
+    "id": "1004009_41",
+    "name": "Sweet Dream",
+    "def": 171,
+    "has_weak": false
+  },
+  {
+    "id": "1004009_42",
+    "name": "Sweet Dream",
+    "def": 174,
+    "has_weak": false
+  },
+  {
     "id": "3000281_50",
     "name": "APO1001",
     "def": 206,
@@ -2102,6 +2324,12 @@
   {
     "id": "1003003_50",
     "name": "Automata Halo",
+    "def": 206,
+    "has_weak": false
+  },
+  {
+    "id": "3000513_50",
+    "name": "Biologist Pio",
     "def": 206,
     "has_weak": false
   },
@@ -2220,6 +2448,12 @@
     "has_weak": false
   },
   {
+    "id": "3000514_50",
+    "name": "Ironrain Soldier",
+    "def": 206,
+    "has_weak": false
+  },
+  {
     "id": "2300002_50",
     "name": "Junior Heretic",
     "def": 206,
@@ -2268,6 +2502,12 @@
     "has_weak": true
   },
   {
+    "id": "3000509_50",
+    "name": "Rabagagh",
+    "def": 206,
+    "has_weak": false
+  },
+  {
     "id": "1001003_50",
     "name": "Rupture Bug",
     "def": 206,
@@ -2296,6 +2536,12 @@
     "name": "Snipper",
     "def": 206,
     "has_weak": false
+  },
+  {
+    "id": "2302007_50",
+    "name": "Spreader",
+    "def": 206,
+    "has_weak": true
   },
   {
     "id": "1002001_50",
@@ -2343,6 +2589,18 @@
     "id": "3000319_50",
     "name": "Wheel of Order",
     "def": 206,
+    "has_weak": false
+  },
+  {
+    "id": "1001010_51",
+    "name": "Armored Kurete",
+    "def": 207,
+    "has_weak": false
+  },
+  {
+    "id": "3000513_51",
+    "name": "Biologist Pio",
+    "def": 207,
     "has_weak": false
   },
   {
@@ -2394,9 +2652,21 @@
     "has_weak": false
   },
   {
+    "id": "2302007_51",
+    "name": "Spreader",
+    "def": 207,
+    "has_weak": true
+  },
+  {
     "id": "3000464_51",
     "name": "Street Peddler",
     "def": 207,
+    "has_weak": false
+  },
+  {
+    "id": "3000513_52",
+    "name": "Biologist Pio",
+    "def": 208,
     "has_weak": false
   },
   {
@@ -2424,6 +2694,30 @@
     "has_weak": false
   },
   {
+    "id": "3000513_53",
+    "name": "Biologist Pio",
+    "def": 209,
+    "has_weak": false
+  },
+  {
+    "id": "1001009_53",
+    "name": "Kurete",
+    "def": 209,
+    "has_weak": false
+  },
+  {
+    "id": "3000499_80",
+    "name": "Aavarck",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "3000504_80",
+    "name": "Anis",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "1001011_80",
     "name": "Arbitum",
     "def": 239,
@@ -2434,6 +2728,12 @@
     "name": "Automata Cavalry",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "3000500_80",
+    "name": "Avaritia",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "2104110_80",
@@ -2462,6 +2762,12 @@
   {
     "id": "2104109_80",
     "name": "Black Market Guard",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "3000441_80",
+    "name": "Broken Dream Shard",
     "def": 239,
     "has_weak": true
   },
@@ -2514,6 +2820,12 @@
     "has_weak": true
   },
   {
+    "id": "1006006_80",
+    "name": "Dark Grip",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "1006008_80",
     "name": "Dark Humanoid Beast",
     "def": 239,
@@ -2542,6 +2854,12 @@
     "name": "Dust Mite",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "2300004_80",
+    "name": "Elite Heretic",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "1004005_80",
@@ -2578,6 +2896,18 @@
     "name": "Fickle Taste",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "1001018_80",
+    "name": "Flying Shell Bug",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1002019_80",
+    "name": "Ghoul",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "1006017_80",
@@ -2640,6 +2970,12 @@
     "has_weak": false
   },
   {
+    "id": "2300002_80",
+    "name": "Junior Heretic",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "1004018_80",
     "name": "Loyal Nanny",
     "def": 239,
@@ -2656,6 +2992,12 @@
     "name": "Pale Guard Dog",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "3000503_80",
+    "name": "Pharanes",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "1006010_80",
@@ -2676,6 +3018,30 @@
     "has_weak": true
   },
   {
+    "id": "3000509_80",
+    "name": "Rabagagh",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "3000444_80",
+    "name": "Red Hood Devourer",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1001019_80",
+    "name": "Rock Shell Bug",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1002008_80",
+    "name": "Rotten Ripper",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "2104121_80",
     "name": "Sand Worm",
     "def": 239,
@@ -2688,16 +3054,58 @@
     "has_weak": false
   },
   {
+    "id": "2300003_80",
+    "name": "Senior Heretic",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1002014_80",
+    "name": "Seven Arms",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1001004_80",
+    "name": "Shell Bug",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "1003007_80",
     "name": "Slaughter",
     "def": 239,
     "has_weak": false
   },
   {
+    "id": "1002020_80",
+    "name": "Snap Ghoul",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "1001001_80",
     "name": "Soldier Blade",
     "def": 239,
     "has_weak": false
+  },
+  {
+    "id": "3000440_80",
+    "name": "Spirit Collector",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "1005008_80",
+    "name": "Spirit Kefox",
+    "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "2302007_80",
+    "name": "Spreader",
+    "def": 239,
+    "has_weak": true
   },
   {
     "id": "3000322_80",
@@ -2766,9 +3174,21 @@
     "has_weak": false
   },
   {
+    "id": "3000439_80",
+    "name": "Woman Within the Fog",
+    "def": 239,
+    "has_weak": true
+  },
+  {
     "id": "3000433_80",
     "name": "char_base@name@30085",
     "def": 239,
+    "has_weak": true
+  },
+  {
+    "id": "3000500_81",
+    "name": "Avaritia",
+    "def": 240,
     "has_weak": true
   },
   {
@@ -2776,6 +3196,12 @@
     "name": "Beginning of Desire",
     "def": 240,
     "has_weak": false
+  },
+  {
+    "id": "3000441_81",
+    "name": "Broken Dream Shard",
+    "def": 240,
+    "has_weak": true
   },
   {
     "id": "2100108_81",
@@ -2808,6 +3234,12 @@
     "has_weak": true
   },
   {
+    "id": "1006006_81",
+    "name": "Dark Grip",
+    "def": 240,
+    "has_weak": true
+  },
+  {
     "id": "1006008_81",
     "name": "Dark Humanoid Beast",
     "def": 240,
@@ -2830,6 +3262,12 @@
     "name": "Darkstar Shieldman",
     "def": 240,
     "has_weak": false
+  },
+  {
+    "id": "2300004_81",
+    "name": "Elite Heretic",
+    "def": 240,
+    "has_weak": true
   },
   {
     "id": "1004005_81",
@@ -2868,6 +3306,24 @@
     "has_weak": false
   },
   {
+    "id": "3000291_81",
+    "name": "Judas",
+    "def": 240,
+    "has_weak": false
+  },
+  {
+    "id": "3000292_81",
+    "name": "Judas",
+    "def": 240,
+    "has_weak": false
+  },
+  {
+    "id": "2300002_81",
+    "name": "Junior Heretic",
+    "def": 240,
+    "has_weak": true
+  },
+  {
     "id": "2100101_81",
     "name": "Luscus",
     "def": 240,
@@ -2886,10 +3342,28 @@
     "has_weak": false
   },
   {
+    "id": "3000509_81",
+    "name": "Rabagagh",
+    "def": 240,
+    "has_weak": true
+  },
+  {
+    "id": "3000444_81",
+    "name": "Red Hood Devourer",
+    "def": 240,
+    "has_weak": true
+  },
+  {
     "id": "2104123_81",
     "name": "Sand Worm Nest",
     "def": 240,
     "has_weak": false
+  },
+  {
+    "id": "2300003_81",
+    "name": "Senior Heretic",
+    "def": 240,
+    "has_weak": true
   },
   {
     "id": "1004017_81",
@@ -2952,6 +3426,12 @@
     "has_weak": false
   },
   {
+    "id": "2300002_82",
+    "name": "Junior Heretic",
+    "def": 241,
+    "has_weak": true
+  },
+  {
     "id": "2100101_82",
     "name": "Luscus",
     "def": 241,
@@ -2964,10 +3444,40 @@
     "has_weak": false
   },
   {
+    "id": "3000509_82",
+    "name": "Rabagagh",
+    "def": 241,
+    "has_weak": true
+  },
+  {
+    "id": "3000444_82",
+    "name": "Red Hood Devourer",
+    "def": 241,
+    "has_weak": true
+  },
+  {
+    "id": "2300003_82",
+    "name": "Senior Heretic",
+    "def": 241,
+    "has_weak": true
+  },
+  {
     "id": "1004017_82",
     "name": "Sorrowful Godfather",
     "def": 241,
     "has_weak": false
+  },
+  {
+    "id": "1006013_82",
+    "name": "Winged Humanoid Beast",
+    "def": 241,
+    "has_weak": true
+  },
+  {
+    "id": "3000500_83",
+    "name": "Avaritia",
+    "def": 242,
+    "has_weak": true
   },
   {
     "id": "3000318_83",
@@ -2994,10 +3504,28 @@
     "has_weak": false
   },
   {
+    "id": "2300002_83",
+    "name": "Junior Heretic",
+    "def": 242,
+    "has_weak": true
+  },
+  {
     "id": "2100101_83",
     "name": "Luscus",
     "def": 242,
     "has_weak": false
+  },
+  {
+    "id": "3000444_83",
+    "name": "Red Hood Devourer",
+    "def": 242,
+    "has_weak": true
+  },
+  {
+    "id": "2300003_83",
+    "name": "Senior Heretic",
+    "def": 242,
+    "has_weak": true
   },
   {
     "id": "1004017_83",
@@ -3006,15 +3534,63 @@
     "has_weak": false
   },
   {
+    "id": "3000318_84",
+    "name": "Dark Star Research Center",
+    "def": 243,
+    "has_weak": true
+  },
+  {
     "id": "2302107_84",
     "name": "Darkstar Assault Trooper",
     "def": 243,
     "has_weak": true
   },
   {
+    "id": "2302106_84",
+    "name": "Darkstar Shieldman",
+    "def": 243,
+    "has_weak": true
+  },
+  {
+    "id": "3000318_85",
+    "name": "Dark Star Research Center",
+    "def": 244,
+    "has_weak": false
+  },
+  {
     "id": "2302107_85",
     "name": "Darkstar Assault Trooper",
     "def": 244,
+    "has_weak": true
+  },
+  {
+    "id": "2302106_85",
+    "name": "Darkstar Shieldman",
+    "def": 244,
+    "has_weak": true
+  },
+  {
+    "id": "2302107_86",
+    "name": "Darkstar Assault Trooper",
+    "def": 245,
+    "has_weak": true
+  },
+  {
+    "id": "2302106_86",
+    "name": "Darkstar Shieldman",
+    "def": 245,
+    "has_weak": true
+  },
+  {
+    "id": "2302107_87",
+    "name": "Darkstar Assault Trooper",
+    "def": 246,
+    "has_weak": true
+  },
+  {
+    "id": "2302106_87",
+    "name": "Darkstar Shieldman",
+    "def": 246,
     "has_weak": true
   },
   {
@@ -3024,10 +3600,22 @@
     "has_weak": false
   },
   {
+    "id": "2302107_88",
+    "name": "Darkstar Assault Trooper",
+    "def": 247,
+    "has_weak": true
+  },
+  {
     "id": "1006022_88",
     "name": "Nimble Granny",
     "def": 247,
     "has_weak": false
+  },
+  {
+    "id": "2302107_89",
+    "name": "Darkstar Assault Trooper",
+    "def": 248,
+    "has_weak": true
   },
   {
     "id": "1001023_98",
@@ -3056,6 +3644,18 @@
   {
     "id": "3000189_99",
     "name": "세크레드",
+    "def": 258,
+    "has_weak": false
+  },
+  {
+    "id": "3000439_99",
+    "name": "안개 속의 여인",
+    "def": 258,
+    "has_weak": false
+  },
+  {
+    "id": "3000497_99",
+    "name": "안개 속의 여인 (스탠스)",
     "def": 258,
     "has_weak": false
   }

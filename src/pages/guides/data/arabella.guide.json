@@ -1,0 +1,990 @@
+{
+  "charResId": 30115,
+  "name": "Arabella",
+  "source": {
+    "url": "https://docs.google.com/spreadsheets/d/1-KkQUFrjD_2Un3zMDmypCwZFVF5VmowswqYdLt9MOw8/edit?gid=1923846601#gid=1923846601",
+    "label": {
+      "en": "Sproot's Nightmare (community sheet)"
+    }
+  },
+  "sections": [
+    {
+      "id": "arabella-fracture-fracture-amplication",
+      "title": {
+        "en": "Arabella, Fracture, Fracture Amplication"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Arabella's gimmick is the DoT Fracture\nFracture is 40% Dmg per stack, Max 30 = 1200% Max\nFracture whenever activated, gets cut in half and rounded down\nExample:\n30 -> 15 -> 7 -> 3 -> 1 -> 0\nFracture can be buffed by additive and multiplicative NONE CARD effects eg: Moral, Sever Ties, Observer's Pleasure\nFracture can also Crit\nFracture Amplification:\nFracture Amplification is very very important on Arabella\nIt changes Fracture Activate Math heavily\nWhen Fracture is Activated, after Activation Frac Amp will refund 1/2 Fracture\n1 generally, 2 if the enemy is solo\nExample Math: if enemy isnt alone\n4>2>3>1>2>1>2 etc\n4 Frac Activate, Total Frac = 11 = 440%\nIf Enemy is Alone\n4>2>4>2>4>2>4 etc\n4 Frac Activate, Total Frac = 16 = 640%\nWithout Fracture Activate\n4>2=2>1=1>0=0\n3 Frac Activate, Total Frac = 7 = 280%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Fracture Amplification Example extended"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Example Math:\nIf enemy isnt solo\n30>15>16>8>9>4>5>2>3>1>2>1>2>1>2>1>2>1>2 etc\nTotal Activates 10, Fracture Stacks Total = 73 x 40% = 2920%\nIf enemy is solo\n30>15>17>8>10>5>7>3>5>2>4>2>4>2>4>2>4>2>4 etc\nTotal Activates 10, Fracture Stacks Total = 89 x 40% = 3560%"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-2",
+      "title": {
+        "en": "Part 2"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Added 8/19"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Last Edit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "8/19"
+          }
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-sadistic-st-ap-3-160-fm",
+      "title": {
+        "en": "Cycle -3 | Sadistic (ST) | AP-3 | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Total Attack card hits = 1 +1 + 4x3 + 6 = 20\nTotal Frac Act = 2x5 = 10\nFrac Turn end 1\nTotal Hits 31"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0z4iRbEmYwmFFOUPlPStEmQlxn21-gKhIcEqLmh2ClfEi696AA1fXvKFljtFW-tXhurOZy-dK7h7cThWMEME4IUJj3DnYhAmwkgxGXtKPWSNlPnA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -5 | Hollow (AOE) | AP-4 | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Total Attack card hits = 1 + 1x4 + 4 = 9\nTotal Frac Act = 2x5 = 10\nFrac Turn end 1\nTotal Hits 20\n6 More AOE hits compared to Sadistic"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0z4iRbEmYwmFFOUPlPStEmQlxnG1SgKhIcEqLmh2ClfEi696AAnf9cl6fJ7BW-FdBsRJ0C3Gy8DInxsAzZMj1KUQSjd5dvt57Ur_ZA"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Max Fracture Activate | AP-3 | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Bursts Fracture for\n30, 16, 30, 16\n40 x 92 = 3680%\nVuln is better then Moral for this Build"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0z4iRbEmZCVx1AgKEpQfElI3IERx_QfsnkgdD08iqzInSFgwuNJ9RnrriclUhww1gROoBQxGJ0HyMl6ZLCFlU0kD4nQ_2mBEOxJjTYqifNIe0UAzCr"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "cycle-3-sadistic-greedy-st-ap-4-160-fm",
+      "title": {
+        "en": "Cycle -3 | Sadistic Greedy (ST) | AP-4 | 160 FM"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Total Attack card hits = 1 +1 + 4 + 6x3 = 24\nTotal Frac Act = 2x5 = 10\nFrac Turn end 1\nTotal Hits 35"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0zwiRbEmZCV51NgEElDOZhsSUXtSBTNRz_qZ5C5Gnotz-JQ7o3MaUSYfn0VAR-rZvHH3KIuLvh3WZLlW9Ma5pusZ0cMKMZBjI01eCCfKdIy2lF72nXt3I"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -1 | The Art | AP-4 | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni4",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Buff up 100% Multi\nUnmake them"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0z4iRbEmZCV51EgIEpQfElI9K1fkHX2wLcYK3eE4kIP_rTzjFCaHHlopGdpNy5aDiaXbwpPWL8nt__eMy08qAU74bMduJnFHRnxw"
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Cycle -3 | Ally Fracture Activate | AP-3 | 160 FM"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only activates team Fracture Twice, like huh?"
+          }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Deck Code",
+              "text": {
+                "en": "v6l88OLiNqfdzwd5bz8N7Hb2ReyrtB0z4iRbEmZCVx1AgIEpQfElI9K1fkHX2wLcYK3eE4kIP_rTzjFCCKBm7w75R3SbICodJZ6lnvl9FHjqKa5wvyaEWH41KonFHsxgdKJcXidVaI4JNLrJoXI"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "licinia-scarlet-priscilla-westmacott-lillian",
+      "title": {
+        "en": "Licinia | Scarlet | Priscilla | Westmacott | Lillian"
+      },
+      "blocks": [
+        {
+          "type": "partner-list",
+          "items": [
+            {
+              "charResId": 30116,
+              "name": "Licinia",
+              "rating": "6/5",
+              "note": {
+                "en": ""
+              }
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Licinia: 5 Star Stat Stick, 16% Final Dmg Buff, 10% Crt, Great Ego Skill, Also Limited\nScarlet: 5 Star Stat Stick, free damage passive\nPriscilla: 4.5 Star Stat Stick, Atk% and Dmg Amnt are good, Passive meh, Ego Meh\nWestmacott: 5 Star Stat Stick, Ego isn't that terrible\nLillian: Just the greatest 4 Star Partner for Strikers"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Marianne | Ritochika | Douglas"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Marianne: 5 Star Stat Stick\nRitochika: Worse 4 Star Stat Stick\nDouglas: 3 Star Stat Stick"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sanguine-executioners",
+      "title": {
+        "en": "Sanguine | Executioners"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "25% Crt Dmg to everything, 40% Crt Dmg to DoTs"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "BlackWing | Executioners | Flex"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "12% Attack isnt as good as Can be better then Sanguine, depending on Crt Ratio"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Judgement | Executioners"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "I mean this technically works, but why?"
+          }
+        }
+      ]
+    },
+    {
+      "id": "potential-priority",
+      "title": {
+        "en": "Potential Priority"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ego Manifestation"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "E1:\nBuffs Art Unmaking Build, Niche af\nE2:\nStarts you off with Frac Amp and 12 AOE Fracture a turn easily\nE3:\nI dunno, big damage, becomes bigger\nE4:\nOnly buffing Fracture is quite sad (Not yet seen if its Final Multi)\nE5:\nArabella has the lowest multipliers ever in existence, only for Art Build\nE6:\n10 more Fracture, and 50% Crt Dmg against the Target, its pretty good"
+          }
+        }
+      ]
+    },
+    {
+      "id": "season-4-shattered-light-and-claw",
+      "title": {
+        "en": "Season 4 | Shattered Light and Claw"
+      },
+      "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_eps",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever: Insanely good on Arabella due to the Amounts of Hits she deals and 2 Natural Debuffs\nSample: 1 AP Draw 2 is good\nGilded: The 6 Scorch for potential 6 more hits is actually not the worst thing ever"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        }
+      ]
+    },
+    {
+      "id": "desire-synergy",
+      "title": {
+        "en": "Desire Synergy:"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inqury 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        }
+      ]
+    },
+    {
+      "id": "part-10",
+      "title": {
+        "en": "Part 10"
+      },
+      "blocks": [
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rage: Potentially 0 AP 3 Moral\nOverwhelm: 3 hits for 0 AP"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_uni4",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Alternate Style Build around 720% Base Damage at E1 (Which isnt actually all that high)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Scream 1: 9 Fracture, it isnt alot more damage, but at least its something\nScream 2: Only for Art Builds\nScream 3: Technically can be 7 fracture AOE, but like how?\nScream 4: Draw 2 is always nice\nScream 5: 2 Scorch is 2 more hits, and also Agony ig\nScream 0: Moral 2/6 Fracture, but 2 moral is already great"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hollow 1: Ally Frac Act\nHollow 2: Double Frac Act\nHollow 3: Big base like Art build style\nHollow 4: Agony Act\nHollow 5: Its alot of Fracture"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": "Epiphany I"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": "Epiphany II"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": "Epiphany III"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": "Epiphany IV"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30115_uni1",
+              "note": {
+                "en": "Epiphany V"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Observer 1: +150%, requirement of 3 to be better then Observer 4\nObserver 2: +120% but 6 Debuffs is pretty dang hard, so Observer 4 is generally better\nObserver 3: Art build ig\nObserver 4: +80% and also Fracture transfers from dead dudes? this is great\nObserver 5: Opener Upgrade, but no Additive Damage, for Arabella's gazzilion hits"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_uni3",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sadistic 1: Ally Fract Act\nSadistic 2: 4 hits, 2 Frac Act and Draw 1? this is great\nSadistic 3: Art Build Style, but defeat condition is like HUH? WHAT\nSadistic 4: 4-6 hits, 8-12 Fracture, but like why\nSadistic 5: 2 Frac Act, and up to 6 hits (Requires 4 other Frac Act first)"
+          }
+        }
+      ]
+    },
+    {
+      "id": "arabella-example-teams",
+      "title": {
+        "en": "Arabella Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "faces": [
+                30115,
+                30113,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                30113,
+                30097
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                30113,
+                1052
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                30113,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                1055,
+                1049
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                1049,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                1055,
+                1039
+              ]
+            },
+            {
+              "faces": [
+                30115,
+                1050,
+                1049
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "faces": [
+                1049,
+                1056,
+                1050,
+                1055,
+                1039,
+                1057,
+                30097
+              ]
+            },
+            {
+              "title": {
+                "en": "Draw"
+              },
+              "faces": [
+                1055,
+                1033,
+                1043,
+                1049,
+                1003,
+                1004,
+                30113
+              ]
+            },
+            {
+              "title": {
+                "en": "AP"
+              },
+              "faces": [
+                1039,
+                1055,
+                1033,
+                1003,
+                1052,
+                30097
+              ]
+            },
+            {
+              "title": {
+                "en": "Multi Buffer"
+              },
+              "faces": [
+                1024,
+                30084,
+                1055
+              ]
+            },
+            {
+              "title": {
+                "en": "Vulnerable"
+              },
+              "faces": [
+                1024,
+                1010,
+                1050,
+                1017,
+                30097,
+                1008
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
