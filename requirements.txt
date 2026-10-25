@@ -12,3 +12,4 @@ jsonschema
 
 # Build tooling (not bundled into the sidecar)
 pyinstaller
+opencv-python-headless  # Guide picture matching in `python -m scripts.datagen guides`
