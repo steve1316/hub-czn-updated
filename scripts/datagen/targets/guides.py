@@ -20,13 +20,13 @@ import io
 import json
 import re
 from dataclasses import dataclass, field
-from functools import cached_property
+from functools import cached_property, lru_cache, partial
 from pathlib import Path
 
 from PIL import Image
 
-from scripts.datagen import epiphany, images, roster
-from scripts.datagen.epiphany import Variant
+from scripts.datagen import card_text, epiphany, images, roster
+from scripts.datagen.epiphany import Extra
 from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
@@ -71,6 +71,8 @@ REVIEW_PAGE = "unidentified.html"
 
 # Card match results by picture and candidate set, so a re-run skips the slow alignment search.
 MATCH_CACHE = "card_matches.json"
+# The OCR text of deck card pictures, so a re-run skips reading them again.
+CARD_TEXT_CACHE = "card_text.json"
 
 # The deck builder's card art, which the guide page shows. Matching against it finds cards of any character or the shared pool.
 _NEUTRAL_ART_DIR = neutral_cards.DATA_DIR / neutral_cards.IMAGE_DIR
@@ -98,6 +100,11 @@ class _Download:
     def hash(self) -> int:
         """The picture's difference hash, worked out only when something needs it."""
         return images.dhash(self.picture)
+
+    @cached_property
+    def sha1(self) -> str:
+        """The sha1 of the downloaded file, which tells identical files apart from near copies."""
+        return hashlib.sha1(self.data).hexdigest()
 
 
 class _Downloads:
@@ -188,6 +195,46 @@ class _PictureLabels:
         self.unidentified.setdefault(key, _Picture(kind, data)).refs.append(ref)
 
 
+class _DeckPictures:
+    """
+    Deck cards waiting for their epiphany, and the rated pictures that show each epiphany.
+
+    The sheet reuses one picture file for one epiphany, so a deck card with the same file as a rated picture of the same card
+    is that rated level. Only identical files count, as two levels of one card share their art and hash almost alike. Every
+    tab's rated rows are collected before any deck card is resolved.
+    """
+
+    def __init__(self):
+        # (card id, picture sha1) -> the level of that rated picture.
+        self.copies: dict[tuple[str, str], int] = {}
+        # (deck card, its picture, its cell) still to be resolved.
+        self.pending: list[tuple[dict, _Download, str]] = []
+
+    def add_copy(self, card_id: str, download: _Download, level: int) -> None:
+        """
+        Remember a rated picture of one epiphany.
+
+        Args:
+            card_id: The card it shows.
+            download: The picture.
+            level: The epiphany level, from its position in the rated run.
+        """
+        self.copies.setdefault((card_id, download.sha1), level)
+
+    def level_of(self, card_id: str, download: _Download) -> int | None:
+        """
+        The level a rated picture of the same card shows, when this picture is the same file.
+
+        Args:
+            card_id: The deck card.
+            download: Its picture.
+
+        Returns:
+            The rated level, or None when no rated picture of the card is this file.
+        """
+        return self.copies.get((card_id, download.sha1))
+
+
 def build(ctx: Context) -> TargetResult:
     """
     Import every character tab of the sheet.
@@ -212,9 +259,11 @@ def build(ctx: Context) -> TargetResult:
     sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
     sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
     card_names = _card_names(ctx)
+    variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))
+    decks = _DeckPictures()
     issues: list[Issue] = []
     files: dict[Path, bytes] = {}
-    guides: list[tuple[str, str]] = []
+    guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
 
     for tab_name, gid in tabs(fetcher.text(HTMLVIEW_URL)):
@@ -226,7 +275,7 @@ def build(ctx: Context) -> TargetResult:
         grid = parse_grid(fetcher.text(TAB_URL.format(gid=gid)))
         illustrations, card_ids = _card_candidates(ctx, own_cards.get(str(res_id), []))
         cards = _CachedCards(illustrations, card_ids, match_cache)
-        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, overrides, labels, tab_name)
+        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, variants_of, decks, overrides, labels, tab_name)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -236,9 +285,17 @@ def build(ctx: Context) -> TargetResult:
         if updated:
             guide["updated"] = updated
         guide["sections"] = sections
-        guide_slug = slug(name, _SLUG_MAX_LENGTH)
+        guides.append((slug(name, _SLUG_MAX_LENGTH), name, guide))
+
+    # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
+    text_cache_path = cache / CARD_TEXT_CACHE
+    text_cache: dict[str, str] = json.loads(text_cache_path.read_text(encoding="utf-8")) if text_cache_path.is_file() else {}
+    unknown_epiphanies = _PictureLabels({})
+    for card, download, ref in decks.pending:
+        if not _resolve_deck_card(card, download, ref, decks, overrides.entries, lambda data: card_text.read_card_text(data, text_cache), variants_of):
+            unknown_epiphanies.unidentify(download.hash, download.data, "card", ref)
+    for guide_slug, _, guide in guides:
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
-        guides.append((guide_slug, name))
 
     issues.extend(overrides.validate({}, keyed_by_output=False))
     if skipped:
@@ -249,11 +306,18 @@ def build(ctx: Context) -> TargetResult:
             f"{NAME}: {len(labels.unidentified)} distinct picture(s) used {uses} times were not identified and are left out. "
             f"Label them in the `_pictures` directive of {OVERRIDES_FILE}, using the review page {cache / REVIEW_PAGE}"
         )))
-    # Both are caches for the next run and for review, not outputs, so they are written here rather than compared.
+    if unknown_epiphanies.unidentified:
+        uses = sum(len(picture.refs) for picture in unknown_epiphanies.unidentified.values())
+        issues.append(Issue("warning", (
+            f"{NAME}: {uses} deck card(s) show an epiphany that could not be read and get no badge. Set it with a cell override such as "
+            f'{{"epiphany": 2, "divine": "div_0098"}} in {OVERRIDES_FILE}, using the review page {cache / REVIEW_PAGE}'
+        )))
+    # These are caches for the next run and for review, not outputs, so they are written here rather than compared.
     cache.mkdir(parents=True, exist_ok=True)
-    (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified))
+    (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies.unidentified))
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
-    files[CONTENT_PATH] = _content_module(sorted(guides, key=lambda guide: guide[1].casefold()))
+    text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
+    files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
     return TargetResult(files, f"{len(guides)} guides", issues)
 
 
@@ -443,7 +507,8 @@ class _GuideBuilder:
     """Turns one tab's cell grid into guide sections."""
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
-                 sift_cards: _CachedSift, card_names: dict[str, str], overrides: Overrides, labels: _PictureLabels, tab_name: str):
+                 sift_cards: _CachedSift, card_names: dict[str, str], variants_of, decks: _DeckPictures, overrides: Overrides,
+                 labels: _PictureLabels, tab_name: str):
         """
         Args:
             ctx: The run context.
@@ -453,6 +518,8 @@ class _GuideBuilder:
             cards: Identifies this character's card renders.
             sift_cards: Identifies the card renders `cards` misses, among every card in the deck builder.
             card_names: Card id -> display name, written next to each listed card.
+            variants_of: Card id -> its `epiphany.variants`, shared by every tab.
+            decks: Collects rated pictures and the deck cards to resolve once every tab is read.
             overrides: The guides overrides, whose entries can label one cell as "<tab>!<cell>".
             labels: Labels by picture, which also collect what nothing identified.
             tab_name: The sheet tab, used in cell override keys and references.
@@ -464,10 +531,11 @@ class _GuideBuilder:
         self.cards = cards
         self.sift_cards = sift_cards
         self.card_names = card_names
+        self.variants_of = variants_of
+        self.decks = decks
         self.overrides = overrides
         self.labels = labels
         self.tab_name = tab_name
-        self._variants: dict[str, list[Variant]] = {}
 
     def sections(self, grid: dict[tuple[int, int], Cell]) -> tuple[list[dict], str | None]:
         """
@@ -491,7 +559,7 @@ class _GuideBuilder:
                     # A later panel's heading would otherwise be lost, so it leads that panel's blocks instead.
                     panel_blocks.insert(0, self._prose(panel_title))
                 blocks.extend(panel_blocks)
-            blocks = _attach_notes(blocks)
+            blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks)]
             if not blocks:
                 continue
             sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
@@ -599,7 +667,7 @@ class _GuideBuilder:
                             continue
                         epiphany = epiphany + 1 if card_id == last_card else 1
                         last_card = card_id
-                        cards.append({"cardId": card_id, "col": cell.col, "epiphany": epiphany})
+                        cards.append({"cardId": card_id, "col": cell.col, "epiphany": epiphany, "picture": (download, ref)})
                     else:
                         # Set icons, banners and the like. Listed for review so they can be labelled or skipped.
                         self.labels.unidentify(download.hash, download.data, kind, ref)
@@ -656,22 +724,30 @@ class _GuideBuilder:
                 item["rating"] = ratings[card["col"]]
             if card_id in variants:
                 item["level"] = card["epiphany"]
+                self.decks.add_copy(card_id, card["picture"][0], card["epiphany"])
+            # Kept until the block is known to be a deck or not, then dropped by `_deck_or_list`.
+            item["_picture"] = card["picture"]
             items.append(item)
-        return {"type": "card-list", "items": _fold(items, self._variants_of)}
+        return {"type": "card-list", "items": _fold(items, self.variants_of)}
 
-    def _variants_of(self, card_id: str) -> list[Variant]:
+    def _deck_or_list(self, block: dict) -> dict:
         """
-        A card's epiphany variants, looked up once per tab.
+        A card-list as a deck when it is a plain list of cards, its cards queued to have their epiphany resolved.
 
         Args:
-            card_id: The client card id.
+            block: A card-list block whose items still hold their pictures.
 
         Returns:
-            The card's `epiphany.variants`, empty when it has none.
+            The deck block, or the card-list without the pictures.
         """
-        if card_id not in self._variants:
-            self._variants[card_id] = epiphany.variants(self.ctx, card_id)
-        return self._variants[card_id]
+        pictures = [item.pop("_picture", None) for item in block["items"]]
+        deck = _as_deck(block)
+        if deck is None:
+            return block
+        for card, picture in zip(deck["cards"], pictures):
+            if picture:
+                self.decks.pending.append((card, *picture))
+        return deck
 
     def _face_block(self, face_rows: list[list[tuple[int, int]]], ratings: dict[int, str], names: dict[int, str]) -> tuple[dict, bool]:
         """
@@ -828,6 +904,68 @@ def _attach_notes(blocks: list[dict]) -> list[dict]:
     return kept
 
 
+def _as_deck(block: dict) -> dict | None:
+    """
+    A card-list as a deck strip, when it is a plain list of cards.
+
+    Args:
+        block: A card-list block.
+
+    Returns:
+        A deck block with every copy, or None when any card has a rating, a note or epiphanies.
+    """
+    if any(item.get("rating") or item["note"]["en"] or "epiphanies" in item for item in block["items"]):
+        return None
+    return {"type": "deck", "cards": [{key: item[key] for key in ("cardId", "name", "cost") if key in item} for item in block["items"]]}
+
+
+def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> bool:
+    """
+    Set the epiphany a deck card shows, its added divine or common line, and the cost that gives it.
+
+    Args:
+        card: The deck card, updated in place.
+        download: Its picture.
+        ref: Its cell, such as "Rossweisse!C10".
+        decks: The rated pictures, for an exact copy.
+        overrides: Guides override entries by cell. One can give `epiphany` (0 for the base card) and `divine` or `common`.
+        read: Picture bytes -> its OCR text.
+        variants_of: Card id -> its `epiphany.variants`.
+
+    Returns:
+        True when the epiphany is known, or the card has none to find. False when nothing read it clearly.
+    """
+    variants = {variant.level: variant for variant in variants_of(card["cardId"])}
+    if not variants:
+        return True
+    entry = overrides.get(ref, {})
+    extra = None
+    if "epiphany" in entry:
+        level = entry["epiphany"]
+        extra = _extra(entry.get("divine") or entry.get("common"))
+    elif (level := decks.level_of(card["cardId"], download)) is None:
+        # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
+        god = card_text.match_god(download.picture)
+        extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
+        match = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
+        if match is None:
+            return False
+        level, extra = match.level, match.extra
+    variant = variants.get(level)
+    if variant is None:
+        return False
+    card["cost"] = epiphany.card_cost(variant.cost, extra)
+    card["epiphany"] = {"level": level, "name": variant.name, "text": {"en": variant.text}}
+    if extra:
+        card["extra"] = {"id": extra.id, **({"god": extra.god} if extra.god else {}), "text": {"en": extra.text}}
+    return True
+
+
+def _extra(extra_id: str | None) -> Extra | None:
+    """The divine or common epiphany line with this id, or None when there is none."""
+    return next((line for line in [*epiphany.divine_epiphanies(), *epiphany.common_epiphanies()] if line.id == extra_id), None)
+
+
 def _note_target(items: list[dict], label: str) -> dict | None:
     """
     The item, or epiphany of one, that a note label names.
@@ -927,16 +1065,28 @@ def _unique(candidate: str, used: set[str]) -> str:
     return result
 
 
-def _review_page(pictures: dict[int, _Picture]) -> bytes:
+def _review_page(pictures: dict[int, _Picture], unknown_epiphanies: dict[int, _Picture] | None = None) -> bytes:
     """
     A local page listing every picture that still needs a label, most used first.
 
     Args:
         pictures: Picture hash -> the picture and where it is used.
+        unknown_epiphanies: Deck card pictures whose epiphany could not be read, listed under their own heading.
 
     Returns:
         The HTML page. Each entry shows the picture, the hash to use as its `_pictures` key, and where it appears.
     """
+    style = "body{font-family:sans-serif;background:#111;color:#ddd}figure{display:inline-block;width:260px;margin:8px;vertical-align:top}"
+    style += "img{max-width:250px;max-height:200px}code{font-size:10px;word-break:break-all;color:#c084fc}"
+    title = f"{len(pictures)} unidentified guide pictures"
+    page = f"<!doctype html><meta charset=utf-8><title>{title}</title><style>{style}</style><h1>{title}</h1>{_review_entries(pictures)}"
+    if unknown_epiphanies:
+        page += f"<h1>Deck cards with an unknown epiphany</h1>{_review_entries(unknown_epiphanies)}"
+    return f"{page}\n".encode("utf-8")
+
+
+def _review_entries(pictures: dict[int, _Picture]) -> str:
+    """The review page entries for some pictures, most used first."""
     entries = []
     for key, picture in sorted(pictures.items(), key=lambda item: (-len(item[1].refs), item[0])):
         mime = Image.MIME.get(Image.open(io.BytesIO(picture.data)).format or "", "image/png")
@@ -946,10 +1096,7 @@ def _review_page(pictures: dict[int, _Picture]) -> bytes:
             f'<figure><img src="{source}" alt=""><figcaption><code>"{key:064x}"</code><br>{picture.kind}, used {len(picture.refs)} time(s): '
             f"{html.escape(refs)}</figcaption></figure>"
         )
-    style = "body{font-family:sans-serif;background:#111;color:#ddd}figure{display:inline-block;width:260px;margin:8px;vertical-align:top}"
-    style += "img{max-width:250px;max-height:200px}code{font-size:10px;word-break:break-all;color:#c084fc}"
-    title = f"{len(pictures)} unidentified guide pictures"
-    return f"<!doctype html><meta charset=utf-8><title>{title}</title><style>{style}</style><h1>{title}</h1>{''.join(entries)}\n".encode("utf-8")
+    return "".join(entries)
 
 
 def _content_module(guides: list[tuple[str, str]]) -> bytes:

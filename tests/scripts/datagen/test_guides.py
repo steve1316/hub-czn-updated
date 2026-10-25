@@ -11,8 +11,10 @@ import random
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
-from scripts.datagen import images, naming, set_names
+from api.client_db import client_output_dir, have_client_db, have_client_text
+from scripts.datagen import card_text, epiphany, images, naming, set_names
 from scripts.datagen.epiphany import Variant
+from scripts.datagen.runner import Context
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
 from scripts.datagen.targets import guides
 
@@ -37,6 +39,19 @@ FLICKER = [Variant(level, f"c_30134_srt4_rsp{level}" if level else "c_30134_srt4
 
 def _variants_of(card_id: str) -> list[Variant]:
     return {"c_30134_uni2": FLOW, "c_30134_srt4": FLICKER}.get(card_id, [])
+
+
+# The Rossweisse "Cycle -2 | Unbound Nuke | 180 FM" deck: its cell, card, and the start of its picture's cache file name.
+RW_DECK = [("B10", "c_30134_srt4", "c13817e1ee68"), *[(f"{col}10", "c_30134_uni1", "ee78230fbe93") for col in "CDEF"],
+           ("B11", "c_30134_uni2", "3d35f72c9e80"), ("C11", "c_30134_uni3", "19095618d73b")]
+
+
+def _rossweisse_deck() -> list[bytes] | None:
+    if not (have_client_db() and have_client_text()):
+        return None
+    cache = client_output_dir() / ".cache" / "guides"
+    found = [next(cache.glob(f"{prefix}*"), None) for _, _, prefix in RW_DECK]
+    return [path.read_bytes() for path in found] if all(found) else None
 
 
 def _cell(row: int, col: int, text: str = "", pictures: int = 0) -> Cell:
@@ -218,6 +233,72 @@ def test_unmatched_note_lines_stay_in_prose():
     cards = {"type": "card-list", "items": [_rated("c_30134_cre1", "Sword Tassel", "5/5")]}
     blocks = guides._attach_notes([cards, _prose("Equilux: Start of turn\nTassel: base\nPlain line")])
     assert blocks[1] == _prose("Equilux: Start of turn\nPlain line")
+
+
+def _download(seed: int) -> guides._Download:
+    return guides._Download(_png(_textured(seed)))
+
+
+def _never(data: bytes) -> str:
+    raise AssertionError("a card known some other way should not be read")
+
+
+def test_deck_card_takes_an_exact_copy_first():
+    picture = _download(1)
+    library = guides._DeckPictures()
+    library.add_copy("c_30134_uni2", picture, 3)
+    card = {"cardId": "c_30134_uni2", "name": "Radiant Sword Flow", "cost": 1}
+    assert guides._resolve_deck_card(card, picture, "Tab!B10", library, {}, _never, _variants_of)
+    assert card["epiphany"] == {"level": 3, "name": "Radiant Sword Flow III", "text": {"en": ""}}
+    assert "extra" not in card
+
+
+def test_deck_card_override_wins():
+    picture = _download(2)
+    library = guides._DeckPictures()
+    library.add_copy("c_30134_uni2", picture, 3)
+    card = {"cardId": "c_30134_uni2", "cost": 1}
+    overrides = {"Tab!C10": {"epiphany": 2, "divine": "div_0098", "_why": "test"}}
+    assert guides._resolve_deck_card(card, picture, "Tab!C10", library, overrides, _never, _variants_of)
+    assert card["epiphany"]["level"] == 2
+    assert card["extra"] == {"id": "div_0098", "god": "Nihilum", "text": {"en": "Reduce Cost of this card by 1."}}
+    assert card["cost"] == 0
+
+
+def test_unresolved_deck_card_is_listed_for_review():
+    picture = _download(3)
+    card = {"cardId": "c_30134_uni2", "cost": 1}
+    assert not guides._resolve_deck_card(card, picture, "Tab!D10", guides._DeckPictures(), {}, lambda data: "zzzz", _variants_of)
+    assert "epiphany" not in card
+    unknown = guides._PictureLabels({})
+    unknown.unidentify(picture.hash, picture.data, "card", "Tab!D10")
+    page = guides._review_page({}, unknown.unidentified).decode("utf-8")
+    assert "Deck cards with an unknown epiphany" in page and "Tab!D10" in page
+
+
+def test_unrated_card_row_becomes_a_deck_with_every_copy():
+    resonance = {"cardId": "c_30134_uni1", "name": "Sword Resonance", "cost": 1, "note": {"en": ""}}
+    deck = guides._as_deck({"type": "card-list", "items": [dict(resonance) for _ in range(4)]})
+    assert deck == {"type": "deck", "cards": [{"cardId": "c_30134_uni1", "name": "Sword Resonance", "cost": 1}] * 4}
+    assert guides._as_deck({"type": "card-list", "items": [{**resonance, "rating": "4/5"}]}) is None
+
+
+def test_rossweisse_deck_epiphanies():
+    pytest.importorskip("rapidocr_onnxruntime")
+    pictures = _rossweisse_deck()
+    if pictures is None:
+        pytest.skip("the Rossweisse deck pictures or the game client DB are not available")
+    ctx = Context(client_output_dir())
+    text_cache: dict[str, str] = {}
+    cards = []
+    for (cell, card_id, _), data in zip(RW_DECK, pictures):
+        card = {"cardId": card_id, "cost": epiphany.printed_cost(ctx, card_id)}
+        read = lambda data: card_text.read_card_text(data, text_cache)
+        assert guides._resolve_deck_card(card, guides._Download(data), f"Rossweisse!{cell}", guides._DeckPictures(), {}, read,
+                                         lambda card_id: epiphany.variants(ctx, card_id))
+        cards.append(card)
+    assert [card["epiphany"]["level"] for card in cards] == [5, 2, 2, 2, 2, 5, 0]
+    assert all(card["extra"]["id"] == "div_0098" and card["cost"] == 0 for card in cards[1:5])
 
 
 def test_find_set_reads_sheet_shorthand():
