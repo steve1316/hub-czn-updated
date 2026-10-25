@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "important-chizuru-glossary-mechanics",
+      "id": "playstyle",
       "title": {
-        "en": "Important Chizuru Glossary/Mechanics"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Important Chizuru Glossary/Mechanics"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -77,15 +83,13 @@
           "body": {
             "en": "Bound at Dusk gives Inhibit\nInhibit disables all AP sources besides for Start of Turn, or Ravage\nInhibit is technically a buff, so immunity doesn't work\nNo Fates, No Upgrades, No Divines, No Mika wave/source, nothing\nFor Chizuru specifically, if built well, ITS NOT A BIG ISSUE\nInhibit limits AP, but adds AP through its cost reduction mechanics\nBesides for the cost reductions/ap limitation\nInhibits only benefit is +1 Hit to Moon, or Moon+\nThis is not the biggest benefit in general, but the damage does stack up"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -95,11 +99,17 @@
       ]
     },
     {
-      "id": "cycle-5-tsuki-oni-mixed",
+      "id": "decks",
       "title": {
-        "en": "Cycle -5 | Tsuki Oni Mixed"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -5 | Tsuki Oni Mixed"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -468,15 +478,13 @@
           "body": {
             "en": "Requires E2"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-0-sub-dps-discounter",
-      "title": {
-        "en": "Cycle 0 | Sub DPS, Discounter"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle 0 | Sub DPS, Discounter"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -527,9 +535,9 @@
       ]
     },
     {
-      "id": "aria-itsuku-eloise-anteia-zatera",
+      "id": "partners",
       "title": {
-        "en": "Aria | Itsuku | Eloise | Anteia | Zatera"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -586,9 +594,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-corpse",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Corpse"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -619,6 +627,12 @@
               "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD > Atk Flat> Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -716,105 +730,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nBit of damage, bit of healing, Whatever\nE2: Refunds Moon+ with Moon so 5 wisp, not bad\nE3:\nBuffs Ego Skill Uselss\nE4:\n30% Additive is pretty nice\nE5:\nPotential levels, not very important\nE6:\n+1 hit to Moon, not very exciting"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "chizuru.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Bit of damage, bit of healing, Whatever"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Refunds Moon+ with Moon so 5 wisp, not bad"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Buffs Ego Skill Uselss"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "30% Additive is pretty nice"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels, not very important"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "+1 hit to Moon, not very exciting"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1112,9 +1100,9 @@
       ]
     },
     {
-      "id": "chizuru-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Chizuru Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1278,6 +1266,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

@@ -10,11 +10,17 @@
   "updated": "8/10",
   "sections": [
     {
-      "id": "nine-hew-levels-incinerate-and-ignition",
+      "id": "playstyle",
       "title": {
-        "en": "Nine Hew levels, Incinerate and Ignition"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Nine Hew levels, Incinerate and Ignition"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -70,11 +76,17 @@
       ]
     },
     {
-      "id": "cycle-1-flash-dps-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle -1 | Flash DPS | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Flash DPS | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -251,15 +263,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-ironclad-thin-fm-60",
-      "title": {
-        "en": "Cycle -3 | IronClad Thin | FM 60"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | IronClad Thin | FM 60"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -373,15 +383,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-4-ironclad-fm-160",
-      "title": {
-        "en": "Cycle -4 | Ironclad | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -4 | Ironclad | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -647,9 +655,9 @@
       ]
     },
     {
-      "id": "alcea-erica-eishlen-wilhelma",
+      "id": "partners",
       "title": {
-        "en": "Alcea | Erica | Eishlen | Wilhelma"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -698,9 +706,9 @@
       ]
     },
     {
-      "id": "beast-executioners",
+      "id": "relics",
       "title": {
-        "en": "Beast | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -723,6 +731,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD>Def>Def%\nMain Stat Recommendation:\n4: Crit Rate\n5: Order\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -793,328 +807,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nAmazing QOL, but not always gonna matter, if the Boss doesn't spawn mobs\nE2:\n2 Vuln on demand, never gonna be bad, but good supports make it irrelevant\nE3:\nJust a damage increase, not important\nE4:\nIf this was Multiplicative it would be beyond broken, but 150% Additive isn't that much\nE5:\nPotential Levels are actually pretty great on Nine because of her high base Multipliers\nE6:\nSizable damage increase"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good but its an attack card so can waste buffs"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Draw Moral: 60% Multiplier for free is good"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "nine.webp",
+          "legend": [
             {
-              "cardId": "c_30047_eps",
-              "name": "Reflection: Zero",
-              "cost": 6,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
             },
             {
-              "cardId": "c_30047_eps",
-              "name": "Reflection: Zero",
-              "cost": 6,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Amazing QOL, but not always gonna matter, if the Boss doesn't spawn mobs"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "2 Vuln on demand, never gonna be bad, but good supports make it irrelevant"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Just a damage increase, not important"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "If this was Multiplicative it would be beyond broken, but 150% Additive isn't that much"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels are actually pretty great on Nine because of her high base Multipliers"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Sizable damage increase"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Residual Herb: I mean Nine doesnt really have much to do with her FM Anyway"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Nothing is really good here"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: Increase Dmg Amnt of Exhaust Cards of this unit by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Attacked apply Vuln/Weaken"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of Exhaust Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At Start of Battle Draw 1 Exhaust Card"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When a 3 cost or higher is Activated gain 1 AP (Once per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1363,9 +1128,9 @@
       ]
     },
     {
-      "id": "nine-recommded-teams",
+      "id": "teams",
       "title": {
-        "en": "Nine Recommded Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1767,6 +1532,307 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good but its an attack card so can waste buffs"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw Moral: 60% Multiplier for free is good"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30047_eps",
+              "name": "Reflection: Zero",
+              "cost": 6,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30047_eps",
+              "name": "Reflection: Zero",
+              "cost": 6,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Residual Herb: I mean Nine doesnt really have much to do with her FM Anyway"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Nothing is really good here"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: Increase Dmg Amnt of Exhaust Cards of this unit by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Exhaust Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At Start of Battle Draw 1 Exhaust Card"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When a 3 cost or higher is Activated gain 1 AP (Once per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

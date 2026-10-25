@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "tf-would-i-say-for-owen",
+      "id": "playstyle",
       "title": {
-        "en": "TF would I say for Owen"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "TF would I say for Owen"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -25,15 +31,13 @@
           "body": {
             "en": "Honestly Rework this guy"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -43,11 +47,17 @@
       ]
     },
     {
-      "id": "extra-hit-vuln-owen",
+      "id": "decks",
       "title": {
-        "en": "Extra Hit Vuln Owen"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Extra Hit Vuln Owen"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -218,9 +228,9 @@
       ]
     },
     {
-      "id": "ritochika-lillian-douglas-nyx",
+      "id": "partners",
       "title": {
-        "en": "Ritochika | Lillian | Douglas | Nyx"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -342,9 +352,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-flex",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -370,6 +380,12 @@
               "label": "Cursed Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -419,91 +435,89 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "potential-priority",
-      "title": {
-        "en": "Potential Priority:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
         },
         {
           "type": "prose",
           "body": {
-            "en": "E1:\nThis bad is butt\nE2:\nThis bad is butt\nE3:\nPotentials on high multipliers are ok\nE4:\nThis bad is butt\nE3:\nPotentials on high multipliers are ok\nE6:\nThis bad is butt"
+            "en": "The set got changed to give permanent 20% Damage\nIt's still bad, shoulda just gave 20% Atk% lol"
           }
         }
       ]
     },
     {
-      "id": "notable-refinements",
+      "id": "potentials",
       "title": {
-        "en": "Notable Refinements:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "owen.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potentials on high multipliers are ok"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potentials on high multipliers are ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "This bad is butt"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -798,9 +812,9 @@
       ]
     },
     {
-      "id": "owen-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Owen Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -976,6 +990,68 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

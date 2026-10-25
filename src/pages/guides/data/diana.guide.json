@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "diana-heart-breakers-and-quietus",
+      "id": "playstyle",
       "title": {
-        "en": "Diana Heart Breakers and Quietus"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Diana Heart Breakers and Quietus"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -84,11 +90,17 @@
       ]
     },
     {
-      "id": "heart-bullet-use",
+      "id": "decks",
       "title": {
-        "en": "Heart Bullet Use"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Heart Bullet Use"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -454,15 +466,13 @@
           "body": {
             "en": "Inspiration"
           }
-        }
-      ]
-    },
-    {
-      "id": "heart-shaker-resonance",
-      "title": {
-        "en": "Heart Shaker Resonance"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Heart Shaker Resonance"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -750,9 +760,9 @@
       ]
     },
     {
-      "id": "sophia-akad-yuri",
+      "id": "partners",
       "title": {
-        "en": "Sophia | Akad | Yuri"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -808,9 +818,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-flex",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -836,6 +846,12 @@
               "label": "Cursed Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nExtra Atk>CR>>CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -900,99 +916,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nThis bad is butt, but technically makes it as a Build around more interesting\nE2:\nBig Extra Attack, requires discarding 10 Cards to do 400% Damage\nE3:\nThis is a pretty worthless Ego anyway\nE4:\nOnly adds Additive damage to Diana's Extra Attacks, +30%-50%, its okay\nE5:\nLow base Multipliers = Not much Value\nE6:\nMax 30 Fluters, but now that only requires 8 Discards, also bonus Extra Attack at 30"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Foretold Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "diana.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This bad is butt, but technically makes it as a Build around more interesting"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Big Extra Attack, requires discarding 10 Cards to do 400% Damage"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "This is a pretty worthless Ego anyway"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Only adds Additive damage to Diana's Extra Attacks, +30%-50%, its okay"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Low base Multipliers = Not much Value"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Max 30 Fluters, but now that only requires 8 Discards, also bonus Extra Attack at 30"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1286,9 +1282,9 @@
       ]
     },
     {
-      "id": "diana-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Diana Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1535,6 +1531,80 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

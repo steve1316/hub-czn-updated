@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "maribell-counterattack-and-fixed-damage",
+      "id": "playstyle",
       "title": {
-        "en": "Maribell Counterattack and Fixed Damage"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Maribell Counterattack and Fixed Damage"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -34,15 +40,13 @@
           "body": {
             "en": "Maribell's kit centers around Counterattacks\nCounterattacks are a buff that procs when an enemy hits your team\n(Every hit of a multi hit counts multiple times)\nWhen a counterattack is triggered the owner deals an attack of Def Based Dmg\nCounterattacks deal 1.5x? damage if the enemy hit is fully blocked by Shield\nCounterattacks can Crit\nCounterattacks are not Extra Attacks\nShelter Strike is a bit special, it is a Fixed Damage attack\nFixed Damage attacks cannot be altered by Buffs or Debuffs\nOnly Elemental%, Base stats and Crit can alter the damage"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -52,11 +56,17 @@
       ]
     },
     {
-      "id": "cycle-4-shelter-strike-carry-160-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -4 | Shelter Strike Carry | 160 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -4 | Shelter Strike Carry | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -214,15 +224,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "minimal-mei-lin-herb",
-      "title": {
-        "en": "Minimal Mei Lin Herb"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Minimal Mei Lin Herb"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -341,9 +349,9 @@
       ]
     },
     {
-      "id": "eishlen-erica-rachel-wilhelmina",
+      "id": "partners",
       "title": {
-        "en": "Eishlen | Erica | Rachel | Wilhelmina"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -415,11 +423,17 @@
       ]
     },
     {
-      "id": "shelter-strike-dps",
+      "id": "relics",
       "title": {
-        "en": "Shelter Strike DPS"
+        "en": "Relics"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Shelter Strike DPS"
+          }
+        },
         {
           "type": "set-list",
           "items": [
@@ -440,6 +454,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD>>> HP>Def>Def%\nMain Stat Rec:\n4: Crit Rate\n5: Passion%\n6 Def%"
+          }
         },
         {
           "type": "prose",
@@ -485,6 +505,12 @@
         {
           "type": "prose",
           "body": {
+            "en": "Important Substats:\nCR/CD>Def>Def%\n(HP can increase Shield limit)\nMain Stat Rec:\n4: Crit Rate/HP%\n5: Passion%/HP%\n6 Def%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
             "en": "Just look for good substats in your Flex spot, finishing a set isn't nessicary"
           }
         },
@@ -518,105 +544,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nBig damage buff to Shelter Strike, ngl it's kinda amazing\nE2:\nThis bad is butt\nE3:\nPotentials are meh\nE4:\nThis bad is butt\nE3:\nPotentials are meh\nE6:\nIg it's kinda nice"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Damage Amount by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "maribell.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Big damage buff to Shelter Strike, ngl it's kinda amazing"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potentials are meh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potentials are meh"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Ig it's kinda nice"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -945,9 +945,9 @@
       ]
     },
     {
-      "id": "maribell-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Maribell Example teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1142,6 +1142,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "On Counterattack, 200% Def Based Damage to all enemies (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Def Based Damage Amount by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

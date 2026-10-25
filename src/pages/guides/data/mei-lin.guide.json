@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "mei-lin-move-vs-draw-vs-create-strikes",
+      "id": "playstyle",
       "title": {
-        "en": "Mei Lin Move Vs Draw Vs Create Strikes"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Mei Lin Move Vs Draw Vs Create Strikes"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -77,15 +83,13 @@
           "body": {
             "en": "4 Unity = 4x3 = (12+3) x 1+1 = 16 Hits on 1 spire /Ap = 8\n3 unity = 3x3 = (9+3) x 2 +3 = 25 Hits on 2 Spires /AP = 6.25\n2 Units = 2x3 = (6+3) x 3 + 6 = 33 Hits on 3 Spires /AP = 5.5\n1 Unity = 1 x3 = (3+3) x 4 + 10 = 32 Hits on 4 Spires /AP = 4\nThe Value of 3/4 Spire dupes does increase with Veronica\nBut so does AP Requirement\n2/3 Spire is the sweet spot, just depends on how much AP you can make"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -95,11 +99,17 @@
       ]
     },
     {
-      "id": "mathmatically-correct-spire",
+      "id": "decks",
       "title": {
-        "en": "Mathmatically Correct Spire"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Mathmatically Correct Spire"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -388,9 +398,9 @@
       ]
     },
     {
-      "id": "lillian-scarlet-douglas",
+      "id": "partners",
       "title": {
-        "en": "Lillian | Scarlet | Douglas"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -487,9 +497,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-scrab-flex",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Scrab Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -519,6 +529,12 @@
         {
           "type": "prose",
           "body": {
+            "en": "Important Substats:\nCR/CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 1.5% Diff\n6 Atk%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
             "en": "Seth's Scrab is okay\nCursed Corpse is higher potential damage. Mei Lin damage is Rising Dragon Spire loaded, over Basics"
           }
         },
@@ -544,6 +560,12 @@
           ]
         },
         {
+          "type": "prose",
+          "body": {
+            "en": "Consistent Crits for Rising Dragon Spire\nNot recommended\nFor more consistent Rising Dragon Spire crits only"
+          }
+        },
+        {
           "type": "set-list",
           "items": [
             {
@@ -563,103 +585,89 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "potential-priority",
-      "title": {
-        "en": "Potential Priority:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
         },
         {
           "type": "prose",
           "body": {
-            "en": "E1:\nThis bad is butt\nE2:\nEmber is really easy to get\nE3:\nIt's pretty nice 6 more hits\nE4:\nA lot of additive, really nice\nE5:\nPotential levels are good since Meil Lin has very high multiplicatives\nE6:\nThis bad is butt"
+            "en": "The set got changed to give permanent 20% Damage\nIt's still bad, shoulda just gave 20% Atk% lol"
           }
         }
       ]
     },
     {
-      "id": "notable-refinements",
+      "id": "potentials",
       "title": {
-        "en": "Notable Refinements:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Forbidden Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "mei-lin.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This bad is butt"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Ember is really easy to get"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "It's pretty nice 6 more hits"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "A lot of additive, really nice"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels are good since Meil Lin has very high multiplicatives"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "This bad is butt"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -928,9 +936,9 @@
       ]
     },
     {
-      "id": "mei-lin-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Mei Lin Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1105,6 +1113,80 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "luke-bullets-and-multi-hit",
+      "id": "playstyle",
       "title": {
-        "en": "Luke, Bullets and Multi Hit"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Luke, Bullets and Multi Hit"
+          }
+        },
         {
           "type": "card-list",
           "items": [
@@ -68,15 +74,13 @@
           "body": {
             "en": "Luke's gimmick is his HANDGUN Bullets\nHandgun Bullets are COMMON cards\nThey have really low base damage, so additive buffs are amazing\nReally good for stacking Demon Dance or for activating Selena Coord Attacks"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -86,11 +90,17 @@
       ]
     },
     {
-      "id": "standard-luke",
+      "id": "decks",
       "title": {
-        "en": "Standard Luke"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Standard Luke"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -416,15 +426,13 @@
           "body": {
             "en": "Max Spam, for Max Selena Coord Attacks\nYou could cut down on Seize then Finisher or Dance if you wanted"
           }
-        }
-      ]
-    },
-    {
-      "id": "otk-luke",
-      "title": {
-        "en": "OTK Luke"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "OTK Luke"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -581,9 +589,9 @@
       ]
     },
     {
-      "id": "akad-yuri",
+      "id": "partners",
       "title": {
-        "en": "Akad | Yuri"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -637,9 +645,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-corpse",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Corpse"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -670,6 +678,12 @@
               "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD>Atk%>Atk\nMain Stat Recommendation:\n4: Crit Rate\n5: Atk%>Order% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -707,99 +721,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1\nThis is butt\nE2:\nVERY good 3 bullets -> 5 Bullets once per turn, very nice\nE3:\nOnly Ego Skill Damage Increase meh\nE4:\nIt adds ups, pretty good\nE5:\nPotential Levels, Meh\nE6:\nHonestly, really nice"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Forbidden Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "luke.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "This is butt"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "VERY good 3 bullets -> 5 Bullets once per turn, very nice"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Only Ego Skill Damage Increase meh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "It adds ups, pretty good"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels, Meh"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Honestly, really nice"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1124,9 +1118,9 @@
       ]
     },
     {
-      "id": "luke-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Luke Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1313,6 +1307,80 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

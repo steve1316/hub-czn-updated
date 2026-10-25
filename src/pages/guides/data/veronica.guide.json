@@ -10,11 +10,17 @@
   "updated": "8/10",
   "sections": [
     {
-      "id": "veronica-s-ballistas-and-reload",
+      "id": "playstyle",
       "title": {
-        "en": "Veronica's Ballistas and Reload"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Veronica's Ballistas and Reload"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -72,11 +78,17 @@
       ]
     },
     {
-      "id": "cycle-7-draw-divine-no-firing-ap-0-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle +7 | Draw Divine no Firing | AP 0 | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +7 | Draw Divine no Firing | AP 0 | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -239,15 +251,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-8-draw-divine-w-firing-ap-1-fm-160",
-      "title": {
-        "en": "Cycle +8 | Draw Divine w Firing | AP -1 | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +8 | Draw Divine w Firing | AP -1 | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -516,9 +526,9 @@
       ]
     },
     {
-      "id": "marin-rosaria-solia-daisy",
+      "id": "partners",
       "title": {
-        "en": "Marin | Rosaria | Solia | Daisy"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -561,9 +571,9 @@
       ]
     },
     {
-      "id": "blackwing-executioners-agony-flex",
+      "id": "relics",
       "title": {
-        "en": "BlackWing | Executioners | Agony Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -589,6 +599,12 @@
               "label": "Agony Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nExtra Attack>CR/CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -680,440 +696,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\n+2 Reload on Bombardment prep, not important\nE2:\nAllows Targetting of Ballistas technically, also damage increase\nE3:\nMaking another Ballista is actually pretty great damage\nE4:\nAnother Max Reload is very good\nE5:\nPotential levels are good since Veronica has very high multipliers and multiplicatives\nE6:\nFloral Scent now gives Mark too, its ok"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "veronica.webp",
+          "legend": [
             {
-              "cardId": "c_1033_uni2",
-              "name": "Pendant of Resolution",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "+2 Reload on Bombardment prep, not important"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Allows Targetting of Ballistas technically, also damage increase"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Making another Ballista is actually pretty great damage"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Another Max Reload is very good"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential levels are good since Veronica has very high multipliers and multiplicatives"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Floral Scent now gives Mark too, its ok"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Draw 2 Cord: 1 AP Draw 2 is great, you can even use Discard Activate instead of dmg buff\n12 Mark: 12 Mark is alot of Extra hits that scale off of Moral\nDraw 2 Move Persona: Persona Looping for your DPS can always be good\nDraw 2 Blessing: 10 Lux Blessing or 10 Individual Moral/Resolve to Cards\nDraw 1: Just worse version of Draw 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0048",
-              "name": "Forgotten Grave",
-              "note": {
-                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hunger: Veronica can be a carrier ig"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Sensory"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Sensory"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Sensory"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Sensory"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: If Action Count of enemy increased +50% Dmg to ally Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Attacked apply Vuln/Weaken"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At Start of Battle Draw 1 Exhaust Card"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C7 Burning Life The selction here, honestly is not good at all"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1467,9 +1122,9 @@
       ]
     },
     {
-      "id": "veronica-veronica-veronica-veronica-veronica",
+      "id": "teams",
       "title": {
-        "en": "Veronica | Veronica | Veronica | Veronica | Veronica"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1946,6 +1601,419 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1033_uni2",
+              "name": "Pendant of Resolution",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Draw 2 Cord: 1 AP Draw 2 is great, you can even use Discard Activate instead of dmg buff\n12 Mark: 12 Mark is alot of Extra hits that scale off of Moral\nDraw 2 Move Persona: Persona Looping for your DPS can always be good\nDraw 2 Blessing: 10 Lux Blessing or 10 Individual Moral/Resolve to Cards\nDraw 1: Just worse version of Draw 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hunger: Veronica can be a carrier ig"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Sensory"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: If Action Count of enemy increased +50% Dmg to ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Attacked apply Vuln/Weaken"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At Start of Battle Draw 1 Exhaust Card"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C7 Burning Life The selction here, honestly is not good at all"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

@@ -10,11 +10,17 @@
   "updated": "8/10",
   "sections": [
     {
-      "id": "how-to-manipulate-initiation-rng",
+      "id": "playstyle",
       "title": {
-        "en": "How to Manipulate Initiation RNG"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "How to Manipulate Initiation RNG"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -52,11 +58,17 @@
       ]
     },
     {
-      "id": "standard-hunt-base",
+      "id": "decks",
       "title": {
-        "en": "Standard Hunt Base"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Standard Hunt Base"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -114,15 +126,13 @@
           "body": {
             "en": "Hugo Tressa Example"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-draw-hugo-fm-160",
-      "title": {
-        "en": "Cycle +3 | Draw Hugo | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +3 | Draw Hugo | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -402,15 +412,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-draw-hugo-upgrade-fm-140",
-      "title": {
-        "en": "Cycle +3 | Draw Hugo Upgrade | FM 140"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle +3 | Draw Hugo Upgrade | FM 140"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -573,9 +581,9 @@
       ]
     },
     {
-      "id": "tina-ruixiang-marin-solia",
+      "id": "partners",
       "title": {
-        "en": "Tina | Ruixiang | Marin | Solia"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -647,9 +655,9 @@
       ]
     },
     {
-      "id": "battlefield-evo-executioners",
+      "id": "relics",
       "title": {
-        "en": "BattleField Evo | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -672,6 +680,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nExtra Dmg>>CR>CD>Atk>Atk%\nMain Stat Recommendation:\n4: Crit Rate\n5: Atk%>Order\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -760,398 +774,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nVery nice damage increase\nE2:\nNice damage increase, thats it Moral or Additive Extra Attack gets alot\nE3:\nIncreasing Hunt max stacks is amazing\nE4:\n+40% Additive is so good on Hugo\nE5:\nWorthless\nE6:\n1 Moral each turn, really nice"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Discard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "hugo.webp",
+          "legend": [
             {
-              "cardId": "n_0048",
-              "name": "Forgotten Grave",
-              "note": {
-                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
-              },
-              "rating": "3/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Very nice damage increase"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Nice damage increase, thats it Moral or Additive Extra Attack gets alot"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increasing Hunt max stacks is amazing"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "+40% Additive is so good on Hugo"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Worthless"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "1 Moral each turn, really nice"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1043_uni4",
-              "name": "Fixer's Approach",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: Increase Dmg Amnt of Haste Card by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Attack Cards w Cost 1<= +30% Dmg Amnt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c5-forbidden-ruins",
-      "title": {
-        "en": "C5 Forbidden Ruins"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1460,9 +1155,9 @@
       ]
     },
     {
-      "id": "hugo-recommended-teams",
+      "id": "teams",
       "title": {
-        "en": "Hugo Recommended Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1842,6 +1537,377 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Discard 2 is +120% Additive as well as 60% Multi but Cycle -2 Can be hard\n12 Mark is alot of extra hits that can scale off of Moral/other buffs that apply\nDraw 2 Coord, 60% Multi is great\nDraw 1 2 Moral, 60% Multi is great but not Cycle positive now"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0048",
+              "name": "Forgotten Grave",
+              "note": {
+                "en": "Infinite Crit Chance for 1 turn, and then a retain Draw 2 whenever is okay"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1043_uni4",
+              "name": "Fixer's Approach",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Driven Hunt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When 5 Cards created by allies +30% Dmg to Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Increase Dmg Amnt of Haste Card by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Extra Attacks by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Cards w Cost 1<= +30% Dmg Amnt"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Dmg Amnt of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

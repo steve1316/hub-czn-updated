@@ -10,11 +10,17 @@
   "updated": "8/10",
   "sections": [
     {
-      "id": "good-card-draw-bad-card-draw",
+      "id": "playstyle",
       "title": {
-        "en": "Good card draw, bad card draw"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Good card draw, bad card draw"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -114,15 +120,13 @@
           "body": {
             "en": "Eternal Hunger has Attunement Draw 1, AP 1\nAttunement Activates when the Card is Drawn\nAdagio is capable of Drawing Eternal Hungers, then Placing them on Top Deck\nAdagio + Eternal Hunger looping means ALOT of Positive Draw and AP\nIf it comes down to it, Nia is still capable of Discarding Eternal Hunger\nAnd Reusing it the Conventional way"
           }
-        }
-      ]
-    },
-    {
-      "id": "season-4-exclusive",
-      "title": {
-        "en": "Season 4 Exclusive"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 Exclusive"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -144,11 +148,17 @@
       ]
     },
     {
-      "id": "cycle-1-tutor-draw-ap-2-fm-160",
+      "id": "decks",
       "title": {
-        "en": "Cycle -1 | Tutor Draw | AP +2 | FM 160"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -1 | Tutor Draw | AP +2 | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -299,15 +309,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-discard-dps-support-150-dmg-ap-0-fm-180",
-      "title": {
-        "en": "Cycle -3 | Discard DPS Support +150% Dmg | AP 0 | FM 180"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Discard DPS Support +150% Dmg | AP 0 | FM 180"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -408,15 +416,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-0-tutor-draw-ap-3-fm-160",
-      "title": {
-        "en": "Cycle 0 | Tutor Draw | AP +3 | FM 160"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle 0 | Tutor Draw | AP +3 | FM 160"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -698,15 +704,13 @@
           "body": {
             "en": "Aco's GR S3P1 Guide"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-0-clog-draw-loop-ap-3-fm-180",
-      "title": {
-        "en": "Cycle 0 | Clog Draw Loop | AP - 3 | FM 180"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle 0 | Clog Draw Loop | AP - 3 | FM 180"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -912,9 +916,9 @@
       ]
     },
     {
-      "id": "nyx-ritochika-alyssa-arwen-yvonne",
+      "id": "partners",
       "title": {
-        "en": "Nyx | Ritochika | Alyssa | Arwen | Yvonne"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -965,9 +969,9 @@
       ]
     },
     {
-      "id": "tetra-healer-scrab-flex",
+      "id": "relics",
       "title": {
-        "en": "Tetra | Healer | Scrab Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -993,6 +997,12 @@
               "label": "Scrab Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nEgo>Def>Def%>>HP\nMain Stat Rec:\n4: HP, Largely Unimportant\n5: HP, Largely Unimportant\n6 Ego Recovery"
+          }
         },
         {
           "type": "prose",
@@ -1033,383 +1043,79 @@
       ]
     },
     {
-      "id": "nia-potentials",
+      "id": "potentials",
       "title": {
-        "en": "Nia Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Nia Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nMakes Cutiosity 0 Cost, VERY GOOD\nE2:\nGives 4 Rhythm boost decaying Additive Damage Buff on Reshuffle, Good\nE3:\nPotential Increase, Meh\nE4:\n4 Rhythm boost at the start of battle, good\nE5:\nPotential Increase, Meh\nE6:\nGives Healing on Decibel, Meh"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "nia.webp",
+          "legend": [
             {
-              "cardId": "n_0027",
-              "name": "Dream World",
-              "note": {
-                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0076",
-              "name": "Nutrient Absorption",
-              "note": {
-                "en": "Exhausts any card and can Cost Reduce cards for Move"
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
             },
             {
-              "cardId": "n_0129",
-              "name": "Spore Harvester",
-              "note": {
-                "en": "Free Final Dmg Multi and Glory Set Activator"
-              },
-              "rating": "3/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
             {
-              "cardId": "c_1003_col",
-              "name": "Charm",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Makes Cutiosity 0 Cost, VERY GOOD"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Gives 4 Rhythm boost decaying Additive Damage Buff on Reshuffle, Good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potential Increase, Meh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "4 Rhythm boost at the start of battle, good"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Increase, Meh"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Gives Healing on Decibel, Meh"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3\nGuidance: Kinda nut healing with Reshuffle"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample/Forbidden"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: Ally Ravage, Increase Action Count by 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When discard 2, Draw 1 Quietus"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Discard 1 Quietus, Draw 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When turn ended with 1 AP, 1 AOE Vuln"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of battle 1 Stockpile"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1741,9 +1447,9 @@
       ]
     },
     {
-      "id": "example-nia-teams",
+      "id": "teams",
       "title": {
-        "en": "Example Nia Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -2061,6 +1767,362 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0027",
+              "name": "Dream World",
+              "note": {
+                "en": "4 Moral each, but getting 2 in a run from shop is hard rng"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: +15% x 10 = +150% to Attack Cards\nUmbra: Persona loops"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0076",
+              "name": "Nutrient Absorption",
+              "note": {
+                "en": "Exhausts any card and can Cost Reduce cards for Move"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "n_0129",
+              "name": "Spore Harvester",
+              "note": {
+                "en": "Free Final Dmg Multi and Glory Set Activator"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1003_col",
+              "name": "Charm",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3\nGuidance: Kinda nut healing with Reshuffle"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample/Forbidden"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "2/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When Action Count Increased +50% Dmg to Ally Attack Cards"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "6/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: On Card use 30% chance to Increase Action Count by 1 of enemy"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: Ally Ravage, Increase Action Count by 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux: When attacked apply Vuln/Weaken (1 per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra: When discard 2, Draw 1 Quietus"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When Discard 1 Quietus, Draw 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle Draw 1 Exhaust Card of this Unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When turn ended with 1 AP, 1 AOE Vuln"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of turn if Exhaust in Draw pile, 30% to draw it"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Start of battle 1 Stockpile"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

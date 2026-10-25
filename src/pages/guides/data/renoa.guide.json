@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "notes",
+      "id": "playstyle",
       "title": {
-        "en": "Notes"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -52,15 +58,13 @@
           "body": {
             "en": "Renoa's main gimmick is her Dirge Bullets\nDirge Bullets are attack cards with Exhaust\nThey deal an Extra Attack on Discard\nDiscarding Dirge Bullets instead of Using them is more optimal\nThe main problem that Renoa comes to is actually her Dirge Bullets\nBecause if you discard Dirge Bullets they never exhaust\nIf they end up shuffling back into your deck\nYou could just end up killing your redraws and dying"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -70,11 +74,17 @@
       ]
     },
     {
-      "id": "flower-3-self-discard",
+      "id": "decks",
       "title": {
-        "en": "Flower 3 Self Discard"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Flower 3 Self Discard"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -497,15 +507,13 @@
           "body": {
             "en": "Flower 3 buff used to stay even as Renoa discarded Dirge Bullets, unfortunately buff is used now"
           }
-        }
-      ]
-    },
-    {
-      "id": "draw-support-renoa",
-      "title": {
-        "en": "Draw Support Renoa"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Draw Support Renoa"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -668,9 +676,9 @@
       ]
     },
     {
-      "id": "akad-yuri",
+      "id": "partners",
       "title": {
-        "en": "Akad | Yuri"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -738,9 +746,9 @@
       ]
     },
     {
-      "id": "conqueror-executioner",
+      "id": "relics",
       "title": {
-        "en": "Conqueror | Executioner"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -763,6 +771,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nExtra Atk>CR>CD > Atk>Atk%\nMain Stat Recommendation:\n4:Crit Rate\n5: Atk%>Void% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -837,103 +851,77 @@
     {
       "id": "potentials",
       "title": {
-        "en": "Potentials"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nBuffing last Ditch is okay\nE2:\nMakes every 4th bullet instead a stronger bullet, really nice\nE3:\nIncreases Ego Skill damage by a bit, meh\nE4:\n40% Additive, is okay, but lossing it on Shuffle is a pain\nE5:\nPotential Levels: It's ok\nE6:\nPretty broken with Shuffle Cassius for OTKs, otherwise not good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C5 Foretold Ruins"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C3 City of Mist"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "renoa.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Buffing last Ditch is okay"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Makes every 4th bullet instead a stronger bullet, really nice"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Increases Ego Skill damage by a bit, meh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "40% Additive, is okay, but lossing it on Shuffle is a pain"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels: It's ok"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Pretty broken with Shuffle Cassius for OTKs, otherwise not good"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1310,9 +1298,9 @@
       ]
     },
     {
-      "id": "renoa-team-examples",
+      "id": "teams",
       "title": {
-        "en": "Renoa Team Examples"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1444,6 +1432,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C5 Foretold Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C3 City of Mist"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

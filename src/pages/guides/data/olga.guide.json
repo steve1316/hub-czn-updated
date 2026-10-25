@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "brand-move-guide",
+      "id": "playstyle",
       "title": {
-        "en": "Brand Move Guide"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Brand Move Guide"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -82,15 +88,13 @@
           "body": {
             "en": "Lets go over a couple examples\n2 Fracture Brand\n2 Agony Brand\nRift -> Disperse -> Rift -> Disperse -> Rift or\nDisperse -> Rift -> Disperse -> Rift -> Disperse\nNow lets change up the timing of when you apply the Brands\nDraw Rift & Disperse\nRift/Disperse\n2 Fracture Brand\n2 Agony Brand\nRift/Disperse -> Chain move x4"
           }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -112,11 +116,17 @@
       ]
     },
     {
-      "id": "cycle-3-scorch-multi-hit-ap-1-5-180-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -3 | Scorch Multi Hit | AP -1.5 | 180 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Scorch Multi Hit | AP -1.5 | 180 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -490,15 +500,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-ally-agony-activate-180-fm",
-      "title": {
-        "en": "Cycle -3 | Ally Agony Activate | 180 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Ally Agony Activate | 180 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -797,9 +805,9 @@
       ]
     },
     {
-      "id": "emilie-bria-aria-eloise-anteia",
+      "id": "partners",
       "title": {
-        "en": "Emilie | Bria | Aria | Eloise | Anteia"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -850,9 +858,9 @@
       ]
     },
     {
-      "id": "sanguine-executioners",
+      "id": "relics",
       "title": {
-        "en": "Sanguine | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -875,6 +883,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nDoT>CritR/CritDmg>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Instinct% 3.3% Diff\n6: Atk%"
+          }
         },
         {
           "type": "prose",
@@ -942,29 +956,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nSaves 1 AP 1st turn and then every second Cycle, very very good\nE2:\n10% more DoT damage, and also healing for 20% Max HP Each turn is pretty good\nE3:\nI dunno, big damage, becomes bigger\nE4:\nBuffs DoT dmg by up to 30% (probably doesnt effect agony)\nE5:\nOlga doesn't mainly do damage through cards\nE6:\nBroken broken broken, Tutors End of the Line/Reckoning turn start and +50% Crt Dmg"
-          }
+          "type": "potentials",
+          "image": "olga.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Saves 1 AP 1st turn and then every second Cycle, very very good"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "10% more DoT damage, and also healing for 20% Max HP Each turn is pretty good"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "I dunno, big damage, becomes bigger"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Buffs DoT dmg by up to 30% (probably doesnt effect agony)"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Olga doesn't mainly do damage through cards"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Broken broken broken, Tutors End of the Line/Reckoning turn start and +50% Crt Dmg"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1276,9 +1340,9 @@
       ]
     },
     {
-      "id": "olga-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Olga Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1489,15 +1553,7 @@
               ]
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "teams",
-      "title": {
-        "en": "Teams"
-      },
-      "blocks": [
+        },
         {
           "type": "team-grid",
           "groups": [

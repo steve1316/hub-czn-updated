@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "arabella-fracture-fracture-amplication",
+      "id": "playstyle",
       "title": {
-        "en": "Arabella, Fracture, Fracture Amplication"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Arabella, Fracture, Fracture Amplication"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -31,15 +37,13 @@
           "body": {
             "en": "Example Math:\nIf enemy isnt solo\n30>15>16>8>9>4>5>2>3>1>2>1>2>1>2>1>2>1>2 etc\nTotal Activates 10, Fracture Stacks Total = 73 x 40% = 2920%\nIf enemy is solo\n30>15>17>8>10>5>7>3>5>2>4>2>4>2>4>2>4>2>4 etc\nTotal Activates 10, Fracture Stacks Total = 89 x 40% = 3560%"
           }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -61,11 +65,17 @@
       ]
     },
     {
-      "id": "cycle-3-sadistic-st-ap-3-160-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -3 | Sadistic (ST) | AP-3 | 160 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Sadistic (ST) | AP-3 | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -320,15 +330,13 @@
               }
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "cycle-3-sadistic-greedy-st-ap-4-160-fm",
-      "title": {
-        "en": "Cycle -3 | Sadistic Greedy (ST) | AP-4 | 160 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Sadistic Greedy (ST) | AP-4 | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -621,9 +629,9 @@
       ]
     },
     {
-      "id": "licinia-scarlet-priscilla-westmacott-lillian",
+      "id": "partners",
       "title": {
-        "en": "Licinia | Scarlet | Priscilla | Westmacott | Lillian"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -703,9 +711,9 @@
       ]
     },
     {
-      "id": "sanguine-executioners",
+      "id": "relics",
       "title": {
-        "en": "Sanguine | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -728,6 +736,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCritR/CritDmg>DoT%>Atk%>Atk\nDoT Focused\nDoT%>CritR/CritDmg>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Instinct% 3.3% Diff\n6: Atk%"
+          }
         },
         {
           "type": "prose",
@@ -795,233 +809,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nBuffs Art Unmaking Build, Niche af\nE2:\nStarts you off with Frac Amp and 12 AOE Fracture a turn easily\nE3:\nI dunno, big damage, becomes bigger\nE4:\nOnly buffing Fracture is quite sad (Not yet seen if its Final Multi)\nE5:\nArabella has the lowest multipliers ever in existence, only for Art Build\nE6:\n10 more Fracture, and 50% Crt Dmg against the Target, its pretty good"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-4-shattered-light-and-claw",
-      "title": {
-        "en": "Season 4 | Shattered Light and Claw"
-      },
-      "blocks": [
-        {
-          "type": "card-list",
-          "items": [
+          "type": "potentials",
+          "image": "arabella.webp",
+          "legend": [
             {
-              "cardId": "c_30115_eps",
-              "name": "Pathetic End",
-              "cost": 5,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Buffs Art Unmaking Build, Niche af"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Starts you off with Frac Amp and 12 AOE Fracture a turn easily"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "I dunno, big damage, becomes bigger"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Only buffing Fracture is quite sad (Not yet seen if its Final Multi)"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Arabella has the lowest multipliers ever in existence, only for Art Build"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "10 more Fracture, and 50% Crt Dmg against the Target, its pretty good"
+              }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever: Insanely good on Arabella due to the Amounts of Hits she deals and 2 Natural Debuffs\nSample: 1 AP Draw 2 is good\nGilded: The 6 Scorch for potential 6 more hits is actually not the worst thing ever"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 2 | Seed of Karmic Fire"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Season 1 | Forbidden Catalyst"
-          }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inqury 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Engravings:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Notable Reinforcements:"
-          }
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1295,9 +1155,9 @@
       ]
     },
     {
-      "id": "arabella-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Arabella Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1588,6 +1448,214 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4 | Shattered Light and Claw"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30115_eps",
+              "name": "Pathetic End",
+              "cost": 5,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever: Insanely good on Arabella due to the Amounts of Hits she deals and 2 Natural Debuffs\nSample: 1 AP Draw 2 is good\nGilded: The 6 Scorch for potential 6 more hits is actually not the worst thing ever"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 3 | Song Rippling through the Stars"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 2 | Seed of Karmic Fire"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Season 1 | Forbidden Catalyst"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inqury 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "5/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "4/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 3"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sample"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Inquiry 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Control 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Sever Ties"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Claim 1"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Survival 2"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "3/5"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Engravings:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Notable Reinforcements:"
+          }
         }
       ]
     }

@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "lucas-and-his-launcher-bullets-rockets",
+      "id": "playstyle",
       "title": {
-        "en": "Lucas and his Launcher Bullets (Rockets)"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Lucas and his Launcher Bullets (Rockets)"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -49,15 +55,13 @@
           "body": {
             "en": "Lucas's gimmick is his Launcher Bullets (Rockets)\nThey're 1 cost Bullets that do ST and Spread AOE\nThe passive abilities of the Launchers are all pretty bad, and useless\nYou should rather do something else with your AP then fire a Rocket"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -67,11 +71,17 @@
       ]
     },
     {
-      "id": "passive-draw",
+      "id": "decks",
       "title": {
-        "en": "Passive draw"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Passive draw"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -117,6 +127,12 @@
               "cost": 1
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Neutrals"
+          }
         },
         {
           "type": "prose",
@@ -233,15 +249,13 @@
               "cost": 1
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "celestial-flame-thrower",
-      "title": {
-        "en": "Celestial Flame Thrower"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Celestial Flame Thrower"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -567,9 +581,9 @@
       ]
     },
     {
-      "id": "yuri-akad-akad",
+      "id": "partners",
       "title": {
-        "en": "Yuri | Akad | Akad"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -637,9 +651,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-cursed-corpse",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Cursed Corpse"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -674,6 +688,12 @@
         {
           "type": "prose",
           "body": {
+            "en": "Important Substats:\nCR/CD>Atk>Atk%\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 1.5% Diff\n6 Atk%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
             "en": "Atk% and Crt Dmg buff Fixed damage, and Cursed Corpse is relatively ok with Agony Rocket"
           }
         },
@@ -697,6 +717,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR/CD>Atk>Atk%\nMain Stat Rec:\n4: Crit Dmg\n5: Passion%\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -734,87 +760,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nHey ig the Fixed damage adds up over time\nE2:\nBuffing Rockets +20% are good... if only they weren't 1 AP\nE3:\nPotentials can be pretty good on Flamethrower\nE4:\nHonestly, Lucas Ego is pretty good, if only it was cheaper\nE3:\nPotentials can be pretty good on Flamethrower\nE6:\nLAUNCHER IS 0 COST NOW Only the first one each turn"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "lucas.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Hey ig the Fixed damage adds up over time"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Buffing Rockets +20% are good... if only they weren't 1 AP"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Potentials can be pretty good on Flamethrower"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Honestly, Lucas Ego is pretty good, if only it was cheaper"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potentials can be pretty good on Flamethrower"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "LAUNCHER IS 0 COST NOW Only the first one each turn"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -1155,9 +1173,9 @@
       ]
     },
     {
-      "id": "maribell-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Maribell Example teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1360,6 +1378,68 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 2-Cost or higher Attack Cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

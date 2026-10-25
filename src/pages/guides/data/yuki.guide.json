@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "notes",
+      "id": "playstyle",
       "title": {
-        "en": "Notes"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -48,15 +54,13 @@
           "body": {
             "en": "ONE DAY YUKI WILL BE GOOD SURELY\nInspiration on Neutrals WHEN\n(That Yuki can actually use)"
           }
-        }
-      ]
-    },
-    {
-      "id": "6-17-patch",
-      "title": {
-        "en": "6/17 Patch"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "6/17 Patch"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -90,11 +94,17 @@
       ]
     },
     {
-      "id": "cycle-7-moral-st",
+      "id": "decks",
       "title": {
-        "en": "Cycle - 7 | Moral ST"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle - 7 | Moral ST"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -247,9 +257,9 @@
       ]
     },
     {
-      "id": "westmaccot-scarlet-ritochika-lillian-priscilla",
+      "id": "partners",
       "title": {
-        "en": "Westmaccot | Scarlet | Ritochika | Lillian | Priscilla"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -321,9 +331,9 @@
       ]
     },
     {
-      "id": "blackwing-executioner-flex",
+      "id": "relics",
       "title": {
-        "en": "Blackwing | Executioner | Flex"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -349,6 +359,12 @@
               "label": "Flex"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nCR>CD>Atk>Atk%\nMain Stat Recommendation:\n4: Crit Rate\n5: Atk%>Order% 1.5% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -413,163 +429,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1\nAfter 6/16 this is actually pretty good, 50% Multi is quite big\nE2:\nIt's nice QOL for Chaos, but ideally you wouldn't need it\nE3:\nOnly Ego Skill Damage Increase meh\nE4:\nIts ok damage increase\nE5:\nPotential Levels, Meh\nE6:\nIts ok damage increase"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-2-notable-refinements",
-      "title": {
-        "en": "Season 2: Notable Refinements"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of a card of this unit, when drawn by Ability, Increase Damage Amount of that card by 50% for 1 turn (I have no clue how this one works exactly)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
-          }
-        }
-      ]
-    },
-    {
-      "id": "season-3-engravings-and-personas",
-      "title": {
-        "en": "Season 3: Engravings and Personas"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux Equipment Engraving"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Action Count Increase can come from Equipment, does not affect Extra Attacks"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Ig its a damage buff"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra Equipment Engraving"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Only real feasable and also good equipment engraving"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "15% Crit rate needs SO MUCH in generic buffs dilution to beat 30% Damage from only 7 cards in Grave"
-          }
-        }
-      ]
-    },
-    {
-      "id": "skill-personas",
-      "title": {
-        "en": "Skill Personas"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "Honestly wouldn't really bother with the Draw 1, but 2 Moral is nice, 60% Multi is okay\n120% Additive isn't really nessicary since it only buffs ATTACK CARDS not Trickery/Freezing"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Attack Personas"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "1 Cost, 5 Hit Attack card, is a very good pay off for your Moral Stacking, dmg buff is a bonus"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c5-forbidden-ruins",
-      "title": {
-        "en": "C5 Forbidden Ruins"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "C2 Twin Star's Shadow"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "yuki.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "After 6/16 this is actually pretty good, 50% Multi is quite big"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "It's nice QOL for Chaos, but ideally you wouldn't need it"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Only Ego Skill Damage Increase meh"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Its ok damage increase"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Potential Levels, Meh"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Its ok damage increase"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -866,9 +798,9 @@
       ]
     },
     {
-      "id": "yuki-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Yuki Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1180,6 +1112,140 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 2: Notable Refinements"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of 1< or lower Attack cards by +30%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of a card of this unit, when drawn by Ability, Increase Damage Amount of that card by 50% for 1 turn (I have no clue how this one works exactly)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, if owning 18 or less cards, increase Damage Amount of Attack Cards by 30%"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 3: Engravings and Personas"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Lux Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Action Count Increase can come from Equipment, does not affect Extra Attacks"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Ig its a damage buff"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Umbra Equipment Engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Only real feasable and also good equipment engraving"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "15% Crit rate needs SO MUCH in generic buffs dilution to beat 30% Damage from only 7 cards in Grave"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Skill Personas"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Honestly wouldn't really bother with the Draw 1, but 2 Moral is nice, 60% Multi is okay\n120% Additive isn't really nessicary since it only buffs ATTACK CARDS not Trickery/Freezing"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Attack Personas"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "1 Cost, 5 Hit Attack card, is a very good pay off for your Moral Stacking, dmg buff is a bonus"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C5 Forbidden Ruins"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C2 Twin Star's Shadow"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }

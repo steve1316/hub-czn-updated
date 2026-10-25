@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "heidemarie-linked-and-quietus",
+      "id": "playstyle",
       "title": {
-        "en": "Heidemarie Linked and Quietus"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Heidemarie Linked and Quietus"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -114,15 +120,13 @@
           "body": {
             "en": "Effulgent Blades are Heide's main created cards\nThey can be discarded for Extra Attack Damage\nBut the main fact about them is how they infinitly stack inside your Discard Pile\nWhile not bricking and filling your draw pile reshuffles\nEffulgent Compression once turned into Release becomes a MASSIVE NUKE\nThat scales based on the amount of Effulgent Blades you have in discard pile"
           }
-        }
-      ]
-    },
-    {
-      "id": "notes",
-      "title": {
-        "en": "Notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -144,11 +148,17 @@
       ]
     },
     {
-      "id": "cycle-3-activation-rain-160-fm",
+      "id": "decks",
       "title": {
-        "en": "Cycle -3 | Activation Rain | 160 FM"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -3 | Activation Rain | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -661,15 +671,13 @@
           "body": {
             "en": "Just Thread of Light, for alot of damage"
           }
-        }
-      ]
-    },
-    {
-      "id": "cycle-2-activation-rain-alt-160-fm",
-      "title": {
-        "en": "Cycle -2 | Activation Rain Alt | 160 FM"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle -2 | Activation Rain Alt | 160 FM"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -923,9 +931,9 @@
       ]
     },
     {
-      "id": "sylvia-solia-rosaria-daisy-nakia",
+      "id": "partners",
       "title": {
-        "en": "Sylvia | Solia | Rosaria | Daisy | Nakia"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -976,9 +984,9 @@
       ]
     },
     {
-      "id": "conqueror-executioners",
+      "id": "relics",
       "title": {
-        "en": "Conqueror | Executioners"
+        "en": "Relics"
       },
       "blocks": [
         {
@@ -1001,6 +1009,12 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nExtra Atk>>CR>CD>Atk%>Atk\nMain Stat Rec:\n4: Crit Rate\n5: Atk%>Passion% 3.3% Diff\n6 Atk%"
+          }
         },
         {
           "type": "prose",
@@ -1068,31 +1082,674 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority:"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation:"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nSlight Effulgent Release damage increase, largely unimportant\nE2:\nTutoring Compression is great, 600%+ in more Extra Attacks also is great\nE3:\nPurely a damage, ego and purely a damage buff, unimportant\nE4:\nExtra +5-50% Additive Damage buff to Heide, it's unimportant\nE5:\nLow base Multipliers = Not much Value\nE6:\nEffulgent Blades now always attack Weakness, E2 damage increase is ok"
-          }
+          "type": "potentials",
+          "image": "heidemarie.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Slight Effulgent Release damage increase, largely unimportant"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "Tutoring Compression is great, 600%+ in more Extra Attacks also is great"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Purely a damage, ego and purely a damage buff, unimportant"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Extra +5-50% Additive Damage buff to Heide, it's unimportant"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Low base Multipliers = Not much Value"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Effulgent Blades now always attack Weakness, E2 damage increase is ok"
+              }
+            }
+          ]
         }
       ]
     },
     {
-      "id": "season-4",
+      "id": "card-ratings",
       "title": {
-        "en": "Season 4"
+        "en": "Card Ratings"
       },
       "blocks": [
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "n_0075",
+              "name": "Negotiate",
+              "note": {
+                "en": "If you need the moral to reach cap, this is always good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "n_0070",
+              "name": "Leap Attack",
+              "note": {
+                "en": "Quick Shelling but stronger and more conditional"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni4",
+              "name": "Effulgent Compression",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Effulgent Compression is generally good, since its 0 cost free damage as well as 3 discard fodder"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_srt4",
+              "name": "Sword Rain",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Sword Rain I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Attunement for 2 blades is great, but having Quietus means you can't abuse Attunement"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Sword Rain II",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Able to be Attunement Abused, but 2 cost is very very bad, I'd take Rain 0 over this"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Sword Rain III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "This is actually a pretty funny build around"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Sword Rain IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Spending AP to create Blades feels bad, and retrieve is not very important"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Sword Rain V",
+                  "cost": 3,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Extremely Niche, basically just turns Effulgent Release into an AOE, but it has Retain Exhaust"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Rain 0 is actually good, since it doesn't have Quietus and Thus can be Abused for Attunement Blades"
+          }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni2",
+              "name": "Thread of Light",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Thread of Light I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Alot of damage"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Thread of Light II",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Alot Alot of damage but is 2 Cost so stinky"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Thread of Light III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Great way to buff Effulgent Blades, and also has Quietus so its free activation damage"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Thread of Light IV",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Stinky, why does this have Exhaust? Like actually ruined potential because of it"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Thread of Light V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Source of AOE for Heide but not exactly interesting beyond that"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni1",
+              "name": "Hero to All",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hero to All I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Gives it link so its even easier to make it a 0 cost draw 3, great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hero to All II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "On average very very bad, since you run your hand dry and have to start using 2+ cost draw"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Hero to All III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just a cantrip that makes you able to discard all of Diana's cards"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Hero to All IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Hero to All V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_30093_uni3",
+              "name": "Effulgent Expansion",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Effulgent Expansion I",
+                  "cost": 2,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Linked makes it easy to discard, great"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Effulgent Expansion II",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "no link, but damage comes out faster 2 vs 6 blades, but also is capped at 400%"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Effulgent Expansion III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Can feel very very bad, not a consistent way of making Blades"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Effulgent Expansion IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "The highest Blade per card from Heide, but you can't get Discard damage"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Effulgent Expansion V",
+                  "cost": 2,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "QUIETUS UNIQUE UPGRADE, Amazingly consistent blade generation and deck thinning"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teams",
+      "title": {
+        "en": "Example Teams"
+      },
+      "blocks": [
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                }
+              ]
+            },
+            {
+              "members": [
+                {
+                  "charResId": 30093,
+                  "name": "Heidemarie"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "team-grid",
+          "groups": [
+            {
+              "title": {
+                "en": "Draw Engines"
+              },
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1004,
+                  "name": "Luke"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "Discard"
+              },
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1061,
+                  "name": "Diana"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "Buff/Debuff"
+              },
+              "members": [
+                {
+                  "charResId": 1049,
+                  "name": "Cassius"
+                },
+                {
+                  "charResId": 1055,
+                  "name": "Adelheid"
+                },
+                {
+                  "charResId": 1056,
+                  "name": "Rei"
+                },
+                {
+                  "charResId": 1062,
+                  "name": "Haru"
+                },
+                {
+                  "charResId": 1050,
+                  "name": "Owen"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30097,
+                  "name": "Rita"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 1021,
+                  "name": "Lucas"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "Sub DPS"
+              },
+              "members": [
+                {
+                  "charResId": 1043,
+                  "name": "Hugo"
+                },
+                {
+                  "charResId": 1005,
+                  "name": "Selena"
+                },
+                {
+                  "charResId": 30113,
+                  "name": "Hilde"
+                }
+              ]
+            },
+            {
+              "title": {
+                "en": "AP Engines"
+              },
+              "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
+                  "charResId": 1033,
+                  "name": "Veronica"
+                },
+                {
+                  "charResId": 1039,
+                  "name": "Mika"
+                },
+                {
+                  "charResId": 30084,
+                  "name": "Tiphera"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Season 4"
+          }
+        },
         {
           "type": "card-list",
           "items": [
@@ -1155,15 +1812,13 @@
           "body": {
             "en": "I mean Ranger/Hunter can always Attunment Abuse with Precision Aim"
           }
-        }
-      ]
-    },
-    {
-      "id": "desire-synergy",
-      "title": {
-        "en": "Desire Synergy:"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Desire Synergy:"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -1469,15 +2124,13 @@
           "body": {
             "en": "2/5"
           }
-        }
-      ]
-    },
-    {
-      "id": "c8-theatre-of-illusions-event-chaos",
-      "title": {
-        "en": "C8 Theatre of Illusions/Event Chaos"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C8 Theatre of Illusions/Event Chaos"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -1501,593 +2154,6 @@
           "body": {
             "en": "Shop"
           }
-        }
-      ]
-    },
-    {
-      "id": "card-ratings",
-      "title": {
-        "en": "Card ratings"
-      },
-      "blocks": [
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "n_0075",
-              "name": "Negotiate",
-              "note": {
-                "en": "If you need the moral to reach cap, this is always good"
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0070",
-              "name": "Leap Attack",
-              "note": {
-                "en": "Quick Shelling but stronger and more conditional"
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30093_uni4",
-              "name": "Effulgent Compression",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30093_uni4",
-              "name": "Effulgent Compression",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Effulgent Compression is generally good, since its 0 cost free damage as well as 3 discard fodder"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30093_srt4",
-              "name": "Sword Rain",
-              "note": {
-                "en": ""
-              },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Sword Rain I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Attunement for 2 blades is great, but having Quietus means you can't abuse Attunement"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Sword Rain II",
-                  "cost": 2,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Able to be Attunement Abused, but 2 cost is very very bad, I'd take Rain 0 over this"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Sword Rain III",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "This is actually a pretty funny build around"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Sword Rain IV",
-                  "cost": 1,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Spending AP to create Blades feels bad, and retrieve is not very important"
-                  }
-                },
-                {
-                  "level": 5,
-                  "name": "Sword Rain V",
-                  "cost": 3,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Extremely Niche, basically just turns Effulgent Release into an AOE, but it has Retain Exhaust"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Rain 0 is actually good, since it doesn't have Quietus and Thus can be Abused for Attunement Blades"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30093_uni2",
-              "name": "Thread of Light",
-              "note": {
-                "en": ""
-              },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Thread of Light I",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Alot of damage"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Thread of Light II",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "Alot Alot of damage but is 2 Cost so stinky"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Thread of Light III",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Great way to buff Effulgent Blades, and also has Quietus so its free activation damage"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Thread of Light IV",
-                  "cost": 3,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "Stinky, why does this have Exhaust? Like actually ruined potential because of it"
-                  }
-                },
-                {
-                  "level": 5,
-                  "name": "Thread of Light V",
-                  "cost": 2,
-                  "rating": "1/5",
-                  "note": {
-                    "en": "Source of AOE for Heide but not exactly interesting beyond that"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30093_uni1",
-              "name": "Hero to All",
-              "note": {
-                "en": ""
-              },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Hero to All I",
-                  "cost": 1,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Gives it link so its even easier to make it a 0 cost draw 3, great"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Hero to All II",
-                  "cost": 1,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "On average very very bad, since you run your hand dry and have to start using 2+ cost draw"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Hero to All III",
-                  "cost": 0,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Just a cantrip that makes you able to discard all of Diana's cards"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Hero to All IV",
-                  "cost": 0,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "0 Cost Exhaust 2 Tutor, THAT ALSO Applies Link for Quietus Upgrades, Insanely good"
-                  }
-                },
-                {
-                  "level": 5,
-                  "name": "Hero to All V",
-                  "cost": 1,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "Makes you -1 Cycle for Sword Rain Attunement at the cost of -1 AP"
-                  }
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_30093_uni3",
-              "name": "Effulgent Expansion",
-              "note": {
-                "en": ""
-              },
-              "epiphanies": [
-                {
-                  "level": 1,
-                  "name": "Effulgent Expansion I",
-                  "cost": 2,
-                  "rating": "5/5",
-                  "note": {
-                    "en": "Linked makes it easy to discard, great"
-                  }
-                },
-                {
-                  "level": 2,
-                  "name": "Effulgent Expansion II",
-                  "cost": 2,
-                  "rating": "4/5",
-                  "note": {
-                    "en": "no link, but damage comes out faster 2 vs 6 blades, but also is capped at 400%"
-                  }
-                },
-                {
-                  "level": 3,
-                  "name": "Effulgent Expansion III",
-                  "cost": 2,
-                  "rating": "2/5",
-                  "note": {
-                    "en": "Can feel very very bad, not a consistent way of making Blades"
-                  }
-                },
-                {
-                  "level": 4,
-                  "name": "Effulgent Expansion IV",
-                  "cost": 2,
-                  "rating": "3/5",
-                  "note": {
-                    "en": "The highest Blade per card from Heide, but you can't get Discard damage"
-                  }
-                },
-                {
-                  "level": 5,
-                  "name": "Effulgent Expansion V",
-                  "cost": 2,
-                  "rating": "6/5",
-                  "note": {
-                    "en": "QUIETUS UNIQUE UPGRADE, Amazingly consistent blade generation and deck thinning"
-                  }
-                }
-              ]
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "hdmi-example-teams",
-      "title": {
-        "en": "HDMI Example Teams"
-      },
-      "blocks": [
-        {
-          "type": "team-grid",
-          "groups": [
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1043,
-                  "name": "Hugo"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1005,
-                  "name": "Selena"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1056,
-                  "name": "Rei"
-                },
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 30084,
-                  "name": "Tiphera"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                },
-                {
-                  "charResId": 1005,
-                  "name": "Selena"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1061,
-                  "name": "Diana"
-                },
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                }
-              ]
-            },
-            {
-              "members": [
-                {
-                  "charResId": 30093,
-                  "name": "Heidemarie"
-                },
-                {
-                  "charResId": 1061,
-                  "name": "Diana"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "team-grid",
-          "groups": [
-            {
-              "title": {
-                "en": "Draw Engines"
-              },
-              "members": [
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                },
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1055,
-                  "name": "Adelheid"
-                },
-                {
-                  "charResId": 1033,
-                  "name": "Veronica"
-                },
-                {
-                  "charResId": 1043,
-                  "name": "Hugo"
-                },
-                {
-                  "charResId": 1004,
-                  "name": "Luke"
-                }
-              ]
-            },
-            {
-              "title": {
-                "en": "Discard"
-              },
-              "members": [
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                },
-                {
-                  "charResId": 1061,
-                  "name": "Diana"
-                }
-              ]
-            },
-            {
-              "title": {
-                "en": "Buff/Debuff"
-              },
-              "members": [
-                {
-                  "charResId": 1049,
-                  "name": "Cassius"
-                },
-                {
-                  "charResId": 1055,
-                  "name": "Adelheid"
-                },
-                {
-                  "charResId": 1056,
-                  "name": "Rei"
-                },
-                {
-                  "charResId": 1062,
-                  "name": "Haru"
-                },
-                {
-                  "charResId": 1050,
-                  "name": "Owen"
-                },
-                {
-                  "charResId": 1039,
-                  "name": "Mika"
-                },
-                {
-                  "charResId": 30097,
-                  "name": "Rita"
-                },
-                {
-                  "charResId": 1005,
-                  "name": "Selena"
-                },
-                {
-                  "charResId": 1021,
-                  "name": "Lucas"
-                }
-              ]
-            },
-            {
-              "title": {
-                "en": "Sub DPS"
-              },
-              "members": [
-                {
-                  "charResId": 1043,
-                  "name": "Hugo"
-                },
-                {
-                  "charResId": 1005,
-                  "name": "Selena"
-                },
-                {
-                  "charResId": 30113,
-                  "name": "Hilde"
-                }
-              ]
-            },
-            {
-              "title": {
-                "en": "AP Engines"
-              },
-              "members": [
-                {
-                  "charResId": 1003,
-                  "name": "Nia"
-                },
-                {
-                  "charResId": 1033,
-                  "name": "Veronica"
-                },
-                {
-                  "charResId": 1039,
-                  "name": "Mika"
-                },
-                {
-                  "charResId": 30084,
-                  "name": "Tiphera"
-                }
-              ]
-            }
-          ]
         }
       ]
     }

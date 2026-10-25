@@ -9,11 +9,17 @@
   },
   "sections": [
     {
-      "id": "important-orlea-glossary-mechanics",
+      "id": "playstyle",
       "title": {
-        "en": "Important Orlea Glossary/Mechanics"
+        "en": "Playstyle"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Important Orlea Glossary/Mechanics"
+          }
+        },
         {
           "type": "card-list",
           "items": [
@@ -64,15 +70,13 @@
           "body": {
             "en": "Orlea's Gimmick is all about Retain and her Creations that Exhaust\nRetain means the card isn't discarded at the End of Turn\nSome of Orlea's Cards also have Activated Abilities by Retaining\nEnding turn, or Growth Acceleration can Activate these Abilities\nOrlea has 3 types of creations:\nUse Effect: Multiplicative Damage Bonus to next attack used\nRetain Effect: Multiplicative Damage Bonus to next attack used\nUse Effect: Does Damage\nRetain Effect: Increases Swifties damage by a Additive Damage Ammount\nSturdie/Toughie: The Sustain\nUse Effect: Shields\nRetain Effect: Heals\n(Yes, Retain heal generates Tressa Daggers, End of Turn and Growth Accel)\nCreations have 3 star levels, Creations combine if Same Type, Increasing Star\nIncreasing Stars boost the Retain effect and Use strength\nExamples:\nSoft 1 + Soft 1 = Soft 2\nSoft 2 + Soft 1 = Soft 3\nSoft 2 + Soft 2 = Soft 2, Soft 2\nSoft 1+ Sturdie 1 = Can't happen"
           }
-        }
-      ]
-    },
-    {
-      "id": "2-4-patch-notes",
-      "title": {
-        "en": "2/4 Patch notes"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "2/4 Patch notes"
+          }
+        },
         {
           "type": "prose",
           "body": {
@@ -82,11 +86,17 @@
       ]
     },
     {
-      "id": "cycle-5-gold-mane-armour-breaker",
+      "id": "decks",
       "title": {
-        "en": "Cycle-5 | Gold Mane Armour Breaker"
+        "en": "Decks"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Cycle-5 | Gold Mane Armour Breaker"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -274,15 +284,13 @@
           "body": {
             "en": "By stacking up Growing creatires. a single Will of Light can be 105% or 140%\nGrowth Accel will only ever be 70%, but it's still good to keep a copy to keep up Vuln"
           }
-        }
-      ]
-    },
-    {
-      "id": "big-swiftie",
-      "title": {
-        "en": "Big Swiftie"
-      },
-      "blocks": [
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "Big Swiftie"
+          }
+        },
         {
           "type": "deck",
           "cards": [
@@ -399,9 +407,9 @@
       ]
     },
     {
-      "id": "nyx-tiana-noel-alyssa-yvonne",
+      "id": "partners",
       "title": {
-        "en": "Nyx | Tiana | Noel | Alyssa | Yvonne"
+        "en": "Partners"
       },
       "blocks": [
         {
@@ -463,11 +471,17 @@
       ]
     },
     {
-      "id": "full-support-healing-tank-orlea",
+      "id": "relics",
       "title": {
-        "en": "Full Support Healing/Tank Orlea"
+        "en": "Relics"
       },
       "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Full Support Healing/Tank Orlea"
+          }
+        },
         {
           "type": "set-list",
           "items": [
@@ -488,6 +502,12 @@
               "icon": "/assets/pieces/icon_piece_set_007.png"
             }
           ]
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Important Substats:\nDef>Def%>Ego\nOnce you reach 300 Def Ego prioirity\nMain Stat Rec:\n4:Non Important, look for SubStats\n5: Instinct%/HP%\n6:Ego Recovery if you reach 300 Def"
+          }
         },
         {
           "type": "prose",
@@ -528,6 +548,12 @@
         {
           "type": "prose",
           "body": {
+            "en": "Important Substats:\nCrit rate>Crit Dmh>Atk>Atk%\nMain Stat Rec:\n4: Crit Rate\n5: Instinct%\n6 Atk%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
             "en": "3rd slot can be anything, Tetra for lil bit more healing, healers for hp, agony for baby dmg, Realistically you should just Cherry pick for Sub Stats for 3rd slot"
           }
         },
@@ -561,105 +587,79 @@
       ]
     },
     {
-      "id": "potential-priority",
+      "id": "potentials",
       "title": {
-        "en": "Potential Priority"
+        "en": "Potentials & Ego"
       },
       "blocks": [
         {
-          "type": "prose",
-          "body": {
-            "en": "Ego Manifestation"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "E1:\nGiving retain to Will of Light is really nice deckthinning, but not nessicary after changes\nE2:\nIt's ok\nE3:\nVery nice buff\nE4:\nReally really nice, just 10% Multiplier for the team\nE5:\nNot really useful\nE6:\nTiny tiny damage, not very useful"
-          }
-        }
-      ]
-    },
-    {
-      "id": "notable-refinements",
-      "title": {
-        "en": "Notable Refinements:"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage through a card was not dealt to an enemy for 1 turn, at the start of the next turn, increase Damage Amount by 50% for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Exhaust cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
-          }
-        }
-      ]
-    },
-    {
-      "id": "c7-burning-life",
-      "title": {
-        "en": "C7 Burning Life"
-      },
-      "blocks": [
-        {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Shop"
-          }
+          "type": "potentials",
+          "image": "orlea.webp",
+          "legend": [
+            {
+              "colour": "purple",
+              "text": {
+                "en": "Main Damage Boosts"
+              }
+            },
+            {
+              "colour": "gold",
+              "text": {
+                "en": "QOL"
+              }
+            },
+            {
+              "colour": "blue",
+              "text": {
+                "en": "Irrelevant usually"
+              }
+            }
+          ],
+          "ego": [
+            {
+              "level": 1,
+              "text": {
+                "en": "Giving retain to Will of Light is really nice deckthinning, but not nessicary after changes"
+              }
+            },
+            {
+              "level": 2,
+              "text": {
+                "en": "It's ok"
+              }
+            },
+            {
+              "level": 3,
+              "text": {
+                "en": "Very nice buff"
+              }
+            },
+            {
+              "level": 4,
+              "text": {
+                "en": "Really really nice, just 10% Multiplier for the team"
+              }
+            },
+            {
+              "level": 5,
+              "text": {
+                "en": "Not really useful"
+              }
+            },
+            {
+              "level": 6,
+              "text": {
+                "en": "Tiny tiny damage, not very useful"
+              }
+            }
+          ]
         }
       ]
     },
     {
       "id": "card-ratings",
       "title": {
-        "en": "Card ratings"
+        "en": "Card Ratings"
       },
       "blocks": [
         {
@@ -956,9 +956,9 @@
       ]
     },
     {
-      "id": "orlea-example-teams",
+      "id": "teams",
       "title": {
-        "en": "Orlea Example Teams"
+        "en": "Example Teams"
       },
       "blocks": [
         {
@@ -1142,6 +1142,86 @@
               ]
             }
           ]
+        }
+      ]
+    },
+    {
+      "id": "seasons-chaos",
+      "title": {
+        "en": "Seasons & Chaos"
+      },
+      "blocks": [
+        {
+          "type": "heading",
+          "text": {
+            "en": "Notable Refinements:"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "When an Attack Card is activated on a target in a Vulnerable state, +15% Critical Chance"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage through a card was not dealt to an enemy for 1 turn, at the start of the next turn, increase Damage Amount by 50% for 1 turn"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Exhaust cards by 25%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Damage Amount of Attack Cards by 20%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "If Damage is completely blocked, at the start of the next turn, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Increase Shield Gain Amount by 15%, and increase Heal Amount by 15%"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of battle, Draw 1 Exhaust card(s) of this unit"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "At the start of the turn, if an Exhaust card is in Draw Pile, have a 30% chance to Draw 1 Exhaust card"
+          }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "Shop"
+          }
         }
       ]
     }
