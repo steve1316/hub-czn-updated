@@ -7,13 +7,14 @@ from __future__ import annotations
 
 import io
 import random
+import urllib.error
 from types import SimpleNamespace
 
 import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
 from api.client_db import client_output_dir, have_client_db, have_client_text
-from scripts.datagen import card_text, epiphany, images, naming, set_names
+from scripts.datagen import card_text, epiphany, images, naming, set_names, sheet
 from scripts.datagen.epiphany import Variant
 from scripts.datagen.runner import Context
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
@@ -128,6 +129,35 @@ def test_fetcher_refetches_pages_but_caches_pictures(tmp_path, monkeypatch):
     assert fetcher.text("page") != fetcher.text("page")
     assert fetcher.bytes("picture") == fetcher.bytes("picture")
     assert calls == ["page", "page", "picture"]
+
+
+def test_fetcher_retries_a_failed_download(monkeypatch):
+    attempts: list[str] = []
+
+    class Response(io.BytesIO):
+        def __exit__(self, *args):
+            return False
+
+    def urlopen(request, timeout):
+        attempts.append(request.full_url)
+        if len(attempts) < 3:
+            raise urllib.error.URLError("The handshake operation timed out")
+        return Response(b"picture")
+
+    monkeypatch.setattr(sheet.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(sheet.time, "sleep", lambda seconds: None)
+    assert Fetcher._download("https://example.com/a.png") == b"picture"
+    assert len(attempts) == 3
+
+
+def test_fetcher_gives_up_after_its_attempts(monkeypatch):
+    def urlopen(request, timeout):
+        raise urllib.error.URLError("down")
+
+    monkeypatch.setattr(sheet.urllib.request, "urlopen", urlopen)
+    monkeypatch.setattr(sheet.time, "sleep", lambda seconds: None)
+    with pytest.raises(urllib.error.URLError):
+        Fetcher._download("https://example.com/a.png")
 
 
 def test_column_letters():

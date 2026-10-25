@@ -11,6 +11,8 @@ from __future__ import annotations
 import hashlib
 import html
 import re
+import time
+import urllib.error
 import urllib.request
 from dataclasses import dataclass, field
 from html.parser import HTMLParser
@@ -23,6 +25,9 @@ EDIT_URL = f"https://docs.google.com/spreadsheets/d/{SHEET_ID}/edit?gid={{gid}}#
 
 _TAB_ENTRY = re.compile(r'items\.push\(\{name: "((?:[^"\\]|\\.)*)",[^}]*?gid: "(\d+)"')
 _TIMEOUT_SECONDS = 60
+# Google sometimes refuses or drops one of the thousands of picture requests in a run, so each request is tried a few times.
+_ATTEMPTS = 3
+_RETRY_DELAY_SECONDS = 5
 
 
 @dataclass
@@ -85,17 +90,26 @@ class Fetcher:
     @staticmethod
     def _download(url: str) -> bytes:
         """
-        One request to the network.
+        One request to the network, tried again after a short wait when it fails.
 
         Args:
             url: The address.
 
         Returns:
             The response body.
+
+        Raises:
+            urllib.error.URLError: The last attempt failed too.
         """
         request = urllib.request.Request(url, headers={"User-Agent": "hub-czn datagen"})
-        with urllib.request.urlopen(request, timeout=_TIMEOUT_SECONDS) as response:
-            return response.read()
+        for attempt in range(1, _ATTEMPTS + 1):
+            try:
+                with urllib.request.urlopen(request, timeout=_TIMEOUT_SECONDS) as response:
+                    return response.read()
+            except (urllib.error.URLError, TimeoutError):
+                if attempt == _ATTEMPTS:
+                    raise
+                time.sleep(_RETRY_DELAY_SECONDS * attempt)
 
 
 def column_letters(col: int) -> str:
