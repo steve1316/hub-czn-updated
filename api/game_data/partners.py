@@ -813,6 +813,25 @@ PARTNERS = {
         "ego_cost": 3,
         "ego_desc": "80 Damage to all enemies\n1 Leaving the Rest to You!, and when an enemy is defeated, 1 Ammo Transfer for each defeated",
     },
+    30135: {
+        "name": "Sig",
+        "grade": 5,
+        "class": "Striker",
+        "passive_name": "Child of the Cycle",
+        "passive_desc": "Increase the assigned Combatant's Attack by {ATK%}%.\nWhen a Justice Card of the assigned Combatant is polarized, +{V2}% to Critical Chance (cannot stack).\nWhen the assigned Combatant's Bind card is stacked, gain 1 Memory of a Past Life.\nMemory of a Past Life: +{V3}% Critical Damage to the assigned Combatant and an additional +{V4}% Critical Damage to the assigned Combatant's Unique Attack Cards (cannot stack)",
+        "values": {
+            "ATK%": (16, 18, 20, 22, 24),
+            "V2": (10, 13, 15, 18, 20),
+            "V3": (15, 19, 23, 27, 30),
+            "V4": (15, 19, 23, 27, 30),
+        },
+        "stats": {
+            "ATK%": (16, 18, 20, 22, 24),
+        },
+        "ego_name": "Frail Dominion of Kyrken",
+        "ego_cost": 3,
+        "ego_desc": "2 Dominion Shard\nIncrease Damage Amount of the assigned Combatant's Justice Attack Cards by 50% for 2 turns",
+    },
 }
 
 # Base stats by grade and class at level 60
@@ -940,6 +959,7 @@ PARTNER_DEFAULT_ADD: dict[int, dict] = {
     30094: {"atk": 27, "def": 0,  "hp": 1},
     30092: {"atk": 27, "def": 0, "hp": 1},
     30114: {"atk": 27, "def": 0, "hp": 1},
+    30135: {"atk": 27, "def": 0, "hp": 1},
 }
 
 
@@ -990,6 +1010,7 @@ SSSR_ASCEND_PARTNERS = {
     30044, 30045, 30046, 30051, 30052, 30053, 30054, 30076, 30085, 30091, 30094,
     30092,
     30114,
+    30135,
 }
 
 
