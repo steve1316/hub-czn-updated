@@ -185,7 +185,21 @@
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",
@@ -338,7 +352,21 @@
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",
@@ -420,17 +448,59 @@
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Time Axis Collapse",
+                "text": {
+                  "en": "300% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Time Axis Collapse",
+                "text": {
+                  "en": "300% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0152",
+                "god": "Vytor",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Time Axis Collapse",
+                "text": {
+                  "en": "300% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0152",
+                "god": "Vytor",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni3",
@@ -488,12 +558,33 @@
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",
               "name": "Time Axis Collapse",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Time Axis Collapse I",
+                "text": {
+                  "en": "450% Damage. Increase Damage Amount by 20% for each Cost of cards in hand. (max 200%)."
+                }
+              }
             },
             {
               "cardId": "c_30097_uni1",

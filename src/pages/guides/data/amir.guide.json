@@ -27,12 +27,26 @@
             {
               "cardId": "c_1017_srt4",
               "name": "Hovering Metal",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hovering Metal I",
+                "text": {
+                  "en": "3 Damage Reduction. 4 Metallization."
+                }
+              }
             },
             {
               "cardId": "c_1017_uni2",
               "name": "Metal Extraction",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Metal Extraction II",
+                "text": {
+                  "en": "3 Metallization. For 1 turn, 3 Resolve."
+                }
+              }
             }
           ]
         },
@@ -340,7 +354,21 @@
             {
               "cardId": "c_1017_srt4",
               "name": "Hovering Metal",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Hovering Metal I",
+                "text": {
+                  "en": "3 Damage Reduction. 4 Metallization."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             }
           ]
         },

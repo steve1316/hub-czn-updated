@@ -180,17 +180,59 @@
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_srt4",
@@ -705,17 +747,59 @@
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_srt4",
               "name": "Sword Rain",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Sword Rain III",
+                "text": {
+                  "en": "Proc 5 Effulgent Blade in Graveyard against the target as an Extra Attack."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30093_uni1",

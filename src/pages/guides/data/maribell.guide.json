@@ -26,7 +26,14 @@
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Resolute Blitz II",
+                "text": {
+                  "en": "[Pulverize] 140% Defense-Based Damage. 20% DMG-Based Shield. 2 Counterattack."
+                }
+              }
             },
             {
               "cardId": "c_1028_uni4",
@@ -76,7 +83,21 @@
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Wolves' Dome I",
+                "text": {
+                  "en": "[Initiation] 2 Counterattack. At the start of the turn, 1 Counterattack. 2 Crystallization."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1028_uni3",
@@ -283,7 +304,21 @@
             {
               "cardId": "c_1028_uni2",
               "name": "Wolves' Dome",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Wolves' Dome I",
+                "text": {
+                  "en": "[Initiation] 2 Counterattack. At the start of the turn, 1 Counterattack. 2 Crystallization."
+                }
+              },
+              "extra": {
+                "id": "div_0102",
+                "god": "Sekred",
+                "text": {
+                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                }
+              }
             },
             {
               "cardId": "c_1028_uni3",

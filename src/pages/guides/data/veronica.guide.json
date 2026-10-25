@@ -47,7 +47,14 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Pendant of Resolution",
+                "text": {
+                  "en": "When a Skill Card of a different Combatant is activated, 1 Reload."
+                }
+              }
             }
           ]
         },
@@ -134,12 +141,33 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Sir Kowalski I",
+                "text": {
+                  "en": "Select 1 Ballista card in hand and +150% Damage Amount until activated. Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             }
           ]
         },
@@ -229,12 +257,33 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Sir Kowalski I",
+                "text": {
+                  "en": "Select 1 Ballista card in hand and +150% Damage Amount until activated. Draw 2."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             }
           ]
         },
@@ -327,7 +376,14 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
@@ -396,22 +452,71 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Sir Kowalski III",
+                "text": {
+                  "en": "Draw 2. When a Skill card is Drawn, create 1 Ballista card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Sir Kowalski III",
+                "text": {
+                  "en": "Draw 2. When a Skill card is Drawn, create 1 Ballista card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
               "name": "Sir Kowalski",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Sir Kowalski III",
+                "text": {
+                  "en": "Draw 2. When a Skill card is Drawn, create 1 Ballista card(s)."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
@@ -476,27 +581,90 @@
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Repose",
+                "text": {
+                  "en": "100% Shield. Draw 2 card(s) from other combatant."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Repose",
+                "text": {
+                  "en": "100% Shield. Draw 2 card(s) from other combatant."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Repose",
+                "text": {
+                  "en": "100% Shield. Draw 2 card(s) from other combatant."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni1",
               "name": "Repose",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Repose",
+                "text": {
+                  "en": "100% Shield. Draw 2 card(s) from other combatant."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni3",
@@ -933,12 +1101,26 @@
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Pendant of Resolution I",
+                "text": {
+                  "en": "When a Skill Card is activated, 1 Reload."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni2",
               "name": "Pendant of Resolution",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Pendant of Resolution II",
+                "text": {
+                  "en": "[Unique] When a Skill Card of a different Combatant is activated, 1 Reload. When 3 Skill Cards have been activated, at the start of the next turn, create 1 Micro Ballista."
+                }
+              }
             },
             {
               "cardId": "c_1033_uni2",

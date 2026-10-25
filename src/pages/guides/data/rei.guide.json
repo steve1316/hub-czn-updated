@@ -38,7 +38,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             }
           ]
         },
@@ -72,7 +79,14 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Snack Time III",
+                "text": {
+                  "en": "[Exhaust] Heal 150%. Select and Exhaust up to 2 card(s) in hand, then Draw for each Exhausted."
+                }
+              }
             }
           ]
         },
@@ -179,7 +193,21 @@
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Strike of Darkness",
+                "text": {
+                  "en": "[Lead] 100% Damage. Increase Damage Amount of Basic Attack Cards by 100% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1056_srt4",
@@ -247,7 +275,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -264,17 +299,59 @@
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "n_0054",
@@ -437,7 +514,21 @@
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Strike of Darkness",
+                "text": {
+                  "en": "[Lead] 100% Damage. Increase Damage Amount of Basic Attack Cards by 100% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1056_srt4",
@@ -533,7 +624,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -630,7 +728,14 @@
             {
               "cardId": "c_1056_uni1",
               "name": "Resonating Darkness",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Resonating Darkness IV",
+                "text": {
+                  "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -659,7 +764,21 @@
             {
               "cardId": "c_1056_uni3",
               "name": "Dark Condensation",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Dark Condensation",
+                "text": {
+                  "en": "Select 1 Attack Card(s) in hand, then +100% Damage Amount for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni4",

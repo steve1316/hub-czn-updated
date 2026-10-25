@@ -504,12 +504,26 @@
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "High-Power Scope II",
+                "text": {
+                  "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
+              }
             },
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "High-Power Scope II",
+                "text": {
+                  "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
+              }
             },
             {
               "cardId": "c_1005_uni1",

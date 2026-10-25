@@ -35,7 +35,14 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "G Chord I",
+                "text": {
+                  "en": "2 Decibel. Check the top 3 cards in Draw Pile. Select one to proc."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -171,7 +178,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -224,7 +245,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -277,7 +312,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -337,7 +386,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -390,7 +453,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -450,7 +527,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -509,7 +600,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -568,7 +673,21 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
@@ -592,17 +711,59 @@
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Adagio",
+                "text": {
+                  "en": "Draw 1. Discard 1. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni4",
@@ -769,12 +930,40 @@
             {
               "cardId": "c_1003_srt4",
               "name": "G Chord",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "G Chord",
+                "text": {
+                  "en": "2 Decibel. Proc the top 1 card(s) in Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni2",
               "name": "Soul Riff",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Soul Riff III",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a card in hand is Discarded, 100% Extra Attack to a random enemy by the Combatant who owns that card."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni4",

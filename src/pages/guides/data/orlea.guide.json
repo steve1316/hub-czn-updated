@@ -324,17 +324,38 @@
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",
               "name": "Growth Acceleration",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growth Acceleration IV",
+                "text": {
+                  "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Swiftie, activate the Retain effect 3 times."
+                }
+              }
             },
             {
               "cardId": "c_1024_uni1",

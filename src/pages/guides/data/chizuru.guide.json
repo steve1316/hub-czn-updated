@@ -384,7 +384,14 @@
             {
               "cardId": "c_1060_uni3",
               "name": "Oni Hunt",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oni Hunt I",
+                "text": {
+                  "en": "[Haste] 60% Damage. +100% Damage Amount to the next Bind card activated."
+                }
+              }
             },
             {
               "cardId": "c_1060_uni2",
@@ -430,22 +437,50 @@
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tsukuyomi I",
+                "text": {
+                  "en": "4 Will-O'-Wisp for each Hit of the next Attack Card of this unit activated."
+                }
+              }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tsukuyomi I",
+                "text": {
+                  "en": "4 Will-O'-Wisp for each Hit of the next Attack Card of this unit activated."
+                }
+              }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tsukuyomi I",
+                "text": {
+                  "en": "4 Will-O'-Wisp for each Hit of the next Attack Card of this unit activated."
+                }
+              }
             },
             {
               "cardId": "c_1060_uni1",
               "name": "Tsukuyomi",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tsukuyomi I",
+                "text": {
+                  "en": "4 Will-O'-Wisp for each Hit of the next Attack Card of this unit activated."
+                }
+              }
             },
             {
               "cardId": "c_1060_uni2",

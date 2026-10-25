@@ -100,7 +100,21 @@
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Observer's Pleasure I",
+                "text": {
+                  "en": "[Unique] 1 Fracture Amplification. For each enemy present, +30% Damage Amount to this unit for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30115_uni3",
@@ -362,7 +376,21 @@
             {
               "cardId": "c_30115_uni1",
               "name": "Observer's Pleasure",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Observer's Pleasure I",
+                "text": {
+                  "en": "[Unique] 1 Fracture Amplification. For each enemy present, +30% Damage Amount to this unit for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_30115_uni3",

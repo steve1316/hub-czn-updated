@@ -39,12 +39,26 @@
             {
               "cardId": "c_30134_srt4_mut1",
               "name": "Shard:Light",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Shard:Light (Amped)",
+                "text": {
+                  "en": "[Light] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 1 card of this unit is activated, activate effect (2 times per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30134_srt4_mut2",
               "name": "Shard:Dark",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Shard:Dark (Amped)",
+                "text": {
+                  "en": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 2 cards of other Combatants are activated, activate effect (2 times per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30134_cre1",

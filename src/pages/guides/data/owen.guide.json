@@ -662,7 +662,14 @@
             {
               "cardId": "c_1050_uni1",
               "name": "Wind Slash",
-              "cost": 2
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Wind Slash I",
+                "text": {
+                  "en": "280% Damage to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1050_uni1",

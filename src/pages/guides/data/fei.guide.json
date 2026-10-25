@@ -221,17 +221,59 @@
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni3",
@@ -532,17 +574,59 @@
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni2",

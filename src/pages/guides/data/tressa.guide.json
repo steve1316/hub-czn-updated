@@ -109,17 +109,59 @@
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
@@ -270,7 +312,21 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Curse",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card is activated, 1 Agony to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "n_0035",
@@ -327,7 +383,14 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Curse II",
+                "text": {
+                  "en": "For 2 turns, when an Attack Card is activated, 1 Agony to the target."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni2",
@@ -352,7 +415,14 @@
             {
               "cardId": "c_1009_uni3",
               "name": "Vital Attack",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Vital Attack",
+                "text": {
+                  "en": "80% Damage × 3. If the target is in an Agony state, +50% Damage Amount."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni4",
@@ -382,17 +452,59 @@
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_srt4",
               "name": "Unsheathe Dagger",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Unsheathe Dagger I",
+                "text": {
+                  "en": "Create 2 Shadow Dagger."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1009_uni1",
@@ -473,7 +585,21 @@
             {
               "cardId": "c_1009_uni1",
               "name": "Curse",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Curse",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card is activated, 1 Agony to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "n_0035",

@@ -26,7 +26,14 @@
             {
               "cardId": "c_1010_srt4",
               "name": "Ice Fragment",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Fragment II",
+                "text": {
+                  "en": "[Lead] 3 Crystallization. At the start of the turn, 2 Counterattack."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -104,7 +111,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -166,7 +180,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -206,7 +227,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Ice Wall I",
+                "text": {
+                  "en": "300% Shield. 3 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -260,7 +288,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni3",
@@ -906,17 +941,38 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Ice Wall I",
+                "text": {
+                  "en": "300% Shield. 3 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Ice Wall II",
+                "text": {
+                  "en": "300% Shield. 2 Counterattack. +30% Shield Gain Amount for each Counterattack of this unit."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 3,
+                "name": "Ice Wall III",
+                "text": {
+                  "en": "[Lead] 200% Shield. Set the target of Counterattack to all enemies."
+                }
+              }
             },
             {
               "cardId": "c_1010_uni2",
@@ -933,7 +989,14 @@
             {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Ice Wall",
+                "text": {
+                  "en": "200% Shield. 2 Counterattack. Set the target of Counterattack to all enemies for 2 turn(s)."
+                }
+              }
             }
           ]
         },

@@ -96,7 +96,21 @@
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Experienced Strike",
+                "text": {
+                  "en": "140% Defense-Based Damage. 20% DMG-Based Shield. Increase Damage Amount of Exhaust cards by 20% for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -224,7 +238,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 5,
+                "name": "Hew (Ambush)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Retain] 400% Defense-Based Damage. On ally Counterattack, proc this card. Incinerate: Create 1 Hew (Ambush) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -285,7 +306,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -354,7 +382,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Hew (Massacre)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage to all enemies. Decrease Damage Amount by 10% for each target. Incinerate: Create1 Hew (Massacre) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -423,7 +458,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 1,
+                "name": "Hew (Ironclad)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",
@@ -504,7 +546,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 4,
+                "name": "Hew (Massacre)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Exhaust] [Ephemeral] 400% Defense-Based Damage to all enemies. Decrease Damage Amount by 10% for each target. Incinerate: Create1 Hew (Massacre) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni3",

@@ -184,17 +184,59 @@
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni2",
@@ -435,7 +477,14 @@
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Tactical Analysis I",
+                "text": {
+                  "en": "Heal 50%. 1 Wave. +50% Heal Amount for 2 turns."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni4",
@@ -583,22 +632,78 @@
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_srt4",
               "name": "Source of Water",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Source of Water",
+                "text": {
+                  "en": "Heal 100%. Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "div_0090",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
             },
             {
               "cardId": "c_1039_uni2",

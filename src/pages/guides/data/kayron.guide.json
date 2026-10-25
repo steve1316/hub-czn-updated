@@ -194,17 +194,59 @@
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
             },
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
             },
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
             },
             {
               "cardId": "c_1064_srt4",
@@ -364,7 +406,21 @@
             {
               "cardId": "c_1064_srt4",
               "name": "Echo of Futility",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Echo of Futility V",
+                "text": {
+                  "en": "150% Damage. Create 2 Futility. +30% base Damage Amount for each Futility created this battle."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_1064_tut1",

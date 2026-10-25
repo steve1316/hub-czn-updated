@@ -45,7 +45,14 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -144,7 +151,14 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -205,7 +219,14 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -258,7 +279,21 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0118",
+                "god": "Sekred",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -323,7 +358,14 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -376,7 +418,14 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -513,17 +562,59 @@
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "cost": 1
+              "cost": 5,
+              "epiphany": {
+                "level": 2,
+                "name": "Creation and Destruction II",
+                "text": {
+                  "en": "550% Defense-Based Damage. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0117",
+                "god": "Sekred",
+                "text": {
+                  "en": "Always Attack Weakness."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "cost": 1
+              "cost": 5,
+              "epiphany": {
+                "level": 2,
+                "name": "Creation and Destruction II",
+                "text": {
+                  "en": "550% Defense-Based Damage. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0117",
+                "god": "Sekred",
+                "text": {
+                  "en": "Always Attack Weakness."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
-              "cost": 1
+              "cost": 5,
+              "epiphany": {
+                "level": 2,
+                "name": "Creation and Destruction II",
+                "text": {
+                  "en": "550% Defense-Based Damage. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0117",
+                "god": "Sekred",
+                "text": {
+                  "en": "Always Attack Weakness."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni2",
@@ -588,12 +679,26 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -646,12 +751,26 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Form Convergence I",
+                "text": {
+                  "en": "[Retain] Draw 3 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",
@@ -800,7 +919,21 @@
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Form Convergence",
+                "text": {
+                  "en": "[Retain] Draw 2 Archetype card(s). Double a random effect of those cards for 1 turn."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni3",

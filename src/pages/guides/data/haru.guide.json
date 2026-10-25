@@ -26,7 +26,14 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Anchor Shot I",
+                "text": {
+                  "en": "[Pulverize] 400% Damage. +150% Damage Amount for each activation of this card (max 10)."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
@@ -84,7 +91,14 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 1,
+                "name": "Anchor Shot I",
+                "text": {
+                  "en": "[Pulverize] 400% Damage. +150% Damage Amount for each activation of this card (max 10)."
+                }
+              }
             }
           ]
         },
@@ -138,7 +152,21 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Anchor Shot IV",
+                "text": {
+                  "en": "[Pulverize] 380% Damage. +100% Damage Amount for each activation of this card (max 10). Create this card in Draw Pile (2 time(s) per battle)."
+                }
+              },
+              "extra": {
+                "id": "div_0097",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Always Attack Weakness."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
@@ -264,7 +292,21 @@
             {
               "cardId": "c_1062_srt4",
               "name": "Anchor Shot",
-              "cost": 2
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Anchor Shot",
+                "text": {
+                  "en": "[Pulverize] 300% Damage. +100% Damage Amount for each activation of this card (max 10)."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
             },
             {
               "cardId": "c_1062_uni1",
