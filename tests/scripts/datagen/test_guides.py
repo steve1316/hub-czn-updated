@@ -250,7 +250,7 @@ def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._G
     ctx = SimpleNamespace(text=lambda text, **_: text)
     downloads = SimpleNamespace(get=lambda url: banner)
     return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
-                                guides._PictureLabels({}), "Tab")
+                                guides._PictureLabels({}), "Tab", "tab")
 
 
 def _grid(*cells: Cell) -> dict[tuple[int, int], Cell]:
@@ -266,6 +266,55 @@ def test_a_skipped_cell_is_left_out():
     grid = _grid(_cell(65, 2, "DPS"), _cell(65, 3, pictures=1), _cell(66, 2, "Keep me\nas a note"))
     sections, _ = _builder({"Tab!C66": {"skip": True, "_why": "template filler"}}).sections(grid)
     assert sections[0]["blocks"] == [_prose("Keep me\nas a note")]
+
+
+LEGEND = "Purple: Main Damage Boosts\n\nGold: QOL\n\nBlue: Irrelevant usually"
+EGO = "E1: \nPretty good\n\nE2:\nAbsolutely broken\n\nE3: Fine\nE4\nOkay\nE3: \nTypo for E5\nE6:\nE2's damage gets better"
+
+
+def _potentials_grid(tree: bool = True, legend: str = LEGEND) -> dict[tuple[int, int], Cell]:
+    # The Rossweisse layout: headings on row 24, the tree in B25, the legend in E25 and the ego notes in H25.
+    cells = [_cell(23, 2, "Potentials"), _cell(23, 8, "Ego Manifestation"), _cell(24, 4, legend), _cell(24, 7, EGO)]
+    return _grid(*cells, *([_cell(24, 1, pictures=1)] if tree else []))
+
+
+def test_potentials_band_becomes_one_block():
+    builder = _builder(picture_size=(371, 318))
+    sections, _ = builder.sections(_potentials_grid())
+    [section] = sections
+    assert section["title"] == {"en": "Potentials & Ego"}
+    [block] = section["blocks"]
+    assert block["image"] == "tab.webp" and set(builder.pictures) == {"tab.webp"}
+    assert block["legend"] == [{"colour": "purple", "text": {"en": "Main Damage Boosts"}}, {"colour": "gold", "text": {"en": "QOL"}},
+                               {"colour": "blue", "text": {"en": "Irrelevant usually"}}]
+    # Levels follow the order the notes are written in, as some tabs label E5 as "E3".
+    assert block["ego"] == [{"level": level, "text": {"en": text}} for level, text in
+                            enumerate(["Pretty good", "Absolutely broken", "Fine", "Okay", "Typo for E5", "E2's damage gets better"], 1)]
+
+
+def test_a_tiny_tree_picture_still_counts():
+    builder = _builder(picture_size=(23, 20))
+    [section], _ = builder.sections(_potentials_grid())
+    assert section["blocks"][0]["image"] == "tab.webp"
+
+
+def test_potentials_without_a_tree_picture():
+    builder = _builder()
+    [section], _ = builder.sections(_potentials_grid(tree=False))
+    assert section["blocks"][0]["image"] is None and not builder.pictures
+
+
+def test_potentials_legend_keeps_other_wording_and_extra_lines():
+    legend = "Purple: Main Identity Boost\nGold: QOL\nBlue: Irrelevant usually\nNothing is THAT important"
+    [section], _ = _builder().sections(_potentials_grid(legend=legend))
+    potentials, extra = section["blocks"]
+    assert potentials["legend"][0] == {"colour": "purple", "text": {"en": "Main Identity Boost"}}
+    assert extra == _prose("Nothing is THAT important")
+
+
+def test_purple_without_a_colon_is_not_a_legend():
+    sections, _ = _builder().sections(_grid(_cell(64, 7, "Red DPS\nteam"), _cell(64, 8, "Purple DPS\nteam")))
+    assert all(block["type"] == "prose" for block in sections[0]["blocks"])
 
 
 def _download(seed: int) -> guides._Download:

@@ -6,6 +6,7 @@ from __future__ import annotations
 
 import io
 from pathlib import Path
+from typing import IO
 
 from PIL import Image
 
@@ -13,12 +14,12 @@ from api.client_db import REPO_ROOT
 from scripts.datagen.runner import Context
 
 
-def webp(source: Path, *, quality: int, size: tuple[int, int] | None = None) -> bytes:
+def webp(source: Path | IO[bytes], *, quality: int, size: tuple[int, int] | None = None) -> bytes:
     """
     Encode a client illustration as WebP.
 
     Args:
-        source: The client PNG.
+        source: The client PNG, or an open picture file.
         quality: WebP quality.
         size: Resize to this size first, or keep the original size.
 

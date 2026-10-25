@@ -26,6 +26,7 @@ from pathlib import Path
 from PIL import Image
 
 from scripts.datagen import card_text, epiphany, images, roster
+from scripts.datagen.art import wanted, webp
 from scripts.datagen.epiphany import Extra
 from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import slug
@@ -39,6 +40,9 @@ OFFLINE = False
 
 DATA_DIR = Path("src/pages/guides/data")
 CONTENT_PATH = Path("src/pages/guides/guides-content.ts")
+# Each guide's potentials tree picture, named after the guide. Only ever added, like card art.
+POTENTIALS_DIR = DATA_DIR / "potentials"
+POTENTIALS_QUALITY = 90
 OVERRIDES_FILE = "api/data/overrides/guides.json"
 
 SOURCE_LABEL = "Sproot's Nightmare (community sheet)"
@@ -62,6 +66,14 @@ _NOTE_LINE = re.compile(r"^([^:]{1,40}):\s*(.+)$")
 _NUMBERED_LABEL = re.compile(r"^(.*?)\s*(\d)$")
 # The part of an epiphany's game name that tells it apart, such as "Unbound" in "Flicker Blade (Unbound)".
 _GAME_NAME_PART = re.compile(r"\((.+)\)$")
+# The potentials colour legend, which starts "Purple: Main Damage Boosts", and one of its lines.
+_LEGEND = re.compile(r"^\s*purple\s*:", re.IGNORECASE)
+_LEGEND_LINE = re.compile(r"^\s*(purple|gold|blue)\s*:\s*(.+?)\s*$", re.IGNORECASE)
+# An ego manifestation note's level line, "E1:" or a bare "E1", but not "E2's damage" inside a note.
+_EGO_LEVEL = re.compile(r"^\s*E[1-6](?:\s*:|\s*$)", re.MULTILINE)
+# The potentials band's own headings, such as "Potential Priority:" and "Ego Menifestation:", which the page title replaces.
+_POTENTIALS_HEADING = re.compile(r"potential|ego m[ae]nifestation", re.IGNORECASE)
+POTENTIALS_TITLE = "Potentials & Ego"
 
 # Two picture hashes this close (out of 256 bits) are the same picture, re-encoded or resized by the sheet.
 PICTURE_LABEL_DISTANCE = 12
@@ -245,7 +257,8 @@ def build(ctx: Context) -> TargetResult:
         ctx: The run context.
 
     Returns:
-        One JSON file per guide, the module that lists them, a summary, and what could not be identified as issues.
+        One JSON file per guide, the module that lists them, the potentials pictures as files created only when missing, a summary,
+        and what could not be identified as issues.
     """
     overrides = ctx.overrides(NAME)
     cache = ctx.client.root / ".cache" / "guides"
@@ -265,6 +278,7 @@ def build(ctx: Context) -> TargetResult:
     decks = _DeckPictures()
     issues: list[Issue] = []
     files: dict[Path, bytes] = {}
+    new_files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
 
@@ -277,7 +291,8 @@ def build(ctx: Context) -> TargetResult:
         grid = parse_grid(fetcher.text(TAB_URL.format(gid=gid)))
         illustrations, card_ids = _card_candidates(ctx, own_cards.get(str(res_id), []))
         cards = _CachedCards(illustrations, card_ids, match_cache)
-        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, variants_of, decks, overrides, labels, tab_name)
+        guide_slug = slug(name, _SLUG_MAX_LENGTH)
+        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, variants_of, decks, overrides, labels, tab_name, guide_slug)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -287,7 +302,10 @@ def build(ctx: Context) -> TargetResult:
         if updated:
             guide["updated"] = updated
         guide["sections"] = sections
-        guides.append((slug(name, _SLUG_MAX_LENGTH), name, guide))
+        guides.append((guide_slug, name, guide))
+        for file_name, download in builder.pictures.items():
+            if wanted(ctx, POTENTIALS_DIR / file_name):
+                new_files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
 
     # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
     text_cache_path = cache / CARD_TEXT_CACHE
@@ -320,7 +338,7 @@ def build(ctx: Context) -> TargetResult:
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
-    return TargetResult(files, f"{len(guides)} guides", issues)
+    return TargetResult(files, f"{len(guides)} guides, {len(new_files)} potentials picture(s) to add", issues, new_files=new_files)
 
 
 def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
@@ -510,7 +528,7 @@ class _GuideBuilder:
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
                  sift_cards: _CachedSift, card_names: dict[str, str], variants_of, decks: _DeckPictures, overrides: Overrides,
-                 labels: _PictureLabels, tab_name: str):
+                 labels: _PictureLabels, tab_name: str, guide_slug: str):
         """
         Args:
             ctx: The run context.
@@ -525,6 +543,7 @@ class _GuideBuilder:
             overrides: The guides overrides, whose entries can label one cell as "<tab>!<cell>".
             labels: Labels by picture, which also collect what nothing identified.
             tab_name: The sheet tab, used in cell override keys and references.
+            guide_slug: The guide's id, which names its potentials picture.
         """
         self.ctx = ctx
         self.downloads = downloads
@@ -538,6 +557,9 @@ class _GuideBuilder:
         self.overrides = overrides
         self.labels = labels
         self.tab_name = tab_name
+        self.guide_slug = guide_slug
+        # File name -> picture, for the pictures this guide ships (its potentials tree).
+        self.pictures: dict[str, _Download] = {}
 
     def sections(self, grid: dict[tuple[int, int], Cell]) -> tuple[list[dict], str | None]:
         """
@@ -553,8 +575,8 @@ class _GuideBuilder:
         skipped = {ref for ref, entry in self.overrides.entries.items() if entry.get("skip")}
         for band in _bands(grid):
             band = [cell for cell in band if f"{self.tab_name}!{cell.ref}" not in skipped]
-            blocks: list[dict] = []
-            title = None
+            blocks, band = self._potentials(band)
+            title = POTENTIALS_TITLE if blocks else None
             for panel in _panels(band):
                 panel_title, panel_blocks, title_shown = self._panel(panel)
                 if title is None:
@@ -568,6 +590,41 @@ class _GuideBuilder:
                 continue
             sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
         return _tidy_sections(sections)
+
+    def _potentials(self, band: list[Cell]) -> tuple[list[dict], list[Cell]]:
+        """
+        The potentials block, when the band holds the colour legend.
+
+        Args:
+            band: The band's cells.
+
+        Returns:
+            The potentials block followed by any extra legend lines as prose, and the cells it did not use. No blocks and the
+            whole band when there is no legend. The tree is the picture in the legend's panel, on its row or the one above.
+        """
+        legend = next((cell for cell in band if _LEGEND.match(cell.text)), None)
+        if legend is None:
+            return [], band
+        tree = next((cell for cell in band if cell.images and _panel_index(cell.col) == _panel_index(legend.col) and legend.row - 1 <= cell.row <= legend.row), None)
+        ego = next((cell for cell in band if _EGO_LEVEL.search(cell.text)), None)
+        colours, extra = [], []
+        for line in legend.text.split("\n"):
+            if match := _LEGEND_LINE.match(line):
+                colours.append({"colour": match.group(1).lower(), "text": {"en": self.ctx.text(match.group(2), soften=True, sentences=False)}})
+            elif line.strip():
+                extra.append(line.strip())
+        # Levels are numbered in the order they are written, as some tabs label E5 as "E3".
+        notes = _EGO_LEVEL.split(ego.text) if ego else [""]
+        block = {"type": "potentials", "image": None, "legend": colours,
+                 "ego": [{"level": level, "text": {"en": self.ctx.text(note.strip(), soften=True, sentences=False)}} for level, note in enumerate(notes[1:], 1)]}
+        if tree:
+            block["image"] = f"{self.guide_slug}.webp"
+            self.pictures[block["image"]] = self.downloads.get(tree.images[0])
+        if notes[0].strip():
+            extra.append(notes[0].strip())
+        used = {cell.ref for cell in (legend, tree, ego) if cell}
+        rest = [cell for cell in band if cell.ref not in used and not (cell.text and len(cell.text) <= _LABEL_MAX_LENGTH and _POTENTIALS_HEADING.search(cell.text))]
+        return [block, *([self._prose("\n".join(extra))] if extra else [])], rest
 
     def _panel(self, cells: list[Cell]) -> tuple[str | None, list[dict], bool]:
         """
@@ -1075,8 +1132,13 @@ def _panels(band: list[Cell]) -> list[list[Cell]]:
     """
     panels: dict[int, list[Cell]] = {}
     for cell in band:
-        panels.setdefault(max(cell.col - 1, 0) // PANEL_WIDTH, []).append(cell)
+        panels.setdefault(_panel_index(cell.col), []).append(cell)
     return [panels[index] for index in sorted(panels)]
+
+
+def _panel_index(col: int) -> int:
+    """Which side-by-side panel a column falls in, counting from 0 at column B."""
+    return max(col - 1, 0) // PANEL_WIDTH
 
 
 def _rows(cells: list[Cell]) -> list[list[Cell]]:
