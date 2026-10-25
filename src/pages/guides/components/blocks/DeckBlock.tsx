@@ -73,7 +73,7 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
               <span className="leading-relaxed text-[#b3b3b3]">
                 {card.epiphany && localized(card.epiphany.text, lang)}
                 {card.extra && (
-                  <span className="block text-[#fcd34d]">
+                  <span className={`block ${card.extra.god ? 'text-[#fcd34d]' : 'text-[#cbd5e1]'}`}>
                     {card.extra.god ? `✦ ${t('guides.divine')}: ` : ''}
                     {localized(card.extra.text, lang)}
                   </span>
