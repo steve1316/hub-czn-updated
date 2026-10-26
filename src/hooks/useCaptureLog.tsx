@@ -5,7 +5,7 @@ import { useApiPort } from '@/hooks/useApiPort'
 import type { CaptureLogMessage } from '@/lib/types'
 
 /** Queries that read the live snapshot, refetched when the sidecar says it was updated. */
-export const SNAPSHOT_QUERY_KEYS = [['fragments'], ['combatants'], ['status']] as const
+export const SNAPSHOT_QUERY_KEYS = [['fragments'], ['combatants'], ['status'], ['rescue-records']] as const
 
 /** How long saves must go quiet before the snapshot queries refetch. */
 const REFETCH_DEBOUNCE_MS = 500

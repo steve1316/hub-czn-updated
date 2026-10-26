@@ -137,3 +137,13 @@ def test_each_save_records_when_the_session_started(addon, tmp_path):
     doc = _load(tmp_path)
     assert doc["session_start"] == addon.session_start
     assert doc["pool_fetches"]["gacha_pickup_combatant_30115"] >= doc["session_start"]
+
+
+def test_manager_pushes_a_snapshot_updated_event_for_rescue_saves(tmp_path):
+    from api.capture.manager import CaptureManager
+
+    events = []
+    mgr = CaptureManager(output_folder=tmp_path, log_callback=lambda *a, **k: None, event_callback=events.append)
+    mgr._on_saved("rescue")
+    mgr._on_saved("battle")
+    assert [(e["type"], e["kind"]) for e in events] == [("snapshot_updated", "rescue")]
