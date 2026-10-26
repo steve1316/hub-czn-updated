@@ -352,7 +352,7 @@ export function CapturePage() {
   const { t } = useTranslation()
   const port = useApiPort()
   const qc = useQueryClient()
-  const { messages, clear } = useCaptureLog(port)
+  const { messages, clear } = useCaptureLog()
   const [autoScroll, setAutoScroll] = useState(true)
   const [debug, setDebug] = useState(false)
   const [region, setRegion] = useState<'global' | 'asia'>('global')
@@ -376,13 +376,6 @@ export function CapturePage() {
       logRef.current.scrollTop = logRef.current.scrollHeight
     }
   }, [messages, autoScroll])
-
-  useEffect(() => {
-    const last = messages[messages.length - 1]
-    if (last?.message.toLowerCase().includes('saved:') && last.message.toLowerCase().includes('memory fragments')) {
-      qc.invalidateQueries({ queryKey: ['fragments'] })
-    }
-  }, [messages, qc])
 
   useEffect(() => {
     if (captureStatus?.region) setRegion(captureStatus.region)
