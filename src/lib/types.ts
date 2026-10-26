@@ -184,11 +184,31 @@ export interface RescueStats {
   avg_pity_5: number
   avg_pity_4: number
   win_rate_50_50: number
+  /** 5-stars that were the featured one. */
+  wins_50_50: number
+  /** 5-stars that were not the featured one. */
+  losses_50_50: number
+  /** Percent of players expected to get fewer 5-stars than this banner gave, or null with no pulls. */
+  luck_percentile: number | null
+  /** The 5-star rate the luck percentile was worked out against. */
+  assumed_rate: number
+  /** True while the rate is an assumption rather than one read from the game. */
+  rate_assumed: boolean
   resources_spent: number
 }
 
 export interface RescueBanner {
   banner_name: string
+  /** Every pool id whose records are in this banner. */
+  pool_ids: string[]
+  /** Pulls since the last 5-star. */
+  pity_current: number
+  /** Whether `pity_current` came from the game or was counted from the stored records. */
+  pity_source: 'server' | 'computed'
+  /** Unix time of the latest history page received for this banner, or null if never. */
+  last_refreshed: number | null
+  /** True when the banner's history was not refreshed in the latest capture session. */
+  stale: boolean
   pulls: RescuePull[]
   stats: RescueStats
 }

@@ -94,6 +94,32 @@ function PortraitGrid({ pulls }: { pulls: RescuePull[] }) {
   )
 }
 
+/** Props for FreshnessLine. */
+interface FreshnessLineProps {
+  banner: RescueBanner
+}
+
+/**
+ * Shows when a banner's history last arrived, and a Stale marker when the latest capture did not refresh it.
+ *
+ * @param props - The banner to describe.
+ * @returns The line element.
+ */
+function FreshnessLine({ banner }: FreshnessLineProps) {
+  const { t } = useTranslation()
+  const when = banner.last_refreshed ? new Date(banner.last_refreshed * 1000).toLocaleString(i18n.language) : null
+  return (
+    <div className="flex items-center gap-2 text-xs text-[#b3b3b3]">
+      {banner.stale && (
+        <Badge variant="secondary" title={t('rescue.staleTip')} className="text-[10px] h-4 px-1 bg-[#3b2a12] text-[#fbbf24]">
+          {t('rescue.stale')}
+        </Badge>
+      )}
+      <span>{when ? t('rescue.refreshed', { when }) : t('rescue.neverRefreshed')}</span>
+    </div>
+  )
+}
+
 function BannerView({ banner }: { banner: RescueBanner }) {
   const { t } = useTranslation()
   const [rarityFilter, setRarityFilter] = useState<RarityFilterValue>(0)
@@ -113,6 +139,8 @@ function BannerView({ banner }: { banner: RescueBanner }) {
 
   return (
     <div className="flex flex-col gap-6">
+      <FreshnessLine banner={banner} />
+
       {/* Stats + Pie */}
       <div className="flex gap-6 p-4 rounded-lg bg-[#181818] border border-[#282828]">
         <div className="flex-1 flex flex-col gap-2 justify-center">
@@ -122,6 +150,15 @@ function BannerView({ banner }: { banner: RescueBanner }) {
           <StatRow label={t('rescue.stats.fourStar')} value={stats.four_star} />
           <StatRow label={t('rescue.stats.avgPity5')} value={stats.avg_pity_5} />
           <StatRow label={t('rescue.stats.avgPity4')} value={stats.avg_pity_4} />
+          <StatRow label={t('rescue.stats.pityNow')} value={`${banner.pity_current} (${banner.pity_source === 'server' ? t('rescue.stats.pityServer') : t('rescue.stats.pityComputed')})`} />
+          {stats.five_star > 0 && (
+            <StatRow label={t('rescue.stats.fiftyFifty')} value={`${stats.wins_50_50} / ${stats.losses_50_50}`} />
+          )}
+          {stats.luck_percentile !== null && (
+            <div title={t('rescue.stats.luckTip', { rate: `${(stats.assumed_rate * 100).toFixed(1)}%` })}>
+              <StatRow label={t('rescue.stats.luck')} value={`${stats.luck_percentile}%`} />
+            </div>
+          )}
         </div>
         <div className="w-40 h-40">
           <ResponsiveContainer width="100%" height="100%">
@@ -260,6 +297,7 @@ export function RescuePage() {
       <div className="p-8 text-[#b3b3b3]">
         <p className="text-lg text-[#ffffff] mb-2">{t('rescue.title')}</p>
         <p className="text-sm">{t('rescue.empty')}</p>
+        <p className="text-sm mt-2">{t('rescue.howTo')}</p>
       </div>
     )
   }
@@ -301,6 +339,8 @@ export function RescuePage() {
         </div>
       </div>
 
+      <p className="text-xs text-[#b3b3b3] px-3 py-2 rounded-lg bg-[#181818] border border-[#282828]">{t('rescue.howTo')}</p>
+
       {/* Banner tabs */}
       <div className="flex gap-1 border-b border-[#282828] pb-0">
         {banners.map((b, i) => (
@@ -315,6 +355,7 @@ export function RescuePage() {
             }`}
           >
             {b.banner_name}
+            {b.stale && <span title={t('rescue.staleTip')} className="ml-2 inline-block w-2 h-2 rounded-full bg-[#fbbf24]" />}
           </button>
         ))}
       </div>
