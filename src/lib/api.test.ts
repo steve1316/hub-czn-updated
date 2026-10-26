@@ -105,4 +105,18 @@ describe('request errors', () => {
     expect(api.isNotFound(err)).toBe(true)
     expect(api.isNotFound(new Error('boom'))).toBe(false)
   })
+  it('treats "No data loaded" as nothing captured yet, whatever the status', async () => {
+    const api = await freshApi()
+    for (const status of [400, 404, 422]) {
+      vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ detail: 'No data loaded. Call /api/load first.' }), { status })))
+      expect(api.isNoData(await api.api.fragments().catch(e => e))).toBe(true)
+    }
+  })
+
+  it('does not treat a real failure as nothing captured yet', async () => {
+    const api = await freshApi()
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ detail: 'boom' }), { status: 500 })))
+    expect(api.isNoData(await api.api.fragments().catch(e => e))).toBe(false)
+    expect(api.isNoData(new TypeError('Failed to fetch'))).toBe(false)
+  })
 })
