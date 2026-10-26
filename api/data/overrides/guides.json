@@ -3,7 +3,12 @@
   "_tabs": {
     "Babybell": 1028
   },
-  "_pictures": {},
+  "_pictures": {
+    "98701ad00de890f495fa03ee216d32f552f328bb286a74c47833399a249e1639": {"charResId": 1003},
+    "1070017d492f98369036007da15f1b7818336861d246e30347238c32292e04a4": {"charResId": 1057},
+    "400190ac076e3cc739a3227325532a5b28d32cb332d332e339c3180398764001": {"charResId": 30085},
+    "0090060013981234023422b023b4217c2c1a041a407d44bd453d032d037c0240": {"skip": true}
+  },
   "_sections": {},
   "Amir!B3": {
     "epiphany": 1,
