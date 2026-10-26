@@ -8,7 +8,8 @@ const en = {
     retry: 'Try again',
   },
   tips: {
-    gs: 'Gear Score — measures how well a gear piece rolled relative to its maximum potential (0–100).',
+    gs: 'Gear Score — how well a piece\'s substats rolled. A perfect Legendary piece scores about 70.',
+    score: 'Score — the Gear Score weighted by your scoring priorities, so pieces with the stats you care about rank higher.',
     potential: 'Potential — the possible final GS range from the levels the piece has left (low = worst rolls, high = best rolls for its rarity).',
     crate: 'Crit Rate — probability that an attack deals critical damage.',
     cdmg: 'Crit Damage — bonus damage multiplier applied on critical hits.',
@@ -76,7 +77,7 @@ const en = {
     col: {
       slot: 'Slot', set: 'Set', level: '+Lvl', main: 'Main',
       sub1: 'Sub1', sub2: 'Sub2', sub3: 'Sub3', sub4: 'Sub4',
-      gs: 'GS', potential: 'Potential', equipped: 'Equipped',
+      gs: 'GS', score: 'Score', potential: 'Potential', equipped: 'Equipped',
     },
   },
   combatants: {

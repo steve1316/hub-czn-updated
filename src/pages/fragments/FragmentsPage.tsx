@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { api, assetUrl, isNoData, ApiError } from '@/lib/api'
 import { EmptyState } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { MemoryFragment, SetInfo } from '@/lib/types'
+import type { MemoryFragment, SetInfo, Stat } from '@/lib/types'
 import {
   Table, TableBody, TableCell, TableHead,
   TableHeader, TableRow,
@@ -13,6 +13,7 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { InfoPopover } from '@/components/ui/info-popover'
 import { ChevronUp, ChevronDown, ChevronsUpDown, Layers } from 'lucide-react'
+import { compareFragments, type SortDir } from './fragment-sort'
 
 const RARITY_COLOR: Record<number, string> = {
   1: '#a8a29e',
@@ -28,9 +29,13 @@ function GsCell({ gearScore, priorityScore }: { gearScore: number; priorityScore
   )
 }
 
-function SubCell({ text }: { text: string | undefined }) {
-  if (!text) return <span className="text-[#8a8a8a]">—</span>
-  return <span className="text-[#b3b3b3] text-xs">{text}</span>
+function StatCell({ stat }: { stat: Stat | null | undefined }) {
+  if (!stat) return <span className="text-[#8a8a8a]">—</span>
+  return (
+    <span className="text-xs">
+      <span className="text-[#b3b3b3]">{stat.name}</span> <span className="text-[#ffffff]">{stat.formatted}</span>
+    </span>
+  )
 }
 
 function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
@@ -42,25 +47,6 @@ function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
       className="w-8 h-8 object-contain shrink-0"
     />
   )
-}
-
-type SortDir = 'asc' | 'desc'
-
-function getSortValue(f: MemoryFragment, key: string): string | number {
-  switch (key) {
-    case 'slot':      return f.slot_num
-    case 'set':       return f.set_name
-    case 'level':     return f.level
-    case 'main':      return f.main_stat?.formatted ?? ''
-    case 'sub1':      return f.substats[0]?.formatted ?? ''
-    case 'sub2':      return f.substats[1]?.formatted ?? ''
-    case 'sub3':      return f.substats[2]?.formatted ?? ''
-    case 'sub4':      return f.substats[3]?.formatted ?? ''
-    case 'gs':        return f.priority_score > 0 ? f.priority_score : f.gear_score
-    case 'potential': return f.potential_low
-    case 'equipped':  return f.equipped_to ?? ''
-    default:          return ''
-  }
 }
 
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
@@ -102,18 +88,9 @@ export function FragmentsPage() {
     }
   }
 
-  const sorted = sortKey
-    ? [...fragments].sort((a, b) => {
-        const av = getSortValue(a, sortKey)
-        const bv = getSortValue(b, sortKey)
-        if (typeof av === 'number' && typeof bv === 'number') {
-          return sortDir === 'asc' ? av - bv : bv - av
-        }
-        return sortDir === 'asc'
-          ? String(av).localeCompare(String(bv))
-          : String(bv).localeCompare(String(av))
-      })
-    : fragments
+  const sorted = sortKey ? [...fragments].sort((a, b) => compareFragments(a, b, sortKey, sortDir)) : fragments
+  // The score column shows the weighted score once scoring weights are set, so its name and tip follow
+  const weighted = fragments.some(f => f.priority_score > 0)
 
   if (isLoading) {
     return <div className="p-8 text-[#b3b3b3]">{t('fragments.loading')}</div>
@@ -141,13 +118,13 @@ export function FragmentsPage() {
     { key: 'sub2',      label: t('fragments.col.sub2') },
     { key: 'sub3',      label: t('fragments.col.sub3') },
     { key: 'sub4',      label: t('fragments.col.sub4') },
-    { key: 'gs',        label: t('fragments.col.gs'),        info: <InfoPopover content={t('tips.gs')} /> },
+    { key: 'gs',        label: t(weighted ? 'fragments.col.score' : 'fragments.col.gs'), info: <InfoPopover content={t(weighted ? 'tips.score' : 'tips.gs')} /> },
     { key: 'potential', label: t('fragments.col.potential'), info: <InfoPopover content={t('tips.potential')} /> },
     { key: 'equipped',  label: t('fragments.col.equipped') },
   ]
 
   return (
-    <div className="p-6 flex flex-col gap-4">
+    <div className="p-6 flex flex-col gap-4 h-full">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold text-[#ffffff]">{t('fragments.title')}</h1>
         <Badge variant="secondary" className="bg-[#181818] text-[#b3b3b3]">
@@ -155,9 +132,9 @@ export function FragmentsPage() {
         </Badge>
       </div>
 
-      <div className="rounded-md border border-[#282828] overflow-hidden">
-        <Table>
-          <TableHeader>
+      <div className="flex-1 min-h-0 rounded-md border border-[#282828] overflow-hidden">
+        <Table containerClassName="h-full overflow-auto">
+          <TableHeader className="sticky top-0 z-10 bg-[#121212]">
             <TableRow className="bg-[#121212] hover:bg-[#121212] border-[#282828]">
               {COLS.map(col => (
                 <TableHead key={col.key} className="text-[#b3b3b3] text-xs font-medium h-9 px-3">
@@ -189,12 +166,12 @@ export function FragmentsPage() {
                   </span>
                 </TableCell>
                 <TableCell className="text-[#ffffff] py-1">+{f.level}</TableCell>
-                <TableCell className="text-[#ffffff] py-1 text-xs">
-                  {f.main_stat?.formatted ?? '—'}
+                <TableCell className="py-1 whitespace-normal">
+                  <StatCell stat={f.main_stat} />
                 </TableCell>
                 {[0, 1, 2, 3].map(i => (
-                  <TableCell key={i} className="py-1">
-                    <SubCell text={f.substats[i]?.formatted} />
+                  <TableCell key={i} className="py-1 whitespace-normal">
+                    <StatCell stat={f.substats[i]} />
                   </TableCell>
                 ))}
                 <TableCell className="py-1">
