@@ -20,6 +20,7 @@ from scripts.datagen.targets import (
     monster_catalog,
     neutral_cards,
     persona_engravings,
+    substat_rolls,
 )
 
 ALL_TARGETS: list[ModuleType] = [
@@ -29,6 +30,7 @@ ALL_TARGETS: list[ModuleType] = [
     items,
     neutral_cards,
     persona_engravings,
+    substat_rolls,
     epiphanies,
     glossary,
     monster_catalog,
