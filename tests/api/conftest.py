@@ -37,3 +37,18 @@ def reset_optimizer_state():
     state.capture_running = False
     state.optimizer.char_weights = {}
     state.optimizer.priorities = {name: 0 for name in ALL_STAT_NAMES}
+
+
+@pytest.fixture(autouse=True)
+def isolated_capture_settings(tmp_path, monkeypatch):
+    """Keep capture settings off the real snapshots folder."""
+    from api.capture import settings as capture_settings
+    monkeypatch.setattr(capture_settings, "SETTINGS_PATH", tmp_path / "capture_settings.json")
+    from api.state import state
+    state.capture_auto_started = False
+    yield
+    state.capture_auto_started = False
+    # Auto-start tests push log lines, so leave the shared queue empty for tests that read it.
+    while not state.log_queue.empty():
+        state.log_queue.get_nowait()
+    state.log_tail.clear()

@@ -1,7 +1,7 @@
 import type {
   ApiStatus, GameData, LoadResponse, MemoryFragment,
   SetupStatus, SetupActionResponse, RemoveCertResponse, ClearRedirectResponse, CaptureStatus,
-  CaptureStartRequest, CaptureStopResponse, RescueBanner,
+  CaptureStartRequest, CaptureStopResponse, CaptureSettings, RescueBanner,
   Combatant, CombatantStats, ScoringPriorities,
   OptimizerConfig, EquipmentSet, Monster, AboutInfo, CharPreset,
   SimulateRequest, SimulateDamageResponse, DeckInfo,
@@ -170,6 +170,11 @@ export const api = {
 
   captureSetRegion: (region: 'global' | 'asia') =>
     request<SetupActionResponse>('/api/capture/set-region', { method: 'POST', body: JSON.stringify({ region }) }),
+
+  captureSettings: () => request<CaptureSettings>('/api/capture/settings'),
+
+  captureSetSettings: (body: { auto_start: boolean }) =>
+    request<CaptureSettings>('/api/capture/settings', { method: 'POST', body: JSON.stringify(body) }),
 
   captureOpenSnapshots: () =>
     request<SetupActionResponse>('/api/capture/open-snapshots', { method: 'POST' }),

@@ -8,6 +8,7 @@ Vribbels-CZN-Optimizer, MIT, (c) 2025 Vorbroker, 2026 Ikkoru.
 
 import json
 import gzip
+import time
 import zlib
 from datetime import datetime
 from pathlib import Path
@@ -48,6 +49,11 @@ RESCUE_KEYS = (
 # Client commands whose reply carries no detail, so the request is what says which pieces changed.
 CMD_DISASSEMBLE = "item/disassemble_piece"
 CMD_UNEQUIP = "item/unequip_piece"
+
+# Pull tracker commands. History pages name their banner in the request, and the pity list has its own reply key.
+CMD_GACHA_HISTORY = "gacha/history"
+CMD_GACHA_LIST = "gacha/get_list"
+PITY_KEY = "gacha_pity_entity_list"
 
 # Reply keys that state what a holding now is, with `doc.amount` as the total.
 TOTALS_KEYS = ("add_result", "item_result", "dec_result")
@@ -91,7 +97,9 @@ def _docs(rows) -> list:
 
 
 def _rescue_record_key(record: dict) -> str:
-    """Stable dedup key using only semantic fields, tolerating extra fields and type differences."""
+    """Stable dedup key. The server record id wins when there is one, otherwise the semantic fields are used."""
+    if record.get("id") not in (None, ""):
+        return f"id|{record['id']}"
     gacha_id = str(record.get("gacha_id", ""))
     try:
         create_at = int(record.get("createAt", 0))
@@ -147,6 +155,10 @@ class Addon:
         self.dispatch = CommandDispatch()
         self.dispatch.register(CMD_DISASSEMBLE, self._on_disassemble)
         self.dispatch.register(CMD_UNEQUIP, self._on_unequip)
+        self.dispatch.register(CMD_GACHA_HISTORY, self._on_gacha_history)
+        self.dispatch.register(CMD_GACHA_LIST, self._on_gacha_list)
+        # When this capture started, so the page can tell which banners were refreshed during it.
+        self.session_start = int(time.time())
         # Set by a delta so the snapshot is written once at the end of the frame.
         self._save_pending = False
         # The `last_login_tm` of the account's current game launch. A change means a new launch.
@@ -736,45 +748,101 @@ class Addon:
         self.log_callback("Game relaunched - starting a new snapshot")
         self.saved_path = None
 
-    def _save_rescue_data(self, key: str, records):
-        """Save rescue/gacha records, accumulating across pages and sessions."""
-        ts = datetime.now().strftime("%Y%m%d_%H%M%S")
-        if not self.rescue_path:
-            # Continue from the most recent existing file instead of starting fresh
-            existing = sorted(self.output_dir.glob("rescue_records_*.json"),
-                              key=lambda p: p.stat().st_mtime)
-            self.rescue_path = existing[-1] if existing else self.output_dir / f"rescue_records_{ts}.json"
+    def _load_rescue(self) -> dict:
+        """
+        Read the rescue file this capture continues, picking the most recent one on first use.
 
-        existing = []
+        Returns:
+            The stored document, or an empty one with no records.
+        """
+        if not self.rescue_path:
+            existing = sorted(self.output_dir.glob("rescue_records_*.json"), key=lambda p: p.stat().st_mtime)
+            self.rescue_path = existing[-1] if existing else self.output_dir / f"rescue_records_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         if self.rescue_path.exists():
             try:
-                with open(self.rescue_path) as f:
-                    existing_data = json.load(f)
-                    existing = existing_data.get("records", [])
+                with open(self.rescue_path, encoding="utf-8") as f:
+                    doc = json.load(f)
+                if isinstance(doc, dict):
+                    doc.setdefault("records", [])
+                    return doc
             except Exception:
                 pass
+        return {"records": []}
 
-        existing_strs = {_rescue_record_key(r) for r in existing}
-        new_records = list(existing)
-        for record in (records if isinstance(records, list) else [records]):
-            key_str = _rescue_record_key(record)
-            if key_str not in existing_strs:
-                new_records.append(record)
-                existing_strs.add(key_str)
+    def _write_rescue(self, doc: dict, key: str):
+        """
+        Write the rescue document and tell the UI.
 
-        save_data = {
-            "capture_time": datetime.now().isoformat(),
-            "source_key": key,
-            "records": new_records,
-        }
-
-        with open(self.rescue_path, "w") as f:
-            json.dump(save_data, f, indent=2)
-
-        self.log_callback(
-            f"[RESCUE] Saved: {len(new_records)} rescue records -> {self.rescue_path.name}"
-        )
+        Args:
+            doc: The full document to store.
+            key: The reply key the latest change came from.
+        """
+        doc["capture_time"] = datetime.now().isoformat()
+        doc["source_key"] = key
+        doc["session_start"] = self.session_start
+        with open(self.rescue_path, "w", encoding="utf-8") as f:
+            json.dump(doc, f, indent=2)
+        self.log_callback(f"[RESCUE] Saved: {len(doc['records'])} rescue records -> {self.rescue_path.name}")
         self.on_saved("rescue")
+
+    def _save_rescue_data(self, key: str, records):
+        """Save rescue/gacha records, accumulating across pages and sessions and never dropping old ones."""
+        doc = self._load_rescue()
+        seen = {_rescue_record_key(r) for r in doc["records"]}
+        fetches = doc.setdefault("pool_fetches", {})
+        now = int(time.time())
+        for record in records if isinstance(records, list) else [records]:
+            if not isinstance(record, dict):
+                continue
+            if record.get("gacha_id"):
+                fetches[str(record["gacha_id"])] = now
+            key_str = _rescue_record_key(record)
+            if key_str not in seen:
+                doc["records"].append(record)
+                seen.add(key_str)
+        self._write_rescue(doc, key)
+
+    def _on_gacha_history(self, data: dict, request: PendingRequest):
+        """
+        Name the banner of a history page. The records are saved, and the banner marked refreshed, afterwards by the generic rescue handling.
+
+        Args:
+            data: The `gacha/history` reply.
+            request: The request it answers, whose `id` param is the banner.
+        """
+        pool = request.params.get("id")
+        if not pool:
+            return
+        pool = str(pool)
+        for key in RESCUE_KEYS:
+            records = data.get(key)
+            if isinstance(records, list):
+                for record in records:
+                    if isinstance(record, dict) and not record.get("gacha_id"):
+                        record["gacha_id"] = pool
+
+    def _on_gacha_list(self, data: dict, request: PendingRequest):
+        """
+        Keep the server's pity counters, one entry per pity group.
+
+        Args:
+            data: The `gacha/get_list` reply.
+            request: The request it answers.
+        """
+        entries = data.get(PITY_KEY)
+        if not isinstance(entries, list):
+            return
+        doc = self._load_rescue()
+        pity = doc.setdefault("pity", {})
+        for entry in entries:
+            if isinstance(entry, dict) and entry.get("res_id"):
+                pity[str(entry["res_id"])] = {
+                    "pity_ssr_count": entry.get("pity_ssr_count", 0),
+                    "pity_sr_count": entry.get("pity_sr_count", 0),
+                    "mileage": entry.get("mileage", 0),
+                    "updated_at": entry.get("updateAt"),
+                }
+        self._write_rescue(doc, PITY_KEY)
 
     def _on_battle_info(self, battle_info: dict):
         """Save enemy stats when a new battle begins."""

@@ -448,7 +448,7 @@ class CaptureManager:
             self.status_callback("[OK] Data Captured!")
         if self.live_update_callback:
             self.live_update_callback()
-        if kind == "fragments" and self.event_callback:
+        if kind in ("fragments", "rescue") and self.event_callback:
             self.event_callback({"type": "snapshot_updated", "kind": kind, "timestamp": time.strftime("%H:%M:%S")})
 
     def _run_proxy(self, real_ip: str):

@@ -53,6 +53,8 @@ class AppState:
         # Capture state
         self.capture_running: bool = False
         self.capture_region: str = "global"
+        # True when the running capture was started by the auto-start setting, not the Start button
+        self.capture_auto_started: bool = False
         self.rescue_file_path: str | None = None
         self.log_queue: queue.SimpleQueue = queue.SimpleQueue()
         # Recent log lines kept for /api/capture/log. The WebSocket drains log_queue, so this copy is what stays readable.
