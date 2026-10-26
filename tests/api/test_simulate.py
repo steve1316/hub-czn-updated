@@ -39,18 +39,6 @@ def test_simulate_response_has_no_old_total_fields():
     assert "total_effective_damage" not in fields
 
 
-def test_normal_damage_formula():
-    """normal_damage = ATK * (eff_value/100) * morale_mult * buff_mult * def_reduction."""
-    atk = 1000.0
-    eff_value = 250
-    morale_mult = 1.4
-    buff_mult = 1.0
-    def_reduction = 300 / (300 + 31)
-    expected = round(atk * (eff_value / 100) * morale_mult * buff_mult * def_reduction, 1)
-    # 1000 * 2.5 * 1.4 * 1.0 * (300/331) ≈ 3172.2
-    assert abs(expected - 3172.2) < 1.0
-
-
 def test_avg_is_weighted_average():
     """avg = normal*(1-crate/100) + crit*(crate/100)."""
     normal = 1000.0
@@ -84,3 +72,39 @@ def test_simulate_no_data_returns_422():
         "fortitude": False,
     })
     assert resp.status_code == 422
+
+
+def _stub_one_card_deck(monkeypatch):
+    """Load a fake character with 1000 ATK, no crits and one 100% damage card, so a card's damage is 1000 x the damage that passes."""
+    from types import SimpleNamespace
+    import api.routes.simulate as sim
+
+    optimizer = SimpleNamespace(
+        character_info={"Tester": SimpleNamespace(res_id=1)},
+        characters={},
+        calculate_build_stats=lambda equipped, name: {"ATK": 1000.0, "CRate": 0.0, "CDmg": 150.0},
+        raw_data={"inventory": {"savedata": [{"id": 7, "char_res_id": 1, "point": 1, "card_datas": [{"res_id": "card_a"}]}]}},
+    )
+    monkeypatch.setattr(sim.state, "data_loaded", True)
+    monkeypatch.setattr(sim.state, "optimizer", optimizer)
+    monkeypatch.setattr(sim, "_resolve_card_db", lambda: ({"card_a": {"cost": 1, "link_skill_eff_id": ["e1"]}}, {"e1": {"eff": "SKILL_EFF_DMG", "eff_value": 100, "eff_count_value": 1}}, {}))
+    monkeypatch.setattr(sim, "_resolve_node_effects", lambda: {})
+    monkeypatch.setattr(sim, "_get_char_potential_nodes", lambda res_id, raw: [])
+    monkeypatch.setattr(sim, "_get_card_name", lambda card_id: card_id)
+
+
+def test_simulate_uses_the_given_damage_decrease(monkeypatch):
+    _stub_one_card_deck(monkeypatch)
+    resp = TestClient(app).post("/api/simulate/damage", json={"char_name": "Tester", "monster_def": 220, "dmg_decrease": 0.2735})
+    assert resp.status_code == 200
+    assert resp.json()["def_reduction"] == round(1 - 0.2735, 4)
+    assert resp.json()["cards"][0]["normal_damage"] == round(1000 * (1 - 0.2735), 1)
+
+
+def test_simulate_estimates_the_decrease_from_def_without_one(monkeypatch):
+    from api.optimizer.expected_damage import default_damage_reduction
+
+    _stub_one_card_deck(monkeypatch)
+    resp = TestClient(app).post("/api/simulate/damage", json={"char_name": "Tester", "monster_def": 300})
+    assert resp.status_code == 200
+    assert resp.json()["def_reduction"] == round(1 - default_damage_reduction(300), 4)

@@ -7,6 +7,7 @@ import re
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
+from api.optimizer.expected_damage import damage_reduction
 from api.state import state
 import api.utils.text_lookup as text_lookup
 import api.utils.game_db as game_db
@@ -26,6 +27,7 @@ class SimulateDamageRequest(BaseModel):
     morale: int = Field(default=0, ge=0, le=50)
     use_sparks: bool = True
     monster_def: int = Field(default=20, ge=0, le=9999)
+    dmg_decrease: float = Field(default=0, ge=0, lt=1)  # the enemy's real damage decrease; 0 = estimate it from DEF
     frightened: bool = False          # Weaken: player debuff ×0.75 damage dealt (cs00_0003)
     exposed_stacks: int = Field(default=0, ge=0, le=20)  # Vulnerable: +50% dmg taken per stack (cs00_0002)
     fortitude: bool = False           # Damage Reduction: monster buff ×0.85 dmg taken (cs00_0062)
@@ -355,8 +357,8 @@ def simulate_damage(body: SimulateDamageRequest):
     # Expected damage factor: (crit% × crit_dmg%) + (non-crit% × 100%)
     crit_factor = (crate / 100) * (cdmg / 100) + (1 - crate / 100)
     morale_mult = 1 + (body.morale * MORALE_PCT_PER_STACK / 100)
-    # DEF damage reduction: same formula used for EHP (def / 300)
-    def_reduction = 300 / (300 + body.monster_def)
+    # Share of damage that gets through the enemy's damage decrease
+    def_reduction = 1 - damage_reduction(body.dmg_decrease, body.monster_def)
     # Combat status buff/debuff multipliers
     buff_mult = 1.0
     if body.frightened:
@@ -449,10 +451,6 @@ def simulate_damage(body: SimulateDamageRequest):
         # into the powerstep_define table, which stores per-power-step monster stat multipliers
         # (dmg_revise, hp_revise, cure_revise, shield_revise). The table scales MONSTER stats
         # by difficulty tier — it is NOT a multiplier on player card damage output. Excluded.
-        #
-        # The two other stat_formula constants (dmg_decrease_rate_0_value=-160,
-        # dmg_decrease_rate_curv_value=300) are parameters of the DEF reduction curve, which
-        # is already applied below as: def_reduction = 300 / (300 + monster_def). Confirmed.
         base_dmg = atk * (eff_value / 100)
         normal_dmg = base_dmg * morale_mult * buff_mult * def_reduction
         crit_dmg = base_dmg * (cdmg / 100) * morale_mult * buff_mult * def_reduction

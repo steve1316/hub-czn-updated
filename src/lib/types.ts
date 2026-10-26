@@ -382,6 +382,8 @@ export interface SimulateRequest {
   morale: number
   use_sparks: boolean
   monster_def: number
+  /** The enemy's real damage decrease as a fraction. 0 or missing means the sidecar estimates it from `monster_def`. */
+  dmg_decrease?: number
   frightened: boolean
   exposed_stacks: number
   fortitude: boolean
