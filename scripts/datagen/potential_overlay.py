@@ -1,8 +1,8 @@
 """
 Potentials tree overlay: read the colour of each node ring on a guide author's tree picture, and draw it on one clean tree.
 
-The author's picture is first registered to the clean tree with SIFT, so it can be any size or crop. Each node's position is then known and its ring colour is read.
-A picture that is too small or does not register gets the clean tree with no colours.
+The author's picture is first registered to the clean tree with SIFT, so it can be any size or crop.
+Each node's position is then known and its ring colour is read. A picture that is too small or does not register gets the clean tree with no colours.
 """
 
 from __future__ import annotations
@@ -44,7 +44,8 @@ MIN_SATURATION = 0.3
 MIN_VALUE = 0.3
 # Hue ranges in degrees.
 HUES = {"purple": (250, 335), "gold": (38, 70), "blue": (185, 250)}
-# The ring is read between these fractions of a node's radius, in this many steps with this many samples each. A node needs this share of one circle to agree on a colour.
+# The ring is read between these fractions of a node's radius, in this many steps with this many samples each.
+# A node needs this share of one circle to agree on a colour.
 RING_BAND = (0.65, 1.1)
 RING_STEPS = 19
 ANGLES = 72
