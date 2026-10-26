@@ -14,12 +14,12 @@ export function FilterSection({
   const { t } = useTranslation()
   return (
     <div className="flex flex-col gap-0.5">
-      <p className="mb-0.5 text-[11px] uppercase tracking-wide text-[#8a8a8a]">{label}</p>
+      <p className="mb-0.5 text-xs font-medium text-[#8a8a8a]">{label}</p>
       <button
         type="button"
         onClick={() => onChange(null)}
-        className={`rounded px-2 py-1 text-left text-xs transition-colors ${
-          value === null ? 'bg-[#c084fc] text-white' : 'text-[#888] hover:bg-[#222] hover:text-[#e5e7eb]'
+        className={`rounded px-2 py-1.5 text-left text-sm transition-colors ${
+          value === null ? 'bg-[#c084fc] font-semibold text-[#1a1022]' : 'text-[#b3b3b3] hover:bg-[#222] hover:text-[#e5e7eb]'
         }`}
       >
         {t('encyclopedia.all')}
@@ -29,8 +29,8 @@ export function FilterSection({
           key={opt}
           type="button"
           onClick={() => onChange(opt)}
-          className={`rounded px-2 py-1 text-left text-xs transition-colors ${
-            value === opt ? 'bg-[#c084fc] text-white' : 'text-[#888] hover:bg-[#222] hover:text-[#e5e7eb]'
+          className={`rounded px-2 py-1.5 text-left text-sm transition-colors ${
+            value === opt ? 'bg-[#c084fc] font-semibold text-[#1a1022]' : 'text-[#b3b3b3] hover:bg-[#222] hover:text-[#e5e7eb]'
           }`}
         >
           {opt}

@@ -82,7 +82,7 @@ export function EquipmentsTab() {
       {/* List */}
       <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
         {filtered.length === 0 ? (
-          <p className="p-4 text-xs text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
+          <p className="p-4 text-sm text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
         ) : (
           filtered.map(item => (
             <button
@@ -95,7 +95,7 @@ export function EquipmentsTab() {
             >
               <span className={`h-2 w-2 shrink-0 rounded-full border ${getItemRarityClassName(item.rarity)}`} />
               <span className="min-w-0 flex-1">
-                <span className="block truncate text-xs font-medium text-[#e5e7eb]">{item.name}</span>
+                <span className="block truncate text-sm font-medium text-[#e5e7eb]">{item.name}</span>
                 <span className="block text-[11px] text-[#8a8a8a]">{item.slot} · {item.rarity}</span>
               </span>
             </button>

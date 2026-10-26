@@ -401,11 +401,12 @@ const en = {
   cards: {
     title: 'Card Library',
     description: 'Browse all cards by character.',
-    search: 'Search name or ID…',
+    search: 'Search cards…',
     filterType: 'Type',
     character: 'Character',
     allChars: 'All characters',
     empty: 'No cards match the filters.',
+    loadError: "Couldn't load the card list.",
     count: '{{count}} cards',
     filter: {
       all: 'All',

@@ -68,7 +68,7 @@ export function EngravingsTab() {
       {/* List */}
       <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
         {filtered.length === 0 ? (
-          <p className="p-4 text-xs text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
+          <p className="p-4 text-sm text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
         ) : (
           filtered.map(e => (
             <button
@@ -83,7 +83,7 @@ export function EngravingsTab() {
                 <Badge>{e.eidolon}</Badge>
                 <Badge>{e.card_type}</Badge>
               </span>
-              <span className="block truncate text-xs text-[#cbd5e1]">{e.description}</span>
+              <span className="line-clamp-2 text-sm text-[#cbd5e1]">{e.description}</span>
             </button>
           ))
         )}

@@ -1,8 +1,9 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { BookOpen } from 'lucide-react'
-import { api } from '@/lib/api'
+import { BookOpen, TriangleAlert } from 'lucide-react'
+import { api, ApiError } from '@/lib/api'
+import { EmptyState, RetryButton } from '@/components/ui/empty-state'
 import type { CardEntry, CardCharacter } from '@/lib/types'
 
 const TYPE_COLORS: Record<string, string> = {
@@ -28,19 +29,17 @@ function TypeBadge({ type }: { type: string }) {
 }
 
 function CardRow({ card }: { card: CardEntry }) {
-  const shortId = card.card_id.replace(/^c_\d+_/, '')
   const coefficient = card.eff_value > 0 ? `${(card.eff_value / 100).toFixed(2)}× ATK` : '—'
 
   return (
     <tr className="border-b border-[#1e1e1e] hover:bg-[#1a1a1a] transition-colors">
       <td className="px-3 py-2">
-        <div className="text-[#e5e7eb] text-xs font-medium">
+        <div className="text-[#e5e7eb] text-sm font-medium">
           {card.name || <span className="text-[#8a8a8a] italic">unnamed</span>}
         </div>
-        <div className="text-[#8a8a8a] text-[11px] font-mono mt-0.5">{shortId}</div>
       </td>
       <td className="px-3 py-2 text-center">
-        <span className="text-[#e5e7eb] text-xs font-mono">{card.cost}</span>
+        <span className="text-[#e5e7eb] text-sm font-mono">{card.cost}</span>
       </td>
       <td className="px-3 py-2">
         <div className="flex flex-wrap gap-1">
@@ -50,10 +49,10 @@ function CardRow({ card }: { card: CardEntry }) {
           }
         </div>
       </td>
-      <td className="px-3 py-2 text-center font-mono text-xs text-[#e5e7eb]">
+      <td className="px-3 py-2 text-center font-mono text-sm text-[#e5e7eb]">
         {card.eff_value > 0 ? coefficient : <span className="text-[#8a8a8a]">—</span>}
       </td>
-      <td className="px-3 py-2 text-center text-xs text-[#e5e7eb]">
+      <td className="px-3 py-2 text-center text-sm text-[#e5e7eb]">
         {card.hits > 0 ? card.hits : <span className="text-[#8a8a8a]">—</span>}
       </td>
       <td className="px-3 py-2 text-center">
@@ -81,7 +80,7 @@ export function CardsTab() {
     staleTime: Infinity,
   })
 
-  const { data: allCards = [], isLoading } = useQuery<CardEntry[]>({
+  const { data: allCards = [], isLoading, error, refetch } = useQuery<CardEntry[]>({
     queryKey: ['cards', selectedChar],
     queryFn: () => api.cards(selectedChar ?? undefined),
     staleTime: Infinity,
@@ -115,14 +114,14 @@ export function CardsTab() {
         />
 
         <div className="flex flex-col gap-0.5">
-          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide mb-0.5">{t('cards.filterType')}</p>
+          <p className="text-[#8a8a8a] text-xs font-medium mb-0.5">{t('cards.filterType')}</p>
           {(['all', 'dmg', 'support'] as const).map(f => (
             <button
               key={f}
               type="button"
               onClick={() => setFilterType(f)}
-              className={`text-left text-xs px-2 py-1 rounded transition-colors ${
-                filterType === f ? 'bg-[#c084fc] text-white' : 'text-[#888] hover:text-[#e5e7eb] hover:bg-[#222]'
+              className={`text-left text-sm px-2 py-1.5 rounded transition-colors ${
+                filterType === f ? 'bg-[#c084fc] font-semibold text-[#1a1022]' : 'text-[#b3b3b3] hover:bg-[#222] hover:text-[#e5e7eb]'
               }`}
             >
               {t(`cards.filter.${f}`)}
@@ -131,12 +130,12 @@ export function CardsTab() {
         </div>
 
         <div className="flex flex-col gap-0.5">
-          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide mb-0.5">{t('cards.character')}</p>
+          <p className="text-[#8a8a8a] text-xs font-medium mb-0.5">{t('cards.character')}</p>
           <button
             type="button"
             onClick={() => setSelectedChar(null)}
-            className={`text-left text-xs px-2 py-1 rounded transition-colors ${
-              selectedChar === null ? 'bg-[#c084fc] text-white' : 'text-[#888] hover:text-[#e5e7eb] hover:bg-[#222]'
+            className={`text-left text-sm px-2 py-1.5 rounded transition-colors ${
+              selectedChar === null ? 'bg-[#c084fc] font-semibold text-[#1a1022]' : 'text-[#b3b3b3] hover:bg-[#222] hover:text-[#e5e7eb]'
             }`}
           >
             {t('cards.allChars')}
@@ -146,8 +145,8 @@ export function CardsTab() {
               key={c.char_res_id}
               type="button"
               onClick={() => setSelectedChar(c.char_res_id)}
-              className={`text-left text-xs px-2 py-1 rounded transition-colors truncate ${
-                selectedChar === c.char_res_id ? 'bg-[#c084fc] text-white' : 'text-[#888] hover:text-[#e5e7eb] hover:bg-[#222]'
+              className={`text-left text-sm px-2 py-1.5 rounded transition-colors truncate ${
+                selectedChar === c.char_res_id ? 'bg-[#c084fc] font-semibold text-[#1a1022]' : 'text-[#b3b3b3] hover:bg-[#222] hover:text-[#e5e7eb]'
               }`}
             >
               {c.name || `#${c.char_res_id}`}
@@ -162,6 +161,14 @@ export function CardsTab() {
           <div className="flex items-center justify-center h-full text-[#888] text-sm">
             {t('common.loading')}
           </div>
+        ) : error ? (
+          <EmptyState
+            icon={TriangleAlert}
+            title={t('cards.loadError')}
+            hint={error instanceof ApiError ? error.message : t('empty.serviceDown')}
+            action={<RetryButton onClick={() => refetch()} />}
+            className="h-full"
+          />
         ) : filtered.length === 0 ? (
           <div className="flex flex-col items-center justify-center h-full gap-3 text-[#8a8a8a]">
             <BookOpen size={36} />
