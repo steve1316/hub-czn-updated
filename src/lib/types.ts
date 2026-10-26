@@ -184,16 +184,14 @@ export interface RescueStats {
   avg_pity_5: number
   avg_pity_4: number
   win_rate_50_50: number
-  /** 5-stars that were the featured one. */
+  /** 50/50s that gave the featured 5-star. Only combatant rate-up banners have them. */
   wins_50_50: number
-  /** 5-stars that were not the featured one. */
+  /** 50/50s that gave another 5-star. The guaranteed featured 5-star after each loss is not counted. */
   losses_50_50: number
-  /** Percent of players expected to get fewer 5-stars than this banner gave, or null with no pulls. */
+  /** Percent of players expected to get fewer 5-stars than this banner gave, under the game's pity, or null with no pulls. */
   luck_percentile: number | null
-  /** The 5-star rate the luck percentile was worked out against. */
-  assumed_rate: number
-  /** True while the rate is an assumption rather than one read from the game. */
-  rate_assumed: boolean
+  /** The game's average 5-star rate per pull once pity is counted in. */
+  ssr_rate: number
   resources_spent: number
 }
 

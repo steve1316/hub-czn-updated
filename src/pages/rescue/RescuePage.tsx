@@ -151,11 +151,11 @@ function BannerView({ banner }: { banner: RescueBanner }) {
           <StatRow label={t('rescue.stats.avgPity5')} value={stats.avg_pity_5} />
           <StatRow label={t('rescue.stats.avgPity4')} value={stats.avg_pity_4} />
           <StatRow label={t('rescue.stats.pityNow')} value={`${banner.pity_current} (${banner.pity_source === 'server' ? t('rescue.stats.pityServer') : t('rescue.stats.pityComputed')})`} />
-          {stats.five_star > 0 && (
+          {stats.wins_50_50 + stats.losses_50_50 > 0 && (
             <StatRow label={t('rescue.stats.fiftyFifty')} value={`${stats.wins_50_50} / ${stats.losses_50_50}`} />
           )}
           {stats.luck_percentile !== null && (
-            <div title={t('rescue.stats.luckTip', { rate: `${(stats.assumed_rate * 100).toFixed(1)}%` })}>
+            <div title={t('rescue.stats.luckTip', { rate: `${(stats.ssr_rate * 100).toFixed(2)}%` })}>
               <StatRow label={t('rescue.stats.luck')} value={`${stats.luck_percentile}%`} />
             </div>
           )}

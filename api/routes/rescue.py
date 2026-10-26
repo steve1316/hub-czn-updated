@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import json
-from math import comb
+from functools import cache
 from pathlib import Path
 
 from api.frozen_path import add_vribbels_to_path
@@ -17,13 +17,17 @@ except ImportError:
 
 router = APIRouter()
 
-PITY_CAP = 70
 LOCAL_FACE_BASE = "/assets/game/faces/bookmark_face_character_map_{res_id}.png"
-# The 5-star rate used for the luck percentile. It is an assumption until a `gacha/get_rate` reply has been captured, so the page says so.
-ASSUMED_SSR_RATE = 0.015
+# The in-game Probability Guide: a 1% 5-star chance per pull, rising by 4.5% a pull from the 58th, and a sure 5-star on the 70th.
+SSR_BASE_RATE = 0.01
+SOFT_PITY_START = 58
+SOFT_PITY_STEP = 0.045
+PITY_CAP = 70
+# Only combatant rate-up banners have a 50/50. A partner rate-up has one 5-star, so every 5-star there is the featured one.
+COMBATANT_PITY_GROUP = "gacha_pity_pickup_combatant"
 # Which server pity group each kind of banner counts toward, as named by `gacha/get_list`. Checked in order.
 PITY_GROUPS = (
-    ("pickup_combatant", "gacha_pity_pickup_combatant"),
+    ("pickup_combatant", COMBATANT_PITY_GROUP),
     ("pickup_partner", "gacha_pity_pickup_supporter"),
     ("pickup_supporter", "gacha_pity_pickup_supporter"),
     ("supporter", "gacha_pity_general_supporter"),
@@ -99,22 +103,63 @@ def _expand_batch(record: dict) -> list[dict]:
     ]
 
 
-def _luck_percentile(five_stars: int, pulls: int, rate: float) -> float | None:
+@cache
+def _gap_odds() -> list[float]:
     """
-    How lucky a run of pulls was.
+    The chance that the next 5-star lands on each pull after the last one.
+
+    Returns:
+        The odds indexed by pull count, from 1 to `PITY_CAP`. Index 0 is unused.
+    """
+    odds = [0.0]
+    still_waiting = 1.0
+    for pull in range(1, PITY_CAP + 1):
+        rate = 1.0 if pull == PITY_CAP else SSR_BASE_RATE + SOFT_PITY_STEP * max(0, pull - SOFT_PITY_START + 1)
+        odds.append(still_waiting * rate)
+        still_waiting -= odds[-1]
+    return odds
+
+
+@cache
+def _ssr_rate() -> float:
+    """
+    The average 5-star rate once pity is counted in, which the game lists as 2.14343%.
+
+    Returns:
+        The chance of a 5-star per pull.
+    """
+    return 1 / sum(pull * odds for pull, odds in enumerate(_gap_odds()))
+
+
+@cache
+def _luck_percentile(five_stars: int, pulls: int) -> float | None:
+    """
+    How lucky a run of pulls was, under the game's pity curve.
 
     Args:
         five_stars: The 5-stars got.
-        pulls: The pulls made.
-        rate: The chance of a 5-star on each pull.
+        pulls: The pulls made, assumed to start right after a 5-star.
 
     Returns:
         The percent of players expected to get fewer 5-stars than this, counting ties as half. None when there are no pulls.
     """
     if pulls <= 0:
         return None
-    pmf = [comb(pulls, i) * rate**i * (1 - rate) ** (pulls - i) for i in range(five_stars + 1)]
-    return round((sum(pmf[:-1]) + pmf[-1] / 2) * 100, 1)
+    gaps = _gap_odds()
+    # The chance that the latest 5-star landed on each pull, starting from none yet at pull 0.
+    landed = [1.0] + [0.0] * pulls
+    at_least = [1.0]
+    for _ in range(five_stars + 1):
+        nxt = [0.0] * (pulls + 1)
+        for start, odds in enumerate(landed):
+            if odds:
+                for gap in range(1, min(PITY_CAP, pulls - start) + 1):
+                    nxt[start + gap] += odds * gaps[gap]
+        landed = nxt
+        at_least.append(sum(landed))
+    fewer = 1 - at_least[five_stars]
+    same = at_least[five_stars] - at_least[five_stars + 1]
+    return round(max(0.0, fewer + same / 2) * 100, 1)
 
 
 def _pity_group(gacha_id: str) -> str | None:
@@ -153,13 +198,16 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
 
     result = []
     for banner_name, pulls in banners.items():
+        pool_ids = sorted({p["gacha_id"] for p in pulls if p["gacha_id"]})
+        group = _pity_group(pool_ids[0]) if pool_ids else None
         processed_pulls = []
         pity = 0
         pull_number = 0
         five_stars = 0
         four_stars = 0
         wins_50_50 = 0
-        five_star_opportunities = 0
+        losses_50_50 = 0
+        guaranteed = False
 
         for p in pulls:
             pull_number += 1
@@ -181,9 +229,15 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
 
             if rarity >= 5:
                 five_stars += 1
-                five_star_opportunities += 1
-                if p["is_featured"]:
-                    wins_50_50 += 1
+                # A loss makes the next 5-star the featured one, so that one is not a 50/50.
+                if group == COMBATANT_PITY_GROUP:
+                    if guaranteed:
+                        guaranteed = False
+                    elif p["is_featured"]:
+                        wins_50_50 += 1
+                    else:
+                        losses_50_50 += 1
+                        guaranteed = True
                 pity = 0
             elif rarity >= 4:
                 four_stars += 1
@@ -193,8 +247,6 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
         total = len(pulls)
         processed_pulls.reverse()
 
-        pool_ids = sorted({p["gacha_id"] for p in pulls if p["gacha_id"]})
-        group = _pity_group(pool_ids[0]) if pool_ids else None
         server_entry = server_pity.get(group) if group else None
         has_server_pity = isinstance(server_entry, dict) and "pity_ssr_count" in server_entry
         refreshed = [int(fetches[g]) for g in pool_ids if g in fetches]
@@ -210,16 +262,15 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
             "pulls": processed_pulls,
             "stats": {
                 "wins_50_50": wins_50_50,
-                "losses_50_50": five_stars - wins_50_50,
-                "luck_percentile": _luck_percentile(five_stars, total, ASSUMED_SSR_RATE),
-                "assumed_rate": ASSUMED_SSR_RATE,
-                "rate_assumed": True,
+                "losses_50_50": losses_50_50,
+                "luck_percentile": _luck_percentile(five_stars, total),
+                "ssr_rate": round(_ssr_rate(), 7),
                 "total": total,
                 "five_star": five_stars,
                 "four_star": four_stars,
                 "avg_pity_5": round(total / five_stars, 1) if five_stars else 0,
                 "avg_pity_4": round(total / four_stars, 1) if four_stars else 0,
-                "win_rate_50_50": round(wins_50_50 / five_star_opportunities, 4) if five_star_opportunities else 0,
+                "win_rate_50_50": round(wins_50_50 / (wins_50_50 + losses_50_50), 4) if wins_50_50 + losses_50_50 else 0,
                 "resources_spent": total * 160,
             },
         })
