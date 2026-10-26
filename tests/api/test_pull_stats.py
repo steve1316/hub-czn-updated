@@ -1,12 +1,14 @@
-"""Pull tracker stats: 50/50 wins and losses, pity per banner, luck against the assumed rate, and the stale marker."""
+"""Pull tracker stats: 50/50 wins and losses, pity per banner, luck against the published rates, and the stale marker."""
 
 import json
 
-from api.routes.rescue import _luck_percentile, _process_records
+from api.routes.rescue import _luck_percentile, _process_records, _ssr_rate
 
 # A real 5-star combatant id.
 FIVE = 1004
 COMBATANT_POOL = "gacha_pickup_combatant_30115"
+PARTNER_POOL = "gacha_pickup_partner_30116"
+STANDARD_POOL = "gacha_normal"
 
 
 def _rec(rid, rewards, prisms=None, gacha_id=COMBATANT_POOL, ts=1000):
@@ -56,17 +58,38 @@ def test_banner_is_stale_unless_one_of_its_pools_was_fetched_this_session():
     assert banner["last_refreshed"] == 5100
 
 
-def test_luck_percentile_is_high_when_far_above_expected_and_low_when_below():
-    assert _luck_percentile(0, 100, 0.015) < 25
-    assert _luck_percentile(6, 100, 0.015) > 95
-    assert 40 < _luck_percentile(1, 67, 0.015) < 80
-    assert _luck_percentile(0, 0, 0.015) is None
+def test_fifty_fifty_skips_the_guaranteed_five_star_after_a_loss():
+    raw = [_rec(1, [FIVE, FIVE, FIVE], prisms=[0, 1, 1])]
+    stats = _banner(raw)["stats"]
+    assert stats["losses_50_50"] == 1
+    assert stats["wins_50_50"] == 1
+    assert stats["win_rate_50_50"] == 0.5
 
 
-def test_banner_reports_luck_against_an_assumed_rate():
+def test_partner_and_standard_banners_have_no_fifty_fifty():
+    for pool, prisms in ((PARTNER_POOL, [1, 1]), (STANDARD_POOL, [0, 0])):
+        stats = _banner([_rec(1, [FIVE, FIVE], prisms=prisms, gacha_id=pool)])["stats"]
+        assert stats["five_star"] == 2
+        assert stats["wins_50_50"] == 0
+        assert stats["losses_50_50"] == 0
+
+
+def test_pity_curve_matches_the_published_combined_rate():
+    assert round(_ssr_rate() * 100, 5) == 2.14343
+
+
+def test_luck_percentile_follows_the_pity_curve():
+    # Pity guarantees a 5-star by the 70th pull, so none in 100 pulls is impossible.
+    assert _luck_percentile(0, 100) == 0.0
+    assert _luck_percentile(6, 100) > 95
+    assert 45 < _luck_percentile(21, 1000) < 60
+    assert _luck_percentile(0, 0) is None
+
+
+def test_banner_reports_luck_and_the_rate_it_used():
     stats = _banner([_rec(1, [FIVE] + [99999] * 9)])["stats"]
     assert stats["luck_percentile"] is not None
-    assert stats["rate_assumed"] is True
+    assert stats["ssr_rate"] == round(_ssr_rate(), 7)
 
 
 def test_banner_lists_every_pool_it_covers():

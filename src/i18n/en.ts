@@ -290,7 +290,7 @@ const en = {
       pityServer: 'from the game',
       pityComputed: 'counted from records',
       luck: 'Luck',
-      luckTip: 'Share of players expected to get fewer 5★ than you, at an assumed {{rate}} 5★ rate.',
+      luckTip: "Share of players expected to get fewer 5★ than you, using the game's published rates and pity ({{rate}} 5★ rate on average).",
     },
     stale: 'Stale',
     staleTip: "Not refreshed in the latest capture. Open this banner's Rescue Records in the game while capture runs.",
