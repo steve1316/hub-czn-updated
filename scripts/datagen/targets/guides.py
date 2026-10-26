@@ -1338,13 +1338,19 @@ def _bold_levels(cell: Cell) -> list[bool]:
     Returns:
         One flag per level in the order written. A level is bold when more than `_BOLD_SHARE` of its non-space characters are bold.
     """
-    starts = [match.end() for match in _EGO_LEVEL.finditer(cell.text)]
-    ends = [match.start() for match in _EGO_LEVEL.finditer(cell.text)][1:] + [len(cell.text)]
+    matches = list(_EGO_LEVEL.finditer(cell.text))
     flags = []
-    for start, end in zip(starts, ends):
-        marked = [bold for char, bold in zip(cell.text[start:end], cell.bold[start:end]) if not char.isspace()]
-        flags.append(bool(marked) and sum(marked) / len(marked) > _BOLD_SHARE)
+    for match, following in zip(matches, [*matches[1:], None]):
+        start, end = match.end(), following.start() if following else len(cell.text)
+        total = _letters_of(cell.text[start:end])
+        marked = sum(_letters_of(cell.text[max(first, start):min(last, end)]) for first, last in cell.bold if first < end and last > start)
+        flags.append(total > 0 and marked / total > _BOLD_SHARE)
     return flags
+
+
+def _letters_of(text: str) -> int:
+    """How many characters of the text are not whitespace."""
+    return len("".join(text.split()))
 
 
 def _number_runs(row_cards: list[dict]) -> list[dict]:

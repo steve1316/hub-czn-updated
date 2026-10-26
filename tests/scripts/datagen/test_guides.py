@@ -118,8 +118,7 @@ def test_grid_marks_the_bold_characters_of_a_cell():
     page = '<table><tbody><tr><th>1</th><td> <span style="font-weight:bold;">Bold</span> plain<br><span style="color:red">red</span></td></tr></tbody></table>'
     cell = parse_grid(page)[(0, 0)]
     assert cell.text == "Bold plain\nred"
-    assert "".join(char for char, flag in zip(cell.text, cell.bold) if flag) == "Bold"
-    assert len(cell.bold) == len(cell.text)
+    assert cell.bold == [(0, 4)]
 
 
 def test_grid_tracks_spans_line_breaks_and_images():
@@ -492,7 +491,11 @@ def test_mostly_bold_ego_levels_are_marked_bold():
     # E1 is all bold, E2 is half bold, E3 is plain, and the "E1:" headings themselves do not count.
     pieces = [("E1:\n", False), ("Big deal", True), ("\nE2:\n", False), ("Half", True), (" and half", False), ("\nE3:\nPlain", False)]
     text = "".join(piece for piece, _ in pieces)
-    bold = [flag for piece, flag in pieces for _ in piece]
+    bold, at = [], 0
+    for piece, flag in pieces:
+        if flag:
+            bold.append((at, at + len(piece)))
+        at += len(piece)
     cells = [_cell(23, 2, "Potentials"), _cell(24, 4, LEGEND), Cell(24, 7, text, bold=bold)]
     [section], _ = _builder().sections(_grid(*cells))
     assert [(note["level"], note.get("bold")) for note in section["blocks"][0]["ego"]] == [(1, True), (2, None), (3, None)]

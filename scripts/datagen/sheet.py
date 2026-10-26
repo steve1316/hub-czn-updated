@@ -45,8 +45,8 @@ class Cell:
     text: str = ""
     # URLs of the images placed in the cell.
     images: list[str] = field(default_factory=list)
-    # One flag per character of `text`: whether the sheet shows it in bold. Empty when the cell has no bold text.
-    bold: list[bool] = field(default_factory=list)
+    # The (start, end) character ranges of `text` that the sheet shows in bold. Empty when the cell has no bold text.
+    bold: list[tuple[int, int]] = field(default_factory=list)
 
     @property
     def ref(self) -> str:
@@ -259,7 +259,6 @@ class _GridParser(HTMLParser):
             self._spans.append("font-weight:bold" in (attributes.get("style") or "").replace(" ", ""))
         elif tag == "br" and self._cell is not None:
             self._cell.text += "\n"
-            self._cell.bold.append(False)
         elif tag == "img" and self._cell is not None and attributes.get("src"):
             self._cell.images.append(attributes["src"])
 
@@ -270,12 +269,20 @@ class _GridParser(HTMLParser):
             text = self._cell.text
             lead = len(text) - len(text.lstrip())
             self._cell.text = text.strip()
-            # Bold flags follow the text through the strip, and are dropped when nothing is bold.
-            self._cell.bold = self._cell.bold[lead:lead + len(self._cell.text)] if any(self._cell.bold) else []
+            # Bold ranges follow the text through the strip.
+            size = len(self._cell.text)
+            shifted = [(max(start - lead, 0), min(end - lead, size)) for start, end in self._cell.bold]
+            self._cell.bold = [(start, end) for start, end in shifted if start < end]
             self.cells[(self._cell.row, self._cell.col)] = self._cell
             self._cell = None
 
     def handle_data(self, data):
         if self._cell is not None:
+            start = len(self._cell.text)
             self._cell.text += data
-            self._cell.bold.extend([any(self._spans)] * len(data))
+            if any(self._spans):
+                bold = self._cell.bold
+                if bold and bold[-1][1] == start:
+                    bold[-1] = (bold[-1][0], start + len(data))
+                else:
+                    bold.append((start, start + len(data)))
