@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { save } from '@tauri-apps/plugin-dialog'
 import { writeTextFile } from '@tauri-apps/plugin-fs'
@@ -30,7 +30,9 @@ import {
 import {
   createSavedDeck,
   loadSavedDecks,
+  loadWorkingSquad,
   persistSavedDecks,
+  persistWorkingSquad,
   type SavedDeck,
 } from '../deck-builder-saved-decks.utils'
 import {
@@ -48,8 +50,6 @@ import {
 
 const DECK_BUILDER_EXPORT_VERSION = 4
 const DECK_BUILDER_MAX_SLOTS = 3
-// The squad kept for this session while the user is away in the Simulator
-const WORKING_SQUAD_KEY = 'hub-czn:deck-builder:working-squad'
 
 function getDeckBuilderExportFileName() {
   const date = new Date().toISOString().slice(0, 10)
@@ -365,6 +365,9 @@ export function useDeckBuilder() {
   const [variantModalTarget, setVariantModalTarget] = useState<VariantModalTarget | null>(null)
   const [savedDecks, setSavedDecks] = useState<SavedDeck[]>(() => loadSavedDecks())
   const [selectedSavedDeckId, setSelectedSavedDeckId] = useState<string | null>(null)
+  // False until the squad kept from an earlier visit is back, so the empty starting squad does not overwrite it
+  const [restored, setRestored] = useState(false)
+  const restoreStarted = useRef(false)
 
   // The sidecar API may not be reachable yet when the deck builder is the first
   // page opened: the dynamic port resolves asynchronously (useApiPort) and the
@@ -871,29 +874,25 @@ export function useDeckBuilder() {
     await writeTextFile(filePath, JSON.stringify(payload, null, 2))
   }
 
-  /**
-   * Keep the current squad for this session, so leaving for the Simulator does not lose unsaved work.
-   */
-  function stashSquad() {
-    try {
-      sessionStorage.setItem(WORKING_SQUAD_KEY, JSON.stringify({ payload: createDeckBuilderExportPayload(), savedDeckId: selectedSavedDeckId }))
-    } catch { }
-  }
-
-  // Bring back a squad stashed by `stashSquad`, once
+  // Bring back the squad from an earlier visit once the API is up, as loading it fetches each combatant's cards
   useEffect(() => {
-    let stashed: { payload: unknown; savedDeckId: string | null } | null = null
-    try {
-      const raw = sessionStorage.getItem(WORKING_SQUAD_KEY)
-      sessionStorage.removeItem(WORKING_SQUAD_KEY)
-      stashed = raw ? JSON.parse(raw) : null
-    } catch { }
-    if (!stashed) return
-    const { payload, savedDeckId } = stashed
-    loadDeckFromPayload(payload)
-      .then(() => setSelectedSavedDeckId(savedDeckId))
+    if (!status || restoreStarted.current) return
+    restoreStarted.current = true
+    const kept = loadWorkingSquad()
+    if (!kept) {
+      setRestored(true)
+      return
+    }
+    loadDeckFromPayload(kept.payload)
+      .then(() => setSelectedSavedDeckId(kept.savedDeckId))
       .catch(error => console.error('[Deck Builder] Failed to restore the squad:', error))
-  }, [])
+      .finally(() => setRestored(true))
+  }, [status])
+
+  // Keep every change, so leaving the Deck Builder by any route does not lose unsaved work
+  useEffect(() => {
+    if (restored) persistWorkingSquad({ payload: createDeckBuilderExportPayload(), savedDeckId: selectedSavedDeckId })
+  }, [restored, squad, selectedSavedDeckId])
 
   async function importDeck(file: File) {
     const text = await file.text()
@@ -999,6 +998,5 @@ export function useDeckBuilder() {
     saveCurrentDeck,
     saveCurrentDeckAs,
     deleteSavedDeck,
-    stashSquad,
   }
 }

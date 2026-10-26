@@ -2,6 +2,8 @@ import type { DeckBuilderExportPayload } from './deck-builder.types'
 
 const SAVED_DECKS_STORAGE_KEY = 'hub-czn:deck-builder:saved-decks'
 const SAVED_DECKS_STORAGE_VERSION = 1
+// The squad being edited, kept in session storage so leaving the Deck Builder does not lose it
+const WORKING_SQUAD_STORAGE_KEY = 'hub-czn:deck-builder:working-squad'
 
 export type SavedDeck = {
   id: string
@@ -9,6 +11,14 @@ export type SavedDeck = {
   created_at: string
   updated_at: string
   payload: DeckBuilderExportPayload
+}
+
+/** The squad being edited, as kept between visits to the Deck Builder. */
+export interface WorkingSquad {
+  /** The squad in its export form. */
+  payload: DeckBuilderExportPayload
+  /** The id of the saved deck the squad was loaded from, or null. */
+  savedDeckId: string | null
 }
 
 type SavedDecksStoragePayload = {
@@ -22,6 +32,14 @@ function getStorage() {
   }
 
   return window.localStorage
+}
+
+/**
+ * Session storage, when running in a browser.
+ * @returns The storage, or null outside a browser.
+ */
+function getSessionStorage() {
+  return typeof window === 'undefined' ? null : window.sessionStorage
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -128,5 +146,34 @@ export function createSavedDeck(
     created_at: now,
     updated_at: now,
     payload,
+  }
+}
+
+/**
+ * Read the squad kept by `persistWorkingSquad`.
+ * @param storage Where the squad is kept, session storage by default.
+ * @returns The squad, or null when none was kept or the value is damaged.
+ */
+export function loadWorkingSquad(storage: Pick<Storage, 'getItem'> | null = getSessionStorage()): WorkingSquad | null {
+  try {
+    const parsed = JSON.parse(storage?.getItem(WORKING_SQUAD_STORAGE_KEY) ?? 'null') as unknown
+    if (!isRecord(parsed) || !isRecord(parsed.payload) || !Array.isArray(parsed.payload.slots)) return null
+    const savedDeckId = typeof parsed.savedDeckId === 'string' ? parsed.savedDeckId : null
+    return { payload: parsed.payload as DeckBuilderExportPayload, savedDeckId }
+  } catch {
+    return null
+  }
+}
+
+/**
+ * Keep the squad being edited for the rest of this session.
+ * @param squad The squad and the saved deck it came from.
+ * @param storage Where to keep it, session storage by default.
+ */
+export function persistWorkingSquad(squad: WorkingSquad, storage: Pick<Storage, 'setItem'> | null = getSessionStorage()) {
+  try {
+    storage?.setItem(WORKING_SQUAD_STORAGE_KEY, JSON.stringify(squad))
+  } catch (error) {
+    console.error('[Deck Builder] Failed to keep the squad:', error)
   }
 }

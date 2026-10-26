@@ -37,7 +37,6 @@ export function DeckBuilderPage() {
       name: character?.name || `#${slot.combatantId}`,
       cards: deckSlotToSimCards(createDeckBuilderExportSlot(slot)),
     }
-    deckBuilder.stashSquad()
     navigate('/battles/simulate', { state: { deckBuilder: handoff } })
   }
 
