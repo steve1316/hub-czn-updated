@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronRight, Play, Square } from 'lucide-react'
 import { api } from '@/lib/api'
 import type { OptimizerConfig, EquipmentSet, Monster, Combatant, OptimizeProgress, CharPreset } from '@/lib/types'
@@ -355,6 +356,10 @@ export function OptimizerPanel({
       <div className="space-y-2">
         <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3]">
           {t('optimizer.statPriorityLabel')}
+        </p>
+        <p className="text-[10px] text-[#666666]">
+          {t('optimizer.statPriorityHint')}{' '}
+          <Link to="/combatants" className="text-[#c084fc] hover:underline">{t('optimizer.statPriorityHintLink')}</Link>.
         </p>
         {STAT_GROUPS.map((group) => (
           <div key={group.label}>

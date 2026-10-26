@@ -8,6 +8,7 @@ import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
 import type { Combatant } from '@/lib/types'
 import { GearSlotCard, FinalStatsPanel } from './CombatantDetail'
+import { GlobalScoring, CharacterScoring } from './ScoringSection'
 import { Button } from '@/components/ui/button'
 
 // ─── Attribute badge ───────────────────────────────────────────────────────
@@ -148,6 +149,8 @@ function ExpandedContent({
                 )
               })}
             </div>
+
+            <CharacterScoring charId={charId} resId={resId} />
           </>
         ) : null}
       </div>
@@ -306,12 +309,16 @@ export function CombatantsPage() {
     )
   }
 
+  // Global weights also score Memory Fragments, so they stay editable before any combatant is captured.
   if (combatants.length === 0) {
     return (
-      <div role="status" className="h-full flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
-        <User size={40} className="opacity-30" />
-        <p className="text-sm">{t('combatants.empty')}</p>
-        <p className="text-xs">{t('combatants.emptyHint')}</p>
+      <div className="h-full flex flex-col gap-4 p-4">
+        <GlobalScoring />
+        <div role="status" className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
+          <User size={40} className="opacity-30" />
+          <p className="text-sm">{t('combatants.empty')}</p>
+          <p className="text-xs">{t('combatants.emptyHint')}</p>
+        </div>
       </div>
     )
   }
@@ -343,6 +350,9 @@ export function CombatantsPage() {
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-1.5">
+        <div className="pb-2">
+          <GlobalScoring />
+        </div>
         {combatants.map((c, i) => (
           <CombatantRow
             key={c.char_id}

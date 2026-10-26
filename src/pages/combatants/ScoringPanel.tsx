@@ -1,6 +1,5 @@
-import { useState, useRef, useEffect, useMemo } from 'react'
+import { useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { SlidersHorizontal, X } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { InfoPopover } from '@/components/ui/info-popover'
 
@@ -107,7 +106,7 @@ function PanelContent({
   ] as const
 
   return (
-    <div className="flex flex-col gap-4 h-full overflow-hidden">
+    <div className="flex flex-col gap-4">
       {/* Presets */}
       <div className="flex gap-1 flex-wrap shrink-0">
         {(['dps', 'tank'] as const).map(p => (
@@ -152,7 +151,7 @@ function PanelContent({
       </div>
 
       {/* Weight inputs */}
-      <div className="flex-1 overflow-y-auto space-y-4 pr-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {STAT_GROUPS.map(group => (
           <div key={group.labelKey}>
             <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">
@@ -200,71 +199,5 @@ function PanelContent({
 }
 
 export function ScoringPanel(props: ScoringPanelProps) {
-  const { t } = useTranslation()
-  const [drawerOpen, setDrawerOpen] = useState(false)
-  const dialogRef = useRef<HTMLDivElement>(null)
-  useEffect(() => {
-    if (drawerOpen) {
-      dialogRef.current?.focus()
-    }
-  }, [drawerOpen])
-
-  return (
-    <>
-      {/* Desktop sidebar */}
-      <aside className="hidden sm:flex flex-col w-64 shrink-0 bg-[#181818] border border-[#282828] rounded-xl p-4 h-full overflow-hidden">
-        <p className="text-xs font-semibold uppercase tracking-wider text-[#b3b3b3] mb-3">
-          {t('scoring.title')}
-        </p>
-        <PanelContent {...props} />
-      </aside>
-
-      {/* Mobile: icon button */}
-      <div className="sm:hidden shrink-0">
-        <button
-          type="button"
-          onClick={() => setDrawerOpen(true)}
-          className="p-2 rounded-lg bg-[#181818] border border-[#282828] text-[#b3b3b3]"
-          aria-label={t('scoring.openPanel')}
-        >
-          <SlidersHorizontal size={20} />
-        </button>
-
-        {drawerOpen && (
-          <div className="fixed inset-0 z-50 flex">
-            <button
-              type="button"
-              tabIndex={-1}
-              className="absolute inset-0 bg-black/60 cursor-default"
-              aria-label={t('scoring.closePanel')}
-              onClick={() => setDrawerOpen(false)}
-            />
-            <div
-              ref={dialogRef}
-              tabIndex={-1}
-              role="dialog"
-              aria-modal="true"
-              aria-label={t('scoring.title')}
-              className="relative ml-auto w-72 h-full bg-[#181818] border-l border-[#282828] p-4 flex flex-col"
-            >
-              <div className="flex items-center justify-between mb-3 shrink-0">
-                <p className="text-xs font-semibold uppercase tracking-wider text-[#b3b3b3]">
-                  {t('scoring.title')}
-                </p>
-                <button
-                  type="button"
-                  aria-label={t('scoring.closePanel')}
-                  onClick={() => setDrawerOpen(false)}
-                  className="text-[#b3b3b3]"
-                >
-                  <X size={16} />
-                </button>
-              </div>
-              <PanelContent {...props} />
-            </div>
-          </div>
-        )}
-      </div>
-    </>
-  )
+  return <PanelContent {...props} />
 }
