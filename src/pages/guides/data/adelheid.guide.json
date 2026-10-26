@@ -656,7 +656,8 @@
               "level": 4,
               "text": {
                 "en": "You can forgo more OUAT for more Protect Us"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -668,7 +669,8 @@
               "level": 6,
               "text": {
                 "en": "Now the buff is up to 40% Multi, but also way easier to stack\n+1 Draw each turn as well, this is really good"
-              }
+              },
+              "bold": true
             }
           ]
         },
@@ -696,16 +698,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1055_uni1",
-              "name": "Protect Us",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             }
           ]
         },
@@ -745,7 +739,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "1 cost is bad, cantrips and is 6 blessings (I'm not suire if it can try to rebless cards)"
                   }
                 },
                 {
@@ -754,7 +748,7 @@
                   "cost": 0,
                   "rating": "6/5",
                   "note": {
-                    "en": ""
+                    "en": "Allows you to scuplt your starting hand as well as is 2 Blessings, VERY GOOD"
                   }
                 },
                 {
@@ -763,7 +757,7 @@
                   "cost": 0,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "0 cost, enables Quietus, and 6 blessings"
                   }
                 },
                 {
@@ -772,7 +766,7 @@
                   "cost": -1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Potentially alot of Draw, but then you're left without AP, not good"
                   }
                 },
                 {
@@ -781,7 +775,66 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "5 Blessing each turn, but why would you want to make it this way? Protect 4?"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1055_uni2",
+              "name": "Friends from Fairy Tales",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Friends from Fairy Tales I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Doggo does up to 1200% more at max Blessings (generally 720%)"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Friends from Fairy Tales II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Allows you to play 2 Teddy a turn potentially, or just 1 for free"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Friends from Fairy Tales III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Deals big damage, but also adds 3 more card to cycle through, requires Protect 1"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Friends from Fairy Tales IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Just allows Adel to get Counter"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Friends from Fairy Tales V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher"
                   }
                 }
               ]
@@ -791,54 +844,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "OUAT 1, 1 cost is bad, cantrips and is 6 blessings (I'm not suire if it can try to rebless cards)\nOUAT 2: Allows you to scuplt your starting hand as well as is 2 Blessings, VERY GOOD\nOUAT 3: 0 cost, enables Quietus, and 6 blessings\nOUAT 4: Potentially alot of Draw, but then you're left without AP, not good\nOUAT 5: 5 Blessing each turn, but why would you want to make it this way? Protect 4?"
-          }
-        },
-        {
-          "type": "card-list",
-          "items": [
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1055_uni2",
-              "name": "Friends from Fairy Tales",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            }
-          ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Friends 1: Doggo does up to 1200% more at max Blessings (generally 720%)\nFriends 2: Allows you to play 2 Teddy a turn potentially, or just 1 for free\nFriends 3: Deals big damage, but also adds 3 more card to cycle through, requires Protect 1\nFriends 4: Just allows Adel to get Counter\nFriends 5:Swap between Doggie/Teddit (DMG/Shield), base shield/dmg is higher\nDoesn't actually Deck Thin since it creates a permanent card to replace itself"
+            "en": "Doesn't actually Deck Thin since it creates a permanent card to replace itself"
           }
         },
         {
@@ -934,7 +940,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Just increases Friends DMG/Shield, funny ig"
                   }
                 },
                 {
@@ -962,7 +968,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Truth 3\" Just increases Friends DMG/Shield, funny ig\nTruth 0, honestly just getting a good Neutral Epiphany is your best bet here"
+            "en": "Truth 0, honestly just getting a good Neutral Epiphany is your best bet here"
           }
         }
       ]
@@ -1396,16 +1402,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "n_0080",
-              "name": "Persona",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "rating": "4/5",
+              "count": 2
             }
           ]
         },
@@ -1414,6 +1412,22 @@
           "body": {
             "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free\nPersona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free\nPersona 4: For Shield Stack/Counter Team if you really wanted to\nThe Persona cards themselves are good, but on Average Engravings are bad"
           }
+        },
+        {
+          "type": "image",
+          "image": "e22e63447b5a95d3.webp"
+        },
+        {
+          "type": "image",
+          "image": "d63dfdfbbc5257b7.webp"
+        },
+        {
+          "type": "image",
+          "image": "0b1f38155dcd2ea3.webp"
+        },
+        {
+          "type": "image",
+          "image": "e25a43bbd9ccb581.webp"
         },
         {
           "type": "prose",
@@ -1450,6 +1464,14 @@
           "body": {
             "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks\nPersona 2: Potentially CounterAttack, but usually nothing burger\nPersona cards themself are bad, but the engravings are good"
           }
+        },
+        {
+          "type": "image",
+          "image": "05c8767b25d4ff09.webp"
+        },
+        {
+          "type": "image",
+          "image": "33a84896f48118ab.webp"
         },
         {
           "type": "prose",

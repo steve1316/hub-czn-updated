@@ -32,8 +32,8 @@
               }
             },
             {
-              "cardId": "c_1049_cre1",
-              "name": "Triple 0",
+              "cardId": "c_1049_cre10",
+              "name": "Quest: Triple 1",
               "cost": 0,
               "note": {
                 "en": ""
@@ -83,8 +83,8 @@
               }
             },
             {
-              "cardId": "c_1049_cre10",
-              "name": "Quest: Triple 1",
+              "cardId": "c_1049_cre1",
+              "name": "Triple 0",
               "cost": 0,
               "note": {
                 "en": ""
@@ -351,6 +351,21 @@
                   "en": "Morale 1."
                 }
               }
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "cost": 2
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "cost": 2
+            },
+            {
+              "cardId": "c_1049_uni3",
+              "name": "Dice Trick",
+              "cost": 2
             },
             {
               "cardId": "c_1049_uni3",
@@ -1544,13 +1559,15 @@
               "level": 1,
               "text": {
                 "en": "Lets Joker see into discard as well (Not Used pile)"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Heal 40% Fixed each time Cassius draws a card"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1605,16 +1622,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0010",
-              "name": "Attack!",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             },
             {
               "cardId": "n_0115",
@@ -1897,7 +1906,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "AOE"
                   }
                 },
                 {
@@ -1934,7 +1943,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Trickl 2: AOE\n3 Moral Trick is REALLY GOOD (Its a Neutral epiphany not on this list)"
+            "en": "3 Moral Trick is REALLY GOOD (Its a Neutral epiphany not on this list)"
           }
         }
       ]
@@ -2120,6 +2129,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "c_1049_uni2",
               "name": "Shuffle",
               "cost": 1,
@@ -2133,7 +2151,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
+            "en": "Forbidden: Cycle 0 but Vuln potential"
           }
         },
         {
@@ -2198,9 +2216,41 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00004",
+              "name": "Forbidden: Guidance of Futility",
+              "cost": 1,
+              "note": {
+                "en": "Kinda nut healing with Reshuffle"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3\nGuidance: Kinda nut healing with Reshuffle"
+            "en": "Hungry: I mean technically Cassius can reshuffle a bit"
           }
         },
         {
@@ -2450,10 +2500,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "91e2731429a33730.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "daa6ef53170e857d.webp"
         },
         {
           "type": "prose",
@@ -2462,10 +2520,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "8f7faf71e1ea835b.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "568d2999f05ff50b.webp"
         }
       ]
     }

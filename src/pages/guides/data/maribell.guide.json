@@ -643,7 +643,8 @@
               "level": 1,
               "text": {
                 "en": "Big damage buff to Shelter Strike, ngl it's kinda amazing"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
@@ -785,46 +786,58 @@
             {
               "cardId": "c_1028_srt4",
               "name": "Resolute Blitz",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1028_srt4",
-              "name": "Resolute Blitz",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Resolute Blitz I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "2 Counter + High base"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Resolute Blitz II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "1 but worse"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Resolute Blitz III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "AOE but expensive"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Resolute Blitz IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Gain dmg off of Shield"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Resolute Blitz V",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Upgrade that gains counterattack"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Resolute 1: 2 Counter + High base\nResolute 2: 1 but worse\nResolute 3: AOE but expensive\nResolute 4: Gain dmg off of Shield\nResolute 5: Upgrade that gains counterattack"
-          }
         },
         {
           "type": "card-list",
@@ -842,7 +855,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "0 cost intiation is good"
                   }
                 },
                 {
@@ -851,7 +864,7 @@
                   "cost": 1,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "50% Fixed Shield ain't bad"
                   }
                 },
                 {
@@ -860,7 +873,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Counter is ok"
                   }
                 },
                 {
@@ -869,7 +882,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Divine Draw makes this pretty good"
                   }
                 },
                 {
@@ -878,7 +891,7 @@
                   "cost": 2,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Increases Counter damage"
                   }
                 }
               ]
@@ -888,7 +901,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Wolves 1: 0 cost intiation is good\nWolves 2: 50% Fixed Shield ain't bad\nWolves 3: 2 Counter is ok\nWolves 4: Divine Draw makes this pretty good\nWolves 5: Increases Counter damage\n+2 Moral is a good neutral to get"
+            "en": "+2 Moral is a good neutral to get"
           }
         },
         {
@@ -966,7 +979,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Weaken"
                   }
                 },
                 {
@@ -975,7 +988,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Counter but no weaken"
                   }
                 },
                 {
@@ -984,7 +997,7 @@
                   "cost": 1,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "No Shield meh"
                   }
                 },
                 {
@@ -993,7 +1006,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Upgrade that deals free damage"
                   }
                 },
                 {
@@ -1002,18 +1015,12 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Upgradethat gives free shield"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Oh 1: 2 Weaken\nOh 2: 2 Counter but no weaken\nOh 3: No Shield meh\nOh 4: Upgrade that deals free damage\nOh 5: Upgradethat gives free shield"
-          }
         }
       ]
     },
@@ -1285,16 +1292,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "ecc670ccc18b955c.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "b86b8bb6583a011f.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "438b288047914624.webp"
         }
       ]
     }

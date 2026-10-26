@@ -1280,7 +1280,8 @@
               "level": 2,
               "text": {
                 "en": "Rng to keep Voracity up, but on Average it's still good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1304,7 +1305,8 @@
               "level": 6,
               "text": {
                 "en": "This is a funny way to make her a main dps"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1964,16 +1966,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "8fcf39e30c129f51.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "ae8c92d0b594067a.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "74d2f2eebc513f58.webp"
         }
       ]
     }

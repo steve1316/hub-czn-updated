@@ -46,6 +46,14 @@
                   "en": "Move Anchor Shot from Draw Pile or Graveyard to hand, then increase Damage Amount of that card by 20% for 1 turn until activated."
                 }
               }
+            },
+            {
+              "cardId": "card_ta_00006",
+              "name": "Forbidden: Gesture of Freedom",
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] [Initiation] Decrease Cost of 1 random card in hand by 1."
+              }
             }
           ]
         },
@@ -926,7 +934,8 @@
               "level": 2,
               "text": {
                 "en": "Opens up Moral Support Haru setup, also very good for Chaos/Sortie"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1466,9 +1475,23 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+              },
+              "rating": "5/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Sample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSever: Haru can somewhat Benefit from this, but like meh"
+            "en": "Sever: Haru can somewhat Benefit from this, but like meh"
           }
         },
         {
@@ -1499,16 +1522,8 @@
               "note": {
                 "en": "Technically Haru is an candidate to carry this too, for her Moral Build"
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "n_0117",
-              "name": "Residual Herb",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "rating": "3/5",
+              "count": 2
             }
           ]
         },
@@ -1519,9 +1534,32 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "note": {
+                "en": "0 Cost 4 hits is great"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "card_ta_00006",
+              "name": "Forbidden: Gesture of Freedom",
+              "cost": 0,
+              "note": {
+                "en": "Realistically you can go this if you don't have Narja basically"
+              },
+              "rating": "4/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Ecstasy: 0 Cost 4 hits is great\nGesture: Realistically you can go this if you don't have Narja basically\nBut this is best kept on your supports, not on Haru or you'll lose out on Anchor loops"
+            "en": "But this is best kept on your supports, not on Haru or you'll lose out on Anchor loops"
           }
         },
         {
@@ -1807,10 +1845,22 @@
           }
         },
         {
+          "type": "image",
+          "image": "89dfa3821b05a07b.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Foretold Ruins"
           }
+        },
+        {
+          "type": "image",
+          "image": "c5eb74f26cf8e920.webp"
+        },
+        {
+          "type": "image",
+          "image": "b630aa8f98635085.webp"
         },
         {
           "type": "prose",
@@ -1823,6 +1873,10 @@
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "2cb8a37e13620122.webp"
         }
       ]
     }

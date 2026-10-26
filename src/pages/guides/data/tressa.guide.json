@@ -32,11 +32,11 @@
               }
             },
             {
-              "cardId": "c_1009_cre1",
-              "name": "Shadow Dagger",
+              "cardId": "c_1009_cre2",
+              "name": "Advanced Shadow Dagger",
               "cost": 0,
               "text": {
-                "en": "[Exhaust] 80% Damage. 2 Agony."
+                "en": "[Retain] [Exhaust] 4 Agony. 50% Damage. +10% Damage Amount for each Agony on the target."
               }
             },
             {
@@ -49,6 +49,14 @@
                 "text": {
                   "en": "For 1 turn, when a card is activated, 1 Agony to a random enemy."
                 }
+              }
+            },
+            {
+              "cardId": "c_1009_uni4",
+              "name": "Cursed Gouge",
+              "cost": 1,
+              "text": {
+                "en": "Activate Agony inflicted by this unit on the target."
               }
             }
           ]
@@ -267,6 +275,63 @@
                 "text": {
                   "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
                 }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
               }
             }
           ]
@@ -325,6 +390,63 @@
                 "god": "Caligo",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0130",
+                "god": "Vytor",
+                "text": {
+                  "en": "Weakness Attack: Decrease Fortitude by 2 for 1 turn."
                 }
               }
             },
@@ -545,6 +667,14 @@
                   "en": "Heal 150%. Create 1 Advanced Shadow Dagger."
                 }
               }
+            },
+            {
+              "cardId": "c_1009_uni4",
+              "name": "Cursed Gouge",
+              "cost": 1,
+              "text": {
+                "en": "Activate Agony inflicted by this unit on the target."
+              }
             }
           ]
         },
@@ -602,6 +732,63 @@
                 "god": "Caligo",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1009_uni3",
+              "name": "Vital Attack",
+              "cost": 2,
+              "epiphany": {
+                "level": 4,
+                "name": "Vital Attack IV",
+                "text": {
+                  "en": "200% Damage × 2. When the target has 3 or more Agony, proc 1 more time."
+                }
+              },
+              "extra": {
+                "id": "div_0010",
+                "god": "Caligo",
+                "text": {
+                  "en": "2 Vulnerable to the target."
                 }
               }
             },
@@ -917,6 +1104,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "c_1009_uni4",
+              "name": "Cursed Gouge",
+              "cost": 1,
+              "note": {
+                "en": "Activating 20 Agony:laughingemoji:"
+              },
+              "rating": "0/5"
+            },
+            {
               "cardId": "n_0035",
               "name": "First Aid Kit",
               "cost": 2,
@@ -939,7 +1135,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Cursed Gouge: Activating 20 Agony:laughingemoji:\nFirst Aid: 2 Perma Moral but needs to be Heavened"
+            "en": "First Aid: 2 Perma Moral but needs to be Heavened"
           }
         },
         {
@@ -958,7 +1154,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Daggers for 0 very good"
                   }
                 },
                 {
@@ -967,7 +1163,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "3 Daggers for 1, not as good but still good"
                   }
                 },
                 {
@@ -976,7 +1172,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Upgrade = Free daggers, never bad"
                   }
                 },
                 {
@@ -985,7 +1181,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Daggers but 8 Agony, not nessicary"
                   }
                 },
                 {
@@ -994,18 +1190,12 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Exhaust, no longer required"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sheathe 1: 2 Daggers for 0 very good\nSheathe 2: 3 Daggers for 1, not as good but still good\nSheathe 3: Upgrade = Free daggers, never bad\nSheathe 4: 2 Daggers but 8 Agony, not nessicary\nSheathe 5: Exhaust, no longer required"
-          }
         },
         {
           "type": "card-list",
@@ -1456,10 +1646,43 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Feralization: 3.75 Moral for 1 turn\nSample: 1 AP draw 2\nForbidden: 1 AP Cantrip and random debuffs\nGilded Nest: 6 Agony (Why?) and Scorch (Yet to be seen how much Olga buffs)"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40051",
+              "name": "Feralization",
+              "cost": 1,
+              "note": {
+                "en": "3.75 Moral for 1 turn"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP draw 2"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Cantrip and random debuffs"
+              }
+            },
+            {
+              "cardId": "card_ds04_des_30021",
+              "name": "Gilded Nest",
+              "cost": 1,
+              "note": {
+                "en": "6 Agony (Why?) and Scorch (Yet to be seen how much Olga buffs)"
+              }
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1509,10 +1732,18 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Eternal: Tressa can always just hold it"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": "Tressa can always just hold it"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "heading",
@@ -1821,10 +2052,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "96b96c723f8b67c9.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
+        },
+        {
+          "type": "image",
+          "image": "d72e6ef67bcfd254.webp"
         },
         {
           "type": "prose",
@@ -1833,10 +2072,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "5908c3c2a0476d79.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "b059a77647390682.webp"
         }
       ]
     }

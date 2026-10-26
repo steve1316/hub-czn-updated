@@ -588,6 +588,11 @@
                   "en": "1 Brand of Fracture. 2 Fracture to the enemy with the highest HP."
                 }
               }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "name": "Insatiable Cravings",
+              "cost": 1
             }
           ]
         },
@@ -856,6 +861,11 @@
                   "en": "[Unique] Move 1 Rift of Severance to hand and apply Retrieve."
                 }
               }
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "name": "Insatiable Cravings",
+              "cost": 1
             },
             {
               "cardId": "c_30117_uni4",
@@ -1337,13 +1347,15 @@
               "level": 1,
               "text": {
                 "en": "Saves 1 AP 1st turn and then every second Cycle, very very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "10% more DoT damage, and also healing for 20% Max HP Each turn is pretty good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1367,7 +1379,8 @@
               "level": 6,
               "text": {
                 "en": "Broken broken broken, Tutors End of the Line/Reckoning turn start and +50% Crt Dmg"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1578,7 +1591,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "6 Agony, 1 Activate"
                   }
                 },
                 {
@@ -1587,7 +1600,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "5 Agony, Ally Activate"
                   }
                 },
                 {
@@ -1596,7 +1609,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "5 Agony, 2 Activate"
                   }
                 },
                 {
@@ -1605,7 +1618,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "4 Agony, 3 Scorch, Agony + Scorch Activate"
                   }
                 },
                 {
@@ -1614,7 +1627,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "5 Agony, Activate"
                   }
                 }
               ]
@@ -1622,14 +1635,30 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Disperse 1: 6 Agony, 1 Activate\nDisperse 2: 5 Agony, Ally Activate\nDisperse 3: 5 Agony, 2 Activate\nDisperse 4: 4 Agony, 3 Scorch, Agony + Scorch Activate\nDisperse 5: 5 Agony, Activate"
-          }
-        },
-        {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30117_uni3",
+              "name": "Insatiable Cravings",
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "name": "Insatiable Cravings",
+              "cost": 1
+            },
+            {
+              "cardId": "c_30117_uni3",
+              "name": "Insatiable Cravings",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Insatiable Cravings III",
+                "text": {
+                  "en": "[Unique] When Fracture or Agony is applied through a Targeting Card, 1 Fracture and 2 Agony to the target (7 time(s) per turn)."
+                }
+              }
+            },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",

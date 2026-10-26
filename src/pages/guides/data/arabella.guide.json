@@ -117,6 +117,56 @@
               }
             },
             {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30115_uni3",
               "name": "Sadistic Restraint",
               "cost": 1,
@@ -214,6 +264,61 @@
                 "name": "Hollow Verdict II",
                 "text": {
                   "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
                 }
               },
               "extra": {
@@ -325,6 +430,37 @@
                   "en": "Reduce Cost of this card by 1."
                 }
               }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             }
           ]
         },
@@ -389,6 +525,37 @@
                 "god": "Diallos",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni2",
+              "name": "Hollow Verdict",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Hollow Verdict II",
+                "text": {
+                  "en": "60% Damage and 3 Fracture to all enemies, and activate Fracture inflicted by this unit. Fracture Amplification: Activate Fracture inflicted by this unit."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_uni3",
+              "name": "Sadistic Restraint",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Sadistic Restraint II",
+                "text": {
+                  "en": "60% Damage × 4, and activate Fracture inflicted by this unit 2 times. Fracture Amplification: Draw 1 card of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
                 }
               }
             },
@@ -465,6 +632,25 @@
                 "name": "Scream For Me II",
                 "text": {
                   "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Increase Damage Amount of Attack Cards of this unit by 50% for 1 turn."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
                 }
               }
             },
@@ -561,6 +747,25 @@
                 "name": "Scream For Me I",
                 "text": {
                   "en": "[Lead] 60% Damage and 3 Fracture to all enemies. 6 Fracture to the enemy with the highest HP."
+                }
+              }
+            },
+            {
+              "cardId": "c_30115_srt4",
+              "name": "Scream For Me",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Scream For Me IV",
+                "text": {
+                  "en": "[Lead] 60% Damage and 3 Fracture to all enemies. Draw 2 cards of this unit."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
                 }
               }
             },
@@ -879,7 +1084,8 @@
               "level": 2,
               "text": {
                 "en": "Starts you off with Frac Amp and 12 AOE Fracture a turn easily"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -903,7 +1109,8 @@
               "level": 6,
               "text": {
                 "en": "10 more Fracture, and 50% Crt Dmg against the Target, its pretty good"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1029,37 +1236,58 @@
             {
               "cardId": "c_30115_uni2",
               "name": "Hollow Verdict",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni2",
-              "name": "Hollow Verdict",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30115_uni2",
-              "name": "Hollow Verdict",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hollow Verdict I",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Ally Frac Act"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hollow Verdict II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Double Frac Act"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Hollow Verdict III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Big base like Art build style"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Hollow Verdict IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Agony Act"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Hollow Verdict V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Its alot of Fracture"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hollow 1: Ally Frac Act\nHollow 2: Double Frac Act\nHollow 3: Big base like Art build style\nHollow 4: Agony Act\nHollow 5: Its alot of Fracture"
-          }
         },
         {
           "type": "card-list",
@@ -1077,7 +1305,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "+150%, requirement of 3 to be better then Observer 4"
                   }
                 },
                 {
@@ -1086,7 +1314,7 @@
                   "cost": 0,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "+120% but 6 Debuffs is pretty dang hard, so Observer 4 is generally better"
                   }
                 },
                 {
@@ -1095,7 +1323,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Art build ig"
                   }
                 },
                 {
@@ -1104,7 +1332,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "+80% and also Fracture transfers from dead dudes? this is great"
                   }
                 },
                 {
@@ -1113,18 +1341,12 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Opener Upgrade, but no Additive Damage, for Arabella's gazzilion hits"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Observer 1: +150%, requirement of 3 to be better then Observer 4\nObserver 2: +120% but 6 Debuffs is pretty dang hard, so Observer 4 is generally better\nObserver 3: Art build ig\nObserver 4: +80% and also Fracture transfers from dead dudes? this is great\nObserver 5: Opener Upgrade, but no Additive Damage, for Arabella's gazzilion hits"
-          }
         },
         {
           "type": "card-list",
@@ -1500,6 +1722,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ds04_des_30031",
+              "name": "Sever Ties",
+              "cost": 1,
+              "note": {
+                "en": "Insanely good on Arabella due to the Amounts of Hits she deals and 2 Natural Debuffs"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "c_30115_eps",
               "name": "Pathetic End",
               "cost": 5,
@@ -1507,13 +1738,22 @@
                 "en": ""
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "card_ds04_des_30021",
+              "name": "Gilded Nest",
+              "cost": 1,
+              "note": {
+                "en": "The 6 Scorch for potential 6 more hits is actually not the worst thing ever"
+              },
+              "rating": "3/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Sever: Insanely good on Arabella due to the Amounts of Hits she deals and 2 Natural Debuffs\nSample: 1 AP Draw 2 is good\nGilded: The 6 Scorch for potential 6 more hits is actually not the worst thing ever"
+            "en": "Sample: 1 AP Draw 2 is good"
           }
         },
         {

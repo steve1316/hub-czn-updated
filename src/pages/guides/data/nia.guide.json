@@ -78,6 +78,18 @@
               "name": "Adagio",
               "cost": 0,
               "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
                 "level": 2,
                 "name": "Adagio II",
                 "text": {
@@ -112,6 +124,26 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
+              }
+            },
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
@@ -217,11 +249,76 @@
               }
             },
             {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
               "cost": 1,
               "text": {
                 "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "text": {
+                "en": "[Inquiry] 100% Damage. Draw 1."
               }
             }
           ]
@@ -280,6 +377,63 @@
                 "id": "com_0026",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -352,11 +506,60 @@
               }
             },
             {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
               "cost": 1,
               "text": {
                 "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
               }
             }
           ]
@@ -421,6 +624,62 @@
                 "id": "com_0026",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Soul Riff III",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a card in hand is Discarded, 100% Extra Attack to a random enemy by the Combatant who owns that card."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -493,11 +752,63 @@
               }
             },
             {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              }
+            },
+            {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
               "cost": 1,
               "text": {
                 "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
               }
             }
           ]
@@ -562,6 +873,63 @@
                 "id": "com_0026",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 5,
+                "name": "Adagio V",
+                "text": {
+                  "en": "Discard 1. Draw 2 card(s) of the Combatant who owns the card Discarded."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -635,6 +1003,62 @@
                 "id": "com_0026",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Soul Riff III",
+                "text": {
+                  "en": "[Retain] For 1 turn, when a card in hand is Discarded, 100% Extra Attack to a random enemy by the Combatant who owns that card."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0071",
+                "god": "Diallos",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -970,6 +1394,68 @@
               }
             },
             {
+              "cardId": "c_1003_uni2",
+              "name": "Soul Riff",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
               "cardId": "c_1003_uni4",
               "name": "Nia's Curiosity",
               "cost": 1,
@@ -1014,6 +1500,63 @@
                 "name": "Soul Riff V",
                 "text": {
                   "en": "When a card is Discarded, 1 Decibel and 2 Elasticity."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1003_uni3",
+              "name": "Adagio",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Adagio II",
+                "text": {
+                  "en": "Draw 1. Discard up to 1 card(s). If a card was Discarded, create 1 Adagio with Exhaust."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
                 }
               }
             },
@@ -1323,13 +1866,15 @@
               "level": 1,
               "text": {
                 "en": "Makes Cutiosity 0 Cost, VERY GOOD"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Gives 4 Rhythm boost decaying Additive Damage Buff on Reshuffle, Good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1341,7 +1886,8 @@
               "level": 4,
               "text": {
                 "en": "4 Rhythm boost at the start of battle, good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -1384,16 +1930,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0010",
-              "name": "Attack!",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             },
             {
               "cardId": "n_0115",
@@ -1579,18 +2117,12 @@
                   "cost": 2,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "+1 cost, but turns into an Upgrade, its pretty nice"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Spi; 5: +1 cost, but turns into an Upgrade, its pretty nice"
-          }
         },
         {
           "type": "card-list",
@@ -1657,45 +2189,63 @@
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0,
               "note": {
                 "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1003_uni3",
-              "name": "Adagio",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1003_uni3",
-              "name": "Adagio",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "0/5"
-            },
-            {
-              "cardId": "c_1003_uni3",
-              "name": "Adagio",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Adagio I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "When a broken Attunement comes back, this will be broken again"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Adagio II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Pretty great with Yuki"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Adagio III",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "1 cost is bad, Decibels and healing for it's cost not good enough"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Adagio IV",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Potentially a gear bag, but 3 decibel is kinda hard to get, and it discards making it last shorter"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Adagio V",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Always gonna give you a Card you want 9/10 times, tutoring is very strong"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Adagio 1: When a broken Attunement comes back, this will be broken again\nAdagio 2: Pretty great with Yuki\nAdagio 3: 1 cost is bad, Decibels and healing for it's cost not good enough\nAdagio 4: Potentially a gear bag, but 3 decibel is kinda hard to get, and it discards making it last shorter\nAdagio 5: Always gonna give you a Card you want 9/10 times, tutoring is very strong\nAdagio never goes card positive usually, so Gear bag is a very good include"
+            "en": "Adagio never goes card positive usually, so Gear bag is a very good include"
           }
         }
       ]
@@ -2037,10 +2587,27 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "note": {
+                "en": "Cycle 0 but Vuln potential"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -2107,11 +2674,29 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "c_1003_col",
               "name": "Charm",
               "cost": 0,
               "note": {
                 "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00004",
+              "name": "Forbidden: Guidance of Futility",
+              "cost": 1,
+              "note": {
+                "en": "Kinda nut healing with Reshuffle"
               },
               "rating": "3/5"
             }
@@ -2120,7 +2705,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3\nGuidance: Kinda nut healing with Reshuffle"
+            "en": "Hungry: I mean technically Cassius can reshuffle a bit\nPortrait: 1 AP Draw 3"
           }
         },
         {
@@ -2370,16 +2955,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "91e2731429a33730.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "daa6ef53170e857d.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "568d2999f05ff50b.webp"
         }
       ]
     }

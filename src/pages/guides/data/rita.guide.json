@@ -855,31 +855,36 @@
               "level": 2,
               "text": {
                 "en": "Gives you a buff card upon entering Ascension, It's a pretty decent multi (60%+ Average)"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
               "text": {
                 "en": "Increases max damage buff to 300% (100% more) thats quite a substantial Multi"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
               "text": {
                 "en": "Up to 30% Multi, but it it's incremental"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
               "text": {
                 "en": "Rita has very high base Multipliers, so potential levels are good (Not Fate Imprint)"
-              }
+              },
+              "bold": true
             },
             {
               "level": 6,
               "text": {
                 "en": "What the heck? You can get 12 Ascension? One time per battle, but still great setup"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -989,46 +994,58 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "6/5"
-            },
-            {
-              "cardId": "c_30097_srt4",
-              "name": "Chrono Archon",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30097_srt4",
-              "name": "Chrono Archon",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30097_srt4",
-              "name": "Chrono Archon",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Chrono Archon I",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Chrono Archon II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Pretty insignificant amount of extra damage unless moral stacking for some reason"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Chrono Archon III",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Removing the base epiphany seems really bad"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Chrono Archon IV",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Discarding is not very easy to do"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Chrono Archon V",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Archon 1: This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox\nArchon 2: Pretty insignificant amount of extra damage unless moral stacking for some reason\nArchon 3: Removing the base epiphany seems really bad\nArchon 4: Discarding is not very easy to do\nArchon 5: Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"
-          }
         },
         {
           "type": "card-list",
@@ -1452,6 +1469,16 @@
           "body": {
             "en": "When a 3-Cost or higher card is activated, 1 AP (1 time per turn)"
           }
+        },
+        {
+          "type": "heading",
+          "text": {
+            "en": "C7 Burning Life"
+          }
+        },
+        {
+          "type": "image",
+          "image": "6fe490747ebe009c.webp"
         }
       ]
     }

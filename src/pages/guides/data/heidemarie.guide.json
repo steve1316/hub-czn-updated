@@ -121,11 +121,11 @@
               }
             },
             {
-              "cardId": "c_30093_uni4_mut1",
+              "cardId": "c_30093_uni4_lbk_mut1",
               "name": "Effulgent Release",
               "cost": 0,
               "text": {
-                "en": "[Unique] 500% Damage. Exhaust all Effulgent Blade in Graveyard, then +100% base Damage Amount for each Exhausted. At the end of the turn, change this card into Effulgent Compression."
+                "en": "[Unique] 700% Damage. Exhaust all Effulgent Blade in Graveyard, then +120% base Damage Amount for each Exhausted. At the end of the turn, change this card into Effulgent Compression."
               }
             }
           ]
@@ -1229,7 +1229,8 @@
               "level": 2,
               "text": {
                 "en": "Tutoring Compression is great, 600%+ in more Extra Attacks also is great"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1253,7 +1254,8 @@
               "level": 6,
               "text": {
                 "en": "Effulgent Blades now always attack Weakness, E2 damage increase is ok"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1274,6 +1276,15 @@
               "cost": 1,
               "note": {
                 "en": "If you need the moral to reach cap, this is always good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
               },
               "rating": "5/5"
             },
@@ -1300,7 +1311,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip\nPrecision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
+            "en": "Precision Aim: Quick Shelling but for Attunement Synergies (Attunment Draw) (DOESNT DISCARD)"
           }
         },
         {
@@ -1871,13 +1882,22 @@
                 "en": ""
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good"
           }
         },
         {
@@ -1917,6 +1937,20 @@
           "body": {
             "en": "Season 1 | Forbidden Catalyst"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -2243,10 +2277,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "2ece2e8e7d31d876.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Foretold Ruins"
           }
+        },
+        {
+          "type": "image",
+          "image": "d0c905eaf4c365ef.webp"
         },
         {
           "type": "prose",
@@ -2255,16 +2297,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "4f4d6920d0050779.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C2 Twin Star's Shadow"
           }
         },
         {
+          "type": "image",
+          "image": "811a6fb43577dfa4.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "d3958699c7454a1b.webp"
         }
       ]
     }

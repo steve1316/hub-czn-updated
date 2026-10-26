@@ -133,6 +133,18 @@
               }
             },
             {
+              "cardId": "c_1027_srt4",
+              "name": "Flame Dragon's Jewel",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Flame Dragon's Jewel I",
+                "text": {
+                  "en": "[Unique] [Initiation] Increase Damage Amount of Attack Cards of this unit by 30%. When an Attack Card is activated, 1 Passion Weakness to the target."
+                }
+              }
+            },
+            {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
               "cost": 0,
@@ -238,6 +250,18 @@
               }
             },
             {
+              "cardId": "c_1027_srt4",
+              "name": "Flame Dragon's Jewel",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Flame Dragon's Jewel I",
+                "text": {
+                  "en": "[Unique] [Initiation] Increase Damage Amount of Attack Cards of this unit by 30%. When an Attack Card is activated, 1 Passion Weakness to the target."
+                }
+              }
+            },
+            {
               "cardId": "c_1027_uni2",
               "name": "Unity of Attack and Defense",
               "cost": 0,
@@ -340,6 +364,18 @@
               "cost": 1,
               "text": {
                 "en": "100% Damage."
+              }
+            },
+            {
+              "cardId": "c_1027_srt4",
+              "name": "Flame Dragon's Jewel",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Flame Dragon's Jewel I",
+                "text": {
+                  "en": "[Unique] [Initiation] Increase Damage Amount of Attack Cards of this unit by 30%. When an Attack Card is activated, 1 Passion Weakness to the target."
+                }
               }
             },
             {
@@ -661,13 +697,15 @@
               "level": 3,
               "text": {
                 "en": "It's pretty nice 6 more hits"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
               "text": {
                 "en": "A lot of additive, really nice"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -767,18 +805,63 @@
             {
               "cardId": "c_1027_srt4",
               "name": "Flame Dragon's Jewel",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "1/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Flame Dragon's Jewel I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Most consistent, Always good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Flame Dragon's Jewel II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Tenacity Damage isn't required"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Flame Dragon's Jewel III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Not very good once you get E2, but good before that"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Flame Dragon's Jewel IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Last option, only slightly better then Jewel 1 or 2 against only Passion Weak Enemies"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Flame Dragon's Jewel V",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Jewel 1: Most consistent, Always good\nJewel 2: Tenacity Damage isn't required\nJewel 3: Not very good once you get E2, but good before that\nJewel 4: Last option, only slightly better then Jewel 1 or 2 against only Passion Weak Enemies\n+Moral the best epiphany if you ever get it"
+            "en": "+Moral the best epiphany if you ever get it"
           }
         },
         {
@@ -1190,10 +1273,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "ef7dcc330452169f.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Forbidden Ruins"
           }
+        },
+        {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
         },
         {
           "type": "prose",
@@ -1202,16 +1293,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
         },
         {
+          "type": "image",
+          "image": "4410cc678663b446.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "b9d7df7360616d40.webp"
         }
       ]
     }

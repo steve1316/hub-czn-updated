@@ -212,6 +212,11 @@
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "cost": 1,
               "epiphany": {
                 "level": 4,
@@ -237,6 +242,24 @@
                 "god": "Caligo",
                 "text": {
                   "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Snack Time II",
+                "text": {
+                  "en": "[Retain] [Exhaust] Heal 200%. Draw 2."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -435,6 +458,11 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
+              "cost": 0
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
               "cost": 0,
               "epiphany": {
                 "level": 2,
@@ -553,6 +581,11 @@
             {
               "cardId": "c_1056_srt4",
               "name": "Strike of Darkness",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1056_srt4",
+              "name": "Strike of Darkness",
               "cost": 1,
               "epiphany": {
                 "level": 4,
@@ -664,6 +697,11 @@
                   "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
                 }
               }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "cost": 0
             },
             {
               "cardId": "c_1056_uni2",
@@ -788,6 +826,11 @@
                   "en": "[Unique] +40% Damage Amount to 1-Cost or lower cards. At the end of the turn, Heal 90%."
                 }
               }
+            },
+            {
+              "cardId": "c_1056_uni2",
+              "name": "Snack Time",
+              "cost": 0
             },
             {
               "cardId": "c_1056_uni2",
@@ -1065,7 +1108,8 @@
               "level": 2,
               "text": {
                 "en": "Adds Healing to attack cards, pretty nice"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1089,7 +1133,8 @@
               "level": 6,
               "text": {
                 "en": "+20% Additive just for Rei Existing, really nice"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1120,16 +1165,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0010",
-              "name": "Attack!",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             },
             {
               "cardId": "n_0115",
@@ -1362,7 +1399,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Only affecting 1 cost cards for both shield and healing is unfortuante"
                   }
                 },
                 {
@@ -1390,7 +1427,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Reonsating 3: Only affecting 1 cost cards for both shield and healing is unfortuante\n+1 Moral, is a very good universal buff unless your team specifically needs Resonate 4"
+            "en": "+1 Moral, is a very good universal buff unless your team specifically needs Resonate 4"
           }
         },
         {
@@ -1835,6 +1872,24 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "note": {
+                "en": "Cycle 0 but Vuln potential"
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "card_ds04_00007",
               "name": "Hand Enthralled by Light",
               "cost": 1,
@@ -1848,7 +1903,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
+            "en": "Hand Enthral: 2 Perma Moral"
           }
         },
         {
@@ -1925,6 +1980,24 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": "Rei can hold Eternal Hunger"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "n_0046",
               "name": "Forced Learning Apparatus",
               "cost": 2,
@@ -1945,7 +2018,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Self Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
           }
         },
         {
@@ -2195,16 +2268,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "49776881b511dddd.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "10d7fffcb45fca1e.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "f6619b1e5da76b51.webp"
         }
       ]
     }
