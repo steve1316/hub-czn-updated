@@ -1,4 +1,6 @@
 # tests/api/test_capture_autostart.py
+import time
+from threading import Thread as RealThread
 from unittest.mock import MagicMock, patch
 
 from fastapi.testclient import TestClient
@@ -107,3 +109,62 @@ def test_stop_clears_auto_started_flag():
     with patch("api.state.AppState.get_capture_manager", return_value=mgr):
         client.post("/api/capture/stop")
     assert state.capture_auto_started is False
+
+
+def test_failed_start_sweeps_hosts_and_cert():
+    capture_settings.save_capture_settings({"auto_start": True, "region": "global"})
+    mgr = MagicMock()
+    mgr.start_capture.side_effect = RuntimeError("proxy died")
+    a, b, c = _patched(mgr)
+    with a, b, c, patch("api.routes.capture.cleanup") as cleanup:
+        assert capture_routes.auto_start_capture() is False
+    cleanup.assert_called_once()
+
+
+def test_failed_manual_start_sweeps_hosts_and_cert():
+    mgr = MagicMock()
+    mgr.start_capture.side_effect = RuntimeError("proxy died")
+    a, b, c = _patched(mgr)
+    with a, b, c, patch("api.routes.capture.cleanup") as cleanup:
+        r = client.post("/api/capture/start", json={"region": "global", "debug": False})
+    assert r.status_code == 500
+    cleanup.assert_called_once()
+
+
+def test_successful_start_does_not_sweep():
+    mgr = MagicMock()
+    a, b, c = _patched(mgr)
+    with a, b, c, patch("api.routes.capture.cleanup") as cleanup:
+        client.post("/api/capture/start", json={"region": "global", "debug": False})
+    cleanup.assert_not_called()
+    state.capture_running = False
+    state.reset_capture_manager()
+
+
+def test_overlapping_starts_only_start_once():
+    """A second start that arrives while the first is still running must see 409, not start a second proxy."""
+    mgr = MagicMock()
+    errors = []
+
+    def _second():
+        try:
+            capture_routes.begin_capture("global")
+        except Exception as exc:
+            errors.append(exc)
+
+    def _slow_start(debug_mode=False):
+        t = RealThread(target=_second)
+        t.start()
+        time.sleep(0.2)
+        mgr.second = t
+
+    mgr.start_capture.side_effect = _slow_start
+    a, b, c = _patched(mgr)
+    with a, b, c:
+        capture_routes.begin_capture("global")
+        mgr.second.join(timeout=5)
+    assert mgr.start_capture.call_count == 1
+    assert len(errors) == 1 and errors[0].status_code == 409
+    state.capture_running = False
+    state.reset_capture_manager()
+

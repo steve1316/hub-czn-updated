@@ -12,8 +12,12 @@ from pydantic import BaseModel
 from api.state import state
 from api.capture.manager import remove_capture_entries
 from api.capture.settings import load_capture_settings, save_capture_settings
+from api.shutdown import cleanup
 
 router = APIRouter()
+
+# Held for the whole of a start, so the auto-start thread and the Start button cannot both begin a capture.
+_start_lock = threading.Lock()
 
 
 def _is_admin() -> bool:
@@ -122,25 +126,28 @@ def begin_capture(region: str, debug: bool = False, auto: bool = False) -> None:
     Raises:
         HTTPException: 403 without admin, 409 if already running, 500 if the manager fails to start.
     """
-    if not _is_admin():
-        raise HTTPException(status_code=403, detail="Administrator privileges required.")
-    if state.capture_running:
-        raise HTTPException(status_code=409, detail="Capture is already running.")
+    with _start_lock:
+        if not _is_admin():
+            raise HTTPException(status_code=403, detail="Administrator privileges required.")
+        if state.capture_running:
+            raise HTTPException(status_code=409, detail="Capture is already running.")
 
-    state.capture_region = region
-    mgr = state.get_capture_manager()
-    mgr.set_region(region)
+        state.capture_region = region
+        mgr = state.get_capture_manager()
+        mgr.set_region(region)
 
-    # Start synchronously so a failure comes back as a real HTTP error. This used to run on a
-    # worker thread, so the endpoint answered {"ok": true} even when capture never started.
-    try:
-        mgr.start_capture(debug_mode=debug)
-    except Exception as exc:
-        state.reset_capture_manager()
-        raise HTTPException(status_code=500, detail=str(exc))
+        # Start synchronously so a failure comes back as a real HTTP error. This used to run on a
+        # worker thread, so the endpoint answered {"ok": true} even when capture never started.
+        try:
+            mgr.start_capture(debug_mode=debug)
+        except Exception as exc:
+            state.reset_capture_manager()
+            # A start that died part-way may have left the hosts redirect or the cert trust behind.
+            cleanup()
+            raise HTTPException(status_code=500, detail=str(exc))
 
-    state.capture_running = True
-    state.capture_auto_started = auto
+        state.capture_running = True
+        state.capture_auto_started = auto
 
     def _watch():
         mgr.wait()
