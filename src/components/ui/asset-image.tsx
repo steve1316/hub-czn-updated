@@ -7,8 +7,12 @@ import { MAX_IMAGE_RETRIES, imageRetryDelay, imageRetryUrl } from "@/lib/imageRe
 interface AssetImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src"> {
   /** Full image url, usually from `assetUrl()`. */
   src: string
-  /** Shown once all retries have failed. Defaults to a dark neutral placeholder sized by `className`. */
+  /** Shown once all retries have failed. Defaults to a dark neutral placeholder sized by `className`. Pass `null` to render nothing. */
   fallback?: ReactNode
+  /** How many times to retry a failed load before giving up. Defaults to `MAX_IMAGE_RETRIES`. */
+  maxRetries?: number
+  /** Called once, after the last retry has failed (not on each retry). */
+  onError?: ImgHTMLAttributes<HTMLImageElement>["onError"]
 }
 
 /**
@@ -16,7 +20,7 @@ interface AssetImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src
  * @param props The `<img>` props, plus `fallback` for a custom failure view.
  * @returns The image, or the fallback after the last retry fails.
  */
-export function AssetImage({ src, fallback, className, onError, alt = "", ...rest }: AssetImageProps) {
+export function AssetImage({ src, fallback, maxRetries = MAX_IMAGE_RETRIES, className, onError, alt = "", ...rest }: AssetImageProps) {
   const [attempt, setAttempt] = useState(0)
   const [failed, setFailed] = useState(false)
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
@@ -31,12 +35,11 @@ export function AssetImage({ src, fallback, className, onError, alt = "", ...res
   useEffect(() => () => clearTimeout(timer.current), [src])
 
   if (failed) {
+    if (fallback !== undefined) return <>{fallback}</>
     return (
-      fallback ?? (
-        <div className={`${className ?? ""} flex items-center justify-center bg-[#282828] text-[#555]`} role="img" aria-label={alt}>
-          <ImageOff className="h-1/2 w-1/2 max-h-4 max-w-4" />
-        </div>
-      )
+      <div className={`${className ?? ""} flex items-center justify-center bg-[#282828] text-[#555]`} role="img" aria-label={alt}>
+        <ImageOff className="h-1/2 w-1/2 max-h-4 max-w-4" />
+      </div>
     )
   }
 
@@ -49,8 +52,8 @@ export function AssetImage({ src, fallback, className, onError, alt = "", ...res
       loading="lazy"
       decoding="async"
       onError={(e) => {
-        onError?.(e)
-        if (attempt >= MAX_IMAGE_RETRIES) {
+        if (attempt >= maxRetries) {
+          onError?.(e)
           setFailed(true)
           return
         }
