@@ -12,6 +12,9 @@ import { formatMaxRolls } from "./gear-score-text"
 
 const GS_SECTION_KEYS = ["calc", "formula", "example", "maxRolls", "weighted", "potential"] as const
 
+/** The max-roll lines for the Gear Score help, built once from the generated roll ranges. */
+const MAX_ROLLS_LINES = formatMaxRolls(SUBSTAT_ROLLS)
+
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // Gear Score explanation
@@ -40,7 +43,7 @@ function GsExplanation() {
           {GS_SECTION_KEYS.map((key) => (
             <div key={key}>
               <p className="text-[#ffffff] font-semibold mb-1">{t(`scoring.gs.${key}.heading`)}</p>
-              <pre className="whitespace-pre-wrap font-mono text-[#b3b3b3]">{key === "maxRolls" ? `${t(`scoring.gs.${key}.body`)}\n${formatMaxRolls(SUBSTAT_ROLLS)}` : t(`scoring.gs.${key}.body`)}</pre>
+              <pre className="whitespace-pre-wrap font-mono text-[#b3b3b3]">{key === "maxRolls" ? `${t(`scoring.gs.${key}.body`)}\n${MAX_ROLLS_LINES}` : t(`scoring.gs.${key}.body`)}</pre>
             </div>
           ))}
         </div>
