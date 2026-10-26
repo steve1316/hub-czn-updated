@@ -15,6 +15,7 @@ from pathlib import Path
 REPO = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(REPO))
 
+from api.client_db import client_output_dir
 from api.game_data.eff_instances import EffInstanceIndex
 from api.simulator.runtime import Runtime
 from api.simulator.replay.capture_reader import CaptureReader
@@ -24,7 +25,7 @@ from api.simulator.replay.report import render_report
 from api.simulator.replay.char_resolver import CharResolver
 
 
-CLIENT_DB = Path(r"C:\Users\soste\Downloads\output\db")
+CLIENT_DB = client_output_dir() / "db"
 CATALOG_PATH = REPO / "api" / "data" / "eff_type_catalog.json"
 REPORT_DIR = REPO / "docs" / "research"
 
