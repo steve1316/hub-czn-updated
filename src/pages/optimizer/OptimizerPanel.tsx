@@ -10,6 +10,7 @@ import { InfoPopover } from '@/components/ui/info-popover'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 import { SetCombobox } from './SetCombobox'
 import type { ComboboxOption } from './SetCombobox'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
 
 const SLOT_4_STATS = ['ATK%', 'DEF%', 'HP%', 'CRate', 'CDmg']
 const SLOT_5_STATS = [
@@ -725,7 +726,7 @@ export function OptimizerPanel({
             type="button"
             onClick={onRun}
             disabled={!canRun}
-            className="w-full flex items-center justify-center gap-2 bg-[#c084fc] hover:bg-[#d8b4fe] rounded-md py-2 text-sm text-[#1a1022] font-semibold transition-colors disabled:opacity-40 disabled:cursor-not-allowed"
+            className={`${PRIMARY_ACTION} w-full`}
           >
             <Play size={13} />
             {t('optimizer.run')}

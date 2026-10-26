@@ -36,8 +36,9 @@ body {
   margin: 0;
 }
 
-/* Unlayered, so it wins over the outline-none utilities and keyboard users always see where they are. */
-:focus-visible {
+/* Unlayered, so it wins over the outline-none utilities and keyboard users always see where they are. The shared
+   components in src/components/ui carry data-slot and draw their own focus ring. */
+:focus-visible:not([data-slot]) {
   outline: 2px solid #c084fc;
   outline-offset: 2px;
 }

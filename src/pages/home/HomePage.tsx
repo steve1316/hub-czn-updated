@@ -4,9 +4,9 @@ import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { ArrowRight } from 'lucide-react'
 import { api, isNoData } from '@/lib/api'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { cn } from '@/lib/utils'
 import { homeNextStep } from './home-next-step'
-
-const NEXT_STEP_ROUTES = { setup: '/setup', capture: '/capture', optimizer: '/optimizer' } as const
 
 const ONBOARDING_KEY = 'home.onboarding_done'
 
@@ -44,7 +44,7 @@ function OnboardingView({ onDone }: { onDone: () => void }) {
             <button
               type="button"
               onClick={handleStart}
-              className="shrink-0 text-sm font-semibold px-3 py-1.5 rounded-md bg-[#c084fc] hover:bg-[#d8b4fe] text-[#1a1022] transition-colors"
+              className={cn(PRIMARY_ACTION, 'shrink-0 px-3 py-1.5')}
             >
               {t('home.step1.cta')}
             </button>
@@ -135,8 +135,8 @@ function DashboardView({ onReset }: { onReset: () => void }) {
             <p className="text-sm text-[#b3b3b3] mt-0.5">{t(`home.next.${nextStep}.detail`)}</p>
           </div>
           <NavLink
-            to={NEXT_STEP_ROUTES[nextStep]}
-            className="shrink-0 inline-flex items-center gap-2 rounded-md bg-[#c084fc] px-4 py-2 text-sm font-semibold text-[#1a1022] hover:bg-[#d8b4fe]"
+            to={`/${nextStep}`}
+            className={cn(PRIMARY_ACTION, 'shrink-0')}
           >
             {t(`home.next.${nextStep}.cta`)}
             <ArrowRight size={15} />

@@ -2,9 +2,11 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Play, Zap, Users, RotateCcw, UserX } from 'lucide-react'
+import { Play, Zap, Users, UserX } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
 import { EmptyState } from '@/components/ui/empty-state'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { StaleBanner } from '@/components/ui/stale-banner'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
@@ -577,7 +579,7 @@ export function SimulateTab() {
             type="button"
             disabled={!canRun}
             onClick={() => mutation.mutate()}
-            className="w-full flex items-center justify-center gap-2 px-4 py-2 rounded bg-[#c084fc] text-[#1a1022] text-sm font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#d8b4fe] transition-colors"
+            className={`${PRIMARY_ACTION} w-full`}
           >
             <Play size={14} />
             {mutation.isPending ? t('simulator.running') : t('simulator.run')}
@@ -602,21 +604,7 @@ export function SimulateTab() {
           </div>
         )}
 
-        {stale && (
-          <div role="status" className="mb-3 flex items-center gap-3 rounded-lg border border-[#c084fc55] bg-[#c084fc14] px-4 py-2.5">
-            <RotateCcw size={15} className="shrink-0 text-[#c084fc]" />
-            <p className="flex-1 text-sm text-[#ffffff]">{t('simulator.stale')}</p>
-            <button
-              type="button"
-              disabled={!canRun}
-              onClick={() => mutation.mutate()}
-              className="shrink-0 inline-flex items-center gap-2 rounded-md bg-[#c084fc] px-3 py-1.5 text-sm font-semibold text-[#1a1022] hover:bg-[#d8b4fe] disabled:opacity-40"
-            >
-              <Play size={13} />
-              {t('simulator.runAgain')}
-            </button>
-          </div>
-        )}
+        {stale && <StaleBanner message={t('simulator.stale')} runLabel={t('simulator.runAgain')} onRun={() => mutation.mutate()} disabled={!canRun} />}
 
         {!result && !mutation.isPending && (
           <div className="flex-1 flex flex-col items-center justify-center gap-3 text-[#8a8a8a]">

@@ -3,8 +3,8 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import { User, RefreshCw, Download, ExternalLink, History } from 'lucide-react'
-import { api, assetUrl, ApiError } from '@/lib/api'
-import { EmptyState, GoToCaptureButton, RetryButton } from '@/components/ui/empty-state'
+import { api, assetUrl } from '@/lib/api'
+import { EmptyState, GoToCaptureButton, LoadError, RetryButton } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -288,13 +288,7 @@ export function RescuePage() {
   const retry = () => qc.invalidateQueries({ queryKey: ['rescue-records'] })
 
   if (error) {
-    return (
-      <div className="p-8">
-        <p className="text-sm text-[#f3727f]">{t('rescue.loadError')}</p>
-        <p className="mt-1 mb-3 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
-        <RetryButton onClick={retry} />
-      </div>
-    )
+    return <LoadError title={t('rescue.loadError')} error={error} onRetry={retry} className="h-full" />
   }
 
   if (banners.length === 0) {

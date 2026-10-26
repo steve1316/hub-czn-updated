@@ -1,37 +1,15 @@
-import { useState } from 'react'
+import { memo, useDeferredValue, useMemo, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { TriangleAlert } from 'lucide-react'
-import { api, ApiError } from '@/lib/api'
-import { EmptyState, RetryButton } from '@/components/ui/empty-state'
+import { api } from '@/lib/api'
+import { LoadError } from '@/components/ui/empty-state'
 import type { CardEntry, CardCharacter } from '@/lib/types'
 import { CardImage } from '@/pages/deck-builder/components/CardImage'
+import { TypeBadge } from '@/pages/deck-builder/components/TypeBadge'
 import { DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
 
-const TYPE_COLORS: Record<string, string> = {
-  DMG:     'bg-[#7f1d1d] text-[#fca5a5]',
-  Draw:    'bg-[#1e3a5f] text-[#93c5fd]',
-  Buff:    'bg-[#14532d] text-[#86efac]',
-  Cost:    'bg-[#3b1f6e] text-[#c4b5fd]',
-  Discard: 'bg-[#292524] text-[#a8a29e]',
-  Exhaust: 'bg-[#292524] text-[#a8a29e]',
-  Get:     'bg-[#1a2e1a] text-[#86efac]',
-  Change:  'bg-[#1c2a3a] text-[#7dd3fc]',
-  Copy:    'bg-[#1c2a3a] text-[#7dd3fc]',
-  Use:     'bg-[#2a1c1c] text-[#fca5a5]',
-}
-
 const CARD_FILTERS = ['dmg', 'support']
-
-function TypeBadge({ type }: { type: string }) {
-  const cls = TYPE_COLORS[type] ?? 'bg-[#222] text-[#b3b3b3]'
-  return (
-    <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide ${cls}`}>
-      {type}
-    </span>
-  )
-}
 
 /**
  * One number in the card detail's stat row.
@@ -47,6 +25,42 @@ function Stat({ label, value }: { label: string; value: string | null }) {
   )
 }
 
+/** Props for CardRow. */
+interface CardRowProps {
+  /** The card this row shows. */
+  card: CardEntry
+  /** Whether the card is the one open in the detail pane. */
+  selected: boolean
+  /** Opens a card by its id. Must be stable so unchanged rows skip re-rendering. */
+  onSelect: (cardId: string) => void
+}
+
+/**
+ * One card in the list, with its cost, name and type badges.
+ * @param props See `CardRowProps`.
+ * @returns The list row.
+ */
+const CardRow = memo(function CardRow({ card, selected, onSelect }: CardRowProps) {
+  const { t } = useTranslation()
+  return (
+    <ListRow selected={selected} onSelect={() => onSelect(card.card_id)}>
+      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md border border-[#075985] bg-[#082f49] font-mono text-sm font-bold text-[#93c5fd]">
+        {card.cost}
+      </span>
+      <span className="min-w-0 flex-1">
+        <span className="block truncate text-sm font-medium text-[#e5e7eb]">
+          {card.name || <span className="italic text-[#8a8a8a]">{t('cards.unnamed')}</span>}
+        </span>
+        {card.effect_types.length > 0 && (
+          <span className="mt-1 flex flex-wrap gap-1">
+            {card.effect_types.map(type => <TypeBadge key={type} type={type} />)}
+          </span>
+        )}
+      </span>
+    </ListRow>
+  )
+})
+
 export function CardsTab() {
   const { t } = useTranslation()
   const [selectedChar, setSelectedChar] = useState<string | null>(null)
@@ -60,21 +74,26 @@ export function CardsTab() {
     staleTime: Infinity,
   })
 
+  // Every card in one fetch. The character filter runs here, the same check the API would do.
   const { data: allCards = [], isLoading, error, refetch } = useQuery<CardEntry[]>({
-    queryKey: ['cards', selectedChar],
-    queryFn: () => api.cards(selectedChar ? Number(selectedChar) : undefined),
+    queryKey: ['cards'],
+    queryFn: () => api.cards(),
     staleTime: Infinity,
   })
 
-  const filtered = allCards.filter(card => {
-    if (filterType === 'dmg' && card.eff_value === 0) return false
-    if (filterType === 'support' && card.eff_value > 0) return false
-    if (search) {
-      const q = search.toLowerCase()
-      if (!card.name.toLowerCase().includes(q)) return false
-    }
-    return true
-  })
+  // Typing stays responsive while the long list filters behind it
+  const deferredSearch = useDeferredValue(search)
+  const filtered = useMemo(() => {
+    const q = deferredSearch.trim().toLowerCase()
+    const charId = selectedChar ? Number(selectedChar) : null
+    return allCards.filter(card => {
+      if (charId != null && card.char_res_id !== charId) return false
+      if (filterType === 'dmg' && card.eff_value === 0) return false
+      if (filterType === 'support' && card.eff_value > 0) return false
+      if (q && !card.name.toLowerCase().includes(q)) return false
+      return true
+    })
+  }, [allCards, selectedChar, filterType, deferredSearch])
 
   const charName = (id: number | null) => {
     const c = characters.find(ch => ch.char_res_id === id)
@@ -104,12 +123,7 @@ export function CardsTab() {
         isLoading ? (
           <p className="p-4 text-sm text-[#8a8a8a]">{t('common.loading')}</p>
         ) : error ? (
-          <EmptyState
-            icon={TriangleAlert}
-            title={t('cards.loadError')}
-            hint={error instanceof ApiError ? error.message : t('empty.serviceDown')}
-            action={<RetryButton onClick={() => refetch()} />}
-          />
+          <LoadError title={t('cards.loadError')} error={error} onRetry={() => refetch()} />
         ) : undefined
       }
       detail={
@@ -140,21 +154,7 @@ export function CardsTab() {
       }
     >
       {filtered.map(card => (
-        <ListRow key={card.card_id} selected={selectedId === card.card_id} onSelect={() => setSelectedId(card.card_id)}>
-          <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md border border-[#075985] bg-[#082f49] font-mono text-sm font-bold text-[#93c5fd]">
-            {card.cost}
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block truncate text-sm font-medium text-[#e5e7eb]">
-              {card.name || <span className="italic text-[#8a8a8a]">{t('cards.unnamed')}</span>}
-            </span>
-            {card.effect_types.length > 0 && (
-              <span className="mt-1 flex flex-wrap gap-1">
-                {card.effect_types.map(type => <TypeBadge key={type} type={type} />)}
-              </span>
-            )}
-          </span>
-        </ListRow>
+        <CardRow key={card.card_id} card={card} selected={selectedId === card.card_id} onSelect={setSelectedId} />
       ))}
     </EncyclopediaLayout>
   )

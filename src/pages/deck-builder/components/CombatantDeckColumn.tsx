@@ -20,6 +20,8 @@ import type {
 } from '../deck-builder.types'
 import { costBreakdownLines, type DeckBuilderSlotCostBreakdown } from '../deck-builder-cost.utils'
 import { InfoPopover } from '@/components/ui/info-popover'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { cn } from '@/lib/utils'
 import {
   formatCardDisplayDescription,
   mergeCardDisplayTags,
@@ -674,7 +676,7 @@ export function CombatantDeckColumn({
               type="button"
               onClick={onSimulate}
               disabled={simulateBlocker != null}
-              className="flex h-8 items-center gap-1.5 rounded-lg bg-[#c084fc] px-3 text-xs font-semibold text-[#1a1022] hover:bg-[#d8b4fe] disabled:pointer-events-none disabled:opacity-40"
+              className={cn(PRIMARY_ACTION, 'h-8 gap-1.5 px-3 py-0 text-xs disabled:pointer-events-none')}
             >
               <Zap size={13} />
               {t('deckBuilder.slot.simulate')}

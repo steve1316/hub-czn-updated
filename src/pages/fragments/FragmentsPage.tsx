@@ -2,8 +2,8 @@ import { useState } from 'react'
 import type React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { api, assetUrl, isNoData, ApiError } from '@/lib/api'
-import { EmptyState } from '@/components/ui/empty-state'
+import { api, assetUrl, isNoData } from '@/lib/api'
+import { EmptyState, LoadError } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { MemoryFragment, SetInfo, Stat } from '@/lib/types'
 import {
@@ -62,7 +62,7 @@ export function FragmentsPage() {
   const [sortKey, setSortKey] = useState<string | null>(null)
   const [sortDir, setSortDir] = useState<SortDir>('asc')
 
-  const { data: fragments = [], isLoading, error } = useQuery({
+  const { data: fragments = [], isLoading, error, refetch } = useQuery({
     queryKey: ['fragments'],
     queryFn: () => api.fragments(),
   })
@@ -102,12 +102,7 @@ export function FragmentsPage() {
   }
 
   if (error) {
-    return (
-      <div className="p-8">
-        <p className="text-sm text-[#f3727f]">{t('fragments.loadError')}</p>
-        <p className="mt-1 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
-      </div>
-    )
+    return <LoadError title={t('fragments.loadError')} error={error} onRetry={() => refetch()} className="h-full" />
   }
 
   const COLS: { key: string; label: string; info?: React.ReactNode }[] = [

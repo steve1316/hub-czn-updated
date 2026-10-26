@@ -40,12 +40,10 @@ export function DeckBlock({ cards, ratings, cardsById, openFor }: DeckBlockProps
   const lang = resolveLang(i18n.language)
   const legend = [...new Map(cards.map(card => [legendKey(card), card])).values()]
 
-  /**
-   * Open this deck in the Deck Builder, epiphanies and divine lines included.
-   * @param owner The guide character.
-   */
-  function openInDeckBuilder(owner: { charResId: number; name: string }) {
-    const guideDeck: GuideDeckHandoff = { name: owner.name, ...guideDeckToSlot(owner.charResId, cards) }
+  /** Open this deck in the Deck Builder for `openFor`, epiphanies and divine lines included. */
+  function openInDeckBuilder() {
+    if (!openFor) return
+    const guideDeck: GuideDeckHandoff = { name: openFor.name, ...guideDeckToSlot(openFor.charResId, cards) }
     navigate('/deck-builder', { state: { guideDeck } })
   }
 
@@ -54,7 +52,7 @@ export function DeckBlock({ cards, ratings, cardsById, openFor }: DeckBlockProps
       {openFor && (
         <button
           type="button"
-          onClick={() => openInDeckBuilder(openFor)}
+          onClick={openInDeckBuilder}
           className="inline-flex items-center gap-1.5 self-start rounded-md border border-[#3a3a3a] px-3 py-1.5 text-sm text-[#b3b3b3] hover:border-[#c084fc] hover:text-[#ffffff]"
         >
           <SquareStack size={16} />

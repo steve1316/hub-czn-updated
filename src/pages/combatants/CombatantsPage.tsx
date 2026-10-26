@@ -2,8 +2,8 @@ import { useState, useCallback } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Users, Loader2, ChevronDown, ChevronRight, Download, ExternalLink } from 'lucide-react'
-import { api, assetUrl, ApiError } from '@/lib/api'
-import { EmptyState, RetryButton } from '@/components/ui/empty-state'
+import { api, assetUrl } from '@/lib/api'
+import { EmptyState, LoadError } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -280,13 +280,7 @@ export function CombatantsPage() {
   }, [])
 
   if (error) {
-    return (
-      <div className="p-4">
-        <p className="text-sm text-[#f3727f]">{t('combatants.loadError')}</p>
-        <p className="mt-1 mb-3 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
-        <RetryButton onClick={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })} />
-      </div>
-    )
+    return <LoadError title={t('combatants.loadError')} error={error} onRetry={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })} className="h-full" />
   }
 
   if (isLoading) {

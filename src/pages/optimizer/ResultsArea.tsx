@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { Loader2, ChevronUp, ChevronDown, ChevronsUpDown, Play, RotateCcw } from 'lucide-react'
+import { Loader2, ChevronUp, ChevronDown, ChevronsUpDown, Play } from 'lucide-react'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { StaleBanner } from '@/components/ui/stale-banner'
+import { cn } from '@/lib/utils'
 import { useTranslation } from 'react-i18next'
 import { InfoPopover } from '@/components/ui/info-popover'
 import { api, assetUrl } from '@/lib/api'
@@ -32,18 +35,14 @@ interface ResultsAreaProps {
 }
 
 /**
- * A button that starts the optimizer again from the results area.
+ * A button that starts the optimizer again after a cancelled or failed run.
  * @param onRun Starts the run.
  * @returns The button.
  */
 function RunAgainButton({ onRun }: { onRun: () => void }) {
   const { t } = useTranslation()
   return (
-    <button
-      type="button"
-      onClick={onRun}
-      className="shrink-0 inline-flex items-center gap-2 rounded-md bg-[#c084fc] px-3 py-1.5 text-sm font-semibold text-[#1a1022] hover:bg-[#d8b4fe]"
-    >
+    <button type="button" onClick={onRun} className={cn(PRIMARY_ACTION, 'px-3 py-1.5')}>
       <Play size={13} />
       {t('optimizer.runAgain')}
     </button>
@@ -370,13 +369,7 @@ export function ResultsArea({
 
   return (
     <div className="flex-1 overflow-y-auto p-4">
-      {stale && (
-        <div role="status" className="mb-3 flex items-center gap-3 rounded-lg border border-[#c084fc55] bg-[#c084fc14] px-4 py-2.5">
-          <RotateCcw size={15} className="shrink-0 text-[#c084fc]" />
-          <p className="flex-1 text-sm text-[#ffffff]">{t('optimizer.stale')}</p>
-          {onRun && <RunAgainButton onRun={onRun} />}
-        </div>
-      )}
+      {stale && <StaleBanner message={t('optimizer.stale')} runLabel={t('optimizer.runAgain')} onRun={onRun} />}
 
       <div
         className="grid gap-2 px-3 py-1 text-xs font-medium text-[#b3b3b3] mb-1"

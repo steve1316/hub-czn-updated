@@ -3,9 +3,9 @@ import type { ReactNode } from 'react'
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
-import { useNavigate } from 'react-router-dom'
-import { CheckCircle, XCircle, Loader2, ChevronDown, ChevronRight, ArrowRight } from 'lucide-react'
+import { CheckCircle, XCircle, Loader2, ChevronDown, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { GoToCaptureButton } from '@/components/ui/empty-state'
 import { GameDataCard } from './GameDataCard'
 
 function StatusIcon({ ok }: { ok: boolean }) {
@@ -50,7 +50,6 @@ function Row({
 export function SetupPage() {
   const { t } = useTranslation()
   const qc = useQueryClient()
-  const navigate = useNavigate()
   const [howOpen, setHowOpen] = useState(false)
   const [advancedOpen, setAdvancedOpen] = useState(false)
 
@@ -107,14 +106,7 @@ export function SetupPage() {
         <div className="flex items-center gap-4 p-4 rounded-lg bg-[#181818] border border-[#c084fc55]">
           <CheckCircle size={18} className="text-green-500 shrink-0" />
           <p className="flex-1 text-sm text-[#ffffff]">{t('setup.ready')}</p>
-          <button
-            type="button"
-            onClick={() => navigate('/capture')}
-            className="shrink-0 inline-flex items-center gap-2 rounded-md bg-[#c084fc] px-4 py-2 text-sm font-semibold text-[#1a1022] hover:bg-[#d8b4fe]"
-          >
-            {t('setup.nextCapture')}
-            <ArrowRight size={15} />
-          </button>
+          <GoToCaptureButton label={t('setup.nextCapture')} />
         </div>
       )}
 
@@ -182,7 +174,7 @@ export function SetupPage() {
                 size="sm"
                 onClick={() => certMutation.mutate()}
                 disabled={certMutation.isPending}
-                className="bg-[#c084fc] hover:bg-[#d8b4fe] text-[#1a1022] shrink-0"
+                className="shrink-0"
               >
                 {certMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.generate')}
               </Button>
@@ -218,7 +210,7 @@ export function SetupPage() {
               size="sm"
               onClick={() => installCertMutation.mutate()}
               disabled={installCertMutation.isPending}
-              className="bg-[#c084fc] hover:bg-[#d8b4fe] text-[#1a1022] self-start"
+              className="self-start"
             >
               {installCertMutation.isPending ? (
                 <>

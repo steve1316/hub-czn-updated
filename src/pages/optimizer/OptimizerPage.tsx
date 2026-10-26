@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect, useCallback, useMemo } from 'react'
+import { useState, useRef, useEffect, useCallback } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Swords } from 'lucide-react'
@@ -188,10 +188,7 @@ export function OptimizerPage() {
     setSelectedRank((prev) => (prev === rank ? null : rank))
   }, [])
 
-  const stale = useMemo(
-    () => jobState === 'done' && runConfig != null && settingsKey(runnableConfig(runConfig)) !== settingsKey(runnableConfig(config)),
-    [jobState, runConfig, config],
-  )
+  const stale = jobState === 'done' && runConfig != null && settingsKey(runnableConfig(runConfig)) !== settingsKey(runnableConfig(config))
 
   if (status && !status.data_loaded) {
     return <EmptyState icon={Swords} title={t('optimizer.noData')} hint={t('optimizer.noDataHint')} className="h-full" />

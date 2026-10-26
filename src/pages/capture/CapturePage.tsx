@@ -11,6 +11,9 @@ import { CheckCircle, XCircle, Radio, Square, FolderOpen, Download, Loader2, Inf
 import { InfoPopover } from '@/components/ui/info-popover'
 import type { CaptureLogMessage, CaptureStatus } from '@/lib/types'
 
+/** Queries whose data comes from the loaded capture, refreshed after "Load latest". */
+const LOADED_DATA_KEYS = ['status', 'fragments', 'combatants', 'simulate-decks']
+
 const LEVEL_COLOR: Record<CaptureLogMessage['level'], string> = {
   success: '#4ade80',
   error: '#f87171',
@@ -437,7 +440,7 @@ export function CapturePage() {
 
   const loadLatestMutation = useMutation({
     mutationFn: (file: string) => api.load(file),
-    onSuccess: () => qc.invalidateQueries(),
+    onSuccess: () => qc.invalidateQueries({ predicate: q => LOADED_DATA_KEYS.includes(q.queryKey[0] as string) }),
   })
 
   const running = captureStatus?.running ?? false
