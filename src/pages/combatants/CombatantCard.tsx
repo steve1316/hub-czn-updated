@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { User } from 'lucide-react'
 import { assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { Combatant } from '@/lib/types'
 
 interface CombatantCardProps {
@@ -31,7 +32,7 @@ export function CombatantCard({ combatant, selected, onClick }: CombatantCardPro
             <User size={24} />
           </div>
         ) : (
-          <img
+          <AssetImage
             src={assetUrl(combatant.portrait_url)}
             alt={combatant.name}
             className="w-full h-full object-cover"

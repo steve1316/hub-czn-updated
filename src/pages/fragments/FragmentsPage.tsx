@@ -3,6 +3,7 @@ import type React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { MemoryFragment, SetInfo } from '@/lib/types'
 import {
   Table, TableBody, TableCell, TableHead,
@@ -34,11 +35,10 @@ function SubCell({ text }: { text: string | undefined }) {
 function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
   const src = assetUrl(`/assets/game/pieces/item_piece_set_${String(setId).padStart(3, '0')}_${slotNum}.png`)
   return (
-    <img
+    <AssetImage
       src={src}
       alt=""
       className="w-8 h-8 object-contain shrink-0"
-      onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0' }}
     />
   )
 }

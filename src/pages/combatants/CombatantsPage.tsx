@@ -3,6 +3,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { RefreshCw, User, Loader2, ChevronDown, ChevronRight, Download, Cloud } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
 import type { Combatant } from '@/lib/types'
@@ -23,7 +24,7 @@ function AttrBadge({ attr }: { attr: string }) {
   const icon = ATTR_ICON[attr]
   if (icon) {
     return (
-      <img
+      <AssetImage
         src={assetUrl(icon)}
         alt={attr}
         title={attr}
@@ -44,11 +45,12 @@ function CollapseBackground({ resId }: { resId: number }) {
   const [variant, setVariant] = useState<'02' | '01' | null>('02')
   if (!variant) return null
   return (
-    <img
+    <AssetImage
       src={assetUrl(`/assets/game/collapse/collapse_${resId}_${variant}.png`)}
       alt=""
       className="absolute left-0 top-0 pointer-events-none select-none"
       style={{ height: '100%', width: 'auto' }}
+      maxRetries={variant === '02' ? 0 : undefined}
       onError={() => {
         if (variant === '02') setVariant('01')
         else setVariant(null)
@@ -71,7 +73,7 @@ function PartnerBadge({
   return (
     <div className="flex items-center gap-2 bg-[#141414]/90 border border-[#2a2a2a] rounded-lg px-2 py-1.5">
       {partnerResId && imgOk ? (
-        <img
+        <AssetImage
           src={assetUrl(`/assets/game/tp_skill/battle_icon_tp_skill_${partnerResId}.png`)}
           alt={partnerName ?? ''}
           className="w-10 h-[26px] rounded object-cover shrink-0"
@@ -191,11 +193,10 @@ function CombatantRow({
 
         {/* Rectangular battle icon */}
         <div className="w-14 h-9 shrink-0 rounded-lg overflow-hidden bg-[#121212] border border-[#252525]">
-          <img
+          <AssetImage
             src={tpUrl}
             alt={combatant.name}
             className="w-full h-full object-cover"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0' }}
           />
         </div>
 

@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Loader2, User } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { GearSlot, FinalStats, BaseStats } from '@/lib/types'
 import { InfoPopover } from '@/components/ui/info-popover'
 
@@ -40,7 +41,7 @@ function EquippedByAvatar({ portrait, name }: { portrait?: string; name?: string
 
   if (portrait && !imgErr) {
     return (
-      <img
+      <AssetImage
         src={portrait}
         alt={name ?? ''}
         title={name}
@@ -103,10 +104,11 @@ export function GearSlotCard({
       <div className="relative flex items-center gap-2.5 px-3 pt-3 pb-2.5 border-b border-[#1e1e1e]">
         <div className="relative shrink-0">
           {hasPieceImg ? (
-            <img
+            <AssetImage
               src={pieceImageUrl(slot.set_id!, slot.slot_num!)}
               alt={slot.set_name ?? slot.slot}
               className="w-10 h-10 object-contain rounded-lg"
+              fallback={null}
               onError={(e) => {
                 const el = e.currentTarget as HTMLImageElement
                 el.style.display = 'none'

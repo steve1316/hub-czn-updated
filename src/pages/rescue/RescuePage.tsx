@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
 import { User, RefreshCw, Download, Cloud } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
 import i18n from '@/i18n'
@@ -50,7 +51,7 @@ function PortraitCard({ pull }: { pull: RescuePull }) {
           <User size={24} />
         </div>
       ) : (
-        <img
+        <AssetImage
           src={assetUrl(pull.image_url)}
           alt={pull.name}
           className="w-full h-full object-cover"
@@ -68,7 +69,7 @@ function TableCellImage({ pull }: { pull: RescuePull }) {
   const [imgError, setImgError] = useState(false)
   if (imgError) return <User size={16} className="text-[#b3b3b3]" />
   return (
-    <img
+    <AssetImage
       src={assetUrl(pull.image_url)}
       alt={pull.name}
       className="w-6 h-6 rounded object-cover bg-[#181818]"
