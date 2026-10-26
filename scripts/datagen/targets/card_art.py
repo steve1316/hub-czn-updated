@@ -54,7 +54,7 @@ def build(ctx: Context) -> TargetResult:
         The image map as a normal file, the images as files created only when missing, and a summary.
     """
     combatants = ctx.client.by_id(COMBATANT_TABLE)
-    folders = _existing_folders()
+    folders = existing_folders()
     new_files: dict[Path, bytes] = {}
     issues: list[Issue] = []
     for res_id, character in roster.by_name():
@@ -121,7 +121,7 @@ def _has_android_collapse(res_id: int) -> bool:
     return any((REPO_ROOT / ANDROID_COLLAPSE_DIR / f"collapse_{res_id}_{variant}.png").exists() for variant in ("01", "02"))
 
 
-def _existing_folders() -> dict[int, str]:
+def existing_folders() -> dict[int, str]:
     """
     Which deck builder folder each combatant's images already live in.
 

@@ -154,7 +154,7 @@ def card_entry(ctx: Context, shard: str, row: dict, output_id: str, season_tags:
     entry = {
         "id": output_id,
         "name": ctx.text(ctx.client.text(row.get("name")) or output_id, sentences=False),
-        "cost": _cost(row.get("cost")),
+        "cost": parse_cost(row.get("cost")),
         "card_type": card_type(ctx, row.get("card_category")),
         "category": category,
         "tags": tags,
@@ -162,7 +162,7 @@ def card_entry(ctx: Context, shard: str, row: dict, output_id: str, season_tags:
         "description": ctx.text(resolution.text),
         "restrictions": None if is_monster else restrictions(classes),
         "allowed_classes": classes,
-        "image_path": f"{IMAGE_DIR.as_posix()}/{category}/{output_id}.webp",
+        "image_path": image_path(shard, output_id),
     }
     # Monster cards are priced by rarity in the deck builder. Neutral cards all cost the same, so they leave it out.
     if is_monster:
@@ -170,6 +170,21 @@ def card_entry(ctx: Context, shard: str, row: dict, output_id: str, season_tags:
         if entry["rarity"] is None:
             issues.append(Issue("error", f"{NAME}: {row['id']} ({output_id}) has an unknown rarity {row.get('rarity')}"))
     return entry
+
+
+def image_path(shard: str, output_id: str) -> str:
+    """
+    Where a pool card's art lives, relative to the deck builder data folder.
+
+    Args:
+        shard: The card shard the row came from, such as "public".
+        output_id: The id the app knows the card by.
+
+    Returns:
+        Such as "neutral-cards/monster/m_0001.webp".
+    """
+    category = "monster" if shard == MONSTER_SHARD else "neutral"
+    return f"{IMAGE_DIR.as_posix()}/{category}/{output_id}.webp"
 
 
 def restrictions(classes: list[str]) -> str:
@@ -211,7 +226,7 @@ def _season_tags(ctx: Context) -> set[str]:
     return {row["id"] for row in ctx.client.rows(EXTRA_TAG_TABLE) if row.get("type") == SEASON_TAG_TYPE}
 
 
-def _cost(raw: str | None) -> int | None:
+def parse_cost(raw: str | None) -> int | None:
     """
     A card's cost.
 
@@ -219,7 +234,7 @@ def _cost(raw: str | None) -> int | None:
         raw: The client cell.
 
     Returns:
-        The cost, or None when the client stores something that is not a number.
+        The cost, -1 for an X cost, or None when the client stores something that is not a number.
     """
     try:
         return int(raw)

@@ -140,10 +140,23 @@ class TemplateResolver:
         Returns:
             The resolved description. Empty text when the card has no description at all.
         """
-        card = self.client.cards.get(card_id, {})
+        base = self.client.cards.get(base_card_id, {}) if base_card_id else None
+        return self.describe(self.client.cards.get(card_id, {}), base)
+
+    def describe(self, card: dict, base: dict | None = None) -> Resolution:
+        """
+        A card row's description with its trait tags in front, for rows that may live outside the `card(*)` shards.
+
+        Args:
+            card: The card row.
+            base: For an epiphany variant whose own description is "none", the row whose template it shares.
+
+        Returns:
+            The resolved description. Empty text when the card has no description at all.
+        """
         template = self.client.text(card.get("desc"))
-        if template is None and base_card_id:
-            template = self.client.text(self.client.cards.get(base_card_id, {}).get("desc"))
+        if template is None and base:
+            template = self.client.text(base.get("desc"))
         if template is None:
             return Resolution("")
         resolution = self.resolve(template, parse_list(card.get("link_skill_eff_id")))
