@@ -313,7 +313,7 @@ export function createDeckBuilderExportSlot(slot: SquadSlot): DeckBuilderExportS
       armor_id: slot.equipment.armor?.id ?? null,
       accessory_id: slot.equipment.accessory?.id ?? null,
     },
-    cards: slot.cards.map(item => ({
+    cards: slot.unloadedCards ?? slot.cards.map(item => ({
       card_id: item.card.card_id,
       selected_variant_id: item.selectedVariant?.variant_id ?? null,
       selected_divine_god: item.selectedDivineGod?.id ?? null,
@@ -476,6 +476,7 @@ export function useDeckBuilder() {
             egoSkill,
             isLoading: false,
             error: null,
+            unloadedCards: null,
           }
         } catch (error) {
           return {
@@ -483,6 +484,7 @@ export function useDeckBuilder() {
             combatantId: importedSlot.combatant_id,
             equipment: importedEquipment,
             isLoading: false,
+            unloadedCards: importedSlot.cards,
             error: error instanceof Error
               ? error.message
               : i18n.t('deckBuilder.alerts.importCombatantError'),
@@ -524,6 +526,7 @@ export function useDeckBuilder() {
           egoSkill: null,
           isLoading: true,
           error: null,
+          unloadedCards: null,
         }
       }),
     )
@@ -714,6 +717,7 @@ export function useDeckBuilder() {
           ...slot,
           cards: [],
           equipment: createEmptyEquipment(),
+          unloadedCards: null,
         }
       }),
     )

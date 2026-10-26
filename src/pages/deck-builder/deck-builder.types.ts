@@ -168,6 +168,8 @@ export type SquadSlot = {
   egoSkill: DeckBuilderCardWithVariants | null
   isLoading: boolean
   error: string | null
+  /** The imported cards of a combatant whose card data failed to load, kept so saving the squad does not drop them, or null. */
+  unloadedCards: DeckBuilderImportedCard[] | null
 }
 
 export type VariantModalTarget =

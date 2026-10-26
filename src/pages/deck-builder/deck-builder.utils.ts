@@ -102,6 +102,7 @@ export function createEmptySlot(): SquadSlot {
     egoSkill: null,
     isLoading: false,
     error: null,
+    unloadedCards: null,
   }
 }
 

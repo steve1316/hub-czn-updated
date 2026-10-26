@@ -31,7 +31,7 @@ function monster(id: string, rarity: string | null): DeckCardInstance {
  * @returns The slot.
  */
 function slot(cards: DeckCardInstance[]): SquadSlot {
-  return { combatantId: null, cards, equipment: {} as SquadSlot["equipment"], startingCards: [], epiphanyCards: [], egoSkill: null, isLoading: false, error: null }
+  return { combatantId: null, cards, equipment: {} as SquadSlot["equipment"], startingCards: [], epiphanyCards: [], egoSkill: null, isLoading: false, error: null, unloadedCards: null }
 }
 
 describe("monster card cost", () => {
