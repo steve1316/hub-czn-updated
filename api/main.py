@@ -132,6 +132,8 @@ if __name__ == "__main__":
         port = _chosen_port()
         print(f"PORT:{port}", flush=True)
         print(f"TOKEN:{API_TOKEN}", flush=True)
+        # Opt-in: begins capture on a worker thread if the Capture page setting is on.
+        capture.schedule_auto_start()
         uvicorn.run(app, host="127.0.0.1", port=port, log_level="warning")
     except Exception as exc:
         print(f"ERROR:{exc}", flush=True, file=sys.stderr)
