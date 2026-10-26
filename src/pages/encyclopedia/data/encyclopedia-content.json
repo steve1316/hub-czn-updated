@@ -627,6 +627,922 @@
         "en": "For 1 turn(s), when hit, deal 20 damage to the attacker."
       },
       "seeAlso": []
+    },
+    {
+      "id": "fracture",
+      "term": {
+        "en": "Fracture"
+      },
+      "aliases": [
+        "Fracture"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "At the end of the turn, 40% DoT for each Fracture. On effect activation, decrease Fracture stacks by half (max 30 stacks)."
+      },
+      "seeAlso": [
+        "fracture-amplification"
+      ]
+    },
+    {
+      "id": "fracture-amplification",
+      "term": {
+        "en": "Fracture Amplification"
+      },
+      "aliases": [
+        "Fracture Amplification"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Fracture inflicted by allies is activated, 1 Fracture to the target, and if there is only one enemy, 2 Fracture. Increase Damage Amount of Fracture inflicted by Arabella by 20%. When applied to a different target, remove Fracture Amplification (cannot stack)."
+      },
+      "seeAlso": [
+        "fracture"
+      ]
+    },
+    {
+      "id": "metallization",
+      "term": {
+        "en": "Metallization"
+      },
+      "aliases": [
+        "Metallization"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Shield is gained through an ability, 80% Defense-Based Damage to a random enemy, 80% Shield, and decrease Metallization by 1."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "commence-the-hunt",
+      "term": {
+        "en": "Commence the Hunt"
+      },
+      "aliases": [
+        "Commence the Hunt"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When a Targeting Attack Card is activated, 50% Extra Attack on the target, then decrease Commence the Hunt by 1. +30% base Damage Amount to Extra Attacks for each Commence the Hunt (max 5 stacks)."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "scorched",
+      "term": {
+        "en": "Scorched"
+      },
+      "aliases": [
+        "Scorched"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Action Count is decreased, the amount decreased × 80% DoT (max 10 stack(s)). On effect activation, decrease by 1, and at the end of the turn, remove effect."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "resolve",
+      "term": {
+        "en": "Resolve"
+      },
+      "aliases": [
+        "Resolve"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "+20% Shield Gain Amount for each Resolve."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "voracity",
+      "term": {
+        "en": "Voracity"
+      },
+      "aliases": [
+        "Voracity"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Hitting with an Attack Card, 40% Fixed Heal. If Health is 50% or higher, +30% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1. (max 30 stacks)."
+      },
+      "seeAlso": [
+        "predation"
+      ]
+    },
+    {
+      "id": "predation",
+      "term": {
+        "en": "Predation"
+      },
+      "aliases": [
+        "Predation"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "If in a Voracity state, +80% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1."
+      },
+      "seeAlso": [
+        "voracity"
+      ]
+    },
+    {
+      "id": "fortitude",
+      "term": {
+        "en": "Fortitude"
+      },
+      "aliases": [
+        "Fortitude"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "-20% Damage Amount taken for each Fortitude."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "decibel",
+      "term": {
+        "en": "Decibel"
+      },
+      "aliases": [
+        "Decibel"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "On Shuffle, 50% Extra Attack by allies to a random enemy, and on activation, remove Decibel. Heal 50% × Decibel count, and +50% Damage Amount × Decibel count to Extra Attacks (max 5 stacks)."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "flame-arts",
+      "term": {
+        "en": "Flame Arts"
+      },
+      "aliases": [
+        "Flame Arts"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Flame Arts reaches 3 stacks, 120% Extra Damage to the enemy that was attacked last. On effect activation, decrease Flame Arts by 3."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "descent",
+      "term": {
+        "en": "Descent"
+      },
+      "aliases": [
+        "Descent"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Descent stacks to 8 or more, create 1 Heavensfall in hand. When Heavensfall is created, decrease Descent by 8 (activates max 10 times per turn)."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "reload",
+      "term": {
+        "en": "Reload"
+      },
+      "aliases": [
+        "Reload"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "Increase Damage Amount of Ballista cards by 50%. At the end of the turn, remove Reload (max 3 stacks)."
+      },
+      "seeAlso": [
+        "ballista-card"
+      ]
+    },
+    {
+      "id": "dark-mist-stance",
+      "term": {
+        "en": "Dark Mist Stance"
+      },
+      "aliases": [
+        "Dark Mist Stance"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "Enable the Dark Mist Stance effect for Rin's cards. When an Attack Card of another Combatant is activated, remove Dark Mist Stance."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "silver-veil",
+      "term": {
+        "en": "Silver Veil"
+      },
+      "aliases": [
+        "Silver Veil"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Silver Veil reaches 3 stacks, 500% Defense-Based Damage to all enemies. On activation, remove Silver Veil."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "wave",
+      "term": {
+        "en": "Wave"
+      },
+      "aliases": [
+        "Wave"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "If Wave is 3, gain 1 Action Points and reduce Wave by 3."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "chronicle",
+      "term": {
+        "en": "Chronicle"
+      },
+      "aliases": [
+        "Chronicle"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "At the start of the turn, decrease all Chronicle. Gain Chronal Ascension for each decreased (max 6). When Chronal Ascension is owned, unable to gain Chronicle."
+      },
+      "seeAlso": [
+        "chronal-ascension"
+      ]
+    },
+    {
+      "id": "chronal-ascension",
+      "term": {
+        "en": "Chronal Ascension"
+      },
+      "aliases": [
+        "Chronal Ascension"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When Rita's Basic or Signature Cards are activated, use Chronal Ascension as Cost. Unable to gain Chronicle for Costs used through Chronal Ascension. At the end of the turn, remove Chronal Ascension."
+      },
+      "seeAlso": [
+        "chronicle"
+      ]
+    },
+    {
+      "id": "crystallization",
+      "term": {
+        "en": "Crystallization"
+      },
+      "aliases": [
+        "Crystallization"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "At the end of the turn, gain 20% Fixed Shield for each Crystallization."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "inspiration",
+      "term": {
+        "en": "Inspiration"
+      },
+      "aliases": [
+        "Inspiration"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When you create a card except Status or Curse cards, 50% chance to create 1 additional card."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "ember",
+      "term": {
+        "en": "Ember"
+      },
+      "aliases": [
+        "Ember"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When hitting or putting a target in a Ravage state, deal +30% Damage for each stack of Ember the target has (up to 5 stacks). Upon activation, an Ember is removed."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "fury",
+      "term": {
+        "en": "Fury"
+      },
+      "aliases": [
+        "Fury"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "Gain Morale equal to the amount of Hunger."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "shield-retention",
+      "term": {
+        "en": "Shield Retention"
+      },
+      "aliases": [
+        "Shield Retention"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "Retain 50% Shield. When the effect is activated, decrease Shield Retention by 1."
+      },
+      "seeAlso": [
+        "shield"
+      ]
+    },
+    {
+      "id": "cursed-shackles",
+      "term": {
+        "en": "Cursed Shackles"
+      },
+      "aliases": [
+        "Cursed Shackles"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When an Attack Card other than a Bind card is activated by allies on a target in a Cursed Shackles state, gain 1 Will-O'-Wisp for each Hit Count. When applied to a different target, remove Cursed Shackles."
+      },
+      "seeAlso": [
+        "will-o-wisp"
+      ]
+    },
+    {
+      "id": "will-o-wisp",
+      "term": {
+        "en": "Will-O'-Wisp"
+      },
+      "aliases": [
+        "Will-O’-Wisp",
+        "Will-O'-Wisp"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "When 5 Will-O-Wisp are gained, create 1 Shadow of the Moon. When the effect is activated, decrease Will-O-Wisp by 5."
+      },
+      "seeAlso": [
+        "cursed-shackles"
+      ]
+    },
+    {
+      "id": "afterglow",
+      "term": {
+        "en": "Afterglow"
+      },
+      "aliases": [
+        "Afterglow"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "+1 to Tenacity Damage of Attack Cards, and +100% Damage Amount against enemies in a Ravage state and enemies without Tenacity. On effect activation, decrease Afterglow by 1."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "ionization",
+      "term": {
+        "en": "Ionization"
+      },
+      "aliases": [
+        "Ionization"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "+8% Damage Amount taken for each Ionization, and +4% additional Damage Amount taken from Hilde for each Ionization (max 12 stack(s))."
+      },
+      "seeAlso": [
+        "zero-in"
+      ]
+    },
+    {
+      "id": "zero-in",
+      "term": {
+        "en": "Zero In"
+      },
+      "aliases": [
+        "Zero In"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "At the end of the turn, 35% Extra Attack to the enemy with the highest HP for each Zero In, and on effect activation, remove Zero In (max 60 stack(s))."
+      },
+      "seeAlso": [
+        "ionization"
+      ]
+    },
+    {
+      "id": "brand-of-the-cycle",
+      "term": {
+        "en": "Brand of the Cycle"
+      },
+      "aliases": [
+        "Brand of the Cycle"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "Increase Damage Amount taken from Rossweisse by 20%, and when activated, decrease Brand of the Cycle by 1."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "truth-seeking",
+      "term": {
+        "en": "Truth Seeking"
+      },
+      "aliases": [
+        "Truth Seeking"
+      ],
+      "category": "status",
+      "definition": {
+        "en": "At the end of the turn, 1 Truth Seeking, inflict Chastisement for each stack, then enhance the Mark of Error action."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "creation",
+      "term": {
+        "en": "Creation"
+      },
+      "aliases": [
+        "Creation"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "A creature card created by Orlea."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "bullet",
+      "term": {
+        "en": "Bullet"
+      },
+      "aliases": [
+        "Bullet"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Bullet, Tracer Shot, Blanks, Armor-piercing, Buckshot. These are standardized bullets."
+      },
+      "seeAlso": [
+        "handgun-bullet",
+        "launcher-bullet",
+        "heart-bullet"
+      ]
+    },
+    {
+      "id": "handgun-bullet",
+      "term": {
+        "en": "Handgun Bullet"
+      },
+      "aliases": [
+        "Handgun Bullet"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Magnum Shot, Silver Shot, Uranium Shot, Tracer Shot. These are standardized bullets."
+      },
+      "seeAlso": [
+        "bullet"
+      ]
+    },
+    {
+      "id": "launcher-bullet",
+      "term": {
+        "en": "Launcher Bullet"
+      },
+      "aliases": [
+        "Launcher Bullet"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Armor-Piercing Rounds, Explosive Shot, Dispersing Shot, Flame Shot, Cold Shot. These are Launcher Bullets."
+      },
+      "seeAlso": [
+        "bullet"
+      ]
+    },
+    {
+      "id": "heart-bullet",
+      "term": {
+        "en": "Heart Bullet"
+      },
+      "aliases": [
+        "Heart Bullet"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Heart Breaker, Heart Shaker."
+      },
+      "seeAlso": [
+        "bullet"
+      ]
+    },
+    {
+      "id": "ballista-card",
+      "term": {
+        "en": "Ballista Card"
+      },
+      "aliases": [
+        "Ballista card",
+        "Ballista Card"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Ballista, Piercing Ballista, Enhanced Ballista, Giant Ballista, Shelling Ballista, Micro Ballista. These are types of Ballista."
+      },
+      "seeAlso": [
+        "reload"
+      ]
+    },
+    {
+      "id": "basic-card",
+      "term": {
+        "en": "Basic Card"
+      },
+      "aliases": [
+        "Basic Card"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Magic Bullet, Fire, Impact. Barrier, Evasion, Defense."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "quest-card",
+      "term": {
+        "en": "Quest Card"
+      },
+      "aliases": [
+        "Quest card",
+        "Quest Card"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Triple 0, Triple 1, Straight, Full House. Obtainable upon completing Cassius Quests."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "ego-skill",
+      "term": {
+        "en": "Ego Skill"
+      },
+      "aliases": [
+        "Ego Skill"
+      ],
+      "category": "card-type",
+      "definition": {
+        "en": "Partner skill that consumes Ego Points."
+      },
+      "seeAlso": [
+        "ego-points"
+      ]
+    },
+    {
+      "id": "activate",
+      "term": {
+        "en": "Activate"
+      },
+      "aliases": [],
+      "category": "mechanic",
+      "definition": {
+        "en": "Using or proccing a card."
+      },
+      "seeAlso": [
+        "proc",
+        "use"
+      ]
+    },
+    {
+      "id": "proc",
+      "term": {
+        "en": "Proc"
+      },
+      "aliases": [
+        "Proc",
+        "proc"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Activating a card through an effect."
+      },
+      "seeAlso": [
+        "activate",
+        "use"
+      ]
+    },
+    {
+      "id": "use",
+      "term": {
+        "en": "Use"
+      },
+      "aliases": [],
+      "category": "mechanic",
+      "definition": {
+        "en": "Using a card manually."
+      },
+      "seeAlso": [
+        "activate",
+        "proc"
+      ]
+    },
+    {
+      "id": "draw-pile",
+      "term": {
+        "en": "Draw Pile"
+      },
+      "aliases": [
+        "Draw Pile"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "The pile from which cards are drawn."
+      },
+      "seeAlso": [
+        "discard-pile",
+        "graveyard"
+      ]
+    },
+    {
+      "id": "discard-pile",
+      "term": {
+        "en": "Discard Pile"
+      },
+      "aliases": [
+        "Discard Pile"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "The pile where Discarded Cards move to (max 200)."
+      },
+      "seeAlso": [
+        "draw-pile",
+        "graveyard"
+      ]
+    },
+    {
+      "id": "graveyard",
+      "term": {
+        "en": "Graveyard"
+      },
+      "aliases": [
+        "Graveyard"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Cards that were activated this turn or the Discard Pile."
+      },
+      "seeAlso": [
+        "discard-pile"
+      ]
+    },
+    {
+      "id": "x-cost",
+      "term": {
+        "en": "X"
+      },
+      "aliases": [],
+      "category": "mechanic",
+      "definition": {
+        "en": "Consume all remaining Action Points and activate effects equal to that number."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "recover",
+      "term": {
+        "en": "Recover"
+      },
+      "aliases": [
+        "Recover"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Increase current HP."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "defense-based-damage",
+      "term": {
+        "en": "Defense-Based Damage"
+      },
+      "aliases": [
+        "Defense-Based Damage",
+        "Defense-based Damage"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Damage applied as 210% of Defense and 30% of Attack."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "piercing-damage",
+      "term": {
+        "en": "Piercing Damage"
+      },
+      "aliases": [
+        "Piercing Damage"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Damage that ignores Shield."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "vampiric-damage",
+      "term": {
+        "en": "Vampiric Damage"
+      },
+      "aliases": [
+        "Vampiric Damage"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Damage that heals the user by the amount dealt."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "dmg-based-shield",
+      "term": {
+        "en": "DMG-Based Shield"
+      },
+      "aliases": [
+        "DMG-Based Shield"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Gain Fixed Shield based on the Damage coefficient. Cannot exceed 20% of Max HP."
+      },
+      "seeAlso": [
+        "dmg-based-recovery"
+      ]
+    },
+    {
+      "id": "dmg-based-recovery",
+      "term": {
+        "en": "DMG-Based Recovery"
+      },
+      "aliases": [
+        "DMG-Based Recovery"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "Fixed Recovery based on the Damage coefficient. Cannot exceed 20% of Max HP."
+      },
+      "seeAlso": [
+        "dmg-based-shield"
+      ]
+    },
+    {
+      "id": "coordinated-attack",
+      "term": {
+        "en": "Coordinated Attack"
+      },
+      "aliases": [
+        "Coordinated Attack"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "When this card is in hand, proc if the conditions are met."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "retain",
+      "term": {
+        "en": "Retain"
+      },
+      "aliases": [
+        "Retain"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "This card is not discarded at the end of the turn."
+      },
+      "seeAlso": [
+        "ephemeral"
+      ]
+    },
+    {
+      "id": "ephemeral",
+      "term": {
+        "en": "Ephemeral"
+      },
+      "aliases": [
+        "Ephemeral"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "If this card is in hand at the end of the turn, Exhaust it."
+      },
+      "seeAlso": [
+        "retain"
+      ]
+    },
+    {
+      "id": "linked",
+      "term": {
+        "en": "Linked"
+      },
+      "aliases": [
+        "Linked"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "When this card is used, Discard all other Linked cards in hand."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "blessing",
+      "term": {
+        "en": "Blessing"
+      },
+      "aliases": [
+        "Blessing"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "When Shield in possession is lower than 30% of max Health, if this card moves from hand to Graveyard, 60% Fixed Shield."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "unactivatable",
+      "term": {
+        "en": "Unactivatable"
+      },
+      "aliases": [
+        "Unactivatable"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "This card cannot be activated."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "retrieve",
+      "term": {
+        "en": "Retrieve"
+      },
+      "aliases": [
+        "Retrieve"
+      ],
+      "category": "mechanic",
+      "definition": {
+        "en": "If this card moves to the Graveyard, return it to hand. Upon activation, remove Retrieve."
+      },
+      "seeAlso": []
+    },
+    {
+      "id": "light",
+      "term": {
+        "en": "Light"
+      },
+      "aliases": [],
+      "category": "mechanic",
+      "definition": {
+        "en": "At the start of the turn, move this card to hand and place it on the leftmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+      },
+      "seeAlso": [
+        "dark"
+      ]
+    },
+    {
+      "id": "dark",
+      "term": {
+        "en": "Dark"
+      },
+      "aliases": [],
+      "category": "mechanic",
+      "definition": {
+        "en": "At the start of the turn, move this card to hand and place it on the rightmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+      },
+      "seeAlso": [
+        "light"
+      ]
     }
   ],
   "clarifications": [

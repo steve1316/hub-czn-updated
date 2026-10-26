@@ -116,6 +116,10 @@ def source_text(ctx: Context, fields: dict, constants: dict[str, str]) -> tuple[
         return term, None, []
     status = ctx.client.statuses.get(row.get("link_cs_id", "")) if row else None
     effects = parse_list(status.get("link_skill_eff_id")) if status else []
+    # A status's stack cap reads `#tv_max#`. Statuses with no cap store "MAX", which is left for the issue report.
+    stack_cap = (status or {}).get("overlay_value_max", "")
+    if stack_cap.isdigit():
+        constants = {**constants, "tv_max": stack_cap}
     resolution = ctx.resolver.resolve(fill_constants(template, constants), effects)
     return term, ctx.text(resolution.text) or None, resolution.unresolved
 

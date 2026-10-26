@@ -291,6 +291,434 @@
     "seeAlso": [],
     "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
   },
+  "fracture": {
+    "tooltip": "T_CS00_0369",
+    "category": "status",
+    "aliases": ["Fracture"],
+    "seeAlso": ["fracture-amplification"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "fracture-amplification": {
+    "tooltip": "T_CS_30115_02",
+    "category": "status",
+    "aliases": ["Fracture Amplification"],
+    "seeAlso": ["fracture"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "metallization": {
+    "tooltip": "T_CS01_0591",
+    "category": "status",
+    "aliases": ["Metallization"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "commence-the-hunt": {
+    "tooltip": "T_CS01_0508",
+    "category": "status",
+    "aliases": ["Commence the Hunt"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "scorched": {
+    "tooltip": "T_DES_CS_20000",
+    "category": "status",
+    "aliases": ["Scorched"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "resolve": {
+    "tooltip": "T_CS00_0008",
+    "category": "status",
+    "aliases": ["Resolve"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "voracity": {
+    "tooltip": "T_CS01_0798",
+    "category": "status",
+    "aliases": ["Voracity"],
+    "seeAlso": ["predation"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "predation": {
+    "tooltip": "T_CS01_0805",
+    "category": "status",
+    "aliases": ["Predation"],
+    "seeAlso": ["voracity"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "fortitude": {
+    "tooltip": "T_CS00_0012",
+    "category": "status",
+    "definition": {"en": "-20% Damage Amount taken for each Fortitude."},
+    "aliases": ["Fortitude"],
+    "seeAlso": [],
+    "_why": "The client fills -20 into a template that already has a minus sign, so its own text reads --20%"
+  },
+  "decibel": {
+    "tooltip": "T_CS00_0252",
+    "category": "status",
+    "aliases": ["Decibel"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "flame-arts": {
+    "tooltip": "T_CS01_0811",
+    "category": "status",
+    "aliases": ["Flame Arts"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "descent": {
+    "tooltip": "T_CS01_0813",
+    "category": "status",
+    "aliases": ["Descent"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "reload": {
+    "tooltip": "T_CS01_0466",
+    "category": "status",
+    "aliases": ["Reload"],
+    "seeAlso": ["ballista-card"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "dark-mist-stance": {
+    "tooltip": "T_CS01_0185",
+    "category": "status",
+    "aliases": ["Dark Mist Stance"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "silver-veil": {
+    "tooltip": "T_CS01_0552",
+    "category": "status",
+    "aliases": ["Silver Veil"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "wave": {
+    "tooltip": "T_CS01_0455",
+    "category": "status",
+    "aliases": ["Wave"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "chronicle": {
+    "tooltip": "T_CS01_0878",
+    "category": "status",
+    "aliases": ["Chronicle"],
+    "seeAlso": ["chronal-ascension"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "chronal-ascension": {
+    "tooltip": "T_CS01_0879",
+    "category": "status",
+    "aliases": ["Chronal Ascension"],
+    "seeAlso": ["chronicle"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "crystallization": {
+    "tooltip": "T_CS00_0010",
+    "category": "status",
+    "aliases": ["Crystallization"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "inspiration": {
+    "tooltip": "T_CS05_0007",
+    "category": "status",
+    "aliases": ["Inspiration"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ember": {
+    "tooltip": "T_CS01_0193",
+    "category": "status",
+    "aliases": ["Ember"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "fury": {
+    "tooltip": "T_CS02_0194",
+    "category": "status",
+    "aliases": ["Fury"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "shield-retention": {
+    "tooltip": "T_CS00_0011",
+    "category": "status",
+    "aliases": ["Shield Retention"],
+    "seeAlso": ["shield"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "cursed-shackles": {
+    "tooltip": "T_CS01_0731",
+    "category": "status",
+    "aliases": ["Cursed Shackles"],
+    "seeAlso": ["will-o-wisp"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "will-o-wisp": {
+    "tooltip": "T_CS01_0730",
+    "category": "status",
+    "aliases": ["Will-O’-Wisp", "Will-O'-Wisp"],
+    "seeAlso": ["cursed-shackles"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "afterglow": {
+    "tooltip": "T_CS01_0764",
+    "category": "status",
+    "aliases": ["Afterglow"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ionization": {
+    "tooltip": "T_CS_30113_01",
+    "category": "status",
+    "aliases": ["Ionization"],
+    "seeAlso": ["zero-in"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "zero-in": {
+    "tooltip": "T_CS_30113_03",
+    "category": "status",
+    "aliases": ["Zero In"],
+    "seeAlso": ["ionization"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "brand-of-the-cycle": {
+    "tooltip": "T_CS_30134_02",
+    "category": "status",
+    "aliases": ["Brand of the Cycle"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "truth-seeking": {
+    "tooltip": "T_CS02_2126",
+    "category": "status",
+    "aliases": ["Truth Seeking"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "creation": {
+    "tooltip": "CARD_ORLEA",
+    "category": "card-type",
+    "aliases": ["Creation"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "bullet": {
+    "tooltip": "CARD_BULLET",
+    "category": "card-type",
+    "aliases": ["Bullet"],
+    "seeAlso": ["handgun-bullet", "launcher-bullet", "heart-bullet"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "handgun-bullet": {
+    "tooltip": "CARD_HANDGUN",
+    "category": "card-type",
+    "aliases": ["Handgun Bullet"],
+    "seeAlso": ["bullet"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "launcher-bullet": {
+    "tooltip": "CARD_LAUNCHER",
+    "category": "card-type",
+    "aliases": ["Launcher Bullet"],
+    "seeAlso": ["bullet"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "heart-bullet": {
+    "tooltip": "CARD_HEART",
+    "category": "card-type",
+    "aliases": ["Heart Bullet"],
+    "seeAlso": ["bullet"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ballista-card": {
+    "tooltip": "CARD_1033_BALLISTA",
+    "category": "card-type",
+    "aliases": ["Ballista card", "Ballista Card"],
+    "seeAlso": ["reload"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "basic-card": {
+    "tooltip": "CARD_BASIS",
+    "category": "card-type",
+    "aliases": ["Basic Card"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "quest-card": {
+    "tooltip": "CARD_1049_QUESTCARD",
+    "category": "card-type",
+    "aliases": ["Quest card", "Quest Card"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ego-skill": {
+    "tooltip": "CARD_TACTIC_SKILL",
+    "category": "card-type",
+    "aliases": ["Ego Skill"],
+    "seeAlso": ["ego-points"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "activate": {
+    "tooltip": "CARD_ACTIVATE",
+    "category": "mechanic",
+    "aliases": [],
+    "seeAlso": ["proc", "use"],
+    "_why": "Editorial: no aliases, because the word is too common in card text to link every time it appears"
+  },
+  "proc": {
+    "tooltip": "CARD_USE",
+    "category": "mechanic",
+    "aliases": ["Proc", "proc"],
+    "seeAlso": ["activate", "use"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "use": {
+    "tooltip": "CARD_THROW",
+    "category": "mechanic",
+    "aliases": [],
+    "seeAlso": ["activate", "proc"],
+    "_why": "Editorial: no aliases, because the word is too common in card text to link every time it appears"
+  },
+  "draw-pile": {
+    "tooltip": "CARD_DECK",
+    "category": "mechanic",
+    "aliases": ["Draw Pile"],
+    "seeAlso": ["discard-pile", "graveyard"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "discard-pile": {
+    "tooltip": "CARD_PLACE_DISCARD",
+    "category": "mechanic",
+    "aliases": ["Discard Pile"],
+    "seeAlso": ["draw-pile", "graveyard"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "graveyard": {
+    "tooltip": "CARD_TOMB",
+    "category": "mechanic",
+    "aliases": ["Graveyard"],
+    "seeAlso": ["discard-pile"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "x-cost": {
+    "tooltip": "CARD_COST_X",
+    "category": "mechanic",
+    "aliases": [],
+    "seeAlso": [],
+    "_why": "Editorial: no aliases, because the word is too common in card text to link every time it appears"
+  },
+  "recover": {
+    "tooltip": "CARD_HEAL",
+    "category": "mechanic",
+    "aliases": ["Recover"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "defense-based-damage": {
+    "tooltip": "CARD_DEFDAMAGE",
+    "category": "mechanic",
+    "aliases": ["Defense-Based Damage", "Defense-based Damage"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "piercing-damage": {
+    "tooltip": "CARD_PENETRATIONDAMAGE",
+    "category": "mechanic",
+    "aliases": ["Piercing Damage"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "vampiric-damage": {
+    "tooltip": "CARD_LEECHDAMAGE",
+    "category": "mechanic",
+    "aliases": ["Vampiric Damage"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "dmg-based-shield": {
+    "tooltip": "CARD_LEECHSHIELD",
+    "category": "mechanic",
+    "aliases": ["DMG-Based Shield"],
+    "seeAlso": ["dmg-based-recovery"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "dmg-based-recovery": {
+    "tooltip": "CARD_LEECHHP",
+    "category": "mechanic",
+    "aliases": ["DMG-Based Recovery"],
+    "seeAlso": ["dmg-based-shield"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "coordinated-attack": {
+    "tooltip": "CARD_PINCERS",
+    "category": "mechanic",
+    "aliases": ["Coordinated Attack"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "retain": {
+    "tooltip": "TALENT_RETAIN",
+    "category": "mechanic",
+    "aliases": ["Retain"],
+    "seeAlso": ["ephemeral"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "ephemeral": {
+    "tooltip": "TALENT_ETHEREAL",
+    "category": "mechanic",
+    "aliases": ["Ephemeral"],
+    "seeAlso": ["retain"],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "linked": {
+    "tooltip": "TALENT_CONNECT",
+    "category": "mechanic",
+    "aliases": ["Linked"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "blessing": {
+    "tooltip": "TALENT_FAIRY",
+    "category": "mechanic",
+    "aliases": ["Blessing"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "unactivatable": {
+    "tooltip": "TALENT_UNPLAYABLE",
+    "category": "mechanic",
+    "aliases": ["Unactivatable"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "retrieve": {
+    "tooltip": "TALENT_RECALL",
+    "category": "mechanic",
+    "aliases": ["Retrieve"],
+    "seeAlso": [],
+    "_why": "Editorial: the client has no glossary, so the term list, tooltip choice, category and links are picked by hand"
+  },
+  "light": {
+    "tooltip": "TALENT_LIGHT",
+    "category": "mechanic",
+    "aliases": [],
+    "seeAlso": ["dark"],
+    "_why": "Editorial: no aliases, because the word is too common in card text to link every time it appears"
+  },
+  "dark": {
+    "tooltip": "TALENT_DARK",
+    "category": "mechanic",
+    "aliases": [],
+    "seeAlso": ["light"],
+    "_why": "Editorial: no aliases, because the word is too common in card text to link every time it appears"
+  },
   "engraving:pe_0001": {
     "text": {"en": "While at least one enemy with an Action Count of 1 is present, this card costs 2 less."},
     "_why": "Hand-written clarification shown above the engraving's game text on the Engravings tab"

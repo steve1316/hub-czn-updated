@@ -24,11 +24,19 @@ TEXT = {
     "attribute_electric": "Instinct",
     "help_menu@name@help_025": "Ravage",
     "tt_pg@desc@024": "Enemies become <color_orange>Ravaged</>.",
+    "tooltip@title@t_cs00_0369": "Fracture",
+    "tooltip@desc@t_cs00_0369": "Halve $Fracture$ stacks (max <cc>#tv_max#</> stacks)",
 }
 
 TOOLTIPS = [
     {"id": "T_CS00_0004", "title": "tooltip@title@T_CS00_0004", "desc": "tooltip@desc@T_CS00_0004", "desc_battle": "none", "link_cs_id": "cs00_0004"},
     {"id": "TALENT_LEAD", "title": "tooltip@title@TALENT_LEAD", "desc": "none", "desc_outgame": "tooltip@desc@TALENT_LEAD", "link_cs_id": "none"},
+    {"id": "T_CS00_0369", "title": "tooltip@title@T_CS00_0369", "desc": "tooltip@desc@T_CS00_0369", "link_cs_id": "cs00_0369"},
+]
+
+STATUSES = [
+    {"id": "cs00_0004", "link_skill_eff_id": "[cs00_0004_01]"},
+    {"id": "cs00_0369", "link_skill_eff_id": "[]", "overlay_value_max": "30"},
 ]
 
 
@@ -50,7 +58,7 @@ def _context(tmp_path: Path) -> Context:
     db = tmp_path / "db"
     db.mkdir()
     (db / "tooltip@tooltip.json").write_text(json.dumps(TOOLTIPS), encoding="utf-8")
-    (db / "cs(card1)@cs.json").write_text(json.dumps([{"id": "cs00_0004", "link_skill_eff_id": "[cs00_0004_01]"}]), encoding="utf-8")
+    (db / "cs(card1)@cs.json").write_text(json.dumps(STATUSES), encoding="utf-8")
     (db / "cs(card1)@skill_eff.json").write_text(json.dumps([{"id": "cs00_0004_01", "eff": "SKILL_EFF_DMG", "eff_attr": "DMG_ATTR_FIX", "eff_value": "50"}]), encoding="utf-8")
     (db / "constant_metagame@constant_meta.json").write_text(json.dumps([{"id": "lead_pct", "value": "50"}]), encoding="utf-8")
     text = tmp_path / "text" / "en"
@@ -121,6 +129,12 @@ def test_tooltip_without_a_row_reads_its_text_keys_and_drops_the_trigger_colon(t
     term, definition, _ = _source(_context(tmp_path), {"tooltip": "CARD_WHEN_BREAK"})
     assert term == "Attunement"
     assert definition == "When this card is Drawn, activate effect."
+
+
+def test_stack_cap_comes_from_the_linked_status(tmp_path):
+    _, definition, unresolved = _source(_context(tmp_path), {"tooltip": "T_CS00_0369"})
+    assert definition == "Halve Fracture stacks (max 30 stacks)."
+    assert unresolved == []
 
 
 def test_explicit_text_keys(tmp_path):
