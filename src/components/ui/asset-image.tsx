@@ -21,15 +21,12 @@ interface AssetImageProps extends Omit<ImgHTMLAttributes<HTMLImageElement>, "src
  * @returns The image, or the fallback after the last retry fails.
  */
 export function AssetImage({ src, fallback, maxRetries = MAX_IMAGE_RETRIES, className, onError, alt = "", ...rest }: AssetImageProps) {
-  const [attempt, setAttempt] = useState(0)
-  const [failed, setFailed] = useState(false)
+  const [state, setState] = useState({ src, attempt: 0, failed: false })
   const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined)
 
-  // A new src starts over.
-  useEffect(() => {
-    setAttempt(0)
-    setFailed(false)
-  }, [src])
+  // A new src starts over. Derived during render so no effect has to set state.
+  if (state.src !== src) setState({ src, attempt: 0, failed: false })
+  const { attempt, failed } = state.src === src ? state : { attempt: 0, failed: false }
 
   // Cancel a pending retry on unmount or when src changes.
   useEffect(() => () => clearTimeout(timer.current), [src])
@@ -54,11 +51,11 @@ export function AssetImage({ src, fallback, maxRetries = MAX_IMAGE_RETRIES, clas
       onError={(e) => {
         if (attempt >= maxRetries) {
           onError?.(e)
-          setFailed(true)
+          setState({ src, attempt, failed: true })
           return
         }
         clearTimeout(timer.current)
-        timer.current = setTimeout(() => setAttempt(attempt + 1), imageRetryDelay(attempt + 1))
+        timer.current = setTimeout(() => setState({ src, attempt: attempt + 1, failed: false }), imageRetryDelay(attempt + 1))
       }}
     />
   )
