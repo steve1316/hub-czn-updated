@@ -1,13 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
-import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Play, Zap, Shield } from 'lucide-react'
-import { api, assetUrl, isNotFound } from '@/lib/api'
+import { Play, Zap } from 'lucide-react'
+import { api, assetUrl } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
+import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 import { damagePasses } from '@/lib/damage-reduction'
+import { formatBattleTime } from '@/pages/battle/battle-time.utils'
+import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
 import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
 
 const MORALE_PCT = 20
@@ -19,8 +20,7 @@ interface PersistedState {
   deckId: number | null
   morale: number
   useSparks: boolean
-  monsterDef: number
-  dmgDecrease: number
+  presetGroup: string
   weaken: boolean
   vulnerableStacks: number
   dmgReduction: boolean
@@ -115,28 +115,28 @@ function CardRow({ card }: { card: SimCardResult }) {
   )
 }
 
-export function SimulatorPage() {
+/**
+ * The Simulate tab: per-card damage for a character's deck against the shared Simulator enemy.
+ * @returns The tab.
+ */
+export function SimulateTab() {
   const { t } = useTranslation()
-  const location = useLocation()
-  const navigate = useNavigate()
+  const { enemy, setEnemy } = useBattlesEnemy()
 
   const [charName, setCharName] = useState(() => loadPersistedState()?.charName ?? '')
   const [deckId, setDeckId] = useState<number | null>(() => loadPersistedState()?.deckId ?? null)
   const [morale, setMorale] = useState(() => loadPersistedState()?.morale ?? 0)
   const [useSparks, setUseSparks] = useState(() => loadPersistedState()?.useSparks ?? true)
-  const [monsterDef, setMonsterDef] = useState(() => loadPersistedState()?.monsterDef ?? 20)
-  // The enemy's real damage decrease from a preset or a captured battle. 0 means a typed DEF, so it is estimated.
-  const [dmgDecrease, setDmgDecrease] = useState(() => loadPersistedState()?.dmgDecrease ?? 0)
+  const [presetGroup, setPresetGroup] = useState(() => loadPersistedState()?.presetGroup ?? ENEMY_PRESET_GROUPS[0].group)
   const [weaken, setWeaken] = useState(() => loadPersistedState()?.weaken ?? false)
   const [vulnerableStacks, setVulnerableStacks] = useState(() => loadPersistedState()?.vulnerableStacks ?? 0)
   const [dmgReduction, setDmgReduction] = useState(() => loadPersistedState()?.dmgReduction ?? false)
   const [result, setResult] = useState<SimulateDamageResponse | null>(() => loadPersistedState()?.result ?? null)
-  const [lastBattleError, setLastBattleError] = useState<string | null>(null)
 
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
     savePersistedState({
-      charName, deckId, morale, useSparks, monsterDef, dmgDecrease,
+      charName, deckId, morale, useSparks, presetGroup,
       weaken, vulnerableStacks, dmgReduction, result,
       ...patch,
     })
@@ -162,6 +162,13 @@ export function SimulatorPage() {
     staleTime: 30_000,
   })
 
+  const { data: recentBattles = [] } = useQuery<BattleRecord[]>({
+    queryKey: ['battle-history', 5],
+    queryFn: () => api.battleHistory(5),
+    staleTime: 10_000,
+    retry: false,
+  })
+
   const mutation = useMutation({
     mutationFn: () =>
       api.simulateDamage({
@@ -169,8 +176,8 @@ export function SimulatorPage() {
         deck_id: deckId,
         morale,
         use_sparks: useSparks,
-        monster_def: monsterDef,
-        dmg_decrease: dmgDecrease,
+        monster_def: enemy.def,
+        dmg_decrease: enemy.dmgDecrease,
         frightened: weaken,
         exposed_stacks: vulnerableStacks,
         fortitude: dmgReduction,
@@ -178,39 +185,16 @@ export function SimulatorPage() {
     onSuccess: (data) => { setResult(data); persist({ result: data }) },
   })
 
-  /**
-   * Set the enemy, from a preset, a captured battle or a typed DEF.
-   * @param def The enemy's DEF.
-   * @param decrease The enemy's real damage decrease, or 0 to estimate it from DEF.
-   */
-  function setEnemy(def: number, decrease: number) {
-    setMonsterDef(def)
-    setDmgDecrease(decrease)
-    persist({ monsterDef: def, dmgDecrease: decrease })
-  }
-
-  // Apply the enemy passed from the Battle History page, then clear it so a reload does not apply it again
-  useEffect(() => {
-    const enemy = location.state as { def: number; dmgDecrease: number } | null
-    if (enemy) {
-      setEnemy(Math.round(enemy.def), enemy.dmgDecrease)
-      navigate('.', { replace: true, state: null })
-    }
-  }, [])
-
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
   const moraleMultDisplay = `×${(1 + morale * MORALE_PCT / 100).toFixed(2)}`
-  const defReductionPreview = `${(damagePasses(dmgDecrease, monsterDef) * 100).toFixed(1)}%`
+  const defReductionPreview = `${(damagePasses(enemy.dmgDecrease, enemy.def) * 100).toFixed(1)}%`
+  const activeGroup = ENEMY_PRESET_GROUPS.find((group) => group.group === presetGroup) ?? ENEMY_PRESET_GROUPS[0]
+  const source = enemy.source
 
   return (
     <div className="flex h-full overflow-hidden">
       {/* Left panel */}
       <div className="w-64 shrink-0 flex flex-col gap-4 p-4 bg-[#181818] border-r border-[#282828] overflow-y-auto">
-        <div>
-          <h2 className="text-[#ffffff] font-bold text-sm mb-3">{t('simulator.title')}</h2>
-          <p className="text-[#888] text-xs leading-relaxed">{t('simulator.description')}</p>
-        </div>
-
         {!status?.data_loaded && (
           <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
             {t('simulator.noData')}
@@ -302,56 +286,63 @@ export function SimulatorPage() {
             <label className="text-[#b3b3b3] text-xs">{t('simulator.monsterDef')}</label>
             <span className="text-[#fb923c] text-xs font-mono">{defReductionPreview} {t('simulator.dmgPasses')}</span>
           </div>
-          <div className="flex flex-col gap-2 mt-1">
+          <select
+            value={activeGroup.group}
+            onChange={(e) => { setPresetGroup(e.target.value); persist({ presetGroup: e.target.value }) }}
+            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1"
+          >
             {ENEMY_PRESET_GROUPS.map((group) => (
-              <div key={group.group}>
-                <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">
-                  {t(`simulator.presetGroups.${group.group}`)}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {group.presets.map((p) => (
-                    <button
-                      key={`${group.group}-${p.label}`}
-                      type="button"
-                      title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
-                      onClick={() => setEnemy(p.def, p.dmg_decrease)}
-                      className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${
-                        monsterDef === p.def && dmgDecrease === p.dmg_decrease
-                          ? 'bg-[#fb923c] text-white'
-                          : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
-                      }`}
-                    >
-                      {p.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <option key={group.group} value={group.group}>{t(`simulator.presetGroups.${group.group}`)}</option>
+            ))}
+          </select>
+          <div className="flex flex-wrap gap-1">
+            {activeGroup.presets.map((p) => (
+              <button
+                key={p.label}
+                type="button"
+                title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
+                onClick={() => setEnemy(presetEnemy(activeGroup.group, p))}
+                className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${
+                  source.kind === 'preset' && source.group === activeGroup.group && source.label === p.label
+                    ? 'bg-[#fb923c] text-white'
+                    : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
+                }`}
+              >
+                {p.label}
+              </button>
             ))}
           </div>
-          <div className="flex gap-1">
-            <input
-              type="number"
-              min={0}
-              max={9999}
-              value={monsterDef}
-              onChange={(e) => setEnemy(Math.max(0, Number(e.target.value)), 0)}
-              className="flex-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 w-0 font-mono"
-            />
-            <button
-              type="button"
-              title={t('simulator.lastBattleTip')}
-              onClick={() =>
-                api.battleLatest()
-                  .then(b => { setEnemy(Math.round(b.enemy_def), b.enemy_dmg_decrease); setLastBattleError(null) })
-                  .catch(err => setLastBattleError(isNotFound(err) ? t('simulator.noLastBattle') : (err as Error).message))
-              }
-              className="flex items-center gap-1 px-2 py-1 rounded bg-[#c084fc]/15 text-[#c084fc] text-[10px] hover:bg-[#c084fc]/25 transition-colors shrink-0"
-            >
-              <Shield size={10} />
-              {t('simulator.lastBattle')}
-            </button>
-          </div>
-          {lastBattleError && <p className="text-[#f87171] text-[10px]">{lastBattleError}</p>}
+          {recentBattles.length > 0 && (
+            <div className="mt-1">
+              <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
+              <div className="flex flex-wrap gap-1">
+                {recentBattles.map((b) => (
+                  <button
+                    key={b.capture_time}
+                    type="button"
+                    title={t('simulator.recentTip', { def: Math.round(b.enemy_def), pct: (b.enemy_dmg_decrease * 100).toFixed(1) })}
+                    onClick={() => setEnemy(battleEnemy(b))}
+                    className={`flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded transition-colors ${
+                      source.kind === 'battle' && source.captureTime === b.capture_time
+                        ? 'bg-[#fb923c] text-white'
+                        : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
+                    }`}
+                  >
+                    <span className={b.battle_result === 'CLEAR' ? 'text-[#a3e635]' : 'text-[#f87171]'}>●</span>
+                    {formatBattleTime(b.capture_time)} · {Math.round(b.enemy_def)}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          <input
+            type="number"
+            min={0}
+            max={9999}
+            value={enemy.def}
+            onChange={(e) => setEnemy(typedEnemy(Math.max(0, Number(e.target.value))))}
+            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 font-mono"
+          />
         </div>
 
         {/* Buffs & Debuffs */}
@@ -538,8 +529,8 @@ export function SimulatorPage() {
                   <tbody>
                     {[...result.cards]
                       .sort((a, b) => b.avg_damage - a.avg_damage)
-                      .map((card) => (
-                        <CardRow key={`${card.card_id}-${card.spark_id}`} card={card} />
+                      .map((card, i) => (
+                        <CardRow key={`${card.card_id}-${card.spark_id}-${i}`} card={card} />
                       ))}
                   </tbody>
                 </table>

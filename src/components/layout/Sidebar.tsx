@@ -2,7 +2,7 @@ import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
   Home, Swords, Layers, Users, SquareStack,
-  Radio, Settings, Gift, Info, Zap, Sword, BookOpen, BookMarked,
+  Radio, Settings, Gift, Info, Sword, BookOpen, BookMarked,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { useUpdateCheck } from '@/hooks/useUpdateCheck'
@@ -16,8 +16,7 @@ const NAV = [
   { to: '/deck-builder', key: 'nav.deckBuilder', icon: SquareStack, beta: true },
   { to: '/encyclopedia', key: 'nav.encyclopedia', icon: BookOpen },
   { to: '/guides',     key: 'nav.guides',      icon: BookMarked },
-  { to: '/simulator',  key: 'nav.simulator',   icon: Zap,  beta: true },
-  { to: '/battle',     key: 'nav.battle',      icon: Sword, beta: true },
+  { to: '/battles',    key: 'nav.battles',     icon: Sword, beta: true },
   { to: '/capture',    key: 'nav.capture',     icon: Radio },
   { to: '/rescue',     key: 'nav.rescue',      icon: Gift },
   { to: '/setup',      key: 'nav.setup',       icon: Settings },
