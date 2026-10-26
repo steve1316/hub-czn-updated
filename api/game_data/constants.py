@@ -84,11 +84,11 @@ STATS = {
     "S_CRI_DMG_RATE_INC_ADD": ("CDmg", "CDmg", True, 4.0, 2.4),
     "S_CHARGING_POWER_INC_ADD": ("Ego", "Ego", False, 5.0, 2.0),
     "S_DOT_ATK_DMG_RATE_INC_ADD": ("DoT%", "DoT%", True, 3.4, 2.7),
-    "S_RED_DMG_RATE_INC_ADD": ("Passion DMG%", "Passion", True, 3.5, 2.0),
-    "S_GREEN_DMG_RATE_INC_ADD": ("Order DMG%", "Order", True, 3.5, 2.0),
-    "S_BLUE_DMG_RATE_INC_ADD": ("Justice DMG%", "Justice", True, 3.5, 2.0),
-    "S_PURPLE_DMG_RATE_INC_ADD": ("Void DMG%", "Void", True, 3.5, 2.0),
-    "S_ORANGE_DMG_RATE_INC_ADD": ("Instinct DMG%", "Instinct", True, 3.5, 2.0),
+    "S_RED_DMG_RATE_INC_ADD": ("Passion DMG%", "Passion", True, 0.0, 0.0),
+    "S_GREEN_DMG_RATE_INC_ADD": ("Order DMG%", "Order", True, 0.0, 0.0),
+    "S_BLUE_DMG_RATE_INC_ADD": ("Justice DMG%", "Justice", True, 0.0, 0.0),
+    "S_PURPLE_DMG_RATE_INC_ADD": ("Void DMG%", "Void", True, 0.0, 0.0),
+    "S_ORANGE_DMG_RATE_INC_ADD": ("Instinct DMG%", "Instinct", True, 0.0, 0.0),
 }
 
 STAT_SHORT_NAMES = {info[0]: info[1] for info in STATS.values()}
