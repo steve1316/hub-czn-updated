@@ -1,5 +1,5 @@
 {
-  "_about": "Overrides for the Guides import from the community Google Sheet. `_tabs` maps a sheet tab whose name is not a character's name to that character's res_id. `_pictures` labels a sheet picture the importer could not identify, keyed by the hash the review page shows (client_db/.cache/guides/unidentified.html): {\"charResId\": 1003}, {\"cardId\": \"c_1003_uni1\"} or {\"skip\": true}. One label covers every use of that picture on every tab. A single cell can also be labelled with an entry keyed \"<tab>!<cell>\", such as \"Tenebria!B11\", plus a `_why`. `_sections` moves a band the importer put on the wrong page: {\"<tab>\": {\"<band title>\": \"decks\"}}, using a page id from `PAGES` in scripts/datagen/targets/guides.py.",
+  "_about": "Overrides for the Guides import from the community Google Sheet. `_tabs` maps a sheet tab whose name is not a character's name to that character's res_id. `_pictures` labels a sheet picture the importer could not identify, keyed by the hash the review page shows (client_db/.cache/guides/unidentified.html): {\"charResId\": 1003}, {\"cardId\": \"c_1003_uni1\"}, {\"setId\": 11} (a memory fragment piece) or {\"skip\": true}. One label covers every use of that picture on every tab. A single cell can also be labelled with an entry keyed \"<tab>!<cell>\", such as \"Tenebria!B11\", plus a `_why`. `_sections` moves a band the importer put on the wrong page: {\"<tab>\": {\"<band title>\": \"decks\"}}, using a page id from `PAGES` in scripts/datagen/targets/guides.py.",
   "_tabs": {
     "Babybell": 1028
   },
@@ -7,7 +7,9 @@
     "98701ad00de890f495fa03ee216d32f552f328bb286a74c47833399a249e1639": {"charResId": 1003},
     "1070017d492f98369036007da15f1b7818336861d246e30347238c32292e04a4": {"charResId": 1057},
     "400190ac076e3cc739a3227325532a5b28d32cb332d332e339c3180398764001": {"charResId": 30085},
-    "0090060013981234023422b023b4217c2c1a041a407d44bd453d032d037c0240": {"skip": true}
+    "0090060013981234023422b023b4217c2c1a041a407d44bd453d032d037c0240": {"skip": true},
+    "a012c0acc354c4d4cce8cd28d6e0c2b0cb34ce46cc87d899d299e48f5947a224": {"setId": 19},
+    "a0cac634c8c8d1d8d372da50f25ac6e4ccc4cda6e227a479ac39ba99f4874966": {"setId": 7}
   },
   "_sections": {},
   "Amir!B3": {
