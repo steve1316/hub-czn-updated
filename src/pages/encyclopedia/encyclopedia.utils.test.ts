@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import { buildMatcher, filterGlossary, linkDescription, resolveLang, localized } from './encyclopedia.utils'
-import type { GlossaryEntry } from './encyclopedia.types'
+import { buildMatcher, cardGroupKey, filterCards, filterGlossary, linkDescription, resolveLang, localized } from './encyclopedia.utils'
+import type { EncyclopediaCard, GlossaryEntry } from './encyclopedia.types'
 
 function entry(id: string, aliases: string[]): GlossaryEntry {
   return {
@@ -86,5 +86,39 @@ describe('filterGlossary', () => {
   it('keeps only the picked category, and every entry when no category is picked', () => {
     expect(filterGlossary(glossary, '', 'card-type', 'en').map(e => e.id)).toEqual(['Exhaust'])
     expect(filterGlossary(glossary, '', null, 'en')).toHaveLength(3)
+  })
+})
+
+describe('filterCards', () => {
+  function card(id: string, fields: Partial<EncyclopediaCard> = {}): EncyclopediaCard {
+    return { id, name: id, cost: 1, card_type: 'Attack', description: '', group: 'neutral', kind: 'neutral', image: null, ...fields }
+  }
+
+  const cards = [
+    card('strike', { group: 'combatant', kind: 'starting', character_id: 1003, description: 'Deal Damage' }),
+    card('guard', { group: 'combatant', kind: 'starting', character_id: 1004, card_type: 'Skill' }),
+    card('memory', { group: 'season', kind: 'power', season: 5, card_type: 'Upgrade' }),
+    card('bash', { group: 'season', kind: 'neutral', season: 1 }),
+  ]
+  const none = { group: null, character: null, type: null, query: '' }
+
+  it('keys each season apart', () => {
+    expect(cardGroupKey(cards[2])).toBe('season-5')
+    expect(cardGroupKey(cards[0])).toBe('combatant')
+  })
+
+  it('keeps every card when nothing is picked', () => {
+    expect(filterCards(cards, none)).toHaveLength(4)
+  })
+
+  it('keeps one season, one character or one card type', () => {
+    expect(filterCards(cards, { ...none, group: 'season-1' }).map(c => c.id)).toEqual(['bash'])
+    expect(filterCards(cards, { ...none, group: 'combatant', character: 1004 }).map(c => c.id)).toEqual(['guard'])
+    expect(filterCards(cards, { ...none, type: 'Upgrade' }).map(c => c.id)).toEqual(['memory'])
+  })
+
+  it('searches names and card text, ignoring case', () => {
+    expect(filterCards(cards, { ...none, query: 'GUARD' }).map(c => c.id)).toEqual(['guard'])
+    expect(filterCards(cards, { ...none, query: 'damage' }).map(c => c.id)).toEqual(['strike'])
   })
 })

@@ -1,34 +1,61 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react'
-import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { api } from '@/lib/api'
-import { LoadError } from '@/components/ui/empty-state'
-import type { CardEntry, CardCharacter } from '@/lib/types'
-import { CardImage } from '@/pages/deck-builder/components/CardImage'
-import { TypeBadge } from '@/pages/deck-builder/components/TypeBadge'
-import { DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
+import type { TFunction } from 'i18next'
+import { CARD_CHARACTERS, CARD_SEASONS, ENCYCLOPEDIA_CARDS, cardImageUrl } from '../encyclopedia-cards'
+import { findClarification } from '../encyclopedia-content'
+import type { EncyclopediaCard } from '../encyclopedia.types'
+import { SEASON_GROUP_PREFIX, cardGroupKey, filterCards, localized, resolveLang, uniqueSorted } from '../encyclopedia.utils'
+import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
+import { RichDescription } from './RichDescription'
 
-const CARD_FILTERS = ['dmg', 'support']
+// The Group filter's choices, in archive order: combatant, neutral, each season, monster, status ailment, curse.
+const GROUPS = [...new Set(ENCYCLOPEDIA_CARDS.map(cardGroupKey))]
+const CHARACTER_NAMES = new Map(CARD_CHARACTERS.map(c => [c.id, c.name]))
+const SEASON_TITLES = new Map(CARD_SEASONS.map(s => [s.number, s.title]))
 
 /**
- * One number in the card detail's stat row.
- * @param props The stat's label and value, or null when the card has none.
- * @returns The stat tile.
+ * The label for a Group filter key.
+ * @param key A `cardGroupKey` value, such as "season-5".
+ * @param t The translate function.
+ * @returns Such as "Season 5" or "Combatant".
  */
-function Stat({ label, value }: { label: string; value: string | null }) {
-  return (
-    <div className="rounded-lg border border-[#282828] bg-[#161616] px-3 py-2">
-      <p className="text-xs text-[#8a8a8a]">{label}</p>
-      <p className="mt-0.5 font-mono text-base text-[#e5e7eb]">{value ?? '-'}</p>
-    </div>
-  )
+function groupLabel(key: string, t: TFunction): string {
+  return key.startsWith(SEASON_GROUP_PREFIX) ? t('cards.groups.season', { n: key.slice(SEASON_GROUP_PREFIX.length) }) : t(`cards.groups.${key}`)
+}
+
+/**
+ * A card's cost as printed.
+ * @param cost The cost, -1 for X, or null.
+ * @returns Such as "2", "X" or "-".
+ */
+function costLabel(cost: number | null): string {
+  return cost == null ? '-' : cost < 0 ? 'X' : String(cost)
+}
+
+/**
+ * The short line about a card: who or what it belongs to, what sort of card it is, and its type.
+ * @param card The card.
+ * @param t The translate function.
+ * @param longSeason Whether to name the season by its title as well as its number.
+ * @returns Such as "Nia · Starting card · Skill".
+ */
+function cardMeta(card: EncyclopediaCard, t: TFunction, longSeason = false): string {
+  const parts: string[] = []
+  if (card.group === 'combatant') parts.push(CHARACTER_NAMES.get(card.character_id ?? 0) ?? '', t(`cards.kinds.${card.kind}`))
+  else if (card.group === 'season') {
+    const title = SEASON_TITLES.get(card.season ?? 0)
+    parts.push(longSeason && title ? t('cards.seasonTitle', { n: card.season, title }) : t('cards.groups.season', { n: card.season }), t(`cards.kinds.${card.kind}`))
+  } else if (card.group === 'neutral') parts.push(card.classes?.length ? card.classes.join(', ') : t('cards.anyClass'))
+  else if (card.group === 'monster') parts.push(card.faction ?? '')
+  parts.push(card.card_type)
+  return [...new Set(parts.filter(Boolean))].join(' · ')
 }
 
 /** Props for CardRow. */
 interface CardRowProps {
   /** The card this row shows. */
-  card: CardEntry
+  card: EncyclopediaCard
   /** Whether the card is the one open in the detail pane. */
   selected: boolean
   /** Opens a card by its id. Must be stable so unchanged rows skip re-rendering. */
@@ -36,125 +63,121 @@ interface CardRowProps {
 }
 
 /**
- * One card in the list, with its cost, name and type badges.
+ * One card in the list, with its cost, name, a line about it and the start of its text.
  * @param props See `CardRowProps`.
  * @returns The list row.
  */
 const CardRow = memo(function CardRow({ card, selected, onSelect }: CardRowProps) {
   const { t } = useTranslation()
   return (
-    <ListRow selected={selected} onSelect={() => onSelect(card.card_id)}>
-      <span className="grid h-8 w-8 shrink-0 place-items-center rounded-md border border-[#075985] bg-[#082f49] font-mono text-sm font-bold text-[#93c5fd]">
-        {card.cost}
+    <ListRow selected={selected} onSelect={() => onSelect(card.id)}>
+      <span className="grid h-8 w-8 shrink-0 place-items-center self-start rounded-md border border-[#075985] bg-[#082f49] font-mono text-sm font-bold text-[#93c5fd]">
+        {costLabel(card.cost)}
       </span>
       <span className="min-w-0 flex-1">
-        <span className="block truncate text-sm font-medium text-[#e5e7eb]">
-          {card.name || <span className="italic text-[#8a8a8a]">{t('cards.unnamed')}</span>}
-        </span>
-        {card.effect_types.length > 0 && (
-          <span className="mt-1 flex flex-wrap gap-1">
-            {card.effect_types.map(type => <TypeBadge key={type} type={type} />)}
-          </span>
-        )}
+        <span className="block truncate text-sm font-medium text-[#e5e7eb]">{card.name}</span>
+        <span className="block truncate text-xs text-[#8a8a8a]">{cardMeta(card, t)}</span>
+        {card.description && <span className="mt-0.5 line-clamp-1 text-xs text-[#b3b3b3]">{card.description}</span>}
       </span>
     </ListRow>
   )
 })
 
+/**
+ * The Cards tab: every card in the game's card archive, filtered by group, combatant and card type.
+ * @returns The tab body.
+ */
 export function CardsTab() {
-  const { t } = useTranslation()
-  const [selectedChar, setSelectedChar] = useState<string | null>(null)
+  const { t, i18n } = useTranslation()
+  const lang = resolveLang(i18n.language)
   const [search, setSearch] = useState('')
-  const [filterType, setFilterType] = useState<string | null>(null)
+  const [group, setGroup] = useState<string | null>(null)
+  const [character, setCharacter] = useState<string | null>(null)
+  const [type, setType] = useState<string | null>(null)
   const [selectedId, setSelectedId] = useState<string | null>(null)
 
-  const { data: characters = [] } = useQuery<CardCharacter[]>({
-    queryKey: ['card-characters'],
-    queryFn: () => api.cardCharacters(),
-    staleTime: Infinity,
-  })
+  // Card types offered are the ones in the picked group, so no choice ever empties the list on its own.
+  const types = useMemo(() => uniqueSorted(ENCYCLOPEDIA_CARDS.filter(c => !group || cardGroupKey(c) === group).map(c => c.card_type)), [group])
 
-  // Every card in one fetch. The character filter runs here, the same check the API would do.
-  const { data: allCards = [], isLoading, error, refetch } = useQuery<CardEntry[]>({
-    queryKey: ['cards'],
-    queryFn: () => api.cards(),
-    staleTime: Infinity,
-  })
-
-  // Typing stays responsive while the long list filters behind it
+  // Typing stays responsive while the long list filters behind it.
   const deferredSearch = useDeferredValue(search)
-  const filtered = useMemo(() => {
-    const q = deferredSearch.trim().toLowerCase()
-    const charId = selectedChar ? Number(selectedChar) : null
-    return allCards.filter(card => {
-      if (charId != null && card.char_res_id !== charId) return false
-      if (filterType === 'dmg' && card.eff_value === 0) return false
-      if (filterType === 'support' && card.eff_value > 0) return false
-      if (q && !card.name.toLowerCase().includes(q)) return false
-      return true
-    })
-  }, [allCards, selectedChar, filterType, deferredSearch])
+  const filtered = useMemo(
+    () => filterCards(ENCYCLOPEDIA_CARDS, { group, character: character ? Number(character) : null, type, query: deferredSearch }),
+    [group, character, type, deferredSearch],
+  )
 
-  const charName = (id: number | null) => {
-    const c = characters.find(ch => ch.char_res_id === id)
-    return c ? c.name || `#${c.char_res_id}` : null
+  const pickGroup = (next: string | null) => {
+    setGroup(next)
+    setCharacter(null)
+    setType(null)
   }
-  const selected = allCards.find(card => card.card_id === selectedId) ?? null
+
+  const selected = ENCYCLOPEDIA_CARDS.find(c => c.id === selectedId) ?? null
+  const imageUrl = selected ? cardImageUrl(selected) : undefined
+  const clar = selected ? findClarification('card', selected.id) : undefined
 
   return (
     <EncyclopediaLayout
       search={search}
       onSearch={setSearch}
-      searchPlaceholder={t('encyclopedia.search')}
+      searchPlaceholder={t('cards.search')}
       filters={
         <>
-          <FilterSection label={t('cards.filterType')} options={CARD_FILTERS} value={filterType} onChange={setFilterType} format={f => t(`cards.filter.${f}`)} />
-          <FilterSection
-            label={t('cards.character')}
-            options={characters.map(c => String(c.char_res_id))}
-            value={selectedChar}
-            onChange={setSelectedChar}
-            format={id => charName(Number(id)) ?? id}
-          />
+          <FilterSection label={t('cards.group')} options={GROUPS} value={group} onChange={pickGroup} format={key => groupLabel(key, t)} />
+          {group === 'combatant' && (
+            <FilterSection
+              label={t('cards.character')}
+              options={CARD_CHARACTERS.map(c => String(c.id))}
+              value={character}
+              onChange={setCharacter}
+              format={id => CHARACTER_NAMES.get(Number(id)) ?? id}
+            />
+          )}
+          <FilterSection label={t('cards.type')} options={types} value={type} onChange={setType} />
         </>
       }
       count={filtered.length}
-      listFallback={
-        isLoading ? (
-          <p className="p-4 text-sm text-[#8a8a8a]">{t('common.loading')}</p>
-        ) : error ? (
-          <LoadError title={t('cards.loadError')} error={error} onRetry={() => refetch()} />
-        ) : undefined
-      }
       detail={
         selected && (
           <div className="flex max-w-2xl flex-col gap-5">
             <DetailHeader
-              title={selected.name || t('cards.unnamed')}
-              meta={charName(selected.char_res_id) ?? t('cards.shared')}
-              media={<CardImage card={selected} className="h-48 w-32 shrink-0 rounded-lg border border-[#282828]" />}
+              title={selected.name}
+              meta={
+                <>
+                  <span>{cardMeta(selected, t, true)}</span>
+                  <span className="mt-1 block font-mono text-[#93c5fd]">{t('cards.cost', { cost: costLabel(selected.cost) })}</span>
+                </>
+              }
+              media={imageUrl && (
+                <img src={imageUrl} alt={selected.name} className="h-48 w-32 shrink-0 rounded-lg border border-[#282828] object-cover" />
+              )}
             />
 
-            {selected.effect_types.length > 0 && (
-              <DetailSection label={t('cards.col.type')}>
-                <div className="flex flex-wrap gap-1">
-                  {selected.effect_types.map(type => <TypeBadge key={type} type={type} />)}
-                </div>
+            <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={selected.description || t('cards.noText')} />
+
+            {selected.epiphanies && (
+              <DetailSection label={t('cards.epiphanies')}>
+                <ol className="flex flex-col gap-2">
+                  {selected.epiphanies.map(epiphany => (
+                    <li key={epiphany.level} className="rounded-lg border border-[#282828] bg-[#161616] p-3">
+                      <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-[#e5e7eb]">
+                        <span className="grid h-6 w-6 shrink-0 place-items-center rounded border border-[#075985] bg-[#082f49] font-mono text-xs text-[#93c5fd]">
+                          {costLabel(epiphany.cost)}
+                        </span>
+                        {epiphany.name}
+                      </p>
+                      <RichDescription text={epiphany.description} className="text-sm leading-relaxed text-[#d4d4d4]" />
+                    </li>
+                  ))}
+                </ol>
               </DetailSection>
             )}
-
-            <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-              <Stat label={t('cards.col.cost')} value={String(selected.cost)} />
-              <Stat label={t('cards.col.coefficient')} value={selected.eff_value > 0 ? `${(selected.eff_value / 100).toFixed(2)}× ATK` : null} />
-              <Stat label={t('cards.col.hits')} value={selected.hits > 0 ? String(selected.hits) : null} />
-              <Stat label={t('cards.col.spark')} value={selected.spark_count > 0 ? `+${selected.spark_count}` : null} />
-            </div>
           </div>
         )
       }
     >
       {filtered.map(card => (
-        <CardRow key={card.card_id} card={card} selected={selectedId === card.card_id} onSelect={setSelectedId} />
+        <CardRow key={card.id} card={card} selected={selectedId === card.id} onSelect={setSelectedId} />
       ))}
     </EncyclopediaLayout>
   )

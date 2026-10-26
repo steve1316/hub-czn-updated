@@ -3,16 +3,12 @@ import { useTranslation } from 'react-i18next'
 import { DECK_BUILDER_PERSONA_ENGRAVING_CARDS } from '@/pages/deck-builder/deck-builder-persona-engraving.utils'
 import type { DeckBuilderPersonaEngraving } from '@/pages/deck-builder/deck-builder.types'
 import { findClarification } from '../encyclopedia-content'
-import { localized, resolveLang } from '../encyclopedia.utils'
+import { localized, resolveLang, uniqueSorted } from '../encyclopedia.utils'
 import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
 
 const ALL_ENGRAVINGS: DeckBuilderPersonaEngraving[] =
   DECK_BUILDER_PERSONA_ENGRAVING_CARDS.flatMap(card => card.engravings)
-
-function uniqueSorted(values: string[]): string[] {
-  return [...new Set(values)].filter(Boolean).sort()
-}
 
 const EIDOLONS = uniqueSorted(ALL_ENGRAVINGS.map(e => e.eidolon))
 const CARD_TYPES = uniqueSorted(ALL_ENGRAVINGS.map(e => e.card_type))
