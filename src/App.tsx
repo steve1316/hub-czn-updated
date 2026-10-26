@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
 import { AppShell } from './components/layout/AppShell'
 import { ensureApi } from './lib/api'
 import { FragmentsPage } from './pages/fragments/FragmentsPage'
@@ -33,12 +34,15 @@ const queryClient = new QueryClient({
 })
 
 function AppRoutes() {
+  const { t } = useTranslation()
   const [apiReady, setApiReady] = useState(false)
 
   // Wait for the port and token before rendering. A page that fetches or opens a WebSocket on
   // mount would otherwise use the default port and no token at all. Resolves immediately in dev.
   useEffect(() => { ensureApi().then(() => setApiReady(true)) }, [])
-  if (!apiReady) return null
+  if (!apiReady) {
+    return <div className="flex h-screen items-center justify-center bg-[#121212] text-sm text-[#b3b3b3]">{t('app.starting')}</div>
+  }
 
   return (
     <BrowserRouter>

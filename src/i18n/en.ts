@@ -1,4 +1,7 @@
 const en = {
+  app: {
+    starting: 'Starting Hub CZN...',
+  },
   tips: {
     gs: 'Gear Score — measures how well a gear piece rolled relative to its maximum potential (0–100).',
     potential: 'Potential — the possible final GS range from the levels the piece has left (low = worst rolls, high = best rolls for its rarity).',
