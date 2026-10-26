@@ -3,6 +3,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query"
 import { useTranslation } from "react-i18next"
 import { ChevronDown, ChevronRight } from "lucide-react"
 import { api, assetUrl } from "@/lib/api"
+import { AssetImage } from "@/components/ui/asset-image"
 import type { CharPreset, GameData } from "@/lib/types"
 import { ScoringPanel, DPS_WEIGHTS, TANK_WEIGHTS } from "./ScoringPanel"
 import type { Preset } from "./ScoringPanel"
@@ -82,7 +83,7 @@ function CharPresetCard({ preset, setMap }: { preset: CharPreset; setMap: Record
             const s = setMap[id]
             return (
               <div key={id} className="flex items-center gap-1.5 px-2 py-1 rounded-lg bg-[#282828] text-xs text-[#ffffff]">
-                {s?.icon_path && <img src={assetUrl(s.icon_path)} alt="" className="w-4 h-4 object-contain" />}
+                {s?.icon_path && <AssetImage src={assetUrl(s.icon_path)} fallback={null} className="w-4 h-4 object-contain" />}
                 <span>{s?.name ?? `Set ${id}`}</span>
               </div>
             )
