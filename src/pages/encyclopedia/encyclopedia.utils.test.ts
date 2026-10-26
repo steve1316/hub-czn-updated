@@ -5,10 +5,10 @@ import type { GlossaryEntry } from './encyclopedia.types'
 function entry(id: string, aliases: string[]): GlossaryEntry {
   return {
     id,
-    term: { en: id, 'pt-BR': id },
+    term: { en: id },
     aliases,
     category: 'mechanic',
-    definition: { en: 'def', 'pt-BR': 'def' },
+    definition: { en: 'def' },
     seeAlso: [],
   }
 }
@@ -60,18 +60,13 @@ describe('buildMatcher / linkDescription', () => {
 })
 
 describe('resolveLang / localized', () => {
-  it('resolveLang maps en to en and everything else to pt-BR', () => {
+  it('resolveLang always returns en', () => {
     expect(resolveLang('en')).toBe('en')
-    expect(resolveLang('pt-BR')).toBe('pt-BR')
-    expect(resolveLang('xx')).toBe('pt-BR')
+    expect(resolveLang('pt-BR')).toBe('en')
+    expect(resolveLang('xx')).toBe('en')
   })
 
-  it('localized picks the requested language', () => {
-    expect(localized({ en: 'Hello', 'pt-BR': 'Olá' }, 'pt-BR')).toBe('Olá')
-    expect(localized({ en: 'Hello', 'pt-BR': 'Olá' }, 'en')).toBe('Hello')
-  })
-
-  it('localized falls back to en when the requested language is missing', () => {
-    expect(localized({ en: 'Hello' }, 'pt-BR')).toBe('Hello')
+  it('localized returns the English text', () => {
+    expect(localized({ en: 'Hello' }, 'en')).toBe('Hello')
   })
 })

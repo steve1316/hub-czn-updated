@@ -5,7 +5,6 @@ import {
   Radio, Settings, Gift, Info, Zap, Sword, BookOpen, BookMarked,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
-import i18n from '@/i18n'
 import { useUpdateCheck } from '@/hooks/useUpdateCheck'
 
 
@@ -27,7 +26,7 @@ const NAV = [
 ] as const
 
 export function Sidebar() {
-  const { t, i18n: i18nInstance } = useTranslation()
+  const { t } = useTranslation()
   const { hasUpdate } = useUpdateCheck()
 
   return (
@@ -64,22 +63,6 @@ export function Sidebar() {
           </NavLink>
         )
       })}
-      <div className="mt-auto pt-4 px-4 border-t border-[#282828] flex gap-2">
-        {(['pt-BR', 'en'] as const).map((lng) => (
-          <button
-            key={lng}
-            type="button"
-            onClick={() => i18n.changeLanguage(lng)}
-            className={`text-xs px-2 py-1 rounded transition-colors ${
-              i18nInstance.language === lng
-                ? 'bg-[#c084fc] text-[#ffffff]'
-                : 'text-[#b3b3b3] hover:text-[#ffffff]'
-            }`}
-          >
-            {lng === 'pt-BR' ? 'PT' : 'EN'}
-          </button>
-        ))}
-      </div>
     </nav>
   )
 }
