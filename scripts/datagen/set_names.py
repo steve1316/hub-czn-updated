@@ -63,12 +63,26 @@ def set_line(text: str) -> list[dict] | None:
         if set_id is None:
             items.append({"label": label})
             continue
-        entry = SETS[set_id]
-        item = {"label": label, "setId": set_id, "name": entry["name"], "pieces": entry["pieces"], "bonus": entry["bonus"]}
-        if entry.get("icon_path"):
-            item["icon"] = entry["icon_path"]
-        items.append(item)
+        items.append(set_item(label, set_id))
     return items if any("setId" in item for item in items) else None
+
+
+def set_item(label: str, set_id: int) -> dict:
+    """
+    One set as a set-list item.
+
+    Args:
+        label: The sheet's label for it, such as "Flex".
+        set_id: The set's id.
+
+    Returns:
+        The label with the set's id, name, pieces, bonus and icon (when it has one).
+    """
+    entry = SETS[set_id]
+    item = {"label": label, "setId": set_id, "name": entry["name"], "pieces": entry["pieces"], "bonus": entry["bonus"]}
+    if entry.get("icon_path"):
+        item["icon"] = entry["icon_path"]
+    return item
 
 
 def _plain(word: str) -> str:

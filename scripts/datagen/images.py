@@ -8,6 +8,7 @@ reported rather than guessed.
 
 Pictures those two miss, such as a face cropped differently or another character's card, fall back to `SiftMatcher`,
 which matches local features and so survives frames, crops and rescaling. It needs OpenCV, imported only when used.
+Memory fragment pieces are told apart by `PieceMatcher`, which compares small thumbnails over the picture's own background.
 """
 
 from __future__ import annotations
@@ -55,6 +56,15 @@ SIFT_MAX_COLOUR_DIFFERENCE = 64
 SIFT_COLOUR_MARGIN = 8
 # Sheet pictures are enlarged by this much before matching, since they are small next to the client art.
 SIFT_QUERY_SCALE = 2
+
+# Memory fragment piece pictures are compared as tiny thumbnails, since the sheet shows them from 20 px inventory icons up to full art.
+PIECE_THUMB = 20
+# The best set must be at most this far off (mean pixel difference, 0-255) and beat the next set by the margin. A piece on a plain
+# background lands under 5, a blurred inventory icon on its brown tile around 9-14, and a different set above 18.
+PIECE_MAX_DISTANCE = 15
+PIECE_MIN_MARGIN = 3.0
+# The inventory icon's badge sits in this bottom-right part of the thumbnail (a fraction of its side), so it is not compared.
+PIECE_BADGE_START = 0.55
 
 # What a matcher ranks: a res_id for faces, an illustration name for cards.
 _Key = TypeVar("_Key")
@@ -203,6 +213,48 @@ class CardMatcher:
             difference = sum(ImageStat.Stat(ImageChops.difference(window, candidate)).mean) / 3
             best[name] = min(difference, best.get(name, difference))
         return _clear_winner(best, margin=CARD_MIN_MARGIN)
+
+
+class PieceMatcher:
+    """Finds which memory fragment set a piece picture shows, by comparing small thumbnails laid over the picture's own background."""
+
+    def __init__(self, candidates: dict[int, list[Path]]):
+        """
+        Args:
+            candidates: Set id -> the piece PNGs of that set, with transparent backgrounds. A set scores its best piece.
+        """
+        import numpy  # Only the guide import compares pieces, so it is not a sidecar dependency.
+
+        self._np = numpy
+        self._pieces: list[tuple[int, object, object]] = []
+        for set_id, paths in candidates.items():
+            for path in paths:
+                thumb = numpy.asarray(Image.open(path).convert("RGBA").resize((PIECE_THUMB, PIECE_THUMB), Image.BOX)).astype(float)
+                self._pieces.append((set_id, thumb[:, :, :3], thumb[:, :, 3:] / 255.0))
+        self._compared = numpy.ones((PIECE_THUMB, PIECE_THUMB), bool)
+        badge = int(PIECE_THUMB * PIECE_BADGE_START)
+        self._compared[badge:, badge:] = False
+
+    def match(self, image: Image.Image) -> int | None:
+        """
+        The set a piece picture shows.
+
+        Args:
+            image: The sheet's picture.
+
+        Returns:
+            The set id, or None when no set is a clear match.
+        """
+        np = self._np
+        thumb = np.asarray(image.convert("RGB").resize((PIECE_THUMB, PIECE_THUMB), Image.BOX)).astype(float)
+        # The picture's background is a flat colour or a vertical gradient, so each row's left edge stands for it.
+        background = thumb[:, :2].mean(axis=1)[:, None, :]
+        best: dict[int, float] = {}
+        for set_id, colour, alpha in self._pieces:
+            laid = colour * alpha + background * (1 - alpha)
+            distance = float(np.abs(laid - thumb)[self._compared].mean())
+            best[set_id] = min(distance, best.get(set_id, distance))
+        return _clear_winner(best, margin=PIECE_MIN_MARGIN, max_distance=PIECE_MAX_DISTANCE)
 
 
 class SiftMatcher(Generic[_Key]):

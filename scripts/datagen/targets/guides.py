@@ -30,7 +30,8 @@ from PIL import Image
 from scripts.datagen import card_text, epiphany, guides_qc, images, potential_overlay, roster
 from scripts.datagen.art import wanted, webp
 from scripts.datagen.epiphany import Extra, Variant
-from scripts.datagen.set_names import set_line
+from api.game_data.sets import SETS
+from scripts.datagen.set_names import set_item, set_line
 from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, json_bytes
@@ -138,6 +139,9 @@ APP_FACE_DIR = Path("api/assets/game/faces")
 CLIENT_FACE_DIR = Path("face/character")
 _APP_FACE = re.compile(r"^bookmark_face_character_map_(\d+)$")
 _CLIENT_FACE = re.compile(r"^(?:shortcut_face_character|face_character|face_character_popup|portrait_character_crop)_(\d+)$")
+# The memory fragment piece art the app ships. The sheet shows these pieces under each relic loadout's set name.
+PIECE_DIR = Path("api/assets/game/pieces")
+_PIECE_FILE = re.compile(r"^item_piece_set_(\d+)_\d+$")
 
 
 class _Download:
@@ -210,7 +214,7 @@ class _PictureLabels:
     Labels for sheet pictures, from the `_pictures` directive of the guides overrides.
 
     The sheet reuses the same picture on many tabs, so one label keyed by the picture's hash identifies every use of it.
-    A label is `{"charResId": 1003}`, `{"cardId": "c_1003_uni1"}` or `{"skip": true}`.
+    A label is `{"charResId": 1003}`, `{"cardId": "c_1003_uni1"}`, `{"setId": 11}` (a memory fragment piece) or `{"skip": true}`.
     """
 
     def __init__(self, labels: dict[str, dict]):
@@ -320,6 +324,7 @@ def build(ctx: Context) -> TargetResult:
     own_cards = _cards_by_owner(ctx)
     potential_rows = ctx.client.rows(POTENTIAL_NODE_TABLE)
     sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
+    pieces = images.PieceMatcher(_piece_art(REPO_ROOT / PIECE_DIR))
     sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
     shared_cards = _shared_cards()
     card_names = _card_names(ctx, shared_cards)
@@ -352,7 +357,7 @@ def build(ctx: Context) -> TargetResult:
         cards = _CachedCards(illustrations, card_ids, match_cache)
         guide_slug = slug(name, _SLUG_MAX_LENGTH)
         builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, shared_cards, variants_of, decks, overrides, labels, tab_name, guide_slug,
-                               titles, sift_wide, read_text)
+                               titles, sift_wide, read_text, pieces)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -535,6 +540,24 @@ def _face_art(ctx: Context) -> dict[str, list[Path]]:
         if match and match.group(1) in shown:
             faces.setdefault(match.group(1), []).append(path)
     return faces
+
+
+def _piece_art(directory: Path) -> dict[int, list[Path]]:
+    """
+    The memory fragment piece art of every set the app lists.
+
+    Args:
+        directory: The folder of `item_piece_set_<set>_<slot>.png` files.
+
+    Returns:
+        Set id -> its piece images. Sets the app does not list are left out, since an unreleased set can share art with a listed one.
+    """
+    art: dict[int, list[Path]] = {}
+    for path in sorted(directory.glob("*.png")):
+        match = _PIECE_FILE.match(path.stem)
+        if match and int(match.group(1)) in SETS:
+            art.setdefault(int(match.group(1)), []).append(path)
+    return art
 
 
 def _shared_cards() -> dict[str, dict]:
@@ -744,7 +767,8 @@ class _GuideBuilder:
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
                  sift_cards: _CachedSift, card_names: dict[str, str], shared_cards: dict[str, dict], variants_of, decks: _DeckPictures, overrides: Overrides,
-                 labels: _PictureLabels, tab_name: str, guide_slug: str, titles: _TitleCards, sift_wide: _CachedSift, read_text):
+                 labels: _PictureLabels, tab_name: str, guide_slug: str, titles: _TitleCards, sift_wide: _CachedSift, read_text,
+                 pieces: images.PieceMatcher | None = None):
         """
         Args:
             ctx: The run context.
@@ -764,6 +788,7 @@ class _GuideBuilder:
             titles: Reads a card render's title bar and finds the card it names.
             sift_wide: SIFT over every card illustration in the client, for the renders nothing else identified.
             read_text: Picture bytes -> its OCR text, which reads the epiphany of a repeated card in a rated row.
+            pieces: Identifies the memory fragment piece pictures, which the face matchers miss.
         """
         self.ctx = ctx
         self.downloads = downloads
@@ -782,6 +807,7 @@ class _GuideBuilder:
         self.titles = titles
         self.sift_wide = sift_wide
         self.read_text = read_text
+        self.pieces = pieces
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
         # File name -> encoded WebP, for the guide's clean potentials tree with the author's ring colours drawn on it.
@@ -928,7 +954,7 @@ class _GuideBuilder:
                     title, title_shown = held, True
                 held = None
                 blocks.extend(new_blocks)
-                if all(block["type"] == "image" for block in new_blocks):
+                if all(block["type"] in ("image", "set-list") for block in new_blocks):
                     # Text beside pictures that are not cards or faces, such as a relic's substats note next to its set icons.
                     for picture_row in rows[index:index + consumed]:
                         if any(cell.images for cell in picture_row):
@@ -978,10 +1004,12 @@ class _GuideBuilder:
         cards: list[dict] = []
         strips: list[dict] = []
         face_rows: list[list[tuple[int, int]]] = []
+        piece_rows: list[list[tuple[int, int]]] = []
         for row in rows[start:end]:
             # A card nothing identified stays in the row as a gap (cardId None), so its neighbours keep their places.
             row_cards: list[dict] = []
             face_row: list[tuple[int, int]] = []
+            piece_row: list[tuple[int, int]] = []
             for cell in row:
                 ref = f"{self.tab_name}!{cell.ref}"
                 for index, url in enumerate(cell.images):
@@ -991,9 +1019,14 @@ class _GuideBuilder:
                     label = {**found, **self.overrides.entries.get(ref, {})}
                     if label.get("skip"):
                         continue
-                    if "charResId" in label or (kind == "face" and "cardId" not in label):
+                    if "setId" in label:
+                        piece_row.append((cell.col, label["setId"]))
+                    elif "charResId" in label or (kind == "face" and "cardId" not in label):
                         res_id = label.get("charResId") or self._face(download)
-                        if res_id is None:
+                        set_id = self._piece(download) if res_id is None and "charResId" not in label else None
+                        if set_id is not None:
+                            piece_row.append((cell.col, set_id))
+                        elif res_id is None:
                             self._miss(download, kind, ref, bool(ratings))
                         else:
                             face_row.append((cell.col, res_id))
@@ -1003,7 +1036,11 @@ class _GuideBuilder:
                             self._miss(download, kind, ref, bool(ratings))
                         row_cards.append({"cardId": card_id, "col": cell.col, "picture": (download, ref)})
                     elif _is_icon(download.picture):
-                        self.dropped_icons.append(ref)
+                        # An icon-sized picture that is not square, such as a piece the sheet stretched a little, may still be a piece.
+                        if (set_id := self._piece(download)) is not None:
+                            piece_row.append((cell.col, set_id))
+                        else:
+                            self.dropped_icons.append(ref)
                     elif _is_strip(download.picture):
                         strips.append({"type": "image", "image": self._strip_name(download)})
                     else:
@@ -1015,6 +1052,8 @@ class _GuideBuilder:
             cards.extend(self._settle_repeats(row_cards, ratings) if ratings else row_cards)
             if face_row:
                 face_rows.append(face_row)
+            if piece_row:
+                piece_rows.append(piece_row)
 
         blocks = []
         named = False
@@ -1023,6 +1062,10 @@ class _GuideBuilder:
         if face_rows:
             face_block, named = self._face_block(face_rows, ratings, names)
             blocks.append(face_block)
+        if piece_rows:
+            # The label row above names the first row of pieces. The sets of any later row have no labels of their own.
+            blocks.extend(_piece_block(row, names if index == 0 else {}) for index, row in enumerate(piece_rows))
+            named = named or bool(names)
         blocks.extend(strips)
         return consumed, blocks, named
 
@@ -1141,6 +1184,18 @@ class _GuideBuilder:
         if res_id is None and (found := self.sift_faces.match(download.picture, download.data)):
             res_id = int(found)
         return res_id
+
+    def _piece(self, download: _Download) -> int | None:
+        """
+        The memory fragment set a piece picture shows.
+
+        Args:
+            download: The sheet's picture.
+
+        Returns:
+            The set id, or None when there is no piece matcher or no set is a clear match.
+        """
+        return self.pieces.match(download.picture) if self.pieces else None
 
     def _card_list(self, cards: list[dict], ratings: dict[int, str]) -> dict:
         """
@@ -1276,7 +1331,12 @@ def _tidy_sections(sections: list[dict]) -> tuple[list[dict], str | None]:
         title = section["title"] or _untitled_name(blocks)
         blocks = [_set_block(block) for block in blocks]
         if title_sets := set_line(title):
-            blocks.insert(0, {"type": "set-list", "items": title_sets})
+            # Piece pictures under the title's labels already make that set-list, so it is moved to the front rather than shown twice.
+            labels = [item["label"] for item in title_sets]
+            shown = next((block for block in blocks if block["type"] == "set-list" and [item["label"] for item in block["items"]] == labels), None)
+            if shown:
+                blocks.remove(shown)
+            blocks.insert(0, shown or {"type": "set-list", "items": title_sets})
         tidied.append({"title": {"en": title}, "blocks": blocks})
     return tidied, updated
 
@@ -1348,6 +1408,22 @@ def _untitled_name(blocks: list[dict]) -> str:
     if "team-grid" in types:
         return "Teams"
     return "Notes"
+
+
+def _piece_block(pieces: list[tuple[int, int]], names: dict[int, str]) -> dict:
+    """
+    A loadout's piece pictures as a set-list, each set under the label the sheet gives its column.
+
+    Args:
+        pieces: (column, set id) per identified piece picture.
+        names: column -> the label above that column. A labelled column with no identified piece stays in the list as a bare label.
+
+    Returns:
+        The set-list block. A piece with no label above it takes its set's name.
+    """
+    sets = dict(pieces)
+    items = [set_item(names.get(col) or SETS[sets[col]]["name"], sets[col]) if col in sets else {"label": names[col]} for col in sorted({*sets, *names})]
+    return {"type": "set-list", "items": items}
 
 
 def _set_block(block: dict) -> dict:
