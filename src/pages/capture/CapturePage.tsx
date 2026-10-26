@@ -7,7 +7,7 @@ import { api, wsUrl } from '@/lib/api'
 import { useApiPort } from '@/hooks/useApiPort'
 import { useCaptureLog } from '@/hooks/useCaptureLog'
 import { Button } from '@/components/ui/button'
-import { CheckCircle, XCircle, Radio, Square, FolderOpen, Download, Loader2, ChevronDown, ChevronRight } from 'lucide-react'
+import { CheckCircle, XCircle, Radio, Square, FolderOpen, Download, Loader2, Info } from 'lucide-react'
 import { InfoPopover } from '@/components/ui/info-popover'
 import type { CaptureLogMessage, CaptureStatus } from '@/lib/types'
 
@@ -36,6 +36,8 @@ interface PrereqBadgeProps {
   tip?: string
   /** True while the check is still in flight, so a red cross is not shown before we know. */
   pending?: boolean
+  /** True when a missing prerequisite is handled automatically, so it shows as info instead of a red cross. */
+  optional?: boolean
 }
 
 /**
@@ -44,13 +46,13 @@ interface PrereqBadgeProps {
  * @param props See `PrereqBadgeProps`.
  * @returns The badge, spinning and yellow until the check comes back.
  */
-function PrereqBadge({ ok, label, tip, pending }: PrereqBadgeProps) {
-  const colour = pending ? 'text-yellow-400' : ok ? 'text-green-400' : 'text-red-400'
+function PrereqBadge({ ok, label, tip, pending, optional }: PrereqBadgeProps) {
+  const colour = pending ? 'text-yellow-400' : ok ? 'text-green-400' : optional ? 'text-[#b3b3b3]' : 'text-red-400'
   return (
     <span className={`flex items-center gap-1 text-xs ${colour}`}>
       {pending
         ? <Loader2 size={12} className="animate-spin" />
-        : ok ? <CheckCircle size={12} /> : <XCircle size={12} />}
+        : ok ? <CheckCircle size={12} /> : optional ? <Info size={12} /> : <XCircle size={12} />}
       {label}
       {tip && <InfoPopover content={tip} />}
     </span>
@@ -124,7 +126,7 @@ function AutoScrollConfirmModal({
           className="fixed left-1/2 top-1/2 z-50 w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-lg border border-[#282828] bg-[#111] p-5 shadow-xl focus:outline-none"
         >
           <Dialog.Title className="mb-3">
-            <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mb-1">Auto-scroll de resgates</p>
+            <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mb-1">{t('capture.autoscroll.title')}</p>
             <p className="text-sm font-semibold text-white">{t('capture.autoscroll.modal.title')}</p>
           </Dialog.Title>
 
@@ -356,7 +358,6 @@ export function CapturePage() {
   const [autoScroll, setAutoScroll] = useState(true)
   const [debug, setDebug] = useState(false)
   const [region, setRegion] = useState<'global' | 'asia'>('global')
-  const [howToUseOpen, setHowToUseOpen] = useState(false)
   const logRef = useRef<HTMLDivElement>(null)
 
   const { data: captureStatus, isPending: capturePending } = useQuery({
@@ -434,6 +435,11 @@ export function CapturePage() {
     mutationFn: () => api.captureOpenSnapshots(),
   })
 
+  const loadLatestMutation = useMutation({
+    mutationFn: (file: string) => api.load(file),
+    onSuccess: () => qc.invalidateQueries(),
+  })
+
   const running = captureStatus?.running ?? false
   const isAdmin = captureStatus?.admin ?? false
   // Not gated on the CA being trusted: capture trusts it at start and untrusts it at stop.
@@ -442,7 +448,7 @@ export function CapturePage() {
   return (
     <div className="p-6 flex gap-6 h-full">
       {/* Left: controls */}
-      <div className="w-60 shrink-0 flex flex-col gap-4">
+      <div className="w-64 shrink-0 flex flex-col gap-4 overflow-y-auto pr-1">
         <h1 className="text-xl font-bold text-[#ffffff]">{t('capture.title')}</h1>
 
         {/* Prerequisites bar */}
@@ -450,32 +456,12 @@ export function CapturePage() {
           <div className="flex items-center gap-3 flex-wrap">
             <PrereqBadge ok={isAdmin} pending={capturePending} label={t('capture.prereq.admin')} tip={t('capture.prereq.adminTip')} />
             <PrereqBadge ok={setupStatus?.mitmproxy ?? false} pending={setupPending} label={t('capture.prereq.mitmproxy')} tip={t('capture.prereq.mitmproxyTip')} />
-            <PrereqBadge ok={setupStatus?.certificate ?? false} pending={setupPending} label={t('capture.prereq.certificate')} tip={t('capture.prereq.certificateTip')} />
+            <PrereqBadge ok={setupStatus?.certificate ?? false} pending={setupPending} label={t('capture.prereq.certificate')} tip={t('capture.prereq.certificateTip')} optional />
           </div>
           {!prereqsOk && !capturePending && !setupPending && (
             <NavLink to="/setup" className="text-xs text-[#c084fc] hover:underline mt-1">
               {t('capture.goToSetup')}
             </NavLink>
-          )}
-        </div>
-
-        {/* How to use accordion */}
-        <div className="rounded-lg bg-[#181818] border border-[#282828] overflow-hidden">
-          <button
-            type="button"
-            aria-expanded={howToUseOpen}
-            className="w-full flex items-center gap-2 px-3 py-2 text-xs text-[#b3b3b3] hover:text-[#ffffff]"
-            onClick={() => setHowToUseOpen(v => !v)}
-          >
-            {howToUseOpen ? <ChevronDown size={12} /> : <ChevronRight size={12} />}
-            {t('capture.howToUse.title')}
-          </button>
-          {howToUseOpen && (
-            <ol className="px-4 pb-3 text-xs text-[#b3b3b3] leading-relaxed space-y-1 list-none">
-              {(['step1', 'step2', 'step3', 'step4', 'step5', 'step6'] as const).map(k => (
-                <li key={k}>{t(`capture.howToUse.${k}`)}</li>
-              ))}
-            </ol>
           )}
         </div>
 
@@ -575,18 +561,15 @@ export function CapturePage() {
           <Button
             size="sm"
             variant="outline"
-            disabled={!captureStatus?.rescue_file}
+            disabled={!captureStatus?.rescue_file || loadLatestMutation.isPending}
             className="border-[#282828] text-[#b3b3b3] hover:text-[#ffffff] w-full justify-start disabled:opacity-40"
-            onClick={() => {
-              if (captureStatus?.rescue_file) {
-                api.load(captureStatus.rescue_file)
-                  .then(() => qc.invalidateQueries({ queryKey: ['fragments'] }))
-              }
-            }}
+            onClick={() => captureStatus?.rescue_file && loadLatestMutation.mutate(captureStatus.rescue_file)}
           >
-            <Download size={13} className="mr-2" />
+            {loadLatestMutation.isPending ? <Loader2 size={13} className="mr-2 animate-spin" /> : <Download size={13} className="mr-2" />}
             {t('capture.loadLatest')}
           </Button>
+          {loadLatestMutation.isSuccess && <p className="text-xs text-[#4ade80]">{t('capture.loadLatestDone')}</p>}
+          <MutationError error={loadLatestMutation.isError ? loadLatestMutation.error : undefined} />
         </div>
         {running && <AutoScrollPanel port={port} />}
       </div>
@@ -614,11 +597,11 @@ export function CapturePage() {
           className="flex-1 overflow-y-auto rounded-lg bg-[#0d0d0d] border border-[#282828] p-3 font-mono text-xs leading-relaxed"
         >
           {messages.length === 0 && !running && (
-            <div className="text-[#8a8a8a] space-y-1">
-              <p>{t('capture.log.step1')}</p>
-              <p>{t('capture.log.step2')}</p>
-              <p>{t('capture.log.step3')}</p>
-              <p>{t('capture.log.step4')}</p>
+            <div className="font-sans text-sm text-[#b3b3b3] space-y-1.5">
+              <p className="font-semibold text-[#ffffff]">{t('capture.howToUse.title')}</p>
+              {(['step1', 'step2', 'step3', 'step4', 'step5'] as const).map(k => (
+                <p key={k}>{t(`capture.howToUse.${k}`)}</p>
+              ))}
             </div>
           )}
           {messages.map((m, i) => (
