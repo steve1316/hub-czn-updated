@@ -1,7 +1,9 @@
 import { useTranslation } from 'react-i18next'
+import { useNavigate } from 'react-router-dom'
+import { SquareStack } from 'lucide-react'
 import { CardImage } from '@/pages/deck-builder/components/CardImage'
 import type { CardEntry } from '@/lib/types'
-import { cardEntry, levelNumeral, localized, resolveLang } from '../../guides.utils'
+import { cardEntry, guideDeckToSlot, levelNumeral, localized, resolveLang, type GuideDeckHandoff } from '../../guides.utils'
 import type { DeckCard, EpiphanyRating } from '../../guides.types'
 import { CostGem } from './CostGem'
 import { RatingChip } from './RatingChip'
@@ -14,6 +16,8 @@ interface DeckBlockProps {
   ratings: Map<string, EpiphanyRating>
   /** The guide character's cards by id. */
   cardsById: Record<string, CardEntry>
+  /** Who the deck opens for in the Deck Builder. Set only on full decks, so card strips that illustrate a point get no button. */
+  openFor?: { charResId: number; name: string }
 }
 
 /**
@@ -27,16 +31,36 @@ function legendKey(card: DeckCard): string {
 
 /**
  * A deck as a strip of every copy, with a legend of each distinct card under it.
- * @param props The deck's cards, the guide's ratings and the character's cards.
+ * @param props The deck's cards, the guide's ratings, the character's cards and who the guide is for.
  * @returns The strip and its legend.
  */
-export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
+export function DeckBlock({ cards, ratings, cardsById, openFor }: DeckBlockProps) {
   const { t, i18n } = useTranslation()
+  const navigate = useNavigate()
   const lang = resolveLang(i18n.language)
   const legend = [...new Map(cards.map(card => [legendKey(card), card])).values()]
 
+  /**
+   * Open this deck in the Deck Builder, epiphanies and divine lines included.
+   * @param owner The guide character.
+   */
+  function openInDeckBuilder(owner: { charResId: number; name: string }) {
+    const guideDeck: GuideDeckHandoff = { name: owner.name, ...guideDeckToSlot(owner.charResId, cards) }
+    navigate('/deck-builder', { state: { guideDeck } })
+  }
+
   return (
     <div className="flex flex-col gap-2">
+      {openFor && (
+        <button
+          type="button"
+          onClick={() => openInDeckBuilder(openFor)}
+          className="inline-flex items-center gap-1.5 self-start rounded-md border border-[#3a3a3a] px-3 py-1.5 text-xs text-[#b3b3b3] hover:border-[#c084fc] hover:text-[#ffffff]"
+        >
+          <SquareStack size={14} />
+          {t('guides.openInDeckBuilder')}
+        </button>
+      )}
       <div className="flex flex-wrap gap-1.5">
         {cards.map((card, index) => {
           const level = card.epiphany?.level

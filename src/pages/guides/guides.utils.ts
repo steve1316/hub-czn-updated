@@ -1,6 +1,7 @@
 import type { CardEntry } from '@/lib/types'
-import { DECK_BUILDER_PERSONA_IMAGE_OVERRIDE_FIELD } from '@/pages/deck-builder/deck-builder.utils'
-import type { Block, EpiphanyRating, Guide } from './guides.types'
+import { DECK_BUILDER_PERSONA_IMAGE_OVERRIDE_FIELD, findCommonEpiphanyById, findDivineEpiphanyById } from '@/pages/deck-builder/deck-builder.utils'
+import type { DeckBuilderExportSlot } from '@/pages/deck-builder/deck-builder.types'
+import type { Block, DeckCard, EpiphanyRating, Guide } from './guides.types'
 
 export { localized, resolveLang } from '@/lib/localized-text'
 
@@ -18,6 +19,20 @@ export type RatingTone = 'gold' | 'purple' | 'blue' | 'grey' | 'red'
 
 /** One piece of a prose block as the page lays it out. */
 export type ProsePart = { kind: 'heading'; text: string } | { kind: 'terms'; terms: { term: string; lines: string[] }[] } | { kind: 'text'; text: string }
+
+/** A guide deck turned into a Deck Builder squad slot. */
+export interface GuideDeckImport {
+  /** The slot, in the same shape saved and exported decks use. */
+  slot: DeckBuilderExportSlot
+  /** Names of the cards that load without part of what the guide shows, each named once. */
+  partial: string[]
+}
+
+/** A guide deck on its way to the Deck Builder, through the navigation state. */
+export interface GuideDeckHandoff extends GuideDeckImport {
+  /** The guide character's name, for the Deck Builder's notice. */
+  name: string
+}
 
 // //////////////////////////////////////////////////////////////////////////////////////////////////
 // //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -153,4 +168,32 @@ export function cardEntry(cardId: string, name: string | undefined, cardsById: R
     }
   )
   return persona ? ({ ...entry, [DECK_BUILDER_PERSONA_IMAGE_OVERRIDE_FIELD]: `${persona}.webp` } as CardEntry) : entry
+}
+
+/**
+ * Turn a guide deck into a Deck Builder slot, with each copy's epiphany level and divine or common line.
+ * @param charResId The guide character's res_id.
+ * @param cards Every copy in the deck.
+ * @returns The slot, and the cards whose extra line or Persona engravings the Deck Builder cannot take.
+ */
+export function guideDeckToSlot(charResId: number, cards: DeckCard[]): GuideDeckImport {
+  const partial = new Set<string>()
+  const slotCards = cards.map(card => {
+    const divine = card.extra?.id.startsWith('div_') ? findDivineEpiphanyById(card.extra.id) : null
+    const common = card.extra?.id.startsWith('com_') ? findCommonEpiphanyById(card.extra.id) : null
+    // The guide only knows a Persona's art, not which engravings make it
+    if ((card.extra && !divine && !common) || card.persona) partial.add(card.name ?? card.cardId)
+    return {
+      card_id: card.cardId,
+      selected_variant_id: card.epiphany?.level ? `${card.cardId}_epiphany_${card.epiphany.level}` : null,
+      selected_divine_god: divine ? card.extra?.god ?? divine.god : null,
+      selected_divine_epiphany_id: divine?.id ?? null,
+      selected_common_epiphany_id: common?.id ?? null,
+      selected_persona_engraving_ids: [null, null] as [null, null],
+    }
+  })
+  return {
+    slot: { combatant_id: charResId, equipment: { weapon_id: null, armor_id: null, accessory_id: null }, cards: slotCards },
+    partial: [...partial],
+  }
 }

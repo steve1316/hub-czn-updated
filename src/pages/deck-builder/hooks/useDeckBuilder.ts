@@ -494,6 +494,25 @@ export function useDeckBuilder() {
     )
 
     setSquad(nextSquad)
+    return nextSquad
+  }
+
+  /**
+   * Put a deck handed over from another page into the squad: the slot already holding that combatant, else the first empty one, else slot 1.
+   * @param incoming The deck as an export slot.
+   * @param confirmReplace Asked before replacing slot 1 when every slot is taken by someone else.
+   * @returns The slot index used and how many cards the Deck Builder could not add, or null when the user kept the squad.
+   */
+  async function placeIncomingSlot(incoming: DeckBuilderExportSlot, confirmReplace: () => boolean) {
+    const slots = squad.map(createDeckBuilderExportSlot)
+    const same = slots.findIndex(slot => slot.combatant_id === incoming.combatant_id)
+    const index = same >= 0 ? same : slots.findIndex(slot => slot.combatant_id == null)
+    if (index < 0 && !confirmReplace()) return null
+    const target = Math.max(index, 0)
+    slots[target] = incoming
+    const loaded = await loadDeckFromPayload({ version: DECK_BUILDER_EXPORT_VERSION, exported_at: new Date().toISOString(), slots })
+    setSelectedSavedDeckId(null)
+    return { index: target, dropped: loaded[target].unloadedCards ? 0 : incoming.cards.length - loaded[target].cards.length }
   }
 
   async function selectCombatant(slotIndex: number, combatantId: number | null) {
@@ -983,6 +1002,8 @@ export function useDeckBuilder() {
     variantModalTarget,
     savedDecks,
     selectedSavedDeckId,
+    restored,
+    placeIncomingSlot,
     selectCombatant,
     duplicateCard,
     removeCard,

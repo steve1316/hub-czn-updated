@@ -99,7 +99,15 @@ export function GuidePage({ guide }: { guide: Guide }) {
                   if (block.type === 'team-grid')
                     return <TeamGridBlock key={i} groups={block.groups} selfId={guide.charResId} />
                   if (block.type === 'deck')
-                    return <DeckBlock key={i} cards={block.cards} ratings={ratings} cardsById={cardsById} />
+                    return (
+                      <DeckBlock
+                        key={i}
+                        cards={block.cards}
+                        ratings={ratings}
+                        cardsById={cardsById}
+                        openFor={active.id === 'decks' ? { charResId: guide.charResId, name: guide.name } : undefined}
+                      />
+                    )
                   if (block.type === 'image') return <ImageBlock key={i} image={block.image} />
                   if (block.type === 'set-list') return <SetListBlock key={i} items={block.items} />
                   if (block.type === 'table') return <TableBlock key={i} rows={block.rows} />

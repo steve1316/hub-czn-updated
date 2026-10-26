@@ -439,6 +439,7 @@ const en = {
     flex: 'Flex',
     ratedIn: 'Rated {{rating}} in Card ratings',
     sheetSays: 'Sheet says: {{label}}',
+    openInDeckBuilder: 'Open in Deck Builder',
   },
   encyclopedia: {
     tabs: {
@@ -677,6 +678,14 @@ const en = {
     beta: 'beta',
     subtitle: 'Build a squad with 3 combatants and adjust each deck\'s cards.',
     loadingCombatants: 'Loading combatants...',
+    guide: {
+      loaded: "Loaded {{name}}'s guide deck into slot {{slot}}.",
+      dropped_one: "{{count}} card the Deck Builder doesn't have, such as one made during battle, was left out.",
+      dropped_other: "{{count}} cards the Deck Builder doesn't have, such as ones made during battle, were left out.",
+      partial: 'Loaded without their extra line or engravings: {{cards}}.',
+      replaceConfirm: "Every slot is in use. Replace slot 1 with {{name}}'s guide deck?",
+      dismiss: 'Dismiss',
+    },
     selectedCards: 'Selected cards',
     selectedCombatants: '{{count}}/3 combatants',
     costPoints: '{{cost}} pts',

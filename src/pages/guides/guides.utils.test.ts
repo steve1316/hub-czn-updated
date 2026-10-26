@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
-import type { Guide } from './guides.types'
-import { cardEntry, epiphanyRatings, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
+import type { DeckCard, Guide } from './guides.types'
+import { cardEntry, epiphanyRatings, guideDeckToSlot, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en for en and anything else', () => {
@@ -95,5 +95,41 @@ describe('cardEntry', () => {
     expect(card.name).toBe('Persona of Obsidian')
     expect(card.__deckBuilderPersonaImagePath).toBe('all_umbra.webp')
     expect((cardEntry('eidolon_card', 'Persona', {}) as unknown as Record<string, unknown>).__deckBuilderPersonaImagePath).toBeUndefined()
+  })
+})
+
+describe('guideDeckToSlot', () => {
+  const card = (over: Partial<DeckCard>): DeckCard => ({ cardId: 'c_30134_uni1', name: 'Sword Resonance', ...over })
+
+  it('keeps every copy with its epiphany level as the Deck Builder variant', () => {
+    const { slot } = guideDeckToSlot(30134, [
+      card({ epiphany: { level: 2, name: 'Sword Resonance II', text: { en: '' } } }),
+      card({ epiphany: { level: 0, name: 'Sword Resonance', text: { en: '' } } }),
+      card({}),
+    ])
+    expect(slot.combatant_id).toBe(30134)
+    expect(slot.equipment).toEqual({ weapon_id: null, armor_id: null, accessory_id: null })
+    expect(slot.cards.map(c => c.selected_variant_id)).toEqual(['c_30134_uni1_epiphany_2', null, null])
+  })
+
+  it('carries divine and common lines by their catalog id', () => {
+    const { slot, partial } = guideDeckToSlot(30134, [
+      card({ extra: { id: 'div_0098', god: 'Nihilum', text: { en: '' } } }),
+      card({ extra: { id: 'com_0065', text: { en: '' } } }),
+    ])
+    expect(slot.cards[0]).toMatchObject({ selected_divine_epiphany_id: 'div_0098', selected_divine_god: 'Nihilum', selected_common_epiphany_id: null })
+    expect(slot.cards[1]).toMatchObject({ selected_divine_epiphany_id: null, selected_divine_god: null, selected_common_epiphany_id: 'com_0065' })
+    expect(partial).toEqual([])
+  })
+
+  it('loads a card without a line the Deck Builder does not know and names it once', () => {
+    const { slot, partial } = guideDeckToSlot(30134, [
+      card({ extra: { id: 'div_9999', god: 'Nobody', text: { en: '' } } }),
+      card({ extra: { id: 'div_9999', god: 'Nobody', text: { en: '' } } }),
+      card({ cardId: 'eidolon_card', name: 'Persona', persona: 'all_umbra' }),
+    ])
+    expect(slot.cards).toHaveLength(3)
+    expect(slot.cards[0]).toMatchObject({ selected_divine_epiphany_id: null, selected_divine_god: null })
+    expect(partial).toEqual(['Sword Resonance', 'Persona'])
   })
 })
