@@ -25,6 +25,18 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
+                }
+              }
+            },
+            {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
               "cost": 0,
@@ -181,6 +193,25 @@
               }
             },
             {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Drone Bombing IV",
+                "text": {
+                  "en": "For 1 turn, when performing a Attack Weakness, 100% chance to trigger Coordinated Attack on the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
               "cost": 1,
@@ -242,6 +273,55 @@
                 "god": "Diallos",
                 "text": {
                   "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Drone Bombing IV",
+                "text": {
+                  "en": "For 1 turn, when performing a Attack Weakness, 100% chance to trigger Coordinated Attack on the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Drone Bombing",
+                "text": {
+                  "en": "120% Damage to all enemies, 1 Passion Weakness."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
                 }
               }
             },
@@ -313,6 +393,37 @@
               }
             },
             {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Drone Bombing IV",
+                "text": {
+                  "en": "For 1 turn, when performing a Attack Weakness, 100% chance to trigger Coordinated Attack on the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
+                }
+              }
+            },
+            {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
               "cost": 0,
@@ -343,11 +454,16 @@
                 }
               },
               "extra": {
-                "id": "com_0026",
+                "id": "com_0203",
                 "text": {
-                  "en": "Draw 1."
+                  "en": "Draw 1 next turn."
                 }
               }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1
             },
             {
               "cardId": "c_1005_uni3",
@@ -454,9 +570,9 @@
                 }
               },
               "extra": {
-                "id": "com_0026",
+                "id": "com_0203",
                 "text": {
-                  "en": "Draw 1."
+                  "en": "Draw 1 next turn."
                 }
               }
             },
@@ -469,6 +585,41 @@
                 "name": "Target Spotted IV",
                 "text": {
                   "en": "150% Shield. Attunement: Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Drone Bombing",
+                "text": {
+                  "en": "120% Damage to all enemies, 1 Passion Weakness."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
                 }
               }
             },
@@ -545,6 +696,25 @@
                 "name": "High-Power Scope II",
                 "text": {
                   "en": "When an Attack Card of this unit is activated, 1 Mark to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Drone Bombing IV",
+                "text": {
+                  "en": "For 1 turn, when performing a Attack Weakness, 100% chance to trigger Coordinated Attack on the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
                 }
               }
             },
@@ -687,6 +857,18 @@
               }
             },
             {
+              "cardId": "c_1005_uni2",
+              "name": "Drone Bombing",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Drone Bombing V",
+                "text": {
+                  "en": "When a Passion Attack Card is activated, 50% Coordinated Attack to the target."
+                }
+              }
+            },
+            {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
               "cost": 1,
@@ -805,7 +987,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -913,6 +1101,8 @@
         {
           "type": "potentials",
           "image": "selena.webp",
+          "treeImage": "selena-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1670,6 +1860,39 @@
           "body": {
             "en": "Season 3 | Song Rippling through the Stars"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5",
+              "count": 2
+            }
+          ]
         },
         {
           "type": "prose",

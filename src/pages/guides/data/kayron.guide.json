@@ -177,6 +177,14 @@
               "cardId": "c_1064_uni1",
               "name": "Brand of Annihilation",
               "cost": 3
+            },
+            {
+              "cardId": "c_1024_cre1",
+              "name": "Softie ★",
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] [Retain] [Creation] Increase Damage Amount by 10% for 1 turn. Retain: Increase Damage Amount of the next Attack Card activated by 10% (max 350%)."
+              }
             }
           ]
         },
@@ -593,6 +601,11 @@
               }
             },
             {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra"
+            },
+            {
               "cardId": "c_1064_uni4",
               "name": "Echoes of True Abyss",
               "cost": 2,
@@ -778,6 +791,8 @@
         {
           "type": "potentials",
           "image": "kayron.webp",
+          "treeImage": "kayron-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -886,14 +901,17 @@
                 "en": "Celestial Activator that refunds"
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "m_0015",
+              "name": "Hunger of the Void",
+              "cost": 0,
+              "note": {
+                "en": "2 Moral if you're going support"
+              },
+              "rating": "4/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hunger: 2 Moral if you're going support"
-          }
         },
         {
           "type": "deck",
@@ -1302,6 +1320,10 @@
                 {
                   "charResId": 30047,
                   "name": "Nine"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
@@ -1366,6 +1388,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1008,

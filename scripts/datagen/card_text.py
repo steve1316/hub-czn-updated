@@ -12,6 +12,8 @@ import difflib
 import hashlib
 import io
 import re
+import unicodedata
+from collections import Counter
 from dataclasses import dataclass
 from functools import cache
 
@@ -45,6 +47,10 @@ LETTER_MARGIN = 0.05
 DIGIT_MARGIN = 0.02
 # A number the card shows as a percentage, such as "150%".
 _PERCENTAGE = re.compile(r"(\d+)\s*%")
+# An "o" the OCR read in place of a zero, as in "40o%".
+_ZERO_AS_O = re.compile(r"(\d[0-9oO]*?)([oO]+)(?=%|\d)")
+# Words older pictures print differently from today's client text, as letters only. Both sides are put in the client's wording before comparing.
+_OLD_WORDING = {"common": "neutral", "untilused": "untilactivated"}
 # The read may run this much longer than the level it matches by percentages. Longer means an added line it cannot place.
 MAX_TEXT_GROWTH = 1.25
 
@@ -126,13 +132,14 @@ def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> M
     Returns:
         The match, or None when no candidate scores well enough, or another level or another added line comes too close.
     """
-    letters, digits = _letters(text), _digits(text)
+    letters, digits, numbers = _letters(text), _digits(text), _numbers(text)
     scored = []
     for variant in variants:
         for extra in [None, *extras]:
             candidate = variant.text if extra is None else f"{variant.text} {extra.text}"
             letter_score = round(difflib.SequenceMatcher(None, letters, _letters(candidate)).ratio(), 2)
-            digit_score = difflib.SequenceMatcher(None, digits, _digits(candidate)).ratio()
+            # The letters and digits catch a read the numbers alone cannot. The numbers add a clear lead to levels that differ by one figure.
+            digit_score = difflib.SequenceMatcher(None, digits, _digits(candidate)).ratio() + _number_score(numbers, _numbers(candidate))
             scored.append((letter_score, digit_score, variant.level, extra))
     if not scored:
         return None
@@ -220,12 +227,32 @@ def _ocr():
 
 
 def _letters(text: str) -> str:
-    return re.sub(r"[^a-z]", "", text.lower())
+    letters = re.sub(r"[^a-z]", "", text.lower())
+    for old, new in _OLD_WORDING.items():
+        letters = letters.replace(old, new)
+    return letters
 
 
 def _percentages(text: str) -> list[int]:
-    return sorted(int(number) for number in _PERCENTAGE.findall(text))
+    return sorted(int(number) for number in _PERCENTAGE.findall(_mend_numbers(text)))
+
+
+def _mend_numbers(text: str) -> str:
+    """The text with circled digits made plain and an "o" the OCR read for a zero put back."""
+    text = unicodedata.normalize("NFKC", text)
+    return _ZERO_AS_O.sub(lambda found: found.group(1) + "0" * len(found.group(2)), text)
 
 
 def _digits(text: str) -> str:
-    return re.sub(r"[^a-z0-9]", "", text.lower())
+    return re.sub(r"[^a-z0-9]", "", _mend_numbers(text).lower())
+
+
+def _numbers(text: str) -> Counter:
+    """The whole numbers in a text. Circled digits count, and an "o" the OCR read for a zero is mended."""
+    return Counter(re.findall(r"\d+", _mend_numbers(text)))
+
+
+def _number_score(read: Counter, candidate: Counter) -> float:
+    """How much two number lists share, from 0 to 1. One wrong number moves it far more than it moves a score over the whole text."""
+    total = read.total() + candidate.total()
+    return 2 * (read & candidate).total() / total if total else 1.0

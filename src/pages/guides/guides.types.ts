@@ -23,6 +23,8 @@ export interface CardItem {
   cardId: string
   /** The card's display name. */
   name?: string
+  /** The Persona art key, such as `all_umbra`, for a Persona card whose engravings give it its own art. */
+  persona?: string
   /** The cost printed on the card, -1 for an X cost. Absent when the card is folded into `epiphanies`. */
   cost?: number
   /** The author's rating, such as "4/5". */
@@ -61,6 +63,8 @@ export interface DeckCard {
   cardId: string
   /** The card's display name. */
   name?: string
+  /** The Persona art key, such as `all_umbra`, for a Persona card whose engravings give it its own art. */
+  persona?: string
   /** The cost the card shows, after any extra line that reduces it. -1 for an X cost. */
   cost?: number
   /** The epiphany it shows. Absent when it could not be read or the card has none. */
@@ -85,6 +89,8 @@ export interface SetItem {
   bonus?: string
   /** The set icon path, served by the sidecar. */
   icon?: string
+  /** True when the sheet labelled the set "Flex", so any set works and this one is only the author's example. */
+  flex?: boolean
 }
 
 /** One character in a team-grid group. */
@@ -119,6 +125,8 @@ export type Block =
   | {
       type: 'potentials'
       image: string | null
+      treeImage: string
+      coloured: boolean
       legend: PotentialsLegendEntry[]
       ego: EgoNote[]
     }

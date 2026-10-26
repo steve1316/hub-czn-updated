@@ -72,6 +72,10 @@ describe('guides content', () => {
               }
             }
           }
+          if (block.type === 'potentials') {
+            expect(block.treeImage, `${ctx}.treeImage`).toMatch(/-tree\.webp$/)
+            expect(typeof block.coloured, `${ctx}.coloured`).toBe('boolean')
+          }
           if (block.type === 'set-list') {
             for (const item of block.items) {
               expect(item.label?.trim(), `${ctx}.label`).not.toBe('')

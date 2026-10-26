@@ -458,7 +458,20 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Snack Time",
+                "text": {
+                  "en": "[Exhaust] Choose 1 card(s) in hand to Exhaust. Heal 200%. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -701,7 +714,20 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Snack Time",
+                "text": {
+                  "en": "[Exhaust] Choose 1 card(s) in hand to Exhaust. Heal 200%. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -830,7 +856,20 @@
             {
               "cardId": "c_1056_uni2",
               "name": "Snack Time",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Snack Time",
+                "text": {
+                  "en": "[Exhaust] Choose 1 card(s) in hand to Exhaust. Heal 200%. Draw 1."
+                }
+              },
+              "extra": {
+                "id": "com_0001",
+                "text": {
+                  "en": "Morale 1."
+                }
+              }
             },
             {
               "cardId": "c_1056_uni2",
@@ -1056,7 +1095,13 @@
               "icon": "/assets/pieces/icon_piece_set_008.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -1077,6 +1122,8 @@
         {
           "type": "potentials",
           "image": "rei.webp",
+          "treeImage": "rei-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1916,6 +1963,24 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
               "cardId": "n_0027",
               "name": "Dream World",
               "cost": 3,
@@ -2012,13 +2077,21 @@
               "note": {
                 "en": ""
               }
+            },
+            {
+              "cardId": "n_0017",
+              "name": "Confiscation",
+              "cost": 0,
+              "note": {
+                "en": "Repeatable AP"
+              }
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Self Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Self Generating: Cost Reudction rng"
           }
         },
         {

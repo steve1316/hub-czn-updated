@@ -1141,7 +1141,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_008.png"
             }
           ]
         },
@@ -1249,6 +1255,8 @@
         {
           "type": "potentials",
           "image": "narja.webp",
+          "treeImage": "narja-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1773,11 +1781,19 @@
                 {
                   "charResId": 1052,
                   "name": "Narja"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
             {
               "members": [
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
                 {
                   "charResId": 1052,
                   "name": "Narja"
@@ -1805,6 +1821,10 @@
                 {
                   "charResId": 1043,
                   "name": "Hugo"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1049,
@@ -1852,6 +1872,10 @@
                 {
                   "charResId": 1027,
                   "name": "Mei Lin"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
                 }
               ]
             },

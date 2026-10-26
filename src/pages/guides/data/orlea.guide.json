@@ -576,6 +576,14 @@
               }
             },
             {
+              "charResId": 30085,
+              "name": "Tiana",
+              "rating": "4/5",
+              "note": {
+                "en": "Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash"
+              }
+            },
+            {
               "charResId": 30052,
               "name": "Noel",
               "rating": "4/5",
@@ -600,12 +608,6 @@
               }
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Tiana: Gives Orlea another source of Multiplicative for Nine, but Ego is basically trash"
-          }
         },
         {
           "type": "partner-list",
@@ -693,7 +695,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -747,6 +755,8 @@
         {
           "type": "potentials",
           "image": "orlea.webp",
+          "treeImage": "orlea-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1225,6 +1235,10 @@
                 {
                   "charResId": 1024,
                   "name": "Orlea"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
@@ -1247,6 +1261,10 @@
             {
               "members": [
                 {
+                  "charResId": 1057,
+                  "name": "Yuki"
+                },
+                {
                   "charResId": 1024,
                   "name": "Orlea"
                 },
@@ -1266,6 +1284,10 @@
                 "en": "Draw Engines"
               },
               "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
                 {
                   "charResId": 1033,
                   "name": "Veronica"
@@ -1300,6 +1322,10 @@
                 {
                   "charResId": 1040,
                   "name": "Beryl"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
                 },
                 {
                   "charResId": 1017,

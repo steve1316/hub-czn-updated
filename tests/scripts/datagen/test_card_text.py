@@ -94,3 +94,40 @@ def test_match_god_ignores_the_regular_emblem():
     marked = plain.copy()
     marked.paste(icon, (4, 30), icon)
     assert match_god(marked) == "Nihilum"
+
+
+FRACTURE_TEXT = "[Unique] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target ({} time(s) per turn)."
+CRAVINGS = [
+    Variant(0, "c_30117_uni3", "Insatiable Cravings", 1, FRACTURE_TEXT.format(3)),
+    Variant(1, "c_30117_uni3_rsp1", "Insatiable Cravings I", 1, FRACTURE_TEXT.format(3).replace("[Unique]", "[Unique] [Initiation]")),
+    Variant(2, "c_30117_uni3_rsp2", "Insatiable Cravings II", 1, FRACTURE_TEXT.format(4)),
+]
+
+
+def test_match_epiphany_reads_one_changed_number_on_a_long_text():
+    # Levels 0 and 2 differ only by "3" against "4 time(s) per turn". The second read has the circled 3 (u2462) the picture shows.
+    read = "WhenFractureor Agony is activated through a Targeting Card,2Fracture and3 Agony to the target {} time(s) per tum)"
+    assert match_epiphany(read.format("4"), CRAVINGS, []) == Match(2, None)
+    assert match_epiphany(read.format("\u2462"), CRAVINGS, []) == Match(0, None)
+
+
+def test_match_epiphany_mends_a_zero_read_as_an_o():
+    # An older picture, worded "until used", with the "400%" read as "40o%". Level 1 shares every word and only says 600%.
+    brand = [
+        Variant(0, "c_1064_uni1", "Brand of Annihilation", 3, "400% Damage to all enemies. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."),
+        Variant(1, "c_1064_uni1_rsp1", "Brand of Annihilation I", 3, "600% Damage to all enemies. When a card is Exhausted, decrease Cost of this card by 1 for 1 turn until activated."),
+    ]
+    morale = Extra("com_0070", None, "For 1 turn, gain 4 Morale")
+    read = "40o%Damagetoallenemles WnenacsrdsExosusteo dacrcareCostorthlsoardby1for 1tumurkused For1trn9an4Mole"
+    assert match_epiphany(read, brand, [morale, Extra("com_0071", None, "Draw 1 Common Card(s)")]) == Match(0, None)
+
+
+def test_match_epiphany_reads_a_picture_worded_common_for_neutral():
+    # Quantum Seed with a divine line. The picture says "Common Card" where the client text says "Neutral Card".
+    seed = [
+        Variant(0, "c_30084_srt4", "Quantum Seed", 1, "Heal 100%. Create 2 Archetype card(s) in Draw Pile. Draw 1 of them."),
+        Variant(1, "c_30084_srt4_rsp1", "Quantum Seed I", 1, "Heal 150%. Create 3 Archetype card(s) in Draw Pile. Draw 1 of them."),
+    ]
+    neutral = Extra("div_0015", "Caligo", "Treated as a Neutral Card. Draw 1 Neutral Card(s).")
+    read = "[Duplicated] He81180% Create 3 Archetype card(s) in DrawPia Draw 1ofthcm TreatedasaCommonCard Drew 1 Common Card(s)"
+    assert match_epiphany(read, seed, [neutral, Extra("div_0008", "Caligo", "Reduce Cost of this card by 1.")]) == Match(1, neutral)

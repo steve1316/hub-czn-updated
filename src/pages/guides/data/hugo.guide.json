@@ -916,7 +916,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -985,6 +991,8 @@
         {
           "type": "potentials",
           "image": "hugo.webp",
+          "treeImage": "hugo-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1794,6 +1802,39 @@
           "body": {
             "en": "Season 3 | Song Rippling through the Stars"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5",
+              "count": 2
+            }
+          ]
         },
         {
           "type": "prose",

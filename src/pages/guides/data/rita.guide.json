@@ -773,7 +773,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -803,7 +809,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -824,6 +836,8 @@
         {
           "type": "potentials",
           "image": "rita.webp",
+          "treeImage": "rita-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1262,6 +1276,10 @@
             {
               "members": [
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 30084,
                   "name": "Tiphera"
                 }
@@ -1328,6 +1346,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1049,

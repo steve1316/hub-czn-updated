@@ -481,7 +481,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -562,6 +568,8 @@
         {
           "type": "potentials",
           "image": "yuki.webp",
+          "treeImage": "yuki-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1359,6 +1367,29 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Honestly wouldn't really bother with the Draw 1, but 2 Moral is nice, 60% Multi is okay\n120% Additive isn't really nessicary since it only buffs ATTACK CARDS not Trickery/Freezing"
@@ -1369,6 +1400,20 @@
           "body": {
             "en": "Attack Personas"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "prose",

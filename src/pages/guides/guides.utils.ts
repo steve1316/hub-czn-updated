@@ -1,4 +1,5 @@
 import type { CardEntry } from '@/lib/types'
+import { DECK_BUILDER_PERSONA_IMAGE_OVERRIDE_FIELD } from '@/pages/deck-builder/deck-builder.utils'
 import type { Block, EpiphanyRating, Guide } from './guides.types'
 
 export { localized, resolveLang } from '@/lib/localized-text'
@@ -135,10 +136,11 @@ export function epiphanyRatings(guide: Guide): Map<string, EpiphanyRating> {
  * @param cardId The client card id.
  * @param name The name the guide carries, used when the card is not in the guide character's own list.
  * @param cardsById The guide character's cards by id.
+ * @param persona The Persona art key, such as `all_umbra`, which swaps in that engraving combination's picture.
  * @returns The character's own entry, or a stand-in carrying the guide's name.
  */
-export function cardEntry(cardId: string, name: string | undefined, cardsById: Record<string, CardEntry>): CardEntry {
-  return (
+export function cardEntry(cardId: string, name: string | undefined, cardsById: Record<string, CardEntry>, persona?: string): CardEntry {
+  const entry: CardEntry = (
     cardsById[cardId] ?? {
       card_id: cardId,
       char_res_id: null,
@@ -150,4 +152,5 @@ export function cardEntry(cardId: string, name: string | undefined, cardsById: R
       effect_types: [],
     }
   )
+  return persona ? ({ ...entry, [DECK_BUILDER_PERSONA_IMAGE_OVERRIDE_FIELD]: `${persona}.webp` } as CardEntry) : entry
 }

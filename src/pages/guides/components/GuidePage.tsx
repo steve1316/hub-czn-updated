@@ -79,7 +79,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
                       </h3>
                     )
                   if (block.type === 'potentials')
-                    return <PotentialsBlock key={i} image={block.image} legend={block.legend} ego={block.ego} />
+                    return <PotentialsBlock key={i} image={block.image} treeImage={block.treeImage} coloured={block.coloured} legend={block.legend} ego={block.ego} />
                   if (block.type === 'card-list')
                     return (
                       <CardListBlock

@@ -81,7 +81,7 @@ export function CardListBlock({ intro, items, cardsById }: CardListBlockProps) {
       )}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
         {items.map((item, index) => {
-          const card = cardEntry(item.cardId, item.name, cardsById)
+          const card = cardEntry(item.cardId, item.name, cardsById, item.persona)
           const note = localized(item.note, lang)
           return (
             <article

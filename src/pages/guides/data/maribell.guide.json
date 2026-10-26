@@ -339,6 +339,14 @@
               "text": {
                 "en": "[Retrieve 2] [Exhaust 3] 60% Shield. Incinerate: Create 1 Contaminated Spore."
               }
+            },
+            {
+              "cardId": "n_0117",
+              "name": "Residual Herb",
+              "cost": 0,
+              "text": {
+                "en": "[Retrieve 2] [Exhaust 3] 60% Shield. Incinerate: Create 1 Contaminated Spore."
+              }
             }
           ]
         },
@@ -618,6 +626,8 @@
         {
           "type": "potentials",
           "image": "maribell.webp",
+          "treeImage": "maribell-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",

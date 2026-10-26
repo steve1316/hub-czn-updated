@@ -592,7 +592,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_008.png"
             }
           ]
         },
@@ -613,6 +619,8 @@
         {
           "type": "potentials",
           "image": "adelheid.webp",
+          "treeImage": "adelheid-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1213,6 +1221,10 @@
                 {
                   "charResId": 1050,
                   "name": "Owen"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
@@ -1240,6 +1252,10 @@
                 {
                   "charResId": 30075,
                   "name": "Sereniel"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             }
@@ -1404,6 +1420,14 @@
               },
               "rating": "4/5",
               "count": 2
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
             }
           ]
         },
@@ -1458,6 +1482,27 @@
           "body": {
             "en": "Attack Persona"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona",
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            }
+          ]
         },
         {
           "type": "prose",

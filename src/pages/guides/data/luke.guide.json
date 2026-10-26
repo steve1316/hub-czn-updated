@@ -771,6 +771,8 @@
         {
           "type": "potentials",
           "image": "luke.webp",
+          "treeImage": "luke-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1232,6 +1234,10 @@
                   "name": "Luke"
                 },
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 1056,
                   "name": "Rei"
                 }
@@ -1282,6 +1288,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1049,

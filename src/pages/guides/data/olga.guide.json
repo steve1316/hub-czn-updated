@@ -592,7 +592,14 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Insatiable Cravings",
+                "text": {
+                  "en": "[Unique] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              }
             }
           ]
         },
@@ -865,7 +872,14 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Insatiable Cravings II",
+                "text": {
+                  "en": "[Unique] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (4 time(s) per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni4",
@@ -1274,7 +1288,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1322,6 +1342,8 @@
         {
           "type": "potentials",
           "image": "olga.webp",
+          "treeImage": "olga-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -1640,12 +1662,26 @@
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 0,
+                "name": "Insatiable Cravings",
+                "text": {
+                  "en": "[Unique] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (3 time(s) per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni3",
               "name": "Insatiable Cravings",
-              "cost": 1
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Insatiable Cravings II",
+                "text": {
+                  "en": "[Unique] When Fracture or Agony is activated through a Targeting Card, 2 Fracture and 3 Agony to the target (4 time(s) per turn)."
+                }
+              }
             },
             {
               "cardId": "c_30117_uni3",

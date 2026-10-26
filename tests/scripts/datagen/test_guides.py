@@ -511,6 +511,16 @@ def test_potentials_without_a_tree_picture():
     builder = _builder()
     [section], _ = builder.sections(_potentials_grid(tree=False))
     assert section["blocks"][0]["image"] is None and not builder.pictures
+    # The clean tree is still drawn, with no colours.
+    assert section["blocks"][0]["treeImage"] == "tab-tree.webp" and section["blocks"][0]["coloured"] is False
+    assert set(builder.trees) == {"tab-tree.webp"}
+
+
+def test_potentials_picture_that_does_not_register_gets_the_clean_tree():
+    builder = _builder(picture_size=(371, 318))
+    [section], _ = builder.sections(_potentials_grid())
+    assert section["blocks"][0]["treeImage"] == "tab-tree.webp" and section["blocks"][0]["coloured"] is False
+    assert builder.trees["tab-tree.webp"][:4] == b"RIFF"
 
 
 def test_potentials_legend_keeps_other_wording_and_extra_lines():
@@ -886,3 +896,198 @@ def test_guesses_are_collected_for_the_qc_report():
     builder = _builder(picture_size=(123, 120))
     builder.sections(_grid(_cell(20, 1, pictures=1)))
     assert builder.dropped_icons == ["Tab!B21"]
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# Set pieces
+
+
+def _piece_art(seed: int) -> Image.Image:
+    """A transparent 184 px piece icon with a few seeded blobs on it."""
+    rng = random.Random(seed)
+    art = Image.new("RGBA", (184, 184), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(art)
+    for _ in range(4):
+        x, y = rng.randrange(20, 120), rng.randrange(20, 120)
+        draw.ellipse((x, y, x + rng.randrange(30, 60), y + rng.randrange(30, 60)), fill=(rng.randrange(256), rng.randrange(256), rng.randrange(256), 255))
+    return art
+
+
+def _on(art: Image.Image, colour=(255, 255, 255), size: int = 123) -> Image.Image:
+    """A piece icon as the sheet shows it, flat on a background colour."""
+    flat = Image.new("RGBA", art.size, colour + (255,))
+    flat.alpha_composite(art)
+    return flat.convert("RGB").resize((size, size), Image.LANCZOS)
+
+
+def _piece_files(tmp_path, *sets: tuple[int, int]) -> dict[int, list]:
+    files = {}
+    for set_id, seed in sets:
+        path = tmp_path / f"item_piece_set_{set_id:03d}_1.png"
+        _piece_art(seed).save(path)
+        files[set_id] = [path]
+    return files
+
+
+def test_piece_matcher_finds_the_set_at_any_size(tmp_path):
+    matcher = images.PieceMatcher(_piece_files(tmp_path, (11, 1), (9, 2), (7, 3)))
+    assert matcher.match(_on(_piece_art(2))) == 9
+    assert matcher.match(_on(_piece_art(1), size=20)) == 11
+    assert matcher.match(_on(_piece_art(3), colour=(0, 0, 0))) == 7
+
+
+def test_piece_matcher_reads_a_piece_on_the_inventory_background(tmp_path):
+    matcher = images.PieceMatcher(_piece_files(tmp_path, (11, 1), (9, 2)))
+    framed = _on(_piece_art(2), colour=(180, 110, 90), size=114)
+    ImageDraw.Draw(framed).ellipse((70, 70, 112, 112), fill=(240, 240, 240))
+    assert matcher.match(framed) == 9
+
+
+def test_piece_matcher_refuses_other_pictures_and_tied_sets(tmp_path):
+    matcher = images.PieceMatcher(_piece_files(tmp_path, (11, 1), (9, 2)))
+    assert matcher.match(_on(_piece_art(50))) is None
+    assert matcher.match(_pattern(4, (100, 100))) is None
+    twins = images.PieceMatcher(_piece_files(tmp_path, (3, 1), (11, 1)))
+    assert twins.match(_on(_piece_art(1))) is None
+
+
+def test_piece_art_lists_only_known_sets(tmp_path):
+    _piece_art(1).save(tmp_path / "item_piece_set_011_1.png")
+    _piece_art(1).save(tmp_path / "item_piece_set_011_2.png")
+    _piece_art(2).save(tmp_path / "item_piece_set_003_1.png")
+    _piece_art(2).save(tmp_path / "other.png")
+    art = guides._piece_art(tmp_path)
+    assert sorted(art) == [11] and len(art[11]) == 2
+
+
+def _piece_builder(entries: dict | None = None, found: dict[int, int] | None = None, size: tuple[int, int] = (123, 123)) -> guides._GuideBuilder:
+    """A builder whose pictures are piece-sized squares, one per column B to D. `found` gives the set the piece matcher returns for a column."""
+    squares = {f"https://example/20-{col}-0.png": guides._Download(_png(_pattern(col, size))) for col in (1, 2, 3)}
+    by_picture = {squares[f"https://example/20-{col}-0.png"].picture.tobytes(): set_id for col, set_id in (found or {}).items()}
+    ctx = SimpleNamespace(text=lambda text, **_: text)
+    downloads = SimpleNamespace(get=lambda url, key: squares[url])
+    return guides._GuideBuilder(ctx, downloads, SimpleNamespace(match=lambda *a, **k: None), SimpleNamespace(match=lambda *a: None), None, None, {}, {}, _variants_of,
+                                guides._DeckPictures(), SimpleNamespace(entries=entries or {}), guides._PictureLabels({}), "Tab", "tab", None, None, lambda data: "",
+                                pieces=SimpleNamespace(match=lambda image: by_picture.get(image.tobytes())))
+
+
+def _loadout(builder, labels=("Radiance", "Executioners", "Flex"), notes: dict[int, str] | None = None):
+    cells = [_cell(19, col, label) for col, label in zip((1, 2, 3), labels)]
+    cells += [_cell(20, col, pictures=1) for col in (1, 2, 3)]
+    cells += [_cell(20, col, text) for col, text in (notes or {}).items()]
+    sections, _ = builder.sections(_grid(*cells))
+    return sections
+
+
+def test_piece_pictures_fill_the_set_under_each_label():
+    [section] = _loadout(_piece_builder(found={1: 30, 2: 11, 3: 19}))
+    [block] = section["blocks"]
+    assert block["type"] == "set-list"
+    assert [(item["label"], item["setId"]) for item in block["items"]] == [("Radiance", 30), ("Executioners", 11), ("Flex", 19)]
+    assert block["items"][2]["name"] == "Cursed Corpse" and block["items"][2]["icon"].endswith("icon_piece_set_019.png")
+    assert section["title"]["en"] == "Radiance | Executioners | Flex"
+
+
+def test_set_label_override_stands_in_for_the_matcher():
+    [section] = _loadout(_piece_builder({"Tab!D21": {"setId": 19}}, found={1: 30, 2: 11}))
+    assert [item["setId"] for item in section["blocks"][0]["items"]] == [30, 11, 19]
+
+
+def test_unmatched_piece_keeps_its_label_and_goes_to_review():
+    builder = _piece_builder(found={1: 30, 2: 11})
+    [section] = _loadout(builder)
+    assert [item["label"] for item in section["blocks"][0]["items"]] == ["Radiance", "Executioners", "Flex"]
+    assert [item.get("setId") for item in section["blocks"][0]["items"]] == [30, 11, None]
+    assert len(builder.labels.unidentified) == 1
+
+
+def test_a_row_of_pieces_nothing_matched_is_left_to_review():
+    builder = _piece_builder(found={})
+    _loadout(builder)
+    assert len(builder.labels.unidentified) == 3
+
+
+def test_text_beside_piece_pictures_is_kept():
+    [section] = _loadout(_piece_builder(found={1: 30, 2: 11, 3: 19}), notes={4: "Important Substats"})
+    assert [block["type"] for block in section["blocks"]] == ["set-list", "prose"]
+
+
+def test_a_skipped_piece_leaves_the_label_alone():
+    [section] = _loadout(_piece_builder({"Tab!D21": {"skip": True}}, found={1: 30, 2: 11, 3: 19}))
+    assert [item.get("setId") for item in section["blocks"][0]["items"]] == [30, 11, None]
+
+
+def test_title_set_list_is_not_repeated_when_pieces_already_show_it():
+    block = {"type": "set-list", "items": [{"label": "Radiance", "setId": 30}, {"label": "Executioners", "setId": 11}]}
+    sections, _ = guides._tidy_sections([{"title": "Radiance | Executioners", "blocks": [_prose("Crit"), block]}])
+    blocks = sections[0]["blocks"]
+    assert [b["type"] for b in blocks] == ["set-list", "prose"] and blocks[0] is block
+
+
+def test_a_slightly_stretched_piece_is_still_read():
+    # Some pieces in the sheet are 123 x 120, which is not a face shape and would otherwise be dropped as an icon.
+    builder = _piece_builder(found={1: 30, 2: 11, 3: 19}, size=(123, 120))
+    [section] = _loadout(builder)
+    assert [item["setId"] for item in section["blocks"][0]["items"]] == [30, 11, 19] and not builder.dropped_icons
+
+
+def test_a_stretched_picture_that_is_no_piece_is_still_dropped_as_an_icon():
+    builder = _piece_builder(found={}, size=(123, 120))
+    _loadout(builder)
+    assert len(builder.dropped_icons) == 3 and not builder.labels.unidentified
+
+
+def test_picture_label_prefers_the_nearest_of_two_close_labels():
+    picture = _pattern(3)
+    base = images.dhash(picture)
+    # Two labels within the match distance of the picture, the second one nearer.
+    far = base ^ 0b111111111
+    near = base ^ 0b11
+    labels = guides._PictureLabels({f"{far:064x}": {"cardId": "far"}, f"{near:064x}": {"cardId": "near"}})
+    assert labels.find(base) == {"cardId": "near"}
+
+
+def test_persona_pictures_one_slot_combination_apart_keep_their_own_labels():
+    obsidian = {"cardId": "eidolon_card", "name": "Persona of Obsidian", "persona": "all_umbra"}
+    luster = {"cardId": "eidolon_card", "name": "Persona of Luster", "persona": "all_lux"}
+    keys = {"1873a0f86ac4d8e2d462f2dad358d932e934e46c60fce1e6c1d8da9ad8fa187b": obsidian, "087536c9346da8e6c8f2a4ead4c2dad2d9326c6ccc66d6c2d2d2d6c6d24e9067": luster}
+    labels = guides._PictureLabels(keys)
+    for key, label in keys.items():
+        assert labels.find(int(key, 16)) == label
+        # A re-encoded copy a few bits off still finds its own label.
+        assert labels.find(int(key, 16) ^ 0b1011) == label
+    first, second = (int(key, 16) for key in keys)
+    assert (first ^ second).bit_count() > guides.PICTURE_LABEL_DISTANCE
+
+
+def test_persona_card_keeps_its_variant_name_and_art():
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={}))
+    obsidian = {"cardId": "eidolon_card", "col": 1, "picture": None, "epiphany": 1, "name": "Persona of Obsidian", "persona": "all_umbra"}
+    plain = {"cardId": "eidolon_card", "col": 2, "picture": None, "epiphany": 1, "name": "Persona"}
+    block = builder._card_list([obsidian, plain], {})
+    assert block["items"][0]["name"] == "Persona of Obsidian" and block["items"][0]["persona"] == "all_umbra"
+    assert block["items"][1]["name"] == "Persona" and "persona" not in block["items"][1]
+    deck = guides._as_deck({"type": "card-list", "items": [{**item, "note": {"en": ""}} for item in block["items"]]})
+    assert [card.get("persona") for card in deck["cards"]] == ["all_umbra", None]
+
+
+def test_rated_personas_with_different_art_are_not_merged_into_one_card():
+    luster = {"cardId": "eidolon_card", "col": 1, "picture": None, "epiphany": 1, "name": "Persona of Luster", "persona": "all_lux"}
+    obsidian = {"cardId": "eidolon_card", "col": 2, "picture": None, "epiphany": 1, "name": "Persona of Obsidian", "persona": "all_umbra"}
+    settled = _builder()._settle_repeats([luster, obsidian], {1: "4/5", 2: "4/5"})
+    assert [card["persona"] for card in settled] == ["all_lux", "all_umbra"] and all("count" not in card for card in settled)
+
+
+def test_set_item_flags_a_flex_label_that_resolved_to_a_set():
+    assert set_names.set_item("Scrab Flex", 10)["flex"] is True
+    assert set_names.set_item("Flex", 19)["flex"] is True
+    assert "flex" not in set_names.set_item("Scrab", 10)
+    assert "flex" not in set_names.set_line("BlackWing | Executioners | Flex")[2]
+
+
+def test_flex_piece_picture_carries_the_flex_flag():
+    [section] = _loadout(_piece_builder(found={1: 30, 2: 11, 3: 19}), labels=("Radiance", "Executioners", "Agony Flex"))
+    flags = [item.get("flex", False) for item in section["blocks"][0]["items"]]
+    assert flags == [False, False, True]
