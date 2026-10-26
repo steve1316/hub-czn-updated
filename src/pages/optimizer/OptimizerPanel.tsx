@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronRight, Play, Square } from 'lucide-react'
 import { api } from '@/lib/api'
-import { estimatedDamageDecrease } from '@/lib/damage-reduction'
+import { damageDecrease } from '@/lib/damage-reduction'
 import type { OptimizerConfig, EquipmentSet, Monster, Combatant, OptimizeProgress, CharPreset } from '@/lib/types'
 import { InfoPopover } from '@/components/ui/info-popover'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
@@ -504,8 +504,8 @@ export function OptimizerPanel({
           </p>
           <p className="text-[10px] text-[#666666]">{t('optimizer.avgDmg.hint')}</p>
 
-          {/* Monster Picker - picking a monster fills target_def and treat_target_as_weak. The DEF input below still overrides it,
-              and clearing the chip falls back to a custom DEF. */}
+          {/* Monster Picker - picking a monster fills target_def, its real damage decrease and treat_target_as_weak. Typing a DEF
+              below overrides it with the estimate, and clearing the chip falls back to a custom DEF. */}
           {monsterCatalog.length > 0 && (
             <div className="space-y-1">
               <label className="text-[9px] uppercase tracking-wider text-[#666666]">
@@ -520,6 +520,7 @@ export function OptimizerPanel({
                   const matched = monsterCatalog.find(
                     (m) =>
                       m.def === (config.target_def ?? 500) &&
+                      m.dmg_decrease === (config.target_dmg_decrease ?? 0) &&
                       m.has_weak === (config.treat_target_as_weak ?? false)
                   )
                   return matched ? [matched.id] : []
@@ -533,6 +534,7 @@ export function OptimizerPanel({
                   if (m) {
                     patch({
                       target_def: m.def,
+                      target_dmg_decrease: m.dmg_decrease,
                       treat_target_as_weak: m.has_weak,
                     })
                   }
@@ -559,13 +561,15 @@ export function OptimizerPanel({
                 onChange={(e) =>
                   patch({
                     target_def: Math.max(0, Math.min(2000, parseInt(e.target.value) || 500)),
+                    target_dmg_decrease: 0,
                   })
                 }
                 disabled={disabled}
                 className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <span className="text-[10px] text-[#666666] tabular-nums">
-                DR ≈ {(estimatedDamageDecrease(config.target_def ?? 500) * 100).toFixed(1)}%
+                DR {config.target_dmg_decrease ? '' : '≈ '}
+                {(damageDecrease(config.target_dmg_decrease ?? 0, config.target_def ?? 500) * 100).toFixed(1)}%
               </span>
             </div>
           </div>

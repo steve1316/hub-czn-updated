@@ -191,3 +191,15 @@ def test_the_frontend_copy_of_the_fit_matches():
     source = (Path(__file__).resolve().parents[2] / "src" / "lib" / "damage-reduction.ts").read_text(encoding="utf-8")
     assert float(re.search(r"DEF_REDUCE_NUM = ([\d.]+)", source).group(1)) == DEF_REDUCE_NUM
     assert float(re.search(r"DEF_REDUCE_DEN_C = ([\d.]+)", source).group(1)) == DEF_REDUCE_DEN_C
+
+
+def test_expected_damage_uses_real_dmg_decrease_when_given():
+    """A known damage decrease replaces the DEF fit."""
+    result = expected_damage(atk=10000.0, cri=0.0, cri_dmg_rate=200.0, dummy_def=500, dmg_decrease=0.35)
+    assert result == pytest.approx(10000.0 * 0.65, abs=1e-3)
+
+
+def test_expected_damage_zero_dmg_decrease_falls_back_to_fit():
+    """0 means unknown, so the DEF fit is used."""
+    fit = expected_damage(atk=10000.0, cri=0.0, cri_dmg_rate=200.0, dummy_def=500)
+    assert expected_damage(atk=10000.0, cri=0.0, cri_dmg_rate=200.0, dummy_def=500, dmg_decrease=0.0) == pytest.approx(fit)

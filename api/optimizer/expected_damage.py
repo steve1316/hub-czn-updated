@@ -64,6 +64,7 @@ def expected_damage(
     weak_mult: float = 1.0,
     extra_dmg_pct: float = 0.0,
     target_count: int = 1,
+    dmg_decrease: float = 0.0,
 ) -> float:
     """Expected per-hit damage against a default target.
 
@@ -72,9 +73,11 @@ def expected_damage(
     Sprint 2h3: added target_count parameter for AoE / multi-target modeling.
     Default 1 preserves single-target behavior. User picks the average
     number of enemies their team typically fights.
+
+    dmg_decrease is the target's real damage decrease from the game. 0 means unknown, so the DEF fit is used instead.
     """
     cf_ev = expected_crit_factor(cri, cri_dmg_rate)
-    dr = default_damage_reduction(dummy_def)
+    dr = damage_reduction(dmg_decrease, dummy_def)
     extra_mult = 1.0 + extra_dmg_pct / 100.0
     return atk * (eff_pct / 100.0) * (1.0 - dr) * cf_ev * weak_mult * extra_mult * target_count
 

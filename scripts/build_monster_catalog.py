@@ -106,8 +106,8 @@ def _load_tier_to_mon_stat_key(client_db: Path) -> dict[int, str]:
     return out
 
 
-def _load_mon_stat_def(client_db: Path) -> dict[str, int]:
-    """Return mon_stat row id -> stat_def (int).
+def _load_mon_stat_def(client_db: Path) -> dict[str, tuple[int, float]]:
+    """Return mon_stat row id -> (stat_def, dmg_decrease_rate).
 
     We index all rows (not just stat_*), so any string from
     tier_monster_stat.stage_enter_link_mon_stat_id resolves. This includes
@@ -117,7 +117,7 @@ def _load_mon_stat_def(client_db: Path) -> dict[str, int]:
     if not p.exists():
         raise FileNotFoundError(f"Required client_db file missing: {p}")
     rows = json.loads(p.read_text(encoding="utf-8"))
-    out: dict[str, int] = {}
+    out: dict[str, tuple[int, float]] = {}
     for r in rows:
         if not isinstance(r, dict):
             continue
@@ -125,7 +125,7 @@ def _load_mon_stat_def(client_db: Path) -> dict[str, int]:
         if not rid:
             continue
         try:
-            out[rid] = int(float(r.get("stat_def", 0) or 0))
+            out[rid] = (int(float(r.get("stat_def", 0) or 0)), float(r.get("dmg_decrease_rate", 0) or 0))
         except (TypeError, ValueError):
             continue
     return out
@@ -173,7 +173,7 @@ def build_catalog(client_root: Path) -> tuple[list[dict], dict[str, int]]:
 
     # Fallback DEF for monsters whose tier suffix isn't in tier_monster_stat.
     fallback_msid = tier_to_mskey.get(1, "stat_1")
-    fallback_def = mon_stat_def.get(fallback_msid, 47)
+    fallback_stats = mon_stat_def.get(fallback_msid, (47, 0.0))
 
     catalog: list[dict] = []
     skipped_no_id = 0
@@ -215,9 +215,9 @@ def build_catalog(client_root: Path) -> tuple[list[dict], dict[str, int]]:
             msid = tier_to_mskey.get(tier)
             if msid is None:
                 tier_miss += 1
-                base_def = fallback_def
+                base_def, dmg_decrease = fallback_stats
             else:
-                base_def = mon_stat_def.get(msid, fallback_def)
+                base_def, dmg_decrease = mon_stat_def.get(msid, fallback_stats)
             def_value = int(round(base_def * (pct / 100.0)))
 
             faction = str(row.get("faction_ego", "") or "").upper()
@@ -238,6 +238,8 @@ def build_catalog(client_root: Path) -> tuple[list[dict], dict[str, int]]:
                 "id": mid,
                 "name": name,
                 "def": def_value,
+                # The stat row's rate as-is: stat_def_pct scales DEF but not the damage decrease
+                "dmg_decrease": dmg_decrease,
                 "has_weak": has_weak,
             })
 

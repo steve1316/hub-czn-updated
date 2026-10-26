@@ -1,7 +1,7 @@
 import { useOutletContext } from 'react-router-dom'
 import i18n from '@/i18n'
 import type { BattleRecord } from '@/lib/types'
-import { estimatedDamageDecrease } from '@/lib/damage-reduction'
+import { damageDecrease } from '@/lib/damage-reduction'
 import { formatBattleTime } from '@/pages/battle/battle-time.utils'
 import { ENEMY_PRESET_GROUPS, type EnemyPreset } from '@/pages/simulator/simulator-damage.utils'
 
@@ -124,7 +124,7 @@ export function saveEnemy(enemy: SimEnemy): void {
  * @returns The decrease as a fraction.
  */
 export function enemyDecrease(enemy: SimEnemy): number {
-  return enemy.dmgDecrease > 0 ? enemy.dmgDecrease : estimatedDamageDecrease(enemy.def)
+  return damageDecrease(enemy.dmgDecrease, enemy.def)
 }
 
 /**
