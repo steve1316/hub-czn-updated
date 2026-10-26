@@ -42,19 +42,17 @@ function AttrBadge({ attr }: { attr: string }) {
 // ─── Collapse art — absolute, fills container height, natural width ────────
 
 function CollapseBackground({ resId }: { resId: number }) {
-  const [variant, setVariant] = useState<'02' | '01' | null>('02')
-  if (!variant) return null
+  const cls = 'absolute left-0 top-0 pointer-events-none select-none'
+  const style = { height: '100%', width: 'auto' }
+  const url = (variant: string) => assetUrl(`/assets/game/collapse/collapse_${resId}_${variant}.png`)
   return (
     <AssetImage
-      src={assetUrl(`/assets/game/collapse/collapse_${resId}_${variant}.png`)}
+      src={url('02')}
       alt=""
-      className="absolute left-0 top-0 pointer-events-none select-none"
-      style={{ height: '100%', width: 'auto' }}
-      maxRetries={variant === '02' ? 0 : undefined}
-      onError={() => {
-        if (variant === '02') setVariant('01')
-        else setVariant(null)
-      }}
+      className={cls}
+      style={style}
+      maxRetries={0}
+      fallback={<AssetImage src={url('01')} alt="" className={cls} style={style} fallback={null} />}
     />
   )
 }
