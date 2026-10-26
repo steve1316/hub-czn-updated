@@ -356,7 +356,7 @@ function DptRow({
 function BattleCard({
   record, combatants, onUseDef,
 }: {
-  record: BattleRecord; combatants: Combatant[]; onUseDef: (def: number) => void
+  record: BattleRecord; combatants: Combatant[]; onUseDef: (record: BattleRecord) => void
 }) {
   const { t } = useTranslation()
   const [showChars, setShowChars] = useState(false)
@@ -392,7 +392,7 @@ function BattleCard({
 
       <button
         type="button"
-        onClick={() => onUseDef(record.enemy_def)}
+        onClick={() => onUseDef(record)}
         className="self-start flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#c084fc]/15 text-[#c084fc] text-xs font-medium hover:bg-[#c084fc]/25 transition-colors"
       >
         <Shield size={12} />
@@ -626,9 +626,8 @@ export function BattlePage() {
     staleTime: 60_000,
   })
 
-  function handleUseDef(def: number) {
-    sessionStorage.setItem('czn_battle_def', String(Math.round(def)))
-    navigate('/simulator')
+  function handleUseDef(record: BattleRecord) {
+    navigate('/simulator', { state: { def: record.enemy_def, dmgDecrease: record.enemy_dmg_decrease } })
   }
 
   return (

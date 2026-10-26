@@ -1,68 +1,16 @@
 import { useState, useEffect } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Play, Zap, Shield } from 'lucide-react'
 import { api, assetUrl, isNotFound } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
+import { damagePasses } from '@/lib/damage-reduction'
+import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
 
 const MORALE_PCT = 20
-
-// DEF values from mon_stat@mon_stat.json (game data files)
-const DEF_PRESET_GROUPS = [
-  {
-    label: 'simulator.presetGroupCombat',
-    presets: [
-      { label: 'Lv5', value: 322 },
-      { label: 'Lv7', value: 220 },
-      { label: 'Lv8', value: 266 },
-      { label: 'Lv10', value: 370 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupGold',
-    presets: [
-      { label: 'Lv5', value: 322 },
-      { label: 'Lv7', value: 459 },
-      { label: 'Lv8', value: 556 },
-      { label: 'Lv10', value: 772 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupPiece',
-    presets: [
-      { label: 'Lv5', value: 357 },
-      { label: 'Lv7', value: 558 },
-      { label: 'Lv8', value: 615 },
-      { label: 'Lv10', value: 751 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupHyperspace',
-    presets: [
-      { label: 'All', value: 112 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupBoss',
-    presets: [
-      { label: 'Lv5', value: 258 },
-      { label: 'Lv7', value: 431 },
-      { label: 'Lv8', value: 488 },
-      { label: 'Lv10', value: 624 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupDisaster',
-    presets: [
-      { label: 'S1', value: 89 },
-      { label: 'S2', value: 122 },
-      { label: 'S3', value: 200 },
-      { label: 'S4', value: 219 },
-    ],
-  },
-]
 
 const STORAGE_KEY = 'czn_simulator_state'
 
@@ -72,6 +20,7 @@ interface PersistedState {
   morale: number
   useSparks: boolean
   monsterDef: number
+  dmgDecrease: number
   weaken: boolean
   vulnerableStacks: number
   dmgReduction: boolean
@@ -168,12 +117,16 @@ function CardRow({ card }: { card: SimCardResult }) {
 
 export function SimulatorPage() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const navigate = useNavigate()
 
   const [charName, setCharName] = useState(() => loadPersistedState()?.charName ?? '')
   const [deckId, setDeckId] = useState<number | null>(() => loadPersistedState()?.deckId ?? null)
   const [morale, setMorale] = useState(() => loadPersistedState()?.morale ?? 0)
   const [useSparks, setUseSparks] = useState(() => loadPersistedState()?.useSparks ?? true)
   const [monsterDef, setMonsterDef] = useState(() => loadPersistedState()?.monsterDef ?? 20)
+  // The enemy's real damage decrease from a preset or a captured battle. 0 means a typed DEF, so it is estimated.
+  const [dmgDecrease, setDmgDecrease] = useState(() => loadPersistedState()?.dmgDecrease ?? 0)
   const [weaken, setWeaken] = useState(() => loadPersistedState()?.weaken ?? false)
   const [vulnerableStacks, setVulnerableStacks] = useState(() => loadPersistedState()?.vulnerableStacks ?? 0)
   const [dmgReduction, setDmgReduction] = useState(() => loadPersistedState()?.dmgReduction ?? false)
@@ -183,7 +136,7 @@ export function SimulatorPage() {
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
     savePersistedState({
-      charName, deckId, morale, useSparks, monsterDef,
+      charName, deckId, morale, useSparks, monsterDef, dmgDecrease,
       weaken, vulnerableStacks, dmgReduction, result,
       ...patch,
     })
@@ -217,6 +170,7 @@ export function SimulatorPage() {
         morale,
         use_sparks: useSparks,
         monster_def: monsterDef,
+        dmg_decrease: dmgDecrease,
         frightened: weaken,
         exposed_stacks: vulnerableStacks,
         fortitude: dmgReduction,
@@ -224,22 +178,29 @@ export function SimulatorPage() {
     onSuccess: (data) => { setResult(data); persist({ result: data }) },
   })
 
-  // Apply DEF value passed from Battle History page via sessionStorage
+  /**
+   * Set the enemy, from a preset, a captured battle or a typed DEF.
+   * @param def The enemy's DEF.
+   * @param decrease The enemy's real damage decrease, or 0 to estimate it from DEF.
+   */
+  function setEnemy(def: number, decrease: number) {
+    setMonsterDef(def)
+    setDmgDecrease(decrease)
+    persist({ monsterDef: def, dmgDecrease: decrease })
+  }
+
+  // Apply the enemy passed from the Battle History page, then clear it so a reload does not apply it again
   useEffect(() => {
-    const saved = sessionStorage.getItem('czn_battle_def')
-    if (saved) {
-      sessionStorage.removeItem('czn_battle_def')
-      const v = parseInt(saved, 10)
-      if (!isNaN(v) && v >= 0) {
-        setMonsterDef(v)
-        persist({ monsterDef: v })
-      }
+    const enemy = location.state as { def: number; dmgDecrease: number } | null
+    if (enemy) {
+      setEnemy(Math.round(enemy.def), enemy.dmgDecrease)
+      navigate('.', { replace: true, state: null })
     }
   }, [])
 
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
   const moraleMultDisplay = `×${(1 + morale * MORALE_PCT / 100).toFixed(2)}`
-  const defReductionPreview = `${(300 / (300 + monsterDef) * 100).toFixed(1)}%`
+  const defReductionPreview = `${(damagePasses(dmgDecrease, monsterDef) * 100).toFixed(1)}%`
 
   return (
     <div className="flex h-full overflow-hidden">
@@ -342,19 +303,20 @@ export function SimulatorPage() {
             <span className="text-[#fb923c] text-xs font-mono">{defReductionPreview} {t('simulator.dmgPasses')}</span>
           </div>
           <div className="flex flex-col gap-2 mt-1">
-            {DEF_PRESET_GROUPS.map((group) => (
-              <div key={group.label}>
+            {ENEMY_PRESET_GROUPS.map((group) => (
+              <div key={group.group}>
                 <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">
-                  {t(group.label)}
+                  {t(`simulator.presetGroups.${group.group}`)}
                 </p>
                 <div className="flex flex-wrap gap-1">
                   {group.presets.map((p) => (
                     <button
-                      key={`${group.label}-${p.label}`}
+                      key={`${group.group}-${p.label}`}
                       type="button"
-                      onClick={() => { setMonsterDef(p.value); persist({ monsterDef: p.value }) }}
+                      title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
+                      onClick={() => setEnemy(p.def, p.dmg_decrease)}
                       className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${
-                        monsterDef === p.value
+                        monsterDef === p.def && dmgDecrease === p.dmg_decrease
                           ? 'bg-[#fb923c] text-white'
                           : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
                       }`}
@@ -372,7 +334,7 @@ export function SimulatorPage() {
               min={0}
               max={9999}
               value={monsterDef}
-              onChange={(e) => { const v = Math.max(0, Number(e.target.value)); setMonsterDef(v); persist({ monsterDef: v }) }}
+              onChange={(e) => setEnemy(Math.max(0, Number(e.target.value)), 0)}
               className="flex-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 w-0 font-mono"
             />
             <button
@@ -380,7 +342,7 @@ export function SimulatorPage() {
               title={t('simulator.lastBattleTip')}
               onClick={() =>
                 api.battleLatest()
-                  .then(b => { const v = Math.round(b.enemy_def); setMonsterDef(v); persist({ monsterDef: v }); setLastBattleError(null) })
+                  .then(b => { setEnemy(Math.round(b.enemy_def), b.enemy_dmg_decrease); setLastBattleError(null) })
                   .catch(err => setLastBattleError(isNotFound(err) ? t('simulator.noLastBattle') : (err as Error).message))
               }
               className="flex items-center gap-1 px-2 py-1 rounded bg-[#c084fc]/15 text-[#c084fc] text-[10px] hover:bg-[#c084fc]/25 transition-colors shrink-0"
