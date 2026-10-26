@@ -89,3 +89,20 @@ describe('inTauri', () => {
     expect(invoke).not.toHaveBeenCalled()
   })
 })
+
+describe('request errors', () => {
+  beforeEach(() => {
+    vi.stubGlobal('window', {})
+  })
+
+  it('keeps the status so a page can tell "nothing yet" from a failure', async () => {
+    const api = await freshApi()
+    vi.stubGlobal('fetch', vi.fn(async () => new Response(JSON.stringify({ detail: 'No battle data captured yet' }), { status: 404 })))
+    const err = await api.api.battleOverview().catch(e => e)
+    expect(err).toBeInstanceOf(api.ApiError)
+    expect(err.status).toBe(404)
+    expect(err.message).toBe('No battle data captured yet')
+    expect(api.isNotFound(err)).toBe(true)
+    expect(api.isNotFound(new Error('boom'))).toBe(false)
+  })
+})

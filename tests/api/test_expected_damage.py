@@ -5,6 +5,7 @@ import pytest
 
 from api.optimizer.expected_damage import (
     DUMMY_DEF,
+    damage_reduction,
     default_damage_reduction,
     expected_crit_factor,
     expected_damage,
@@ -172,3 +173,11 @@ def test_expected_dot_damage_custom_ticks():
     three_ticks = expected_dot_damage(atk=1000.0, dot_pct=50.0, ticks=3)
     five_ticks = expected_dot_damage(atk=1000.0, dot_pct=50.0, ticks=5)
     assert five_ticks == pytest.approx(5.0 / 3.0 * three_ticks)
+
+
+def test_damage_reduction_prefers_the_captured_rate():
+    assert damage_reduction(0.3262, 300) == 0.3262
+
+
+def test_damage_reduction_falls_back_to_the_fit():
+    assert damage_reduction(0.0, 300) == pytest.approx(268.0 / 803.0, abs=1e-6)

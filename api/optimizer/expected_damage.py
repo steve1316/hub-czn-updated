@@ -33,12 +33,26 @@ def expected_crit_factor(cri: float, cri_dmg_rate: float) -> float:
     return 1.0 + p * (cdmg - 1.0)
 
 
-def default_damage_reduction(dummy_def: int = DUMMY_DEF) -> float:
+def default_damage_reduction(dummy_def: float = DUMMY_DEF) -> float:
     """Damage reduction against a default-DEF target.
 
     268 / (def + 503) — Track B empirical fit (R^2 = 0.989).
     """
     return DEF_REDUCE_NUM / (dummy_def + DEF_REDUCE_DEN_C)
+
+
+def damage_reduction(captured: float, target_def: float) -> float:
+    """
+    The damage reduction to use against a target.
+
+    Args:
+        captured: The `S_DMG_DECREASE_RATE` the game reported, or 0 when it is unknown.
+        target_def: The target's DEF, used when there is no captured rate.
+
+    Returns:
+        The captured rate when there is one, otherwise the fitted curve for that DEF.
+    """
+    return captured if captured > 0 else default_damage_reduction(target_def)
 
 
 def expected_damage(

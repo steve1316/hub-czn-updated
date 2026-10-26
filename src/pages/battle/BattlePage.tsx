@@ -2,9 +2,9 @@ import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import i18n from '@/i18n'
-import { useNavigate } from 'react-router-dom'
-import { Sword, Shield, ChevronDown, ChevronUp, TrendingUp, AlertCircle, LayoutGrid } from 'lucide-react'
-import { api, assetUrl } from '@/lib/api'
+import { Link, useNavigate } from 'react-router-dom'
+import { Sword, Shield, ChevronDown, ChevronUp, TrendingUp, LayoutGrid } from 'lucide-react'
+import { api, assetUrl, isNotFound } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, BattleAnalytics, CharAnalysis, Combatant, BattleOverview, InsightCard, CharTrend } from '@/lib/types'
 
@@ -14,6 +14,38 @@ function findCombatant(resId: string | number | null | undefined, combatants: Co
   if (resId == null || resId === '') return undefined
   const id = typeof resId === 'string' ? parseInt(resId, 10) : resId
   return combatants.find(c => c.res_id === id)
+}
+
+/**
+ * The state shown before any battle has been captured, pointing the player at the Capture page.
+ *
+ * @returns The empty state.
+ */
+function NoBattles() {
+  const { t } = useTranslation()
+  return (
+    <div className="flex flex-col items-center justify-center gap-3 text-[#444] p-4 mt-20">
+      <Sword size={40} />
+      <p className="text-sm text-center">{t('battle.noBattles')}</p>
+      <Link to="/capture" className="text-xs text-[#c084fc] hover:underline">{t('battle.goToCapture')}</Link>
+    </div>
+  )
+}
+
+/**
+ * The state shown when the battle data could not be read.
+ *
+ * @param error The thrown error, whose message is shown under the heading.
+ * @returns The error box.
+ */
+function LoadFailed({ error }: { error: unknown }) {
+  const { t } = useTranslation()
+  return (
+    <div className="m-4 max-w-3xl text-[#f87171] text-sm bg-[#2a1a1a] border border-[#5a2020] rounded px-4 py-3">
+      {t('battle.loadError')}
+      {error instanceof Error && <p className="text-[#888] text-xs mt-1">{error.message}</p>}
+    </div>
+  )
 }
 
 function CharAvatar({ combatant, size = 24 }: { combatant?: Combatant; size?: number }) {
@@ -181,7 +213,7 @@ function CharTrendCard({ trend, combatants }: { trend: CharTrend; combatants: Co
 function OverviewTab({ combatants }: { combatants: Combatant[] }) {
   const { t } = useTranslation()
 
-  const { data: overview, isLoading, isError } = useQuery<BattleOverview>({
+  const { data: overview, isLoading, error } = useQuery<BattleOverview>({
     queryKey: ['battle-overview'],
     queryFn: () => api.battleOverview(),
     staleTime: 30_000,
@@ -190,12 +222,7 @@ function OverviewTab({ combatants }: { combatants: Combatant[] }) {
 
   if (isLoading) return <p className="text-[#888] text-sm p-4">{t('battle.loading')}</p>
 
-  if (isError) return (
-    <div className="flex flex-col items-center justify-center gap-3 text-[#444] p-4 mt-20">
-      <Sword size={40} />
-      <p className="text-sm text-center">{t('battle.overview.noData')}</p>
-    </div>
-  )
+  if (error) return isNotFound(error) ? <NoBattles /> : <LoadFailed error={error} />
 
   if (!overview) return null
 
@@ -334,7 +361,7 @@ function BattleCard({
   const { t } = useTranslation()
   const [showChars, setShowChars] = useState(false)
   const hasDpt = Object.keys(record.char_dpt).length > 0
-  const defPct = (300 / (300 + record.enemy_def) * 100).toFixed(1)
+  const decreasePct = record.enemy_dmg_decrease > 0 ? `${(record.enemy_dmg_decrease * 100).toFixed(1)}%` : '—'
   const mvpCombatant = findCombatant(record.mvp_res_id, combatants)
   const mvpName = mvpCombatant?.name ?? (record.mvp_res_id ? `#${record.mvp_res_id}` : null)
 
@@ -348,7 +375,7 @@ function BattleCard({
         <div className="flex gap-2 flex-wrap">
           <StatBox label={t('battle.enemyDef')} value={Math.round(record.enemy_def)} />
           <StatBox label={t('battle.enemyAtk')} value={Math.round(record.enemy_atk)} />
-          <StatBox label={t('battle.dmgDecrease')} value={`${defPct}%`} accent="text-[#fb923c]" />
+          <StatBox label={t('battle.dmgDecrease')} value={decreasePct} accent="text-[#fb923c]" />
         </div>
         <div className="flex flex-col gap-1.5 ml-auto items-end shrink-0">
           <ResultBadge result={record.battle_result} />
@@ -538,7 +565,7 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
 function AnalyticsTab({ combatants }: { combatants: Combatant[] }) {
   const { t } = useTranslation()
 
-  const { data: analytics, isLoading, isError } = useQuery<BattleAnalytics>({
+  const { data: analytics, isLoading, error } = useQuery<BattleAnalytics>({
     queryKey: ['battle-analytics'],
     queryFn: () => api.battleAnalytics(),
     staleTime: 10_000,
@@ -547,13 +574,7 @@ function AnalyticsTab({ combatants }: { combatants: Combatant[] }) {
 
   if (isLoading) return <p className="text-[#888] text-sm p-4">{t('battle.loading')}</p>
 
-  if (isError) return (
-    <div className="flex flex-col items-center justify-center h-full gap-3 text-[#444] p-4">
-      <AlertCircle size={36} />
-      <p className="text-sm text-center">{t('battle.noAnalytics')}</p>
-      <p className="text-[#555] text-xs text-center">{t('battle.noBattles')}</p>
-    </div>
-  )
+  if (error) return isNotFound(error) ? <NoBattles /> : <LoadFailed error={error} />
 
   if (!analytics) return null
 
@@ -591,7 +612,7 @@ export function BattlePage() {
   const navigate = useNavigate()
   const [tab, setTab] = useState<'overview' | 'history' | 'analytics'>('overview')
 
-  const { data: history = [], isLoading: histLoading, isError: histError } = useQuery<BattleRecord[]>({
+  const { data: history = [], isLoading: histLoading, error: histError } = useQuery<BattleRecord[]>({
     queryKey: ['battle-history'],
     queryFn: () => api.battleHistory(30),
     staleTime: 10_000,
@@ -637,8 +658,8 @@ export function BattlePage() {
         </div>
 
         <div className="mt-auto text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
-          <p>DEF factor: 300 / (300 + DEF)</p>
-          <p className="mt-1">Crit Factor = (CRate × CDmg) + (1 − CRate)</p>
+          <p>{t('battle.defFactorNote')}</p>
+          <p className="mt-1">{t('battle.critFactorNote')}</p>
         </div>
       </div>
 
@@ -656,19 +677,9 @@ export function BattlePage() {
           <div className="p-4">
             {histLoading && <p className="text-[#888] text-sm">{t('battle.loading')}</p>}
 
-            {histError && (
-              <div className="text-[#f87171] text-sm bg-[#2a1a1a] border border-[#5a2020] rounded px-4 py-3">
-                {t('battle.loadError')}
-                <p className="text-[#888] text-xs mt-1">{t('battle.noBattles')}</p>
-              </div>
-            )}
+            {histError && <LoadFailed error={histError} />}
 
-            {!histLoading && !histError && history.length === 0 && (
-              <div className="flex flex-col items-center justify-center h-full gap-3 text-[#444] mt-20">
-                <Sword size={40} />
-                <p className="text-sm">{t('battle.noBattles')}</p>
-              </div>
-            )}
+            {!histLoading && !histError && history.length === 0 && <NoBattles />}
 
             {history.length > 0 && (
               <div className="flex flex-col gap-3 max-w-3xl">

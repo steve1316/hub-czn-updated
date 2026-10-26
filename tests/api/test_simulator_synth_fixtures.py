@@ -41,7 +41,7 @@ _RUNTIME = Runtime(
 
 
 def _expected_damage(fix) -> float:
-    """Mirror runtime's _def_reduce: 268 / (DEF + 503)."""
+    """Mirror the runtime's `damage_reduction` fallback: 268 / (DEF + 503)."""
     dr = 268.0 / (fix.target_state.def_ + 503.0)
     return fix.char_state.atk * (fix.expected_eff_pct / 100.0) * (1.0 - dr)
 

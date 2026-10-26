@@ -48,7 +48,7 @@ function StatsComparison({
         style={{ gridTemplateColumns: '4rem 1fr 1fr 1fr' }}
       >
         <span>Stat</span>
-        <span className="text-right">Atual</span>
+        <span className="text-right">{t('optimizer.current')}</span>
         <span className="text-right">Build</span>
         <span className="text-right">Delta</span>
       </div>

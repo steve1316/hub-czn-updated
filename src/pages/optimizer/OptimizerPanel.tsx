@@ -77,7 +77,7 @@ export function OptimizerPanel({
     queryFn: () => api.optimizeSets(),
   })
 
-  // Sprint 2h1: monster catalog feeds the Monster Picker dropdown.
+  // Monster catalog feeds the Monster Picker dropdown.
   const { data: monsterCatalog = [] } = useQuery<Monster[]>({
     queryKey: ['optimize/monster-catalog'],
     queryFn: () => api.monsterCatalog(),
@@ -496,21 +496,19 @@ export function OptimizerPanel({
           </div>
         </div>
 
-        {/* Sprint 2f4 + 2h1: AvgDMG configuration */}
+        {/* AvgDMG configuration */}
         <div className="border-t border-[#282828] pt-3 space-y-2">
           <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3]">
-            AvgDMG (Sprint 2f4 / 2h1)
+            {t('optimizer.avgDmg.title')}
           </p>
+          <p className="text-[10px] text-[#666666]">{t('optimizer.avgDmg.hint')}</p>
 
-          {/* Sprint 2h1 + 2h4: Monster Picker — selecting a monster auto-populates
-              target_def AND treat_target_as_weak. The manual DEF input below
-              still works as an override. Sprint 2h4 upgraded the flat <select>
-              (510 monsters) to a searchable SetCombobox. Removing the chip clears
-              the preset, falling back to manual DEF input ("— Custom DEF —"). */}
+          {/* Monster Picker - picking a monster fills target_def and treat_target_as_weak. The DEF input below still overrides it,
+              and clearing the chip falls back to a custom DEF. */}
           {monsterCatalog.length > 0 && (
             <div className="space-y-1">
               <label className="text-[9px] uppercase tracking-wider text-[#666666]">
-                Monster (preset)
+                {t('optimizer.avgDmg.monster')}
               </label>
               <SetCombobox
                 options={monsterCatalog.map((m) => ({
@@ -539,7 +537,7 @@ export function OptimizerPanel({
                   }
                 }}
                 maxSelect={1}
-                placeholder="— Custom DEF — (search monster…)"
+                placeholder={t('optimizer.avgDmg.monsterPlaceholder')}
                 disabled={disabled}
               />
             </div>
@@ -547,7 +545,7 @@ export function OptimizerPanel({
 
           <div className="space-y-1">
             <label htmlFor="optimizer-target-def" className="text-[9px] uppercase tracking-wider text-[#666666]">
-              Monster DEF
+              {t('optimizer.avgDmg.monsterDef')}
             </label>
             <div className="flex items-center gap-2">
               <input
@@ -580,15 +578,14 @@ export function OptimizerPanel({
               className="accent-[#c084fc]"
             />
             <span className="text-[10px] text-[#b3b3b3]">
-              Treat target as weak (apply EGO/weak multiplier)
+              {t('optimizer.avgDmg.weak')}
             </span>
           </label>
 
-          {/* Sprint 2h3: AoE / multi-target modeling
-              Sprint 2h9: 0 = auto-detect from char's best damage card's target_class */}
+          {/* Multi-target modeling. 0 = auto-detect from the character's best damage card's target_class. */}
           <div className="space-y-1">
             <label htmlFor="optimizer-target-count" className="text-[9px] uppercase tracking-wider text-[#666666]">
-              Target count
+              {t('optimizer.avgDmg.targetCount')}
             </label>
             <div className="flex items-center gap-2">
               <input
@@ -609,15 +606,15 @@ export function OptimizerPanel({
                 className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <span className="text-[10px] text-[#666666]">
-                (0=auto, 1=single boss, 3-5=mob wave)
+                {t('optimizer.avgDmg.targetCountHint')}
               </span>
             </div>
           </div>
 
-          {/* Sprint 2h6: DoT ticks knob */}
+          {/* DoT ticks knob */}
           <div className="space-y-1">
             <label htmlFor="optimizer-dot-ticks" className="text-[9px] uppercase tracking-wider text-[#666666]">
-              DoT ticks
+              {t('optimizer.avgDmg.dotTicks')}
             </label>
             <div className="flex items-center gap-2">
               <input
@@ -636,7 +633,7 @@ export function OptimizerPanel({
                 className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <span className="text-[10px] text-[#666666]">
-                (default 3; bosses 5+, mobs 1-2)
+                {t('optimizer.avgDmg.dotTicksHint')}
               </span>
             </div>
           </div>
