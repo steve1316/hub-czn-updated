@@ -1,6 +1,6 @@
 import type { LocalizedText } from '@/lib/localized-text'
 
-// Guides are imported from an English-only sheet, so `pt-BR` is usually absent and English is shown instead.
+// Guides are imported from an English-only sheet.
 export type { Lang, LocalizedText } from '@/lib/localized-text'
 
 /** One epiphany level of a rated card, folded from the sheet's run of renders. */

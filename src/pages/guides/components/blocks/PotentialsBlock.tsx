@@ -64,7 +64,7 @@ export function PotentialsBlock({ image, legend, ego }: PotentialsBlockProps) {
           <ol className="flex flex-col gap-2">
             {ego.map(note => (
               <li key={note.level} className="flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3">
-                <span className="shrink-0 rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[10px] font-bold text-[#c084fc]">E{note.level}</span>
+                <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[10px] font-bold text-[#c084fc]">E{note.level}</span>
                 <p className={cn('min-w-0 flex-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]', note.bold && 'font-bold text-[#e5e5e5]')}>
                   {localized(note.text, lang)}
                 </p>

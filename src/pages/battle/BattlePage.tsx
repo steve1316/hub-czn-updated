@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
+import i18n from '@/i18n'
 import { useNavigate } from 'react-router-dom'
 import { Sword, Shield, ChevronDown, ChevronUp, TrendingUp, AlertCircle, LayoutGrid } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
@@ -54,10 +55,10 @@ function formatTime(iso: string): string {
     const now = Date.now()
     const diffMs = now - d.getTime()
     const diffMin = Math.floor(diffMs / 60_000)
-    if (diffMin < 1) return 'agora'
-    if (diffMin < 60) return `${diffMin}m atrás`
+    if (diffMin < 1) return i18n.t('battle.timeNow')
+    if (diffMin < 60) return i18n.t('battle.minutesAgo', { count: diffMin })
     const diffH = Math.floor(diffMin / 60)
-    if (diffH < 24) return `${diffH}h atrás`
+    if (diffH < 24) return i18n.t('battle.hoursAgo', { count: diffH })
     return d.toLocaleDateString(undefined, { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
   } catch {
     return iso

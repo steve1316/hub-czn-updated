@@ -23,10 +23,10 @@ const MAIN_STAT_SLOTS = [
 ]
 
 const STAT_GROUPS = [
-  { label: 'Ofensivo', stats: ['ATK%', 'CRate', 'CDmg', 'Extra DMG%', 'DoT%', 'Flat ATK'] },
-  { label: 'Defensivo', stats: ['DEF%', 'HP%', 'Flat DEF', 'Flat HP'] },
-  { label: 'Elemental', stats: ['Passion DMG%', 'Order DMG%', 'Justice DMG%', 'Void DMG%', 'Instinct DMG%'] },
-  { label: 'Outros', stats: ['Ego'] },
+  { labelKey: 'scoring.group.offensive' as const, stats: ['ATK%', 'CRate', 'CDmg', 'Extra DMG%', 'DoT%', 'Flat ATK'] },
+  { labelKey: 'scoring.group.defensive' as const, stats: ['DEF%', 'HP%', 'Flat DEF', 'Flat HP'] },
+  { labelKey: 'scoring.group.elemental' as const, stats: ['Passion DMG%', 'Order DMG%', 'Justice DMG%', 'Void DMG%', 'Instinct DMG%'] },
+  { labelKey: 'scoring.group.other' as const, stats: ['Ego'] },
 ] as const
 
 function mapWeight(w: number): number {
@@ -357,8 +357,8 @@ export function OptimizerPanel({
           {t('optimizer.statPriorityLabel')}
         </p>
         {STAT_GROUPS.map((group) => (
-          <div key={group.label}>
-            <p className="text-[9px] uppercase tracking-wider text-[#666666] mb-1">{group.label}</p>
+          <div key={group.labelKey}>
+            <p className="text-[9px] uppercase tracking-wider text-[#666666] mb-1">{t(group.labelKey)}</p>
             <div className="grid grid-cols-2 gap-x-3 gap-y-1">
               {group.stats.map((stat) => {
                 const statKey = stat as string

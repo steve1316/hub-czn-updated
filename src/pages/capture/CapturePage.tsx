@@ -65,9 +65,10 @@ function MutationError({ error }: { error: unknown }) {
 }
 
 function MiniPaginationPreview() {
+  const { t } = useTranslation()
   return (
     <div className="bg-[#1a1a1a] border border-[#333] rounded-md p-3 my-3">
-      <p className="text-[10px] text-[#555] mb-2">Tela do jogo — botão alvo:</p>
+      <p className="text-[10px] text-[#555] mb-2">{t('capture.gameScreenTarget')}</p>
       <div className="flex flex-col gap-1 mb-3 opacity-50">
         {[0, 1, 2].map(row => (
           <div key={row} className="grid grid-cols-4 gap-1">
@@ -86,7 +87,7 @@ function MiniPaginationPreview() {
         <span className="text-[11px] text-[#555]">1</span>
         <div className="relative">
           <div className="w-6 h-6 flex items-center justify-center rounded bg-[#c084fc] text-white text-sm font-bold ring-2 ring-[#c084fc]/40">›</div>
-          <span className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] text-[#c084fc] font-semibold">cursor aqui</span>
+          <span className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] text-[#c084fc] font-semibold">{t('capture.cursorHere')}</span>
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-sm select-none">🖱️</span>
         </div>
       </div>
@@ -351,7 +352,7 @@ export function CapturePage() {
   const { t } = useTranslation()
   const port = useApiPort()
   const qc = useQueryClient()
-  const { messages, clear } = useCaptureLog(port)
+  const { messages, clear } = useCaptureLog()
   const [autoScroll, setAutoScroll] = useState(true)
   const [debug, setDebug] = useState(false)
   const [region, setRegion] = useState<'global' | 'asia'>('global')
@@ -375,13 +376,6 @@ export function CapturePage() {
       logRef.current.scrollTop = logRef.current.scrollHeight
     }
   }, [messages, autoScroll])
-
-  useEffect(() => {
-    const last = messages[messages.length - 1]
-    if (last?.message.toLowerCase().includes('saved:') && last.message.toLowerCase().includes('memory fragments')) {
-      qc.invalidateQueries({ queryKey: ['fragments'] })
-    }
-  }, [messages, qc])
 
   useEffect(() => {
     if (captureStatus?.region) setRegion(captureStatus.region)

@@ -1,4 +1,5 @@
 import { Copy, Sparkles, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import type { DeckCardInstance } from '../deck-builder.types'
 import { getDisplayTypes, getInstanceCost } from '../deck-builder.utils'
 import { CardImage } from './CardImage'
@@ -15,6 +16,7 @@ export function DeckCard({
   onRemove: () => void
   onOpenVariants?: () => void
 }) {
+  const { t } = useTranslation()
   const { card, selectedVariant } = item
 
   const displayName = selectedVariant?.name ?? card.name ?? 'Unnamed card'
@@ -57,7 +59,7 @@ export function DeckCard({
               ))
             ) : (
               <span className="text-[10px] text-[#777]">
-                Sem efeito mapeado
+                {t('deckBuilder.card.noMappedEffect')}
               </span>
             )}
           </div>
@@ -111,7 +113,7 @@ export function DeckCard({
           <button
             type="button"
             onClick={onOpenVariants}
-            title="Selecionar variante"
+            title={t('deckBuilder.card.selectVariant')}
             className="inline-flex h-8 items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/70 px-2 text-[11px] font-semibold text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
             <Sparkles size={12} />
@@ -122,7 +124,7 @@ export function DeckCard({
         <button
           type="button"
           onClick={onDuplicate}
-          title="Duplicar carta"
+          title={t('deckBuilder.card.duplicate')}
           className="grid h-8 w-8 place-items-center rounded-md border border-[#333348] bg-[#111827]/90 text-[#d8b4fe] hover:bg-[#312e81]"
         >
           <Copy size={14} />
@@ -131,7 +133,7 @@ export function DeckCard({
         <button
           type="button"
           onClick={onRemove}
-          title="Remover carta"
+          title={t('deckBuilder.card.remove')}
           className="grid h-8 w-8 place-items-center rounded-md border border-[#333348] bg-[#111827]/90 text-[#fca5a5] hover:bg-[#7f1d1d]"
         >
           <X size={14} />

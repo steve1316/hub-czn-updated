@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import collections
 import queue
 import time
 
@@ -54,6 +55,8 @@ class AppState:
         self.capture_region: str = "global"
         self.rescue_file_path: str | None = None
         self.log_queue: queue.SimpleQueue = queue.SimpleQueue()
+        # Recent log lines kept for /api/capture/log. The WebSocket drains log_queue, so this copy is what stays readable.
+        self.log_tail: collections.deque = collections.deque(maxlen=500)
 
         # Optimizer job state
         self.job_id: str | None = None
@@ -86,6 +89,18 @@ class AppState:
         except Exception:
             pass
 
+    def push_log(self, level: str, message: str) -> None:
+        """
+        Publish a timestamped capture log entry to the WebSocket queue and the tail buffer.
+
+        Args:
+            level: One of "info", "success", "warning" or "error".
+            message: The log line shown in the UI.
+        """
+        entry = {"level": level, "message": message, "timestamp": time.strftime("%H:%M:%S")}
+        self.log_queue.put(entry)
+        self.log_tail.append(entry)
+
     def get_capture_manager(self):
         """Return existing manager or create a new one for this session."""
         if self._capture_manager is None:
@@ -106,11 +121,7 @@ class AppState:
                         level = "success"
                     elif "warning" in msg_lower:
                         level = "warning"
-                self.log_queue.put({
-                    "level": level,
-                    "message": msg,
-                    "timestamp": time.strftime("%H:%M:%S"),
-                })
+                self.push_log(level, msg)
 
             def _on_data_saved():
                 mgr = self._capture_manager
@@ -130,6 +141,7 @@ class AppState:
                 output_folder=OUTPUT_DIR,
                 log_callback=_log,
                 live_update_callback=_on_data_saved,
+                event_callback=self.log_queue.put,
             )
 
         return self._capture_manager
