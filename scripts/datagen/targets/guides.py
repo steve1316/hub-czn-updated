@@ -19,6 +19,7 @@ import html
 import io
 import json
 import re
+from difflib import SequenceMatcher
 from dataclasses import dataclass, field
 from functools import cached_property, lru_cache, partial
 from pathlib import Path
@@ -62,6 +63,12 @@ _LAST_EDIT = re.compile(r"^(?:last edit(?:ed)?|\d{1,2}/\d{1,2}(?:/\d{2,4})?)$", 
 _OWN_CARD = re.compile(r"^c_(\d+)_")
 # A prose line that notes one listed card or partner, such as "Tassel: BASE DAMAGE" or "Flow 2: Its great".
 _NOTE_LINE = re.compile(r"^([^:]{1,40}):\s*(.+)$")
+# A numbered note line that uses a comma or a quote instead of the colon, such as "OUAT 1, 1 cost is bad" or 'Truth 3" Just damage'.
+_NUMBERED_NOTE_LINE = re.compile(r"^(.*?\s*\d)\s*[,\"]\s*(.+)$")
+# A line that starts with a short name and a level number then a separator, such as "Whirl 2: x", for the positional rule.
+_SHORT_NUMBERED_LINE = re.compile(r"^\s*[A-Za-z' ]{1,20}\s\d\s*[:,\"]")
+# A note label's base word must be at least this close to a word of the card's name, so a typo such as "Whiirl" still finds "Whirl".
+_NOTE_NAME_CLOSENESS = 0.8
 # A note label naming one epiphany level by number, such as "Flow 2".
 _NUMBERED_LABEL = re.compile(r"^(.*?)\s*(\d)$")
 # The part of an epiphany's game name that tells it apart, such as "Unbound" in "Flicker Blade (Unbound)".
@@ -1132,14 +1139,23 @@ def _attach_notes(blocks: list[dict]) -> list[dict]:
             kept.append(block)
             continue
         rest = []
-        for line in block["body"]["en"].split("\n"):
-            match = _NOTE_LINE.match(line)
-            target = _note_target(previous["items"], match.group(1)) if match else None
+        # A card list of one ladder takes any numbered line by its level, as the sheet's own label may be misspelled or shortened.
+        ladders = [item for item in previous["items"] if item.get("epiphanies")]
+        lines = block["body"]["en"].split("\n")
+        numbered = sum(1 for line in lines if _SHORT_NUMBERED_LINE.match(line))
+        positional = ladders[0] if previous["type"] == "card-list" and len(previous["items"]) == 1 and ladders and numbered >= 2 else None
+        for line in lines:
+            target, text = None, ""
+            for match in (_NOTE_LINE.match(line), _NUMBERED_NOTE_LINE.match(line)):
+                target = _note_target(previous["items"], match.group(1), positional) if match else None
+                if target is not None:
+                    text = match.group(2)
+                    break
             if target is None:
                 rest.append(line)
                 continue
             note = target["note"]["en"]
-            target["note"] = {"en": f"{note}\n{match.group(2)}" if note else match.group(2)}
+            target["note"] = {"en": f"{note}\n{text}" if note else text}
         if any(line.strip() for line in rest):
             kept.append({**block, "body": {"en": "\n".join(rest)}})
     return kept
@@ -1223,13 +1239,33 @@ def _extra(extra_id: str | None) -> Extra | None:
     return next((line for line in [*epiphany.divine_epiphanies(), *epiphany.common_epiphanies()] if line.id == extra_id), None)
 
 
-def _note_target(items: list[dict], label: str) -> dict | None:
+def _names_card(base: str, name: str) -> bool:
+    """
+    Whether a note label's base word stands for a card name.
+
+    Args:
+        base: The label without its level number, lower case.
+        name: The card's name, lower case.
+
+    Returns:
+        True when the base is the name, one of its words, its initials ("OUAT"), or within a typo of one of its words.
+    """
+    words = [word for word in re.split(r"[\s:]+", name) if word]
+    if not base or base == name or base in words:
+        return True
+    if len(words) > 1 and base == "".join(word[0] for word in words):
+        return True
+    return len(base) >= 3 and any(SequenceMatcher(None, base, word).ratio() >= _NOTE_NAME_CLOSENESS for word in words)
+
+
+def _note_target(items: list[dict], label: str, positional: dict | None = None) -> dict | None:
     """
     The item, or epiphany of one, that a note label names.
 
     Args:
         items: The listed cards or partners.
-        label: The text before the colon, such as "Tassel", "Flow 2" or "Unbound".
+        label: The text before the colon, such as "Tassel", "Flow 2", "OUAT 1" or "Unbound".
+        positional: The one card whose ladder a numbered label may pick by its number alone, whatever its words.
 
     Returns:
         The epiphany named by its game name ("Unbound") or by a word of the card's name and its level ("Flow 2"), else the item
@@ -1246,15 +1282,16 @@ def _note_target(items: list[dict], label: str) -> dict | None:
             if part and part.group(1).lower() == wanted:
                 return entry
         name = item.get("name", "").lower()
-        words = re.split(r"[\s:]+", name)
         if numbered:
             base, level = numbered.group(1), int(numbered.group(2))
-            if base in words or base == name:
+            if _names_card(base, name):
                 found = next((entry for entry in epiphanies if entry["level"] == level), None)
                 if found:
                     return found
-        elif name == wanted or wanted in words:
+        elif name == wanted or wanted in re.split(r"[\s:]+", name):
             return item
+    if numbered and positional:
+        return next((entry for entry in positional["epiphanies"] if entry["level"] == int(numbered.group(2))), None)
     return None
 
 

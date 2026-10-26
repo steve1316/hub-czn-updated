@@ -382,6 +382,30 @@ def test_notes_attach_by_name_number_and_game_name():
     assert partners["items"][0]["note"] == {"en": "busted"}
 
 
+def _flow_list() -> dict:
+    return {"type": "card-list", "items": guides._fold([_rated("c_30134_uni2", "Radiant Sword Flow", "5/5", level) for level in range(1, 6)], _variants_of)}
+
+
+def test_notes_accept_initials_commas_quotes_and_typos():
+    cards = _flow_list()
+    blocks = guides._attach_notes([cards, _prose('RSF 1, 1 cost is bad\nRSF 2: Very good\nFlow 3" Zero cost\nFlowe 4, Typo')])
+    assert len(blocks) == 1
+    assert [level["note"]["en"] for level in cards["items"][0]["epiphanies"]] == ["1 cost is bad", "Very good", "Zero cost", "Typo", ""]
+
+
+def test_a_single_ladder_takes_numbered_lines_by_position():
+    cards = _flow_list()
+    blocks = guides._attach_notes([cards, _prose("Zap 1: one\nZap 2: two\nNot numbered")])
+    assert [level["note"]["en"] for level in cards["items"][0]["epiphanies"]][:3] == ["one", "two", ""]
+    assert blocks[1] == _prose("Not numbered")
+
+
+def test_one_odd_numbered_line_is_not_taken_by_position():
+    cards = _flow_list()
+    blocks = guides._attach_notes([cards, _prose("Costs 2, usually")])
+    assert len(blocks) == 2
+
+
 def test_unmatched_note_lines_stay_in_prose():
     cards = {"type": "card-list", "items": [_rated("c_30134_cre1", "Sword Tassel", "5/5")]}
     blocks = guides._attach_notes([cards, _prose("Equilux: Start of turn\nTassel: base\nPlain line")])
@@ -696,15 +720,15 @@ def _qc_guide(blocks: list[dict]) -> list[tuple[str, str, dict]]:
     return [("olga", "Olga", {"sections": [{"id": "card-ratings", "blocks": blocks}]})]
 
 
-def _rated(card_id: str, name: str, **extra) -> dict:
+def _qc_item(card_id: str, name: str, **extra) -> dict:
     return {"cardId": card_id, "name": name, "note": {"en": ""}, **extra}
 
 
 def test_qc_counts_each_problem_class():
     ladder = {"level": 1, "name": "x", "cost": 1, "note": {"en": ""}}
     blocks = [
-        {"type": "card-list", "items": [_rated("c_1_a", "A", rating="4/5"), _rated("c_1_a", "A", rating="3/5"),
-                                        _rated("c_1_b", "B", epiphanies=[ladder, {**ladder, "level": 2}])]},
+        {"type": "card-list", "items": [_qc_item("c_1_a", "A", rating="4/5"), _qc_item("c_1_a", "A", rating="3/5"),
+                                        _qc_item("c_1_b", "B", epiphanies=[ladder, {**ladder, "level": 2}])]},
         {"type": "prose", "body": {"en": 'Flow 2: nice\nTruth 3" nice\nJust prose'}},
     ]
     found = guides_qc.collect(_qc_guide(blocks), lambda card_id: [None] * 6, {"Olga": ["Olga!B3"]})
