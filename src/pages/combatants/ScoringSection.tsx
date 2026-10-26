@@ -156,12 +156,13 @@ function WeightEditor({ charId, resId }: { charId?: string; resId?: number }) {
     staleTime: Infinity,
     enabled: isChar,
   })
-  const setMap: Record<number, SetInfo> = {}
-  if (gameData?.sets) {
-    for (const [id, s] of Object.entries(gameData.sets)) {
-      setMap[Number(id)] = s as SetInfo
+  const setMap = useMemo(() => {
+    const map: Record<number, SetInfo> = {}
+    for (const [id, s] of Object.entries(gameData?.sets ?? {})) {
+      map[Number(id)] = s as SetInfo
     }
-  }
+    return map
+  }, [gameData])
 
   const { data: charPreset } = useQuery<CharPreset>({
     queryKey: ["scoring/char-preset", resId],
@@ -189,23 +190,15 @@ function WeightEditor({ charId, resId }: { charId?: string; resId?: number }) {
     queryClient.invalidateQueries({ queryKey: ["fragments"] })
   }
 
-  const saveGlobalMutation = useMutation({
-    mutationFn: (weights: Record<string, number>) => api.saveScoringPriorities(weights),
-    onSuccess: () => onSaved(["scoring/priorities"]),
-    onError: (e: Error) => setSaveError(e.message),
+  const invalidateKey = isChar ? ["scoring/char-weights", charId] : ["scoring/priorities"]
+  const mutationOptions = { onSuccess: () => onSaved(invalidateKey), onError: (e: Error) => setSaveError(e.message) }
+
+  const activeMutation = useMutation({
+    mutationFn: (weights: Record<string, number>) => (isChar ? api.saveCharWeights(charId, weights) : api.saveScoringPriorities(weights)),
+    ...mutationOptions,
   })
 
-  const saveCharMutation = useMutation({
-    mutationFn: (weights: Record<string, number>) => api.saveCharWeights(charId!, weights),
-    onSuccess: () => onSaved(["scoring/char-weights", charId]),
-    onError: (e: Error) => setSaveError(e.message),
-  })
-
-  const deleteCharMutation = useMutation({
-    mutationFn: () => api.deleteCharWeights(charId!),
-    onSuccess: () => onSaved(["scoring/char-weights", charId]),
-    onError: (e: Error) => setSaveError(e.message),
-  })
+  const deleteCharMutation = useMutation({ mutationFn: () => api.deleteCharWeights(charId!), ...mutationOptions })
 
   // Base is the character override if it exists, else the global weights.
   const baseWeights = isChar ? (charServerWeights ?? serverWeights) : serverWeights
@@ -215,8 +208,6 @@ function WeightEditor({ charId, resId }: { charId?: string; resId?: number }) {
     () => Object.keys(displayWeights).some((k) => displayWeights[k] !== baseWeights[k]) || Object.keys(baseWeights).some((k) => baseWeights[k] !== displayWeights[k]),
     [displayWeights, baseWeights]
   )
-
-  const activeMutation = isChar ? saveCharMutation : saveGlobalMutation
 
   const handleWeightChange = useCallback(
     (stat: string, value: number) => {
@@ -252,7 +243,6 @@ function WeightEditor({ charId, resId }: { charId?: string; resId?: number }) {
     <div className="space-y-4">
       {!prioritiesLoading && (
         <ScoringPanel
-          inline
           weights={displayWeights}
           activePreset={activePreset}
           isDirty={isDirty}
