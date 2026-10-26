@@ -96,7 +96,7 @@ export function loadSavedDecks() {
         right.updated_at.localeCompare(left.updated_at),
       )
   } catch (error) {
-    console.error('[Deck Builder] Erro ao carregar decks salvos:', error)
+    console.error('[Deck Builder] Failed to load saved decks:', error)
     return []
   }
 }

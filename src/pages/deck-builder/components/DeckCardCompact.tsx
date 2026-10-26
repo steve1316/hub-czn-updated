@@ -1,4 +1,5 @@
 import { Copy, Sparkles, X } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import type { DeckCardInstance } from '../deck-builder.types'
 import { getDisplayTypes, getInstanceCost } from '../deck-builder.utils'
 import { CardImage } from './CardImage'
@@ -16,6 +17,7 @@ export function DeckCardCompact({
   onRemove: () => void
   onOpenVariants?: () => void
 }) {
+  const { t } = useTranslation()
   const { card, selectedVariant } = item
 
   const displayName = selectedVariant?.name ?? card.name ?? 'Unnamed card'
@@ -81,7 +83,7 @@ export function DeckCardCompact({
           <button
             type="button"
             onClick={onOpenVariants}
-            title="Selecionar variante"
+            title={t('deckBuilder.card.selectVariant')}
             className="inline-flex h-6 items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/90 px-2 text-[9px] font-bold text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
             <Sparkles size={11} />
@@ -92,7 +94,7 @@ export function DeckCardCompact({
         <button
           type="button"
           onClick={onDuplicate}
-          title="Adicionar mais uma cópia"
+          title={t('deckBuilder.card.addCopy')}
           className="grid h-6 w-6 place-items-center rounded-md border border-[#333348] bg-[#111827]/90 text-[#d8b4fe] hover:bg-[#312e81]"
         >
           <Copy size={12} />
@@ -101,7 +103,7 @@ export function DeckCardCompact({
         <button
           type="button"
           onClick={onRemove}
-          title="Remover uma cópia"
+          title={t('deckBuilder.card.removeCopy')}
           className="grid h-6 w-6 place-items-center rounded-md border border-[#333348] bg-[#111827]/90 text-[#fca5a5] hover:bg-[#7f1d1d]"
         >
           <X size={12} />

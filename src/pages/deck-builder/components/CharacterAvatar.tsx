@@ -31,7 +31,7 @@ export function CharacterAvatar({
   return (
     <img
       src={imageUrl}
-      alt={character.name ?? `Combatente ${character.char_res_id}`}
+      alt={character.name ?? `Combatant ${character.char_res_id}`}
       loading="lazy"
       draggable={false}
       onError={() => setHasError(true)}

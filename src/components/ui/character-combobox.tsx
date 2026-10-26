@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect, useId } from 'react'
+import { useTranslation } from 'react-i18next'
 import { ChevronDown, User } from 'lucide-react'
 import { assetUrl } from '@/lib/api'
 import type { Combatant } from '@/lib/types'
@@ -43,12 +44,13 @@ export function CharacterCombobox({
   value,
   onChange,
   disabled,
-  placeholder = 'Selecionar...',
+  placeholder,
   ariaLabel,
   id,
   searchPlaceholder,
   emptyLabel,
 }: CharacterComboboxProps) {
+  const { t } = useTranslation()
   const [open, setOpen] = useState(false)
   const [filter, setFilter] = useState('')
   const [activeIndex, setActiveIndex] = useState(-1)
@@ -107,7 +109,7 @@ export function CharacterCombobox({
             <span className="flex-1 truncate text-[#ffffff]">{selected.name}</span>
           </>
         ) : (
-          <span className="flex-1 text-[#666666]">{placeholder}</span>
+          <span className="flex-1 text-[#666666]">{placeholder ?? t('common.select')}</span>
         )}
         <ChevronDown size={12} className="text-[#666] shrink-0" />
       </button>
@@ -126,10 +128,10 @@ export function CharacterCombobox({
                   ? `${baseId}-option-${filtered[activeIndex].char_id}`
                   : undefined
               }
-              aria-label={searchPlaceholder ?? 'Buscar personagem'}
+              aria-label={searchPlaceholder ?? t('common.searchCharacter')}
               value={filter}
               onChange={(e) => { setFilter(e.target.value); setActiveIndex(-1) }}
-              placeholder={searchPlaceholder ?? 'Buscar...'}
+              placeholder={searchPlaceholder ?? t('common.search')}
               onKeyDown={(e) => {
                 if (e.key === 'ArrowDown') {
                   e.preventDefault()
@@ -185,7 +187,7 @@ export function CharacterCombobox({
             ))}
           </div>
           {filtered.length === 0 && (
-            <p className="px-3 py-2 text-xs text-[#444]">{emptyLabel ?? 'Nenhum personagem encontrado'}</p>
+            <p className="px-3 py-2 text-xs text-[#444]">{emptyLabel ?? t('common.noCharacterFound')}</p>
           )}
         </div>
       )}

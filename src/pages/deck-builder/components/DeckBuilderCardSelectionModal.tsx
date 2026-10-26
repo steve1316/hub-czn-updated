@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useState } from 'react'
+import { useTranslation } from 'react-i18next'
 import {
   ChevronLeft,
   ChevronRight,
@@ -51,6 +52,7 @@ export function DeckBuilderCardSelectionModal({
   onAddCard: (item: DeckBuilderCardWithVariants) => void
   onOpenVariants?: (item: DeckBuilderCardWithVariants) => void
 }) {
+  const { t } = useTranslation()
   const [query, setQuery] = useState('')
   const [page, setPage] = useState(1)
 
@@ -110,18 +112,18 @@ export function DeckBuilderCardSelectionModal({
               <input
                 value={query}
                 onChange={event => setQuery(event.target.value)}
-                placeholder="Buscar por nome, descrição, tipo ou custo..."
+                placeholder={t('deckBuilder.cardSelection.modalSearchPlaceholder')}
                 className="w-full rounded-lg border border-[#333348] bg-[#101018] py-2 pl-9 pr-3 text-sm text-white outline-none placeholder:text-[#666] focus:border-[#c084fc]"
               />
             </label>
 
             <div className="flex items-center justify-between gap-3 text-xs text-[#888]">
               <span>
-                {filteredCards.length} de {cards.length} cartas
+                {t('deckBuilder.cardSelection.cardsOfTotal', { filtered: filteredCards.length, total: cards.length })}
               </span>
 
               <span>
-                Página {page} de {totalPages}
+                {t('deckBuilder.cardSelection.pageOf', { page, total: totalPages })}
               </span>
             </div>
           </div>
@@ -130,7 +132,7 @@ export function DeckBuilderCardSelectionModal({
         <div className="min-h-0 flex-1 overflow-y-auto p-5">
           {visibleCards.length === 0 ? (
             <div className="flex h-64 items-center justify-center rounded-xl border border-dashed border-[#333348] text-sm text-[#888]">
-              Nenhuma carta encontrada.
+              {t('deckBuilder.noCardsFound')}
             </div>
           ) : (
             <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
@@ -162,11 +164,11 @@ export function DeckBuilderCardSelectionModal({
             className="inline-flex items-center gap-2 rounded-lg border border-[#333348] px-4 py-2 text-sm font-semibold text-[#d1d5db] hover:bg-[#242435] disabled:cursor-not-allowed disabled:opacity-40"
           >
             <ChevronLeft size={16} />
-            Anterior
+            {t('deckBuilder.previous')}
           </button>
 
           <span className="text-xs text-[#888]">
-            Mostrando {visibleCards.length} cartas
+            {t('deckBuilder.cardSelection.showingCards', { count: visibleCards.length })}
           </span>
 
           <button
@@ -175,7 +177,7 @@ export function DeckBuilderCardSelectionModal({
             disabled={page >= totalPages}
             className="inline-flex items-center gap-2 rounded-lg border border-[#333348] px-4 py-2 text-sm font-semibold text-[#d1d5db] hover:bg-[#242435] disabled:cursor-not-allowed disabled:opacity-40"
           >
-            Próxima
+            {t('deckBuilder.next')}
             <ChevronRight size={16} />
           </button>
         </footer>

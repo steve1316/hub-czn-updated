@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
 import { useApiPort } from '@/hooks/useApiPort'
+import i18n from '@/i18n'
 import { api, wsUrl } from '@/lib/api'
 import type { OptimizerConfig, OptimizeProgress, OptimizeResult } from '@/lib/types'
 import { OptimizerPanel } from './OptimizerPanel'
@@ -111,7 +112,7 @@ export function OptimizerPage() {
           break
         case 'optimize.error':
           setJobState('error')
-          setJobError((msg.message as string) ?? 'Erro desconhecido')
+          setJobError((msg.message as string) ?? i18n.t('optimizer.unknownError'))
           setProgress(null)
           break
       }
@@ -121,7 +122,7 @@ export function OptimizerPage() {
     ws.onclose = () => {
       if (!intentionalClose && jobStateRef.current === 'running') {
         setJobState('error')
-        setJobError('Conexão perdida. Recarregue a página e tente novamente.')
+        setJobError(i18n.t('optimizer.connectionLost'))
         setProgress(null)
       }
     }
@@ -170,9 +171,9 @@ export function OptimizerPage() {
       const hasWeights = sw != null && Object.values(sw).some((v) => v !== 0)
       await api.optimizeStart({ ...config, stat_weights: hasWeights ? sw : null })
     } catch (e) {
-      const msg = e instanceof Error ? e.message : 'Erro ao iniciar otimização'
+      const msg = e instanceof Error ? e.message : i18n.t('optimizer.startError')
       setRunError(
-        msg.includes('already running') ? 'Já existe uma otimização em andamento' : msg
+        msg.includes('already running') ? i18n.t('optimizer.alreadyRunning') : msg
       )
       setJobState('idle')
     }

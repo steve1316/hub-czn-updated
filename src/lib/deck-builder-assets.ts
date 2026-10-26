@@ -112,13 +112,13 @@ function warnMissingCardImage(card: CardEntry, fileName?: string) {
 
   if (!fileName) {
     console.warn(
-      `[Deck Builder] Carta sem imagem encontrada: ${card.card_id} - ${card.name}`,
+      `[Deck Builder] Card has no image: ${card.card_id} - ${card.name}`,
     )
     return
   }
 
   console.warn(
-    `[Deck Builder] Imagem mapeada não encontrada: ${card.card_id} - ${card.name} -> ${fileName}`,
+    `[Deck Builder] Mapped image not found: ${card.card_id} - ${card.name} -> ${fileName}`,
   )
 }
 
@@ -134,7 +134,7 @@ function warnMissingCharacterFace(charResId: number | string) {
   warnedMissingCharacterFaces.add(charResId)
 
   console.warn(
-    `[Deck Builder] Avatar de combatente não encontrado: ${charResId}`,
+    `[Deck Builder] Combatant avatar not found: ${charResId}`,
   )
 }
 
@@ -150,7 +150,7 @@ function warnMissingDivineGodIcon(god: DeckBuilderDivineGod) {
   warnedMissingDivineGodIcons.add(god.id)
 
   console.warn(
-    `[Deck Builder] Ícone de Divine God não encontrado: ${god.id}`,
+    `[Deck Builder] Divine God icon not found: ${god.id}`,
   )
 }
 
@@ -166,7 +166,7 @@ function warnMissingPersonaImage(fileNameOrPath: string) {
   warnedMissingPersonaImages.add(fileNameOrPath)
 
   console.warn(
-    `[Deck Builder] Imagem de Persona não encontrada: ${fileNameOrPath}`,
+    `[Deck Builder] Persona image not found: ${fileNameOrPath}`,
   )
 }
 
