@@ -1527,7 +1527,7 @@
               "name": "Persona of Obsidian",
               "persona": "all_umbra",
               "note": {
-                "en": ""
+                "en": "Hand Buff: Very good with Persona Looping Supports to be +50% x 9 = 450%"
               },
               "rating": "5/5"
             },
@@ -1536,7 +1536,7 @@
               "name": "Persona of Obsidian",
               "persona": "all_umbra",
               "note": {
-                "en": ""
+                "en": "Draw Moral: Very minimal damage difference compared to Persona Loop"
               },
               "rating": "5/5"
             },
@@ -1545,17 +1545,11 @@
               "name": "Persona of Obsidian",
               "persona": "all_umbra",
               "note": {
-                "en": ""
+                "en": "Discard 2: only 120% or 6 Moral, for the cost of -3 Cycle, which is pretty detrimental"
               },
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hand Buff: Very good with Persona Looping Supports to be +50% x 9 = 450%\nDraw Moral: Very minimal damage difference compared to Persona Loop\nDiscard 2: only 120% or 6 Moral, for the cost of -3 Cycle, which is pretty detrimental"
-          }
         },
         {
           "type": "prose",
@@ -1620,274 +1614,195 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Inquiry 2"
+                }
+              ],
+              "rating": "6/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Survival 2"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 3"
+                },
+                {
+                  "en": ""
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "2/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Engravings:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Lux: When Action Count of Enemey increased, Damage +50% for 1 turn"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Lux: When Attacked apply Vuln/Weaken"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+                }
+              ],
+              "rating": "3/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of Enemey increased, Damage +50% for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Attacked apply Vuln/Weaken"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Reinforcements:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage of 1< or lower Attack cards by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Increase Damage of Attack Cards by 20%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "When Attack Card targets enemy with Vuln, +15% Critical Chance"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Start of Battle Deck 18>=Increase Damage of Attack Cards by 30%"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Damage of 2-Cost or higher Attack Cards by 25%"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Damage of 1< or lower Attack cards by +30%"
+                }
+              ],
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "heading",

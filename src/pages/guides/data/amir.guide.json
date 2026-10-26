@@ -1593,7 +1593,7 @@
           "items": [
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
+              "name": "Residual Herb (Draw 1)",
               "cost": 0,
               "note": {
                 "en": ""
@@ -1602,7 +1602,7 @@
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
+              "name": "Residual Herb (Gain 1 AP)",
               "cost": 0,
               "note": {
                 "en": ""
@@ -1611,7 +1611,7 @@
             },
             {
               "cardId": "n_0117",
-              "name": "Residual Herb",
+              "name": "Residual Herb (Draw 2)",
               "cost": 0,
               "note": {
                 "en": ""
@@ -1645,238 +1645,171 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Inquiry 2"
+                }
+              ],
+              "rating": "6/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Survival 2"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 3"
+                },
+                {
+                  "en": ""
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "2/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Engravings:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+                }
+              ],
+              "rating": "3/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Reinforcements:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Increase Def Based Dmg by +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "6/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of 2>= Attack Cards by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Dmg Amnt to 1<= Attacl Cards +30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Increase Def Based Dmg by +30%"
+                }
+              ],
+              "rating": "6/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Dmg Amnt of 2>= Attack Cards by 25%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Dmg Amnt of Attack Cards by 20%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Dmg Amnt to 1<= Attacl Cards +30%"
+                }
+              ],
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "heading",

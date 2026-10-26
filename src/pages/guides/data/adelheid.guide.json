@@ -921,7 +921,7 @@
               "cardId": "c_1055_uni3",
               "name": "Truth Behind A Story",
               "note": {
-                "en": ""
+                "en": "honestly just getting a good Neutral Epiphany is your best bet here"
               },
               "epiphanies": [
                 {
@@ -972,12 +972,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Truth 0, honestly just getting a good Neutral Epiphany is your best bet here"
-          }
         }
       ]
     },
@@ -1412,20 +1406,26 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "n_0080",
+              "cardId": "eidolon_card",
               "name": "Persona",
-              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free"
               },
-              "rating": "4/5",
-              "count": 2
+              "rating": "4/5"
             },
             {
               "cardId": "eidolon_card",
               "name": "Persona",
               "note": {
-                "en": ""
+                "en": "Persona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free"
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona",
+              "note": {
+                "en": "Persona 4: For Shield Stack/Counter Team if you really wanted to"
               },
               "rating": "3/5"
             }
@@ -1434,7 +1434,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Persona 1: Draw is never gonna feel bad, especially if Activated for Free\nPersona 2: For Discard/ Quietus/ Dreamworld synergies or just to be played for free\nPersona 4: For Shield Stack/Counter Team if you really wanted to\nThe Persona cards themselves are good, but on Average Engravings are bad"
+            "en": "The Persona cards themselves are good, but on Average Engravings are bad"
           }
         },
         {
@@ -1490,7 +1490,7 @@
               "cardId": "eidolon_card",
               "name": "Persona",
               "note": {
-                "en": ""
+                "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks"
               },
               "rating": "3/5"
             },
@@ -1498,7 +1498,7 @@
               "cardId": "eidolon_card",
               "name": "Persona",
               "note": {
-                "en": ""
+                "en": "Persona 2: Potentially CounterAttack, but usually nothing burger"
               },
               "rating": "2/5"
             }
@@ -1507,7 +1507,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Persona 1: Def Based + Applies Vuln, best out of Attacks\nPersona 2: Potentially CounterAttack, but usually nothing burger\nPersona cards themself are bad, but the engravings are good"
+            "en": "Persona cards themself are bad, but the engravings are good"
           }
         },
         {

@@ -119,6 +119,14 @@ export interface EgoNote {
   bold?: boolean
 }
 
+/** One rated row of a sheet table, such as a Desire Synergy combination or a notable engraving. */
+export interface TableRow {
+  /** The row's text cells, left to right. A column the row leaves blank holds an empty string. */
+  cells: LocalizedText[]
+  /** The author's rating of the row, such as "5/5". */
+  rating: string
+}
+
 export type Block =
   | { type: 'prose'; body: LocalizedText }
   | { type: 'heading'; text: LocalizedText }
@@ -159,6 +167,10 @@ export type Block =
   | {
       type: 'rating-list'
       items: { label: string; text: LocalizedText }[]
+    }
+  | {
+      type: 'table'
+      rows: TableRow[]
     }
   | {
       type: 'team-grid'

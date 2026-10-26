@@ -727,7 +727,7 @@
                   "cost": 2,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Basic 4 activates 120% each, 600% base"
                   }
                 },
                 {
@@ -736,7 +736,7 @@
                   "cost": 2,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Amped but for Discard and drawing, condition is a bit less consistent"
                   }
                 },
                 {
@@ -745,7 +745,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Dog bad only proc twice and getting hit is an absolutely terrible condition"
                   }
                 },
                 {
@@ -754,7 +754,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "0 Cost to use and has retrieve for 4x (then 2x) but base is 240%"
                   }
                 },
                 {
@@ -763,7 +763,7 @@
                   "cost": 2,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Ap and 1 Cost usage very easy to proc, 2 AP to equivalent base damage, bigger nukeability"
                   }
                 }
               ]
@@ -781,7 +781,7 @@
                   "cost": 2,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Basic 4 activates 120% each, 600% base"
                   }
                 },
                 {
@@ -790,7 +790,7 @@
                   "cost": 2,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Amped but for Discard and drawing, condition is a bit less consistent"
                   }
                 },
                 {
@@ -799,7 +799,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Dog bad only proc twice and getting hit is an absolutely terrible condition"
                   }
                 },
                 {
@@ -808,7 +808,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "0 Cost to use and has retrieve for 4x (then 2x) but base is 240%"
                   }
                 },
                 {
@@ -817,7 +817,7 @@
                   "cost": 2,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Ap and 1 Cost usage very easy to proc, 2 AP to equivalent base damage, bigger nukeability"
                   }
                 }
               ]

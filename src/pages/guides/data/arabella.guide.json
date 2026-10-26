@@ -1180,7 +1180,7 @@
               "cardId": "c_30115_srt4",
               "name": "Scream For Me",
               "note": {
-                "en": ""
+                "en": "Moral 2/6 Fracture, but 2 moral is already great"
               },
               "epiphanies": [
                 {
@@ -1231,12 +1231,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Scream 0: Moral 2/6 Fracture, but 2 moral is already great"
-          }
         },
         {
           "type": "card-list",
@@ -1789,142 +1783,93 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inqury 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sever Ties"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 2"
+                },
+                {
+                  "en": "Inqury 1"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Inquiry 2"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 3"
+                },
+                {
+                  "en": ""
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sever Ties"
+                },
+                {
+                  "en": "Claim 1"
+                },
+                {
+                  "en": "Survival 2"
+                }
+              ],
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",

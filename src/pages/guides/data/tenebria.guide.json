@@ -1679,7 +1679,7 @@
               "name": "Rhythm: Crescendo",
               "cost": 2,
               "note": {
-                "en": ""
+                "en": "7 AP to use all the Rhythms, but no additional requirement like Staccato"
               },
               "rating": "3/5"
             },
@@ -1688,7 +1688,7 @@
               "name": "Rhythm: Staccato",
               "cost": 1,
               "note": {
-                "en": ""
+                "en": "6 AP to play them all, but the requirement is to space uses"
               },
               "rating": "2/5"
             },
@@ -1697,7 +1697,7 @@
               "name": "Rhythm: Fortissimo",
               "cost": 2,
               "note": {
-                "en": ""
+                "en": "Pretty hard to use, both hand size/draw and AP wise, but ig with Draw Heide its interesting"
               },
               "rating": "2/5"
             },
@@ -1706,7 +1706,7 @@
               "name": "Rhythm: Fermata",
               "cost": 1,
               "note": {
-                "en": ""
+                "en": "Basically just 1 AP to draw 2 Rhytmns, the go to version if not Arp"
               },
               "rating": "4/5"
             },
@@ -1715,7 +1715,7 @@
               "name": "Rhythm: Arpeggio",
               "cost": 4,
               "note": {
-                "en": ""
+                "en": "Whole Section Above, TLDR Unmatcched Cycle/AP Requirement, lower dmg ceiling"
               },
               "rating": "5/5"
             }
@@ -1724,7 +1724,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Cresc(endo): 7 AP to use all the Rhythms, but no additional requirement like Staccato\nStacc(ato): 6 AP to play them all, but the requirement is to space uses\nFort(issimo): Pretty hard to use, both hand size/draw and AP wise, but ig with Draw Heide its interesting\nFerm(ata): Basically just 1 AP to draw 2 Rhytmns, the go to version if not Arp\nArp(eggio): Whole Section Above, TLDR Unmatcched Cycle/AP Requirement, lower dmg ceiling\n(Have to test Fortissimo + Activation)"
+            "en": "(Have to test Fortissimo + Activation)"
           }
         },
         {
@@ -1734,7 +1734,7 @@
               "cardId": "c_1069_uni2",
               "name": "Call & Response",
               "note": {
-                "en": ""
+                "en": "Also not that bad to just get a Moral Epiphany"
               },
               "epiphanies": [
                 {
@@ -1787,75 +1787,65 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "CnR 0: Also not that bad to just get a Moral Epiphany"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1069_uni1",
               "name": "Spotlight",
-              "cost": 1,
               "note": {
-                "en": ""
+                "en": "Actually not too bad, to just get a Moral Epiphany on this"
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1069_uni1",
-              "name": "Spotlight",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Spotlight I",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Spotlight II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Basically 1 free Rhythm draw each turn, not very impresive"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Spotlight III",
+                  "cost": 2,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Spotlight IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Spotlight V",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "0 cost Draw 2, but discards non Rhythms, its okay"
+                  }
+                }
+              ],
+              "rating": "4/5",
+              "cost": 1
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Spotlight 1: Good with Rhythm 0, and okay with Crescendo, the others, not so much interesting\nSpotlight 2: Basically 1 free Rhythm draw each turn, not very impresive\nSpotlight 3: Moves 2 Rhythms but also Activates both, only that 2 Cost is a high upfront expense\nSpotlight 4: Move 3 Rhythms from anywhere to Top of Draw pile, then draw 1, umazing\nSpotlight 5: 0 cost Draw 2, but discards non Rhythms, its okay\nSpotlight 0: Actually not too bad, to just get a Moral Epiphany on this"
-          }
         },
         {
           "type": "card-list",

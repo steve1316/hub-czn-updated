@@ -857,7 +857,7 @@
           "items": [
             {
               "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
+              "name": "Flash Slash (Morale)",
               "cost": 2,
               "note": {
                 "en": ""
@@ -866,7 +866,7 @@
             },
             {
               "cardId": "c_1057_uni1",
-              "name": "Flash Slash",
+              "name": "Flash Slash (Vulnerable)",
               "cost": 2,
               "note": {
                 "en": ""

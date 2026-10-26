@@ -2072,286 +2072,203 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Driven Hunt"
+                },
+                {
+                  "en": "Survival 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Driven Hunt"
+                },
+                {
+                  "en": "Survival 1"
+                },
+                {
+                  "en": "Inquiry 2"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 3"
+                },
+                {
+                  "en": ""
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 1"
+                },
+                {
+                  "en": "Control 2"
+                }
+              ],
+              "rating": "2/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 1"
+                },
+                {
+                  "en": "Survival 2"
+                }
+              ],
+              "rating": "2/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Control 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Survival 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "2/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Engravings:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Lux: When Action Count of enemy increased +50% Dmg to Attack Cards"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
+                }
+              ],
+              "rating": "4/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: Increase Exhaust Cards of this Unit by 25% Dmg"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 more cards in Graveyards 30% Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 more cards in Graveyard 15% Crt Dmg to Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: On Extra Attack 1 Moral for 1 turn"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 40 or more cards in Graveyard 2 Moral"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Reinforcements:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Increase Damage Amount of Attack Cards by 20%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "35"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Dmg Amnt +30% to 1<= Cost Attack Cards"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Increase Damage Amount of Attack Cards by 20%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "If owning 18<= cards Increase Dmg Amnt of Attack Cards by 30%"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "If owning 33>= cards Increase Dmg Amnt of Attack Cards by 30%"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "When Attack Card is Drawn by ability increase Dmg Amnt by 50%"
+                }
+              ],
+              "rating": "35"
+            }
+          ]
         },
         {
           "type": "heading",

@@ -39,7 +39,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 3,
+                "name": "Hew (Flash)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Ignition] [Exhaust] [Retain] 400% Defense-Based Damage. Incinerate: Create 1 Hew (Flash) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni2",
@@ -101,7 +108,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 3,
+                "name": "Hew (Flash)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Ignition] [Exhaust] [Retain] 400% Defense-Based Damage. Incinerate: Create 1 Hew (Flash) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni1",
@@ -676,7 +690,14 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3
+              "cost": 3,
+              "epiphany": {
+                "level": 3,
+                "name": "Hew (Flash)",
+                "text": {
+                  "en": "[Unique] [Initiation] [Ignition] [Exhaust] [Retain] 400% Defense-Based Damage. Incinerate: Create 1 Hew (Flash) Lv. 1."
+                }
+              }
             },
             {
               "cardId": "c_30047_uni2",
@@ -1154,55 +1175,58 @@
             {
               "cardId": "c_30047_srt4",
               "name": "Hew",
-              "cost": 3,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_col2",
-              "name": "Impulse",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30047_srt4",
-              "name": "Hew",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Hew (Ironclad)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Shield Hew"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Hew (Extreme)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "5 Hew's instead of 3"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Hew (Flash)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Decreases cost overtime with generation"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Hew (Massacre)",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "AOE Hew"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Hew (Ambush)",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Counter Attack Team support"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Hew 1: Shield Hew\nHew 2: 5 Hew's instead of 3\nHew 3: Decreases cost overtime with generation\nHew 4: AOE Hew\nHew 5: Counter Attack Team support"
-          }
         },
         {
           "type": "card-list",
@@ -1889,112 +1913,88 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 2"
+                },
+                {
+                  "en": "Claim 1"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Sample"
+                },
+                {
+                  "en": "Inquiry 3"
+                },
+                {
+                  "en": ""
+                }
+              ],
+              "rating": "4/5"
+            }
+          ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 2"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Claim 1"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sample"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inquiry 3"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
+          "type": "heading",
+          "text": {
             "en": "Notable Engravings:"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: Increase Dmg Amnt of Exhaust Cards of this unit by 25%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "5/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "4/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: When Attacked apply Vuln/Weaken"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
-          }
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "3/5"
-          }
+          "type": "table",
+          "rows": [
+            {
+              "cells": [
+                {
+                  "en": "Umbra: Increase Dmg Amnt of Exhaust Cards of this unit by 25%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 7 or more are in grave, Increase Damage by 30%"
+                }
+              ],
+              "rating": "5/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Umbra: When 15 or more are in grave, Increase Crit Dmg by 15%"
+                }
+              ],
+              "rating": "4/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Lux: When Attacked apply Vuln/Weaken"
+                }
+              ],
+              "rating": "3/5"
+            },
+            {
+              "cells": [
+                {
+                  "en": "Lux: On Ravage increase enemy Action Count by 2 (1 per turn)"
+                }
+              ],
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",

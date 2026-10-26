@@ -47,6 +47,16 @@
     "c660e168b3cd8ce38c039803b403be27b2e6a36ee93cf138d4cc8f97ed39e738": {"cardId": "c_30113_cre2"}
   },
   "_sections": {},
+  "Adelheid/ADHD!B35": {
+    "cardId": "eidolon_card",
+    "name": "Persona",
+    "_why": "Persona (Draw 1), which the art matchers read as n_0080"
+  },
+  "Adelheid/ADHD!C35": {
+    "cardId": "eidolon_card",
+    "name": "Persona",
+    "_why": "Persona (Discard 1 Quietus), which the art matchers read as n_0080"
+  },
   "Amir!B3": {
     "epiphany": 1,
     "_why": "Hovering Metal: reads 4 Metalize, the old wording of 4 Metallization"
@@ -59,6 +69,18 @@
     "epiphany": 1,
     "divine": "div_0125",
     "_why": "Hovering Metal: 4 Metallization; Draw 1 under a Sekred emblem"
+  },
+  "Amir!N36": {
+    "name": "Residual Herb (Draw 1)",
+    "_why": "Three Residual Herb builds side by side, told apart by the notes under them"
+  },
+  "Amir!O36": {
+    "name": "Residual Herb (Gain 1 AP)",
+    "_why": "Three Residual Herb builds side by side, told apart by the notes under them"
+  },
+  "Amir!P36": {
+    "name": "Residual Herb (Draw 2)",
+    "_why": "Three Residual Herb builds side by side, told apart by the notes under them"
   },
   "Anika!B11": {
     "epiphany": 0,
@@ -190,6 +212,22 @@
     "divine": "div_0139",
     "_why": "Shuffle: Exhaust 2; Vytor Reduce Cost"
   },
+  "Cassius!C3": {
+    "cardId": "c_1049_cre9",
+    "_why": "Quest: Triple 0, which the art matchers read as another Cassius card"
+  },
+  "Cassius!I3": {
+    "cardId": "c_1049_cre2",
+    "_why": "Triple 1, which the art matchers mixed up with the other hand cards"
+  },
+  "Cassius!J3": {
+    "cardId": "c_1049_cre3",
+    "_why": "Straight, which the art matchers mixed up with the other hand cards"
+  },
+  "Cassius!K3": {
+    "cardId": "c_1049_cre4",
+    "_why": "Full House, which the art matchers mixed up with the other hand cards"
+  },
   "Chizuru!AA11": {
     "epiphany": 1,
     "_why": "Tsukuyomi: 4 Will-O-Wisp"
@@ -209,6 +247,10 @@
   "Chizuru!T12": {
     "epiphany": 1,
     "_why": "Oni Hunt: +100% to the next Bind card"
+  },
+  "Chizuru!E54": {
+    "cardId": "c_1060_uni4_mut",
+    "_why": "Shadow of the Moon+, which shares its art with Shadow of the Moon"
   },
   "Fei!N10": {
     "epiphany": 1,
@@ -742,6 +784,10 @@
     "epiphany": 5,
     "_why": "Hew: Hew (Ambush)"
   },
+  "Nine!I59": {
+    "cardId": "c_30047_srt4",
+    "_why": "Hew, which the picture matchers missed"
+  },
   "Olga!AA10": {
     "epiphany": 0,
     "divine": "div_0130",
@@ -990,6 +1036,10 @@
     "epiphany": 2,
     "_why": "High-Power Scope: 1 Mark on each Attack Card"
   },
+  "Tenebria!O54": {
+    "epiphany": 0,
+    "_why": "Base Spotlight, rated on the row under its five epiphanies"
+  },
   "Tiphera!H4": {
     "epiphany": 1,
     "_why": "Form Convergence: Draw 3 Archetype cards"
@@ -1215,5 +1265,13 @@
     "epiphany": 0,
     "common": "com_0228",
     "_why": "Flash Slash: Inspiration: decrease Cost by 1; Apply Vulnerable 2 to all enemies"
+  },
+  "Yuki!N59": {
+    "name": "Flash Slash (Morale)",
+    "_why": "Two Flash Slash builds side by side, told apart by the note under them"
+  },
+  "Yuki!O59": {
+    "name": "Flash Slash (Vulnerable)",
+    "_why": "Two Flash Slash builds side by side, told apart by the note under them"
   }
 }
