@@ -594,6 +594,10 @@ export function CombatantDeckColumn({
   const epiphanyCards = slot.epiphanyCards
   const egoSkill = slot.egoSkill
   const selectedCombatant = characters.find(c => c.char_res_id === slot.combatantId)
+  // Why Simulate is off, shown as its tooltip, or null when it can run
+  const simulateBlocker = !selectedCombatant
+    ? t('deckBuilder.slot.simulateNeedsCombatant')
+    : slot.cards.length === 0 ? t('deckBuilder.slot.simulateNeedsCards') : null
   const sharedCards = useMemo(
     () => getSharedDeckBuilderCardsForClass(selectedCombatant?.class),
     [selectedCombatant?.class],
@@ -645,16 +649,18 @@ export function CombatantDeckColumn({
             </div>
           </div>
 
-          <button
-            type="button"
-            onClick={onSimulate}
-            disabled={!selectedCombatant || slot.cards.length === 0}
-            title={t('deckBuilder.slot.simulateTip')}
-            className="mt-5 flex h-8 shrink-0 items-center gap-1 rounded-lg border border-[#333348] px-2 text-xs text-[#888] hover:border-[#c084fc] hover:text-[#c084fc] disabled:opacity-40 disabled:hover:border-[#333348] disabled:hover:text-[#888]"
-          >
-            <Zap size={13} />
-            {t('deckBuilder.slot.simulate')}
-          </button>
+          {/* A disabled button gets no hover, so the tooltip sits on a wrapper */}
+          <span title={simulateBlocker ?? t('deckBuilder.slot.simulateTip')} className="mt-5 shrink-0">
+            <button
+              type="button"
+              onClick={onSimulate}
+              disabled={simulateBlocker != null}
+              className="flex h-8 items-center gap-1.5 rounded-lg bg-[#c084fc] px-3 text-xs font-semibold text-[#1a1022] hover:bg-[#d8b4fe] disabled:pointer-events-none disabled:opacity-40"
+            >
+              <Zap size={13} />
+              {t('deckBuilder.slot.simulate')}
+            </button>
+          </span>
 
           <button
             type="button"

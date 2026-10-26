@@ -745,6 +745,8 @@ const en = {
       clearDeck: 'Clear deck',
       simulate: 'Simulate',
       simulateTip: 'Open this deck in the Simulator, epiphanies included',
+      simulateNeedsCombatant: 'Pick a combatant to simulate this deck',
+      simulateNeedsCards: 'Add cards to simulate this deck',
       equipment: 'Equipment',
       equipmentSummary: 'Weapon / Armor / Accessory',
       cards: 'Cards',
