@@ -1,11 +1,13 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { TFunction } from 'i18next'
+import { cn } from '@/lib/utils'
+import { CostGem } from '@/pages/guides/components/blocks/CostGem'
 import { CARD_CHARACTERS, CARD_SEASONS, ENCYCLOPEDIA_CARDS, cardImageUrl } from '../encyclopedia-cards'
 import { findClarification } from '../encyclopedia-content'
 import type { EncyclopediaCard } from '../encyclopedia.types'
 import { SEASON_GROUP_PREFIX, cardGroupKey, filterCards, localized, resolveLang, uniqueSorted } from '../encyclopedia.utils'
-import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
+import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
 import { RichDescription } from './RichDescription'
 
@@ -52,34 +54,41 @@ function cardMeta(card: EncyclopediaCard, t: TFunction, longSeason = false): str
   return [...new Set(parts.filter(Boolean))].join(' · ')
 }
 
-/** Props for CardRow. */
-interface CardRowProps {
-  /** The card this row shows. */
+/** Props for CardTile. */
+interface CardTileProps {
+  /** The card this tile shows. */
   card: EncyclopediaCard
   /** Whether the card is the one open in the detail pane. */
   selected: boolean
-  /** Opens a card by its id. Must be stable so unchanged rows skip re-rendering. */
+  /** Opens a card by its id. Must be stable so unchanged tiles skip re-rendering. */
   onSelect: (cardId: string) => void
 }
 
 /**
- * One card in the list, with its cost, name, a line about it and the start of its text.
- * @param props See `CardRowProps`.
- * @returns The list row.
+ * One card in the grid: its art with the cost on it, and its name under it. Players know cards by their art first.
+ * @param props See `CardTileProps`.
+ * @returns The tile button.
  */
-const CardRow = memo(function CardRow({ card, selected, onSelect }: CardRowProps) {
+const CardTile = memo(function CardTile({ card, selected, onSelect }: CardTileProps) {
   const { t } = useTranslation()
+  const imageUrl = cardImageUrl(card)
   return (
-    <ListRow selected={selected} onSelect={() => onSelect(card.id)}>
-      <span className="grid h-8 w-8 shrink-0 place-items-center self-start rounded-md border border-[#075985] bg-[#082f49] font-mono text-sm font-bold text-[#93c5fd]">
-        {costLabel(card.cost)}
+    <button
+      type="button"
+      aria-pressed={selected}
+      title={`${card.name}\n${cardMeta(card, t)}`}
+      onClick={() => onSelect(card.id)}
+      className={cn(
+        'flex flex-col gap-1 rounded-md p-1 text-left transition-colors',
+        selected ? 'bg-[#1f1730] ring-2 ring-[#c084fc]' : 'hover:bg-[#1f1f1f]',
+      )}
+    >
+      <span className="relative block aspect-[2/3] w-full overflow-hidden rounded bg-[#1f1f2a]">
+        {imageUrl && <img src={imageUrl} alt="" loading="lazy" decoding="async" className="h-full w-full object-cover" />}
+        <CostGem cost={card.cost ?? undefined} className="absolute top-1 left-1" />
       </span>
-      <span className="min-w-0 flex-1">
-        <span className="block truncate text-sm font-medium text-[#e5e7eb]">{card.name}</span>
-        <span className="block truncate text-xs text-[#8a8a8a]">{cardMeta(card, t)}</span>
-        {card.description && <span className="mt-0.5 line-clamp-1 text-xs text-[#b3b3b3]">{card.description}</span>}
-      </span>
-    </ListRow>
+      <span className={cn('line-clamp-2 text-xs leading-snug', selected ? 'text-white' : 'text-[#d4d4d4]')}>{card.name}</span>
+    </button>
   )
 })
 
@@ -176,9 +185,11 @@ export function CardsTab() {
         )
       }
     >
-      {filtered.map(card => (
-        <CardRow key={card.id} card={card} selected={selectedId === card.id} onSelect={setSelectedId} />
-      ))}
+      <div className="grid grid-cols-3 gap-1 p-2">
+        {filtered.map(card => (
+          <CardTile key={card.id} card={card} selected={selectedId === card.id} onSelect={setSelectedId} />
+        ))}
+      </div>
     </EncyclopediaLayout>
   )
 }
