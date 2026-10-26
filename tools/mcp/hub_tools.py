@@ -4,7 +4,6 @@ Tool functions for the Hub CZN dev MCP server.
 Each function takes a `HubClient` so tests can pass a stub. This module does not import the `mcp` SDK.
 """
 import os
-import re
 import subprocess
 import sys
 from collections import Counter
@@ -83,7 +82,7 @@ def rescue_records(client) -> list | dict:
 
 def capture_log_tail(client, n: int = 50) -> dict:
     """Return the last `n` capture log entries (1-500), oldest first."""
-    return client.request("GET", "/api/capture/log", params={"n": max(1, min(int(n), 500))})
+    return client.request("GET", "/api/capture/log", params={"n": n})
 
 
 def latest_snapshot(client, limit: int = 20) -> dict:
@@ -130,11 +129,7 @@ def replay_capture(path: str | None = None, runner=subprocess.run) -> dict:
     except subprocess.TimeoutExpired:
         return {"ok": False, "report": None, "summary": [], "stderr": f"Timed out after {REPLAY_TIMEOUT}s"}
     lines = [ln.strip() for ln in proc.stdout.splitlines() if ln.strip()]
-    report = None
-    for ln in lines:
-        m = re.match(r"Report -> (.+)", ln)
-        if m:
-            report = m.group(1)
+    report = next((ln.removeprefix("Report -> ") for ln in reversed(lines) if ln.startswith("Report -> ")), None)
     result = {"ok": proc.returncode == 0, "report": report, "summary": lines}
     if proc.returncode != 0:
         result["stderr"] = proc.stderr[-2000:]

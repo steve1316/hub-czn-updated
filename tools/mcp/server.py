@@ -9,7 +9,7 @@ from pathlib import Path
 from mcp.server.mcpserver import MCPServer
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-import hub_tools as tools  # noqa: E402
+import hub_tools as tools
 
 mcp = MCPServer("hub-czn")
 client = tools.HubClient()

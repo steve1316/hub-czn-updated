@@ -89,13 +89,15 @@ class AppState:
         except Exception:
             pass
 
-    def push_log(self, entry: dict) -> None:
+    def push_log(self, level: str, message: str) -> None:
         """
-        Publish a capture log entry to the WebSocket queue and the tail buffer.
+        Publish a timestamped capture log entry to the WebSocket queue and the tail buffer.
 
         Args:
-            entry: Dict with `level`, `message` and `timestamp`.
+            level: One of "info", "success", "warning" or "error".
+            message: The log line shown in the UI.
         """
+        entry = {"level": level, "message": message, "timestamp": time.strftime("%H:%M:%S")}
         self.log_queue.put(entry)
         self.log_tail.append(entry)
 
@@ -119,11 +121,7 @@ class AppState:
                         level = "success"
                     elif "warning" in msg_lower:
                         level = "warning"
-                self.push_log({
-                    "level": level,
-                    "message": msg,
-                    "timestamp": time.strftime("%H:%M:%S"),
-                })
+                self.push_log(level, msg)
 
             def _on_data_saved():
                 mgr = self._capture_manager

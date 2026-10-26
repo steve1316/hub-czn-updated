@@ -89,11 +89,7 @@ def handle_proxy_death() -> bool:
     message = "Capture proxy stopped unexpectedly."
     if removed:
         message += " Removed the game redirect."
-    state.push_log({
-        "level": "error",
-        "message": message,
-        "timestamp": time.strftime("%H:%M:%S"),
-    })
+    state.push_log("error", message)
     return removed
 
 

@@ -7,7 +7,7 @@ from api.state import state
 def _push(n: int) -> None:
     """Push `n` numbered log entries through the same path the capture manager uses."""
     for i in range(n):
-        state.push_log({"level": "info", "message": f"line {i}", "timestamp": "00:00:00"})
+        state.push_log("info", f"line {i}")
 
 
 def test_tail_returns_last_n_lines(client):

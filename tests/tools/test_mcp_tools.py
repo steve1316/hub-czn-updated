@@ -5,7 +5,7 @@ from types import SimpleNamespace
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "tools" / "mcp"))
 
-import hub_tools as t  # noqa: E402
+import hub_tools as t
 
 
 class StubClient:
@@ -40,12 +40,11 @@ def test_capture_start_sends_region_and_debug():
     assert c.calls[0] == ("POST", "/api/capture/start", {"json": {"region": "asia", "debug": True}})
 
 
-def test_log_tail_clamps_n():
+def test_log_tail_passes_n_to_endpoint():
     c = StubClient()
-    t.capture_log_tail(c, 9999)
-    t.capture_log_tail(c, 0)
-    assert c.calls[0][2]["params"] == {"n": 500}
-    assert c.calls[1][2]["params"] == {"n": 1}
+    t.capture_log_tail(c, 7)
+    assert c.calls[0][1] == "/api/capture/log"
+    assert c.calls[0][2]["params"] == {"n": 7}
 
 
 def test_latest_snapshot_summarises():
