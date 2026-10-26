@@ -168,3 +168,7 @@ def test_overlapping_starts_only_start_once():
     state.capture_running = False
     state.reset_capture_manager()
 
+def test_status_region_follows_saved_region_when_idle():
+    capture_settings.save_capture_settings({"auto_start": False, "region": "asia"})
+    state.capture_region = "global"
+    assert client.get("/api/capture/status").json()["region"] == "asia"

@@ -68,7 +68,8 @@ class CaptureSettingsRequest(BaseModel):
 def get_capture_status():
     return {
         "running": state.capture_running,
-        "region": state.capture_region,
+        # While idle, show the saved region so the page matches what auto-start will use.
+        "region": state.capture_region if state.capture_running else load_capture_settings()["region"],
         "admin": _is_admin(),
         "rescue_file": state.rescue_file_path,
         "auto_started": state.capture_auto_started,
