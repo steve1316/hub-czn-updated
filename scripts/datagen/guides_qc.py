@@ -19,11 +19,19 @@ CLASSES = {
     "short_ladders": "Ladders with fewer levels than the card has epiphanies",
 }
 
-# A prose line that looks like a note for one level of a listed card, such as "Flow 2: x", 'Truth 3" x' or "OUAT 1, x".
-_LOOSE_LINE = re.compile(r"^\s*[A-Za-z][\w' ]{0,30}?\s*[:,\"]?\s*\d\s*[:,\"]")
+# Guesses the importer makes that the guides do not show, listed so they can be checked by eye. Problem class -> what it counts.
+GUESSES = {
+    "dropped_icons": "Unmatched small pictures dropped without review",
+    "positional_notes": "Numbered note lines placed on a ladder only by their level number",
+    "filled_pictures": "Pictures given a card only because the run around them would otherwise be short",
+}
+
+# A prose line that starts with a short name, a level number and a separator, such as "Flow 2: x", 'Truth 3" x' or "OUAT 1, x".
+# The importer uses it to place such lines, and this report to find the ones it left loose.
+NUMBERED_LINE = re.compile(r"^\s*[A-Za-z' ]{1,20}\s\d\s*[:,\"]")
 
 
-def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated: dict[str, list[str]]) -> dict[str, list[str]]:
+def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated: dict[str, list[str]], guesses: dict[str, list[str]] | None = None) -> dict[str, list[str]]:
     """
     The problems in the guides the importer wrote.
 
@@ -31,11 +39,13 @@ def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated
         guides: (slug, name, guide) for every guide.
         variants_of: Card id -> its `epiphany.variants`, whose length less the base card is the card's epiphany count.
         unidentified_rated: Guide name -> the cells of pictures in rated rows that nothing identified.
+        guesses: Class in `GUESSES` -> one line per guess the importer made, such as a cell.
 
     Returns:
-        Problem class -> one line per problem, such as "Adelheid: card-ratings Protect Us x2". Every class in `CLASSES` is present.
+        Problem class -> one line per problem, such as "Adelheid: card-ratings Protect Us x2". Every class in `CLASSES` and `GUESSES` is present.
     """
     found: dict[str, list[str]] = {key: [] for key in CLASSES}
+    found.update({key: list((guesses or {}).get(key, [])) for key in GUESSES})
     for _, name, guide in guides:
         for page in guide["sections"]:
             blocks = page["blocks"]
@@ -43,21 +53,23 @@ def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated
                 if block["type"] != "card-list":
                     continue
                 where = f"{name}: {page['id']}"
-                counts = Counter(item["cardId"] for item in block["items"])
+                laddered = {item["cardId"] for item in block["items"] if item.get("epiphanies")}
                 for item in block["items"]:
                     ladder = item.get("epiphanies")
                     if not ladder:
                         continue
+                    label = item.get("name", item["cardId"])
                     if all(not level["note"]["en"].strip() for level in ladder):
-                        found["empty_ladders"].append(f"{where} {item.get('name', item['cardId'])}")
-                    if len(ladder) < len(variants_of(item["cardId"])) - 1:
-                        found["short_ladders"].append(f"{where} {item.get('name', item['cardId'])} has {len(ladder)} of {len(variants_of(item['cardId'])) - 1}")
-                for card_id, count in counts.items():
-                    if count > 1 and not any(item.get("epiphanies") for item in block["items"] if item["cardId"] == card_id):
+                        found["empty_ladders"].append(f"{where} {label}")
+                    levels = len(variants_of(item["cardId"])) - 1
+                    if len(ladder) < levels:
+                        found["short_ladders"].append(f"{where} {label} has {len(ladder)} of {levels}")
+                for card_id, count in Counter(item["cardId"] for item in block["items"]).items():
+                    if count > 1 and card_id not in laddered:
                         found["unfolded_duplicates"].append(f"{where} {card_id} x{count}")
                 after = blocks[index + 1] if index + 1 < len(blocks) else None
                 if after and after["type"] == "prose":
-                    found["loose_numbered_lines"].extend(f"{where} {line.strip()[:50]}" for line in after["body"]["en"].split("\n") if _LOOSE_LINE.match(line))
+                    found["loose_numbered_lines"].extend(f"{where} {line.strip()[:50]}" for line in after["body"]["en"].split("\n") if NUMBERED_LINE.match(line))
         found["unidentified_rated"].extend(f"{name}: {ref}" for ref in unidentified_rated.get(name, []))
     return found
 
@@ -86,7 +98,7 @@ def report(found: dict[str, list[str]]) -> bytes:
         The page, one section per problem class listing each problem.
     """
     parts = ["# Guides QC\n"]
-    for key, what in CLASSES.items():
+    for key, what in {**CLASSES, **GUESSES}.items():
         lines = found[key]
         parts.append(f"\n## {key} ({len(lines)})\n\n{what}.\n\n" + "".join(f"- {line}\n" for line in lines))
     return "".join(parts).encode("utf-8")

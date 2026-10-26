@@ -769,9 +769,11 @@ def test_qc_counts_each_problem_class():
                                         _qc_item("c_1_b", "B", epiphanies=[ladder, {**ladder, "level": 2}])]},
         {"type": "prose", "body": {"en": 'Flow 2: nice\nTruth 3" nice\nJust prose'}},
     ]
-    found = guides_qc.collect(_qc_guide(blocks), lambda card_id: [None] * 6, {"Olga": ["Olga!B3"]})
+    found = guides_qc.collect(_qc_guide(blocks), lambda card_id: [None] * 6, {"Olga": ["Olga!B3"]}, {"dropped_icons": ["Olga!C4"]})
     assert [len(found[key]) for key in guides_qc.CLASSES] == [1, 1, 2, 1, 1]
-    assert guides_qc.summary(found) == "guides QC: unfolded_duplicates=1 empty_ladders=1 loose_numbered_lines=2 unidentified_rated=1 short_ladders=1"
+    assert guides_qc.summary(found) == ("guides QC: unfolded_duplicates=1 empty_ladders=1 loose_numbered_lines=2 unidentified_rated=1 short_ladders=1 "
+                                        "dropped_icons=1 positional_notes=0 filled_pictures=0")
+    assert b"Olga!C4" in guides_qc.report(found)
     assert b"c_1_a x2" in guides_qc.report(found)
 
 
@@ -816,7 +818,7 @@ def test_an_unread_picture_that_does_not_complete_a_run_stays_a_gap():
 
 def test_two_pictures_of_one_card_show_as_one_card_times_two(monkeypatch):
     # Neither picture's epiphany can be read.
-    monkeypatch.setattr(guides, "_resolve_deck_card", lambda *args: False)
+    monkeypatch.setattr(guides, "_find_epiphany", lambda *args: None)
     builder = _builder()
     row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
     for card in row:
@@ -831,11 +833,10 @@ def test_two_pictures_of_one_card_take_the_levels_they_show(monkeypatch):
     builder = _builder()
     builder.read_text = lambda data: ""
 
-    def resolve(card, download, ref, decks, overrides, read, variants_of):
-        card["epiphany"] = {"level": {"B1": 4, "B2": 1}[ref]}
-        return True
+    def find(card_id, download, ref, decks, overrides, read, variants_of):
+        return SimpleNamespace(level={"B1": 4, "B2": 1}[ref]), None
 
-    monkeypatch.setattr(guides, "_resolve_deck_card", resolve)
+    monkeypatch.setattr(guides, "_find_epiphany", find)
     row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
     row[0]["picture"], row[1]["picture"] = (None, "B1"), (None, "B2")
     assert [card["level"] for card in builder._settle_repeats(row, {0: "5/5", 1: "3/5"})] == [1, 4]
@@ -867,3 +868,18 @@ def test_card_takes_a_trusted_title_over_art_of_another_card():
 def test_card_without_art_uses_the_title_then_the_wide_pool():
     assert _card_builder(None, ("c_2_tut1", 0.85), "c_9")._card(_render()) == "c_2_tut1"
     assert _card_builder(None, (None, 0.0), "c_9")._card(_render()) == "c_9"
+
+
+def test_guesses_are_collected_for_the_qc_report():
+    filled = []
+    row = _row("c_30134_uni2", "c_30134_uni2", None, "c_30134_uni2", "c_30134_uni2")
+    row[2]["picture"] = (None, "Tab!D5")
+    guides._fill_unread(row, _variants_of, filled)
+    assert filled == ["Tab!D5"]
+    by_position = []
+    cards = _flow_list()
+    guides._attach_notes([cards, _prose("Zap 1: one\nZap 2: two")], by_position)
+    assert by_position == ["Zap 1: one", "Zap 2: two"]
+    builder = _builder(picture_size=(123, 120))
+    builder.sections(_grid(_cell(20, 1, pictures=1)))
+    assert builder.dropped_icons == ["Tab!B21"]

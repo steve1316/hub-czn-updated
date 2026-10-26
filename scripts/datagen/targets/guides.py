@@ -21,14 +21,15 @@ import io
 import json
 import re
 from dataclasses import dataclass, field
+from itertools import groupby
 from functools import cached_property, lru_cache, partial
 from pathlib import Path
 
 from PIL import Image
 
 from scripts.datagen import card_text, epiphany, guides_qc, images, roster
-from scripts.datagen.art import webp
-from scripts.datagen.epiphany import Extra
+from scripts.datagen.art import wanted, webp
+from scripts.datagen.epiphany import Extra, Variant
 from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
@@ -73,7 +74,7 @@ _NOTE_LINE = re.compile(r"^([^:]{1,40}):\s*(.+)$")
 # A numbered note line that uses a comma or a quote instead of the colon, such as "OUAT 1, 1 cost is bad" or 'Truth 3" Just damage'.
 _NUMBERED_NOTE_LINE = re.compile(r"^(.*?\s*\d)\s*[,\"]\s*(.+)$")
 # A line that starts with a short name and a level number then a separator, such as "Whirl 2: x", for the positional rule.
-_SHORT_NUMBERED_LINE = re.compile(r"^\s*[A-Za-z' ]{1,20}\s\d\s*[:,\"]")
+_SHORT_NUMBERED_LINE = guides_qc.NUMBERED_LINE
 # A note label's base word must be at least this close to a word of the card's name, so a typo such as "Whiirl" still finds "Whirl".
 _NOTE_NAME_CLOSENESS = 0.8
 # A note label naming one epiphany level by number, such as "Flow 2".
@@ -335,6 +336,7 @@ def build(ctx: Context) -> TargetResult:
     guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
     rated_misses: dict[str, list[str]] = {}
+    guesses: dict[str, list[str]] = {key: [] for key in guides_qc.GUESSES}
 
     for tab_name, gid in tabs(fetcher.text(HTMLVIEW_URL)):
         res_id = tab_ids[tab_name] if tab_name in tab_ids else names.get(_normalise(tab_name.split("/")[0]))
@@ -363,7 +365,11 @@ def build(ctx: Context) -> TargetResult:
         for file_name, download in builder.pictures.items():
             files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
         for file_name, download in builder.strips.items():
-            new_files[IMAGES_DIR / file_name] = webp(io.BytesIO(download.data), quality=IMAGE_QUALITY)
+            if (path := IMAGES_DIR / file_name) not in new_files and wanted(ctx, path):
+                new_files[path] = webp(io.BytesIO(download.data), quality=IMAGE_QUALITY)
+        guesses["dropped_icons"].extend(builder.dropped_icons)
+        guesses["filled_pictures"].extend(builder.filled)
+        guesses["positional_notes"].extend(f"{tab_name}: {line}" for line in builder.positional_notes)
 
     # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
     unknown_epiphanies: dict[str, _Picture] = {}
@@ -372,7 +378,7 @@ def build(ctx: Context) -> TargetResult:
             _add_unknown_epiphany(unknown_epiphanies, download, ref)
     for guide_slug, _, guide in guides:
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
-    found = guides_qc.collect(guides, variants_of, rated_misses)
+    found = guides_qc.collect(guides, variants_of, rated_misses, guesses)
 
     issues.extend(overrides.validate({}, keyed_by_output=False))
     if skipped:
@@ -452,6 +458,16 @@ def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
         if match:
             owned.setdefault(match.group(1), []).append(card_id)
     return owned
+
+
+def _is_icon(picture: Image.Image) -> bool:
+    """Whether an unmatched picture is small enough in both directions to be an icon."""
+    return picture.width <= ICON_MAX_SIZE and picture.height <= ICON_MAX_SIZE
+
+
+def _is_strip(picture: Image.Image) -> bool:
+    """Whether an unmatched picture is much wider than it is tall."""
+    return picture.height > 0 and picture.width / picture.height >= STRIP_MIN_RATIO
 
 
 def _is_base_card(card_id: str) -> bool:
@@ -764,6 +780,10 @@ class _GuideBuilder:
         self.pictures: dict[str, _Download] = {}
         # File name -> picture, for the wide strips this guide shows as image blocks.
         self.strips: dict[str, _Download] = {}
+        # For the QC report: the cells of dropped icons, of pictures given a card by the run they sit in, and the note lines placed by their number.
+        self.dropped_icons: list[str] = []
+        self.filled: list[str] = []
+        self.positional_notes: list[str] = []
         # Cells of pictures in rated rows that nothing identified, for the QC report.
         self.rated_misses: list[str] = []
         # The tab's `layout`, set by `sections`, which keeps a cached picture from being served for a cell it has moved out of.
@@ -805,7 +825,7 @@ class _GuideBuilder:
                     # A later panel's heading would otherwise be lost, so it leads that panel's blocks instead.
                     panel_blocks.insert(0, self._prose(panel_title))
                 blocks.extend(panel_blocks)
-            blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks)]
+            blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks, self.positional_notes)]
             if not blocks:
                 continue
             sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
@@ -954,14 +974,15 @@ class _GuideBuilder:
                         if card_id is None:
                             self._miss(download, kind, ref, bool(ratings))
                         row_cards.append({"cardId": card_id, "col": cell.col, "picture": (download, ref)})
-                    elif (strip := self._strip(download)) is not None:
-                        if strip:
-                            strips.append({"type": "image", "image": strip})
+                    elif _is_icon(download.picture):
+                        self.dropped_icons.append(ref)
+                    elif _is_strip(download.picture):
+                        strips.append({"type": "image", "image": self._strip_name(download)})
                     else:
                         # Banners and the like. Listed for review so they can be labelled or skipped.
                         self._miss(download, kind, ref, bool(ratings))
             if ratings:
-                _fill_unread(row_cards, self.variants_of)
+                _fill_unread(row_cards, self.variants_of, self.filled)
             row_cards = _number_runs(row_cards)
             cards.extend(self._settle_repeats(row_cards, ratings) if ratings else row_cards)
             if face_row:
@@ -977,24 +998,19 @@ class _GuideBuilder:
         blocks.extend(strips)
         return consumed, blocks, named
 
-    def _strip(self, download: _Download) -> str | None:
+    def _strip_name(self, download: _Download) -> str:
         """
-        What to do with an unmatched picture that is neither a face nor a card.
+        The file name a wide strip is shown under, which the guide ships.
 
         Args:
             download: The sheet's picture.
 
         Returns:
-            The file name to show a wide strip under, "" for an icon to drop, or None when it needs review.
+            The name, from the picture's hash.
         """
-        width, height = download.picture.size
-        if width <= ICON_MAX_SIZE and height <= ICON_MAX_SIZE:
-            return ""
-        if height and width / height >= STRIP_MIN_RATIO:
-            name = f"{download.sha1[:16]}.webp"
-            self.strips[name] = download
-            return name
-        return None
+        name = f"{download.sha1[:16]}.webp"
+        self.strips[name] = download
+        return name
 
     @cached_property
     def _own_cards(self) -> set[str]:
@@ -1032,14 +1048,8 @@ class _GuideBuilder:
             When they cannot be read, equally rated pictures become one card with a `count`. Otherwise the run is left as it is.
         """
         settled: list[dict] = []
-        index = 0
-        while index < len(row_cards):
-            end = index
-            while end < len(row_cards) and row_cards[end]["cardId"] == row_cards[index]["cardId"]:
-                end += 1
-            run = row_cards[index:end]
-            index = end
-            card_id = run[0]["cardId"]
+        for card_id, group in groupby(row_cards, key=lambda card: card["cardId"]):
+            run = list(group)
             if len(run) == 1 or len(run) == len(self.variants_of(card_id)) - 1:
                 settled.extend(run)
                 continue
@@ -1069,10 +1079,10 @@ class _GuideBuilder:
         levels = []
         for card in run:
             download, ref = card["picture"]
-            probe = {"cardId": card["cardId"]}
-            if not _resolve_deck_card(probe, download, ref, self.decks, self.overrides.entries, self.read_text, self.variants_of) or "epiphany" not in probe:
+            found = _find_epiphany(card["cardId"], download, ref, self.decks, self.overrides.entries, self.read_text, self.variants_of)
+            if found is None:
                 return None
-            levels.append(probe["epiphany"]["level"])
+            levels.append(found[0].level)
         return levels if len(set(levels)) == len(levels) and 0 not in levels else None
 
     def _miss(self, download: _Download, kind: str, ref: str, rated: bool) -> None:
@@ -1348,56 +1358,49 @@ def _number_runs(row_cards: list[dict]) -> list[dict]:
         The identified cards, each with its `epiphany` position, 1 for a card that does not follow the same card.
     """
     numbered: list[dict] = []
-    last, position = None, 0
-    for card in row_cards:
-        if card["cardId"] is None:
-            last = None
-            continue
-        position = position + 1 if card["cardId"] == last else 1
-        last = card["cardId"]
-        numbered.append({**card, "epiphany": position})
+    for card_id, run in groupby(row_cards, key=lambda card: card["cardId"]):
+        if card_id is not None:
+            numbered.extend({**card, "epiphany": position} for position, card in enumerate(run, 1))
     return numbered
 
 
-def _fill_unread(row_cards: list[dict], variants_of) -> None:
+def _fill_unread(row_cards: list[dict], variants_of, filled: list[str] | None = None) -> None:
     """
     Give the pictures nothing identified (cardId None) the card they sit in a run of, when that makes the run whole.
 
     Args:
         row_cards: One row's cards in order. Updated in place.
         variants_of: Card id -> its `epiphany.variants`, whose length less the base card is the length of a whole run.
+        filled: Collects the cell of each picture given a card, for the QC report. Not collected when None.
     """
-    index = 0
-    while index < len(row_cards):
-        if row_cards[index]["cardId"] is not None:
-            index += 1
-            continue
-        end = index
-        while end < len(row_cards) and row_cards[end]["cardId"] is None:
-            end += 1
-        left = row_cards[index - 1]["cardId"] if index else None
-        right = row_cards[end]["cardId"] if end < len(row_cards) else None
-        fits = []
-        for card_id in dict.fromkeys([left, right]):
-            if card_id is None:
-                continue
-            before = _run_length(row_cards, index - 1, -1, card_id) if left == card_id else 0
-            after = _run_length(row_cards, end, 1, card_id) if right == card_id else 0
-            if before + (end - index) + after == len(variants_of(card_id)) - 1:
-                fits.append(card_id)
-        if len(fits) == 1:
-            for card in row_cards[index:end]:
-                card["cardId"] = fits[0]
-        index = end
+    # Each run of one card id (or of unread pictures) as [card id, how many pictures].
+    runs = [[card_id, len(list(run))] for card_id, run in groupby(row_cards, key=lambda card: card["cardId"])]
+    start = 0
+    for index, (card_id, size) in enumerate(runs):
+        end = start + size
+        if card_id is None:
+            left = runs[index - 1][0] if index else None
+            right = runs[index + 1][0] if index + 1 < len(runs) else None
+            fits = [
+                candidate for candidate in dict.fromkeys([left, right])
+                if candidate is not None and _run_total(runs, index - 1, -1, candidate) + size + _run_total(runs, index + 1, 1, candidate) == len(variants_of(candidate)) - 1
+            ]
+            if len(fits) == 1:
+                runs[index][0] = fits[0]
+                for card in row_cards[start:end]:
+                    card["cardId"] = fits[0]
+                    if filled is not None and card.get("picture"):
+                        filled.append(card["picture"][1])
+        start = end
 
 
-def _run_length(row_cards: list[dict], start: int, step: int, card_id: str) -> int:
-    """How many cards in a row, from `start` in the direction of `step`, are this card."""
-    count = 0
-    while 0 <= start < len(row_cards) and row_cards[start]["cardId"] == card_id:
-        count += 1
-        start += step
-    return count
+def _run_total(runs: list[list], index: int, step: int, card_id: str) -> int:
+    """How many pictures the runs from `index` in the direction of `step` hold, while they are this card."""
+    total = 0
+    while 0 <= index < len(runs) and runs[index][0] == card_id:
+        total += runs[index][1]
+        index += step
+    return total
 
 
 def _complete_runs(cards: list[dict], variants_of) -> set[str]:
@@ -1451,12 +1454,37 @@ def _fold(items: list[dict], variants_of) -> list[dict]:
     return folded
 
 
-def _attach_notes(blocks: list[dict]) -> list[dict]:
+def _line_target(line: str, items: list[dict], positional: dict | None, by_position: list[str] | None) -> tuple[dict, str] | None:
+    """
+    The item, or epiphany of one, that a "Name: note" prose line is for.
+
+    Args:
+        line: The prose line.
+        items: The listed cards or partners.
+        positional: The one card whose ladder a numbered label may pick by its number alone.
+        by_position: Collects the lines that were placed only by their number, for the QC report. Not collected when None.
+
+    Returns:
+        The target and the line's note text, or None when the line names none of the items.
+    """
+    for match in filter(None, (_NOTE_LINE.match(line), _NUMBERED_NOTE_LINE.match(line))):
+        target = _note_target(items, match.group(1))
+        if target is None and positional:
+            target = _note_target(items, match.group(1), positional)
+            if target is not None and by_position is not None:
+                by_position.append(line.strip())
+        if target is not None:
+            return target, match.group(2)
+    return None
+
+
+def _attach_notes(blocks: list[dict], by_position: list[str] | None = None) -> list[dict]:
     """
     "Name: note" prose lines moved onto the card or partner they name.
 
     Args:
         blocks: A section's blocks.
+        by_position: Collects the lines placed only by their level number, for the QC report. Not collected when None.
 
     Returns:
         The blocks. Prose straight after a card-list or partner-list gives up each line that names one of its items, and the
@@ -1475,15 +1503,11 @@ def _attach_notes(blocks: list[dict]) -> list[dict]:
         numbered = sum(1 for line in lines if _SHORT_NUMBERED_LINE.match(line))
         positional = ladders[0] if previous["type"] == "card-list" and len(previous["items"]) == 1 and ladders and numbered >= 2 else None
         for line in lines:
-            target, text = None, ""
-            for match in (_NOTE_LINE.match(line), _NUMBERED_NOTE_LINE.match(line)):
-                target = _note_target(previous["items"], match.group(1), positional) if match else None
-                if target is not None:
-                    text = match.group(2)
-                    break
-            if target is None:
+            found = _line_target(line, previous["items"], positional, by_position)
+            if found is None:
                 rest.append(line)
                 continue
+            target, text = found
             note = target["note"]["en"]
             target["note"] = {"en": f"{note}\n{text}" if note else text}
         if any(line.strip() for line in rest):
@@ -1506,6 +1530,42 @@ def _as_deck(block: dict) -> dict | None:
     return {"type": "deck", "cards": [{key: item[key] for key in ("cardId", "name", "cost") if key in item} for item in block["items"]]}
 
 
+def _find_epiphany(card_id: str, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> tuple[Variant, Extra | None] | None:
+    """
+    The epiphany a card picture shows and its added divine or common line.
+
+    Args:
+        card_id: The card, which has epiphanies.
+        download: Its picture.
+        ref: Its cell, such as "Rossweisse!C10".
+        decks: The rated pictures, for an exact copy.
+        overrides: Guides override entries by cell. One can give `epiphany` (0 for the base card) and `divine` or `common`.
+        read: Picture bytes -> its OCR text.
+        variants_of: Card id -> its `epiphany.variants`.
+
+    Returns:
+        The level's variant and the added line, or None when nothing read it clearly.
+    """
+    variants = {variant.level: variant for variant in variants_of(card_id)}
+    entry = overrides.get(ref, {})
+    extra = None
+    if "epiphany" in entry:
+        level = entry["epiphany"]
+        extra = _extra(entry.get("divine") or entry.get("common"))
+    elif (level := decks.level_of(card_id, download)) is None:
+        key = (card_id, download.sha1)
+        if key not in decks.matches:
+            # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
+            god = card_text.match_god(download.picture)
+            extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
+            decks.matches[key] = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
+        match = decks.matches[key]
+        if match is None:
+            return None
+        level, extra = match.level, match.extra
+    return (variants[level], extra) if level in variants else None
+
+
 def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> bool:
     """
     Set the epiphany a deck card shows, its added divine or common line, and the cost that gives it.
@@ -1522,30 +1582,14 @@ def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPi
     Returns:
         True when the epiphany is known, or the card has none to find. False when nothing read it clearly.
     """
-    variants = {variant.level: variant for variant in variants_of(card["cardId"])}
-    if not variants:
+    if not variants_of(card["cardId"]):
         return True
-    entry = overrides.get(ref, {})
-    extra = None
-    if "epiphany" in entry:
-        level = entry["epiphany"]
-        extra = _extra(entry.get("divine") or entry.get("common"))
-    elif (level := decks.level_of(card["cardId"], download)) is None:
-        key = (card["cardId"], download.sha1)
-        if key not in decks.matches:
-            # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
-            god = card_text.match_god(download.picture)
-            extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
-            decks.matches[key] = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
-        match = decks.matches[key]
-        if match is None:
-            return False
-        level, extra = match.level, match.extra
-    variant = variants.get(level)
-    if variant is None:
+    found = _find_epiphany(card["cardId"], download, ref, decks, overrides, read, variants_of)
+    if found is None:
         return False
+    variant, extra = found
     card["cost"] = epiphany.card_cost(variant.cost, extra)
-    card["epiphany"] = {"level": level, "name": variant.name, "text": {"en": variant.text}}
+    card["epiphany"] = {"level": variant.level, "name": variant.name, "text": {"en": variant.text}}
     if extra:
         card["extra"] = {"id": extra.id, **({"god": extra.god} if extra.god else {}), "text": {"en": extra.text}}
     return True
