@@ -20,7 +20,6 @@ import html
 import io
 import json
 import re
-from difflib import SequenceMatcher
 from dataclasses import dataclass, field
 from functools import cached_property, lru_cache, partial
 from pathlib import Path
@@ -312,7 +311,7 @@ def build(ctx: Context) -> TargetResult:
     faces = images.FaceMatcher(ctx.client.root / CLIENT_FACE_DIR)
     labels = _PictureLabels(overrides.directives.get("_pictures", {}))
     match_cache_path = cache / MATCH_CACHE
-    match_cache: dict[str, str] = json.loads(match_cache_path.read_text(encoding="utf-8")) if match_cache_path.is_file() else {}
+    match_cache = _load_cache(match_cache_path)
     tab_ids = overrides.directives.get("_tabs", {})
     names = {_normalise(entry["name"]): res_id for res_id, entry in roster.combatants().items()}
     own_cards = _cards_by_owner(ctx)
@@ -322,9 +321,9 @@ def build(ctx: Context) -> TargetResult:
     card_names = _card_names(ctx, shared_cards)
     variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))
     text_cache_path = cache / CARD_TEXT_CACHE
-    text_cache: dict[str, str] = json.loads(text_cache_path.read_text(encoding="utf-8")) if text_cache_path.is_file() else {}
+    text_cache = _load_cache(text_cache_path)
     title_cache_path = cache / CARD_TITLE_CACHE
-    title_cache: dict[str, str] = json.loads(title_cache_path.read_text(encoding="utf-8")) if title_cache_path.is_file() else {}
+    title_cache = _load_cache(title_cache_path)
     titles = _TitleCards(card_names, title_cache)
     sift_wide = _CachedSift("sift-wide", lambda: _wide_card_art(ctx), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
     read_text = lambda data: card_text.read_card_text(data, text_cache)
@@ -401,6 +400,19 @@ def build(ctx: Context) -> TargetResult:
     fetcher.prune()
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
     return TargetResult(files, f"{len(guides)} guides, {len(new_files)} image(s) to add", issues, new_files=new_files)
+
+
+def _load_cache(path: Path) -> dict[str, str]:
+    """
+    A cache file from an earlier run.
+
+    Args:
+        path: The JSON file.
+
+    Returns:
+        Its contents, or an empty dict when there is no file yet.
+    """
+    return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
 
 
 def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) -> dict[str, dict[str, str]]:
@@ -1557,6 +1569,11 @@ def _extra(extra_id: str | None) -> Extra | None:
     return next((line for line in [*epiphany.divine_epiphanies(), *epiphany.common_epiphanies()] if line.id == extra_id), None)
 
 
+def _name_words(name: str) -> list[str]:
+    """A card name split into its words, which are what a note label may name."""
+    return [word for word in re.split(r"[\s:]+", name) if word]
+
+
 def _names_card(base: str, name: str) -> bool:
     """
     Whether a note label's base word stands for a card name.
@@ -1568,12 +1585,12 @@ def _names_card(base: str, name: str) -> bool:
     Returns:
         True when the base is the name, one of its words, its initials ("OUAT"), or within a typo of one of its words.
     """
-    words = [word for word in re.split(r"[\s:]+", name) if word]
+    words = _name_words(name)
     if not base or base == name or base in words:
         return True
     if len(words) > 1 and base == "".join(word[0] for word in words):
         return True
-    return len(base) >= 3 and any(SequenceMatcher(None, base, word).ratio() >= _NOTE_NAME_CLOSENESS for word in words)
+    return len(base) >= 3 and any(difflib.SequenceMatcher(None, base, word).ratio() >= _NOTE_NAME_CLOSENESS for word in words)
 
 
 def _note_target(items: list[dict], label: str, positional: dict | None = None) -> dict | None:
@@ -1606,7 +1623,7 @@ def _note_target(items: list[dict], label: str, positional: dict | None = None) 
                 found = next((entry for entry in epiphanies if entry["level"] == level), None)
                 if found:
                     return found
-        elif name == wanted or wanted in re.split(r"[\s:]+", name):
+        elif name == wanted or wanted in _name_words(name):
             return item
     if numbered and positional:
         return next((entry for entry in positional["epiphanies"] if entry["level"] == int(numbered.group(2))), None)

@@ -61,6 +61,31 @@ class Match:
     extra: Extra | None
 
 
+def _read_cached(data: bytes, cache: dict[str, str], box: tuple[float, float, float, float], scale: int) -> str:
+    """
+    The OCR text of part of a card picture, remembered by the picture's hash.
+
+    Args:
+        data: The picture file.
+        cache: sha1 of the picture -> its text, from earlier runs. Updated in place.
+        box: The part to read, as the fractions (left, top, right, bottom) of the picture.
+        scale: How much to enlarge the part first, as OCR reads small text far better.
+
+    Returns:
+        The OCR text, one space between the lines it found.
+    """
+    key = hashlib.sha1(data).hexdigest()
+    if key not in cache:
+        picture = Image.open(io.BytesIO(data)).convert("RGB")
+        width, height = picture.size
+        left, top, right, bottom = int(width * box[0]), int(height * box[1]), int(width * box[2]), int(height * box[3])
+        part = picture.crop((left, top, right, max(bottom, top + 1)))
+        big = part.resize((part.width * scale, part.height * scale), Image.LANCZOS)
+        result, _ = _ocr()(np.asarray(big))
+        cache[key] = " ".join(line[1] for line in result or [])
+    return cache[key]
+
+
 def read_card_text(data: bytes, cache: dict[str, str]) -> str:
     """
     The text on a card picture.
@@ -72,14 +97,7 @@ def read_card_text(data: bytes, cache: dict[str, str]) -> str:
     Returns:
         The OCR text of the card's text box, one space between the lines it found.
     """
-    key = hashlib.sha1(data).hexdigest()
-    if key not in cache:
-        picture = Image.open(io.BytesIO(data)).convert("RGB")
-        width, height = picture.size
-        big = picture.resize((width * OCR_SCALE, height * OCR_SCALE), Image.LANCZOS)
-        result, _ = _ocr()(np.asarray(big.crop((0, int(big.height * TEXT_TOP), big.width, big.height))))
-        cache[key] = " ".join(line[1] for line in result or [])
-    return cache[key]
+    return _read_cached(data, cache, (0.0, TEXT_TOP, 1.0, 1.0), OCR_SCALE)
 
 
 def read_card_title(data: bytes, cache: dict[str, str]) -> str:
@@ -93,15 +111,7 @@ def read_card_title(data: bytes, cache: dict[str, str]) -> str:
     Returns:
         The OCR text of the title bar, one space between the pieces it found, or "" when it read nothing.
     """
-    key = hashlib.sha1(data).hexdigest()
-    if key not in cache:
-        picture = Image.open(io.BytesIO(data)).convert("RGB")
-        width, height = picture.size
-        bar = picture.crop((int(width * TITLE_LEFT), 0, width, max(int(height * TITLE_BOTTOM), 1)))
-        big = bar.resize((bar.width * TITLE_SCALE, bar.height * TITLE_SCALE), Image.LANCZOS)
-        result, _ = _ocr()(np.asarray(big))
-        cache[key] = " ".join(line[1] for line in result or [])
-    return cache[key]
+    return _read_cached(data, cache, (TITLE_LEFT, 0.0, 1.0, TITLE_BOTTOM), TITLE_SCALE)
 
 
 def match_epiphany(text: str, variants: list[Variant], extras: list[Extra]) -> Match | None:
