@@ -43,7 +43,7 @@ export function CombatantCard({ combatant, selected, onClick }: CombatantCardPro
       <p title={combatant.name} className="text-xs font-medium text-[#ffffff] text-center leading-tight truncate w-full">
         {combatant.name}
       </p>
-      <p className="text-[10px] text-[#b3b3b3]">{t('combatants.level', { level: combatant.level })}</p>
+      <p className="text-[11px] text-[#b3b3b3]">{t('combatants.level', { level: combatant.level })}</p>
       <span
         className={`text-[11px] font-semibold px-2 py-0.5 rounded-full ${
           combatant.avg_gear_score > 0

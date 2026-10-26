@@ -68,7 +68,7 @@ function EquipmentCard({
 
           <span
             className={[
-              'rounded-md border px-1.5 py-0.5 text-[9px] font-black uppercase',
+              'rounded-md border px-1.5 py-0.5 text-[11px] font-black uppercase',
               getItemRarityClassName(item.rarity),
             ].join(' ')}
           >
@@ -76,7 +76,7 @@ function EquipmentCard({
           </span>
 
           {selected && (
-            <span className="rounded-md bg-[#f97316]/20 px-1.5 py-0.5 text-[9px] font-bold uppercase text-[#fdba74]">
+            <span className="rounded-md bg-[#f97316]/20 px-1.5 py-0.5 text-[11px] font-bold uppercase text-[#fdba74]">
               {t('deckBuilder.selected')}
             </span>
           )}
@@ -86,7 +86,7 @@ function EquipmentCard({
           {localized(item.description, lang)}
         </p>
 
-        <div className="mt-2 flex flex-wrap items-center gap-2 text-[10px]">
+        <div className="mt-2 flex flex-wrap items-center gap-2 text-[11px]">
           {statText && (
             <span className="font-black text-[#facc15]">
               {statText}
@@ -198,7 +198,7 @@ export function EquipmentSelectionModal({
           <div className="relative">
             <Search
               size={16}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#777]"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8a8a]"
             />
 
             <input
@@ -267,7 +267,7 @@ export function EquipmentSelectionModal({
         </div>
 
         <footer className="flex items-center justify-between border-t border-[#282838] px-4 py-3">
-          <p className="text-xs text-[#777]">
+          <p className="text-xs text-[#8a8a8a]">
             {t('deckBuilder.itemsFound', { count: filteredItems.length })}
           </p>
 

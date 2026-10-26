@@ -139,7 +139,7 @@ function CompactTypeBadge({ type }: { type: string }) {
     <span
       title={type}
       className={[
-        'inline-block min-w-0 max-w-[34px] truncate rounded border px-0.5 py-[1px] text-[6px] font-black uppercase leading-none tracking-wide shadow',
+        'inline-block min-w-0 max-w-[34px] truncate rounded border px-0.5 py-[1px] text-[11px] font-black uppercase leading-none tracking-wide shadow',
         getCompactTypeClassName(type),
       ].join(' ')}
     >
@@ -150,7 +150,7 @@ function CompactTypeBadge({ type }: { type: string }) {
 
 function CompactHiddenTypeBadge({ count }: { count: number }) {
   return (
-    <span className="inline-block w-fit rounded border border-[#a78bfa]/25 bg-[#1f1b2e]/95 px-1 py-[1px] text-[7px] font-black uppercase leading-none text-[#c4b5fd] shadow">
+    <span className="inline-block w-fit rounded border border-[#a78bfa]/25 bg-[#1f1b2e]/95 px-1 py-[1px] text-[11px] font-black uppercase leading-none text-[#c4b5fd] shadow">
       +{count}
     </span>
   )
@@ -221,7 +221,7 @@ function CompactDeckCard({
       <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/90 to-transparent" />
 
       <div className="absolute left-1.5 right-1.5 top-1.5 z-20 flex items-start justify-between gap-1">
-        <span className="rounded border border-[#facc15]/80 bg-black/85 px-1.5 py-0.5 text-[10px] font-black leading-none text-[#facc15] shadow">
+        <span className="rounded border border-[#facc15]/80 bg-black/85 px-1.5 py-0.5 text-[11px] font-black leading-none text-[#facc15] shadow">
           {count}x
         </span>
 
@@ -249,7 +249,7 @@ function CompactDeckCard({
           className={[
             'line-clamp-2 font-black text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]',
             isVeryLongTitle
-              ? 'text-[10.5px] leading-[1.04]'
+              ? 'text-[11px] leading-[1.04]'
               : isLongTitle
                 ? 'text-[11px] leading-[1.05]'
                 : 'text-[12px] leading-[1.08]',
@@ -263,8 +263,8 @@ function CompactDeckCard({
             className={[
               'mt-1 font-bold text-white/95 drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]',
               isLongDescription
-                ? 'line-clamp-2 text-[8.5px] leading-[1.08]'
-                : 'line-clamp-2 text-[9px] leading-[1.1]',
+                ? 'line-clamp-2 text-[11px] leading-[1.08]'
+                : 'line-clamp-2 text-[11px] leading-[1.1]',
             ].join(' ')}
           >
             {displayDescription}
@@ -272,13 +272,13 @@ function CompactDeckCard({
         )}
 
         {epiphanySummary && (
-          <p className="mt-1 line-clamp-1 text-[8px] font-black leading-tight text-[#c4b5fd] drop-shadow">
+          <p className="mt-1 line-clamp-1 text-[11px] font-black leading-tight text-[#c4b5fd] drop-shadow">
             {epiphanySummary}
           </p>
         )}
 
         {hasCombatStats && (
-          <div className="mt-1 flex min-h-[12px] flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[8.5px] font-bold leading-tight">
+          <div className="mt-1 flex min-h-[12px] flex-wrap items-center gap-x-1.5 gap-y-0.5 text-[11px] font-bold leading-tight">
             {item.card.eff_value > 0 && (
               <span>
                 {t('deckBuilder.damage')} <span className="text-[#93c5fd]">{item.card.eff_value}%</span>
@@ -309,7 +309,7 @@ function CompactDeckCard({
               onOpenVariants()
             }}
             title={t('deckBuilder.card.configureEpiphanies')}
-            className="inline-flex h-5 items-center gap-1 rounded border border-[#075985] bg-[#082f49]/90 px-1.5 text-[8px] font-black text-[#7dd3fc] hover:bg-[#0c4a6e]"
+            className="inline-flex h-5 items-center gap-1 rounded border border-[#075985] bg-[#082f49]/90 px-1.5 text-[11px] font-black text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
             <Sparkles size={9} />
             {t('deckBuilder.card.epiphanyShort')}
@@ -370,12 +370,12 @@ function CardSectionButton({
           </h3>
         </div>
 
-        <p className="mt-0.5 text-[10px] text-[#777]">
+        <p className="mt-0.5 text-[11px] text-[#8a8a8a]">
           {t(getCardSectionDescriptionKey(kind))}
         </p>
       </div>
 
-      <span className="shrink-0 rounded-md bg-[#0f172a] px-2 py-1 text-[10px] font-black text-[#93c5fd]">
+      <span className="shrink-0 rounded-md bg-[#0f172a] px-2 py-1 text-[11px] font-black text-[#93c5fd]">
         {count} {t('deckBuilder.available')}
       </span>
     </button>
@@ -483,7 +483,7 @@ function CardSelectionModal({
           <div className="relative">
             <Search
               size={16}
-              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#777]"
+              className="absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8a8a]"
             />
 
             <input
@@ -519,7 +519,7 @@ function CardSelectionModal({
         </div>
 
         <footer className="flex items-center justify-between border-t border-[#282838] px-4 py-3">
-          <p className="text-xs text-[#777]">
+          <p className="text-xs text-[#8a8a8a]">
             {t('deckBuilder.cardsFound', { count: filteredItems.length })}
           </p>
 
@@ -623,7 +623,7 @@ export function CombatantDeckColumn({
       <header className="shrink-0 border-b border-[#282838] p-3">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0 flex-1">
-            <p className="text-[9px] uppercase tracking-wide text-[#777]">
+            <p className="text-[11px] uppercase tracking-wide text-[#8a8a8a]">
               {t('deckBuilder.slot.combatant', { number: slotIndex + 1 })}
             </p>
 
@@ -670,11 +670,11 @@ export function CombatantDeckColumn({
         {selectedCombatant && (
           <div className="mt-2 rounded-lg border border-[#282838] bg-[#101018] p-1.5">
             <div className="mb-1 flex items-center justify-between">
-              <p className="text-[9px] font-bold uppercase tracking-wide text-[#777]">
+              <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
                 {t('deckBuilder.slot.equipment')}
               </p>
 
-              <span className="text-[9px] text-[#666]">
+              <span className="text-[11px] text-[#8a8a8a]">
                 {t('deckBuilder.slot.equipmentSummary')}
               </span>
             </div>
@@ -706,12 +706,12 @@ export function CombatantDeckColumn({
 
         <div className="mt-3 grid grid-cols-3 gap-1.5">
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[8.5px] uppercase text-[#666]">{t('deckBuilder.slot.cards')}</p>
+            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.cards')}</p>
             <p className="text-xs font-bold text-white">{slot.cards.length}</p>
           </div>
 
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[8.5px] uppercase text-[#666]">{t('deckBuilder.slot.cost')}</p>
+            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.cost')}</p>
             <p
               className={[
                 'text-xs font-bold',
@@ -727,7 +727,7 @@ export function CombatantDeckColumn({
           </div>
 
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[8.5px] uppercase text-[#666]">{t('deckBuilder.slot.epiphany')}</p>
+            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.epiphany')}</p>
             <p className="text-xs font-bold text-[#93c5fd]">{epiphanyCards.length}</p>
           </div>
         </div>
@@ -752,11 +752,11 @@ export function CombatantDeckColumn({
           </div>
         ) : slot.cards.length === 0 ? (
           <div className="flex min-h-[280px] flex-1 flex-col items-center justify-center rounded-xl border border-dashed border-[#333348] text-center">
-            <Plus className="text-[#555]" size={28} />
+            <Plus className="text-[#8a8a8a]" size={28} />
             <p className="mt-2 text-sm font-medium text-[#aaa]">
               {selectedCombatant ? t('deckBuilder.slot.noCards') : t('deckBuilder.slot.noCombatant')}
             </p>
-            <p className="mt-1 max-w-[240px] text-xs text-[#666]">
+            <p className="mt-1 max-w-[240px] text-xs text-[#8a8a8a]">
               {selectedCombatant
                 ? t('deckBuilder.slot.noCardsHint')
                 : t('deckBuilder.slot.noCombatantHint')}
@@ -770,12 +770,12 @@ export function CombatantDeckColumn({
                   {t('deckBuilder.slot.addedCards')}
                 </h3>
 
-                <p className="mt-0.5 text-[10px] text-[#777]">
+                <p className="mt-0.5 text-[11px] text-[#8a8a8a]">
                   {t('deckBuilder.slot.groupsInDeck', { count: groupedCards.length })}
                 </p>
               </div>
 
-              <span className="rounded-md bg-[#0f172a] px-2 py-1 text-[10px] font-black text-[#93c5fd]">
+              <span className="rounded-md bg-[#0f172a] px-2 py-1 text-[11px] font-black text-[#93c5fd]">
                 {t('deckBuilder.slot.cardCount', { count: slot.cards.length })}
               </span>
             </div>

@@ -25,16 +25,16 @@ function ClarifiedDescription({ item }: { item: DeckBuilderItem }) {
   return (
     <div className="flex flex-col gap-2">
       <div>
-        <p className="text-[10px] font-bold uppercase tracking-wide text-[#c084fc]">
+        <p className="text-[11px] font-bold uppercase tracking-wide text-[#c084fc]">
           {t('encyclopedia.clarification')}
         </p>
         <RichDescription text={localized(clar.text, lang)} className="text-xs leading-relaxed text-[#e5e7eb]" />
       </div>
       <div>
-        <p className="text-[10px] font-bold uppercase tracking-wide text-[#555]">
+        <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
           {t('encyclopedia.gameText')}
         </p>
-        <p className="text-xs leading-relaxed text-[#777]">{localized(item.description, lang)}</p>
+        <p className="text-xs leading-relaxed text-[#8a8a8a]">{localized(item.description, lang)}</p>
       </div>
     </div>
   )
@@ -82,7 +82,7 @@ export function EquipmentsTab() {
       {/* List */}
       <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
         {filtered.length === 0 ? (
-          <p className="p-4 text-xs text-[#555]">{t('encyclopedia.empty')}</p>
+          <p className="p-4 text-xs text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
         ) : (
           filtered.map(item => (
             <button
@@ -96,7 +96,7 @@ export function EquipmentsTab() {
               <span className={`h-2 w-2 shrink-0 rounded-full border ${getItemRarityClassName(item.rarity)}`} />
               <span className="min-w-0 flex-1">
                 <span className="block truncate text-xs font-medium text-[#e5e7eb]">{item.name}</span>
-                <span className="block text-[10px] text-[#555]">{item.slot} · {item.rarity}</span>
+                <span className="block text-[11px] text-[#8a8a8a]">{item.slot} · {item.rarity}</span>
               </span>
             </button>
           ))
@@ -106,7 +106,7 @@ export function EquipmentsTab() {
       {/* Detail */}
       <div className="flex-1 overflow-y-auto p-5">
         {!selected ? (
-          <p className="text-sm text-[#555]">{t('encyclopedia.selectPrompt')}</p>
+          <p className="text-sm text-[#8a8a8a]">{t('encyclopedia.selectPrompt')}</p>
         ) : (
           <div className="flex max-w-xl flex-col gap-4">
             <div className="flex items-center gap-3">
@@ -131,7 +131,7 @@ export function EquipmentsTab() {
 
             {selected.stat_type && selected.stat_values?.length ? (
               <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-[#666]">
+                <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
                   {t('encyclopedia.equipments.stat')} · {selected.stat_type}
                 </p>
                 <div className="flex gap-2">
@@ -149,7 +149,7 @@ export function EquipmentsTab() {
             ) : null}
 
             {selected.source && (
-              <p className="text-xs text-[#666]">
+              <p className="text-xs text-[#8a8a8a]">
                 {t('encyclopedia.equipments.source')}: {selected.source}
               </p>
             )}

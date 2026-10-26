@@ -230,7 +230,7 @@ export function SetupPage() {
             >
               {t('setup.installCert.manualLink')}
             </button>
-            <p className="text-xs text-[#666666]">{t('setup.installCert.manualHint')}</p>
+            <p className="text-xs text-[#8a8a8a]">{t('setup.installCert.manualHint')}</p>
             {openCertMutation.isError && (
               <p className="text-[#f3727f] text-xs">
                 {openCertMutation.error instanceof Error

@@ -68,7 +68,7 @@ function MiniPaginationPreview() {
   const { t } = useTranslation()
   return (
     <div className="bg-[#1a1a1a] border border-[#333] rounded-md p-3 my-3">
-      <p className="text-[10px] text-[#555] mb-2">{t('capture.gameScreenTarget')}</p>
+      <p className="text-[11px] text-[#8a8a8a] mb-2">{t('capture.gameScreenTarget')}</p>
       <div className="flex flex-col gap-1 mb-3 opacity-50">
         {[0, 1, 2].map(row => (
           <div key={row} className="grid grid-cols-4 gap-1">
@@ -84,10 +84,10 @@ function MiniPaginationPreview() {
       </div>
       <div className="flex items-center justify-center gap-3">
         <div className="w-6 h-6 flex items-center justify-center rounded bg-[#333] text-[#888] text-sm">‹</div>
-        <span className="text-[11px] text-[#555]">1</span>
+        <span className="text-[11px] text-[#8a8a8a]">1</span>
         <div className="relative">
           <div className="w-6 h-6 flex items-center justify-center rounded bg-[#c084fc] text-white text-sm font-bold ring-2 ring-[#c084fc]/40">›</div>
-          <span className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[9px] text-[#c084fc] font-semibold">{t('capture.cursorHere')}</span>
+          <span className="absolute -top-5 left-1/2 -translate-x-1/2 whitespace-nowrap text-[11px] text-[#c084fc] font-semibold">{t('capture.cursorHere')}</span>
           <span className="absolute -top-3 left-1/2 -translate-x-1/2 text-sm select-none">🖱️</span>
         </div>
       </div>
@@ -124,7 +124,7 @@ function AutoScrollConfirmModal({
           className="fixed left-1/2 top-1/2 z-50 w-[340px] -translate-x-1/2 -translate-y-1/2 rounded-lg border border-[#282828] bg-[#111] p-5 shadow-xl focus:outline-none"
         >
           <Dialog.Title className="mb-3">
-            <p className="text-[11px] text-[#666] uppercase tracking-wider mb-1">Auto-scroll de resgates</p>
+            <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mb-1">Auto-scroll de resgates</p>
             <p className="text-sm font-semibold text-white">{t('capture.autoscroll.modal.title')}</p>
           </Dialog.Title>
 
@@ -156,7 +156,7 @@ function AutoScrollConfirmModal({
               onChange={e => setSkipChecked(e.target.checked)}
               className="accent-[#c084fc]"
             />
-            <span className="text-xs text-[#666]">{t('capture.autoscroll.modal.skipLabel')}</span>
+            <span className="text-xs text-[#8a8a8a]">{t('capture.autoscroll.modal.skipLabel')}</span>
           </label>
 
           <div className="flex gap-2">
@@ -255,7 +255,7 @@ function AutoScrollPanel({ port }: { port: number }) {
 
   return (
     <div className="p-3 rounded-lg bg-[#181818] border border-[#282828] flex flex-col gap-2">
-      <p className="text-xs text-[#666666] uppercase tracking-wider">{t('capture.autoscroll.title')}</p>
+      <p className="text-xs text-[#8a8a8a] uppercase tracking-wider">{t('capture.autoscroll.title')}</p>
 
       {phase === 'idle' && (
         <div className="flex flex-col gap-2">
@@ -614,7 +614,7 @@ export function CapturePage() {
           className="flex-1 overflow-y-auto rounded-lg bg-[#0d0d0d] border border-[#282828] p-3 font-mono text-xs leading-relaxed"
         >
           {messages.length === 0 && !running && (
-            <div className="text-[#404040] space-y-1">
+            <div className="text-[#8a8a8a] space-y-1">
               <p>{t('capture.log.step1')}</p>
               <p>{t('capture.log.step2')}</p>
               <p>{t('capture.log.step3')}</p>
@@ -623,7 +623,7 @@ export function CapturePage() {
           )}
           {messages.map((m, i) => (
             <div key={`${m.timestamp}-${i}`} style={{ color: LEVEL_COLOR[m.level] }}>
-              <span className="text-[#404040]">{m.timestamp} </span>
+              <span className="text-[#8a8a8a]">{m.timestamp} </span>
               {m.message}
             </div>
           ))}

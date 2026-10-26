@@ -28,7 +28,7 @@ function GsCell({ gearScore, priorityScore }: { gearScore: number; priorityScore
 }
 
 function SubCell({ text }: { text: string | undefined }) {
-  if (!text) return <span className="text-[#404040]">—</span>
+  if (!text) return <span className="text-[#8a8a8a]">—</span>
   return <span className="text-[#b3b3b3] text-xs">{text}</span>
 }
 
@@ -63,7 +63,7 @@ function getSortValue(f: MemoryFragment, key: string): string | number {
 }
 
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ChevronsUpDown size={12} className="text-[#404040]" />
+  if (!active) return <ChevronsUpDown size={12} className="text-[#8a8a8a]" />
   return dir === 'asc'
     ? <ChevronUp size={12} className="text-[#c084fc]" />
     : <ChevronDown size={12} className="text-[#c084fc]" />
@@ -175,7 +175,7 @@ export function FragmentsPage() {
                 key={f.id}
                 className="border-[#282828] hover:bg-[#282828] cursor-default h-7"
               >
-                <TableCell className="text-[#666666] text-xs tabular-nums py-1">{f.slot_num}</TableCell>
+                <TableCell className="text-[#8a8a8a] text-xs tabular-nums py-1">{f.slot_num}</TableCell>
                 <TableCell className="py-1">
                   <span className="flex items-center gap-1.5" style={{ color: RARITY_COLOR[f.rarity_num] }}>
                     <PieceThumb setId={f.set_id} slotNum={f.slot_num} />
@@ -200,7 +200,7 @@ export function FragmentsPage() {
                 <TableCell className="py-1 text-xs">
                   {f.equipped_to
                     ? <span className="text-[#ffffff]">{f.equipped_to}</span>
-                    : <span className="text-[#404040]">—</span>
+                    : <span className="text-[#8a8a8a]">—</span>
                   }
                 </TableCell>
               </TableRow>

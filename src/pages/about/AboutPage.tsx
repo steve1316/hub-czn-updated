@@ -20,7 +20,7 @@ function LinkRow({ icon, label, url }: { icon: ReactNode; label: string; url: st
       <span className="text-sm text-[#b3b3b3] group-hover:text-[#ffffff] transition-colors flex-1">
         {label}
       </span>
-      <ExternalLink size={12} className="text-[#333333] group-hover:text-[#b3b3b3] transition-colors shrink-0" />
+      <ExternalLink size={12} className="text-[#8a8a8a] group-hover:text-[#b3b3b3] transition-colors shrink-0" />
     </button>
   )
 }
@@ -49,9 +49,9 @@ export function AboutPage() {
           {t('about.tagline')}
         </p>
         <div className="flex items-center gap-2 mt-1">
-          <span className="text-xs text-[#333333]">{t('about.version')}</span>
+          <span className="text-xs text-[#8a8a8a]">{t('about.version')}</span>
           {isLoading ? (
-            <span className="text-xs text-[#333333]">…</span>
+            <span className="text-xs text-[#8a8a8a]">…</span>
           ) : (
             <span className="text-xs font-mono text-[#c084fc]">{data?.version ?? '—'}</span>
           )}
@@ -60,7 +60,7 @@ export function AboutPage() {
 
       {/* Check for updates */}
       <div className="flex flex-col gap-2">
-        <p className="text-xs text-[#333333] uppercase tracking-wider px-1">{t('about.updates')}</p>
+        <p className="text-xs text-[#8a8a8a] uppercase tracking-wider px-1">{t('about.updates')}</p>
         {isChecking ? (
           <div className="flex items-center gap-3 p-3 rounded-lg bg-[#181818] border border-[#282828]">
             <Loader2 size={16} className="text-[#b3b3b3] animate-spin shrink-0" />
@@ -89,7 +89,7 @@ export function AboutPage() {
 
       {/* Links */}
       <div className="flex flex-col gap-2">
-        <p className="text-xs text-[#333333] uppercase tracking-wider px-1">{t('about.links')}</p>
+        <p className="text-xs text-[#8a8a8a] uppercase tracking-wider px-1">{t('about.links')}</p>
         <div className="flex flex-col gap-2">
           <LinkRow
             icon={<GitFork size={16} />}

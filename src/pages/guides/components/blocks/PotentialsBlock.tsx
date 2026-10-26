@@ -55,7 +55,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
           {picture ? (
             <img src={picture} alt="" className="max-w-full rounded-lg border border-[#282828]" />
           ) : (
-            <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed border-[#555] text-sm text-[#666] italic sm:w-80">
+            <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed border-[#555] text-sm text-[#8a8a8a] italic sm:w-80">
               {t('guides.potentialsPictureMissing')}
             </div>
           )}
@@ -76,7 +76,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
               ))}
             </div>
           )}
-          {tree && !coloured && !authorSelected && <p className="text-xs text-[#666] italic">{t('guides.potentialsNoColours')}</p>}
+          {tree && !coloured && !authorSelected && <p className="text-xs text-[#8a8a8a] italic">{t('guides.potentialsNoColours')}</p>}
         </div>
         <ul className="flex flex-col gap-2">
           {legend.map(entry => (
@@ -93,7 +93,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
           <ol className="flex flex-col gap-2">
             {ego.map(note => (
               <li key={note.level} className="flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3">
-                <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[10px] font-bold text-[#c084fc]">E{note.level}</span>
+                <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[11px] font-bold text-[#c084fc]">E{note.level}</span>
                 <p className={cn('min-w-0 flex-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]', note.bold && 'font-bold text-[#e5e5e5]')}>
                   {localized(note.text, lang)}
                 </p>

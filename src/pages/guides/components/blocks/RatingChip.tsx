@@ -27,7 +27,7 @@ interface RatingChipProps {
 export function RatingChip({ rating, quote }: RatingChipProps) {
   const { t } = useTranslation()
   const chip = (
-    <span className={cn('shrink-0 rounded px-1.5 py-px text-[10px] font-bold', TONE_CLASSES[ratingTone(rating)], quote !== undefined && 'border-b border-dotted border-current')}>
+    <span className={cn('shrink-0 rounded px-1.5 py-px text-[11px] font-bold', TONE_CLASSES[ratingTone(rating)], quote !== undefined && 'border-b border-dotted border-current')}>
       {rating}
     </span>
   )

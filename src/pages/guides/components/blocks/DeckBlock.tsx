@@ -47,7 +47,7 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
               {card.extra?.god && <span className="absolute top-0.5 right-1 text-sm text-[#fcd34d] [text-shadow:0_1px_2px_#000]">✦</span>}
               {level !== undefined && (
                 <span
-                  className={`absolute bottom-1 left-1 rounded border bg-[#0d0d0d]/85 px-1 text-[10px] font-bold text-[#ffffff] ${level === 0 ? 'border-[#555]' : 'border-[#c084fc]'}`}
+                  className={`absolute bottom-1 left-1 rounded border bg-[#0d0d0d]/85 px-1 text-[11px] font-bold text-[#ffffff] ${level === 0 ? 'border-[#555]' : 'border-[#c084fc]'}`}
                 >
                   {level === 0 ? t('guides.base') : levelNumeral(level)}
                 </span>
@@ -68,7 +68,7 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
               {card.cost === undefined ? <span /> : <CostGem cost={card.cost} small />}
               <span className="font-bold text-[#ffffff]">
                 {card.epiphany?.name ?? card.name ?? card.cardId}
-                {level === 0 && <span className="ml-1.5 rounded border border-[#555] px-1 text-[10px] font-normal text-[#b3b3b3]">{t('guides.base')}</span>}
+                {level === 0 && <span className="ml-1.5 rounded border border-[#555] px-1 text-[11px] font-normal text-[#b3b3b3]">{t('guides.base')}</span>}
               </span>
               <span className="leading-relaxed text-[#b3b3b3]">
                 {card.epiphany ? localized(card.epiphany.text, lang) : card.text && localized(card.text, lang)}

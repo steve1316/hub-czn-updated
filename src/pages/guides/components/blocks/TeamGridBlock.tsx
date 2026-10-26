@@ -43,11 +43,11 @@ export function TeamGridBlock({ groups, selfId }: TeamGridBlockProps) {
                       className={cn('h-12 w-12 rounded-full object-cover', self && 'ring-2 ring-[#c084fc]')}
                     />
                   ) : (
-                    <div className={cn('grid h-12 w-12 place-items-center rounded-full bg-[#222] text-sm font-bold text-[#666]', self && 'ring-2 ring-[#c084fc]')}>
+                    <div className={cn('grid h-12 w-12 place-items-center rounded-full bg-[#222] text-sm font-bold text-[#8a8a8a]', self && 'ring-2 ring-[#c084fc]')}>
                       {member.name.charAt(0)}
                     </div>
                   )}
-                  <span className="w-full truncate text-center text-[10px] text-[#b3b3b3]">{member.name}</span>
+                  <span className="w-full truncate text-center text-[11px] text-[#b3b3b3]">{member.name}</span>
                 </div>
               )
             })}

@@ -38,10 +38,10 @@ export function SetListBlock({ items }: SetListBlockProps) {
               <div className="flex items-center gap-1.5">
                 <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name}</h4>
                 {item.pieces !== undefined && (
-                  <span className="shrink-0 rounded bg-[#c084fc]/20 px-1.5 text-[10px] font-bold text-[#c084fc]">{item.pieces}pc</span>
+                  <span className="shrink-0 rounded bg-[#c084fc]/20 px-1.5 text-[11px] font-bold text-[#c084fc]">{item.pieces}pc</span>
                 )}
                 {item.flex && (
-                  <span className="shrink-0 rounded-full border border-dashed border-[#555] px-1.5 text-[10px] text-[#b3b3b3]">{t('guides.flex')}</span>
+                  <span className="shrink-0 rounded-full border border-dashed border-[#555] px-1.5 text-[11px] text-[#b3b3b3]">{t('guides.flex')}</span>
                 )}
               </div>
               {item.bonus && <p className="mt-0.5 text-xs leading-relaxed text-[#b3b3b3]">{item.bonus}</p>}

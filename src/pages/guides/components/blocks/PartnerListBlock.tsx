@@ -26,7 +26,7 @@ export function PartnerListBlock({ items }: { items: Item[] }) {
                 className="h-14 w-14 shrink-0 rounded-full object-cover"
               />
             ) : (
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#666]">
+              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#8a8a8a]">
                 {item.name.charAt(0)}
               </div>
             )}

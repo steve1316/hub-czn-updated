@@ -62,7 +62,7 @@ function savePersistedState(s: PersistedState): void {
 function StatPill({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   return (
     <div className={`flex flex-col items-center rounded px-3 py-2 min-w-[80px] ${highlight ? 'bg-[#1a2a1a]' : 'bg-[#222]'}`}>
-      <span className="text-[#888] text-[10px] uppercase tracking-wide">{label}</span>
+      <span className="text-[#888] text-[11px] uppercase tracking-wide">{label}</span>
       <span className={`font-bold text-sm mt-0.5 ${highlight ? 'text-[#a3e635]' : 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
   )
@@ -86,7 +86,7 @@ function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?:
       }`}
     >
       <div className="font-medium">{label}</div>
-      {sub && <div className={`text-[10px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#555]'}`}>{sub}</div>}
+      {sub && <div className={`text-[11px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#8a8a8a]'}`}>{sub}</div>}
     </button>
   )
 }
@@ -97,7 +97,7 @@ function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?:
  * @returns The heading.
  */
 function DeckGroupLabel({ children }: { children: ReactNode }) {
-  return <p className="text-[9px] text-[#555] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
+  return <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
 }
 
 function CardRow({ card }: { card: SimCardResult }) {
@@ -125,7 +125,7 @@ function CardRow({ card }: { card: SimCardResult }) {
             <div className="flex items-center gap-1">
               <span className="text-[#e5e7eb] font-medium">{displayName}</span>
               {hasSpark && (
-                <span className="text-[#facc15] text-[10px]" title={t('simulator.epiphanyApplied')}>✦</span>
+                <span className="text-[#facc15] text-[11px]" title={t('simulator.epiphanyApplied')}>✦</span>
               )}
             </div>
           </div>
@@ -145,16 +145,16 @@ function CardRow({ card }: { card: SimCardResult }) {
       </tr>
       {card.hits > 1 && (
         <tr className="border-b border-[#282828] bg-[#141414]">
-          <td className="px-3 py-1 text-[9px] text-[#555] pl-14" colSpan={4}>
+          <td className="px-3 py-1 text-[11px] text-[#8a8a8a] pl-14" colSpan={4}>
             {t('simulator.perHit')}
           </td>
-          <td className="px-3 py-1 text-right text-[#555] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#8a8a8a] text-[11px] font-mono">
             {(card.normal_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
-          <td className="px-3 py-1 text-right text-[#555] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#8a8a8a] text-[11px] font-mono">
             {(card.crit_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
-          <td className="px-3 py-1 text-right text-[#6a9e35] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#6a9e35] text-[11px] font-mono">
             {(card.avg_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
         </tr>
@@ -312,7 +312,7 @@ export function SimulateTab() {
             value={charName}
             onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); setNotOwned(null); persist({ charName: v, deck: AUTO_DECK }) }}
           />
-          {notOwned && <p className="text-[#f87171] text-[10px]">{t('simulator.notOwned', { name: notOwned })}</p>}
+          {notOwned && <p className="text-[#f87171] text-[11px]">{t('simulator.notOwned', { name: notOwned })}</p>}
         </div>
 
         {charName && (decks.length > 0 || savedSlots.length > 0 || sentDeck) && (
@@ -343,7 +343,7 @@ export function SimulateTab() {
                         label={
                           <span className="flex items-center justify-between gap-2">
                             <span className="truncate">{d.name || label}</span>
-                            {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[9px] opacity-60">★</span>}
+                            {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[11px] opacity-60">★</span>}
                           </span>
                         }
                         sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
@@ -388,7 +388,7 @@ export function SimulateTab() {
             onChange={(e) => { const v = Number(e.target.value); setMorale(v); persist({ morale: v }) }}
             className="w-full accent-[#c084fc]"
           />
-          <div className="flex justify-between text-[#555] text-[10px]">
+          <div className="flex justify-between text-[#8a8a8a] text-[11px]">
             <span>0</span>
             <span>10</span>
             <span>20</span>
@@ -417,7 +417,7 @@ export function SimulateTab() {
                 type="button"
                 title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
                 onClick={() => setEnemy(presetEnemy(activeGroup.group, p))}
-                className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                className={`text-[11px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
                   source.kind === 'preset' && source.group === activeGroup.group && source.label === p.label,
                 )}`}
               >
@@ -427,7 +427,7 @@ export function SimulateTab() {
           </div>
           {recentBattles.length > 0 && (
             <div className="mt-1">
-              <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
+              <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
               <div className="flex flex-wrap gap-1">
                 {recentBattles.map((b) => (
                   <button
@@ -435,7 +435,7 @@ export function SimulateTab() {
                     type="button"
                     title={t('simulator.recentTip', { def: Math.round(b.enemy_def), pct: (b.enemy_dmg_decrease * 100).toFixed(1) })}
                     onClick={() => setEnemy(battleEnemy(b))}
-                    className={`flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                    className={`flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
                       source.kind === 'battle' && source.captureTime === b.capture_time,
                     )}`}
                   >
@@ -464,7 +464,7 @@ export function SimulateTab() {
             <div className="flex items-center justify-between">
               <label className="text-[#f87171] text-xs cursor-pointer" htmlFor="weaken">
                 {t('simulator.weaken')}
-                <span className="ml-1 text-[#555] text-[10px]">{t('simulator.weakenHint')}</span>
+                <span className="ml-1 text-[#8a8a8a] text-[11px]">{t('simulator.weakenHint')}</span>
               </label>
               <input
                 id="weaken"
@@ -478,7 +478,7 @@ export function SimulateTab() {
             <div className="flex items-center justify-between">
               <label className="text-[#34d399] text-xs cursor-pointer" htmlFor="dmg-reduction">
                 {t('simulator.dmgReduction')}
-                <span className="ml-1 text-[#555] text-[10px]">{t('simulator.dmgReductionHint')}</span>
+                <span className="ml-1 text-[#8a8a8a] text-[11px]">{t('simulator.dmgReductionHint')}</span>
               </label>
               <input
                 id="dmg-reduction"
@@ -506,7 +506,7 @@ export function SimulateTab() {
                 onChange={(e) => { const v = Number(e.target.value); setVulnerableStacks(v); persist({ vulnerableStacks: v }) }}
                 className="w-full accent-[#facc15]"
               />
-              <div className="flex justify-between text-[#555] text-[10px]">
+              <div className="flex justify-between text-[#8a8a8a] text-[11px]">
                 <span>0</span>
                 <span>1</span>
                 <span>2</span>
@@ -547,7 +547,7 @@ export function SimulateTab() {
           </div>
         )}
 
-        <div className="mt-auto text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
+        <div className="mt-auto text-[#8a8a8a] text-[11px] leading-relaxed border-t border-[#282828] pt-3">
           <p>{t('simulator.formulaNote', { pct: MORALE_PCT })}</p>
           <p className="mt-1">{t('simulator.buffNote')}</p>
         </div>
@@ -556,7 +556,7 @@ export function SimulateTab() {
       {/* Right results area */}
       <div className="flex-1 overflow-y-auto p-4">
         {!result && !mutation.isPending && (
-          <div className="flex flex-col items-center justify-center h-full gap-3 text-[#444]">
+          <div className="flex flex-col items-center justify-center h-full gap-3 text-[#8a8a8a]">
             <Zap size={40} />
             <p className="text-sm">{t('simulator.empty')}</p>
           </div>
@@ -575,7 +575,7 @@ export function SimulateTab() {
               <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-[#ffffff] font-bold text-sm">{result.char_name}</h3>
                 {(resultDeckName || result.deck_id != null) && (
-                  <span className="text-[#555] text-[10px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
+                  <span className="text-[#8a8a8a] text-[11px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -601,19 +601,19 @@ export function SimulateTab() {
             {/* Totals */}
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-[#1e1e1e] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalNormal')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalNormal')}</span>
                 <span className="text-[#e5e7eb] font-bold text-lg font-mono">
                   {result.total_normal.toLocaleString()}
                 </span>
               </div>
               <div className="bg-[#1e1e1e] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalCrit')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalCrit')}</span>
                 <span className="text-[#e5e7eb] font-bold text-lg font-mono">
                   {result.total_crit.toLocaleString()}
                 </span>
               </div>
               <div className="bg-[#1a2a1a] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalAvg')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalAvg')}</span>
                 <span className="text-[#a3e635] font-bold text-lg font-mono">
                   {result.total_avg.toLocaleString()}
                 </span>
@@ -645,7 +645,7 @@ export function SimulateTab() {
                       ))}
                   </tbody>
                 </table>
-                <p className="text-[#555] text-[10px] mt-2 px-1">
+                <p className="text-[#8a8a8a] text-[11px] mt-2 px-1">
                   ✦ = {t('simulator.epiphanyApplied')}
                   &nbsp;·&nbsp; {t('simulator.avgNote')}
                 </p>

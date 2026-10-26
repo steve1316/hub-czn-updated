@@ -14,7 +14,7 @@ export function FilterSection({
   const { t } = useTranslation()
   return (
     <div className="flex flex-col gap-0.5">
-      <p className="mb-0.5 text-[10px] uppercase tracking-wide text-[#666]">{label}</p>
+      <p className="mb-0.5 text-[11px] uppercase tracking-wide text-[#8a8a8a]">{label}</p>
       <button
         type="button"
         onClick={() => onChange(null)}

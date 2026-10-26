@@ -154,7 +154,7 @@ function PanelContent({
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         {STAT_GROUPS.map(group => (
           <div key={group.labelKey}>
-            <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">
+            <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">
               {t(group.labelKey)}
             </p>
             <div className="space-y-2">

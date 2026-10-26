@@ -19,7 +19,7 @@ const CARD_TYPES = uniqueSorted(ALL_ENGRAVINGS.map(e => e.card_type))
 
 function Badge({ children }: { children: string }) {
   return (
-    <span className="rounded border border-[#334155] bg-[#1e293b] px-1.5 py-0.5 text-[9px] font-bold uppercase tracking-wide text-[#cbd5e1]">
+    <span className="rounded border border-[#334155] bg-[#1e293b] px-1.5 py-0.5 text-[11px] font-bold uppercase tracking-wide text-[#cbd5e1]">
       {children}
     </span>
   )
@@ -68,7 +68,7 @@ export function EngravingsTab() {
       {/* List */}
       <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
         {filtered.length === 0 ? (
-          <p className="p-4 text-xs text-[#555]">{t('encyclopedia.empty')}</p>
+          <p className="p-4 text-xs text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
         ) : (
           filtered.map(e => (
             <button
@@ -92,7 +92,7 @@ export function EngravingsTab() {
       {/* Detail */}
       <div className="flex-1 overflow-y-auto p-5">
         {!selected ? (
-          <p className="text-sm text-[#555]">{t('encyclopedia.selectPrompt')}</p>
+          <p className="text-sm text-[#8a8a8a]">{t('encyclopedia.selectPrompt')}</p>
         ) : (
           <div className="flex max-w-xl flex-col gap-4">
             <div className="flex flex-wrap gap-1">
@@ -107,7 +107,7 @@ export function EngravingsTab() {
               {clar ? (
                 <div className="flex flex-col gap-2">
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-[#c084fc]">
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-[#c084fc]">
                       {t('encyclopedia.clarification')}
                     </p>
                     <RichDescription
@@ -116,10 +116,10 @@ export function EngravingsTab() {
                     />
                   </div>
                   <div>
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-[#555]">
+                    <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
                       {t('encyclopedia.gameText')}
                     </p>
-                    <p className="text-xs leading-relaxed text-[#777]">{selected.description}</p>
+                    <p className="text-xs leading-relaxed text-[#8a8a8a]">{selected.description}</p>
                   </div>
                 </div>
               ) : (
@@ -132,7 +132,7 @@ export function EngravingsTab() {
 
             {selected.allowed_classes.length > 0 && (
               <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-[#666]">
+                <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
                   {t('encyclopedia.engravings.classes')}
                 </p>
                 <div className="flex flex-wrap gap-1">

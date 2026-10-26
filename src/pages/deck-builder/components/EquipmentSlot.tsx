@@ -46,7 +46,7 @@ export function EquipmentSlot({
           'relative flex h-[44px] w-full overflow-hidden rounded-lg border bg-[#101018] text-left transition',
           item
             ? getItemRarityClassName(item.rarity)
-            : 'border-dashed border-[#333348] text-[#777] hover:border-[#c084fc] hover:text-[#e9d5ff]',
+            : 'border-dashed border-[#333348] text-[#8a8a8a] hover:border-[#c084fc] hover:text-[#e9d5ff]',
         ].join(' ')}
       >
         {item && imageUrl ? (
@@ -58,11 +58,11 @@ export function EquipmentSlot({
             />
 
             <div className="min-w-0 flex-1 px-1.5 py-1">
-              <p className="truncate text-[8px] font-black uppercase leading-none tracking-wide">
+              <p className="truncate text-[11px] font-black uppercase leading-none tracking-wide">
                 {title}
               </p>
 
-              <p className="mt-0.5 line-clamp-2 text-[10px] font-bold leading-tight text-white">
+              <p className="mt-0.5 line-clamp-2 text-[11px] font-bold leading-tight text-white">
                 {item.name}
               </p>
             </div>
@@ -70,7 +70,7 @@ export function EquipmentSlot({
         ) : (
           <div className="flex h-full w-full flex-col items-center justify-center gap-0.5">
             <Icon size={14} />
-            <span className="text-[8.5px] font-bold uppercase tracking-wide">
+            <span className="text-[11px] font-bold uppercase tracking-wide">
               {title}
             </span>
           </div>

@@ -41,7 +41,7 @@ export function GlossaryTab() {
         />
 
         {filtered.length === 0 && (
-          <p className="text-xs text-[#555]">{t('encyclopedia.empty')}</p>
+          <p className="text-xs text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
         )}
 
         {CATEGORY_ORDER.map(category => {
@@ -49,7 +49,7 @@ export function GlossaryTab() {
           if (entries.length === 0) return null
           return (
             <section key={category} className="flex flex-col gap-2">
-              <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#c084fc]">
+              <h3 className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#c084fc]">
                 {t(`encyclopedia.glossary.category.${category}`)}
               </h3>
               {entries.map(entry => (
@@ -66,7 +66,7 @@ export function GlossaryTab() {
                     const visibleRefs = entry.seeAlso.filter(ref => filteredIds.has(ref))
                     if (visibleRefs.length === 0) return null
                     return (
-                      <p className="mt-2 text-[10px] text-[#666]">
+                      <p className="mt-2 text-[11px] text-[#8a8a8a]">
                         {t('encyclopedia.glossary.seeAlso')}:{' '}
                         {visibleRefs.map((ref, i) => {
                           const target = glossaryById.get(ref)

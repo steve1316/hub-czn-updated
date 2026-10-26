@@ -28,7 +28,7 @@ export function GuidesPage() {
           </button>
           <span className="text-sm font-bold text-[#ffffff]">{guide.name}</span>
           {guide.updated && (
-            <span className="rounded-full bg-[#282828] px-2 py-0.5 text-[10px] text-[#b3b3b3]">{t('guides.updated', { date: guide.updated })}</span>
+            <span className="rounded-full bg-[#282828] px-2 py-0.5 text-[11px] text-[#b3b3b3]">{t('guides.updated', { date: guide.updated })}</span>
           )}
           {guide.source && (
             <button
@@ -68,7 +68,7 @@ export function GuidesPage() {
                 {face ? (
                   <img src={face} alt={entry.name} className="h-16 w-16 rounded-full object-cover" />
                 ) : (
-                  <div className="grid h-16 w-16 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#666]">
+                  <div className="grid h-16 w-16 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#8a8a8a]">
                     {entry.name.charAt(0)}
                   </div>
                 )}

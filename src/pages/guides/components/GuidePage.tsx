@@ -68,7 +68,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
               {localized(active.title, lang)}
             </h2>
             {active.blocks.length === 0 ? (
-              <p className="text-sm text-[#666] italic">{t('guides.sectionMissing')}</p>
+              <p className="text-sm text-[#8a8a8a] italic">{t('guides.sectionMissing')}</p>
             ) : (
               <div className="flex max-w-3xl flex-col gap-6">
                 {active.blocks.map((block, i) => {

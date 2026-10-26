@@ -34,7 +34,7 @@ function AttrBadge({ attr }: { attr: string }) {
     )
   }
   return (
-    <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded border leading-tight shrink-0 bg-[#282828] text-[#888888] border-[#333333]">
+    <span className="text-[11px] font-semibold px-1.5 py-0.5 rounded border leading-tight shrink-0 bg-[#282828] text-[#888888] border-[#333333]">
       {attr}
     </span>
   )
@@ -82,7 +82,7 @@ function PartnerBadge({
         <div className="w-10 h-[26px] rounded bg-[#282828] shrink-0" />
       )}
       <div className="min-w-0">
-        <p className="text-[9px] uppercase tracking-wider text-[#555555] leading-tight">Partner</p>
+        <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a] leading-tight">Partner</p>
         <p className="text-[11px] text-[#b3b3b3] truncate leading-tight">{partnerName ?? '—'}</p>
       </div>
     </div>
@@ -188,7 +188,7 @@ function CombatantRow({
         }`}
       >
         {/* Rank */}
-        <span className="w-5 text-right text-[10px] text-[#444444] tabular-nums shrink-0">
+        <span className="w-5 text-right text-[11px] text-[#8a8a8a] tabular-nums shrink-0">
           {rank}
         </span>
 
@@ -204,20 +204,20 @@ function CombatantRow({
         {/* Name + level */}
         <div className="flex-1 min-w-0">
           <p className="text-sm font-semibold text-[#ffffff] truncate leading-tight">{combatant.name}</p>
-          <p className="text-[10px] text-[#666666] leading-tight">Lv. {combatant.level}</p>
+          <p className="text-[11px] text-[#8a8a8a] leading-tight">Lv. {combatant.level}</p>
         </div>
 
         {/* Attribute */}
         <AttrBadge attr={combatant.attribute} />
 
         {/* Class */}
-        <span className="hidden sm:block text-[10px] px-2 py-0.5 rounded bg-[#232323] text-[#888888] border border-[#2e2e2e] shrink-0">
+        <span className="hidden sm:block text-[11px] px-2 py-0.5 rounded bg-[#232323] text-[#888888] border border-[#2e2e2e] shrink-0">
           {combatant.class}
         </span>
 
         {/* Ego Manifestation */}
         {combatant.ego != null && (
-          <span className={`text-[10px] font-bold shrink-0 tabular-nums ${
+          <span className={`text-[11px] font-bold shrink-0 tabular-nums ${
             combatant.ego === 6 ? 'text-[#ffd700]' : 'text-[#888888]'
           }`}>
             E{combatant.ego}
@@ -231,13 +231,13 @@ function CombatantRow({
               {combatant.avg_gear_score.toFixed(1)}
             </span>
           ) : (
-            <span className="text-sm text-[#444444]">—</span>
+            <span className="text-sm text-[#8a8a8a]">—</span>
           )}
-          <p className="text-[9px] text-[#555555]">GS</p>
+          <p className="text-[11px] text-[#8a8a8a]">GS</p>
         </div>
 
         {/* Chevron */}
-        <div className={`shrink-0 transition-colors ${expanded ? 'text-[#c084fc]' : 'text-[#444444]'}`}>
+        <div className={`shrink-0 transition-colors ${expanded ? 'text-[#c084fc]' : 'text-[#8a8a8a]'}`}>
           {expanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
         </div>
       </button>

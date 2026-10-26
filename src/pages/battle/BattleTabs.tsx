@@ -38,7 +38,7 @@ function findCombatant(resId: string | number | null | undefined, combatants: Co
 function NoBattles() {
   const { t } = useTranslation()
   return (
-    <div className="flex flex-col items-center justify-center gap-3 text-[#444] p-4 mt-20">
+    <div className="flex flex-col items-center justify-center gap-3 text-[#8a8a8a] p-4 mt-20">
       <Sword size={40} />
       <p className="text-sm text-center">{t('battle.noBattles')}</p>
       <Link to="/capture" className="text-xs text-[#c084fc] hover:underline">{t('battle.goToCapture')}</Link>
@@ -67,7 +67,7 @@ function CharAvatar({ combatant, size = 24 }: { combatant?: Combatant; size?: nu
   if (!combatant || err || !combatant.portrait_url) {
     return (
       <div
-        className="rounded bg-[#282828] shrink-0 flex items-center justify-center text-[#444] text-[8px]"
+        className="rounded bg-[#282828] shrink-0 flex items-center justify-center text-[#8a8a8a] text-[11px]"
         style={{ width: size, height: size }}
       >
         ?
@@ -87,7 +87,7 @@ function CharAvatar({ combatant, size = 24 }: { combatant?: Combatant; size?: nu
 
 function ResultBadge({ result }: { result: string | null }) {
   const { t } = useTranslation()
-  if (!result) return <span className="text-[#555] text-xs">—</span>
+  if (!result) return <span className="text-[#8a8a8a] text-xs">—</span>
   const ok = result === 'CLEAR'
   return (
     <span className={`text-xs font-bold px-2 py-0.5 rounded ${ok ? 'bg-[#1a2a1a] text-[#a3e635]' : 'bg-[#2a1a1a] text-[#f87171]'}`}>
@@ -142,7 +142,7 @@ function InsightCardComp({ card, combatants }: { card: InsightCard; combatants: 
       <div className="flex flex-col gap-1 flex-1 min-w-0">
         <span className={`text-xs font-bold ${style.text}`}>{title}</span>
         <span className="text-[#b3b3b3] text-[11px] leading-relaxed">{description}</span>
-        <span className={`text-[10px] font-medium self-start mt-0.5 ${style.text}`}>→ {action}</span>
+        <span className={`text-[11px] font-medium self-start mt-0.5 ${style.text}`}>→ {action}</span>
       </div>
     </div>
   )
@@ -169,9 +169,9 @@ function CharTrendCard({ trend, combatants }: { trend: CharTrend; combatants: Co
         <CharAvatar combatant={combatant} size={28} />
         <div className="flex-1 min-w-0">
           <div className="text-[#e5e7eb] text-xs font-bold truncate">{name}</div>
-          <div className="text-[#555] text-[10px]">{t('battle.overview.battlesCount', { count: trend.battle_count })}</div>
+          <div className="text-[#8a8a8a] text-[11px]">{t('battle.overview.battlesCount', { count: trend.battle_count })}</div>
         </div>
-        <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded ${badgeClass}`}>
+        <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded ${badgeClass}`}>
           {t(`battle.overview.priority.${trend.priority}`)}
         </span>
       </div>
@@ -183,21 +183,21 @@ function CharTrendCard({ trend, combatants }: { trend: CharTrend; combatants: Co
           { label: 'CDmg', value: trend.latest_cdmg, max: 300, color: 'bg-[#a78bfa]', fmt: (v: number) => `${v.toFixed(1)}%` },
         ].map(({ label, value, max, color, fmt }) => (
           <div key={label} className="flex items-center gap-1.5">
-            <span className="text-[#555] text-[9px] w-8">{label}</span>
+            <span className="text-[#8a8a8a] text-[11px] w-8">{label}</span>
             <div className="h-1 flex-1 rounded-full bg-[#2a2a2a]">
               <div className={`h-full rounded-full ${color}`} style={{ width: `${Math.min((value / max) * 100, 100)}%` }} />
             </div>
-            <span className="text-[#888] text-[9px] w-12 text-right font-mono">{fmt(value)}</span>
+            <span className="text-[#888] text-[11px] w-12 text-right font-mono">{fmt(value)}</span>
           </div>
         ))}
       </div>
 
       <div className="flex items-end justify-between gap-2 mt-1">
         <div className="flex flex-col">
-          <span className="text-[#555] text-[9px] uppercase tracking-wide">Avg DPT</span>
+          <span className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">Avg DPT</span>
           <span className="text-[#e5e7eb] text-xs font-mono font-bold">{formatDmg(trend.avg_dpt)}</span>
           {trend.dpt_trend_pct !== 0 && (
-            <span className={`text-[9px] font-bold ${trendColor}`}>
+            <span className={`text-[11px] font-bold ${trendColor}`}>
               {trend.dpt_trend_pct > 0 ? '+' : ''}{trend.dpt_trend_pct.toFixed(0)}%
             </span>
           )}
@@ -251,7 +251,7 @@ export function OverviewTab() {
       {/* Insight cards */}
       {overview.insights.length > 0 && (
         <div className="flex flex-col gap-2">
-          <p className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.overview.insights')}</p>
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.overview.insights')}</p>
           {overview.insights.map((card, i) => (
             <InsightCardComp key={i} card={card} combatants={combatants} />
           ))}
@@ -261,7 +261,7 @@ export function OverviewTab() {
       {/* Character trend grid */}
       {overview.chars.length > 0 && (
         <div className="flex flex-col gap-2">
-          <p className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.overview.trends')}</p>
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.overview.trends')}</p>
           <div className="grid gap-3" style={{ gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))' }}>
             {overview.chars.map((char) => (
               <CharTrendCard key={char.res_id} trend={char} combatants={combatants} />
@@ -273,7 +273,7 @@ export function OverviewTab() {
       {/* Recent results */}
       {overview.recent.length > 0 && (
         <div className="flex flex-col gap-2">
-          <p className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.overview.recent')}</p>
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.overview.recent')}</p>
           <div className="flex flex-col gap-1">
             {overview.recent.map((r, i) => {
               const mvp = r.mvp_res_id ? findCombatant(r.mvp_res_id, combatants) : undefined
@@ -285,10 +285,10 @@ export function OverviewTab() {
                   {mvp && (
                     <div className="flex items-center gap-1">
                       <CharAvatar combatant={mvp} size={16} />
-                      <span className="text-[#facc15] text-[10px]">{mvp.name}</span>
+                      <span className="text-[#facc15] text-[11px]">{mvp.name}</span>
                     </div>
                   )}
-                  <span className="ml-auto text-[#444] text-[10px]">{formatBattleTime(r.capture_time)}</span>
+                  <span className="ml-auto text-[#8a8a8a] text-[11px]">{formatBattleTime(r.capture_time)}</span>
                 </div>
               )
             })}
@@ -304,7 +304,7 @@ export function OverviewTab() {
 function StatBox({ label, value, accent }: { label: string; value: string | number; accent?: string }) {
   return (
     <div className="flex flex-col items-center bg-[#1e1e1e] rounded px-4 py-3 min-w-[90px]">
-      <span className="text-[#888] text-[10px] uppercase tracking-wide">{label}</span>
+      <span className="text-[#888] text-[11px] uppercase tracking-wide">{label}</span>
       <span className={`font-bold text-lg font-mono mt-0.5 ${accent ?? 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
   )
@@ -384,12 +384,12 @@ function BattleCard({
           <ResultBadge result={record.battle_result} />
           {mvpName && (
             <div className="flex items-center gap-1">
-              <span className="text-[#888] text-[10px]">{t('battle.mvp')}:</span>
+              <span className="text-[#888] text-[11px]">{t('battle.mvp')}:</span>
               {mvpCombatant && <CharAvatar combatant={mvpCombatant} size={16} />}
-              <span className="text-[#facc15] text-[10px] font-medium">{mvpName}</span>
+              <span className="text-[#facc15] text-[11px] font-medium">{mvpName}</span>
             </div>
           )}
-          <span className="text-[#444] text-[10px]">{formatBattleTime(record.capture_time)}</span>
+          <span className="text-[#8a8a8a] text-[11px]">{formatBattleTime(record.capture_time)}</span>
         </div>
       </div>
 
@@ -405,7 +405,7 @@ function BattleCard({
       {/* DPT section */}
       {hasDpt ? (
         <div className="flex flex-col gap-1.5">
-          <p className="text-[#888] text-[10px] uppercase tracking-wide">{t('battle.charDpt')}</p>
+          <p className="text-[#888] text-[11px] uppercase tracking-wide">{t('battle.charDpt')}</p>
           {dptEntries.map(([resId, dmg]) => (
             <DptRow
               key={resId}
@@ -418,7 +418,7 @@ function BattleCard({
           ))}
         </div>
       ) : (
-        <p className="text-[#555] text-[10px] italic">{t('battle.noCharDpt')}</p>
+        <p className="text-[#8a8a8a] text-[11px] italic">{t('battle.noCharDpt')}</p>
       )}
 
       {/* Player chars (collapsible) */}
@@ -427,7 +427,7 @@ function BattleCard({
           <button
             type="button"
             onClick={() => setShowChars(v => !v)}
-            className="flex items-center gap-1 text-[#555] text-[10px] hover:text-[#888] transition-colors"
+            className="flex items-center gap-1 text-[#8a8a8a] text-[11px] hover:text-[#888] transition-colors"
           >
             {showChars ? <ChevronUp size={12} /> : <ChevronDown size={12} />}
             {t('battle.playerChars')} ({record.player_chars.length})
@@ -443,7 +443,7 @@ function BattleCard({
                       <div className="text-[#b3b3b3] text-[11px] font-medium">
                         {cbt?.name ?? `#${c.res_id}`}
                       </div>
-                      <div className="text-[#555] font-mono text-[10px]">
+                      <div className="text-[#8a8a8a] font-mono text-[11px]">
                         ATK {Math.round(c.atk)} · DEF {Math.round(c.def)} · CR {Number(c.cri).toFixed(0)}%
                       </div>
                     </div>
@@ -522,7 +522,7 @@ function MiniBar({ value, max, color }: { value: number; max: number; color: str
 function GainPill({ label, value, color }: { label: string; value: number; color: string }) {
   return (
     <div className={`flex flex-col items-center rounded px-2 py-1 min-w-[70px] bg-[#1e1e1e]`}>
-      <span className="text-[#555] text-[9px] uppercase tracking-wide">{label}</span>
+      <span className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{label}</span>
       <span className={`font-bold text-xs font-mono ${color}`}>+{value.toFixed(1)}%</span>
     </div>
   )
@@ -550,12 +550,12 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
           )}
           <div>
             <h3 className="text-[#e5e7eb] font-bold text-sm">{name}</h3>
-            <span className="text-[#555] text-[10px] font-mono">
+            <span className="text-[#8a8a8a] text-[11px] font-mono">
               {t('battle.dmgPer100')}: {analysis.dmg_per_100coeff.toLocaleString()}
             </span>
           </div>
         </div>
-        <span className={`text-[10px] font-bold px-2 py-1 rounded ${priorityClass}`}>
+        <span className={`text-[11px] font-bold px-2 py-1 rounded ${priorityClass}`}>
           {priorityLabel}
         </span>
       </div>
@@ -563,17 +563,17 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
       {/* Stats with bars */}
       <div className="flex flex-col gap-1.5">
         <div className="flex items-center gap-2">
-          <span className="text-[#888] text-[10px] w-10">{analysis.scale_stat === 'def' ? 'DEF' : 'ATK'}</span>
+          <span className="text-[#888] text-[11px] w-10">{analysis.scale_stat === 'def' ? 'DEF' : 'ATK'}</span>
           <MiniBar value={analysis.atk} max={2000} color="bg-[#fb923c]" />
           <span className="text-[#e5e7eb] text-xs font-mono w-16 text-right">{Math.round(analysis.atk).toLocaleString()}</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[#888] text-[10px] w-10">CRate</span>
+          <span className="text-[#888] text-[11px] w-10">CRate</span>
           <MiniBar value={analysis.crate} max={100} color="bg-[#60a5fa]" />
           <span className="text-[#e5e7eb] text-xs font-mono w-16 text-right">{analysis.crate.toFixed(1)}%</span>
         </div>
         <div className="flex items-center gap-2">
-          <span className="text-[#888] text-[10px] w-10">CDmg</span>
+          <span className="text-[#888] text-[11px] w-10">CDmg</span>
           <MiniBar value={analysis.cdmg} max={300} color="bg-[#a78bfa]" />
           <span className="text-[#e5e7eb] text-xs font-mono w-16 text-right">{analysis.cdmg.toFixed(1)}%</span>
         </div>
@@ -581,13 +581,13 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
 
       {/* Crit factor */}
       <div className="flex items-center justify-between bg-[#1e1e1e] rounded px-3 py-2">
-        <span className="text-[#888] text-[10px]">{t('battle.critFactor')}</span>
+        <span className="text-[#888] text-[11px]">{t('battle.critFactor')}</span>
         <span className="text-[#a3e635] font-bold font-mono text-sm">×{analysis.crit_factor.toFixed(3)}</span>
       </div>
 
       {/* Gain pills */}
       <div className="flex flex-col gap-1.5">
-        <span className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.improvement')}</span>
+        <span className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.improvement')}</span>
         <div className="flex gap-2 flex-wrap">
           <GainPill label={t('battle.crateGain')} value={analysis.crate_gain_10pp} color="text-[#60a5fa]" />
           <GainPill label={t('battle.cdmgGain')}  value={analysis.cdmg_gain_30pct} color="text-[#a78bfa]" />
@@ -596,7 +596,7 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
       </div>
 
       {/* Tip */}
-      <div className="bg-[#1e1e1e] rounded px-3 py-2 text-[10px] text-[#b3b3b3] leading-relaxed border-l-2 border-[#c084fc]/40">
+      <div className="bg-[#1e1e1e] rounded px-3 py-2 text-[11px] text-[#b3b3b3] leading-relaxed border-l-2 border-[#c084fc]/40">
         {t(`battle.tip.${analysis.priority}`, {
           crate: analysis.crate.toFixed(0),
           cdmg: analysis.cdmg.toFixed(0),
@@ -635,11 +635,11 @@ export function AnalyticsTab() {
       {/* Context banner */}
       <div className="bg-[#1a1a1a] border border-[#282828] rounded-lg px-4 py-3 flex flex-wrap gap-4 items-center">
         <div className="flex flex-col">
-          <span className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.enemyDef')}</span>
+          <span className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.enemyDef')}</span>
           <span className="text-[#fb923c] font-bold font-mono text-lg">{Math.round(analytics.enemy_def)}</span>
         </div>
         <div className="flex flex-col">
-          <span className="text-[#555] text-[10px] uppercase tracking-wide">{t('battle.defFactor')}</span>
+          <span className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.defFactor')}</span>
           <span className="text-[#fb923c] font-bold font-mono text-lg">{defPct}%</span>
         </div>
         <div className="ml-auto">
@@ -652,7 +652,7 @@ export function AnalyticsTab() {
         <CharAnalyticsCard key={c.res_id} analysis={c} combatants={combatants} />
       ))}
 
-      <div className="text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
+      <div className="text-[#8a8a8a] text-[11px] leading-relaxed border-t border-[#282828] pt-3">
         <p>{t('battle.defFactorNote')}</p>
         <p className="mt-1">{t('battle.critFactorNote')}</p>
       </div>

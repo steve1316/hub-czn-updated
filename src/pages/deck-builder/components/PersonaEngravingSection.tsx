@@ -52,7 +52,7 @@ function getEidolonBadgeTone(eidolon: string): BadgeTone {
 function SmallBadge({ children, tone }: { children: ReactNode; tone: BadgeTone }) {
   return (
     <span
-      className={`rounded border px-1.5 py-0.5 text-[9px] font-black uppercase leading-none ${getBadgeClassName(
+      className={`rounded border px-1.5 py-0.5 text-[11px] font-black uppercase leading-none ${getBadgeClassName(
         tone,
       )}`}
     >
@@ -135,7 +135,7 @@ export function PersonaEngravingSection({
   return (
     <section className="flex h-full min-h-0 flex-col gap-3">
       <div className="rounded-xl border border-[#282838] bg-[#12121a] p-4">
-        <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#60a5fa]">
+        <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#60a5fa]">
           {t('deckBuilder.variantModal.engravingSectionLabel')}
         </p>
         <h3 className="mt-1 text-lg font-black text-white">
@@ -199,7 +199,7 @@ export function PersonaEngravingSection({
                   <h3 className="text-xs font-black uppercase tracking-wide text-white">
                     {slotLabel}
                   </h3>
-                  <p className="mt-1 truncate text-[10px] font-semibold text-[#8b8b9a]">
+                  <p className="mt-1 truncate text-[11px] font-semibold text-[#8b8b9a]">
                     {selectedItem
                       ? `${selectedItem.eidolon} • ${selectedItem.description}`
                       : t('deckBuilder.variantModal.noEngravingSelected')}
@@ -210,7 +210,7 @@ export function PersonaEngravingSection({
                   <button
                     type="button"
                     onClick={() => handleClearSlot(slot)}
-                    className="shrink-0 text-[10px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
+                    className="shrink-0 text-[11px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
                   >
                     {t('deckBuilder.clear')}
                   </button>

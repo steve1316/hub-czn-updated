@@ -439,7 +439,7 @@ function MetadataPill({
   return (
     <span
       className={[
-        'rounded px-1.5 py-0.5 text-[8px] font-black uppercase leading-none',
+        'rounded px-1.5 py-0.5 text-[11px] font-black uppercase leading-none',
         className,
       ].join(' ')}
     >
@@ -484,7 +484,7 @@ function EpiphanyOptionButton({
       <div className="flex items-start justify-between gap-2">
         <div className="min-w-0">
           <div className="flex flex-wrap items-center gap-1">
-            <p className="text-[10px] font-black uppercase tracking-wide text-[#facc15]">
+            <p className="text-[11px] font-black uppercase tracking-wide text-[#facc15]">
               {item.rarity}
             </p>
 
@@ -559,7 +559,7 @@ function DivineGodButton({
           draggable={false}
         />
       ) : (
-        <span className="text-[10px] font-black text-white">
+        <span className="text-[11px] font-black text-white">
           {god.displayName.slice(0, 2).toUpperCase()}
         </span>
       )}
@@ -613,14 +613,14 @@ function VariantButton({
           ))}
 
           {hiddenTagsCount > 0 && (
-            <span className="rounded bg-[#1f1b2e] px-1.5 py-0.5 text-[8px] font-black text-[#c4b5fd]">
+            <span className="rounded bg-[#1f1b2e] px-1.5 py-0.5 text-[11px] font-black text-[#c4b5fd]">
               +{hiddenTagsCount}
             </span>
           )}
         </div>
       )}
 
-      <p className="mt-1.5 line-clamp-2 text-[10px] font-semibold leading-snug text-[#dbeafe]">
+      <p className="mt-1.5 line-clamp-2 text-[11px] font-semibold leading-snug text-[#dbeafe]">
         {formattedDescription.text}
       </p>
     </button>
@@ -719,20 +719,20 @@ function SelectedPersonaEngravingSlotCard({
   return (
     <div className={`rounded-md border p-2 ${toneClasses.card}`}>
       <div className="flex items-center justify-between gap-2">
-        <p className={`text-[9px] font-black uppercase ${toneClasses.label}`}>
+        <p className={`text-[11px] font-black uppercase ${toneClasses.label}`}>
           {label}
         </p>
 
         {engraving && (
           <span
-            className={`rounded border px-1.5 py-0.5 text-[8px] font-black uppercase leading-none ${toneClasses.badge}`}
+            className={`rounded border px-1.5 py-0.5 text-[11px] font-black uppercase leading-none ${toneClasses.badge}`}
           >
             {engraving.eidolon}
           </span>
         )}
       </div>
 
-      <p className={`mt-1 text-[10px] font-semibold leading-relaxed ${toneClasses.text}`}>
+      <p className={`mt-1 text-[11px] font-semibold leading-relaxed ${toneClasses.text}`}>
         {engraving?.description ?? emptyLabel}
       </p>
     </div>
@@ -756,10 +756,10 @@ function SelectedEpiphanySummaryRow({
 
   return (
     <div className={`rounded-md border px-2 py-1 ${toneClassName}`}>
-      <p className="text-[8px] font-black uppercase tracking-wide opacity-80">
+      <p className="text-[11px] font-black uppercase tracking-wide opacity-80">
         {label}
       </p>
-      <p className="mt-0.5 line-clamp-1 text-[9px] font-bold leading-snug">
+      <p className="mt-0.5 line-clamp-1 text-[11px] font-bold leading-snug">
         {value}
       </p>
     </div>
@@ -1095,7 +1095,7 @@ export function VariantSettingsModal({
 
         <main className="grid min-h-0 flex-1 grid-cols-[296px_minmax(0,1fr)] gap-4 overflow-hidden p-4">
           <aside className="min-h-0 overflow-hidden rounded-xl border border-[#303044] bg-[#12121a] p-2.5">
-            <p className="mb-2 text-[10px] font-black uppercase tracking-wider text-[#8b8b9a]">
+            <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-[#8b8b9a]">
               {t('deckBuilder.variantModal.currentCard')}
             </p>
 
@@ -1122,7 +1122,7 @@ export function VariantSettingsModal({
                   <h3 className="truncate text-sm font-black text-white">
                     {displayTitle}
                   </h3>
-                  <p className="text-[10px] font-semibold text-[#a1a1aa]">
+                  <p className="text-[11px] font-semibold text-[#a1a1aa]">
                     Spark +{card.spark_count}
                   </p>
                 </div>
@@ -1138,7 +1138,7 @@ export function VariantSettingsModal({
                     </div>
                   )}
 
-                  <p className="line-clamp-2 text-[10px] font-semibold leading-relaxed text-[#dbeafe]">
+                  <p className="line-clamp-2 text-[11px] font-semibold leading-relaxed text-[#dbeafe]">
                     {formattedCurrentDescription.text}
                   </p>
                 </div>
@@ -1147,11 +1147,11 @@ export function VariantSettingsModal({
               {isPersonaCard && (
                 <div className="mt-3 rounded-lg border border-[#7c3aed]/30 bg-[#1a1630]/55 p-2.5">
                   <div className="flex items-center justify-between gap-2">
-                    <p className="text-[10px] font-black uppercase tracking-wide text-[#c4b5fd]">
+                    <p className="text-[11px] font-black uppercase tracking-wide text-[#c4b5fd]">
                       {t('deckBuilder.variantModal.engravingSettings')}
                     </p>
 
-                    <span className="inline-flex min-w-max shrink-0 items-center whitespace-nowrap rounded border border-[#7c3aed]/40 bg-[#2e1065]/60 px-1.5 py-0.5 text-[9px] font-black uppercase leading-none text-[#ddd6fe]">
+                    <span className="inline-flex min-w-max shrink-0 items-center whitespace-nowrap rounded border border-[#7c3aed]/40 bg-[#2e1065]/60 px-1.5 py-0.5 text-[11px] font-black uppercase leading-none text-[#ddd6fe]">
                       {getSelectedPersonaEngravingSummary(selectedPersonaEngravings) ??
                         t('deckBuilder.variantModal.noEngravingSelected')}
                     </span>
@@ -1184,10 +1184,10 @@ export function VariantSettingsModal({
               <section className="mt-2 rounded-xl border border-[#303044] bg-[#12121a] p-2">
                 <div className="flex items-start justify-between gap-3">
                   <div>
-                    <p className="text-[10px] font-black uppercase tracking-wide text-[#8b8b9a]">
+                    <p className="text-[11px] font-black uppercase tracking-wide text-[#8b8b9a]">
                       {t('deckBuilder.variantModal.divineGod')}
                     </p>
-                    <p className="mt-0.5 line-clamp-1 text-[10px] font-semibold text-[#8b8b9a]">
+                    <p className="mt-0.5 line-clamp-1 text-[11px] font-semibold text-[#8b8b9a]">
                       {selectedDivineGod
                         ? t('deckBuilder.variantModal.filteringByGod', {
                             god: selectedDivineGod.displayName,
@@ -1203,7 +1203,7 @@ export function VariantSettingsModal({
                         setSelectedDivineGod(null)
                         setSelectedDivineEpiphany(null)
                       }}
-                      className="text-[10px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
+                      className="text-[11px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
                     >
                       {t('deckBuilder.clear')}
                     </button>
@@ -1229,7 +1229,7 @@ export function VariantSettingsModal({
                   />
 
                   {combatantClass && (
-                    <p className="rounded-lg border border-[#303044] bg-[#101018] px-2 py-1 text-[10px] font-semibold text-[#a1a1aa]">
+                    <p className="rounded-lg border border-[#303044] bg-[#101018] px-2 py-1 text-[11px] font-semibold text-[#a1a1aa]">
                       {t('deckBuilder.variantModal.combatantClassLabel')}{' '}
                       <span className="font-black text-white">{combatantClass}</span>
                     </p>
@@ -1240,7 +1240,7 @@ export function VariantSettingsModal({
 
               {shouldShowSelectedEpiphanySummary && (
                 <div className="mt-3 rounded-lg border border-[#0ea5e9]/25 bg-[#0f172a]/45 p-2.5">
-                  <p className="text-[10px] font-black uppercase tracking-wide text-[#93c5fd]">
+                  <p className="text-[11px] font-black uppercase tracking-wide text-[#93c5fd]">
                     {t('deckBuilder.variantModal.epiphanySettings')}
                   </p>
 
@@ -1276,7 +1276,7 @@ export function VariantSettingsModal({
           <section className="min-h-0 overflow-hidden rounded-xl border border-[#303044] bg-[#15151f] p-4">
             {activeSection === 'description' ? (
               <div className="h-full overflow-y-auto pr-1">
-                <p className="text-[10px] font-black uppercase tracking-[0.24em] text-[#60a5fa]">
+                <p className="text-[11px] font-black uppercase tracking-[0.24em] text-[#60a5fa]">
                   {t('deckBuilder.variantModal.card')}
                 </p>
                 <h3 className="mt-1 text-xl font-black text-white">
@@ -1293,7 +1293,7 @@ export function VariantSettingsModal({
 
                 <div className="mt-4 grid grid-cols-3 gap-3">
                   <div className="rounded-lg border border-[#303044] bg-[#101018] p-3">
-                    <p className="text-[10px] font-black uppercase text-[#8b8b9a]">
+                    <p className="text-[11px] font-black uppercase text-[#8b8b9a]">
                       {t('deckBuilder.variantModal.damageStat')}
                     </p>
                     <p className="mt-1 text-sm font-black text-white">
@@ -1302,7 +1302,7 @@ export function VariantSettingsModal({
                   </div>
 
                   <div className="rounded-lg border border-[#303044] bg-[#101018] p-3">
-                    <p className="text-[10px] font-black uppercase text-[#8b8b9a]">
+                    <p className="text-[11px] font-black uppercase text-[#8b8b9a]">
                       {t('deckBuilder.variantModal.hitsStat')}
                     </p>
                     <p className="mt-1 text-sm font-black text-white">
@@ -1311,7 +1311,7 @@ export function VariantSettingsModal({
                   </div>
 
                   <div className="rounded-lg border border-[#303044] bg-[#101018] p-3">
-                    <p className="text-[10px] font-black uppercase text-[#8b8b9a]">
+                    <p className="text-[11px] font-black uppercase text-[#8b8b9a]">
                       {t('deckBuilder.variantModal.sparkStat')}
                     </p>
                     <p className="mt-1 text-sm font-black text-white">
@@ -1321,7 +1321,7 @@ export function VariantSettingsModal({
                 </div>
 
                 <div className="mt-4 rounded-xl border border-[#303044] bg-[#101018] p-4">
-                  <p className="mb-2 text-[10px] font-black uppercase tracking-wider text-[#8b8b9a]">
+                  <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-[#8b8b9a]">
                     {t('deckBuilder.variantModal.fullDescription')}
                   </p>
 
@@ -1350,7 +1350,7 @@ export function VariantSettingsModal({
                   <section className="shrink-0 rounded-xl border border-[#303044] bg-[#12121a] p-3">
                     <div className="mb-3 flex items-center justify-between gap-3">
                       <div>
-                        <p className="text-[10px] font-black uppercase tracking-wider text-[#8b8b9a]">
+                        <p className="text-[11px] font-black uppercase tracking-wider text-[#8b8b9a]">
                           {t('deckBuilder.variantModal.variants')}
                         </p>
                         <p className="text-xs font-semibold text-[#a1a1aa]">
@@ -1391,7 +1391,7 @@ export function VariantSettingsModal({
                     <div className="relative min-w-0 flex-1">
                       <Search
                         size={14}
-                        className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#777]"
+                        className="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-[#8a8a8a]"
                       />
                       <input
                         value={searchText}
@@ -1430,7 +1430,7 @@ export function VariantSettingsModal({
                           <p className="text-xs font-black uppercase text-[#c084fc]">
                             {t('deckBuilder.variantModal.divineEpiphany')}
                           </p>
-                          <p className="text-[10px] font-black text-[#8b8b9a]">
+                          <p className="text-[11px] font-black text-[#8b8b9a]">
                             {t('deckBuilder.variantModal.compatibleOptions', {
                               count: divineEpiphanies.length,
                             })}
@@ -1441,7 +1441,7 @@ export function VariantSettingsModal({
                           <button
                             type="button"
                             onClick={() => setSelectedDivineEpiphany(null)}
-                            className="text-[10px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
+                            className="text-[11px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
                           >
                             {t('deckBuilder.clear')}
                           </button>
@@ -1477,7 +1477,7 @@ export function VariantSettingsModal({
                           <p className="text-xs font-black uppercase text-[#facc15]">
                             {t('deckBuilder.variantModal.sparkEpiphany')}
                           </p>
-                          <p className="text-[10px] font-black text-[#8b8b9a]">
+                          <p className="text-[11px] font-black text-[#8b8b9a]">
                             {t('deckBuilder.variantModal.compatibleOptions', {
                               count: commonEpiphanies.length,
                             })}
@@ -1488,7 +1488,7 @@ export function VariantSettingsModal({
                           <button
                             type="button"
                             onClick={() => setSelectedCommonEpiphany(null)}
-                            className="text-[10px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
+                            className="text-[11px] font-black uppercase text-[#fca5a5] hover:text-[#fecaca]"
                           >
                             {t('deckBuilder.clear')}
                           </button>

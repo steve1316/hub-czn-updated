@@ -82,7 +82,7 @@ function CharPresetCard({ preset, setMap }: { preset: CharPreset; setMap: Record
   return (
     <div className="rounded-xl border border-[#282828] bg-[#121212] p-4 space-y-4">
       <div>
-        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.recommendedSets")}</p>
+        <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.recommendedSets")}</p>
         <div className="flex flex-wrap gap-2">
           {preset.recommended_sets.map((id) => {
             const s = setMap[id]
@@ -97,7 +97,7 @@ function CharPresetCard({ preset, setMap }: { preset: CharPreset; setMap: Record
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.mainStats")}</p>
+        <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.mainStats")}</p>
         <div className="space-y-1">
           {slotRows.map(({ slot, stats }) =>
             stats.length > 0 ? (
@@ -111,7 +111,7 @@ function CharPresetCard({ preset, setMap }: { preset: CharPreset; setMap: Record
       </div>
 
       <div>
-        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.substats")}</p>
+        <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t("scoring.preset.substats")}</p>
         <div className="flex flex-wrap gap-1">
           {preset.substats.map((s, i) => (
             <span

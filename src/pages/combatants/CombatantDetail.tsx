@@ -24,7 +24,7 @@ function scoreGrade(score: number): { label: string; color: string } {
 function RollArrows({ count }: { count: number }) {
   if (count <= 1) return null
   const arrows = count === 2 ? '›' : count === 3 ? '››' : '›››'
-  return <span className="text-[#c084fc] text-[9px] mr-0.5 leading-none">{arrows}</span>
+  return <span className="text-[#c084fc] text-[11px] mr-0.5 leading-none">{arrows}</span>
 }
 
 function pieceImageUrl(setId: number, slotNum: number): string {
@@ -42,7 +42,7 @@ function EquippedByAvatar({ portrait, name }: { portrait?: string; name?: string
       title={name}
       aria-label={name}
     >
-      <User size={12} className="text-[#555]" />
+      <User size={12} className="text-[#8a8a8a]" />
     </div>
   ) : null
 
@@ -77,8 +77,8 @@ export function GearSlotCard({
   if (slot.main_stat === null) {
     return (
       <div className="bg-[#121212] border border-[#282828] rounded-xl p-3 space-y-1">
-        <p className="text-[10px] uppercase tracking-wider text-[#555555]">{slot.slot}</p>
-        <p className="text-xs text-[#333333] italic">{t('combatants.detail.empty')}</p>
+        <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">{slot.slot}</p>
+        <p className="text-xs text-[#8a8a8a] italic">{t('combatants.detail.empty')}</p>
       </div>
     )
   }
@@ -95,7 +95,7 @@ export function GearSlotCard({
 
   const pieceFallback = (
     <div className="w-10 h-10 bg-[#282828] rounded-lg flex items-center justify-center">
-      <span className="text-[9px] text-[#444]">{slot.slot_num ?? '?'}</span>
+      <span className="text-[11px] text-[#8a8a8a]">{slot.slot_num ?? '?'}</span>
     </div>
   )
 
@@ -115,14 +115,14 @@ export function GearSlotCard({
             pieceFallback
           )}
           {slot.level != null && slot.level > 0 && (
-            <span className="absolute -bottom-1 -right-1 bg-[#c084fc] text-[#121212] text-[8px] font-bold px-1 py-px rounded leading-tight">
+            <span className="absolute -bottom-1 -right-1 bg-[#c084fc] text-[#121212] text-[11px] font-bold px-1 py-px rounded leading-tight">
               +{slot.level}
             </span>
           )}
         </div>
 
         <div className="flex-1 min-w-0">
-          <p className="text-[9px] uppercase tracking-wider text-[#555555] truncate">
+          <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a] truncate">
             {slot.set_name ?? slot.slot}
           </p>
           <p className="text-xs font-semibold text-[#ffffff] truncate">{slot.main_stat}</p>
@@ -145,7 +145,7 @@ export function GearSlotCard({
               <div className="flex items-center gap-1.5 tabular-nums">
                 <span className="text-[#ffffff] font-medium">{s.value}</span>
                 {eff != null && (
-                  <span className={`text-[9px] ${effColor}`}>{eff}%</span>
+                  <span className={`text-[11px] ${effColor}`}>{eff}%</span>
                 )}
               </div>
             </div>
@@ -157,11 +157,11 @@ export function GearSlotCard({
       {displayScore != null && (
         <div className="px-3 pb-3 pt-1 border-t border-[#1e1e1e] mt-1">
           <div className="flex items-center justify-between text-xs">
-            <span className="text-[#555555]">Score</span>
+            <span className="text-[#8a8a8a]">Score</span>
             <div className="flex items-center gap-1.5">
               <span className="text-[#c084fc] font-bold">{displayScore.toFixed(1)}</span>
               {grade && (
-                <span className={`text-[10px] font-bold ${grade.color}`}>({grade.label})</span>
+                <span className={`text-[11px] font-bold ${grade.color}`}>({grade.label})</span>
               )}
             </div>
           </div>
@@ -187,7 +187,7 @@ export function FinalStatsPanel({ stats, compact = false }: { stats: FinalStats;
   ]
   return (
     <div className={`bg-[#181818] border border-[#282828] rounded-xl ${compact ? 'p-2.5' : 'p-4'}`}>
-      <p className={`uppercase tracking-wider text-[#b3b3b3] ${compact ? 'text-[9px] mb-1.5' : 'text-[10px] mb-3'}`}>
+      <p className={`uppercase tracking-wider text-[#b3b3b3] ${compact ? 'text-[11px] mb-1.5' : 'text-[11px] mb-3'}`}>
         {t('combatants.detail.finalStats')}
       </p>
       <div className={`grid grid-cols-2 ${compact ? 'gap-x-4 gap-y-0.5' : 'gap-x-6 gap-y-2'}`}>
@@ -218,7 +218,7 @@ export function BaseStatsPanel({ stats }: { stats: BaseStats }) {
 
   return (
     <div className="bg-[#181818] border border-[#282828] rounded-xl p-4">
-      <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-3">
+      <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-3">
         {t('combatants.detail.baseStats')}
       </p>
       <div className="grid grid-cols-2 gap-x-6 gap-y-2">

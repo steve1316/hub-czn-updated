@@ -54,13 +54,13 @@ export function DeckCardCompact({
 
       <div className="absolute left-2 right-2 top-12 z-10 flex flex-wrap gap-1">
         {mainType && (
-          <span className="rounded bg-[#ef4444]/90 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-white shadow">
+          <span className="rounded bg-[#ef4444]/90 px-1.5 py-0.5 text-[11px] font-black uppercase tracking-wide text-white shadow">
             {mainType}
           </span>
         )}
 
         {secondaryType && (
-          <span className="rounded bg-black/65 px-1.5 py-0.5 text-[9px] font-black uppercase tracking-wide text-[#e5e7eb] shadow">
+          <span className="rounded bg-black/65 px-1.5 py-0.5 text-[11px] font-black uppercase tracking-wide text-[#e5e7eb] shadow">
             {secondaryType}
           </span>
         )}
@@ -72,7 +72,7 @@ export function DeckCardCompact({
         </h3>
 
         {displayDescription && (
-          <p className="mx-auto mt-1 line-clamp-4 max-w-[95%] text-[10px] font-bold leading-snug text-[#f8fafc] drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]">
+          <p className="mx-auto mt-1 line-clamp-4 max-w-[95%] text-[11px] font-bold leading-snug text-[#f8fafc] drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]">
             {displayDescription}
           </p>
         )}
@@ -84,7 +84,7 @@ export function DeckCardCompact({
             type="button"
             onClick={onOpenVariants}
             title={t('deckBuilder.card.selectVariant')}
-            className="inline-flex h-6 items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/90 px-2 text-[9px] font-bold text-[#7dd3fc] hover:bg-[#0c4a6e]"
+            className="inline-flex h-6 items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/90 px-2 text-[11px] font-bold text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
             <Sparkles size={11} />
             Var.

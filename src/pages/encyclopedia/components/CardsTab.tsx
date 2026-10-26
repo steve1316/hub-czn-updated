@@ -21,7 +21,7 @@ const TYPE_COLORS: Record<string, string> = {
 function TypeBadge({ type }: { type: string }) {
   const cls = TYPE_COLORS[type] ?? 'bg-[#222] text-[#888]'
   return (
-    <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide ${cls}`}>
+    <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded uppercase tracking-wide ${cls}`}>
       {type}
     </span>
   )
@@ -35,9 +35,9 @@ function CardRow({ card }: { card: CardEntry }) {
     <tr className="border-b border-[#1e1e1e] hover:bg-[#1a1a1a] transition-colors">
       <td className="px-3 py-2">
         <div className="text-[#e5e7eb] text-xs font-medium">
-          {card.name || <span className="text-[#555] italic">unnamed</span>}
+          {card.name || <span className="text-[#8a8a8a] italic">unnamed</span>}
         </div>
-        <div className="text-[#444] text-[10px] font-mono mt-0.5">{shortId}</div>
+        <div className="text-[#8a8a8a] text-[11px] font-mono mt-0.5">{shortId}</div>
       </td>
       <td className="px-3 py-2 text-center">
         <span className="text-[#e5e7eb] text-xs font-mono">{card.cost}</span>
@@ -46,15 +46,15 @@ function CardRow({ card }: { card: CardEntry }) {
         <div className="flex flex-wrap gap-1">
           {card.effect_types.length > 0
             ? card.effect_types.map(t => <TypeBadge key={t} type={t} />)
-            : <span className="text-[#444] text-[10px]">—</span>
+            : <span className="text-[#8a8a8a] text-[11px]">—</span>
           }
         </div>
       </td>
       <td className="px-3 py-2 text-center font-mono text-xs text-[#e5e7eb]">
-        {card.eff_value > 0 ? coefficient : <span className="text-[#444]">—</span>}
+        {card.eff_value > 0 ? coefficient : <span className="text-[#8a8a8a]">—</span>}
       </td>
       <td className="px-3 py-2 text-center text-xs text-[#e5e7eb]">
-        {card.hits > 0 ? card.hits : <span className="text-[#444]">—</span>}
+        {card.hits > 0 ? card.hits : <span className="text-[#8a8a8a]">—</span>}
       </td>
       <td className="px-3 py-2 text-center">
         {card.spark_count > 0 ? (
@@ -62,7 +62,7 @@ function CardRow({ card }: { card: CardEntry }) {
             ✦{card.spark_count}
           </span>
         ) : (
-          <span className="text-[#333] text-xs">—</span>
+          <span className="text-[#8a8a8a] text-xs">—</span>
         )}
       </td>
     </tr>
@@ -103,7 +103,7 @@ export function CardsTab() {
       <div className="w-52 shrink-0 flex flex-col gap-3 p-3 bg-[#181818] border-r border-[#282828] overflow-y-auto">
         <div>
           <h2 className="text-[#ffffff] font-bold text-sm mb-1">{t('cards.title')}</h2>
-          <p className="text-[#666] text-[10px]">{t('cards.description')}</p>
+          <p className="text-[#8a8a8a] text-[11px]">{t('cards.description')}</p>
         </div>
 
         <input
@@ -115,7 +115,7 @@ export function CardsTab() {
         />
 
         <div className="flex flex-col gap-0.5">
-          <p className="text-[#666] text-[10px] uppercase tracking-wide mb-0.5">{t('cards.filterType')}</p>
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide mb-0.5">{t('cards.filterType')}</p>
           {(['all', 'dmg', 'support'] as const).map(f => (
             <button
               key={f}
@@ -131,7 +131,7 @@ export function CardsTab() {
         </div>
 
         <div className="flex flex-col gap-0.5">
-          <p className="text-[#666] text-[10px] uppercase tracking-wide mb-0.5">{t('cards.character')}</p>
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide mb-0.5">{t('cards.character')}</p>
           <button
             type="button"
             onClick={() => setSelectedChar(null)}
@@ -163,14 +163,14 @@ export function CardsTab() {
             {t('common.loading')}
           </div>
         ) : filtered.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full gap-3 text-[#444]">
+          <div className="flex flex-col items-center justify-center h-full gap-3 text-[#8a8a8a]">
             <BookOpen size={36} />
             <p className="text-sm">{t('cards.empty')}</p>
           </div>
         ) : (
           <table className="w-full text-sm border-collapse">
             <thead className="sticky top-0 bg-[#121212] z-10">
-              <tr className="border-b border-[#282828] text-[#666] text-[10px] uppercase tracking-wide">
+              <tr className="border-b border-[#282828] text-[#8a8a8a] text-[11px] uppercase tracking-wide">
                 <th className="px-3 py-2.5 text-left">{t('cards.col.card')}</th>
                 <th className="px-3 py-2.5 text-center">{t('cards.col.cost')}</th>
                 <th className="px-3 py-2.5 text-left">{t('cards.col.type')}</th>
@@ -187,7 +187,7 @@ export function CardsTab() {
           </table>
         )}
         {filtered.length > 0 && (
-          <p className="text-[#444] text-[10px] px-3 py-2">
+          <p className="text-[#8a8a8a] text-[11px] px-3 py-2">
             {t('cards.count', { count: filtered.length })}
           </p>
         )}
