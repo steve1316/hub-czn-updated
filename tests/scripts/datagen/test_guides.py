@@ -16,7 +16,7 @@ import pytest
 from PIL import Image, ImageDraw, ImageFilter
 
 from api.client_db import client_output_dir, have_client_db, have_client_text
-from scripts.datagen import card_text, epiphany, images, naming, set_names, sheet
+from scripts.datagen import card_text, epiphany, guides_qc, images, naming, set_names, sheet
 from scripts.datagen.epiphany import Variant
 from scripts.datagen.runner import Context
 from scripts.datagen.sheet import Cell, Fetcher, column_letters, parse_grid, tabs
@@ -685,3 +685,29 @@ def test_cached_sift_remembers_results_without_building_the_matcher(monkeypatch)
     data = b"picture"
     cache[f"{guides.hashlib.sha1(data).hexdigest()}:sift-cards:{cached.signature}"] = "n_0001"
     assert cached.match(Image.new("RGB", (133, 198)), data) == "n_0001"
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# QC report
+
+
+def _qc_guide(blocks: list[dict]) -> list[tuple[str, str, dict]]:
+    return [("olga", "Olga", {"sections": [{"id": "card-ratings", "blocks": blocks}]})]
+
+
+def _rated(card_id: str, name: str, **extra) -> dict:
+    return {"cardId": card_id, "name": name, "note": {"en": ""}, **extra}
+
+
+def test_qc_counts_each_problem_class():
+    ladder = {"level": 1, "name": "x", "cost": 1, "note": {"en": ""}}
+    blocks = [
+        {"type": "card-list", "items": [_rated("c_1_a", "A", rating="4/5"), _rated("c_1_a", "A", rating="3/5"),
+                                        _rated("c_1_b", "B", epiphanies=[ladder, {**ladder, "level": 2}])]},
+        {"type": "prose", "body": {"en": 'Flow 2: nice\nTruth 3" nice\nJust prose'}},
+    ]
+    found = guides_qc.collect(_qc_guide(blocks), lambda card_id: [None] * 6, {"Olga": ["Olga!B3"]})
+    assert [len(found[key]) for key in guides_qc.CLASSES] == [1, 1, 2, 1, 1]
+    assert guides_qc.summary(found) == "guides QC: unfolded_duplicates=1 empty_ladders=1 loose_numbered_lines=2 unidentified_rated=1 short_ladders=1"
+    assert b"c_1_a x2" in guides_qc.report(found)

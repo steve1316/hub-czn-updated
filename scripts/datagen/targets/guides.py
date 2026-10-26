@@ -25,7 +25,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from scripts.datagen import card_text, epiphany, images, roster
+from scripts.datagen import card_text, epiphany, guides_qc, images, roster
 from scripts.datagen.art import webp
 from scripts.datagen.epiphany import Extra
 from scripts.datagen.set_names import set_line
@@ -92,6 +92,9 @@ PICTURE_LABEL_DISTANCE = 12
 
 # A local page listing every picture that still needs a label, written next to the download cache.
 REVIEW_PAGE = "unidentified.html"
+
+# The quality report of the last run, next to the download cache.
+QC_REPORT = "qc.md"
 
 # Card match results by picture and candidate set, so a re-run skips the slow alignment search.
 MATCH_CACHE = "card_matches.json"
@@ -297,6 +300,7 @@ def build(ctx: Context) -> TargetResult:
     files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
+    rated_misses: dict[str, list[str]] = {}
 
     for tab_name, gid in tabs(fetcher.text(HTMLVIEW_URL)):
         res_id = tab_ids[tab_name] if tab_name in tab_ids else names.get(_normalise(tab_name.split("/")[0]))
@@ -319,6 +323,7 @@ def build(ctx: Context) -> TargetResult:
             guide["updated"] = updated
         guide["sections"] = _pages(sections, section_fixes.get(tab_name, {}))
         guides.append((guide_slug, name, guide))
+        rated_misses[name] = builder.rated_misses
         # Written every run like the guide itself, so a tree the author redraws replaces the old one.
         for file_name, download in builder.pictures.items():
             files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
@@ -332,6 +337,7 @@ def build(ctx: Context) -> TargetResult:
             _add_unknown_epiphany(unknown_epiphanies, download, ref)
     for guide_slug, _, guide in guides:
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
+    found = guides_qc.collect(guides, variants_of, rated_misses)
 
     issues.extend(overrides.validate({}, keyed_by_output=False))
     if skipped:
@@ -351,6 +357,8 @@ def build(ctx: Context) -> TargetResult:
     # These are caches for the next run and for review, not outputs, so they are written here rather than compared.
     cache.mkdir(parents=True, exist_ok=True)
     (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies))
+    (cache / QC_REPORT).write_bytes(guides_qc.report(found))
+    print(guides_qc.summary(found), flush=True)
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
     fetcher.prune()
@@ -611,6 +619,8 @@ class _GuideBuilder:
         self.guide_slug = guide_slug
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
+        # Cells of pictures in rated rows that nothing identified, for the QC report.
+        self.rated_misses: list[str] = []
         # The tab's `layout`, set by `sections`, which keeps a cached picture from being served for a cell it has moved out of.
         self._layout = ""
 
@@ -787,13 +797,13 @@ class _GuideBuilder:
                     if "charResId" in label or (kind == "face" and "cardId" not in label):
                         res_id = label.get("charResId") or self._face(download)
                         if res_id is None:
-                            self.labels.unidentify(download.hash, download.data, kind, ref)
+                            self._miss(download, kind, ref, bool(ratings))
                         else:
                             face_row.append((cell.col, res_id))
                     elif "cardId" in label or kind == "card":
                         card_id = label.get("cardId") or self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
                         if card_id is None:
-                            self.labels.unidentify(download.hash, download.data, kind, ref)
+                            self._miss(download, kind, ref, bool(ratings))
                             last_card = None
                             continue
                         epiphany = epiphany + 1 if card_id == last_card else 1
@@ -801,7 +811,7 @@ class _GuideBuilder:
                         cards.append({"cardId": card_id, "col": cell.col, "epiphany": epiphany, "picture": (download, ref)})
                     else:
                         # Set icons, banners and the like. Listed for review so they can be labelled or skipped.
-                        self.labels.unidentify(download.hash, download.data, kind, ref)
+                        self._miss(download, kind, ref, bool(ratings))
             if face_row:
                 face_rows.append(face_row)
 
@@ -813,6 +823,20 @@ class _GuideBuilder:
             face_block, named = self._face_block(face_rows, ratings, names)
             blocks.append(face_block)
         return consumed, blocks, named
+
+    def _miss(self, download: _Download, kind: str, ref: str, rated: bool) -> None:
+        """
+        Record a picture nothing identified.
+
+        Args:
+            download: The sheet's picture.
+            kind: "face", "card" or "other".
+            ref: Its cell, such as "Tenebria!B11".
+            rated: Whether it sits in a row with ratings under it.
+        """
+        self.labels.unidentify(download.hash, download.data, kind, ref)
+        if rated:
+            self.rated_misses.append(ref)
 
     def _face(self, download: _Download) -> int | None:
         """
