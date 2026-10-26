@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect, useRef, useCallback, useContext, type ReactNode } from 'react'
+import { createContext, useState, useEffect, useCallback, useContext, type ReactNode } from 'react'
 import { useQueryClient } from '@tanstack/react-query'
 import { wsUrl } from '@/lib/api'
 import { useApiPort } from '@/hooks/useApiPort'
@@ -7,10 +7,16 @@ import type { CaptureLogMessage } from '@/lib/types'
 /** Queries that read the live snapshot, refetched when the sidecar says it was updated. */
 export const SNAPSHOT_QUERY_KEYS = [['fragments'], ['combatants'], ['status']] as const
 
+/** How long saves must go quiet before the snapshot queries refetch. */
+const REFETCH_DEBOUNCE_MS = 500
+
 /** What the capture log context hands to consumers. */
 interface CaptureLogValue {
+  /** The most recent capture log lines, oldest first. */
   messages: CaptureLogMessage[]
+  /** Whether the capture-log WebSocket is currently open. */
   connected: boolean
+  /** Empties the log lines. */
   clear: () => void
 }
 
@@ -28,28 +34,38 @@ export function CaptureLogProvider({ children }: { children: ReactNode }) {
   const qc = useQueryClient()
   const [messages, setMessages] = useState<CaptureLogMessage[]>([])
   const [connected, setConnected] = useState(false)
-  const wsRef = useRef<WebSocket | null>(null)
 
   useEffect(() => {
     let destroyed = false
     let retryTimer: ReturnType<typeof setTimeout> | null = null
+    let refetchTimer: ReturnType<typeof setTimeout> | null = null
+    let ws: WebSocket | null = null
+
+    // A burst of saves makes one refetch, fired once the burst has been quiet for a moment.
+    function scheduleRefetch() {
+      if (refetchTimer !== null) clearTimeout(refetchTimer)
+      refetchTimer = setTimeout(() => {
+        refetchTimer = null
+        SNAPSHOT_QUERY_KEYS.forEach(queryKey => qc.invalidateQueries({ queryKey }))
+      }, REFETCH_DEBOUNCE_MS)
+    }
 
     function connect() {
       if (destroyed) return
-      const ws = new WebSocket(wsUrl('/ws/capture-log'))
-      wsRef.current = ws
+      const socket = new WebSocket(wsUrl('/ws/capture-log'))
+      ws = socket
 
-      ws.onopen = () => setConnected(true)
-      ws.onclose = () => {
+      socket.onopen = () => setConnected(true)
+      socket.onclose = () => {
         setConnected(false)
         if (!destroyed) retryTimer = setTimeout(connect, 2000)
       }
-      ws.onerror = () => ws.close()
-      ws.onmessage = (e) => {
+      socket.onerror = () => socket.close()
+      socket.onmessage = (e) => {
         try {
           const msg = JSON.parse(e.data)
           if (msg.type === 'snapshot_updated') {
-            SNAPSHOT_QUERY_KEYS.forEach(queryKey => qc.invalidateQueries({ queryKey }))
+            scheduleRefetch()
             return
           }
           setMessages(prev => [...prev.slice(-499), msg as CaptureLogMessage])
@@ -63,7 +79,8 @@ export function CaptureLogProvider({ children }: { children: ReactNode }) {
     return () => {
       destroyed = true
       if (retryTimer !== null) clearTimeout(retryTimer)
-      wsRef.current?.close()
+      if (refetchTimer !== null) clearTimeout(refetchTimer)
+      ws?.close()
     }
   }, [port, qc])
 
