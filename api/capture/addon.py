@@ -804,7 +804,7 @@ class Addon:
 
     def _on_gacha_history(self, data: dict, request: PendingRequest):
         """
-        Name the banner of a history page and mark it refreshed. The records are saved afterwards by the generic rescue handling.
+        Name the banner of a history page. The records are saved, and the banner marked refreshed, afterwards by the generic rescue handling.
 
         Args:
             data: The `gacha/history` reply.
@@ -820,10 +820,6 @@ class Addon:
                 for record in records:
                     if isinstance(record, dict) and not record.get("gacha_id"):
                         record["gacha_id"] = pool
-        doc = self._load_rescue()
-        doc.setdefault("pool_fetches", {})[pool] = int(time.time())
-        with open(self.rescue_path, "w", encoding="utf-8") as f:
-            json.dump(doc, f, indent=2)
 
     def _on_gacha_list(self, data: dict, request: PendingRequest):
         """
