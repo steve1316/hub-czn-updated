@@ -26,6 +26,10 @@ RENDER_SIZE = (123, 183)
 # The card text box is the lower part of the render. It is upscaled before OCR, which reads small text far better.
 TEXT_TOP = 0.55
 OCR_SCALE = 3
+# The title bar is the top of the render, to the right of the cost gem.
+TITLE_BOTTOM = 0.14
+TITLE_LEFT = 0.15
+TITLE_SCALE = 4
 
 # Where the emblem sits on a render, under the cost: the regular target mark, or a god's emblem for a divine epiphany.
 EMBLEM_BOX = (0, 22, 32, 60)
@@ -74,6 +78,28 @@ def read_card_text(data: bytes, cache: dict[str, str]) -> str:
         width, height = picture.size
         big = picture.resize((width * OCR_SCALE, height * OCR_SCALE), Image.LANCZOS)
         result, _ = _ocr()(np.asarray(big.crop((0, int(big.height * TEXT_TOP), big.width, big.height))))
+        cache[key] = " ".join(line[1] for line in result or [])
+    return cache[key]
+
+
+def read_card_title(data: bytes, cache: dict[str, str]) -> str:
+    """
+    The name on a card picture's title bar.
+
+    Args:
+        data: The picture file.
+        cache: sha1 of the picture -> its title, from earlier runs. Updated in place.
+
+    Returns:
+        The OCR text of the title bar, one space between the pieces it found, or "" when it read nothing.
+    """
+    key = hashlib.sha1(data).hexdigest()
+    if key not in cache:
+        picture = Image.open(io.BytesIO(data)).convert("RGB")
+        width, height = picture.size
+        bar = picture.crop((int(width * TITLE_LEFT), 0, width, max(int(height * TITLE_BOTTOM), 1)))
+        big = bar.resize((bar.width * TITLE_SCALE, bar.height * TITLE_SCALE), Image.LANCZOS)
+        result, _ = _ocr()(np.asarray(big))
         cache[key] = " ".join(line[1] for line in result or [])
     return cache[key]
 

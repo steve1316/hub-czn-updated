@@ -45,6 +45,8 @@ class Cell:
     text: str = ""
     # URLs of the images placed in the cell.
     images: list[str] = field(default_factory=list)
+    # One flag per character of `text`: whether the sheet shows it in bold. Empty when the cell has no bold text.
+    bold: list[bool] = field(default_factory=list)
 
     @property
     def ref(self) -> str:
@@ -227,6 +229,8 @@ class _GridParser(HTMLParser):
         self._occupied: set[tuple[int, int]] = set()
         self._cell: Cell | None = None
         self._in_table = False
+        # One flag per open <span>: whether it sets bold. The sheet never nests them, but a close must not end an outer one.
+        self._spans: list[bool] = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
@@ -251,17 +255,27 @@ class _GridParser(HTMLParser):
             # Row headers take up the first column of the grid.
             self._occupied.add((self._row, self._col))
             self._col += 1
+        elif tag == "span":
+            self._spans.append("font-weight:bold" in (attributes.get("style") or "").replace(" ", ""))
         elif tag == "br" and self._cell is not None:
             self._cell.text += "\n"
+            self._cell.bold.append(False)
         elif tag == "img" and self._cell is not None and attributes.get("src"):
             self._cell.images.append(attributes["src"])
 
     def handle_endtag(self, tag):
-        if tag == "td" and self._cell is not None:
-            self._cell.text = self._cell.text.strip()
+        if tag == "span" and self._spans:
+            self._spans.pop()
+        elif tag == "td" and self._cell is not None:
+            text = self._cell.text
+            lead = len(text) - len(text.lstrip())
+            self._cell.text = text.strip()
+            # Bold flags follow the text through the strip, and are dropped when nothing is bold.
+            self._cell.bold = self._cell.bold[lead:lead + len(self._cell.text)] if any(self._cell.bold) else []
             self.cells[(self._cell.row, self._cell.col)] = self._cell
             self._cell = None
 
     def handle_data(self, data):
         if self._cell is not None:
             self._cell.text += data
+            self._cell.bold.extend([any(self._spans)] * len(data))

@@ -114,6 +114,14 @@ def test_tabs_unescape_names():
     assert tabs(TAB_LIST) == [("Tenebria", "484210597"), ("Adelheid/ADHD", "7")]
 
 
+def test_grid_marks_the_bold_characters_of_a_cell():
+    page = '<table><tbody><tr><th>1</th><td> <span style="font-weight:bold;">Bold</span> plain<br><span style="color:red">red</span></td></tr></tbody></table>'
+    cell = parse_grid(page)[(0, 0)]
+    assert cell.text == "Bold plain\nred"
+    assert "".join(char for char, flag in zip(cell.text, cell.bold) if flag) == "Bold"
+    assert len(cell.bold) == len(cell.text)
+
+
 def test_grid_tracks_spans_line_breaks_and_images():
     grid = parse_grid(GRID)
     assert grid[(0, 0)].text == "Glossary Link"
@@ -426,8 +434,28 @@ def _grid(*cells: Cell) -> dict[tuple[int, int], Cell]:
 
 
 def test_text_beside_a_picture_is_kept():
-    sections, _ = _builder().sections(_grid(_cell(20, 1, pictures=1), _cell(20, 4, "Important Substats:\nCrt Rate/Crt Dmg")))
+    sections, _ = _builder(picture_size=(120, 100)).sections(_grid(_cell(20, 1, pictures=1), _cell(20, 4, "Important Substats:\nCrt Rate/Crt Dmg")))
     assert sections[0]["blocks"] == [_prose("Important Substats:\nCrt Rate/Crt Dmg")]
+
+
+def test_small_unmatched_icon_is_dropped_without_review():
+    builder = _builder(picture_size=(123, 120))
+    sections, _ = builder.sections(_grid(_cell(20, 1, pictures=1)))
+    assert not sections and not builder.labels.unidentified and not builder.strips
+
+
+def test_wide_unmatched_strip_becomes_an_image_block():
+    builder = _builder(picture_size=(1200, 140))
+    sections, _ = builder.sections(_grid(_cell(20, 1, pictures=1), _cell(20, 4, "Important Substats")))
+    [image, text] = sections[0]["blocks"]
+    assert image["type"] == "image" and image["image"] in builder.strips and image["image"].endswith(".webp")
+    assert text == _prose("Important Substats") and not builder.labels.unidentified
+
+
+def test_large_narrow_unmatched_picture_still_needs_review():
+    builder = _builder(picture_size=(300, 200))
+    sections, _ = builder.sections(_grid(_cell(20, 1, pictures=1)))
+    assert not sections and len(builder.labels.unidentified) == 1
 
 
 def test_text_beside_faces_is_left_out():
@@ -458,6 +486,16 @@ def test_potentials_band_becomes_one_block():
     # Levels follow the order the notes are written in, as some tabs label E5 as "E3".
     assert block["ego"] == [{"level": level, "text": {"en": text}} for level, text in
                             enumerate(["Pretty good", "Absolutely broken", "Fine", "Okay", "Typo for E5", "E2's damage gets better"], 1)]
+
+
+def test_mostly_bold_ego_levels_are_marked_bold():
+    # E1 is all bold, E2 is half bold, E3 is plain, and the "E1:" headings themselves do not count.
+    pieces = [("E1:\n", False), ("Big deal", True), ("\nE2:\n", False), ("Half", True), (" and half", False), ("\nE3:\nPlain", False)]
+    text = "".join(piece for piece, _ in pieces)
+    bold = [flag for piece, flag in pieces for _ in piece]
+    cells = [_cell(23, 2, "Potentials"), _cell(24, 4, LEGEND), Cell(24, 7, text, bold=bold)]
+    [section], _ = _builder().sections(_grid(*cells))
+    assert [(note["level"], note.get("bold")) for note in section["blocks"][0]["ego"]] == [(1, True), (2, None), (3, None)]
 
 
 def test_a_tiny_tree_picture_still_counts():
@@ -735,3 +773,65 @@ def test_qc_counts_each_problem_class():
     assert [len(found[key]) for key in guides_qc.CLASSES] == [1, 1, 2, 1, 1]
     assert guides_qc.summary(found) == "guides QC: unfolded_duplicates=1 empty_ladders=1 loose_numbered_lines=2 unidentified_rated=1 short_ladders=1"
     assert b"c_1_a x2" in guides_qc.report(found)
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# Unread pictures and repeated cards
+
+
+def _row(*card_ids: str | None) -> list[dict]:
+    return [{"cardId": card_id, "col": col, "picture": None} for col, card_id in enumerate(card_ids)]
+
+
+def test_title_cards_match_a_read_title_to_a_card_name():
+    cache = {hashlib.sha1(data).hexdigest(): title for data, title in [(b"a", "Flicker Bladc"), (b"b", "Guard"), (b"c", "Strike"), (b"d", "Zzzzzzzz")]}
+    names = {"c_1_srt4": "Flicker Blade", "c_1_srt4_rsp1": "Flicker Blade (Amped)", "c_1_def1": "Guard", "c_2_str1": "Strike", "c_3_str1": "Strike"}
+    titles = guides._TitleCards(names, cache)
+    assert titles.card_id(b"a", set()) == "c_1_srt4"
+    assert titles.card_id(b"a", set(), 0.99) is None
+    assert titles.card_id(b"b", set()) == "c_1_def1"
+    # A name shared by two characters' cards is the guide character's, and nothing without an owner.
+    assert titles.card_id(b"c", {"c_3_str1"}) == "c_3_str1"
+    assert titles.card_id(b"c", set()) is None
+    assert titles.card_id(b"d", set()) is None
+
+
+def test_an_unread_picture_takes_the_card_that_completes_its_run():
+    flow = "c_30134_uni2"
+    row = _row(None, flow, flow, flow, flow)
+    guides._fill_unread(row, _variants_of)
+    assert [card["cardId"] for card in row] == [flow] * 5
+    middle = _row(flow, flow, None, flow, flow)
+    guides._fill_unread(middle, _variants_of)
+    assert [card["epiphany"] for card in guides._number_runs(middle)] == [1, 2, 3, 4, 5]
+
+
+def test_an_unread_picture_that_does_not_complete_a_run_stays_a_gap():
+    row = _row("c_30134_uni2", "c_30134_uni2", None)
+    guides._fill_unread(row, _variants_of)
+    assert row[2]["cardId"] is None
+    assert [card["epiphany"] for card in guides._number_runs(row)] == [1, 2]
+
+
+def test_two_pictures_of_one_card_show_as_one_card_times_two():
+    builder = _builder()
+    row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
+    settled = builder._settle_repeats(row, {0: "5/5", 1: "5/5"})
+    assert [(card["cardId"], card["count"]) for card in settled] == [("c_30134_uni2", 2)]
+    # Different ratings are two different judgements, so both stay.
+    assert len(builder._settle_repeats(row, {0: "5/5", 1: "3/5"})) == 2
+
+
+def test_two_pictures_of_one_card_take_the_levels_they_show(monkeypatch):
+    builder = _builder()
+    builder.read_text = lambda data: ""
+
+    def resolve(card, download, ref, decks, overrides, read, variants_of):
+        card["epiphany"] = {"level": {"B1": 4, "B2": 1}[ref]}
+        return True
+
+    monkeypatch.setattr(guides, "_resolve_deck_card", resolve)
+    row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
+    row[0]["picture"], row[1]["picture"] = (None, "B1"), (None, "B2")
+    assert [card["level"] for card in builder._settle_repeats(row, {0: "5/5", 1: "3/5"})] == [1, 4]
