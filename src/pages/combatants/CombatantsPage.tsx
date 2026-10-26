@@ -8,6 +8,7 @@ import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
 import type { Combatant } from '@/lib/types'
 import { GearSlotCard, FinalStatsPanel } from './CombatantDetail'
+import { GlobalScoring, CharacterScoring } from './ScoringSection'
 import { Button } from '@/components/ui/button'
 
 // ─── Attribute badge ───────────────────────────────────────────────────────
@@ -148,6 +149,8 @@ function ExpandedContent({
                 )
               })}
             </div>
+
+            <CharacterScoring charId={charId} resId={resId} />
           </>
         ) : null}
       </div>
@@ -343,6 +346,9 @@ export function CombatantsPage() {
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-1.5">
+        <div className="pb-2">
+          <GlobalScoring />
+        </div>
         {combatants.map((c, i) => (
           <CombatantRow
             key={c.char_id}
