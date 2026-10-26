@@ -193,13 +193,13 @@ export function FinalStatsPanel({ stats, compact = false }: { stats: FinalStats;
     ...(stats.Ego && stats.Ego > 0 ? [{ label: 'Ego', value: stats.Ego.toLocaleString() }] : []),
   ]
   return (
-    <div className={`bg-[#181818] border border-[#282828] rounded-xl ${compact ? 'p-2.5' : 'p-4'}`}>
+    <div className={`bg-[#181818] border border-[#282828] rounded-xl ${compact ? 'p-3' : 'p-4'}`}>
       <p className={`text-xs font-medium text-[#b3b3b3] ${compact ? 'mb-1.5' : 'mb-3'}`}>
         {t('combatants.detail.finalStats')}
       </p>
-      <div className={`grid grid-cols-2 ${compact ? 'gap-x-4 gap-y-0.5' : 'gap-x-6 gap-y-2'}`}>
+      <div className={`grid grid-cols-2 ${compact ? 'gap-x-6 gap-y-1' : 'gap-x-6 gap-y-2'}`}>
         {rows.map(r => (
-          <div key={r.label} className={`flex justify-between ${compact ? 'text-xs' : 'text-sm'}`}>
+          <div key={r.label} className="flex justify-between text-sm">
             <span className="flex items-center gap-1 text-[#b3b3b3]">
               {r.label}
               {r.tip && <InfoPopover content={r.tip} />}

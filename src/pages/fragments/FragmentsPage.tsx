@@ -25,15 +25,16 @@ const RARITY_COLOR: Record<number, string> = {
 function GsCell({ gearScore, priorityScore }: { gearScore: number; priorityScore: number }) {
   const score = priorityScore > 0 ? priorityScore : gearScore
   return (
-    <span className="font-mono text-[#c084fc]">{score.toFixed(1)}</span>
+    <span className="font-mono text-base text-[#c084fc]">{score.toFixed(1)}</span>
   )
 }
 
 function StatCell({ stat }: { stat: Stat | null | undefined }) {
   if (!stat) return <span className="text-[#8a8a8a]">—</span>
   return (
-    <span className="text-xs">
-      <span className="text-[#b3b3b3]">{stat.name}</span> <span className="text-[#ffffff]">{stat.formatted}</span>
+    <span className="flex flex-col leading-tight">
+      <span className="text-xs text-[#b3b3b3]">{stat.name}</span>
+      <span className="text-sm text-[#ffffff]">{stat.formatted}</span>
     </span>
   )
 }
@@ -44,16 +45,16 @@ function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
     <AssetImage
       src={src}
       alt=""
-      className="w-8 h-8 object-contain shrink-0"
+      className="w-10 h-10 object-contain shrink-0"
     />
   )
 }
 
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ChevronsUpDown size={12} className="text-[#8a8a8a]" />
+  if (!active) return <ChevronsUpDown size={14} className="text-[#8a8a8a]" />
   return dir === 'asc'
-    ? <ChevronUp size={12} className="text-[#c084fc]" />
-    : <ChevronDown size={12} className="text-[#c084fc]" />
+    ? <ChevronUp size={14} className="text-[#c084fc]" />
+    : <ChevronDown size={14} className="text-[#c084fc]" />
 }
 
 export function FragmentsPage() {
@@ -137,7 +138,7 @@ export function FragmentsPage() {
           <TableHeader className="sticky top-0 z-10 bg-[#121212]">
             <TableRow className="bg-[#121212] hover:bg-[#121212] border-[#282828]">
               {COLS.map(col => (
-                <TableHead key={col.key} className="text-[#b3b3b3] text-xs font-medium h-9 px-3">
+                <TableHead key={col.key} className="text-[#b3b3b3] text-sm font-medium h-11 px-3">
                   <div className="flex items-center gap-1">
                     <button
                       onClick={() => handleSort(col.key)}
@@ -156,31 +157,31 @@ export function FragmentsPage() {
             {sorted.map((f: MemoryFragment) => (
               <TableRow
                 key={f.id}
-                className="border-[#282828] hover:bg-[#282828] cursor-default h-7"
+                className="border-[#282828] hover:bg-[#282828] cursor-default"
               >
-                <TableCell className="text-[#8a8a8a] text-xs tabular-nums py-1">{f.slot_num}</TableCell>
-                <TableCell className="py-1">
-                  <span className="flex items-center gap-1.5" style={{ color: RARITY_COLOR[f.rarity_num] }}>
+                <TableCell className="text-[#b3b3b3] tabular-nums py-2">{f.slot_num}</TableCell>
+                <TableCell className="py-2">
+                  <span className="flex items-center gap-2" style={{ color: RARITY_COLOR[f.rarity_num] }}>
                     <PieceThumb setId={f.set_id} slotNum={f.slot_num} />
                     {f.set_name}
                   </span>
                 </TableCell>
-                <TableCell className="text-[#ffffff] py-1">+{f.level}</TableCell>
-                <TableCell className="py-1 whitespace-normal">
+                <TableCell className="text-[#ffffff] py-2">+{f.level}</TableCell>
+                <TableCell className="py-2 whitespace-normal">
                   <StatCell stat={f.main_stat} />
                 </TableCell>
                 {[0, 1, 2, 3].map(i => (
-                  <TableCell key={i} className="py-1 whitespace-normal">
+                  <TableCell key={i} className="py-2 whitespace-normal">
                     <StatCell stat={f.substats[i]} />
                   </TableCell>
                 ))}
-                <TableCell className="py-1">
+                <TableCell className="py-2">
                   <GsCell gearScore={f.gear_score} priorityScore={f.priority_score} />
                 </TableCell>
-                <TableCell className="text-[#b3b3b3] font-mono text-xs py-1">
+                <TableCell className="text-[#b3b3b3] font-mono py-2">
                   {f.potential_low.toFixed(1)}–{f.potential_high.toFixed(1)}
                 </TableCell>
-                <TableCell className="py-1 text-xs">
+                <TableCell className="py-2">
                   {f.equipped_to
                     ? <span className="text-[#ffffff]">{f.equipped_to}</span>
                     : <span className="text-[#8a8a8a]">—</span>
