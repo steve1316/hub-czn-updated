@@ -23,19 +23,19 @@ export function PartnerListBlock({ items }: { items: Item[] }) {
               <img
                 src={face}
                 alt={item.name}
-                className="h-14 w-14 shrink-0 rounded-full object-cover"
+                className="h-16 w-16 shrink-0 rounded-full object-cover"
               />
             ) : (
-              <div className="grid h-14 w-14 shrink-0 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#8a8a8a]">
+              <div className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#222] text-lg font-bold text-[#8a8a8a]">
                 {item.name.charAt(0)}
               </div>
             )}
             <div className="min-w-0 flex-1">
               <div className="flex items-center gap-2">
-                <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name}</h4>
+                <h4 className="truncate text-base font-bold text-[#ffffff]">{item.name}</h4>
                 <RatingChip rating={item.rating} />
               </div>
-              <p className="mt-1 text-xs leading-relaxed text-[#b3b3b3]">
+              <p className="mt-1 text-sm leading-relaxed text-[#b3b3b3]">
                 {localized(item.note, lang)}
               </p>
             </div>

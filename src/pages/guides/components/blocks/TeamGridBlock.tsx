@@ -27,7 +27,7 @@ export function TeamGridBlock({ groups, selfId }: TeamGridBlockProps) {
     <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
       {groups.map((group, gi) => (
         <div key={gi} className="flex flex-col gap-2 rounded-lg border border-[#282828] bg-[#181818] p-3">
-          <h4 className={cn('text-xs font-bold', group.title ? 'text-[#c084fc]' : 'text-[#ffffff]')}>
+          <h4 className={cn('text-sm font-bold', group.title ? 'text-[#c084fc]' : 'text-[#ffffff]')}>
             {group.title ? localized(group.title, lang) : t('guides.team', { n: ++teamNumber })}
           </h4>
           <div className="flex flex-wrap gap-2">
@@ -35,19 +35,19 @@ export function TeamGridBlock({ groups, selfId }: TeamGridBlockProps) {
               const face = getCharacterFaceUrl(member.charResId)
               const self = member.charResId === selfId
               return (
-                <div key={`${member.charResId}-${mi}`} className="flex w-[52px] flex-col items-center gap-1">
+                <div key={`${member.charResId}-${mi}`} className="flex w-20 flex-col items-center gap-1">
                   {face ? (
                     <img
                       src={face}
                       alt={member.name}
-                      className={cn('h-12 w-12 rounded-full object-cover', self && 'ring-2 ring-[#c084fc]')}
+                      className={cn('h-16 w-16 rounded-full object-cover', self && 'ring-2 ring-[#c084fc]')}
                     />
                   ) : (
-                    <div className={cn('grid h-12 w-12 place-items-center rounded-full bg-[#222] text-sm font-bold text-[#8a8a8a]', self && 'ring-2 ring-[#c084fc]')}>
+                    <div className={cn('grid h-16 w-16 place-items-center rounded-full bg-[#222] text-base font-bold text-[#8a8a8a]', self && 'ring-2 ring-[#c084fc]')}>
                       {member.name.charAt(0)}
                     </div>
                   )}
-                  <span className="w-full truncate text-center text-[11px] text-[#b3b3b3]">{member.name}</span>
+                  <span className="w-full text-center text-xs leading-tight text-[#b3b3b3]">{member.name}</span>
                 </div>
               )
             })}

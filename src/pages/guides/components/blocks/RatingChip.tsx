@@ -27,7 +27,7 @@ interface RatingChipProps {
 export function RatingChip({ rating, quote }: RatingChipProps) {
   const { t } = useTranslation()
   const chip = (
-    <span className={cn('shrink-0 rounded px-1.5 py-px text-[11px] font-bold', TONE_CLASSES[ratingTone(rating)], quote !== undefined && 'border-b border-dotted border-current')}>
+    <span className={cn('shrink-0 rounded px-1.5 py-px text-xs font-bold', TONE_CLASSES[ratingTone(rating)], quote !== undefined && 'border-b border-dotted border-current')}>
       {rating}
     </span>
   )
@@ -35,8 +35,8 @@ export function RatingChip({ rating, quote }: RatingChipProps) {
   return (
     <span tabIndex={0} className="group relative shrink-0 cursor-help outline-none">
       {chip}
-      <span className="absolute right-0 bottom-[calc(100%+6px)] z-10 hidden w-max max-w-80 rounded-md border border-[#3a3a3a] bg-[#0d0d0d] px-2.5 py-2 text-xs leading-normal whitespace-normal text-[#cbd5e1] shadow-[0_6px_18px_rgba(0,0,0,.5)] group-hover:block group-focus:block">
-        <b className="block text-[11px] text-[#b3b3b3]">{t('guides.ratedIn', { rating })}</b>
+      <span className="absolute right-0 bottom-[calc(100%+6px)] z-10 hidden w-max max-w-80 rounded-md border border-[#3a3a3a] bg-[#0d0d0d] px-2.5 py-2 text-sm leading-normal whitespace-normal text-[#cbd5e1] shadow-[0_6px_18px_rgba(0,0,0,.5)] group-hover:block group-focus:block">
+        <b className="block text-xs text-[#b3b3b3]">{t('guides.ratedIn', { rating })}</b>
         {quote && <span className="mt-0.5 block text-[#ffffff]">"{quote}"</span>}
       </span>
     </span>

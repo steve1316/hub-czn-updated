@@ -197,3 +197,30 @@ export function guideDeckToSlot(charResId: number, cards: DeckCard[]): GuideDeck
     partial: [...partial],
   }
 }
+
+/** How the guide list is ordered: A-Z, or the latest update first. */
+export type GuideSort = 'name' | 'updated'
+
+/**
+ * Turn a guide's "M/D" update date into a number that orders by date.
+ * @param updated The date as the sheet writes it.
+ * @returns The month x 100 plus the day, or -1 when there is no usable date.
+ */
+function updatedOrder(updated: string | undefined): number {
+  const match = /^(\d{1,2})\/(\d{1,2})$/.exec(updated ?? '')
+  return match ? Number(match[1]) * 100 + Number(match[2]) : -1
+}
+
+/**
+ * Filter the guide list by name and put it in order.
+ * @param list The guides.
+ * @param query The search text, matched anywhere in the name.
+ * @param sort A-Z, or the latest update first with undated guides last.
+ * @returns The matching guides in order.
+ */
+export function filterGuides<T extends { name: string; updated?: string }>(list: T[], query: string, sort: GuideSort): T[] {
+  const q = query.trim().toLowerCase()
+  return list
+    .filter(g => g.name.toLowerCase().includes(q))
+    .sort((a, b) => (sort === 'updated' ? updatedOrder(b.updated) - updatedOrder(a.updated) : 0) || a.name.localeCompare(b.name))
+}

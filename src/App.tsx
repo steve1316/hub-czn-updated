@@ -63,6 +63,7 @@ function AppRoutes() {
           <Route path="cards" element={<Navigate to="/encyclopedia/cards" replace />} />
           <Route path="deck-builder" element={<DeckBuilderPage />} />
           <Route path="guides" element={<GuidesPage />} />
+          <Route path="guides/:charId" element={<GuidesPage />} />
           <Route path="battles" element={<BattlesPage />}>
             <Route index element={<Navigate to="simulate" replace />} />
             <Route path="simulate"  element={<SimulateTab />} />

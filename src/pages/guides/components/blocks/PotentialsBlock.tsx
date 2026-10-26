@@ -51,7 +51,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
-        <div className="flex flex-col gap-2 sm:max-w-sm">
+        <div className="flex flex-col gap-2 sm:max-w-md">
           {picture ? (
             <img src={picture} alt="" className="max-w-full rounded-lg border border-[#282828]" />
           ) : (
@@ -60,7 +60,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
             </div>
           )}
           {tree && author && (
-            <div className="flex gap-2 text-xs">
+            <div className="flex gap-2 text-sm">
               {[
                 { label: t('guides.potentialsTree'), active: !authorSelected, onClick: () => setShowAuthor(false) },
                 { label: t('guides.potentialsAuthorPicture'), active: authorSelected, onClick: () => setShowAuthor(true) },
@@ -76,7 +76,7 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
               ))}
             </div>
           )}
-          {tree && !coloured && !authorSelected && <p className="text-xs text-[#8a8a8a] italic">{t('guides.potentialsNoColours')}</p>}
+          {tree && !coloured && !authorSelected && <p className="text-sm text-[#8a8a8a] italic">{t('guides.potentialsNoColours')}</p>}
         </div>
         <ul className="flex flex-col gap-2">
           {legend.map(entry => (
@@ -89,12 +89,12 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
       </div>
       {ego.length > 0 && (
         <div className="flex flex-col gap-2">
-          <h3 className="text-sm font-bold tracking-wide text-[#c084fc]">{t('guides.egoManifestation')}</h3>
+          <h3 className="text-base font-bold tracking-wide text-[#c084fc]">{t('guides.egoManifestation')}</h3>
           <ol className="flex flex-col gap-2">
             {ego.map(note => (
               <li key={note.level} className="flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3">
-                <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[11px] font-bold text-[#c084fc]">E{note.level}</span>
-                <p className={cn('min-w-0 flex-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]', note.bold && 'font-bold text-[#e5e5e5]')}>
+                <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-xs font-bold text-[#c084fc]">E{note.level}</span>
+                <p className={cn('min-w-0 flex-1 text-sm leading-relaxed whitespace-pre-line text-[#b3b3b3]', note.bold && 'font-bold text-[#e5e5e5]')}>
                   {localized(note.text, lang)}
                 </p>
               </li>

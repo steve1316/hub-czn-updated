@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { DeckCard, Guide } from './guides.types'
-import { cardEntry, epiphanyRatings, guideDeckToSlot, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
+import { cardEntry, epiphanyRatings, filterGuides, guideDeckToSlot, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en for en and anything else', () => {
@@ -131,5 +131,22 @@ describe('guideDeckToSlot', () => {
     expect(slot.cards).toHaveLength(3)
     expect(slot.cards[0]).toMatchObject({ selected_divine_epiphany_id: null, selected_divine_god: null })
     expect(partial).toEqual(['Sword Resonance', 'Persona'])
+  })
+})
+
+describe('filterGuides', () => {
+  const list = [
+    { charResId: 1, name: 'Nia', updated: '8/10' },
+    { charResId: 2, name: 'Amir', updated: '8/5' },
+    { charResId: 3, name: 'Beryl' },
+    { charResId: 4, name: 'Anika', updated: '10/24' },
+  ]
+
+  it('keeps names that contain the search, ignoring case, in A-Z order', () => {
+    expect(filterGuides(list, ' NI ', 'name').map(g => g.name)).toEqual(['Anika', 'Nia'])
+  })
+
+  it('puts the latest update first and undated guides last', () => {
+    expect(filterGuides(list, '', 'updated').map(g => g.name)).toEqual(['Anika', 'Nia', 'Amir', 'Beryl'])
   })
 })

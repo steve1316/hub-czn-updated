@@ -23,13 +23,13 @@ export function GearListBlock({ intro, items }: { intro?: LocalizedText; items: 
               <img
                 src={item.image}
                 alt={item.name}
-                className="h-10 w-10 shrink-0 rounded object-contain"
+                className="h-14 w-14 shrink-0 rounded object-contain"
               />
             )}
             <div className="min-w-0 flex-1">
-              <h4 className="text-sm font-bold text-[#ffffff]">{item.name}</h4>
+              <h4 className="text-base font-bold text-[#ffffff]">{item.name}</h4>
               {item.note && (
-                <p className="mt-1 text-xs leading-relaxed text-[#b3b3b3]">
+                <p className="mt-1 text-sm leading-relaxed text-[#b3b3b3]">
                   {localized(item.note, lang)}
                 </p>
               )}

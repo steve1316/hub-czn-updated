@@ -21,7 +21,7 @@ export function TableBlock({ rows }: TableBlockProps) {
 
   return (
     <div className="overflow-x-auto rounded-lg border border-[#282828] bg-[#181818]">
-      <table className="w-full text-xs">
+      <table className="w-full text-sm">
         <tbody>
           {rows.map((row, i) => (
             <tr key={i} className={cn(i > 0 && 'border-t border-[#282828]')}>
