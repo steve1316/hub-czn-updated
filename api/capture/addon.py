@@ -1,6 +1,9 @@
 """
 mitmproxy Addon for intercepting CZN game WebSocket traffic.
 Extracts Memory Fragment inventory and character data from game API responses.
+
+The live-delta handling (list frames, qid pairing, piece / character / totals folding, relaunch rotation) is ported in part from
+Vribbels-CZN-Optimizer, MIT, (c) 2025 Vorbroker, 2026 Ikkoru.
 """
 
 import json
@@ -14,6 +17,7 @@ from game_data import CHARACTERS, SETS
 from game_data.constants import EQUIPMENT_SLOTS
 
 from .constants import SERVERS
+from .dispatch import CommandDispatch, PendingRequest, RequestTracker, unwrap_frame
 
 try:
     import zstandard as zstd
@@ -40,6 +44,13 @@ RESCUE_KEYS = (
     "rescue_record_list", "rescue_history", "gacha_history",
     "pull_records", "pickup_records",
 )
+
+# Client commands whose reply carries no detail, so the request is what says which pieces changed.
+CMD_DISASSEMBLE = "item/disassemble_piece"
+CMD_UNEQUIP = "item/unequip_piece"
+
+# Reply keys that state what a holding now is, with `doc.amount` as the total.
+TOTALS_KEYS = ("add_result", "item_result", "dec_result")
 
 
 def _rescue_record_key(record: dict) -> str:
@@ -94,6 +105,15 @@ class Addon:
         self.zstd_dctx = None
         # Hosts the game actually connected to, used to work out the region.
         self.seen_hosts: set = set()
+        # Client requests by qid, and the handlers that run when their reply arrives.
+        self.tracker = RequestTracker()
+        self.dispatch = CommandDispatch()
+        self.dispatch.register(CMD_DISASSEMBLE, self._on_disassemble)
+        self.dispatch.register(CMD_UNEQUIP, self._on_unequip)
+        # Set by a delta so the snapshot is written once at the end of the frame.
+        self._save_pending = False
+        # The `last_login_tm` of the account's current game launch. A change means a new launch.
+        self.login_stamp = None
 
         # Debug logging
         self.debug_file = None
@@ -258,87 +278,121 @@ class Addon:
                     self._write_debug(entry)
                 return
 
-            if not isinstance(data, dict):
-                return
+            payloads = unwrap_frame(data)
 
-            # Debug: log every decoded message before filtering, tagged with direction
-            if self.debug_file:
-                entry = {
-                    "ts": datetime.now().isoformat(),
-                    "dir": direction,
-                    "keys": list(data.keys()),
-                    "size": len(content),
-                    "data": data
-                }
-                self._write_debug(entry)
-
-            # From here on, only process server-side responses (inventory,
-            # battle, rescue pipelines). Client requests have a different
-            # schema and would misfire downstream code.
+            # Client frames only teach the tracker which command each qid is.
             if msg.from_client:
+                self.tracker.note_frame(data)
+                for payload in payloads:
+                    self._debug_payload(payload, direction, len(content))
                 return
 
-            if data.get("res") != "ok":
-                return
+            for payload in payloads:
+                self._debug_payload(payload, direction, len(content))
+                self._handle_server_payload(payload)
 
-            # Live monitoring: apply piece deltas
-            if "piece" in data and self.inventory_data and "piece_items" in self.inventory_data:
-                self._apply_piece_delta(data)
-
-            # Check for 'info' structure (new API format)
-            if "info" in data:
-                info = data.get("info", {})
-
-                # Check for item data in new format
-                if isinstance(info, dict) and "item" in info:
-                    item_info = info.get("item", {})
-
-                    # Check for piece (Memory Fragment) data
-                    if "piece" in item_info:
-                        piece_info = item_info.get("piece", {})
-                        # Store this as inventory data (new format)
-                        if not self.inventory_data:
-                            self.inventory_data = {}
-                        self.inventory_data["info_item_piece"] = piece_info
-                        self._save_data()
-
-                # Check for character data in new format
-                if isinstance(info, dict) and "character" in info:
-                    char_info = info.get("character", {})
-                    if not self.character_data:
-                        self.character_data = {}
-                    self.character_data["info_character"] = char_info
-                    self._save_data()
-
-            # Capture inventory data (Memory Fragments)
-            if "piece_items" in data:
-                self.inventory_data = data
+            if self._save_pending:
+                self._save_pending = False
                 self._save_data()
-
-            # Capture character data
-            has_characters = "characters" in data and isinstance(data.get("characters"), list)
-            has_user = "user" in data
-
-            if has_characters or has_user:
-                self.character_data = data
-                self._save_data()
-
-            # Capture rescue/gacha records (pull history)
-            for key in RESCUE_KEYS:
-                if key in data:
-                    self._save_rescue_data(key, data[key])
-                    break
-
-            # Capture battle data
-            if "battle_info" in data:
-                self._on_battle_info(data["battle_info"])
-            if "return_info" in data:
-                self._on_return_info(data["return_info"])
-            if "snapshot" in data:
-                self._on_snapshot(data["snapshot"])
 
         except Exception as e:
             self.log_callback(f"Error: {e}")
+
+    def _debug_payload(self, payload: dict, direction: str, size: int):
+        """Log one decoded message to the debug JSONL before any filtering. Does nothing when debug mode is off."""
+        if self.debug_file:
+            self._write_debug({"ts": datetime.now().isoformat(), "dir": direction, "keys": list(payload.keys()), "size": size, "data": payload})
+
+    def _handle_server_payload(self, data: dict):
+        """
+        Act on one server reply. A frame yields one of these, or several when the server answers a batch.
+
+        Args:
+            data: One decoded reply object.
+        """
+        if data.get("res") != "ok":
+            return
+
+        request = self.tracker.get(data.get("qid"))
+        self.dispatch.dispatch(request, data)
+        unequip = request is not None and request.name == CMD_UNEQUIP
+
+        # Live monitoring: "piece" is an upgrade / swap / equip, and "pieces" is a create (an unequip-all answers with it too, handled above).
+        if self.inventory_data and "piece_items" in self.inventory_data:
+            if "piece" in data:
+                self._apply_piece_delta(data)
+            elif "pieces" in data and not unequip:
+                self._apply_pieces_create(data.get("pieces"))
+            reward = self._reward_pieces(data)
+            if reward:
+                self._apply_pieces_create(reward)
+
+        # Check for 'info' structure (new API format)
+        if "info" in data:
+            info = data.get("info", {})
+
+            # Check for item data in new format
+            if isinstance(info, dict) and "item" in info:
+                item_info = info.get("item", {})
+
+                # Check for piece (Memory Fragment) data
+                if "piece" in item_info:
+                    piece_info = item_info.get("piece", {})
+                    # Store this as inventory data (new format)
+                    if not self.inventory_data:
+                        self.inventory_data = {}
+                    self.inventory_data["info_item_piece"] = piece_info
+                    self._save_pending = True
+
+            # Check for character data in new format
+            if isinstance(info, dict) and "character" in info:
+                char_info = info.get("character", {})
+                if not self.character_data:
+                    self.character_data = {}
+                self.character_data["info_character"] = char_info
+                self._save_pending = True
+
+        # Capture inventory data (Memory Fragments)
+        if "piece_items" in data:
+            self.inventory_data = data
+            self._save_pending = True
+
+        # Item and currency totals state what a holding now is.
+        for key in TOTALS_KEYS:
+            if isinstance(data.get(key), dict):
+                self._apply_totals(data[key])
+
+        # Character data. The login sends the full roster and later replies can send only the entries that changed.
+        has_characters = "characters" in data and isinstance(data.get("characters"), list)
+        has_user = "user" in data
+
+        if has_user:
+            self._check_for_relaunch(data["user"])
+
+        if has_characters:
+            self._merge_character_data(data)
+            self._save_pending = True
+        elif has_user:
+            # A user update with no roster is patched in so the roster survives.
+            if self.character_data:
+                self.character_data["user"] = data["user"]
+            else:
+                self.character_data = data
+            self._save_pending = True
+
+        # Capture rescue/gacha records (pull history)
+        for key in RESCUE_KEYS:
+            if key in data:
+                self._save_rescue_data(key, data[key])
+                break
+
+        # Capture battle data
+        if "battle_info" in data:
+            self._on_battle_info(data["battle_info"])
+        if "return_info" in data:
+            self._on_return_info(data["return_info"])
+        if "snapshot" in data:
+            self._on_snapshot(data["snapshot"])
 
     # ---- HTTP capture (debug only) ------------------------------------
     # The game appears to send commands via HTTP POST and only receives
@@ -400,6 +454,11 @@ class Addon:
 
         if not self.saved_path:
             self.saved_path = self.output_dir / f"memory_fragments_{ts}.json"
+            # A rotation inside the same second must not overwrite the previous launch's file.
+            n = 1
+            while self.saved_path.exists():
+                n += 1
+                self.saved_path = self.output_dir / f"memory_fragments_{ts}_{n}.json"
 
         save_data = {
             "capture_time": datetime.now().isoformat(),
@@ -458,7 +517,7 @@ class Addon:
             else:
                 piece_items.append(equipped_piece)
 
-        self._save_data()
+        self._save_pending = True
 
         # Build log message
         desc = self._describe_piece(new_piece)
@@ -474,6 +533,204 @@ class Addon:
             self.log_callback(f"[LIVE] Equipped {desc} to {char_name}")
         else:
             self.log_callback(f"[LIVE] Unequipped {desc}")
+
+    def _on_disassemble(self, data: dict, request: PendingRequest):
+        """
+        Remove the pieces a `disassemble_piece` request named. The reply carries only proceeds, so the request is the only record of which pieces went.
+
+        Args:
+            data: The server reply.
+            request: The paired client request.
+        """
+        ids = request.params.get("item_db_ids") or []
+        if not (isinstance(ids, list) and ids and self.inventory_data and "piece_items" in self.inventory_data):
+            return
+        piece_items = self.inventory_data["piece_items"]
+        target = set(ids)
+        removed = [p for p in piece_items if p.get("id") in target]
+        if not removed:
+            return
+        self.inventory_data["piece_items"] = [p for p in piece_items if p.get("id") not in target]
+        self._save_pending = True
+        if len(removed) == 1:
+            self.log_callback(f"[LIVE] Deleted {self._describe_piece(removed[0])}")
+        else:
+            self.log_callback(f"[LIVE] Deleted {len(removed)} pieces")
+
+    def _on_unequip(self, data: dict, request: PendingRequest):
+        """
+        Apply an "Unequip All" reply. Its `pieces` list shares a shape with a create, so the request is what tells them apart.
+
+        Args:
+            data: The server reply.
+            request: The paired client request.
+        """
+        pieces = data.get("pieces")
+        if not (isinstance(pieces, list) and self.inventory_data and "piece_items" in self.inventory_data):
+            return
+        try:
+            char_id = int(request.params.get("char_res_id") or 0)
+        except (TypeError, ValueError):
+            char_id = 0
+        piece_items = self.inventory_data["piece_items"]
+        updated = 0
+        for new_piece in pieces:
+            if not isinstance(new_piece, dict):
+                continue
+            for i, p in enumerate(piece_items):
+                if p.get("id") == new_piece.get("id"):
+                    piece_items[i] = new_piece
+                    updated += 1
+                    break
+        if updated:
+            self._save_pending = True
+            char_name = CHAR_NAMES.get(char_id, f"Character {char_id}")
+            self.log_callback(f"[LIVE] Unequipped {updated} pieces from {char_name}")
+
+    @staticmethod
+    def _reward_pieces(data: dict) -> list:
+        """
+        Find fragments paid as a reward. They arrive as a `pieces` dict of `{diff, doc}` pairs, a level down in `item_result` or `return_info`.
+
+        Args:
+            data: The server reply.
+
+        Returns:
+            The piece documents found. `auto_disassemble_piece` fragments are never included because they do not reach the inventory.
+        """
+        carriers = [data.get("item_result")]
+        nested = data.get("return_info")
+        if isinstance(nested, dict):
+            carriers.extend(nested.values())
+        found = []
+        for carrier in carriers:
+            rows = carrier.get("pieces") if isinstance(carrier, dict) else None
+            if not isinstance(rows, dict):
+                continue
+            for row in rows.values():
+                doc = row.get("doc") if isinstance(row, dict) else None
+                if isinstance(doc, dict):
+                    found.append(doc)
+        return found
+
+    def _apply_pieces_create(self, new_pieces):
+        """
+        Append newly created pieces (forge, fuse, reward) that the inventory does not hold yet.
+
+        Args:
+            new_pieces: A list of piece documents.
+        """
+        if not isinstance(new_pieces, list):
+            return
+        piece_items = self.inventory_data["piece_items"]
+        existing_ids = {p.get("id") for p in piece_items}
+        added = []
+        for piece in new_pieces:
+            if isinstance(piece, dict) and piece.get("id") is not None and piece["id"] not in existing_ids:
+                piece_items.append(piece)
+                existing_ids.add(piece["id"])
+                added.append(piece)
+        if not added:
+            return
+        self._save_pending = True
+        if len(added) == 1:
+            self.log_callback(f"[LIVE] Created {self._describe_piece(added[0])}")
+        else:
+            self.log_callback(f"[LIVE] Created {len(added)} pieces")
+
+    def _apply_totals(self, result: dict):
+        """
+        Write item and currency totals from a `{items, currency}` envelope. `doc.amount` is the new total, so it is written in and never added.
+
+        Args:
+            result: The envelope from `add_result`, `item_result` or `dec_result`.
+        """
+        items = result.get("items")
+        if isinstance(items, dict) and self.inventory_data is not None:
+            held = self.inventory_data.setdefault("items", [])
+            if isinstance(held, list):
+                for entry in items.values():
+                    doc = entry.get("doc") if isinstance(entry, dict) else None
+                    if not isinstance(doc, dict) or "res_id" not in doc:
+                        continue
+                    for i, row in enumerate(held):
+                        if isinstance(row, dict) and row.get("res_id") == doc["res_id"]:
+                            held[i] = doc
+                            break
+                    else:
+                        held.append(doc)
+                    self._save_pending = True
+
+        currencies = result.get("currency")
+        if isinstance(currencies, dict) and self.character_data is not None:
+            held = self.character_data.setdefault("currencies", {})
+            if isinstance(held, dict):
+                for entry in currencies.values():
+                    doc = entry.get("doc") if isinstance(entry, dict) else None
+                    if isinstance(doc, dict) and "res_id" in doc:
+                        held[str(doc["res_id"])] = doc
+                        self._save_pending = True
+
+    @staticmethod
+    def _entry_identity(entry):
+        """Identity of one `characters` entry. Partner cards carry an instance `id` and characters are told apart by `res_id`."""
+        if not isinstance(entry, dict):
+            return None
+        if "id" in entry:
+            return ("id", entry["id"])
+        return ("res", entry.get("res_id"))
+
+    def _merge_character_data(self, data: dict):
+        """
+        Fold an incoming `characters` payload into the cached one.
+
+        A payload that covers every cached entry is the full roster and replaces the cache. A narrower one is a delta, so its entries overwrite or
+        join the cached ones and everything else (user, currencies) is kept.
+
+        Args:
+            data: The server reply holding a `characters` list.
+        """
+        incoming = data.get("characters") or []
+        cached = (self.character_data or {}).get("characters")
+        if not isinstance(cached, list) or not cached:
+            self.character_data = data
+            return
+        if {self._entry_identity(e) for e in cached} <= {self._entry_identity(e) for e in incoming}:
+            self.character_data = data
+            return
+        merged = list(cached)
+        index = {}
+        for i, entry in enumerate(merged):
+            index.setdefault(self._entry_identity(entry), i)
+        for entry in incoming:
+            key = self._entry_identity(entry)
+            if key in index:
+                merged[index[key]] = entry
+            else:
+                index[key] = len(merged)
+                merged.append(entry)
+        self.character_data["characters"] = merged
+
+    def _check_for_relaunch(self, user):
+        """
+        Start a new snapshot file when the game has been relaunched.
+
+        The marker is `user.last_login_tm`. A reconnect reopens the socket and re-sends `helo` but does not log in again, so it keeps the same value.
+        Dropping `saved_path` is the whole rotation. The cached data is kept because the login burst rewrites it.
+
+        Args:
+            user: The `user` record from a server reply.
+        """
+        if not isinstance(user, dict):
+            return
+        stamp = user.get("last_login_tm")
+        if stamp is None or stamp == self.login_stamp:
+            return
+        was, self.login_stamp = self.login_stamp, stamp
+        if was is None or self.saved_path is None:
+            return
+        self.log_callback("Game relaunched - starting a new snapshot")
+        self.saved_path = None
 
     def _save_rescue_data(self, key: str, records):
         """Save rescue/gacha records, accumulating across pages and sessions."""
