@@ -82,6 +82,8 @@ _SHORT_NUMBERED_LINE = guides_qc.NUMBERED_LINE
 _NOTE_NAME_CLOSENESS = 0.8
 # A note label naming one epiphany level by number, such as "Flow 2".
 _NUMBERED_LABEL = re.compile(r"^(.*?)\s*(\d)$")
+# A word with its ending in brackets, such as "Cresc(endo)", which names the whole word.
+_WORD_ENDING = re.compile(r"(?<=\w)\((\w+)\)")
 # The part of an epiphany's game name that tells it apart, such as "Unbound" in "Flicker Blade (Unbound)".
 _GAME_NAME_PART = re.compile(r"\((.+)\)$")
 # The potentials colour legend, which starts "Purple: Main Damage Boosts", and one of its lines.
@@ -860,7 +862,8 @@ class _GuideBuilder:
                     title = panel_title
                 elif panel_title and not title_shown:
                     # A later panel's heading would otherwise be lost, so it leads that panel's blocks instead.
-                    panel_blocks.insert(0, self._prose(panel_title))
+                    table = bool(panel_blocks) and panel_blocks[0]["type"] == "table"
+                    panel_blocks.insert(0, {"type": "heading", "text": self._text(panel_title)} if table else self._prose(panel_title))
                 blocks.extend(panel_blocks)
             blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks, self.positional_notes)]
             if not blocks:
@@ -935,6 +938,8 @@ class _GuideBuilder:
             those blocks (as the names of the pictures under it), so it need not be repeated.
         """
         rows = _rows(cells)
+        if table := self._table(rows):
+            return table
         blocks: list[dict] = []
         title = None
         # A label row right above pictures may name them, so it is held until the pictures show whether it was used.
@@ -978,6 +983,31 @@ class _GuideBuilder:
                 blocks.extend(self._prose(text) for text in texts)
             index += 1
         return title, blocks, title_shown
+
+    def _table(self, rows: list[list[Cell]]) -> tuple[str | None, list[dict], bool] | None:
+        """
+        A panel laid out as a table, such as a Desire Synergy list: an optional heading row, then rows of text that each end in a rating.
+
+        Args:
+            rows: The panel's rows.
+
+        Returns:
+            The heading and the table block, as `_panel` returns them, or None when the panel is not such a table. Its columns are
+            the panel's text columns, and a row with nothing in a column gets an empty cell there.
+        """
+        if any(cell.images for row in rows for cell in row):
+            return None
+        rows = [texts for texts in ([cell for cell in row if cell.text] for row in rows) if texts]
+        heading = " | ".join(cell.text for cell in rows[0]) if rows and _is_label_row([cell.text for cell in rows[0]]) else None
+        body = rows[1:] if heading else rows
+        if len(body) < 2 or not all(len(row) >= 2 and _RATING.match(row[-1].text) and not any(_RATING.match(cell.text) for cell in row[:-1]) for row in body):
+            return None
+        columns = sorted({cell.col for row in body for cell in row[:-1]})
+        table = []
+        for row in body:
+            texts = {cell.col: cell.text for cell in row[:-1]}
+            table.append({"cells": [self._text(texts[col]) if col in texts else {"en": ""} for col in columns], "rating": row[-1].text})
+        return heading, [{"type": "table", "rows": table}], False
 
     def _picture_rows(self, rows: list[list[Cell]], start: int) -> tuple[int, list[dict], bool]:
         """
@@ -1117,12 +1147,16 @@ class _GuideBuilder:
 
         Returns:
             The cards. Each such run gets the epiphany levels its pictures show, read the way deck cards are, so they fold into a ladder.
-            When they cannot be read, equally rated pictures become one card with a `count`. Otherwise the run is left as it is.
+            When they cannot be read, equally rated pictures become one card with a `count`. Otherwise the run is left as it is. Persona
+            copies are always left apart, as each shows its own engravings. A lone picture gets the level its cell override gives.
         """
         settled: list[dict] = []
         for (card_id, _), group in groupby(row_cards, key=lambda card: (card["cardId"], card.get("persona"))):
             run = list(group)
-            if len(run) == 1 or len(run) == len(self.variants_of(card_id)) - 1:
+            entry = self.overrides.entries.get(run[0]["picture"][1], {}) if len(run) == 1 and run[0]["picture"] else {}
+            if "epiphany" in entry:
+                run[0]["level"] = entry["epiphany"]
+            if len(run) == 1 or card_id == guides_qc.PERSONA_CARD or len(run) == len(self.variants_of(card_id)) - 1:
                 settled.extend(run)
                 continue
             levels = self._read_levels(run)
@@ -1144,7 +1178,7 @@ class _GuideBuilder:
             run: Pictures of one card.
 
         Returns:
-            Their levels, or None when any cannot be read or two show the same level.
+            Their levels, 0 for the base card, or None when any cannot be read or two show the same level.
         """
         if not self.variants_of(run[0]["cardId"]):
             return None
@@ -1155,7 +1189,7 @@ class _GuideBuilder:
             if found is None:
                 return None
             levels.append(found[0].level)
-        return levels if len(set(levels)) == len(levels) and 0 not in levels else None
+        return levels if len(set(levels)) == len(levels) else None
 
     def _miss(self, download: _Download, kind: str, ref: str, rated: bool) -> None:
         """
@@ -1228,11 +1262,11 @@ class _GuideBuilder:
                 item["rating"] = ratings[card["col"]]
             if "count" in card:
                 item["count"] = card["count"]
-            if card_id in variants:
+            if "level" in card:
+                item["level"] = card["level"]
+            elif card_id in variants:
                 item["level"] = card["epiphany"]
                 self.decks.add_copy(card_id, card["picture"][0], card["epiphany"])
-            elif "level" in card:
-                item["level"] = card["level"]
             # Kept until the block is known to be a deck or not, then dropped by `_deck_or_list`.
             item["_picture"] = card["picture"]
             items.append(item)
@@ -1526,10 +1560,10 @@ def _complete_runs(cards: list[dict], variants_of) -> set[str]:
 
     Returns:
         The card ids whose positions are exactly 1 to their last level. A run that was cut short, restarted or split gives
-        no levels, as a wrong level is worse than none.
+        no levels, as a wrong level is worse than none. Cards whose level is already known are left out.
     """
     positions: dict[str, list[int]] = {}
-    for card in cards:
+    for card in (card for card in cards if "level" not in card):
         positions.setdefault(card["cardId"], []).append(card["epiphany"])
     return {card_id for card_id, found in positions.items() if found == list(range(1, len(variants_of(card_id))))}
 
@@ -1543,13 +1577,22 @@ def _fold(items: list[dict], variants_of) -> list[dict]:
         variants_of: Card id -> its `epiphany.variants`.
 
     Returns:
-        The items, each run folded into one item whose `epiphanies` hold every level's name, cost, rating and note. A card with
-        no variants is kept as it is, without its level.
+        The items, each run folded into one item whose `epiphanies` hold every level's name, cost, rating and note. A rated base
+        copy (level 0) is that item, keeping its own rating, whether it comes before the run or after it. A card with no variants
+        is kept as it is, without its level.
     """
     folded: list[dict] = []
     for item in items:
         item = dict(item)
         level = item.pop("level", None)
+        if level == 0 and variants_of(item["cardId"]):
+            last = folded[-1] if folded else None
+            if last and last["cardId"] == item["cardId"] and last.get("epiphanies") and "rating" not in last:
+                # A base copy on the row under its ladder rates the ladder's card.
+                last.update({key: item[key] for key in ("rating", "cost") if key in item})
+            else:
+                folded.append({**item, "epiphanies": []})
+            continue
         variant = next((variant for variant in variants_of(item["cardId"]) if variant.level == level), None) if level else None
         if variant is None:
             folded.append(item)
@@ -1559,17 +1602,20 @@ def _fold(items: list[dict], variants_of) -> list[dict]:
             entry["rating"] = item["rating"]
         entry["note"] = {"en": ""}
         last = folded[-1] if folded else None
-        if last and last["cardId"] == item["cardId"] and last.get("epiphanies") and last["epiphanies"][-1]["level"] < level:
+        if last and last["cardId"] == item["cardId"] and "epiphanies" in last and all(entry["level"] < level for entry in last["epiphanies"]):
             last["epiphanies"].append(entry)
         else:
             head = {key: item[key] for key in ("cardId", "name") if key in item}
             folded.append({**head, "note": {"en": ""}, "epiphanies": [entry]})
+    for item in folded:
+        if item.get("epiphanies") == []:
+            del item["epiphanies"]
     return folded
 
 
-def _line_target(line: str, items: list[dict], positional: dict | None, by_position: list[str] | None) -> tuple[dict, str] | None:
+def _line_target(line: str, items: list[dict], positional: dict | None, by_position: list[str] | None) -> tuple[list[dict], str] | None:
     """
-    The item, or epiphany of one, that a "Name: note" prose line is for.
+    The items, or epiphanies of them, that a "Name: note" prose line is for.
 
     Args:
         line: The prose line.
@@ -1578,16 +1624,16 @@ def _line_target(line: str, items: list[dict], positional: dict | None, by_posit
         by_position: Collects the lines that were placed only by their number, for the QC report. Not collected when None.
 
     Returns:
-        The target and the line's note text, or None when the line names none of the items.
+        The targets and the line's note text, or None when the line names none of the items.
     """
     for match in filter(None, (_NOTE_LINE.match(line), _NUMBERED_NOTE_LINE.match(line))):
-        target = _note_target(items, match.group(1))
-        if target is None and positional:
-            target = _note_target(items, match.group(1), positional)
-            if target is not None and by_position is not None:
+        targets = _note_targets(items, match.group(1))
+        if not targets and positional:
+            targets = _note_targets(items, match.group(1), positional)
+            if targets and by_position is not None:
                 by_position.append(line.strip())
-        if target is not None:
-            return target, match.group(2)
+        if targets:
+            return targets, match.group(2)
     return None
 
 
@@ -1601,7 +1647,8 @@ def _attach_notes(blocks: list[dict], by_position: list[str] | None = None) -> l
 
     Returns:
         The blocks. Prose straight after a card-list or partner-list gives up each line that names one of its items, and the
-        rest stays in order. A prose block left empty is dropped.
+        rest stays in order. A list of rated copies of one card takes the labelled lines in order instead, when there is one
+        for each copy. A prose block left empty is dropped.
     """
     kept: list[dict] = []
     for block in blocks:
@@ -1613,6 +1660,12 @@ def _attach_notes(blocks: list[dict], by_position: list[str] | None = None) -> l
         # A card list of one ladder takes any numbered line by its level, as the sheet's own label may be misspelled or shortened.
         ladders = [item for item in previous["items"] if item.get("epiphanies")]
         lines = block["body"]["en"].split("\n")
+        labelled = [i for i, line in enumerate(lines) if _NOTE_LINE.match(line)] if _copies_in_order(previous) else []
+        if labelled and len(labelled) == len(previous["items"]):
+            # Copies such as Personas cannot be told apart by name, so the sheet notes each with one labelled line, in the order they are listed.
+            for item, i in zip(previous["items"], labelled):
+                _add_note(item, lines[i].strip())
+            lines = [line for i, line in enumerate(lines) if i not in labelled]
         numbered = sum(1 for line in lines if _SHORT_NUMBERED_LINE.match(line))
         positional = ladders[0] if previous["type"] == "card-list" and len(previous["items"]) == 1 and ladders and numbered >= 2 else None
         for line in lines:
@@ -1620,12 +1673,32 @@ def _attach_notes(blocks: list[dict], by_position: list[str] | None = None) -> l
             if found is None:
                 rest.append(line)
                 continue
-            target, text = found
-            note = target["note"]["en"]
-            target["note"] = {"en": f"{note}\n{text}" if note else text}
+            targets, text = found
+            for target in targets:
+                _add_note(target, text)
         if any(line.strip() for line in rest):
             kept.append({**block, "body": {"en": "\n".join(rest)}})
     return kept
+
+
+def _copies_in_order(block: dict) -> bool:
+    """Whether a block is a card-list of two or more rated copies of one card, Personas or under one name, with no epiphany ladders."""
+    items = block["items"] if block["type"] == "card-list" else []
+    if len(items) < 2 or len({item["cardId"] for item in items}) > 1 or not all(item.get("rating") and not item.get("epiphanies") for item in items):
+        return False
+    return items[0]["cardId"] == guides_qc.PERSONA_CARD or len({item.get("name") for item in items}) == 1
+
+
+def _add_note(target: dict, text: str) -> None:
+    """
+    Add a line to an item's or epiphany's note.
+
+    Args:
+        target: The item or epiphany.
+        text: The note line.
+    """
+    note = target["note"]["en"]
+    target["note"] = {"en": f"{note}\n{text}" if note else text}
 
 
 def _as_deck(block: dict) -> dict | None:
@@ -1740,51 +1813,52 @@ def _names_card(base: str, name: str) -> bool:
         name: The card's name, lower case.
 
     Returns:
-        True when the base is the name, one of its words, its initials ("OUAT"), or within a typo of one of its words.
+        True when the base is the name, one of its words, its initials ("OUAT", or "CnR" for "Call & Response"), or within a typo of
+        one of its words.
     """
     words = _name_words(name)
     if not base or base == name or base in words:
         return True
-    if len(words) > 1 and base == "".join(word[0] for word in words):
+    if len(words) > 1 and base == "".join(word[0] for word in words).replace("&", "n"):
         return True
     return len(base) >= 3 and any(difflib.SequenceMatcher(None, base, word).ratio() >= _NOTE_NAME_CLOSENESS for word in words)
 
 
-def _note_target(items: list[dict], label: str, positional: dict | None = None) -> dict | None:
+def _note_targets(items: list[dict], label: str, positional: dict | None = None) -> list[dict]:
     """
-    The item, or epiphany of one, that a note label names.
+    The items, or epiphanies of them, that a note label names.
 
     Args:
         items: The listed cards or partners.
-        label: The text before the colon, such as "Tassel", "Flow 2", "OUAT 1" or "Unbound".
+        label: The text before the colon, such as "Tassel", "Flow 2", "OUAT 1", "Cresc(endo)" or "Unbound".
         positional: The one card whose ladder a numbered label may pick by its number alone, whatever its words.
 
     Returns:
-        The epiphany named by its game name ("Unbound") or by a word of the card's name and its level ("Flow 2"), else the item
-        whose name or a word of it is the label. None when nothing fits.
+        Every epiphany whose game name is the label ("Unbound"), as cards listed together can share one. Else, for a numbered label,
+        the card whose name holds the number ("Quest 1"), the epiphany of that level ("Flow 2"), or the card itself for level 0.
+        Else the item whose name or a word of it is the label. Empty when nothing fits.
     """
-    wanted = label.strip().lower()
+    wanted = _WORD_ENDING.sub(r"\1", label).strip().lower()
     if not wanted:
-        return None
+        return []
+    shared = [entry for item in items for entry in item.get("epiphanies", []) if (part := _GAME_NAME_PART.search(entry["name"])) and part.group(1).lower() == wanted]
+    if shared:
+        return shared
     numbered = _NUMBERED_LABEL.match(wanted)
-    for item in items:
-        epiphanies = item.get("epiphanies", [])
-        for entry in epiphanies:
-            part = _GAME_NAME_PART.search(entry["name"])
-            if part and part.group(1).lower() == wanted:
-                return entry
-        name = item.get("name", "").lower()
-        if numbered:
-            base, level = numbered.group(1), int(numbered.group(2))
-            if _names_card(base, name):
-                found = next((entry for entry in epiphanies if entry["level"] == level), None)
-                if found:
-                    return found
-        elif name == wanted or wanted in _name_words(name):
-            return item
-    if numbered and positional:
-        return next((entry for entry in positional["epiphanies"] if entry["level"] == int(numbered.group(2))), None)
-    return None
+    if not numbered:
+        return next(([item] for item in items if (name := item.get("name", "").lower()) == wanted or wanted in _name_words(name)), [])
+    base, number = numbered.groups()
+    level = int(number)
+    named = [item for item in items if _names_card(base, item.get("name", "").lower())]
+    for item in named:
+        if number in _name_words(item["name"].lower()):
+            return [item]
+        found = next((entry for entry in item.get("epiphanies", []) if entry["level"] == level), None)
+        if found:
+            return [found]
+    if level == 0:
+        return named[:1] or ([positional] if positional else [])
+    return [entry for entry in positional["epiphanies"] if entry["level"] == level][:1] if positional else []
 
 
 def _bands(grid: dict[tuple[int, int], Cell]) -> list[list[Cell]]:

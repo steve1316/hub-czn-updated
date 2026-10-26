@@ -1091,3 +1091,143 @@ def test_flex_piece_picture_carries_the_flex_flag():
     [section] = _loadout(_piece_builder(found={1: 30, 2: 11, 3: 19}), labels=("Radiance", "Executioners", "Agony Flex"))
     flags = [item.get("flex", False) for item in section["blocks"][0]["items"]]
     assert flags == [False, False, True]
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# Copies, base levels and tables
+
+
+SHARD = [Variant(level, f"c_30134_srt4_mut1_rsp{level}" if level else "c_30134_srt4_mut1", "Shard:Light" + (f" ({name})" if level else ""), 2, "")
+         for level, name in enumerate(["", "Amped", "Cycle", "Aegis", "Blink", "Unbound"])]
+
+
+def _with_shard(card_id: str) -> list[Variant]:
+    return SHARD if card_id == "c_30134_srt4_mut1" else _variants_of(card_id)
+
+
+def test_persona_copies_are_never_merged_into_one_card():
+    # Each Persona picture shows its own engravings, even when the label and the rating are the same.
+    persona = {"cardId": "eidolon_card", "picture": None, "epiphany": 1, "name": "Persona"}
+    settled = _builder()._settle_repeats([{**persona, "col": 1}, {**persona, "col": 2}], {1: "4/5", 2: "4/5"})
+    assert len(settled) == 2 and all("count" not in card for card in settled)
+
+
+def test_a_run_with_a_base_copy_reads_level_zero(monkeypatch):
+    builder = _builder()
+    levels = {"B1": 1, "B2": 2, "B3": 3, "B4": 4, "B5": 5, "B6": 0}
+    monkeypatch.setattr(guides, "_find_epiphany", lambda card_id, download, ref, *args: (SimpleNamespace(level=levels[ref]), None))
+    row = guides._number_runs(_row(*["c_30134_uni2"] * 6))
+    for card, ref in zip(row, levels):
+        card["picture"] = (None, ref)
+    assert [card["level"] for card in builder._settle_repeats(row, {col: "4/5" for col in range(6)})] == [0, 1, 2, 3, 4, 5]
+
+
+def test_fold_puts_a_base_copy_at_the_head_of_its_ladder():
+    items = [_rated("c_30134_uni2", "Radiant Sword Flow", "2/5", 0)] + [_rated("c_30134_uni2", "Radiant Sword Flow", "5/5", level) for level in range(1, 6)]
+    [item] = guides._fold(items, _variants_of)
+    assert item["rating"] == "2/5" and [entry["level"] for entry in item["epiphanies"]] == [1, 2, 3, 4, 5]
+
+
+def test_fold_rates_a_ladder_with_the_base_copy_after_it():
+    # Tenebria's base Spotlight sits on the row under its ladder, so it comes last.
+    items = [_rated("c_30134_uni2", "Radiant Sword Flow", "5/5", level) for level in range(1, 6)] + [_rated("c_30134_uni2", "Radiant Sword Flow", "4/5", 0)]
+    [item] = guides._fold(items, _variants_of)
+    assert item["rating"] == "4/5" and [entry["level"] for entry in item["epiphanies"]] == [1, 2, 3, 4, 5]
+
+
+def test_a_lone_picture_takes_its_level_from_its_cell_override():
+    builder = _builder({"Tab!O54": {"epiphany": 0}})
+    [card] = builder._settle_repeats([{"cardId": "c_30134_uni2", "col": 14, "picture": (None, "Tab!O54"), "epiphany": 1}], {14: "4/5"})
+    assert card["level"] == 0
+
+
+def test_a_card_with_a_known_level_does_not_break_its_complete_run():
+    run = [{"cardId": "c_30134_uni2", "epiphany": level} for level in range(1, 6)]
+    assert guides._complete_runs([*run, {"cardId": "c_30134_uni2", "epiphany": 1, "level": 0}], _variants_of) == {"c_30134_uni2"}
+
+
+def test_level_zero_line_goes_on_the_card_itself():
+    cards = _flow_list()
+    blocks = guides._attach_notes([cards, _prose("Flow 0: a neutral epiphany is fine")])
+    assert len(blocks) == 1 and cards["items"][0]["note"] == {"en": "a neutral epiphany is fine"}
+
+
+def test_numbered_line_picks_the_card_whose_name_holds_the_number():
+    cards = {"type": "card-list", "items": [_rated("c_1049_cre9", "Quest: Triple 0", "5/5"), _rated("c_1049_cre10", "Quest: Triple 1", "5/5")]}
+    guides._attach_notes([cards, _prose("Quest 1: three 1 cost cards\nQuest 0: three 0 cost cards")])
+    assert [item["note"]["en"] for item in cards["items"]] == ["three 0 cost cards", "three 1 cost cards"]
+
+
+def test_initials_read_an_ampersand_as_n():
+    cards = {"type": "card-list", "items": guides._fold([_rated("c_30134_uni2", "Call & Response", "5/5", level) for level in range(1, 6)], _variants_of)}
+    guides._attach_notes([cards, _prose("CnR 0: moral is fine")])
+    assert cards["items"][0]["note"] == {"en": "moral is fine"}
+
+
+def test_a_label_with_a_bracketed_ending_names_the_whole_word():
+    cards = {"type": "card-list", "items": [_rated("c_1069_cre2", "Rhythm: Crescendo", "3/5"), _rated("c_1069_cre3", "Rhythm: Staccato", "2/5")]}
+    blocks = guides._attach_notes([cards, _prose("Cresc(endo): 7 AP\nStacc(ato): 6 AP")])
+    assert len(blocks) == 1 and [item["note"]["en"] for item in cards["items"]] == ["7 AP", "6 AP"]
+
+
+def test_a_game_name_note_reaches_every_ladder_with_that_epiphany():
+    # The shards sit in rows above one shared rating row, so the notes under it are theirs too.
+    items = [_rated(card_id, name, "4/5", level) for card_id, name in [("c_30134_srt4", "Flicker Blade"), ("c_30134_srt4_mut1", "Shard:Light")] for level in range(1, 6)]
+    cards = {"type": "card-list", "items": guides._fold(items, _with_shard)}
+    guides._attach_notes([cards, _prose("Amped: Basic 4 activates")])
+    assert [item["epiphanies"][0]["note"]["en"] for item in cards["items"]] == ["Basic 4 activates", "Basic 4 activates"]
+
+
+def test_rated_copies_of_one_card_take_the_lines_under_them_in_order():
+    personas = {"type": "card-list", "items": [_rated("eidolon_card", "Persona", rating) for rating in ("4/5", "4/5", "3/5")]}
+    blocks = guides._attach_notes([personas, _prose("Persona 1: Draw\nPersona 2: Discard\nPersona 4: Shield\nThe Persona cards are good")])
+    assert [item["note"]["en"] for item in personas["items"]] == ["Persona 1: Draw", "Persona 2: Discard", "Persona 4: Shield"]
+    assert blocks[1] == _prose("The Persona cards are good")
+
+
+def test_persona_copies_under_different_names_take_the_lines_in_order():
+    personas = {"type": "card-list", "items": [_rated("eidolon_card", name, "4/5") for name in ("Persona of Obsidian", "Persona of Luster")]}
+    guides._attach_notes([personas, _prose("Draw 2 Cord: 1 AP Draw 2 is great\n12 Mark: Extra hits")])
+    assert [item["note"]["en"] for item in personas["items"]] == ["Draw 2 Cord: 1 AP Draw 2 is great", "12 Mark: Extra hits"]
+
+
+def test_copies_take_no_unlabelled_lines():
+    # The sheet can write these in another order than its pictures, so nothing ties a line to a copy.
+    personas = {"type": "card-list", "items": [_rated("eidolon_card", "Persona of Obsidian", rating) for rating in ("4/5", "3/5")]}
+    blocks = guides._attach_notes([personas, _prose("Discard 2 is +120% Additive\n12 Mark is alot of extra hits\nDraw 1, potentially 2 moral")])
+    assert len(blocks) == 2 and all(not item["note"]["en"] for item in personas["items"])
+
+
+def test_copies_take_no_lines_when_there_are_fewer_lines_than_copies():
+    herbs = {"type": "card-list", "items": [_rated("n_0117", "Residual Herb", rating) for rating in ("4/5", "4/5", "3/5")]}
+    blocks = guides._attach_notes([herbs, _prose("Vanguard herbs are worse")])
+    assert len(blocks) == 2 and all(not item["note"]["en"] for item in herbs["items"])
+
+
+def test_qc_counts_neither_persona_copies_nor_copies_with_their_own_names():
+    blocks = [{"type": "card-list", "items": [_qc_item("eidolon_card", "Persona of Obsidian", rating="5/5"), _qc_item("eidolon_card", "Persona of Obsidian", rating="4/5"),
+                                              _qc_item("c_1_a", "A (Morale)", rating="6/5"), _qc_item("c_1_a", "A (Vulnerable)", rating="5/5")]}]
+    assert guides_qc.collect(_qc_guide(blocks), lambda card_id: [], {})["unfolded_duplicates"] == []
+
+
+def _table_cell(ref: str, text: str) -> Cell:
+    return _cell(int(ref[1:]), ord(ref[0]) - ord("A"), text)
+
+
+def test_rows_of_text_ending_in_a_rating_become_a_table():
+    cells = [("C40", "Desire Synergy:"), ("I40", "Notable Engravings:"),
+             ("B41", "Sever Ties"), ("C41", "Claim 1"), ("D41", "Inquiry 2"), ("F41", "6/5"), ("H41", "Lux: +50% Dmg"), ("L41", "3/5"),
+             ("B42", "Sample"), ("C42", "Inquiry 3"), ("F42", "4/5"), ("H42", "Umbra: 30% Dmg"), ("L42", "3/5")]
+    [section], _ = _builder().sections(_grid(*(_table_cell(ref, text) for ref, text in cells)))
+    assert section["title"] == {"en": "Desire Synergy:"}
+    desires, heading, engravings = section["blocks"]
+    assert desires == {"type": "table", "rows": [{"cells": [{"en": "Sever Ties"}, {"en": "Claim 1"}, {"en": "Inquiry 2"}], "rating": "6/5"},
+                                                 {"cells": [{"en": "Sample"}, {"en": "Inquiry 3"}, {"en": ""}], "rating": "4/5"}]}
+    assert heading == {"type": "heading", "text": {"en": "Notable Engravings:"}}
+    assert engravings["rows"][1] == {"cells": [{"en": "Umbra: 30% Dmg"}], "rating": "3/5"}
+
+
+def test_one_text_and_rating_row_is_not_a_table():
+    [section], _ = _builder().sections(_grid(_table_cell("B41", "Sever Ties"), _table_cell("F41", "6/5")))
+    assert all(block["type"] != "table" for block in section["blocks"])

@@ -30,6 +30,9 @@ GUESSES = {
 # The importer uses it to place such lines, and this report to find the ones it left loose.
 NUMBERED_LINE = re.compile(r"^\s*[A-Za-z' ]{1,20}\s\d\s*[:,\"]")
 
+# The Persona card. Each copy of it shows its own engravings, so its copies are never merged or counted as duplicates.
+PERSONA_CARD = "eidolon_card"
+
 
 def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated: dict[str, list[str]], guesses: dict[str, list[str]] | None = None) -> dict[str, list[str]]:
     """
@@ -64,7 +67,9 @@ def collect(guides: list[tuple[str, str, dict]], variants_of, unidentified_rated
                     levels = len(variants_of(item["cardId"])) - 1
                     if len(ladder) < levels:
                         found["short_ladders"].append(f"{where} {label} has {len(ladder)} of {levels}")
-                for card_id, count in Counter(item["cardId"] for item in block["items"]).items():
+                # Copies the sheet names apart, such as "Flash Slash (Morale)" and "Flash Slash (Vulnerable)", are different builds.
+                copies = Counter((item["cardId"], item.get("name")) for item in block["items"] if item["cardId"] != PERSONA_CARD)
+                for (card_id, _), count in copies.items():
                     if count > 1 and card_id not in laddered:
                         found["unfolded_duplicates"].append(f"{where} {card_id} x{count}")
                 after = blocks[index + 1] if index + 1 < len(blocks) else None
