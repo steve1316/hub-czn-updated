@@ -37,6 +37,11 @@
               }
             },
             {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "cost": 3
+            },
+            {
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
               "cost": 5,
@@ -93,6 +98,11 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "cost": 3
+            },
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
@@ -664,6 +674,11 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "cost": 3
+            },
+            {
               "cardId": "c_30047_uni2",
               "name": "Fatal Strike",
               "cost": 1,
@@ -766,6 +781,18 @@
               "cost": 1,
               "text": {
                 "en": "Has a low chance for unexpected results to occur on use."
+              }
+            },
+            {
+              "cardId": "c_30047_uni1",
+              "name": "Experienced Strike",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Experienced Strike I",
+                "text": {
+                  "en": "210% Defense-Based Damage. 20% DMG-Based Shield. Increase Damage Amount of Exhaust cards by 30% for 1 turn."
+                }
               }
             },
             {
@@ -1016,7 +1043,8 @@
               "level": 1,
               "text": {
                 "en": "Amazing QOL, but not always gonna matter, if the Boss doesn't spawn mobs"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
@@ -1040,13 +1068,15 @@
               "level": 5,
               "text": {
                 "en": "Potential Levels are actually pretty great on Nine because of her high base Multipliers"
-              }
+              },
+              "bold": true
             },
             {
               "level": 6,
               "text": {
                 "en": "Sizable damage increase"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1120,6 +1150,15 @@
               "cardId": "c_30047_col2",
               "name": "Impulse",
               "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "c_30047_srt4",
+              "name": "Hew",
+              "cost": 3,
               "note": {
                 "en": ""
               },
@@ -1216,28 +1255,58 @@
             {
               "cardId": "c_30047_uni1",
               "name": "Experienced Strike",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_30047_uni1",
-              "name": "Experienced Strike",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Experienced Strike I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Increases Damage Multipler of Hew, very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Experienced Strike II",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "30% onto 210% is not very good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Experienced Strike III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "There's no real reason to ever increase Shield"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Experienced Strike IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Highest potential is 540% from this, but uh, conditional"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Experienced Strike V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Generates you Counter Attack from Spirit, pretty great"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Xp 1: Increases Damage Multipler of Hew, very good\nXp 2: 30% onto 210% is not very good\nXp 3: There's no real reason to ever increase Shield\nXp 4: Highest potential is 540% from this, but uh, conditional\nXp 5: Generates you Counter Attack from Spirit, pretty great"
-          }
         },
         {
           "type": "card-list",
@@ -1255,7 +1324,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Easiest Activation Requirement"
                   }
                 },
                 {
@@ -1264,7 +1333,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Increasing Shield gain isn't that nessicary"
                   }
                 },
                 {
@@ -1273,7 +1342,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Gain Honed from Shield, it's ok Counter 2 or Neutra Epiphany do about the same"
                   }
                 },
                 {
@@ -1282,7 +1351,7 @@
                   "cost": 0,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Honed Edge+ for team support"
                   }
                 },
                 {
@@ -1291,18 +1360,12 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "You might run out of Hews unless you have Extreme"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Counter 1: Easiest Activation Requirement\nCounter 2: Increasing Shield gain isn't that nessicary\nCounter 3: Gain Honed from Shield, it's ok Counter 2 or Neutra Epiphany do about the same\nCounter 4: Honed Edge+ for team support\nCounter 5: You might run out of Hews unless you have Extreme"
-          }
         }
       ]
     },
@@ -1727,10 +1790,18 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good but its an attack card so can waste buffs"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good but its an attack card so can waste buffs"
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1760,16 +1831,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30047_eps",
-              "name": "Reflection: Zero",
-              "cost": 6,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "rating": "4/5",
+              "count": 2
             }
           ]
         },
@@ -2002,16 +2065,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "28c23596bc0ee25c.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
         },
         {
+          "type": "image",
+          "image": "2bcd4cbd22c52680.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "f1576d11df8d8dbf.webp"
         }
       ]
     }

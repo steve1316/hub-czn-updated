@@ -201,6 +201,18 @@
               }
             },
             {
+              "cardId": "c_1057_uni2",
+              "name": "Trickery Strike",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Trickery Strike III",
+                "text": {
+                  "en": "Enable the Inspiration effect for all cards of this unit in hand. For 1 turn, when an Inspiration-enabled card of this unit is activated, 100% Damage to a random enemy."
+                }
+              }
+            },
+            {
               "cardId": "c_1057_uni3",
               "name": "Freezing Blade",
               "cost": 1,
@@ -665,7 +677,7 @@
                   "cost": 0,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Its okay, best one turn damage boost for the card"
                   }
                 },
                 {
@@ -711,7 +723,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Preprare 1: Its okay, best one turn damage boost for the card\n+1 AP Divine is somewhat often because its a 0 cost skill, can pick to fix AP lack"
+            "en": "+1 AP Divine is somewhat often because its a 0 cost skill, can pick to fix AP lack"
           }
         },
         {
@@ -720,46 +732,58 @@
             {
               "cardId": "c_1057_uni2",
               "name": "Trickery Strike",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1057_uni2",
-              "name": "Trickery Strike",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1057_uni2",
-              "name": "Trickery Strike",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1057_uni2",
-              "name": "Trickery Strike",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Trickery Strike I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Selects to unbrick, also has Retain"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Trickery Strike II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Retain + Retrieve, so you can unbrick twice, its nice"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Trickery Strike III",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Absolutely insane what this does with Moral stack"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Trickery Strike IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Its a cantrip that does damage, its never gonna feel bad"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Trickery Strike V",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Double Hit with an okay base Multiplier"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Trick 1: Selects to unbrick, also has Retain\nTrick 2: Retain + Retrieve, so you can unbrick twice, its nice\nTrick 3: Absolutely insane what this does with Moral stack\nTrick 4: Its a cantrip that does damage, its never gonna feel bad\nTrick 5: Double Hit with an okay base Multiplier"
-          }
         },
         {
           "type": "card-list",
@@ -1283,10 +1307,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "518d9b1041492681.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Action Count Increase can come from Equipment, does not affect Extra Attacks"
           }
+        },
+        {
+          "type": "image",
+          "image": "1385c74dd9932121.webp"
         },
         {
           "type": "prose",
@@ -1301,10 +1333,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "551bb6e2486d5984.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Only real feasable and also good equipment engraving"
           }
+        },
+        {
+          "type": "image",
+          "image": "3a0f98fb6ee19324.webp"
         },
         {
           "type": "prose",
@@ -1343,10 +1383,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
         },
         {
           "type": "prose",
@@ -1355,10 +1403,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "b9d7df7360616d40.webp"
         }
       ]
     }

@@ -841,7 +841,8 @@
               "level": 4,
               "text": {
                 "en": "Honestly, Lucas Ego is pretty good, if only it was cheaper"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -853,7 +854,8 @@
               "level": 6,
               "text": {
                 "en": "LAUNCHER IS 0 COST NOW Only the first one each turn"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -917,6 +919,15 @@
                 "en": ""
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
             },
             {
               "cardId": "n_0070",
@@ -1093,7 +1104,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "A tiny bit of extra base damage"
                   }
                 },
                 {
@@ -1102,7 +1113,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "This bad is butt, but it's the onyl version that can get Draw Divine"
                   }
                 },
                 {
@@ -1111,7 +1122,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Ig the base damage could be high, but why"
                   }
                 },
                 {
@@ -1120,7 +1131,7 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "I guess it boosts the damage, stlil butt"
                   }
                 },
                 {
@@ -1129,7 +1140,7 @@
                   "cost": 1,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Fixed damage hurts this so bad, it isn't even AOE Either"
                   }
                 }
               ]
@@ -1139,7 +1150,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "SSS 1:A tiny bit of extra base damage\nSSS 2: This bad is butt, but it's the onyl version that can get Draw Divine\nSSS 3: Ig the base damage could be high, but why\nSSS 4: I guess it boosts the damage, stlil butt\nSSS 5: Fixed damage hurts this so bad, it isn't even AOE Either\nHonestly, best bet would just to get a good Neutral epiphany like Draw or Moral"
+            "en": "Honestly, best bet would just to get a good Neutral epiphany like Draw or Moral"
           }
         },
         {
@@ -1158,7 +1169,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Increasing damage to shield, eh"
                   }
                 },
                 {
@@ -1167,7 +1178,7 @@
                   "cost": 1,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Increasing damage to shield even more eh"
                   }
                 },
                 {
@@ -1176,7 +1187,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Passion Weakness apply is pretty good, also it has Retain"
                   }
                 },
                 {
@@ -1185,7 +1196,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Mark is quite a good damage"
                   }
                 },
                 {
@@ -1194,18 +1205,12 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Upgrade, so its great"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Flash 1: Increasing damage to shield, eh\nFlash 2:Increasing damage to shield even more eh\nFlash 3: Passion Weakness apply is pretty good, also it has Retain\nFlash 4: 2 Mark is quite a good damage\nFlash 5: Upgrade, so its great"
-          }
         }
       ]
     },
@@ -1467,16 +1472,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "03fead7dc9c6d652.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "cfc2ccec12d3fe72.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "2bb63870aac52b92.webp"
         }
       ]
     }

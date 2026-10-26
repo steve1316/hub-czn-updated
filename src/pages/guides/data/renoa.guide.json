@@ -44,11 +44,11 @@
               }
             },
             {
-              "cardId": "c_1041_cre1",
-              "name": "Dirge Bullet",
+              "cardId": "c_1041_bhc1",
+              "name": "Dirge Bullet: Finale",
               "cost": 1,
               "text": {
-                "en": "[Bullet] [Exhaust] 160% Damage. When moved to Discard Pile, 120% Extra Attack to a random enemy."
+                "en": "[Bullet] [Exhaust] 200% Damage. When moved to Discard Pile, 160% Extra Attack x 2 to random enemies."
               }
             }
           ]
@@ -449,6 +449,14 @@
                 "text": {
                   "en": "Discard up to 2 card(s) in hand. For each Cost of the cards Discarded, +40% Damage Amount to the next card activated."
                 }
+              }
+            },
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "text": {
+                "en": "[Retain] 150% Damage × 4. When Drawing through an ability, decrease Cost of this card by 1."
               }
             }
           ]
@@ -955,7 +963,8 @@
               "level": 2,
               "text": {
                 "en": "Makes every 4th bullet instead a stronger bullet, really nice"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1049,6 +1058,15 @@
                 "en": "Pretty good as a end of turn finisher, remove if you want, its fine"
               },
               "rating": "4/5"
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
             },
             {
               "cardId": "n_0070",
@@ -1225,7 +1243,7 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Meh"
                   }
                 },
                 {
@@ -1243,7 +1261,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Meh\nDouble dips Rei buffs, okay damage"
                   }
                 },
                 {
@@ -1252,7 +1270,7 @@
                   "cost": 2,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Discard fodder that is also free damage, very good"
                   }
                 },
                 {
@@ -1261,18 +1279,12 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Upgrade = Exhaust = Good, Free Value every turn after deck thinning"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Judgement 1: Meh\nJudgement 3: Meh\nJudgement 3: Double dips Rei buffs, okay damage\nJudgement 4: Discard fodder that is also free damage, very good\nJudgement 5: Upgrade = Exhaust = Good, Free Value every turn after deck thinning"
-          }
         },
         {
           "type": "deck",
@@ -1564,10 +1576,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "be74072f028e744f.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Foretold Ruins"
           }
+        },
+        {
+          "type": "image",
+          "image": "f9f29b4db5d99cdb.webp"
         },
         {
           "type": "prose",
@@ -1576,10 +1596,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "0bfe6f2bcb4c52e5.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
+        },
+        {
+          "type": "image",
+          "image": "9f4c07f6e071e5ec.webp"
         },
         {
           "type": "prose",
@@ -1588,10 +1616,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "40b4f5c2c9d23475.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "67e97314c52b7ba5.webp"
         }
       ]
     }

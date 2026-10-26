@@ -14,20 +14,22 @@ This target needs the network, so it only runs when named: `python -m scripts.da
 from __future__ import annotations
 
 import base64
+import difflib
 import hashlib
 import html
 import io
 import json
 import re
 from dataclasses import dataclass, field
+from itertools import groupby
 from functools import cached_property, lru_cache, partial
 from pathlib import Path
 
 from PIL import Image
 
-from scripts.datagen import card_text, epiphany, images, roster
-from scripts.datagen.art import webp
-from scripts.datagen.epiphany import Extra
+from scripts.datagen import card_text, epiphany, guides_qc, images, roster
+from scripts.datagen.art import wanted, webp
+from scripts.datagen.epiphany import Extra, Variant
 from scripts.datagen.set_names import set_line
 from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue, Overrides
@@ -43,6 +45,13 @@ CONTENT_PATH = Path("src/pages/guides/guides-content.ts")
 # Each guide's potentials tree picture, named after the guide. Only ever added, like card art.
 POTENTIALS_DIR = DATA_DIR / "potentials"
 POTENTIALS_QUALITY = 90
+# Wide pictures nothing identified (relic screenshot strips, skill clips) ship as image blocks, named after their hash. Only ever added.
+IMAGES_DIR = DATA_DIR / "images"
+IMAGE_QUALITY = 85
+# An unmatched picture this small in both directions is an icon and is dropped without a review entry.
+ICON_MAX_SIZE = 130
+# An unmatched picture at least this many times wider than tall is a strip worth showing.
+STRIP_MIN_RATIO = 2.2
 OVERRIDES_FILE = "api/data/overrides/guides.json"
 
 SOURCE_LABEL = "Sproot's Nightmare (community sheet)"
@@ -62,6 +71,12 @@ _LAST_EDIT = re.compile(r"^(?:last edit(?:ed)?|\d{1,2}/\d{1,2}(?:/\d{2,4})?)$", 
 _OWN_CARD = re.compile(r"^c_(\d+)_")
 # A prose line that notes one listed card or partner, such as "Tassel: BASE DAMAGE" or "Flow 2: Its great".
 _NOTE_LINE = re.compile(r"^([^:]{1,40}):\s*(.+)$")
+# A numbered note line that uses a comma or a quote instead of the colon, such as "OUAT 1, 1 cost is bad" or 'Truth 3" Just damage'.
+_NUMBERED_NOTE_LINE = re.compile(r"^(.*?\s*\d)\s*[,\"]\s*(.+)$")
+# A line that starts with a short name and a level number then a separator, such as "Whirl 2: x", for the positional rule.
+_SHORT_NUMBERED_LINE = guides_qc.NUMBERED_LINE
+# A note label's base word must be at least this close to a word of the card's name, so a typo such as "Whiirl" still finds "Whirl".
+_NOTE_NAME_CLOSENESS = 0.8
 # A note label naming one epiphany level by number, such as "Flow 2".
 _NUMBERED_LABEL = re.compile(r"^(.*?)\s*(\d)$")
 # The part of an epiphany's game name that tells it apart, such as "Unbound" in "Flicker Blade (Unbound)".
@@ -71,6 +86,8 @@ _LEGEND = re.compile(r"^\s*purple\s*:", re.IGNORECASE)
 _LEGEND_LINE = re.compile(r"^\s*(purple|gold|blue)\s*:\s*(.+?)\s*$", re.IGNORECASE)
 # An ego manifestation note's level line, "E1:" or a bare "E1", but not "E2's damage" inside a note.
 _EGO_LEVEL = re.compile(r"^\s*E[1-6](?:\s*:|\s*$)", re.MULTILINE)
+# An ego level is shown bold when more than this share of its characters are bold in the sheet.
+_BOLD_SHARE = 0.9
 # The potentials band's own headings, such as "Potential Priority:" and "Ego Menifestation:", which the page title replaces.
 _POTENTIALS_HEADING = re.compile(r"potential|ego m[ae]nifestation", re.IGNORECASE)
 POTENTIALS_TITLE = "Potentials & Ego"
@@ -92,6 +109,19 @@ PICTURE_LABEL_DISTANCE = 12
 
 # A local page listing every picture that still needs a label, written next to the download cache.
 REVIEW_PAGE = "unidentified.html"
+
+# The quality report of the last run, next to the download cache.
+QC_REPORT = "qc.md"
+
+# The OCR text of card title bars, so a re-run skips reading them again.
+CARD_TITLE_CACHE = "card_titles.json"
+# A read title must be this close to a card name, with at least this many letters.
+_TITLE_CLOSENESS = 0.8
+# A title this close to a card name overrules the art, which cards of one name and different ids (a tutorial copy) can share.
+_TITLE_TRUSTED = 0.9
+_TITLE_MIN_LETTERS = 4
+# The suffix that makes a card id an epiphany of its base card, such as `c_1012_srt4_rsp1`.
+_EPIPHANY_ID = re.compile(r"_rsp\d+$")
 
 # Card match results by picture and candidate set, so a re-run skips the slow alignment search.
 MATCH_CACHE = "card_matches.json"
@@ -282,7 +312,7 @@ def build(ctx: Context) -> TargetResult:
     faces = images.FaceMatcher(ctx.client.root / CLIENT_FACE_DIR)
     labels = _PictureLabels(overrides.directives.get("_pictures", {}))
     match_cache_path = cache / MATCH_CACHE
-    match_cache: dict[str, str] = json.loads(match_cache_path.read_text(encoding="utf-8")) if match_cache_path.is_file() else {}
+    match_cache = _load_cache(match_cache_path)
     tab_ids = overrides.directives.get("_tabs", {})
     names = {_normalise(entry["name"]): res_id for res_id, entry in roster.combatants().items()}
     own_cards = _cards_by_owner(ctx)
@@ -291,12 +321,22 @@ def build(ctx: Context) -> TargetResult:
     shared_cards = _shared_cards()
     card_names = _card_names(ctx, shared_cards)
     variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))
+    text_cache_path = cache / CARD_TEXT_CACHE
+    text_cache = _load_cache(text_cache_path)
+    title_cache_path = cache / CARD_TITLE_CACHE
+    title_cache = _load_cache(title_cache_path)
+    titles = _TitleCards(card_names, title_cache)
+    sift_wide = _CachedSift("sift-wide", lambda: _wide_card_art(ctx), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
+    read_text = lambda data: card_text.read_card_text(data, text_cache)
     decks = _DeckPictures()
     issues: list[Issue] = []
     section_fixes = _section_fixes(overrides.directives.get("_sections", {}), issues)
     files: dict[Path, bytes] = {}
+    new_files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
     skipped: list[str] = []
+    rated_misses: dict[str, list[str]] = {}
+    guesses: dict[str, list[str]] = {key: [] for key in guides_qc.GUESSES}
 
     for tab_name, gid in tabs(fetcher.text(HTMLVIEW_URL)):
         res_id = tab_ids[tab_name] if tab_name in tab_ids else names.get(_normalise(tab_name.split("/")[0]))
@@ -308,7 +348,8 @@ def build(ctx: Context) -> TargetResult:
         illustrations, card_ids = _card_candidates(ctx, own_cards.get(str(res_id), []))
         cards = _CachedCards(illustrations, card_ids, match_cache)
         guide_slug = slug(name, _SLUG_MAX_LENGTH)
-        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, shared_cards, variants_of, decks, overrides, labels, tab_name, guide_slug)
+        builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, shared_cards, variants_of, decks, overrides, labels, tab_name, guide_slug,
+                               titles, sift_wide, read_text)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -319,19 +360,25 @@ def build(ctx: Context) -> TargetResult:
             guide["updated"] = updated
         guide["sections"] = _pages(sections, section_fixes.get(tab_name, {}))
         guides.append((guide_slug, name, guide))
+        rated_misses[name] = builder.rated_misses
         # Written every run like the guide itself, so a tree the author redraws replaces the old one.
         for file_name, download in builder.pictures.items():
             files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
+        for file_name, download in builder.strips.items():
+            if (path := IMAGES_DIR / file_name) not in new_files and wanted(ctx, path):
+                new_files[path] = webp(io.BytesIO(download.data), quality=IMAGE_QUALITY)
+        guesses["dropped_icons"].extend(builder.dropped_icons)
+        guesses["filled_pictures"].extend(builder.filled)
+        guesses["positional_notes"].extend(f"{tab_name}: {line}" for line in builder.positional_notes)
 
     # Deck cards are resolved only now, so an exact copy can come from any tab's rated rows.
-    text_cache_path = cache / CARD_TEXT_CACHE
-    text_cache: dict[str, str] = json.loads(text_cache_path.read_text(encoding="utf-8")) if text_cache_path.is_file() else {}
     unknown_epiphanies: dict[str, _Picture] = {}
     for card, download, ref in decks.pending:
-        if not _resolve_deck_card(card, download, ref, decks, overrides.entries, lambda data: card_text.read_card_text(data, text_cache), variants_of):
+        if not _resolve_deck_card(card, download, ref, decks, overrides.entries, read_text, variants_of):
             _add_unknown_epiphany(unknown_epiphanies, download, ref)
     for guide_slug, _, guide in guides:
         files[DATA_DIR / f"{guide_slug}.guide.json"] = json_bytes(guide)
+    found = guides_qc.collect(guides, variants_of, rated_misses, guesses)
 
     issues.extend(overrides.validate({}, keyed_by_output=False))
     if skipped:
@@ -351,11 +398,27 @@ def build(ctx: Context) -> TargetResult:
     # These are caches for the next run and for review, not outputs, so they are written here rather than compared.
     cache.mkdir(parents=True, exist_ok=True)
     (cache / REVIEW_PAGE).write_bytes(_review_page(labels.unidentified, unknown_epiphanies))
+    (cache / QC_REPORT).write_bytes(guides_qc.report(found))
+    print(guides_qc.summary(found), flush=True)
     match_cache_path.write_bytes(json_bytes(dict(sorted(match_cache.items()))))
     text_cache_path.write_bytes(json_bytes(dict(sorted(text_cache.items()))))
+    title_cache_path.write_bytes(json_bytes(dict(sorted(title_cache.items()))))
     fetcher.prune()
     files[CONTENT_PATH] = _content_module(sorted(((guide_slug, name) for guide_slug, name, _ in guides), key=lambda guide: guide[1].casefold()))
-    return TargetResult(files, f"{len(guides)} guides", issues)
+    return TargetResult(files, f"{len(guides)} guides, {len(new_files)} image(s) to add", issues, new_files=new_files)
+
+
+def _load_cache(path: Path) -> dict[str, str]:
+    """
+    A cache file from an earlier run.
+
+    Args:
+        path: The JSON file.
+
+    Returns:
+        Its contents, or an empty dict when there is no file yet.
+    """
+    return json.loads(path.read_text(encoding="utf-8")) if path.is_file() else {}
 
 
 def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) -> dict[str, dict[str, str]]:
@@ -397,6 +460,21 @@ def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
     return owned
 
 
+def _is_icon(picture: Image.Image) -> bool:
+    """Whether an unmatched picture is small enough in both directions to be an icon."""
+    return picture.width <= ICON_MAX_SIZE and picture.height <= ICON_MAX_SIZE
+
+
+def _is_strip(picture: Image.Image) -> bool:
+    """Whether an unmatched picture is much wider than it is tall."""
+    return picture.height > 0 and picture.width / picture.height >= STRIP_MIN_RATIO
+
+
+def _is_base_card(card_id: str) -> bool:
+    """Whether a card id is a base card, not an epiphany copy (`_rsp`) or a potential (`_pot`) of one."""
+    return "_rsp" not in card_id and not card_id.endswith("_pot")
+
+
 def _card_candidates(ctx: Context, own_cards: list[str]) -> tuple[dict[str, Path], dict[str, str]]:
     """
     The illustrations one character's cards use.
@@ -410,9 +488,7 @@ def _card_candidates(ctx: Context, own_cards: list[str]) -> tuple[dict[str, Path
     """
     illustrations: dict[str, Path] = {}
     card_ids: dict[str, str] = {}
-    for card_id in own_cards:
-        if "_rsp" in card_id or card_id.endswith("_pot"):
-            continue
+    for card_id in filter(_is_base_card, own_cards):
         path = ctx.client.illustration(ctx.client.cards[card_id])
         if path is not None:
             illustrations.setdefault(path.stem, path)
@@ -505,18 +581,26 @@ class _CachedSift:
         """
         Args:
             pool: The pool's name in cache keys, such as "sift-cards".
-            candidates: Key -> its images.
+            candidates: Key -> its images, or a function that returns them, which is not called until the first picture is matched.
             cache: "<picture sha1>:<pool>:<candidates and settings sha1>" -> key, or "" for no match. Updated in place.
             options: Passed on to `images.SiftMatcher`.
         """
         self.pool = pool
-        self.candidates = candidates
         self.cache = cache
         self.options = options
-        # The matcher's settings are part of the signature, so tuning a threshold re-matches every picture.
-        settings = sorted((name, value) for name, value in vars(images).items() if name.startswith("SIFT_"))
-        self.signature = hashlib.sha1(f"{sorted(candidates)}{settings}{sorted(options.items())}".encode("utf-8")).hexdigest()[:12]
+        self._candidates = candidates
         self._matcher: images.SiftMatcher | None = None
+
+    @cached_property
+    def candidates(self) -> dict[str, list[Path]]:
+        """The pool's candidates, gathered on first use."""
+        return self._candidates() if callable(self._candidates) else self._candidates
+
+    @cached_property
+    def signature(self) -> str:
+        """Names the candidates and settings, so tuning a threshold re-matches every picture."""
+        settings = sorted((name, value) for name, value in vars(images).items() if name.startswith("SIFT_"))
+        return hashlib.sha1(f"{sorted(self.candidates)}{settings}{sorted(self.options.items())}".encode("utf-8")).hexdigest()[:12]
 
     def match(self, picture: Image.Image, data: bytes) -> str | None:
         """
@@ -572,12 +656,89 @@ class _CachedCards:
         return self.card_ids.get(_remembered(self.cache, f"{hashlib.sha1(data).hexdigest()}:{self.signature}", find))
 
 
+class _TitleCards:
+    """Identifies a card render by reading the name on its title bar and matching it to a card name."""
+
+    def __init__(self, card_names: dict[str, str], cache: dict[str, str]):
+        """
+        Args:
+            card_names: Card id -> display name.
+            cache: sha1 of the picture -> its title, from earlier runs. Updated in place.
+        """
+        self.cache = cache
+        # Name (letters only) -> the base ids of the cards with it. An epiphany's id counts as its base card.
+        self._by_name: dict[str, set[str]] = {}
+        for card_id, name in card_names.items():
+            base = _EPIPHANY_ID.sub("", card_id)
+            if _is_base_card(base) and (key := _title_key(name)):
+                self._by_name.setdefault(key, set()).add(base)
+        self._names = list(self._by_name)
+        # Title (letters only) -> the ids of the closest card name and how close it is, remembered across pictures.
+        self._found: dict[str, tuple[set[str], float]] = {}
+
+    def match(self, data: bytes, own: set[str]) -> tuple[str | None, float]:
+        """
+        The base card a render's title names, and how closely the title matches the card's name.
+
+        Args:
+            data: The picture file.
+            own: The base card ids of the guide's character, which win when several cards share the name.
+
+        Returns:
+            The card id and the match ratio from 0 to 1, or (None, 0.0) when the title is unreadable, not close to any card name, or shared by cards
+            nothing can tell apart.
+        """
+        title = _title_key(card_text.read_card_title(data, self.cache))
+        if len(title) < _TITLE_MIN_LETTERS:
+            return None, 0.0
+        if title not in self._found:
+            close = difflib.get_close_matches(title, self._names, n=1, cutoff=_TITLE_CLOSENESS)
+            self._found[title] = (self._by_name[close[0]], difflib.SequenceMatcher(None, title, close[0]).ratio()) if close else (set(), 0.0)
+        found, ratio = self._found[title]
+        ids = (found & own) or found
+        return (next(iter(ids)), ratio) if len(ids) == 1 else (None, 0.0)
+
+    def card_id(self, data: bytes, own: set[str], min_ratio: float = _TITLE_CLOSENESS) -> str | None:
+        """
+        The card a render's title names, when the title is at least `min_ratio` close to its name.
+
+        Args:
+            data: The picture file.
+            own: The base card ids of the guide's character.
+            min_ratio: How close the read title must be to the card's name, from 0 to 1.
+
+        Returns:
+            The card id, or None when there is no such card.
+        """
+        card_id, ratio = self.match(data, own)
+        return card_id if ratio >= min_ratio else None
+
+
+def _title_key(text: str) -> str:
+    """A card title as lower-case letters only, without a bracketed epiphany name, for matching read titles to card names."""
+    return card_text._letters(re.sub(r"\(.*?\)", "", text))
+
+
+def _wide_card_art(ctx: Context) -> dict[str, list[Path]]:
+    """
+    Every card illustration in the client, one entry per distinct image.
+
+    Args:
+        ctx: The run context.
+
+    Returns:
+        Base card id -> its illustration, for the first card that uses each.
+    """
+    illustrations, card_ids = _card_candidates(ctx, sorted(ctx.client.cards))
+    return {card_ids[name]: [path] for name, path in illustrations.items()}
+
+
 class _GuideBuilder:
     """Turns one tab's cell grid into guide sections."""
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
                  sift_cards: _CachedSift, card_names: dict[str, str], shared_cards: dict[str, dict], variants_of, decks: _DeckPictures, overrides: Overrides,
-                 labels: _PictureLabels, tab_name: str, guide_slug: str):
+                 labels: _PictureLabels, tab_name: str, guide_slug: str, titles: _TitleCards, sift_wide: _CachedSift, read_text):
         """
         Args:
             ctx: The run context.
@@ -594,6 +755,9 @@ class _GuideBuilder:
             labels: Labels by picture, which also collect what nothing identified.
             tab_name: The sheet tab, used in cell override keys and references.
             guide_slug: The guide's id, which names its potentials picture.
+            titles: Reads a card render's title bar and finds the card it names.
+            sift_wide: SIFT over every card illustration in the client, for the renders nothing else identified.
+            read_text: Picture bytes -> its OCR text, which reads the epiphany of a repeated card in a rated row.
         """
         self.ctx = ctx
         self.downloads = downloads
@@ -609,8 +773,19 @@ class _GuideBuilder:
         self.labels = labels
         self.tab_name = tab_name
         self.guide_slug = guide_slug
+        self.titles = titles
+        self.sift_wide = sift_wide
+        self.read_text = read_text
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
+        # File name -> picture, for the wide strips this guide shows as image blocks.
+        self.strips: dict[str, _Download] = {}
+        # For the QC report: the cells of dropped icons, of pictures given a card by the run they sit in, and the note lines placed by their number.
+        self.dropped_icons: list[str] = []
+        self.filled: list[str] = []
+        self.positional_notes: list[str] = []
+        # Cells of pictures in rated rows that nothing identified, for the QC report.
+        self.rated_misses: list[str] = []
         # The tab's `layout`, set by `sections`, which keeps a cached picture from being served for a cell it has moved out of.
         self._layout = ""
 
@@ -650,7 +825,7 @@ class _GuideBuilder:
                     # A later panel's heading would otherwise be lost, so it leads that panel's blocks instead.
                     panel_blocks.insert(0, self._prose(panel_title))
                 blocks.extend(panel_blocks)
-            blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks)]
+            blocks = [self._deck_or_list(block) if block["type"] == "card-list" else block for block in _attach_notes(blocks, self.positional_notes)]
             if not blocks:
                 continue
             sections.append({"title": self.ctx.text(title, soften=True, sentences=False) if title else None, "blocks": blocks})
@@ -683,8 +858,10 @@ class _GuideBuilder:
         image = f"{self.guide_slug}.webp" if tree else None
         if tree:
             self.pictures[image] = self.downloads.get(tree.images[0], self._picture_key(tree, 0))
+        bold = _bold_levels(ego) if ego else []
         block = {"type": "potentials", "image": image, "legend": colours,
-                 "ego": [{"level": level, "text": self._text(note.strip())} for level, note in enumerate(notes[1:], 1)]}
+                 "ego": [{"level": level, "text": self._text(note.strip()), **({"bold": True} if level - 1 < len(bold) and bold[level - 1] else {})}
+                         for level, note in enumerate(notes[1:], 1)]}
         if notes[0].strip():
             extra.append(notes[0].strip())
         used = {cell.ref for cell in (legend, tree, ego) if cell}
@@ -723,7 +900,7 @@ class _GuideBuilder:
                     title, title_shown = held, True
                 held = None
                 blocks.extend(new_blocks)
-                if not new_blocks:
+                if all(block["type"] == "image" for block in new_blocks):
                     # Text beside pictures that are not cards or faces, such as a relic's substats note next to its set icons.
                     for picture_row in rows[index:index + consumed]:
                         if any(cell.images for cell in picture_row):
@@ -771,9 +948,11 @@ class _GuideBuilder:
         names = {cell.col: cell.text for cell in rows[start - 1] if cell.text} if start > 0 and _is_label_row([c.text for c in rows[start - 1] if c.text]) else {}
 
         cards: list[dict] = []
+        strips: list[dict] = []
         face_rows: list[list[tuple[int, int]]] = []
         for row in rows[start:end]:
-            last_card, epiphany = None, 0
+            # A card nothing identified stays in the row as a gap (cardId None), so its neighbours keep their places.
+            row_cards: list[dict] = []
             face_row: list[tuple[int, int]] = []
             for cell in row:
                 ref = f"{self.tab_name}!{cell.ref}"
@@ -787,21 +966,25 @@ class _GuideBuilder:
                     if "charResId" in label or (kind == "face" and "cardId" not in label):
                         res_id = label.get("charResId") or self._face(download)
                         if res_id is None:
-                            self.labels.unidentify(download.hash, download.data, kind, ref)
+                            self._miss(download, kind, ref, bool(ratings))
                         else:
                             face_row.append((cell.col, res_id))
                     elif "cardId" in label or kind == "card":
-                        card_id = label.get("cardId") or self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
+                        card_id = label.get("cardId") or self._card(download)
                         if card_id is None:
-                            self.labels.unidentify(download.hash, download.data, kind, ref)
-                            last_card = None
-                            continue
-                        epiphany = epiphany + 1 if card_id == last_card else 1
-                        last_card = card_id
-                        cards.append({"cardId": card_id, "col": cell.col, "epiphany": epiphany, "picture": (download, ref)})
+                            self._miss(download, kind, ref, bool(ratings))
+                        row_cards.append({"cardId": card_id, "col": cell.col, "picture": (download, ref)})
+                    elif _is_icon(download.picture):
+                        self.dropped_icons.append(ref)
+                    elif _is_strip(download.picture):
+                        strips.append({"type": "image", "image": self._strip_name(download)})
                     else:
-                        # Set icons, banners and the like. Listed for review so they can be labelled or skipped.
-                        self.labels.unidentify(download.hash, download.data, kind, ref)
+                        # Banners and the like. Listed for review so they can be labelled or skipped.
+                        self._miss(download, kind, ref, bool(ratings))
+            if ratings:
+                _fill_unread(row_cards, self.variants_of, self.filled)
+            row_cards = _number_runs(row_cards)
+            cards.extend(self._settle_repeats(row_cards, ratings) if ratings else row_cards)
             if face_row:
                 face_rows.append(face_row)
 
@@ -812,7 +995,109 @@ class _GuideBuilder:
         if face_rows:
             face_block, named = self._face_block(face_rows, ratings, names)
             blocks.append(face_block)
+        blocks.extend(strips)
         return consumed, blocks, named
+
+    def _strip_name(self, download: _Download) -> str:
+        """
+        The file name a wide strip is shown under, which the guide ships.
+
+        Args:
+            download: The sheet's picture.
+
+        Returns:
+            The name, from the picture's hash.
+        """
+        name = f"{download.sha1[:16]}.webp"
+        self.strips[name] = download
+        return name
+
+    @cached_property
+    def _own_cards(self) -> set[str]:
+        """The base card ids of this guide's character."""
+        return set(self.cards.card_ids.values())
+
+    def _card(self, download: _Download) -> str | None:
+        """
+        The card a render shows.
+
+        Args:
+            download: The sheet's picture.
+
+        Returns:
+            The art match, from this character's cards and then the deck builder's card art. A clearly read title replaces it only when it names a
+            different base card, as a copy of another card's art is the render with a changed title. Without an art match, the title and then the
+            art of every card in the client. None when none is clear.
+        """
+        art = self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
+        title, ratio = self.titles.match(download.data, self._own_cards)
+        if art is None:
+            return title or self.sift_wide.match(download.picture, download.data)
+        return title if title and ratio >= _TITLE_TRUSTED and title != _EPIPHANY_ID.sub("", art) else art
+
+    def _settle_repeats(self, row_cards: list[dict], ratings: dict[int, str]) -> list[dict]:
+        """
+        Pictures of one card side by side in a rated row, which are not a whole run of its epiphanies, as one card or a partial ladder.
+
+        Args:
+            row_cards: One row's identified cards in order, each with its `epiphany` position.
+            ratings: column -> rating text.
+
+        Returns:
+            The cards. Each such run gets the epiphany levels its pictures show, read the way deck cards are, so they fold into a ladder.
+            When they cannot be read, equally rated pictures become one card with a `count`. Otherwise the run is left as it is.
+        """
+        settled: list[dict] = []
+        for card_id, group in groupby(row_cards, key=lambda card: card["cardId"]):
+            run = list(group)
+            if len(run) == 1 or len(run) == len(self.variants_of(card_id)) - 1:
+                settled.extend(run)
+                continue
+            levels = self._read_levels(run)
+            if levels:
+                for card, level in zip(run, levels):
+                    card["level"] = level
+                settled.extend(sorted(run, key=lambda card: card["level"]))
+            elif len({ratings.get(card["col"]) for card in run}) == 1:
+                settled.append({**run[0], "count": len(run)})
+            else:
+                settled.extend(run)
+        return settled
+
+    def _read_levels(self, run: list[dict]) -> list[int] | None:
+        """
+        The epiphany level each picture of one card shows.
+
+        Args:
+            run: Pictures of one card.
+
+        Returns:
+            Their levels, or None when any cannot be read or two show the same level.
+        """
+        if not self.variants_of(run[0]["cardId"]):
+            return None
+        levels = []
+        for card in run:
+            download, ref = card["picture"]
+            found = _find_epiphany(card["cardId"], download, ref, self.decks, self.overrides.entries, self.read_text, self.variants_of)
+            if found is None:
+                return None
+            levels.append(found[0].level)
+        return levels if len(set(levels)) == len(levels) and 0 not in levels else None
+
+    def _miss(self, download: _Download, kind: str, ref: str, rated: bool) -> None:
+        """
+        Record a picture nothing identified.
+
+        Args:
+            download: The sheet's picture.
+            kind: "face", "card" or "other".
+            ref: Its cell, such as "Tenebria!B11".
+            rated: Whether it sits in a row with ratings under it.
+        """
+        self.labels.unidentify(download.hash, download.data, kind, ref)
+        if rated:
+            self.rated_misses.append(ref)
 
     def _face(self, download: _Download) -> int | None:
         """
@@ -855,9 +1140,13 @@ class _GuideBuilder:
             item["note"] = {"en": ""}
             if card["col"] in ratings:
                 item["rating"] = ratings[card["col"]]
+            if "count" in card:
+                item["count"] = card["count"]
             if card_id in variants:
                 item["level"] = card["epiphany"]
                 self.decks.add_copy(card_id, card["picture"][0], card["epiphany"])
+            elif "level" in card:
+                item["level"] = card["level"]
             # Kept until the block is known to be a deck or not, then dropped by `_deck_or_list`.
             item["_picture"] = card["picture"]
             items.append(item)
@@ -1039,6 +1328,87 @@ def _set_block(block: dict) -> dict:
     return {"type": "set-list", "items": items} if items else block
 
 
+def _bold_levels(cell: Cell) -> list[bool]:
+    """
+    Which of an ego manifestation cell's levels the sheet writes in bold.
+
+    Args:
+        cell: The cell, whose levels start at "E1:" style lines.
+
+    Returns:
+        One flag per level in the order written. A level is bold when more than `_BOLD_SHARE` of its non-space characters are bold.
+    """
+    matches = list(_EGO_LEVEL.finditer(cell.text))
+    flags = []
+    for match, following in zip(matches, [*matches[1:], None]):
+        start, end = match.end(), following.start() if following else len(cell.text)
+        total = _letters_of(cell.text[start:end])
+        marked = sum(_letters_of(cell.text[max(first, start):min(last, end)]) for first, last in cell.bold if first < end and last > start)
+        flags.append(total > 0 and marked / total > _BOLD_SHARE)
+    return flags
+
+
+def _letters_of(text: str) -> int:
+    """How many characters of the text are not whitespace."""
+    return len("".join(text.split()))
+
+
+def _number_runs(row_cards: list[dict]) -> list[dict]:
+    """
+    Number a row's cards by their place in a run of the same card, which is the epiphany level a whole rated run shows.
+
+    Args:
+        row_cards: One row's cards in order. A card nothing identified (cardId None) ends the run before it and is dropped.
+
+    Returns:
+        The identified cards, each with its `epiphany` position, 1 for a card that does not follow the same card.
+    """
+    numbered: list[dict] = []
+    for card_id, run in groupby(row_cards, key=lambda card: card["cardId"]):
+        if card_id is not None:
+            numbered.extend({**card, "epiphany": position} for position, card in enumerate(run, 1))
+    return numbered
+
+
+def _fill_unread(row_cards: list[dict], variants_of, filled: list[str] | None = None) -> None:
+    """
+    Give the pictures nothing identified (cardId None) the card they sit in a run of, when that makes the run whole.
+
+    Args:
+        row_cards: One row's cards in order. Updated in place.
+        variants_of: Card id -> its `epiphany.variants`, whose length less the base card is the length of a whole run.
+        filled: Collects the cell of each picture given a card, for the QC report. Not collected when None.
+    """
+    # Each run of one card id (or of unread pictures) as [card id, how many pictures].
+    runs = [[card_id, len(list(run))] for card_id, run in groupby(row_cards, key=lambda card: card["cardId"])]
+    start = 0
+    for index, (card_id, size) in enumerate(runs):
+        end = start + size
+        if card_id is None:
+            left = runs[index - 1][0] if index else None
+            right = runs[index + 1][0] if index + 1 < len(runs) else None
+            fits = [
+                candidate for candidate in dict.fromkeys([left, right])
+                if candidate is not None and _run_total(runs, index - 1, -1, candidate) + size + _run_total(runs, index + 1, 1, candidate) == len(variants_of(candidate)) - 1
+            ]
+            if len(fits) == 1:
+                runs[index][0] = fits[0]
+                for card in row_cards[start:end]:
+                    card["cardId"] = fits[0]
+                    if filled is not None and card.get("picture"):
+                        filled.append(card["picture"][1])
+        start = end
+
+
+def _run_total(runs: list[list], index: int, step: int, card_id: str) -> int:
+    """How many pictures the runs from `index` in the direction of `step` hold, while they are this card."""
+    total = 0
+    while 0 <= index < len(runs) and runs[index][0] == card_id:
+        total += runs[index][1]
+        index += step
+    return total
+
+
 def _complete_runs(cards: list[dict], variants_of) -> set[str]:
     """
     The cards whose rated renders are one whole run of their epiphany levels, so each render's position is its level.
@@ -1090,12 +1460,37 @@ def _fold(items: list[dict], variants_of) -> list[dict]:
     return folded
 
 
-def _attach_notes(blocks: list[dict]) -> list[dict]:
+def _line_target(line: str, items: list[dict], positional: dict | None, by_position: list[str] | None) -> tuple[dict, str] | None:
+    """
+    The item, or epiphany of one, that a "Name: note" prose line is for.
+
+    Args:
+        line: The prose line.
+        items: The listed cards or partners.
+        positional: The one card whose ladder a numbered label may pick by its number alone.
+        by_position: Collects the lines that were placed only by their number, for the QC report. Not collected when None.
+
+    Returns:
+        The target and the line's note text, or None when the line names none of the items.
+    """
+    for match in filter(None, (_NOTE_LINE.match(line), _NUMBERED_NOTE_LINE.match(line))):
+        target = _note_target(items, match.group(1))
+        if target is None and positional:
+            target = _note_target(items, match.group(1), positional)
+            if target is not None and by_position is not None:
+                by_position.append(line.strip())
+        if target is not None:
+            return target, match.group(2)
+    return None
+
+
+def _attach_notes(blocks: list[dict], by_position: list[str] | None = None) -> list[dict]:
     """
     "Name: note" prose lines moved onto the card or partner they name.
 
     Args:
         blocks: A section's blocks.
+        by_position: Collects the lines placed only by their level number, for the QC report. Not collected when None.
 
     Returns:
         The blocks. Prose straight after a card-list or partner-list gives up each line that names one of its items, and the
@@ -1108,14 +1503,19 @@ def _attach_notes(blocks: list[dict]) -> list[dict]:
             kept.append(block)
             continue
         rest = []
-        for line in block["body"]["en"].split("\n"):
-            match = _NOTE_LINE.match(line)
-            target = _note_target(previous["items"], match.group(1)) if match else None
-            if target is None:
+        # A card list of one ladder takes any numbered line by its level, as the sheet's own label may be misspelled or shortened.
+        ladders = [item for item in previous["items"] if item.get("epiphanies")]
+        lines = block["body"]["en"].split("\n")
+        numbered = sum(1 for line in lines if _SHORT_NUMBERED_LINE.match(line))
+        positional = ladders[0] if previous["type"] == "card-list" and len(previous["items"]) == 1 and ladders and numbered >= 2 else None
+        for line in lines:
+            found = _line_target(line, previous["items"], positional, by_position)
+            if found is None:
                 rest.append(line)
                 continue
+            target, text = found
             note = target["note"]["en"]
-            target["note"] = {"en": f"{note}\n{match.group(2)}" if note else match.group(2)}
+            target["note"] = {"en": f"{note}\n{text}" if note else text}
         if any(line.strip() for line in rest):
             kept.append({**block, "body": {"en": "\n".join(rest)}})
     return kept
@@ -1136,6 +1536,42 @@ def _as_deck(block: dict) -> dict | None:
     return {"type": "deck", "cards": [{key: item[key] for key in ("cardId", "name", "cost") if key in item} for item in block["items"]]}
 
 
+def _find_epiphany(card_id: str, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> tuple[Variant, Extra | None] | None:
+    """
+    The epiphany a card picture shows and its added divine or common line.
+
+    Args:
+        card_id: The card, which has epiphanies.
+        download: Its picture.
+        ref: Its cell, such as "Rossweisse!C10".
+        decks: The rated pictures, for an exact copy.
+        overrides: Guides override entries by cell. One can give `epiphany` (0 for the base card) and `divine` or `common`.
+        read: Picture bytes -> its OCR text.
+        variants_of: Card id -> its `epiphany.variants`.
+
+    Returns:
+        The level's variant and the added line, or None when nothing read it clearly.
+    """
+    variants = {variant.level: variant for variant in variants_of(card_id)}
+    entry = overrides.get(ref, {})
+    extra = None
+    if "epiphany" in entry:
+        level = entry["epiphany"]
+        extra = _extra(entry.get("divine") or entry.get("common"))
+    elif (level := decks.level_of(card_id, download)) is None:
+        key = (card_id, download.sha1)
+        if key not in decks.matches:
+            # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
+            god = card_text.match_god(download.picture)
+            extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
+            decks.matches[key] = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
+        match = decks.matches[key]
+        if match is None:
+            return None
+        level, extra = match.level, match.extra
+    return (variants[level], extra) if level in variants else None
+
+
 def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> bool:
     """
     Set the epiphany a deck card shows, its added divine or common line, and the cost that gives it.
@@ -1152,30 +1588,14 @@ def _resolve_deck_card(card: dict, download: _Download, ref: str, decks: _DeckPi
     Returns:
         True when the epiphany is known, or the card has none to find. False when nothing read it clearly.
     """
-    variants = {variant.level: variant for variant in variants_of(card["cardId"])}
-    if not variants:
+    if not variants_of(card["cardId"]):
         return True
-    entry = overrides.get(ref, {})
-    extra = None
-    if "epiphany" in entry:
-        level = entry["epiphany"]
-        extra = _extra(entry.get("divine") or entry.get("common"))
-    elif (level := decks.level_of(card["cardId"], download)) is None:
-        key = (card["cardId"], download.sha1)
-        if key not in decks.matches:
-            # The emblem only picks which lines to try. Text alone mixes up divine lines that read alike.
-            god = card_text.match_god(download.picture)
-            extras = [line for line in epiphany.divine_epiphanies() if line.god == god] if god else epiphany.common_epiphanies()
-            decks.matches[key] = card_text.match_epiphany(read(download.data), list(variants.values()), extras)
-        match = decks.matches[key]
-        if match is None:
-            return False
-        level, extra = match.level, match.extra
-    variant = variants.get(level)
-    if variant is None:
+    found = _find_epiphany(card["cardId"], download, ref, decks, overrides, read, variants_of)
+    if found is None:
         return False
+    variant, extra = found
     card["cost"] = epiphany.card_cost(variant.cost, extra)
-    card["epiphany"] = {"level": level, "name": variant.name, "text": {"en": variant.text}}
+    card["epiphany"] = {"level": variant.level, "name": variant.name, "text": {"en": variant.text}}
     if extra:
         card["extra"] = {"id": extra.id, **({"god": extra.god} if extra.god else {}), "text": {"en": extra.text}}
     return True
@@ -1199,13 +1619,38 @@ def _extra(extra_id: str | None) -> Extra | None:
     return next((line for line in [*epiphany.divine_epiphanies(), *epiphany.common_epiphanies()] if line.id == extra_id), None)
 
 
-def _note_target(items: list[dict], label: str) -> dict | None:
+def _name_words(name: str) -> list[str]:
+    """A card name split into its words, which are what a note label may name."""
+    return [word for word in re.split(r"[\s:]+", name) if word]
+
+
+def _names_card(base: str, name: str) -> bool:
+    """
+    Whether a note label's base word stands for a card name.
+
+    Args:
+        base: The label without its level number, lower case.
+        name: The card's name, lower case.
+
+    Returns:
+        True when the base is the name, one of its words, its initials ("OUAT"), or within a typo of one of its words.
+    """
+    words = _name_words(name)
+    if not base or base == name or base in words:
+        return True
+    if len(words) > 1 and base == "".join(word[0] for word in words):
+        return True
+    return len(base) >= 3 and any(difflib.SequenceMatcher(None, base, word).ratio() >= _NOTE_NAME_CLOSENESS for word in words)
+
+
+def _note_target(items: list[dict], label: str, positional: dict | None = None) -> dict | None:
     """
     The item, or epiphany of one, that a note label names.
 
     Args:
         items: The listed cards or partners.
-        label: The text before the colon, such as "Tassel", "Flow 2" or "Unbound".
+        label: The text before the colon, such as "Tassel", "Flow 2", "OUAT 1" or "Unbound".
+        positional: The one card whose ladder a numbered label may pick by its number alone, whatever its words.
 
     Returns:
         The epiphany named by its game name ("Unbound") or by a word of the card's name and its level ("Flow 2"), else the item
@@ -1222,15 +1667,16 @@ def _note_target(items: list[dict], label: str) -> dict | None:
             if part and part.group(1).lower() == wanted:
                 return entry
         name = item.get("name", "").lower()
-        words = re.split(r"[\s:]+", name)
         if numbered:
             base, level = numbered.group(1), int(numbered.group(2))
-            if base in words or base == name:
+            if _names_card(base, name):
                 found = next((entry for entry in epiphanies if entry["level"] == level), None)
                 if found:
                     return found
-        elif name == wanted or wanted in words:
+        elif name == wanted or wanted in _name_words(name):
             return item
+    if numbered and positional:
+        return next((entry for entry in positional["epiphanies"] if entry["level"] == int(numbered.group(2))), None)
     return None
 
 

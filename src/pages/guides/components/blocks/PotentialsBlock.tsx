@@ -1,17 +1,16 @@
 import { useTranslation } from 'react-i18next'
-import { resolveLang, localized } from '../../guides.utils'
+import { cn } from '@/lib/utils'
+import { resolveLang, localized, globByFileName } from '../../guides.utils'
 import type { EgoNote, PotentialsLegendEntry } from '../../guides.types'
 
 // Each guide's potentials tree picture, keyed by file name.
-const potentialsPictures = Object.fromEntries(
-  Object.entries(
-    import.meta.glob('../../data/potentials/*.webp', {
-      eager: true,
-      query: '?url',
-      import: 'default',
-    }) as Record<string, string>,
-  ).map(([path, url]) => [path.split('/').pop(), url]),
-) as Record<string, string>
+const potentialsPictures = globByFileName(
+  import.meta.glob('../../data/potentials/*.webp', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }) as Record<string, string>,
+)
 
 // The legend colours, matching the highlights in the author's pictures.
 const LEGEND_COLOURS: Record<PotentialsLegendEntry['colour'], string> = {
@@ -66,7 +65,9 @@ export function PotentialsBlock({ image, legend, ego }: PotentialsBlockProps) {
             {ego.map(note => (
               <li key={note.level} className="flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3">
                 <span className="shrink-0 self-start rounded bg-[#c084fc]/20 px-1.5 py-0.5 text-[10px] font-bold text-[#c084fc]">E{note.level}</span>
-                <p className="min-w-0 flex-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]">{localized(note.text, lang)}</p>
+                <p className={cn('min-w-0 flex-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]', note.bold && 'font-bold text-[#e5e5e5]')}>
+                  {localized(note.text, lang)}
+                </p>
               </li>
             ))}
           </ol>

@@ -969,16 +969,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0010",
-              "name": "Attack!",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             },
             {
               "cardId": "n_0115",
@@ -1294,7 +1286,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Heal and Damage but 2 cost"
                   }
                 },
                 {
@@ -1303,7 +1295,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "1 cost and refunds with wave"
                   }
                 },
                 {
@@ -1312,7 +1304,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Increases healing"
                   }
                 },
                 {
@@ -1321,7 +1313,7 @@
                   "cost": 4,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Recovery Dps Mika someday"
                   }
                 },
                 {
@@ -1330,7 +1322,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Heal -> Damage"
                   }
                 }
               ]
@@ -1340,7 +1332,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Whirl 1: Heal and Damage but 2 cost\nWhiirl 2: 1 cost and refunds with wave\nWhirl 3: Increases healing\nWhirl 4: Recovery Dps Mika someday\nWhirl 5: Heal -> Damage\nThey should just Rework this card to always have Recovery"
+            "en": "They should just Rework this card to always have Recovery"
           }
         }
       ]
@@ -1385,10 +1377,27 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "note": {
+                "en": "Cycle 0 but Vuln potential"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1455,9 +1464,27 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "c_1039_srt2",
               "name": "Water Barrier",
               "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
               "note": {
                 "en": ""
               },
@@ -1468,7 +1495,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Portrait: 1 AP Draw 3\nHungry: Hunger stuff\nGuidance: tiny bit of healing"
+            "en": "Hungry: Hunger stuff\nGuidance: tiny bit of healing"
           }
         },
         {
@@ -1718,16 +1745,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "91e2731429a33730.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "10d7fffcb45fca1e.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "f6619b1e5da76b51.webp"
         }
       ]
     }

@@ -412,6 +412,42 @@
               }
             },
             {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
+            },
+            {
+              "cardId": "c_1012_srt4",
+              "name": "Ignition Slash",
+              "cost": 2,
+              "epiphany": {
+                "level": 0,
+                "name": "Ignition Slash",
+                "text": {
+                  "en": "[Lead] 400% Damage. 2 Tenacity Damage. Efficiency: Gain 1 AP."
+                }
+              },
+              "extra": {
+                "id": "com_0013",
+                "text": {
+                  "en": "For 1 turn, gain 3 Morale."
+                }
+              }
+            },
+            {
               "cardId": "c_1012_uni1",
               "name": "Shock Gun",
               "cost": 1,
@@ -699,7 +735,8 @@
               "level": 2,
               "text": {
                 "en": "Teamwide +25% additive by playing normally"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -723,7 +760,8 @@
               "level": 6,
               "text": {
                 "en": "Ravage is +2 AP 1 time each turn instead of 1"
-              }
+              },
+              "bold": true
             }
           ]
         }

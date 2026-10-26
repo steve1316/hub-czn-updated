@@ -44,6 +44,14 @@
               }
             },
             {
+              "cardId": "c_1069_cre3",
+              "name": "Rhythm: Staccato",
+              "cost": 1,
+              "text": {
+                "en": "[Rhythm Cards] 80% Damage. +50% base Damage Amount for each Rhythm. If the last card activated was a Rhythm card, increase Cost by 1."
+              }
+            },
+            {
               "cardId": "c_1069_cre4",
               "name": "Rhythm: Fortissimo",
               "cost": 2,
@@ -107,6 +115,14 @@
               "text": {
                 "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
               }
+            },
+            {
+              "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
             }
           ]
         },
@@ -119,6 +135,14 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1069_cre10",
+              "name": "Rhythm: Arpeggio",
+              "cost": 4,
+              "text": {
+                "en": "[Haste] [Rhythm Cards] 80% Damage for each Rhythm. Decrease Cost of this card by 1 for each Rhythm card in Graveyard."
+              }
+            },
             {
               "cardId": "c_1069_cre1",
               "name": "Rhythm",
@@ -171,6 +195,82 @@
                 "name": "Music, Start! V",
                 "text": {
                   "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -264,6 +364,25 @@
                 "name": "Music, Start! V",
                 "text": {
                   "en": "[Unique] [Opener] Exhaust all Basic Attack Cards. Create 1 of each Rhythm: Arpeggio in Draw Pile."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni1",
+              "name": "Spotlight",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Spotlight IV",
+                "text": {
+                  "en": "Select up to 3 Rhythm cards from among Draw Pile and Graveyard and move those cards to the top of Draw Pile. Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -426,6 +545,82 @@
                 "name": "Spotlight III",
                 "text": {
                   "en": "350% Damage. Select and move up to 2 Rhythm cards to hand, then proc those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Call & Response IV",
+                "text": {
+                  "en": "[Haste] 120% Damage. When a Rhythm card is activated, add 1 Hit to this card (max 5 times)."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Call & Response IV",
+                "text": {
+                  "en": "[Haste] 120% Damage. When a Rhythm card is activated, add 1 Hit to this card (max 5 times)."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Call & Response IV",
+                "text": {
+                  "en": "[Haste] 120% Damage. When a Rhythm card is activated, add 1 Hit to this card (max 5 times)."
+                }
+              },
+              "extra": {
+                "id": "div_0008",
+                "god": "Caligo",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni2",
+              "name": "Call & Response",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Call & Response IV",
+                "text": {
+                  "en": "[Haste] 120% Damage. When a Rhythm card is activated, add 1 Hit to this card (max 5 times)."
                 }
               },
               "extra": {
@@ -863,6 +1058,44 @@
                 "god": "Caligo",
                 "text": {
                   "en": "2 Vulnerable to the target."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Encore III",
+                "text": {
+                  "en": "For the next 3 Rhythm card(s) activated, decrease Cost by 1 and add 1 Hit."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1069_uni3",
+              "name": "Encore",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Encore III",
+                "text": {
+                  "en": "For the next 3 Rhythm card(s) activated, decrease Cost by 1 and add 1 Hit."
+                }
+              },
+              "extra": {
+                "id": "div_0011",
+                "god": "Caligo",
+                "text": {
+                  "en": "Draw 1."
                 }
               }
             }
@@ -1304,7 +1537,8 @@
               "level": 6,
               "text": {
                 "en": "Now Ego is usuable! Yay! 40% Final Multi, boring but huge damage buff"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1448,6 +1682,15 @@
               "rating": "3/5"
             },
             {
+              "cardId": "c_1069_cre3",
+              "name": "Rhythm: Staccato",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "2/5"
+            },
+            {
               "cardId": "c_1069_cre4",
               "name": "Rhythm: Fortissimo",
               "cost": 2,
@@ -1498,7 +1741,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Cycle +2 as well as counts as a Rhythm to buff, but lowkey can break Arpeggio chains"
                   }
                 },
                 {
@@ -1507,7 +1750,7 @@
                   "cost": 2,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Basically just free damage, but not very interesting otherwise"
                   }
                 },
                 {
@@ -1516,7 +1759,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Cycle +2 at best, Cycle +1 at worse, but no damage buffing unlike CnR 1"
                   }
                 },
                 {
@@ -1525,7 +1768,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "6 hits equivalent, but the downside is it isn't actually card activations for Hugo/Lena/Cass"
                   }
                 },
                 {
@@ -1534,7 +1777,7 @@
                   "cost": 7,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Counts as a Rhythm to buff, and is alow just a 0 cost big damage, but -1 Cycle or you Retain it"
                   }
                 }
               ]
@@ -1544,7 +1787,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "CnR 1:Cycle +2 as well as counts as a Rhythm to buff, but lowkey can break Arpeggio chains\nCnR 2: Basically just free damage, but not very interesting otherwise\nCnR 3: Cycle +2 at best, Cycle +1 at worse, but no damage buffing unlike CnR 1\nCnR 4: 6 hits equivalent, but the downside is it isn't actually card activations for Hugo/Lena/Cass\nCnR 5: Counts as a Rhythm to buff, and is alow just a 0 cost big damage, but -1 Cycle or you Retain it\nCnR 0: Also not that bad to just get a Moral Epiphany"
+            "en": "CnR 0: Also not that bad to just get a Moral Epiphany"
           }
         },
         {
@@ -1952,10 +2195,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "18ab4d3f649f8f7a.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "This is actually just really good, the important Arpeggios have Haste as well as all other Rhythms"
           }
+        },
+        {
+          "type": "image",
+          "image": "e02d7be048168c45.webp"
         },
         {
           "type": "prose",
@@ -1964,10 +2215,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "1385c74dd9932121.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Ig its a damage buff"
           }
+        },
+        {
+          "type": "image",
+          "image": "518d9b1041492681.webp"
         },
         {
           "type": "prose",
@@ -1982,10 +2241,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "551bb6e2486d5984.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Only real feasable and also good equipment engraving"
           }
+        },
+        {
+          "type": "image",
+          "image": "3a0f98fb6ee19324.webp"
         },
         {
           "type": "prose",

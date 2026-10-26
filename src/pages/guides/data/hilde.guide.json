@@ -124,6 +124,63 @@
             {
               "cardId": "c_30113_srt4",
               "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
               "cost": 1,
               "epiphany": {
                 "level": 1,
@@ -261,6 +318,44 @@
               }
             },
             {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Draw & Release II",
+                "text": {
+                  "en": "[Lead] Draw 2. For the next 3 Extra Attack(s) of this unit, 1 Fracture to all enemies."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
               "cost": 1,
@@ -308,6 +403,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
+            },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
@@ -444,6 +551,18 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
+            },
+            {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
               "cost": 1,
@@ -530,6 +649,22 @@
               "text": {
                 "en": "[Unique] Draw 3. 120% Damage to all enemies. +60% Damage Amount for each Attack Card Drawn through an ability this turn (max 8 cards)."
               }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
+              }
             }
           ]
         },
@@ -559,6 +694,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
+            },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
@@ -696,6 +843,75 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quiver Reload I",
+                "text": {
+                  "en": "[Lead] Create 4 Homing Arrow in Draw Pile, then Draw 1 of those cards."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
               "cost": 1,
@@ -825,6 +1041,25 @@
               }
             },
             {
+              "cardId": "c_30113_uni2",
+              "name": "Draw & Release",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Draw & Release IV",
+                "text": {
+                  "en": "Draw 2 Lead card(s). Decrease Cost of those cards by 1 for 1 turn until activated."
+                }
+              },
+              "extra": {
+                "id": "div_0070",
+                "god": "Diallos",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30113_uni3",
               "name": "Big Game Ranger",
               "cost": 1,
@@ -880,6 +1115,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
+            },
             {
               "cardId": "c_30113_uni1",
               "name": "Plasma Rain",
@@ -1200,25 +1447,29 @@
               "level": 1,
               "text": {
                 "en": "+1 Draw to Vortext Arrow is great"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "+10% Crit Chance and Mobbing Bonus Extra Attacks are good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
               "text": {
                 "en": "10% (Weakness Final Damage) is pretty good, but only for one turn"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
               "text": {
                 "en": "40% Multi for Hilde Extra Attacks (Everything basically) is great"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -1230,7 +1481,8 @@
               "level": 6,
               "text": {
                 "en": "+15% Crit Chance to ALL INSTINCT ALLIES After 8 Find the Gap (E4 Buff)\nMax Stack of Zero is now 100 (get 15 for free) can get 85 not (15 more then old)\n+35% x 100 = 3500% AS WELL as +45% Crit Dmg to this Zero Hit"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1359,6 +1611,18 @@
                   "en": "[Unique] [Lead] Create 2 Homing Arrow in Draw Pile. When an enemy is defeated, create 2 Homing Arrow in Draw Pile (5 time(s) per turn)."
                 }
               }
+            },
+            {
+              "cardId": "c_30113_srt4",
+              "name": "Quiver Reload",
+              "cost": 1,
+              "epiphany": {
+                "level": 5,
+                "name": "Quiver Reload V",
+                "text": {
+                  "en": "[Unique] [Opener] At the start of the turn, create 3 Homing Arrow in Draw Pile. Homing Arrow cannot be a target of Turn Draw."
+                }
+              }
             }
           ]
         },
@@ -1414,7 +1678,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "SPECIFIC Draw 2 and tiny damage buff"
                   }
                 },
                 {
@@ -1423,7 +1687,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Draw 2 and Debuff Application if you have synergy/requirement"
                   }
                 },
                 {
@@ -1432,7 +1696,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Reshuffling and Draw is a good bonus, also AP Divine is possible but Cycle -1"
                   }
                 },
                 {
@@ -1441,7 +1705,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "If they're in Hand it doesn't Discount which is stink, but with Discard is good"
                   }
                 },
                 {
@@ -1450,18 +1714,12 @@
                   "cost": 2,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Gimmicky with G Arrows and being 2 Cost is REALLY REALLY BAD"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "DnR 1: SPECIFIC Draw 2 and tiny damage buff\nDnR 2: Draw 2 and Debuff Application if you have synergy/requirement\nDnR 3: Reshuffling and Draw is a good bonus, also AP Divine is possible but Cycle -1\nDnR 4: If they're in Hand it doesn't Discount which is stink, but with Discard is good\nDnR 5: Gimmicky with G Arrows and being 2 Cost is REALLY REALLY BAD"
-          }
         },
         {
           "type": "card-list",
@@ -1488,7 +1746,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": "Plasma 0 D is just better, 1.5x Ionization gain isnt worth losing an Attack"
+                    "en": "Plasma 0 D is just better, 1.5x Ionization gain isnt worth losing an Attack\nsince its an additional hit"
                   }
                 },
                 {
@@ -1523,12 +1781,6 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Plasma 0: With Draw honestly better then Plasma 2, since its an additional hit"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
@@ -1544,7 +1796,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "No real reason to go this over BGR 2, for 1.5x Zero In gain"
                   }
                 },
                 {
@@ -1553,7 +1805,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Best QOL there is, Intiation Draw 2 for 0 Cost"
                   }
                 },
                 {
@@ -1562,7 +1814,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Only Requires 15 Arrows to reach 60 Zero In"
                   }
                 },
                 {
@@ -1571,7 +1823,7 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Ally debuffs do not work, Hilde debuffs exclusively aka Fracture Arrow"
                   }
                 },
                 {
@@ -1580,18 +1832,12 @@
                   "cost": 1,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Zero In is so easy to get using other methods, this really doesnt have a purpose"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "BGR 1: No real reason to go this over BGR 2, for 1.5x Zero In gain\nBGR 2: Best QOL there is, Intiation Draw 2 for 0 Cost\nBGR 3: Only Requires 15 Arrows to reach 60 Zero In\nBGR 4: Ally debuffs do not work, Hilde debuffs exclusively aka Fracture Arrow\nBGR 5: Zero In is so easy to get using other methods, this really doesnt have a purpose"
-          }
         }
       ]
     },
@@ -1929,10 +2175,36 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10041",
+              "name": "Sensory Overload",
+              "cost": 1,
+              "note": {
+                "en": "3 Extra Attacks"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -2005,9 +2277,50 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00004",
+              "name": "Forbidden: Guidance of Futility",
+              "cost": 1,
+              "note": {
+                "en": "Healer Hilde anyone?"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3\nGuidance: Healer Hilde anyone?"
+            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit"
           }
         },
         {

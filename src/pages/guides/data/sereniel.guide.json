@@ -49,15 +49,11 @@
               }
             },
             {
-              "cardId": "c_30075_srt4",
-              "name": "Homing Laser",
+              "cardId": "c_30075_srt4_mut",
+              "name": "Homing Laser L",
               "cost": 0,
-              "epiphany": {
-                "level": 0,
-                "name": "Homing Laser",
-                "text": {
-                  "en": "120% Damage. 2 Afterglow. On Ravage, move from Graveyard to hand."
-                }
+              "text": {
+                "en": "[Exhaust 2] 60% Damage. 1 Afterglow. On Ravage, move from Graveyard to hand."
               }
             }
           ]
@@ -999,6 +995,44 @@
                   "en": "Draw 1."
                 }
               }
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Cobalt Light IV",
+                "text": {
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30075_uni3",
+              "name": "Cobalt Light",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Cobalt Light IV",
+                "text": {
+                  "en": "140% Damage to random enemies. Add 1 Hit for each Homing Laser in hand."
+                }
+              },
+              "extra": {
+                "id": "div_0098",
+                "god": "Nihilum",
+                "text": {
+                  "en": "Reduce Cost of this card by 1."
+                }
+              }
             }
           ]
         },
@@ -1231,13 +1265,15 @@
               "level": 1,
               "text": {
                 "en": "Pale Shooting Star now activates 2 more Lasers, honestly very nice buff"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Creates Extra Lasers turn one, very helpful in breaking an enemy"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -1249,7 +1285,8 @@
               "level": 4,
               "text": {
                 "en": "Very big damage Increase for the turn, very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -1261,7 +1298,8 @@
               "level": 6,
               "text": {
                 "en": "Very Strong Scaling with Additive Buffs"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1286,6 +1324,15 @@
               "rating": "5/5"
             },
             {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "n_0070",
               "name": "Leap Attack",
               "cost": 1,
@@ -1304,12 +1351,6 @@
               "rating": "3/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
-          }
         },
         {
           "type": "card-list",
@@ -1356,7 +1397,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "You lose Afterglow, so you need help, but with buffs double dipping is SO STRONG"
                   }
                 },
                 {
@@ -1365,7 +1406,7 @@
                   "cost": 0,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Moves itself to hand on Ravage and 3 Afterglow is good"
                   }
                 },
                 {
@@ -1374,7 +1415,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Creates 2 homing lazer, but costs AP, unfortunate so Niche Build"
                   }
                 },
                 {
@@ -1383,7 +1424,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Moves to hand at start of turn, very good"
                   }
                 },
                 {
@@ -1392,7 +1433,7 @@
                   "cost": 0,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Move all Lazer L to hand from Grave, Niche Build"
                   }
                 }
               ]
@@ -1402,7 +1443,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Lazer 1: You lose Afterglow, so you need help, but with buffs double dipping is SO STRONG\nLazer 2: Moves itself to hand on Ravage and 3 Afterglow is good\nLazer 3: Creates 2 homing lazer, but costs AP, unfortunate so Niche Build\nLazer 4: Moves to hand at start of turn, very good\nLazer 5: Move all Lazer L to hand from Grave, Niche Build\n+1 Mark Laser is the best of all worlds, double dipping hits while also having afterglow+mark to break"
+            "en": "+1 Mark Laser is the best of all worlds, double dipping hits while also having afterglow+mark to break"
           }
         },
         {
@@ -1529,46 +1570,58 @@
             {
               "cardId": "c_30075_uni3",
               "name": "Cobalt Light",
-              "cost": 3,
               "note": {
                 "en": ""
               },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30075_uni3",
-              "name": "Cobalt Light",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_30075_uni3",
-              "name": "Cobalt Light",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30075_uni3",
-              "name": "Cobalt Light",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Cobalt Light I",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "5.5-7 Bars of Tenacity, -1 cost permanently till 0 cost"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Cobalt Light II",
+                  "cost": 3,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Retain to add hits, but always 3 cost and low ratio, pretty terrible"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Cobalt Light III",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Creates Homing Lazers per unique target hit, okay"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Cobalt Light IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Potential man of Cobalt Lights"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Cobalt Light V",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "3 AP for 3 Break, but it is indeed quite a bit of damage"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Cobalt 1: 5.5-7 Bars of Tenacity, -1 cost permanently till 0 cost\nCobalt 2: Retain to add hits, but always 3 cost and low ratio, pretty terrible\nCobalt 3: Creates Homing Lazers per unique target hit, okay\nCobalt 4: Potential man of Cobalt Lights\nCobalt 5: 3 AP for 3 Break, but it is indeed quite a bit of damage"
-          }
         }
       ]
     },
@@ -1794,10 +1847,27 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1838,9 +1908,50 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00004",
+              "name": "Forbidden: Guidance of Futility",
+              "cost": 1,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+            "en": "Hungry: Hilde can reshuffle and Draw, but not put on top like Nia so less consistent chains\nEcstasty: 0 Cost 4 hit"
           }
         },
         {
@@ -2138,10 +2249,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
         },
         {
           "type": "prose",
@@ -2150,16 +2269,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "9a74886698d5bd67.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C2 Twin Star's Shadow"
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "3b7da76b406388ed.webp"
         }
       ]
     }

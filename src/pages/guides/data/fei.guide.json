@@ -44,11 +44,11 @@
               }
             },
             {
-              "cardId": "c_30048_cre2",
-              "name": "Inferno Rhapsody",
+              "cardId": "c_30048_cre3",
+              "name": "Inferno Rhapsody: Heaven",
               "cost": 0,
               "text": {
-                "en": "70% Damage. 1 Flame Arts. When Flame Arts is activated through this card, Draw 1."
+                "en": "110% Damage. 1 Flame Arts. When Flame Arts is activated through this card, 3 Descent."
               }
             },
             {
@@ -145,6 +145,25 @@
               }
             },
             {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Night Rain IV",
+                "text": {
+                  "en": "2 Flame Arts. At the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
               "cardId": "c_30048_uni3",
               "name": "Soulfire Dance",
               "cost": -1,
@@ -184,6 +203,40 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30048_uni1",
+              "name": "Soliloquy",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Night Rain IV",
+                "text": {
+                  "en": "2 Flame Arts. At the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
             {
               "cardId": "c_30048_uni3",
               "name": "Soulfire Dance",
@@ -265,6 +318,25 @@
                 "name": "Soliloquy I",
                 "text": {
                   "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Night Rain IV",
+                "text": {
+                  "en": "2 Flame Arts. At the start of the turn, move to hand."
                 }
               },
               "extra": {
@@ -367,6 +439,25 @@
                 "name": "Night Rain II",
                 "text": {
                   "en": "2 Flame Arts. Streak: The next 2 times Flame Arts is activated, 2 Flame Arts."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Night Rain IV",
+                "text": {
+                  "en": "2 Flame Arts. At the start of the turn, move to hand."
                 }
               },
               "extra": {
@@ -501,6 +592,25 @@
                 "name": "Night Rain II",
                 "text": {
                   "en": "2 Flame Arts. Streak: The next 2 times Flame Arts is activated, 2 Flame Arts."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_30048_uni2",
+              "name": "Night Rain",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Night Rain IV",
+                "text": {
+                  "en": "2 Flame Arts. At the start of the turn, move to hand."
                 }
               },
               "extra": {
@@ -920,6 +1030,15 @@
               "rating": "5/5"
             },
             {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "n_0070",
               "name": "Leap Attack",
               "cost": 1,
@@ -942,7 +1061,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Negotiate: If you need the moral to reach cap, this is always good\nQuick Shelling: 2 free Hits, 0 cost Cantrip"
+            "en": "Negotiate: If you need the moral to reach cap, this is always good"
           }
         },
         {
@@ -1093,7 +1212,7 @@
                   "cost": 0,
                   "rating": "6/5",
                   "note": {
-                    "en": ""
+                    "en": "Cycle +2 is insane, and the condition isn't very hard"
                   }
                 },
                 {
@@ -1102,7 +1221,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Tutors specifically for Fei, but is only +1"
                   }
                 },
                 {
@@ -1111,7 +1230,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Dead once Infernos are in Discard or Used, but is 6 descent ig"
                   }
                 },
                 {
@@ -1120,7 +1239,7 @@
                   "cost": 0,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Gambling version of 1, can be +2, and cheat AP, but breaks if don't draw Fei"
                   }
                 },
                 {
@@ -1129,18 +1248,12 @@
                   "cost": 0,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Does nothing if you already used your X cost card or its in hand"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Soliloguy 1: Cycle +2 is insane, and the condition isn't very hard\nSoliloguy 2: Tutors specifically for Fei, but is only +1\nSoliloguy 3: Dead once Infernos are in Discard or Used, but is 6 descent ig\nSoliloguy 4: Gambling version of 1, can be +2, and cheat AP, but breaks if don't draw Fei\nSoliloguy 5: Does nothing if you already used your X cost card or its in hand"
-          }
         },
         {
           "type": "card-list",
@@ -1502,6 +1615,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "c_30048_col",
               "name": "Guilt",
               "cost": 0,
@@ -1515,7 +1637,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good"
+            "en": "Sample: 1 AP Draw 2 is good"
           }
         },
         {
@@ -1569,6 +1691,20 @@
           "body": {
             "en": "Season 1 | Forbidden Catalyst"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",

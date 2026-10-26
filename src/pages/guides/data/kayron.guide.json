@@ -58,6 +58,14 @@
               "text": {
                 "en": "200% Damage to all enemies. Exhaust all Futility in hand. +80% base Damage Amount for each Exhausted."
               }
+            },
+            {
+              "cardId": "p_20021",
+              "name": "Capable Secretary",
+              "cost": 3,
+              "text": {
+                "en": "Exhaust all Status Ailment Cards (including those that were originally Status Ailment) and Curse Cards from Discard Pile. Increase Damage Amount of the assigned Combatant's Attack Cards by 10% for each Exhausted(1) for 1 turn."
+              }
             }
           ]
         },
@@ -76,6 +84,30 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oath of Vanity I",
+                "text": {
+                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 150% Damage and Heal effects."
+                }
+              }
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Oath of Vanity II",
+                "text": {
+                  "en": "[Unique] [Initiation] When Futility is created, change those cards into 1-Cost Attack Cards with 100% Damage and Heal effects."
+                }
+              }
+            },
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
@@ -142,11 +174,9 @@
               }
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             }
           ]
         },
@@ -261,10 +291,15 @@
               }
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Brand of Annihilation IV",
+                "text": {
+                  "en": "300% Damage to all enemies. +40% base Damage Amount for each card Exhausted this turn."
+                }
               }
             },
             {
@@ -282,6 +317,18 @@
                 "id": "com_0132",
                 "text": {
                   "en": "1 Immunity."
+                }
+              }
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oath of Vanity I",
+                "text": {
+                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 150% Damage and Heal effects."
                 }
               }
             }
@@ -315,31 +362,30 @@
               }
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Brand of Annihilation IV",
+                "text": {
+                  "en": "300% Damage to all enemies. +40% base Damage Amount for each card Exhausted this turn."
+                }
               }
             },
             {
@@ -423,31 +469,35 @@
               }
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
+            },
+            {
+              "cardId": "c_1064_uni3",
+              "name": "Oath of Vanity",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Oath of Vanity I",
+                "text": {
+                  "en": "[Unique] When Futility is created, change those cards into 1-Cost Attack Cards with 150% Damage and Heal effects."
+                }
               }
             },
             {
@@ -504,31 +554,30 @@
               }
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
-              }
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 3
             },
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "text": {
-                "en": ""
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Brand of Annihilation IV",
+                "text": {
+                  "en": "300% Damage to all enemies. +40% base Damage Amount for each card Exhausted this turn."
+                }
               }
             },
             {
@@ -754,7 +803,8 @@
               "level": 1,
               "text": {
                 "en": "2 more Futility from Echoes of True Abyss, very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
@@ -766,7 +816,8 @@
               "level": 3,
               "text": {
                 "en": "Allows Rift of Nothingless to also Exhaust Futility from Graveyard Very strong"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
@@ -784,7 +835,8 @@
               "level": 6,
               "text": {
                 "en": "Random debuff whenever a futility is made, strong (Vuln is OP)"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1046,51 +1098,65 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
+              "cardId": "c_1064_uni1",
+              "name": "Brand of Annihilation",
               "note": {
                 "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1064_tut1",
-              "cost": 3,
-              "note": {
-                "en": ""
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Brand of Annihilation I",
+                  "cost": 3,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Good, base damage increase"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Brand of Annihilation II",
+                  "cost": 3,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "ST version of brand upgrade, also good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Brand of Annihilation III",
+                  "cost": 7,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Very easy to get to 0 cost, so its very good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Brand of Annihilation IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Great on the turns you exhaust alot aka Bria/Kayron skill, or with Exhaust fodder Tres/Luke etc"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Brand of Annihilation V",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Absolutely terrible"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Brand 1: Good, base damage increase\nBrand 2: ST version of brand upgrade, also good\nBrand 3: Very easy to get to 0 cost, so its very good\nBrand 4: Great on the turns you exhaust alot aka Bria/Kayron skill, or with Exhaust fodder Tres/Luke etc\nBrand 5: Absolutely terrible\nVuln Brand is very good"
+            "en": "Vuln Brand is very good"
           }
         },
         {
@@ -1099,37 +1165,58 @@
             {
               "cardId": "c_1064_uni3",
               "name": "Oath of Vanity",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_uni3",
-              "name": "Oath of Vanity",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1064_uni3",
-              "name": "Oath of Vanity",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Oath of Vanity I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Just upgraded, if you want Heals as well as damage"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Oath of Vanity II",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Oath of Vanity III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "The best Futility use Oath, increasing the damage by over double"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Oath of Vanity IV",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "The true best, fill your hand with Futility to instant scale, and draw to continue the chain"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Oath of Vanity V",
+                  "cost": 0,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Absolutely terrible"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Oath 1: Just upgraded, if you want Heals as well as damage\nOath 2: Makes Chaos much easier because of Exhaust, but weak Futilities and better without Bria/E3\nOath 3: The best Futility use Oath, increasing the damage by over double\nOath 4: The true best, fill your hand with Futility to instant scale, and draw to continue the chain\nOath 5: Absolutely terrible"
-          }
         }
       ]
     },
@@ -1441,10 +1528,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "07b5773d884566d9.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
+        },
+        {
+          "type": "image",
+          "image": "c54485a252a576af.webp"
         },
         {
           "type": "prose",
@@ -1453,10 +1548,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "9da8eeb6cbd0783d.webp"
         }
       ]
     }

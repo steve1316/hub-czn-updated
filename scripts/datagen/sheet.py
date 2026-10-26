@@ -45,6 +45,8 @@ class Cell:
     text: str = ""
     # URLs of the images placed in the cell.
     images: list[str] = field(default_factory=list)
+    # The (start, end) character ranges of `text` that the sheet shows in bold. Empty when the cell has no bold text.
+    bold: list[tuple[int, int]] = field(default_factory=list)
 
     @property
     def ref(self) -> str:
@@ -227,6 +229,8 @@ class _GridParser(HTMLParser):
         self._occupied: set[tuple[int, int]] = set()
         self._cell: Cell | None = None
         self._in_table = False
+        # One flag per open <span>: whether it sets bold. The sheet never nests them, but a close must not end an outer one.
+        self._spans: list[bool] = []
 
     def handle_starttag(self, tag, attrs):
         attributes = dict(attrs)
@@ -251,17 +255,34 @@ class _GridParser(HTMLParser):
             # Row headers take up the first column of the grid.
             self._occupied.add((self._row, self._col))
             self._col += 1
+        elif tag == "span":
+            self._spans.append("font-weight:bold" in (attributes.get("style") or "").replace(" ", ""))
         elif tag == "br" and self._cell is not None:
             self._cell.text += "\n"
         elif tag == "img" and self._cell is not None and attributes.get("src"):
             self._cell.images.append(attributes["src"])
 
     def handle_endtag(self, tag):
-        if tag == "td" and self._cell is not None:
-            self._cell.text = self._cell.text.strip()
+        if tag == "span" and self._spans:
+            self._spans.pop()
+        elif tag == "td" and self._cell is not None:
+            text = self._cell.text
+            lead = len(text) - len(text.lstrip())
+            self._cell.text = text.strip()
+            # Bold ranges follow the text through the strip.
+            size = len(self._cell.text)
+            shifted = [(max(start - lead, 0), min(end - lead, size)) for start, end in self._cell.bold]
+            self._cell.bold = [(start, end) for start, end in shifted if start < end]
             self.cells[(self._cell.row, self._cell.col)] = self._cell
             self._cell = None
 
     def handle_data(self, data):
         if self._cell is not None:
+            start = len(self._cell.text)
             self._cell.text += data
+            if any(self._spans):
+                bold = self._cell.bold
+                if bold and bold[-1][1] == start:
+                    bold[-1] = (bold[-1][0], start + len(data))
+                else:
+                    bold.append((start, start + len(data)))

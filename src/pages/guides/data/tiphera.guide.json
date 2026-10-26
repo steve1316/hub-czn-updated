@@ -149,6 +149,82 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "cost": 1,
@@ -178,6 +254,14 @@
               "cost": 2,
               "text": {
                 "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
+              }
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "text": {
+                "en": "[Inquiry] Draw 1. Apply a random effect between Weaken, Vulnerable, or Agony to a random enemy 2 time(s)."
               }
             }
           ]
@@ -209,11 +293,72 @@
           "type": "deck",
           "cards": [
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
               "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
               }
             },
             {
@@ -277,6 +422,63 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "cost": 0,
@@ -294,6 +496,11 @@
                   "en": "Reduce Cost of this card by 1."
                 }
               }
+            },
+            {
+              "cardId": "c_30084_uni2",
+              "name": "Creation and Destruction",
+              "cost": 1
             },
             {
               "cardId": "c_30084_uni3",
@@ -352,11 +559,72 @@
           "type": "deck",
           "cards": [
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
               "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
               }
             },
             {
@@ -420,6 +688,33 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quantum Seed III",
+                "text": {
+                  "en": "Draw 1. Predict which Archetype card will be created. Create 1 Archetype card. If predicted correctly, create the rest in Draw Pile."
+                }
+              }
+            },
+            {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "cost": 1,
@@ -480,27 +775,42 @@
           "type": "deck",
           "cards": [
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Quantum Seed IV",
+                "text": {
+                  "en": "Create 3 Archetype card(s) in Draw Pile. Draw 1 of them. Activate the Retain effect 2 times on 1 random card(s) of this unit."
+                }
               }
             },
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
+              "cardId": "c_30084_uni1",
+              "name": "Form Convergence",
               "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
-              }
-            },
-            {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
+              "epiphany": {
+                "level": 3,
+                "name": "Form Convergence III",
+                "text": {
+                  "en": "[Retain] Change all Archetype cards in hand into a different Archetype card. Retain: Draw 1 Archetype card(s)."
+                }
               }
             },
             {
@@ -563,6 +873,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 3,
+                "name": "Quantum Seed III",
+                "text": {
+                  "en": "Draw 1. Predict which Archetype card will be created. Create 1 Archetype card. If predicted correctly, create the rest in Draw Pile."
+                }
+              }
+            },
             {
               "cardId": "c_30084_uni2",
               "name": "Creation and Destruction",
@@ -681,6 +1003,63 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "cost": 1,
@@ -752,6 +1131,21 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
+            },
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
@@ -825,6 +1219,63 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Quantum Seed II",
+                "text": {
+                  "en": "Heal 100%. Select 1 Archetype card. Create 1 in hand and Draw Pile each."
+                }
+              },
+              "extra": {
+                "id": "div_0125",
+                "god": "Sekred",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
               "cost": 1,
@@ -897,28 +1348,19 @@
           "type": "deck",
           "cards": [
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
-              }
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
             },
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
-              }
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
             },
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] Heal 150%. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%). Draw 1 Archetype card."
-              }
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
+              "cost": 0
             },
             {
               "cardId": "c_30084_uni1",
@@ -1173,19 +1615,22 @@
               "level": 1,
               "text": {
                 "en": "This is actually so big, gives you 1 more chance at rolling into Draw"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Your first 3 Archtypes used each turn are combined into an extra card, very very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
               "text": {
                 "en": "Makes her Ego Skill go from 5 refund 2, to refund 3, basically 2 cost, so good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
@@ -1234,16 +1679,8 @@
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "n_0010",
-              "name": "Attack!",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "rating": "5/5",
+              "count": 2
             },
             {
               "cardId": "n_0115",
@@ -1322,30 +1759,60 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
+              "cardId": "c_30084_srt4",
+              "name": "Quantum Seed",
               "note": {
                 "en": ""
               },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_30084_bhc",
-              "name": "○ △ □",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "6/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Quantum Seed I",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Makes 3 Random Archetypes for 0"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Quantum Seed II",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "SELECT WHAT ARCHETYPE TO MAKE, Only one that can get Draw Divine"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Quantum Seed III",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Main appeal is it's always draw neutral, random upside to make 2 extra Archetypes"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Quantum Seed IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Great with Form 3"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Quantum Seed V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Creates 1 Archetype in hand and 1 in deck, the rate is terrible"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Seed 1:Makes 3 Random Archetypes for 0\nSeed 2: SELECT WHAT ARCHETYPE TO MAKE, Only one that can get Draw Divine\nSeed 3: Main appeal is it's always draw neutral, random upside to make 2 extra Archetypes\nSeed 4: Great with Form 3\nSeed 5: Creates 1 Archetype in hand and 1 in deck, the rate is terrible"
-          }
         },
         {
           "type": "card-list",
@@ -1363,7 +1830,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Feels good in Chaos, but outside of it no"
                   }
                 },
                 {
@@ -1372,7 +1839,7 @@
                   "cost": 5,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Main DPS Tiphera"
                   }
                 },
                 {
@@ -1381,7 +1848,7 @@
                   "cost": 2,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "This is terrible"
                   }
                 },
                 {
@@ -1390,7 +1857,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "This kills 1 draw, but it does give you free damage in future turns, always a possile include if you want it"
                   }
                 },
                 {
@@ -1399,7 +1866,7 @@
                   "cost": 5,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Nuke"
                   }
                 }
               ]
@@ -1407,57 +1874,63 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "CnD 1: Feels good in Chaos, but outside of it no\nCnD 2: Main DPS Tiphera\nCnD 3: This is terrible\nCnD 4: This kills 1 draw, but it does give you free damage in future turns, always a possile include if you want it\nCnD 5: Nuke"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_30084_uni1",
               "name": "Form Convergence",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_30084_uni1",
-              "name": "Form Convergence",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni1",
-              "name": "Form Convergence",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30084_uni1",
-              "name": "Form Convergence",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Form Convergence I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Being able to double up to 3 effects is very good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Form Convergence II",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Draw 4 Archetypes, Exhaust one Exhaust card in hand"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Form Convergence III",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Just keep this one in hand ideally, but you could always use it too"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Form Convergence IV",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Form Convergence V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Gambling isn't good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Form 1: Being able to double up to 3 effects is very good\nForm 2: Draw 4 Archetypes, Exhaust one Exhaust card in hand\nForm 3: Just keep this one in hand ideally, but you could always use it too\nForm 4: Select and Exhaust 3 Exhaust cards of allies, draw 1 for each exhausted\nForm 5: Gambling isn't good"
-          }
         },
         {
           "type": "card-list",
@@ -1475,7 +1948,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "When 2 Arche created, create 1 identical card in discard"
                   }
                 },
                 {
@@ -1484,7 +1957,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Placing the Archetype directly into your hand is very big"
                   }
                 },
                 {
@@ -1493,7 +1966,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "When Arch type [] is activated, create 1 different archetype in discard"
                   }
                 },
                 {
@@ -1502,7 +1975,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "2 of the Archetype you want, 4 in total, feels really good in Chaos, but is a skill, skill darn good"
                   }
                 },
                 {
@@ -1511,18 +1984,12 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Duplicating the effect of a Form 1 is very good, but this is ALOT of rng, also +5 Exhaust cards"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Duel 1: When 2 Arche created, create 1 identical card in discard\nDuel 2: Placing the Archetype directly into your hand is very big\nDuel 3: When Arch type [] is activated, create 1 different archetype in discard\nDuel 4: 2 of the Archetype you want, 4 in total, feels really good in Chaos, but is a skill, skill darn good\nDuel 5: Duplicating the effect of a Form 1 is very good, but this is ALOT of rng, also +5 Exhaust cards"
-          }
         }
       ]
     },
@@ -1760,6 +2227,24 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10051",
+              "name": "Forbidden Hypothesis",
+              "cost": 1,
+              "note": {
+                "en": "Cycle 0 but Vuln potential"
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "card_ds04_00007",
               "name": "Hand Enthralled by Light",
               "cost": 1,
@@ -1773,7 +2258,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Sample: 1 AP Draw 2 is good\nForbidden: Cycle 0 but Vuln potential\nHand Enthral: 2 Perma Moral"
+            "en": "Hand Enthral: 2 Perma Moral"
           }
         },
         {
@@ -1865,6 +2350,15 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": "Rei can hold Eternal Hunger"
+              },
+              "rating": "3/5"
+            },
+            {
               "cardId": "c_30084_col2",
               "name": "Gloom",
               "cost": 0,
@@ -1894,7 +2388,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: Rei can hold Eternal Hunger\nPortrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Portrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
           }
         },
         {
@@ -2144,10 +2638,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "266edc7e8b741234.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "84b845927f226891.webp"
         }
       ]
     }

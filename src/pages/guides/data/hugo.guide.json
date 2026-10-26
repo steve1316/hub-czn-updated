@@ -1010,25 +1010,29 @@
               "level": 1,
               "text": {
                 "en": "Very nice damage increase"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Nice damage increase, thats it Moral or Additive Extra Attack gets alot"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
               "text": {
                 "en": "Increasing Hunt max stacks is amazing"
-              }
+              },
+              "bold": true
             },
             {
               "level": 4,
               "text": {
                 "en": "+40% Additive is so good on Hugo"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -1040,7 +1044,8 @@
               "level": 6,
               "text": {
                 "en": "1 Moral each turn, really nice"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -1055,6 +1060,15 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
+              },
+              "rating": "6/5"
+            },
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
@@ -1083,12 +1097,6 @@
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
-          }
         },
         {
           "type": "card-list",
@@ -1120,7 +1128,7 @@
                   "cost": 0,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "0 Cost, great"
                   }
                 },
                 {
@@ -1129,7 +1137,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "Additional Commence gain can be nice"
                   }
                 },
                 {
@@ -1138,7 +1146,7 @@
                   "cost": 1,
                   "rating": "6/5",
                   "note": {
-                    "en": ""
+                    "en": "Extra Hit that scales with Moral each Commence Trigger"
                   }
                 },
                 {
@@ -1147,7 +1155,7 @@
                   "cost": 0,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "No"
                   }
                 },
                 {
@@ -1156,7 +1164,7 @@
                   "cost": 1,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "Includes Hugo's cards now too, not very nessicary"
                   }
                 }
               ]
@@ -1166,7 +1174,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Instinct 1: 0 Cost, great\nInstinct 2: Additional Commence gain can be nice\nInstinct 3: Extra Hit that scales with Moral each Commence Trigger\nInstinct 4: No\nInstinct 5: Includes Hugo's cards now too, not very nessicary\n-1 Cost Divine, Draw 2 If first Used, 2 Mark each turn, Moral are all Great Divines"
+            "en": "-1 Cost Divine, Draw 2 If first Used, 2 Mark each turn, Moral are all Great Divines"
           }
         },
         {
@@ -1759,10 +1767,27 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1805,6 +1830,24 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
             {
               "cardId": "c_1043_uni4",
               "name": "Fixer's Approach",
@@ -2105,16 +2148,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "fd30683ddce11f22.webp"
         }
       ]
     }

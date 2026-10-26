@@ -21,6 +21,23 @@
           }
         },
         {
+          "type": "deck",
+          "cards": [
+            {
+              "cardId": "c_1050_srt4",
+              "name": "Wind Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Wind Charge II",
+                "text": {
+                  "en": "Add 1 Hit(s) to the next Attack Card activated. Decrease Damage Amount by 25%."
+                }
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Owen and Multi Attacks\nOwen has alot of cards such as Wind Charge or Wind Riding\nWhich adds hits to HIS OWN cards\nOwens Expensive high multiplier cards can use it semi effectively\nOwen also has Vulnerable\nA flat 1.5x Multiplier which is also good on high Multiplier cards\nHe's a pretty okay support to Characters with high Multipliers like Nine or Haru\nWith only a single hit mainly"
@@ -61,6 +78,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1050_srt4",
+              "name": "Wind Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 2,
+                "name": "Wind Charge II",
+                "text": {
+                  "en": "Add 1 Hit(s) to the next Attack Card activated. Decrease Damage Amount by 25%."
+                }
+              }
+            },
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
@@ -114,6 +143,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1050_srt4",
+              "name": "Wind Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Wind Charge IV",
+                "text": {
+                  "en": "[Unique] [Exhaust] Proc the next Skill Card activated 1 more time(s)."
+                }
+              }
+            },
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
@@ -177,6 +218,18 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1050_srt4",
+              "name": "Wind Charge",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Wind Charge III",
+                "text": {
+                  "en": "[Unique] When an Attack Card of this unit is activated, 30% chance to add 1 Hit(s)."
+                }
+              }
+            },
             {
               "cardId": "c_1050_uni2",
               "name": "Break Armor",
@@ -599,9 +652,68 @@
           ]
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "c_1050_srt4",
+              "name": "Wind Charge",
+              "note": {
+                "en": ""
+              },
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Wind Charge I",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "No"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Wind Charge II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "ONLY ONE THAT AFFECTS ALLIES TOO"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Wind Charge III",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "It's an Upgrade"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Wind Charge IV",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Exhaust is just good, especially if used on a strong Draw Exhaust card"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Wind Charge V",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": ""
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Charge 1: No\nCharge 2: ONLY ONE THAT AFFECTS ALLIES TOO\nCharge 3: It's an Upgrade\nCharge 4: Exhaust is just good, especially if used on a strong Draw Exhaust card\nCharge 5 No"
+            "en": "Charge 5 No"
           }
         },
         {
@@ -1068,10 +1180,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "4176fdf3679eafd1.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "c3b1dd5f4618a29e.webp"
         }
       ]
     }

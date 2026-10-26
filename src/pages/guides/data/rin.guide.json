@@ -24,6 +24,18 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_1018_srt4",
+              "name": "Drawing Slash",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Drawing Slash IV",
+                "text": {
+                  "en": "[Haste] 150% Damage. Gain Dark Mist Stance. Dark Mist Stance: Increase Damage Amount by 30% for each card in hand."
+                }
+              }
+            },
+            {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
               "cost": 1,
@@ -87,6 +99,18 @@
                   "en": "100% Shield. Draw 2 card(s) of this unit. Gain Dark Mist Stance."
                 }
               }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
             }
           ]
         },
@@ -134,11 +158,63 @@
               }
             },
             {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] 60% Damage. +20% base Damage Amount for each Attack Card of this unit activated this turn. If there is no other Attack Card of this unit in hand, decrease Cost by 1."
+              "cardId": "c_1018_srt4",
+              "name": "Drawing Slash",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Drawing Slash II",
+                "text": {
+                  "en": "[Haste] 180% Damage. Gain Dark Mist Stance. Dark Mist Stance: Add 1 Hit(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
               }
             },
             {
@@ -199,11 +275,63 @@
               }
             },
             {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
-              "text": {
-                "en": "[Haste] [Exhaust] [Ephemeral] 60% Damage. +20% base Damage Amount for each Attack Card of this unit activated this turn. If there is no other Attack Card of this unit in hand, decrease Cost by 1."
+              "cardId": "c_1018_srt4",
+              "name": "Drawing Slash",
+              "cost": 0,
+              "epiphany": {
+                "level": 2,
+                "name": "Drawing Slash II",
+                "text": {
+                  "en": "[Haste] 180% Damage. Gain Dark Mist Stance. Dark Mist Stance: Add 1 Hit(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
+              }
+            },
+            {
+              "cardId": "c_1018_uni1",
+              "name": "Dark Mist Secret Art: Destruction",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Dark Mist Secret Art: Destruction IV",
+                "text": {
+                  "en": "Move Dark Mist Secret Art: Annihilation and Dark Mist Secret Art: Black Dance from Draw Pile or Graveyard to hand."
+                }
               }
             },
             {
@@ -455,13 +583,15 @@
               "level": 1,
               "text": {
                 "en": "Increases Black Dance Base Multiplier, Very Strong"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Adds an additional source of damage, its okay"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -473,7 +603,8 @@
               "level": 4,
               "text": {
                 "en": "Allows every card to make you enter Stance, not very important if played well"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -485,7 +616,8 @@
               "level": 6,
               "text": {
                 "en": "Start fights in Stance, if start of turn in stance, gain 2 Moral, Really good"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -595,48 +727,60 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
+              "cardId": "c_1018_srt4",
+              "name": "Drawing Slash",
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1018_bhc1",
-              "name": "Sheathe Sword",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "0/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Drawing Slash I",
+                  "cost": 0,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Bad, Low Multiplier, No multi hit"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Drawing Slash II",
+                  "cost": 0,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Good 2 hits"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Drawing Slash III",
+                  "cost": 0,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Insanely high base multiplier, very strong, but can't bring you into Stance"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Drawing Slash IV",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Conditionally beats Draw 2/3, requires upwards of 7+ cards in hand"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Drawing Slash V",
+                  "cost": 2,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "2 Cost is insanely expensive and not worth at all"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Draw 1: Bad, Low Multiplier, No multi hit\nDraw 2: Good 2 hits\nDraw 3: Insanely high base multiplier, very strong, but can't bring you into Stance\nDraw 4: Conditionally beats Draw 2/3, requires upwards of 7+ cards in hand\nDraw 5: 2 Cost is insanely expensive and not worth at all"
-          }
         },
         {
           "type": "card-list",
@@ -663,7 +807,7 @@
                   "cost": 1,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Requires upwards of 225% Additive to beat Annihilation 1"
                   }
                 },
                 {
@@ -698,48 +842,63 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Annhiliation 2: Requires upwards of 225% Additive to beat Annihilation 1"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1018_uni1",
               "name": "Dark Mist Secret Art: Destruction",
-              "cost": 0,
               "note": {
                 "en": ""
               },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_1018_uni1",
-              "name": "Dark Mist Secret Art: Destruction",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1018_uni1",
-              "name": "Dark Mist Secret Art: Destruction",
-              "cost": 0,
-              "note": {
-                "en": ""
-              },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Secret Art: Destruction I",
+                  "cost": 0,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "0 Cost Draw 2 is good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Secret Art: Destruction II",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Draw 1 is not good"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dark Mist Secret Art: Destruction III",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Draw 1 is not good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dark Mist Secret Art: Destruction IV",
+                  "cost": 0,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Move is BROKEN"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dark Mist Secret Art: Destruction V",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Upgrade, but 2 cost so not very ideal"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Destruction 1: 0 Cost Draw 2 is good\nDestruction 2: Draw 1 is not good\nDestruction 3: Draw 1 is not good\nDestruction 4: Move is BROKEN\nDestruction 5: Upgrade, but 2 cost so not very ideal"
-          }
         },
         {
           "type": "card-list",
@@ -747,46 +906,58 @@
             {
               "cardId": "c_1018_uni3",
               "name": "Dark Mist Inner Art",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1018_uni3",
-              "name": "Dark Mist Inner Art",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1018_uni3",
-              "name": "Dark Mist Inner Art",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1018_uni3",
-              "name": "Dark Mist Inner Art",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Dark Mist Inner Art I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Huge Additive damage increase and retains stance"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Dark Mist Inner Art II",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "0 Cost Additive Damage Increase, also okay"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Dark Mist Inner Art III",
+                  "cost": 1,
+                  "rating": "0/5",
+                  "note": {
+                    "en": "Insanely bad 2 AP Total is a terrible rate"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Dark Mist Inner Art IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Gaining Stance when you know hot to play/built Rin is not hard, but its an Upgrade"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Dark Mist Inner Art V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "50% Multiplicative is very consistent and strong"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Inner 1: Huge Additive damage increase and retains stance\nInner 2: 0 Cost Additive Damage Increase, also okay\nInner 3: Insanely bad 2 AP Total is a terrible rate\nInner 4: Gaining Stance when you know hot to play/built Rin is not hard, but its an Upgrade\nInner 5: 50% Multiplicative is very consistent and strong"
-          }
         }
       ]
     },
@@ -1021,10 +1192,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
         },
         {
           "type": "prose",
@@ -1033,10 +1212,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "b9d7df7360616d40.webp"
         }
       ]
     }

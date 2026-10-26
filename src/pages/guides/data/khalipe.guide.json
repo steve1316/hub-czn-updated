@@ -602,13 +602,15 @@
               "level": 1,
               "text": {
                 "en": "Adding Retain is really good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Moving Vulture to the top is really good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -819,7 +821,7 @@
                   "cost": 2,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Damage reduction is butt"
                   }
                 },
                 {
@@ -828,7 +830,7 @@
                   "cost": 2,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "Conditional Vuln, bad Magna cosplay"
                   }
                 },
                 {
@@ -837,7 +839,7 @@
                   "cost": 2,
                   "rating": "2/5",
                   "note": {
-                    "en": ""
+                    "en": "2 AOE Tenacity is only ok"
                   }
                 },
                 {
@@ -846,7 +848,7 @@
                   "cost": 2,
                   "rating": "4/5",
                   "note": {
-                    "en": ""
+                    "en": "Very Big Shield"
                   }
                 },
                 {
@@ -855,7 +857,7 @@
                   "cost": 2,
                   "rating": "0/5",
                   "note": {
-                    "en": ""
+                    "en": "Delaying actions isn't important"
                   }
                 }
               ]
@@ -863,57 +865,63 @@
           ]
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Power 1: Damage reduction is butt\nPower 2: Conditional Vuln, bad Magna cosplay\nPower 3: 2 AOE Tenacity is only ok\nPower 4: Very Big Shield\nPower 5: Delaying actions isn't important"
-          }
-        },
-        {
           "type": "card-list",
           "items": [
             {
               "cardId": "c_1008_uni1",
               "name": "Greatsword Aquila",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
-            },
-            {
-              "cardId": "c_1008_uni1",
-              "name": "Greatsword Aquila",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1008_uni1",
-              "name": "Greatsword Aquila",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
-            },
-            {
-              "cardId": "c_1008_uni1",
-              "name": "Greatsword Aquila",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "3/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Greatsword Aquila I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Big Damage"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Greatsword Aquila II",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Scaling damage ain't bad"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Greatsword Aquila III",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Silver Veil op"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Greatsword Aquila IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Retain for whenever you need it, otherwise just deck thinning"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Greatsword Aquila V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Retrieve can spam this out, but it's just worse Retain otherwise"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Sword 1: Big Damage\nSword 2: Scaling damage ain't bad\nSword 3: Silver Veil op\nSword 4: Retain for whenever you need it, otherwise just deck thinning\nSword 5: Retrieve can spam this out, but it's just worse Retain otherwise"
-          }
         },
         {
           "type": "card-list",
@@ -1225,16 +1233,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "3bff9fa45b2346fc.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Foretold Ruins"
           }
         },
         {
+          "type": "image",
+          "image": "71ca26cc15cf4a33.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "fe005e7d28d83809.webp"
         }
       ]
     }

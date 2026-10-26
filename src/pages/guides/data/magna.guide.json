@@ -229,6 +229,18 @@
               }
             },
             {
+              "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
+              "cost": 2,
+              "epiphany": {
+                "level": 5,
+                "name": "Glacial Iron Fist V",
+                "text": {
+                  "en": "[Exhaust 2] 400% Defense-Based Damage. 50% DMG-Based Shield. 100% Shield Retention for 1 turn."
+                }
+              }
+            },
+            {
               "cardId": "c_1010_uni2",
               "name": "Ice Wall",
               "cost": 2,
@@ -383,6 +395,18 @@
                 "name": "Ice Fragment II",
                 "text": {
                   "en": "[Lead] 3 Crystallization. At the start of the turn, 2 Counterattack."
+                }
+              }
+            },
+            {
+              "cardId": "c_1010_uni1",
+              "name": "Glacial Iron Fist",
+              "cost": 2,
+              "epiphany": {
+                "level": 2,
+                "name": "Glacial Iron Fist II",
+                "text": {
+                  "en": "300% Defense-Based Damage. 3 Vulnerable."
                 }
               }
             },
@@ -751,7 +775,8 @@
               "level": 1,
               "text": {
                 "en": "Gives Initiation to Storm SO GOOD"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
@@ -894,7 +919,7 @@
                   "cost": 1,
                   "rating": "1/5",
                   "note": {
-                    "en": ""
+                    "en": "4 Crystallization, isn't very good"
                   }
                 },
                 {
@@ -903,7 +928,7 @@
                   "cost": 1,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "2 Counterattack is good"
                   }
                 },
                 {
@@ -912,7 +937,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "0 Cost + Initiation, very nice"
                   }
                 },
                 {
@@ -921,7 +946,7 @@
                   "cost": 2,
                   "rating": "5/5",
                   "note": {
-                    "en": ""
+                    "en": "UPGRADE. End of turn huge AOE Dmg, but 2 Cost, funny"
                   }
                 },
                 {
@@ -930,18 +955,12 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Lead, 4 Counter and increases Counter dmg, but turns into a skill, meh"
                   }
                 }
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Frag 1: 4 Crystallization, isn't very good\nFrag 2: 2 Counterattack is good\nFrag 3: 0 Cost + Initiation, very nice\nFrag 4:UPGRADE. End of turn huge AOE Dmg, but 2 Cost, funny\nFrag 5: Lead, 4 Counter and increases Counter dmg, but turns into a skill, meh"
-          }
         },
         {
           "type": "deck",
@@ -1050,18 +1069,63 @@
             {
               "cardId": "c_1010_uni1",
               "name": "Glacial Iron Fist",
-              "cost": 2,
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Glacial Iron Fist I",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Big dmg, get shield"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Glacial Iron Fist II",
+                  "cost": 2,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Medium dmg, apply Vuln"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Glacial Iron Fist III",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Big dmg, increase damage by 1.5x if you have shield, pretty good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Glacial Iron Fist IV",
+                  "cost": 2,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "Medium dmg, AOE gain shield"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Glacial Iron Fist V",
+                  "cost": 2,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Retains Shield now, its okay"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Fist 1: Big dmg, get shield\nFist 2: Medium dmg, apply Vuln\nFist 3: Big dmg, increase damage by 1.5x if you have shield, pretty good\nFist 4: Medium dmg, AOE gain shield\nFist 5: Retains Shield now, its okay\nHonestly, just not a good card, expensive AF, need Cost Reduction Excess AP or Divines"
+            "en": "Honestly, just not a good card, expensive AF, need Cost Reduction Excess AP or Divines"
           }
         },
         {
@@ -1381,16 +1445,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "ecc670ccc18b955c.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "b86b8bb6583a011f.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "438b288047914624.webp"
         }
       ]
     }

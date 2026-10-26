@@ -55,6 +55,14 @@
                   "en": "When a Skill Card of a different Combatant is activated, 1 Reload."
                 }
               }
+            },
+            {
+              "cardId": "c_1033_uni4",
+              "name": "Bombardment Prep",
+              "cost": 1,
+              "text": {
+                "en": "[Unique] Increase max stack of Reload by 1. 2 Reload."
+              }
             }
           ]
         },
@@ -79,6 +87,14 @@
               "cost": 0,
               "text": {
                 "en": "120% Damage. Draw 1. Select 1 card(s) in hand, then move those cards to the top of Draw Pile."
+              }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
               }
             }
           ]
@@ -913,7 +929,8 @@
               "level": 2,
               "text": {
                 "en": "Allows Targetting of Ballistas technically, also damage increase"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -925,7 +942,8 @@
               "level": 4,
               "text": {
                 "en": "Another Max Reload is very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -952,6 +970,15 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
+              },
+              "rating": "6/5"
+            },
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
@@ -980,12 +1007,6 @@
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
-          }
         },
         {
           "type": "card-list",
@@ -1819,10 +1840,36 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw\nSensory: 3 Extra Attacks"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10041",
+              "name": "Sensory Overload",
+              "cost": 1,
+              "note": {
+                "en": "3 Extra Attacks"
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1877,10 +1924,18 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Hunger: Veronica can be a carrier ig"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": "Veronica can be a carrier ig"
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "heading",
@@ -2207,16 +2262,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "1bb8b8f4e86b627a.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C3 City of Mist"
           }
         },
         {
+          "type": "image",
+          "image": "5bdbab6ac7475b2b.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "fad95085450bd157.webp"
         }
       ]
     }

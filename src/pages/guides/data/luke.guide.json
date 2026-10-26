@@ -32,8 +32,8 @@
               }
             },
             {
-              "cardId": "c_1004_bhc1",
-              "name": "HVAP Round",
+              "cardId": "c_1004_cre1",
+              "name": "Magnum Shot",
               "cost": 0,
               "note": {
                 "en": ""
@@ -440,6 +440,42 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chain Fire I",
+                "text": {
+                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chain Fire I",
+                "text": {
+                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
+              }
+            },
+            {
+              "cardId": "c_1004_srt4",
+              "name": "Chain Fire",
+              "cost": 1,
+              "epiphany": {
+                "level": 1,
+                "name": "Chain Fire I",
+                "text": {
+                  "en": "[Retrieve] 75% Damage × 2. For each Critical Hit create a Handgun Bullet. +50% Critical Chance."
+                }
+              }
+            },
+            {
               "cardId": "c_1004_uni1",
               "name": "Stealth Reload",
               "cost": 0,
@@ -766,7 +802,8 @@
               "level": 2,
               "text": {
                 "en": "VERY good 3 bullets -> 5 Bullets once per turn, very nice"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -778,7 +815,8 @@
               "level": 4,
               "text": {
                 "en": "It adds ups, pretty good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -865,6 +903,15 @@
               "rating": "5/5"
             },
             {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "6/5"
+            },
+            {
               "cardId": "n_0070",
               "name": "Leap Attack",
               "cost": 1,
@@ -905,46 +952,58 @@
             {
               "cardId": "c_1004_srt4",
               "name": "Chain Fire",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1004_srt4",
-              "name": "Chain Fire",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1004_srt4",
-              "name": "Chain Fire",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "1/5"
-            },
-            {
-              "cardId": "c_1004_srt4",
-              "name": "Chain Fire",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Chain Fire I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Giga combo, best damage, most bullets, especially with -1 cost Divine, but only first time"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Chain Fire II",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "3x hit = 3x bullets, most consistent option"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Chain Fire III",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Single big hit? weird"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Chain Fire IV",
+                  "cost": 0,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Makes it into a Bullet? interesting?"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Chain Fire V",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Gives Luke Utility as a type of draw support, -1 cost divine is very good"
+                  }
+                }
+              ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Rapid 1: Giga combo, best damage, most bullets, especially with -1 cost Divine, but only first time\nRapid 2: 3x hit = 3x bullets, most consistent option\nRapid 3: Single big hit? weird\nRapid 4: Makes it into a Bullet? interesting?\nRapid 5: Gives Luke Utility as a type of draw support, -1 cost divine is very good"
-          }
         },
         {
           "type": "card-list",
@@ -1098,7 +1157,7 @@
                   "cost": 1,
                   "rating": "3/5",
                   "note": {
-                    "en": ""
+                    "en": "Because of additive buffs, the extra hits on Dance 2, out scale both bullet dances"
                   }
                 },
                 {
@@ -1122,12 +1181,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Dance 1/3: Because of additive buffs, the extra hits on Dance 2, out scale both bullet dances"
-          }
         }
       ]
     },
@@ -1367,22 +1420,38 @@
           }
         },
         {
+          "type": "image",
+          "image": "96c6bcb421234927.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Forbidden Ruins"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "C4 Swamp of Judgement"
-          }
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
         },
         {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
+        },
+        {
+          "type": "prose",
+          "body": {
+            "en": "C4 Swamp of Judgement"
+          }
+        },
+        {
+          "type": "image",
+          "image": "a8e38ca7b789e2d3.webp"
         },
         {
           "type": "prose",
@@ -1391,10 +1460,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "fd30683ddce11f22.webp"
         }
       ]
     }

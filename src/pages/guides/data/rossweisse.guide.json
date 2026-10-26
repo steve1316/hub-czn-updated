@@ -588,7 +588,8 @@
               "level": 2,
               "text": {
                 "en": "Absolutely broken, 20% Final damage and 4 attacks for free for existing"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -612,7 +613,8 @@
               "level": 6,
               "text": {
                 "en": "More free Final damage and now Dark and Light doesn't matter for Hand Size is crazy"
-              }
+              },
+              "bold": true
             }
           ]
         }

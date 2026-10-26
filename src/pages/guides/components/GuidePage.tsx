@@ -15,6 +15,7 @@ import { GearListBlock } from './blocks/GearListBlock'
 import { RatingListBlock } from './blocks/RatingListBlock'
 import { TeamGridBlock } from './blocks/TeamGridBlock'
 import { PotentialsBlock } from './blocks/PotentialsBlock'
+import { ImageBlock } from './blocks/ImageBlock'
 
 export function GuidePage({ guide }: { guide: Guide }) {
   const { t, i18n } = useTranslation()
@@ -98,6 +99,7 @@ export function GuidePage({ guide }: { guide: Guide }) {
                     return <TeamGridBlock key={i} groups={block.groups} selfId={guide.charResId} />
                   if (block.type === 'deck')
                     return <DeckBlock key={i} cards={block.cards} ratings={ratings} cardsById={cardsById} />
+                  if (block.type === 'image') return <ImageBlock key={i} image={block.image} />
                   if (block.type === 'set-list') return <SetListBlock key={i} items={block.items} />
                   return null
                 })}

@@ -121,6 +121,14 @@
               "text": {
                 "en": "120% Damage. Draw 1. Select 1 card(s) in hand, then move those cards to the top of Draw Pile."
               }
+            },
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "text": {
+                "en": "[Retain] [Exhaust] Attunement: Draw 1 and gain 1 AP."
+              }
             }
           ]
         },
@@ -153,6 +161,25 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "High-Power Scope IV",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card of another Combatant is activated, 100% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
@@ -200,6 +227,25 @@
           "type": "deck",
           "cards": [
             {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "High-Power Scope IV",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card of another Combatant is activated, 100% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
               "cardId": "c_1005_uni4",
               "name": "Sniper's Domain",
               "cost": 0,
@@ -238,6 +284,25 @@
             {
               "cardId": "c_1005_srt4",
               "name": "High-Power Scope",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "High-Power Scope IV",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card of another Combatant is activated, 100% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "div_0074",
+                "god": "Diallos",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
+            {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
               "cost": 1,
               "epiphany": {
                 "level": 2,
@@ -266,6 +331,24 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "High-Power Scope IV",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card of another Combatant is activated, 100% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
             {
               "cardId": "c_1005_uni3",
               "name": "Tactical Maneuver",
@@ -359,6 +442,24 @@
         {
           "type": "deck",
           "cards": [
+            {
+              "cardId": "c_1005_srt4",
+              "name": "High-Power Scope",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "High-Power Scope IV",
+                "text": {
+                  "en": "For 1 turn, when an Attack Card of another Combatant is activated, 100% Coordinated Attack to the target."
+                }
+              },
+              "extra": {
+                "id": "com_0026",
+                "text": {
+                  "en": "Draw 1."
+                }
+              }
+            },
             {
               "cardId": "c_1005_uni1",
               "name": "Target Spotted",
@@ -466,6 +567,38 @@
               "text": {
                 "en": "[Unique] +80% Mark Damage."
               }
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "text": {
+                "en": "80% Damage. Draw 1."
+              }
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "text": {
+                "en": "80% Damage. Draw 1."
+              }
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "text": {
+                "en": "80% Damage. Draw 1."
+              }
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "text": {
+                "en": "80% Damage. Draw 1."
+              }
             }
           ]
         },
@@ -571,6 +704,14 @@
               "cost": 0,
               "text": {
                 "en": "[Unique] +80% Mark Damage."
+              }
+            },
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "text": {
+                "en": "80% Damage. Draw 1."
               }
             },
             {
@@ -797,13 +938,15 @@
               "level": 1,
               "text": {
                 "en": "Initiation added to Sniper's Domain, good and bad since its gurantee draw"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "Marks get +20% Potential Additive, Very good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -827,7 +970,8 @@
               "level": 6,
               "text": {
                 "en": "When Selena Mark Triggers, 30% Chance at another Extra Attack, Good"
-              }
+              },
+              "bold": true
             }
           ]
         }
@@ -842,6 +986,15 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "card_ne_00013",
+              "name": "Quick Shelling",
+              "cost": 0,
+              "note": {
+                "en": "2 free Hits, 0 cost Cantrip"
+              },
+              "rating": "6/5"
+            },
             {
               "cardId": "n_0070",
               "name": "Leap Attack",
@@ -870,12 +1023,6 @@
               "rating": "5/5"
             }
           ]
-        },
-        {
-          "type": "prose",
-          "body": {
-            "en": "Quick Shelling: 2 free Hits, 0 cost Cantrip"
-          }
         },
         {
           "type": "card-list",
@@ -1496,10 +1643,27 @@
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Driven Hunt: +60% damage and Survival 5+ for 3 Moral is good\nSample: 1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ds04_des_40041",
+              "name": "Driven Hunt",
+              "cost": 1,
+              "note": {
+                "en": "+60% damage and Survival 5+ for 3 Moral is good"
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_10011",
+              "name": "Sample Collection",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "prose",
@@ -1540,9 +1704,41 @@
           }
         },
         {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "card_ta_00007",
+              "name": "Forbidden: Eternal Hunger",
+              "cost": 0,
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "card_ta_00003",
+              "name": "Forbidden: Ecstasy of Violence",
+              "cost": 9,
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            },
+            {
+              "cardId": "card_ta_00002",
+              "name": "Forbidden: Portrait of Fury",
+              "cost": 1,
+              "note": {
+                "en": "1 AP Draw 3"
+              },
+              "rating": "3/5"
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
-            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit\nPortrait: 1 AP Draw 3"
+            "en": "Hungry: Selena can use Eternal Hunger as a second Target Spotted for Attunment\nEcstasty: 0 Cost 4 hit"
           }
         },
         {
@@ -1792,10 +1988,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "be74072f028e744f.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C5 Forbidden Ruins"
           }
+        },
+        {
+          "type": "image",
+          "image": "468cd8aa9e8ed9a6.webp"
         },
         {
           "type": "prose",
@@ -1804,16 +2008,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C2 Twin Star's Shadow"
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "fd30683ddce11f22.webp"
         }
       ]
     }

@@ -60,11 +60,15 @@
               }
             },
             {
-              "cardId": "c_1040_col",
-              "name": "Daze",
+              "cardId": "c_1024_uni1",
+              "name": "Growth Acceleration",
               "cost": 0,
-              "text": {
-                "en": "Has a low chance for unexpected results to occur on use."
+              "epiphany": {
+                "level": 1,
+                "name": "Growth Acceleration I",
+                "text": {
+                  "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
               }
             },
             {
@@ -708,13 +712,15 @@
               "level": 1,
               "text": {
                 "en": "Heavy Weapon Specialist to 0 Cost, VERY GOOD"
-              }
+              },
+              "bold": true
             },
             {
               "level": 2,
               "text": {
                 "en": "All Retain cards get +20% Damage, Good"
-              }
+              },
+              "bold": true
             },
             {
               "level": 3,
@@ -868,27 +874,63 @@
             {
               "cardId": "c_1040_srt4",
               "name": "Opening Found",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "5/5"
-            },
-            {
-              "cardId": "c_1040_srt4",
-              "name": "Opening Found",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "5/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Opening Found I",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "Extra Hit is good"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Opening Found II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Can be 0 Cost, but not very nessicary"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Opening Found III",
+                  "cost": 1,
+                  "rating": "5/5",
+                  "note": {
+                    "en": "2 Extra Hits is very good, but only lasts for 1 turn"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Opening Found IV",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Very Weak Scaling compared to Found 1 or 3"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Opening Found V",
+                  "cost": 1,
+                  "rating": "6/5",
+                  "note": {
+                    "en": "Upgrade End of Turn Spam Beryl"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Found 1: Extra Hit is good\nFound 2: Can be 0 Cost, but not very nessicary\nFound 3: 2 Extra Hits is very good, but only lasts for 1 turn\nFound 4: Very Weak Scaling compared to Found 1 or 3\nFound 5: Upgrade End of Turn Spam Beryl\nIt turns out even though it's non Visual Unique% Potential Increases Upgrade Damage\nNot sure about Unique Stat"
+            "en": "It turns out even though it's non Visual Unique% Potential Increases Upgrade Damage\nNot sure about Unique Stat"
           }
         },
         {
@@ -1297,10 +1339,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "afb5ae7ef828d7f0.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
+        },
+        {
+          "type": "image",
+          "image": "a95916cf637b6203.webp"
         },
         {
           "type": "prose",
@@ -1309,10 +1359,18 @@
           }
         },
         {
+          "type": "image",
+          "image": "67590a5e7c6f3db6.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "b6d9427c02ef5506.webp"
         }
       ]
     }

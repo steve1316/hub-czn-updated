@@ -137,6 +137,30 @@
               }
             },
             {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
               "cost": 1,
@@ -240,6 +264,18 @@
               }
             },
             {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
               "cost": 1,
@@ -289,11 +325,59 @@
               }
             },
             {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
+              }
+            },
+            {
               "cardId": "c_1024_uni4",
               "name": "Will of Light",
               "cost": 1,
               "text": {
                 "en": "Heal 200%. Activate the Retain effect of all cards in hand."
+              }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
+                }
               }
             }
           ]
@@ -372,6 +456,18 @@
                   "en": "Heal 150%. Select 1 card of this unit in hand, then activate the Retain effect 2 time(s). When that card is a Softie, 2 Vulnerable to all enemies."
                 }
               }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 4,
+                "name": "Growing Creature IV",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Swiftie★★★ and activate Retain effect 2 time(s)."
+                }
+              }
             }
           ]
         },
@@ -435,6 +531,18 @@
                 "name": "Growth Acceleration I",
                 "text": {
                   "en": "Heal 100%. Select 1 card in hand, then activate the Retain effect 2 time(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_1024_uni3",
+              "name": "Growing Creature",
+              "cost": 1,
+              "epiphany": {
+                "level": 3,
+                "name": "Growing Creature III",
+                "text": {
+                  "en": "[Retain] Create 1 Creation★. Retain: Change this card to Softie★★★, then 2 Vulnerable to all enemies."
                 }
               }
             },
@@ -682,7 +790,8 @@
               "level": 4,
               "text": {
                 "en": "Really really nice, just 10% Multiplier for the team"
-              }
+              },
+              "bold": true
             },
             {
               "level": 5,
@@ -989,18 +1098,63 @@
             {
               "cardId": "c_1024_uni3",
               "name": "Growing Creature",
-              "cost": 1,
               "note": {
                 "en": ""
               },
-              "rating": "2/5"
+              "epiphanies": [
+                {
+                  "level": 1,
+                  "name": "Growing Creature I",
+                  "cost": 1,
+                  "rating": "2/5",
+                  "note": {
+                    "en": "Honestly rather have a contaminated spore, since you know what you'd get"
+                  }
+                },
+                {
+                  "level": 2,
+                  "name": "Growing Creature II",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "2 Creations good rate, but RNG"
+                  }
+                },
+                {
+                  "level": 3,
+                  "name": "Growing Creature III",
+                  "cost": 1,
+                  "rating": "4/5",
+                  "note": {
+                    "en": "3 star Softie and Vuln, very good"
+                  }
+                },
+                {
+                  "level": 4,
+                  "name": "Growing Creature IV",
+                  "cost": 1,
+                  "rating": "3/5",
+                  "note": {
+                    "en": "4 star Swiftie, and retain it twice already? very good"
+                  }
+                },
+                {
+                  "level": 5,
+                  "name": "Growing Creature V",
+                  "cost": 1,
+                  "rating": "1/5",
+                  "note": {
+                    "en": "Weaken is okay, but you don't need Sturdie 3 star"
+                  }
+                }
+              ]
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Creature 1: Honestly rather have a contaminated spore, since you know what you'd get\nCreature 2: 2 Creations good rate, but RNG\nCreate 3: 3 star Softie and Vuln, very good\nCreate 4: 4 star Swiftie, and retain it twice already? very good\nCreate 5: Weaken is okay, but you don't need Sturdie 3 star\nNeutral epiphanies aren't bad, but the Creation is RNG"
+            "en": "Neutral epiphanies aren't bad, but the Creation is RNG"
           }
         }
       ]
@@ -1262,16 +1416,28 @@
           }
         },
         {
+          "type": "image",
+          "image": "91e2731429a33730.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "C4 Swamp of Judgement"
           }
         },
         {
+          "type": "image",
+          "image": "daa6ef53170e857d.webp"
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Shop"
           }
+        },
+        {
+          "type": "image",
+          "image": "2defbb5518fd71c7.webp"
         }
       ]
     }

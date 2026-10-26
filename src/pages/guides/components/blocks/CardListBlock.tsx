@@ -23,15 +23,21 @@ interface EpiphanyRowsProps {
   epiphanies: EpiphanyRating[]
 }
 
+/** A level must score at least this to be highlighted as the best one. */
+const HIGHLIGHT_MIN_SCORE = 4
+
 /**
- * One row per rated epiphany level, with the best score highlighted.
+ * One row per rated epiphany level, with the best score highlighted when one level clearly wins.
  * @param props The card's epiphanies.
  * @returns The rows.
  */
 function EpiphanyRows({ epiphanies }: EpiphanyRowsProps) {
   const { i18n } = useTranslation()
   const lang = resolveLang(i18n.language)
-  const best = Math.max(...epiphanies.map(ep => ratingScore(ep.rating)))
+  const scores = epiphanies.map(ep => ratingScore(ep.rating))
+  const best = Math.max(...scores)
+  // Only a single best level is lit, and only when it is a good one.
+  const highlighted = best >= HIGHLIGHT_MIN_SCORE && scores.filter(score => score === best).length === 1 ? best : null
 
   return (
     <div className="mt-2 flex flex-col gap-1">
@@ -43,7 +49,7 @@ function EpiphanyRows({ epiphanies }: EpiphanyRowsProps) {
             title={ep.name}
             className={cn(
               'grid grid-cols-[44px_34px_1fr] items-start gap-2 rounded px-1.5 py-1 text-xs',
-              best >= 0 && ratingScore(ep.rating) === best && 'bg-[#c084fc]/9 outline outline-[#c084fc]/30',
+              highlighted !== null && ratingScore(ep.rating) === highlighted && 'bg-[#c084fc]/9 outline outline-[#c084fc]/30',
             )}
           >
             <span className="flex items-center gap-1 font-bold text-[#ffffff]">
@@ -89,6 +95,7 @@ export function CardListBlock({ intro, items, cardsById }: CardListBlockProps) {
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
                   <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name ?? card.name}</h4>
+                  {item.count && item.count > 1 && <span className="shrink-0 text-xs font-bold text-[#b3b3b3]">x{item.count}</span>}
                   {item.rating && <RatingChip rating={item.rating} />}
                 </div>
                 {note && <p className="mt-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]">{note}</p>}
