@@ -80,3 +80,12 @@ def test_unknown_client_stat_is_reported(tmp_path):
     """A new substat the app has no name for is a warning, not a silent drop."""
     result = substat_rolls.build(_context(tmp_path, [_row("S_NEW_STAT", "[1,2]")]))
     assert any("S_NEW_STAT" in issue.message for issue in result.issues)
+
+
+def test_ts_copy_lists_only_real_substats(tmp_path):
+    """The frontend copy has one entry per substat with a roll range, in STATS order."""
+    ctx = _context(tmp_path, [_row("S_ATK_INC_ADD_OUT", "[5,8]"), _row("S_ATK_INC_RATE_OUT", "[0.8,1.3]")])
+    text = substat_rolls.build(ctx).files[substat_rolls.TS_PATH].decode("utf-8")
+    assert '{ name: "Flat ATK", max: 8, min: 5, percent: false }' in text
+    assert '{ name: "ATK%", max: 1.3, min: 0.8, percent: true }' in text
+    assert "Passion" not in text

@@ -7,6 +7,8 @@ import { AssetImage } from "@/components/ui/asset-image"
 import type { CharPreset, GameData } from "@/lib/types"
 import { ScoringPanel, DPS_WEIGHTS, TANK_WEIGHTS } from "./ScoringPanel"
 import type { Preset } from "./ScoringPanel"
+import { SUBSTAT_ROLLS } from "@/lib/substat-rolls"
+import { formatMaxRolls } from "./gear-score-text"
 
 const GS_SECTION_KEYS = ["calc", "formula", "example", "maxRolls", "weighted", "potential"] as const
 
@@ -38,7 +40,7 @@ function GsExplanation() {
           {GS_SECTION_KEYS.map((key) => (
             <div key={key}>
               <p className="text-[#ffffff] font-semibold mb-1">{t(`scoring.gs.${key}.heading`)}</p>
-              <pre className="whitespace-pre-wrap font-mono text-[#b3b3b3]">{t(`scoring.gs.${key}.body`)}</pre>
+              <pre className="whitespace-pre-wrap font-mono text-[#b3b3b3]">{key === "maxRolls" ? `${t(`scoring.gs.${key}.body`)}\n${formatMaxRolls(SUBSTAT_ROLLS)}` : t(`scoring.gs.${key}.body`)}</pre>
             </div>
           ))}
         </div>

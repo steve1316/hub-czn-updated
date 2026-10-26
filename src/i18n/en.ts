@@ -117,15 +117,15 @@ const en = {
       },
       maxRolls: {
         heading: 'STAT MAX ROLLS',
-        body: 'These are the maximum values each stat can roll:\n  - ATK%/DEF%/HP%: 1.3%\n  - Flat ATK: 8\n  - Flat DEF: 5\n  - Flat HP: 12\n  - CRate: 2.0%\n  - CDmg: 4.0%\n  - Ego: 5\n  - Extra DMG%/DoT%: 3.4%\n  - Element DMG%: 3.5%',
+        body: 'These are the highest values a single roll of each substat can reach:',
       },
       weighted: {
         heading: 'WEIGHTED SCORE',
-        body: 'You can configure custom weights above to emphasize stats you care about. A weight of 1.0 means normal contribution. A weight of 2.0 means that stat contributes double to the score.',
+        body: 'Weights are whole numbers from 0 to 10. Each substat\'s GS contribution is multiplied by its weight, so a stat at 10 counts ten times a stat at 1, and a stat at 0 is ignored. This weighted score is what ranks Memory Fragments in the Optimizer. While every weight is 0, the plain GS is used instead.',
       },
       potential: {
         heading: 'POTENTIAL',
-        body: 'Shows the range of possible final GS based on remaining upgrades. Low assumes minimum rolls, high assumes maximum rolls.',
+        body: 'Shows the range of possible final GS from the upgrades a Rare or Legendary piece has left. Each remaining upgrade adds up to 10 GS if it rolls the max (high). The low end uses the worst min-to-max roll ratio among the piece\'s substats.',
       },
     },
   },
