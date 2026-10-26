@@ -140,6 +140,16 @@ export interface CaptureStatus {
   region: 'global' | 'asia'
   admin: boolean
   rescue_file: string | null
+  /** True when the running capture was started by the auto-start setting, not the Start button. */
+  auto_started: boolean
+}
+
+/** Saved capture settings. */
+export interface CaptureSettings {
+  /** Whether capture starts by itself when the app opens. Off by default. */
+  auto_start: boolean
+  /** Server region used for auto-start. */
+  region: 'global' | 'asia'
 }
 
 export interface CaptureStartRequest {

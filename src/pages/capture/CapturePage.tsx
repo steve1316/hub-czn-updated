@@ -416,6 +416,16 @@ export function CapturePage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['capture-status'] }),
   })
 
+  const { data: captureSettings } = useQuery({
+    queryKey: ['capture-settings'],
+    queryFn: () => api.captureSettings(),
+  })
+
+  const autoStartMutation = useMutation({
+    mutationFn: (autoStart: boolean) => api.captureSetSettings({ auto_start: autoStart }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['capture-settings'] }),
+  })
+
   const regionMutation = useMutation({
     mutationFn: (r: 'global' | 'asia') => api.captureSetRegion(r),
   })
@@ -499,6 +509,29 @@ export function CapturePage() {
           />
           {t('capture.debugMode')}
         </label>
+
+        {/* Auto-start */}
+        <div className="flex flex-col gap-1">
+          <label className="flex items-center gap-2 text-sm text-[#b3b3b3] cursor-pointer">
+            <input
+              type="checkbox"
+              checked={captureSettings?.auto_start ?? false}
+              disabled={autoStartMutation.isPending}
+              onChange={e => autoStartMutation.mutate(e.target.checked)}
+              className="accent-[#c084fc]"
+            />
+            {t('capture.autoStart')}
+            <InfoPopover content={t('capture.autoStartTip')} />
+          </label>
+          <MutationError error={autoStartMutation.isError ? autoStartMutation.error : undefined} />
+        </div>
+
+        {running && captureStatus?.auto_started && (
+          <p className="text-xs text-[#4ade80] flex items-center gap-1">
+            <CheckCircle size={12} className="shrink-0" />
+            {t('capture.autoStartedBanner')}
+          </p>
+        )}
 
         {/* Start / Stop */}
         {!running ? (
