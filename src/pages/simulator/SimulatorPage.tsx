@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Play, Zap, Shield } from 'lucide-react'
-import { api, assetUrl } from '@/lib/api'
+import { api, assetUrl, isNotFound } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
@@ -128,7 +128,7 @@ function CardRow({ card }: { card: SimCardResult }) {
             <div className="flex items-center gap-1">
               <span className="text-[#e5e7eb] font-medium">{displayName}</span>
               {hasSpark && (
-                <span className="text-[#facc15] text-[10px]" title={t('simulator.epifaniaApplied')}>✦</span>
+                <span className="text-[#facc15] text-[10px]" title={t('simulator.epiphanyApplied')}>✦</span>
               )}
             </div>
           </div>
@@ -178,6 +178,7 @@ export function SimulatorPage() {
   const [vulnerableStacks, setVulnerableStacks] = useState(() => loadPersistedState()?.vulnerableStacks ?? 0)
   const [dmgReduction, setDmgReduction] = useState(() => loadPersistedState()?.dmgReduction ?? false)
   const [result, setResult] = useState<SimulateDamageResponse | null>(() => loadPersistedState()?.result ?? null)
+  const [lastBattleError, setLastBattleError] = useState<string | null>(null)
 
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
@@ -376,18 +377,19 @@ export function SimulatorPage() {
             />
             <button
               type="button"
-              title="Load DEF from last captured battle"
+              title={t('simulator.lastBattleTip')}
               onClick={() =>
                 api.battleLatest()
-                  .then(b => { const v = Math.round(b.enemy_def); setMonsterDef(v); persist({ monsterDef: v }) })
-                  .catch(() => {})
+                  .then(b => { const v = Math.round(b.enemy_def); setMonsterDef(v); persist({ monsterDef: v }); setLastBattleError(null) })
+                  .catch(err => setLastBattleError(isNotFound(err) ? t('simulator.noLastBattle') : (err as Error).message))
               }
               className="flex items-center gap-1 px-2 py-1 rounded bg-[#c084fc]/15 text-[#c084fc] text-[10px] hover:bg-[#c084fc]/25 transition-colors shrink-0"
             >
               <Shield size={10} />
-              Battle
+              {t('simulator.lastBattle')}
             </button>
           </div>
+          {lastBattleError && <p className="text-[#f87171] text-[10px]">{lastBattleError}</p>}
         </div>
 
         {/* Buffs & Debuffs */}
@@ -580,7 +582,7 @@ export function SimulatorPage() {
                   </tbody>
                 </table>
                 <p className="text-[#555] text-[10px] mt-2 px-1">
-                  ✦ = {t('simulator.epifaniaNote')}
+                  ✦ = {t('simulator.epiphanyApplied')}
                   &nbsp;·&nbsp; {t('simulator.avgNote')}
                 </p>
               </div>
