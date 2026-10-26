@@ -140,7 +140,7 @@ function CompactTypeBadge({ type }: { type: string }) {
     <span
       title={type}
       className={[
-        'inline-block min-w-0 max-w-[64px] truncate rounded border px-0.5 py-[1px] text-[11px] font-black uppercase leading-none tracking-wide shadow',
+        'inline-block rounded border px-1 py-[1px] text-[11px] font-black uppercase leading-none tracking-wide shadow',
         getCompactTypeClassName(type),
       ].join(' ')}
     >
@@ -204,7 +204,7 @@ function CompactDeckCard({
           onOpenDetails()
         }
       }}
-      className="group relative flex h-[200px] cursor-pointer flex-col overflow-hidden rounded-lg border border-[#2d2d3a] bg-[#101018] shadow-lg transition hover:border-[#60a5fa] focus:outline-none focus:ring-2 focus:ring-[#60a5fa]/45"
+      className="group relative flex h-[232px] cursor-pointer flex-col overflow-hidden rounded-lg border border-[#2d2d3a] bg-[#101018] shadow-lg transition hover:border-[#60a5fa] focus:outline-none focus:ring-2 focus:ring-[#60a5fa]/45"
     >
       <div className="absolute inset-0">
         <CardImage
@@ -230,7 +230,7 @@ function CompactDeckCard({
       <div className="relative z-10 mt-auto flex min-h-[94px] flex-col justify-end px-2 pb-2 pt-7">
         {visibleTypes.length > 0 && (
           <div className="mb-1 flex flex-col items-start gap-0.5">
-            <div className="flex min-h-[10px] max-w-full flex-nowrap items-center gap-0.5 overflow-hidden">
+            <div className="flex max-w-full flex-wrap items-center gap-0.5">
               {visibleTypes.map(type => (
                 <CompactTypeBadge key={type} type={type} />
               ))}
@@ -247,7 +247,7 @@ function CompactDeckCard({
         </h3>
 
         {displayDescription && (
-          <p title={displayDescription} className="mt-1 line-clamp-2 text-xs font-bold leading-snug text-white/95 drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]">
+          <p title={displayDescription} className="mt-1 line-clamp-3 text-xs font-bold leading-snug text-white/95 drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]">
             {displayDescription}
           </p>
         )}
@@ -340,23 +340,23 @@ function CardSectionButton({
     <button
       type="button"
       onClick={onClick}
-      className="mt-2 flex w-full items-center justify-between rounded-lg border border-[#282838] bg-[#101018] px-3 py-2 text-left transition hover:border-[#60a5fa] hover:bg-[#151522]"
+      className="flex w-full items-center justify-between gap-2 rounded-lg border border-[#282838] bg-[#101018] px-3 py-2.5 text-left transition hover:border-[#60a5fa] hover:bg-[#151522]"
     >
       <div className="min-w-0">
         <div className="flex items-center gap-2">
-          <ChevronRight size={13} className="text-[#c084fc]" />
+          <ChevronRight size={14} className="text-[#c084fc]" />
 
-          <h3 className="text-[11px] font-black uppercase tracking-wide text-white">
+          <h3 className="text-sm font-bold text-white">
             {t(getCardSelectionTitleKey(kind))}
           </h3>
         </div>
 
-        <p className="mt-0.5 text-[11px] text-[#8a8a8a]">
+        <p className="mt-0.5 text-xs text-[#8a8a8a]">
           {t(getCardSectionDescriptionKey(kind))}
         </p>
       </div>
 
-      <span className="shrink-0 rounded-md bg-[#0f172a] px-2 py-1 text-[11px] font-black text-[#93c5fd]">
+      <span className="shrink-0 rounded-md bg-[#0f172a] px-2 py-1 text-xs font-bold text-[#93c5fd]">
         {count} {t('deckBuilder.available')}
       </span>
     </button>
@@ -642,15 +642,15 @@ export function CombatantDeckColumn({
     Boolean(slot.equipment.accessory)
 
   return (
-    <section className="flex h-full min-h-0 min-w-0 flex-col overflow-hidden rounded-xl border border-[#282838] bg-[#15151f]">
+    <section className="flex min-h-0 min-w-0 flex-1 flex-col overflow-hidden rounded-xl border border-[#282838] bg-[#15151f]">
       <header className="shrink-0 border-b border-[#282838] p-3">
         <div className="flex items-start justify-between gap-2">
           <div className="min-w-0 flex-1">
-            <p className="text-[11px] uppercase tracking-wide text-[#8a8a8a]">
+            <p className="text-xs text-[#8a8a8a]">
               {t('deckBuilder.slot.combatant', { number: slotIndex + 1 })}
             </p>
 
-            <div className="mt-1.5 flex items-center gap-2">
+            <div className="mt-1.5 flex max-w-sm items-center gap-2">
               <CharacterAvatar character={selectedCombatant} />
 
               <select
@@ -694,79 +694,81 @@ export function CombatantDeckColumn({
           </button>
         </div>
 
-        {selectedCombatant && (
-          <div className="mt-2 rounded-lg border border-[#282838] bg-[#101018] p-1.5">
-            <div className="mb-1 flex items-center justify-between">
-              <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
-                {t('deckBuilder.slot.equipment')}
+        <div className="mt-3 flex flex-col gap-3 lg:flex-row lg:items-stretch">
+          {selectedCombatant && (
+            <div className="min-w-0 flex-1 rounded-lg border border-[#282838] bg-[#101018] p-1.5">
+              <div className="mb-1 flex items-center justify-between">
+                <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
+                  {t('deckBuilder.slot.equipment')}
+                </p>
+
+                <span className="text-[11px] text-[#8a8a8a]">
+                  {t('deckBuilder.slot.equipmentSummary')}
+                </span>
+              </div>
+
+              <div className="grid grid-cols-3 gap-1.5">
+                <EquipmentSlot
+                  slot="weapon"
+                  item={slot.equipment.weapon}
+                  onOpen={() => setEquipmentModalSlot('weapon')}
+                  onClear={() => onClearEquipment('weapon')}
+                />
+
+                <EquipmentSlot
+                  slot="armor"
+                  item={slot.equipment.armor}
+                  onOpen={() => setEquipmentModalSlot('armor')}
+                  onClear={() => onClearEquipment('armor')}
+                />
+
+                <EquipmentSlot
+                  slot="accessory"
+                  item={slot.equipment.accessory}
+                  onOpen={() => setEquipmentModalSlot('accessory')}
+                  onClear={() => onClearEquipment('accessory')}
+                />
+              </div>
+            </div>
+          )}
+
+          <div className="grid shrink-0 grid-cols-3 gap-1.5 lg:w-80">
+            <div className="rounded-lg bg-[#101018] px-2 py-1.5">
+              <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cards')}</p>
+              <p className="text-sm font-bold text-white">{slot.cards.length}</p>
+            </div>
+
+            <div className="rounded-lg bg-[#101018] px-2 py-1.5">
+              <div className="flex items-center justify-between gap-1">
+                <p className="whitespace-nowrap text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cost')}</p>
+                <InfoPopover
+                  ariaLabel={t('deckBuilder.costBreakdown.title')}
+                  content={<CostBreakdown breakdown={slotBuildCost} />}
+                />
+              </div>
+              <p
+                className={[
+                  'text-sm font-bold',
+                  slotBuildCost.isOverLimit
+                    ? 'text-[#f87171]'
+                    : slotBuildCost.total >= slotBuildCost.limit * 0.8
+                      ? 'text-[#fb923c]'
+                      : 'text-[#93c5fd]',
+                ].join(' ')}
+              >
+                {slotBuildCost.total}/{slotBuildCost.limit}
               </p>
-
-              <span className="text-[11px] text-[#8a8a8a]">
-                {t('deckBuilder.slot.equipmentSummary')}
-              </span>
             </div>
 
-            <div className="grid grid-cols-3 gap-1.5">
-              <EquipmentSlot
-                slot="weapon"
-                item={slot.equipment.weapon}
-                onOpen={() => setEquipmentModalSlot('weapon')}
-                onClear={() => onClearEquipment('weapon')}
-              />
-
-              <EquipmentSlot
-                slot="armor"
-                item={slot.equipment.armor}
-                onOpen={() => setEquipmentModalSlot('armor')}
-                onClear={() => onClearEquipment('armor')}
-              />
-
-              <EquipmentSlot
-                slot="accessory"
-                item={slot.equipment.accessory}
-                onOpen={() => setEquipmentModalSlot('accessory')}
-                onClear={() => onClearEquipment('accessory')}
-              />
+            <div className="rounded-lg bg-[#101018] px-2 py-1.5">
+              <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.epiphany')}</p>
+              <p className="text-sm font-bold text-[#93c5fd]">{epiphanyCards.length}</p>
             </div>
-          </div>
-        )}
-
-        <div className="mt-3 grid grid-cols-3 gap-1.5">
-          <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cards')}</p>
-            <p className="text-sm font-bold text-white">{slot.cards.length}</p>
-          </div>
-
-          <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <div className="flex items-center justify-between gap-1">
-              <p className="whitespace-nowrap text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cost')}</p>
-              <InfoPopover
-                ariaLabel={t('deckBuilder.costBreakdown.title')}
-                content={<CostBreakdown breakdown={slotBuildCost} />}
-              />
-            </div>
-            <p
-              className={[
-                'text-sm font-bold',
-                slotBuildCost.isOverLimit
-                  ? 'text-[#f87171]'
-                  : slotBuildCost.total >= slotBuildCost.limit * 0.8
-                    ? 'text-[#fb923c]'
-                    : 'text-[#93c5fd]',
-              ].join(' ')}
-            >
-              {slotBuildCost.total}/{slotBuildCost.limit}
-            </p>
-          </div>
-
-          <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.epiphany')}</p>
-            <p className="text-sm font-bold text-[#93c5fd]">{epiphanyCards.length}</p>
           </div>
         </div>
 
         {slotBuildCost.isOverLimit && (
-          <div className="mt-2 rounded-lg border border-[#7f1d1d] bg-[#7f1d1d]/10 px-2.5 py-2 text-[11px] font-semibold text-[#fca5a5]">
+          <div className="mt-2 rounded-lg border border-[#7f1d1d] bg-[#7f1d1d]/10 px-2.5 py-2 text-xs font-semibold text-[#fca5a5]">
             {t('deckBuilder.slot.overLimitMessage', {
               over: slotBuildCost.total - slotBuildCost.limit,
               limit: slotBuildCost.limit,
@@ -779,92 +781,92 @@ export function CombatantDeckColumn({
         )}
       </header>
 
-      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto p-2.5">
-        {slot.error && (
-          <div className="mb-2.5 rounded-lg border border-[#7f1d1d] bg-[#7f1d1d]/10 p-2.5 text-xs text-[#fca5a5]">
-            {slot.error}
-          </div>
-        )}
+      <div className="flex min-h-0 flex-1 flex-col overflow-y-auto lg:flex-row lg:overflow-hidden">
+        <div className="flex min-w-0 flex-1 flex-col p-3 lg:overflow-y-auto">
+          {slot.error && (
+            <div className="mb-2.5 rounded-lg border border-[#7f1d1d] bg-[#7f1d1d]/10 p-2.5 text-xs text-[#fca5a5]">
+              {slot.error}
+            </div>
+          )}
 
-        {slot.isLoading ? (
-          <div className="flex min-h-[280px] flex-1 items-center justify-center rounded-xl border border-dashed border-[#333348] text-sm text-[#888]">
-            {t('deckBuilder.slot.loadingCards')}
-          </div>
-        ) : slot.cards.length === 0 ? (
-          <div className="flex min-h-[280px] flex-1 flex-col items-center justify-center rounded-xl border border-dashed border-[#333348] text-center">
-            <Plus className="text-[#8a8a8a]" size={28} />
-            <p className="mt-2 text-sm font-medium text-[#aaa]">
-              {selectedCombatant ? t('deckBuilder.slot.noCards') : t('deckBuilder.slot.noCombatant')}
-            </p>
-            <p className="mt-1 max-w-[240px] text-xs text-[#8a8a8a]">
-              {selectedCombatant
-                ? t('deckBuilder.slot.noCardsHint')
-                : t('deckBuilder.slot.noCombatantHint')}
-            </p>
-          </div>
-        ) : (
-          <section className="rounded-xl border border-[#282838] bg-[#101018] p-2.5">
-            <div className="mb-2.5 flex items-center justify-between gap-3">
-              <div>
-                <h3 className="text-[11px] font-black uppercase tracking-wide text-white">
+          {slot.isLoading ? (
+            <div className="flex min-h-[280px] flex-1 items-center justify-center rounded-xl border border-dashed border-[#333348] text-sm text-[#888]">
+              {t('deckBuilder.slot.loadingCards')}
+            </div>
+          ) : slot.cards.length === 0 ? (
+            <div className="flex min-h-[280px] flex-1 flex-col items-center justify-center rounded-xl border border-dashed border-[#333348] text-center">
+              <Plus className="text-[#8a8a8a]" size={28} />
+              <p className="mt-2 text-sm font-medium text-[#aaa]">
+                {selectedCombatant ? t('deckBuilder.slot.noCards') : t('deckBuilder.slot.noCombatant')}
+              </p>
+              <p className="mt-1 max-w-[240px] text-xs text-[#8a8a8a]">
+                {selectedCombatant
+                  ? t('deckBuilder.slot.noCardsHint')
+                  : t('deckBuilder.slot.noCombatantHint')}
+              </p>
+            </div>
+          ) : (
+            <section>
+              <div className="mb-3 flex items-baseline justify-between gap-3">
+                <h3 className="text-sm font-bold text-white">
                   {t('deckBuilder.slot.addedCards')}
                 </h3>
 
-                <p className="mt-0.5 text-[11px] text-[#8a8a8a]">
+                <span className="text-xs text-[#8a8a8a]">
                   {t('deckBuilder.slot.groupsInDeck', { count: groupedCards.length })}
-                </p>
+                </span>
               </div>
 
-              <span className="rounded-md bg-[#0f172a] px-2 py-1 text-[11px] font-black text-[#93c5fd]">
-                {t('deckBuilder.slot.cardCount', { count: slot.cards.length })}
-              </span>
-            </div>
+              <div className="grid grid-cols-[repeat(auto-fill,minmax(160px,1fr))] gap-3">
+                {groupedCards.map(group => (
+                  <CompactDeckCard
+                    key={getCardGroupKey(group.item)}
+                    item={group.item}
+                    count={group.count}
+                    onDuplicate={() => onDuplicateCard(group.item.instanceId)}
+                    onRemove={() => onRemoveCard(group.item.instanceId)}
+                    onOpenDetails={() => onOpenDeckCardVariants(group.item, 'description')}
+                    onOpenVariants={
+                      group.item.variants.length > 0 || canUseDeckBuilderEpiphanies(group.item.card)
+                        ? () => onOpenDeckCardVariants(group.item, 'epiphany')
+                        : undefined
+                    }
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
 
-            <div className="grid grid-cols-2 gap-2.5 2xl:grid-cols-3">
-              {groupedCards.map(group => (
-                <CompactDeckCard
-                  key={getCardGroupKey(group.item)}
-                  item={group.item}
-                  count={group.count}
-                  onDuplicate={() => onDuplicateCard(group.item.instanceId)}
-                  onRemove={() => onRemoveCard(group.item.instanceId)}
-                  onOpenDetails={() => onOpenDeckCardVariants(group.item, 'description')}
-                  onOpenVariants={
-                    group.item.variants.length > 0 || canUseDeckBuilderEpiphanies(group.item.card)
-                      ? () => onOpenDeckCardVariants(group.item, 'epiphany')
-                      : undefined
-                  }
-                />
-              ))}
-            </div>
-          </section>
-        )}
+        <aside className="flex shrink-0 flex-col gap-2 border-t border-[#282838] p-3 lg:w-80 lg:overflow-y-auto lg:border-l lg:border-t-0">
+          <h3 className="text-sm font-bold text-white">{t('deckBuilder.slot.addCards')}</h3>
 
-        {startingCards.length > 0 && (
-          <CardSectionButton
-            kind="starting"
-            count={startingCards.length}
-            onClick={() => setCardSelectionKind('starting')}
-          />
-        )}
+          {startingCards.length > 0 && (
+            <CardSectionButton
+              kind="starting"
+              count={startingCards.length}
+              onClick={() => setCardSelectionKind('starting')}
+            />
+          )}
 
-        {epiphanyCards.length > 0 && (
-          <CardSectionButton
-            kind="epiphany"
-            count={epiphanyCards.length}
-            onClick={() => setCardSelectionKind('epiphany')}
-          />
-        )}
+          {epiphanyCards.length > 0 && (
+            <CardSectionButton
+              kind="epiphany"
+              count={epiphanyCards.length}
+              onClick={() => setCardSelectionKind('epiphany')}
+            />
+          )}
 
-        {selectedCombatant && (
-          <CardSectionButton
-            kind="shared"
-            count={sharedCards.length}
-            onClick={() => setCardSelectionKind('shared')}
-          />
-        )}
+          {selectedCombatant && (
+            <CardSectionButton
+              kind="shared"
+              count={sharedCards.length}
+              onClick={() => setCardSelectionKind('shared')}
+            />
+          )}
 
-        {egoSkill && <EgoSkillCard egoSkill={egoSkill} />}
+          {egoSkill && <EgoSkillCard egoSkill={egoSkill} />}
+        </aside>
       </div>
 
       {cardSelectionKind && (

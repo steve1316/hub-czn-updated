@@ -5,6 +5,7 @@ import { X } from 'lucide-react'
 import type { CardCharacter } from '@/lib/types'
 import { deckSlotToSimCards, matchingSavedSlot, type DeckBuilderHandoff } from '@/pages/simulator/simulator-deck.utils'
 import { CombatantDeckColumn } from './components/CombatantDeckColumn'
+import { SquadStrip } from './components/SquadStrip'
 import { DeckBuilderHeader } from './components/DeckBuilderHeader'
 import {
   VariantSettingsModal,
@@ -26,6 +27,8 @@ export function DeckBuilderPage() {
   const deckBuilder = useDeckBuilder()
   const guideDeck = (location.state as { guideDeck?: GuideDeckHandoff } | null)?.guideDeck
   const [guideNotice, setGuideNotice] = useState<string[] | null>(null)
+  const [activeSlot, setActiveSlot] = useState(0)
+  const slot = deckBuilder.squad[activeSlot]
   const variantModalTarget = deckBuilder.variantModalTarget
   const [variantModalInitialSection, setVariantModalInitialSection] =
     useState<VariantModalInitialSection>('epiphany')
@@ -56,6 +59,7 @@ export function DeckBuilderPage() {
       .placeIncomingSlot(guideDeck.slot, () => window.confirm(t('deckBuilder.guide.replaceConfirm', { name: guideDeck.name })))
       .then(result => {
         if (!result) return
+        setActiveSlot(result.index)
         setGuideNotice([
           t('deckBuilder.guide.loaded', { name: guideDeck.name, slot: result.index + 1 }),
           ...(result.dropped > 0 ? [t('deckBuilder.guide.dropped', { count: result.dropped })] : []),
@@ -76,7 +80,7 @@ export function DeckBuilderPage() {
     : null
 
   return (
-    <div className="flex min-h-screen flex-col bg-[#0f0f14] text-white">
+    <div className="flex h-full flex-col bg-[#0f0f14] text-white">
       <DeckBuilderHeader
         savedDecks={deckBuilder.savedDecks}
         selectedSavedDeckId={deckBuilder.selectedSavedDeckId}
@@ -105,44 +109,38 @@ export function DeckBuilderPage() {
           {t('deckBuilder.loadingCombatants')}
         </div>
       ) : (
-        <main className="grid min-h-0 flex-1 grid-cols-1 items-stretch gap-4 overflow-hidden p-4 xl:grid-cols-3">
-          {deckBuilder.squad.map((slot, index) => (
-            <CombatantDeckColumn
-              key={index}
-              slotIndex={index}
-              slot={slot}
-              slotBuildCost={deckBuilder.slotBuildCosts[index]}
-              characters={deckBuilder.characters}
-              onSelectCombatant={combatantId =>
-                deckBuilder.selectCombatant(index, combatantId)
-              }
-              onDuplicateCard={instanceId =>
-                deckBuilder.duplicateCard(index, instanceId)
-              }
-              onRemoveCard={instanceId =>
-                deckBuilder.removeCard(index, instanceId)
-              }
-              onAddDeckBuilderCard={item =>
-                deckBuilder.addDeckBuilderCard(index, item)
-              }
-              onOpenDeckCardVariants={(item, initialSection = 'epiphany') => {
-                setVariantModalInitialSection(initialSection)
-                deckBuilder.openDeckCardVariants(index, item)
-              }}
-              onOpenAvailableCardVariants={item => {
-                setVariantModalInitialSection('epiphany')
-                deckBuilder.openAvailableCardVariants(index, item)
-              }}
-              onSelectEquipment={(equipmentSlot, item) =>
-                deckBuilder.selectEquipment(index, equipmentSlot, item)
-              }
-              onClearEquipment={equipmentSlot =>
-                deckBuilder.clearEquipment(index, equipmentSlot)
-              }
-              onClearDeck={() => deckBuilder.clearDeck(index)}
-              onSimulate={() => simulateSlot(slot, index)}
-            />
-          ))}
+        <main className="flex min-h-0 flex-1 flex-col gap-3 overflow-hidden p-4">
+          <SquadStrip
+            squad={deckBuilder.squad}
+            costs={deckBuilder.slotBuildCosts}
+            characters={deckBuilder.characters}
+            activeSlot={activeSlot}
+            onSelect={setActiveSlot}
+          />
+
+          <CombatantDeckColumn
+            key={activeSlot}
+            slotIndex={activeSlot}
+            slot={slot}
+            slotBuildCost={deckBuilder.slotBuildCosts[activeSlot]}
+            characters={deckBuilder.characters}
+            onSelectCombatant={combatantId => deckBuilder.selectCombatant(activeSlot, combatantId)}
+            onDuplicateCard={instanceId => deckBuilder.duplicateCard(activeSlot, instanceId)}
+            onRemoveCard={instanceId => deckBuilder.removeCard(activeSlot, instanceId)}
+            onAddDeckBuilderCard={item => deckBuilder.addDeckBuilderCard(activeSlot, item)}
+            onOpenDeckCardVariants={(item, initialSection = 'epiphany') => {
+              setVariantModalInitialSection(initialSection)
+              deckBuilder.openDeckCardVariants(activeSlot, item)
+            }}
+            onOpenAvailableCardVariants={item => {
+              setVariantModalInitialSection('epiphany')
+              deckBuilder.openAvailableCardVariants(activeSlot, item)
+            }}
+            onSelectEquipment={(equipmentSlot, item) => deckBuilder.selectEquipment(activeSlot, equipmentSlot, item)}
+            onClearEquipment={equipmentSlot => deckBuilder.clearEquipment(activeSlot, equipmentSlot)}
+            onClearDeck={() => deckBuilder.clearDeck(activeSlot)}
+            onSimulate={() => simulateSlot(slot, activeSlot)}
+          />
         </main>
       )}
 
