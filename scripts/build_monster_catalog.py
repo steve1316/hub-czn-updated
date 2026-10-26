@@ -106,7 +106,7 @@ def _load_tier_to_mon_stat_key(client_db: Path) -> dict[int, str]:
     return out
 
 
-def _load_mon_stat_def(client_db: Path) -> dict[str, tuple[int, float]]:
+def _load_mon_stats(client_db: Path) -> dict[str, tuple[int, float]]:
     """Return mon_stat row id -> (stat_def, dmg_decrease_rate).
 
     We index all rows (not just stat_*), so any string from
@@ -167,7 +167,7 @@ def build_catalog(client_root: Path) -> tuple[list[dict], dict[str, int]]:
     client_db = client_root / "db"
     name_table = _load_name_table(client_root)
     tier_to_mskey = _load_tier_to_mon_stat_key(client_db)
-    mon_stat_def = _load_mon_stat_def(client_db)
+    mon_stat_def = _load_mon_stats(client_db)
     if not tier_to_mskey or not mon_stat_def:
         raise ValueError("failed to load tier_monster_stat or mon_stat")
 
