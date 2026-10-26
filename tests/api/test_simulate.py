@@ -108,3 +108,31 @@ def test_simulate_estimates_the_decrease_from_def_without_one(monkeypatch):
     resp = TestClient(app).post("/api/simulate/damage", json={"char_name": "Tester", "monster_def": 300})
     assert resp.status_code == 200
     assert resp.json()["def_reduction"] == round(1 - default_damage_reduction(300), 4)
+
+
+def _stub_epiphany_card(monkeypatch):
+    """Give `card_a` an epiphany II that hits for 200% and leave the character with no in-game decks."""
+    import api.routes.simulate as sim
+
+    _stub_one_card_deck(monkeypatch)
+    sim.state.optimizer.raw_data = {"inventory": {"savedata": []}}
+    cards = {"card_a": {"cost": 1, "link_skill_eff_id": ["e1"]}, "card_a_rsp2": {"cost": 1, "link_skill_eff_id": ["e2"]}}
+    effects = {"e1": {"eff": "SKILL_EFF_DMG", "eff_value": 100, "eff_count_value": 1}, "e2": {"eff": "SKILL_EFF_DMG", "eff_value": 200, "eff_count_value": 1}}
+    monkeypatch.setattr(sim, "_resolve_card_db", lambda: (cards, effects, {"rsp2_card_a": "card_a_rsp2"}))
+
+
+def test_simulate_uses_a_sent_card_list_with_its_epiphanies(monkeypatch):
+    _stub_epiphany_card(monkeypatch)
+    cards = [{"card_id": "card_a", "epiphany_level": 2}, {"card_id": "card_a"}]
+    resp = TestClient(app).post("/api/simulate/damage", json={"char_name": "Tester", "dmg_decrease": 0.5, "cards": cards})
+    assert resp.status_code == 200
+    body = resp.json()
+    assert body["deck_id"] is None
+    assert [(card["spark_id"], card["normal_damage"]) for card in body["cards"]] == [("rsp2_card_a", 1000.0), (None, 500.0)]
+
+
+def test_simulate_ignores_epiphanies_when_sparks_are_off(monkeypatch):
+    _stub_epiphany_card(monkeypatch)
+    cards = [{"card_id": "card_a", "epiphany_level": 2}]
+    resp = TestClient(app).post("/api/simulate/damage", json={"char_name": "Tester", "dmg_decrease": 0.5, "cards": cards, "use_sparks": False})
+    assert [card["normal_damage"] for card in resp.json()["cards"]] == [500.0]
