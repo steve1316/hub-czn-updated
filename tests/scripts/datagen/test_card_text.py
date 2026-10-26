@@ -105,10 +105,10 @@ CRAVINGS = [
 
 
 def test_match_epiphany_reads_one_changed_number_on_a_long_text():
-    # Levels 0 and 2 differ only by "3" against "4 time(s) per turn". The first read has the circled digit the picture shows.
+    # Levels 0 and 2 differ only by "3" against "4 time(s) per turn". The second read has the circled 3 (u2462) the picture shows.
     read = "WhenFractureor Agony is activated through a Targeting Card,2Fracture and3 Agony to the target {} time(s) per tum)"
     assert match_epiphany(read.format("4"), CRAVINGS, []) == Match(2, None)
-    assert match_epiphany(read.format("③"), CRAVINGS, []) == Match(0, None)
+    assert match_epiphany(read.format("\u2462"), CRAVINGS, []) == Match(0, None)
 
 
 def test_match_epiphany_mends_a_zero_read_as_an_o():
