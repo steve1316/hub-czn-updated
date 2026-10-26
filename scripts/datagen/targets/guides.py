@@ -27,7 +27,7 @@ from pathlib import Path
 
 from PIL import Image
 
-from scripts.datagen import card_text, epiphany, guides_qc, images, roster
+from scripts.datagen import card_text, epiphany, guides_qc, images, potential_overlay, roster
 from scripts.datagen.art import wanted, webp
 from scripts.datagen.epiphany import Extra, Variant
 from scripts.datagen.set_names import set_line
@@ -45,6 +45,8 @@ CONTENT_PATH = Path("src/pages/guides/guides-content.ts")
 # Each guide's potentials tree picture, named after the guide. Only ever added, like card art.
 POTENTIALS_DIR = DATA_DIR / "potentials"
 POTENTIALS_QUALITY = 90
+# The client table that tells which stat each character's two stat nodes give.
+POTENTIAL_NODE_TABLE = "potential_node@potential_node.json"
 # Wide pictures nothing identified (relic screenshot strips, skill clips) ship as image blocks, named after their hash. Only ever added.
 IMAGES_DIR = DATA_DIR / "images"
 IMAGE_QUALITY = 85
@@ -316,6 +318,7 @@ def build(ctx: Context) -> TargetResult:
     tab_ids = overrides.directives.get("_tabs", {})
     names = {_normalise(entry["name"]): res_id for res_id, entry in roster.combatants().items()}
     own_cards = _cards_by_owner(ctx)
+    potential_rows = ctx.client.rows(POTENTIAL_NODE_TABLE)
     sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
     sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
     shared_cards = _shared_cards()
@@ -355,6 +358,7 @@ def build(ctx: Context) -> TargetResult:
             "name": name,
             "source": {"url": EDIT_URL.format(gid=gid), "label": {"en": SOURCE_LABEL}},
         }
+        builder.icons = potential_overlay.variant_icons(potential_rows, str(res_id))
         sections, updated = builder.sections(grid)
         if updated:
             guide["updated"] = updated
@@ -364,6 +368,8 @@ def build(ctx: Context) -> TargetResult:
         # Written every run like the guide itself, so a tree the author redraws replaces the old one.
         for file_name, download in builder.pictures.items():
             files[POTENTIALS_DIR / file_name] = webp(io.BytesIO(download.data), quality=POTENTIALS_QUALITY)
+        for file_name, data in builder.trees.items():
+            files[POTENTIALS_DIR / file_name] = data
         for file_name, download in builder.strips.items():
             if (path := IMAGES_DIR / file_name) not in new_files and wanted(ctx, path):
                 new_files[path] = webp(io.BytesIO(download.data), quality=IMAGE_QUALITY)
@@ -778,6 +784,10 @@ class _GuideBuilder:
         self.read_text = read_text
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
+        # File name -> encoded WebP, for the guide's clean potentials tree with the author's ring colours drawn on it.
+        self.trees: dict[str, bytes] = {}
+        # Node label -> icon name for the character's two stat nodes, set by `build`.
+        self.icons: dict[str, str] = {}
         # File name -> picture, for the wide strips this guide shows as image blocks.
         self.strips: dict[str, _Download] = {}
         # For the QC report: the cells of dropped icons, of pictures given a card by the run they sit in, and the note lines placed by their number.
@@ -858,8 +868,9 @@ class _GuideBuilder:
         image = f"{self.guide_slug}.webp" if tree else None
         if tree:
             self.pictures[image] = self.downloads.get(tree.images[0], self._picture_key(tree, 0))
+        tree_image, coloured = self._tree(self.pictures[image].picture if tree else None)
         bold = _bold_levels(ego) if ego else []
-        block = {"type": "potentials", "image": image, "legend": colours,
+        block = {"type": "potentials", "image": image, "treeImage": tree_image, "coloured": coloured, "legend": colours,
                  "ego": [{"level": level, "text": self._text(note.strip()), **({"bold": True} if level - 1 < len(bold) and bold[level - 1] else {})}
                          for level, note in enumerate(notes[1:], 1)]}
         if notes[0].strip():
@@ -867,6 +878,23 @@ class _GuideBuilder:
         used = {cell.ref for cell in (legend, tree, ego) if cell}
         rest = [cell for cell in band if cell.ref not in used and not (_is_label_row([cell.text]) and _POTENTIALS_HEADING.search(cell.text))]
         return [block, *([self._prose("\n".join(extra))] if extra else [])], rest
+
+    def _tree(self, author: Image.Image | None) -> tuple[str, bool]:
+        """
+        Draw this guide's clean potentials tree from the author's picture.
+
+        Args:
+            author: The author's tree picture, or None when the tab has none.
+
+        Returns:
+            The file name of the tree, which is kept in `trees`, and whether the author's ring colours were read.
+        """
+        picture, coloured = potential_overlay.build(author, self.icons)
+        name = f"{self.guide_slug}-tree.webp"
+        buffer = io.BytesIO()
+        picture.save(buffer, "WEBP", quality=POTENTIALS_QUALITY)
+        self.trees[name] = buffer.getvalue()
+        return name, coloured
 
     def _panel(self, cells: list[Cell]) -> tuple[str | None, list[dict], bool]:
         """

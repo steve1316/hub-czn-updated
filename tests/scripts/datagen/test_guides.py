@@ -511,6 +511,16 @@ def test_potentials_without_a_tree_picture():
     builder = _builder()
     [section], _ = builder.sections(_potentials_grid(tree=False))
     assert section["blocks"][0]["image"] is None and not builder.pictures
+    # The clean tree is still drawn, with no colours.
+    assert section["blocks"][0]["treeImage"] == "tab-tree.webp" and section["blocks"][0]["coloured"] is False
+    assert set(builder.trees) == {"tab-tree.webp"}
+
+
+def test_potentials_picture_that_does_not_register_gets_the_clean_tree():
+    builder = _builder(picture_size=(371, 318))
+    [section], _ = builder.sections(_potentials_grid())
+    assert section["blocks"][0]["treeImage"] == "tab-tree.webp" and section["blocks"][0]["coloured"] is False
+    assert builder.trees["tab-tree.webp"][:4] == b"RIFF"
 
 
 def test_potentials_legend_keeps_other_wording_and_extra_lines():
