@@ -477,7 +477,6 @@ const en = {
     },
     builderDeck: '{{name}}\'s Deck Builder deck',
     unsaved: 'Unsaved',
-    savedMissing: 'This saved deck is no longer in the Deck Builder.',
     notOwned: '{{name}} is not in the loaded capture, so their deck cannot be simulated.',
     useSparks: 'Apply Epiphany upgrades',
     run: 'Simulate',

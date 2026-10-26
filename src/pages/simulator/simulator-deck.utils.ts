@@ -1,7 +1,7 @@
 import type { SimDeckCard } from "@/lib/types"
 import type { DeckBuilderExportSlot } from "@/pages/deck-builder/deck-builder.types"
 
-const EPIPHANY_VARIANT = /_epiphany_(\d+)$/
+const EPIPHANY_VARIANT = /_epiphany_(\d+)$/i
 
 /** One Deck Builder combatant's deck, sent to the Simulate tab through router state. */
 export interface DeckBuilderHandoff {
