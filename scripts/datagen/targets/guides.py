@@ -325,9 +325,8 @@ def build(ctx: Context) -> TargetResult:
     text_cache: dict[str, str] = json.loads(text_cache_path.read_text(encoding="utf-8")) if text_cache_path.is_file() else {}
     title_cache_path = cache / CARD_TITLE_CACHE
     title_cache: dict[str, str] = json.loads(title_cache_path.read_text(encoding="utf-8")) if title_cache_path.is_file() else {}
-    fallbacks = _CardFallbacks(
-        _TitleCards(card_names, title_cache), _CachedSift("sift-wide", _wide_card_art(ctx), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
-    )
+    titles = _TitleCards(card_names, title_cache)
+    sift_wide = _CachedSift("sift-wide", lambda: _wide_card_art(ctx), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
     read_text = lambda data: card_text.read_card_text(data, text_cache)
     decks = _DeckPictures()
     issues: list[Issue] = []
@@ -349,7 +348,7 @@ def build(ctx: Context) -> TargetResult:
         cards = _CachedCards(illustrations, card_ids, match_cache)
         guide_slug = slug(name, _SLUG_MAX_LENGTH)
         builder = _GuideBuilder(ctx, downloads, faces, sift_faces, cards, sift_cards, card_names, shared_cards, variants_of, decks, overrides, labels, tab_name, guide_slug,
-                               fallbacks, read_text)
+                               titles, sift_wide, read_text)
         guide = {
             "charResId": res_id,
             "name": name,
@@ -443,6 +442,11 @@ def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
     return owned
 
 
+def _is_base_card(card_id: str) -> bool:
+    """Whether a card id is a base card, not an epiphany copy (`_rsp`) or a potential (`_pot`) of one."""
+    return "_rsp" not in card_id and not card_id.endswith("_pot")
+
+
 def _card_candidates(ctx: Context, own_cards: list[str]) -> tuple[dict[str, Path], dict[str, str]]:
     """
     The illustrations one character's cards use.
@@ -456,9 +460,7 @@ def _card_candidates(ctx: Context, own_cards: list[str]) -> tuple[dict[str, Path
     """
     illustrations: dict[str, Path] = {}
     card_ids: dict[str, str] = {}
-    for card_id in own_cards:
-        if "_rsp" in card_id or card_id.endswith("_pot"):
-            continue
+    for card_id in filter(_is_base_card, own_cards):
         path = ctx.client.illustration(ctx.client.cards[card_id])
         if path is not None:
             illustrations.setdefault(path.stem, path)
@@ -551,18 +553,26 @@ class _CachedSift:
         """
         Args:
             pool: The pool's name in cache keys, such as "sift-cards".
-            candidates: Key -> its images.
+            candidates: Key -> its images, or a function that returns them, which is not called until the first picture is matched.
             cache: "<picture sha1>:<pool>:<candidates and settings sha1>" -> key, or "" for no match. Updated in place.
             options: Passed on to `images.SiftMatcher`.
         """
         self.pool = pool
-        self.candidates = candidates
         self.cache = cache
         self.options = options
-        # The matcher's settings are part of the signature, so tuning a threshold re-matches every picture.
-        settings = sorted((name, value) for name, value in vars(images).items() if name.startswith("SIFT_"))
-        self.signature = hashlib.sha1(f"{sorted(candidates)}{settings}{sorted(options.items())}".encode("utf-8")).hexdigest()[:12]
+        self._candidates = candidates
         self._matcher: images.SiftMatcher | None = None
+
+    @cached_property
+    def candidates(self) -> dict[str, list[Path]]:
+        """The pool's candidates, gathered on first use."""
+        return self._candidates() if callable(self._candidates) else self._candidates
+
+    @cached_property
+    def signature(self) -> str:
+        """Names the candidates and settings, so tuning a threshold re-matches every picture."""
+        settings = sorted((name, value) for name, value in vars(images).items() if name.startswith("SIFT_"))
+        return hashlib.sha1(f"{sorted(self.candidates)}{settings}{sorted(self.options.items())}".encode("utf-8")).hexdigest()[:12]
 
     def match(self, picture: Image.Image, data: bytes) -> str | None:
         """
@@ -631,64 +641,54 @@ class _TitleCards:
         # Name (letters only) -> the base ids of the cards with it. An epiphany's id counts as its base card.
         self._by_name: dict[str, set[str]] = {}
         for card_id, name in card_names.items():
-            if not card_id.endswith("_pot") and (key := _title_key(name)):
-                self._by_name.setdefault(key, set()).add(_EPIPHANY_ID.sub("", card_id))
+            base = _EPIPHANY_ID.sub("", card_id)
+            if _is_base_card(base) and (key := _title_key(name)):
+                self._by_name.setdefault(key, set()).add(base)
         self._names = list(self._by_name)
         # Title (letters only) -> the ids of the closest card name and how close it is, remembered across pictures.
         self._found: dict[str, tuple[set[str], float]] = {}
 
-    def card_id(self, data: bytes, own: set[str], min_ratio: float = _TITLE_CLOSENESS) -> str | None:
+    def match(self, data: bytes, own: set[str]) -> tuple[str | None, float]:
         """
-        The card a render's title names.
+        The base card a render's title names, and how closely the title matches the card's name.
 
         Args:
             data: The picture file.
             own: The base card ids of the guide's character, which win when several cards share the name.
-            min_ratio: How close the read title must be to the card's name, from 0 to 1.
 
         Returns:
-            The card id, or None when the title is unreadable, not close enough to any card name, or shared by cards nothing can tell apart.
+            The card id and the match ratio from 0 to 1, or (None, 0.0) when the title is unreadable, not close to any card name, or shared by cards
+            nothing can tell apart.
         """
         title = _title_key(card_text.read_card_title(data, self.cache))
         if len(title) < _TITLE_MIN_LETTERS:
-            return None
+            return None, 0.0
         if title not in self._found:
             close = difflib.get_close_matches(title, self._names, n=1, cutoff=_TITLE_CLOSENESS)
             self._found[title] = (self._by_name[close[0]], difflib.SequenceMatcher(None, title, close[0]).ratio()) if close else (set(), 0.0)
         found, ratio = self._found[title]
         ids = (found & own) or found
-        return next(iter(ids)) if len(ids) == 1 and ratio >= min_ratio else None
+        return (next(iter(ids)), ratio) if len(ids) == 1 else (None, 0.0)
 
-
-class _CardFallbacks:
-    """What identifies a card render after the character's own cards and the deck builder's art have missed it."""
-
-    def __init__(self, titles: _TitleCards, wide: _CachedSift):
+    def card_id(self, data: bytes, own: set[str], min_ratio: float = _TITLE_CLOSENESS) -> str | None:
         """
-        Args:
-            titles: Reads the title bar.
-            wide: SIFT over every card illustration in the client.
-        """
-        self.titles = titles
-        self.wide = wide
-
-    def card_id(self, download: _Download, own: set[str]) -> str | None:
-        """
-        The card a render shows, by its title and then by its art.
+        The card a render's title names, when the title is at least `min_ratio` close to its name.
 
         Args:
-            download: The sheet's picture.
-            own: The guide character's base card ids.
+            data: The picture file.
+            own: The base card ids of the guide's character.
+            min_ratio: How close the read title must be to the card's name, from 0 to 1.
 
         Returns:
-            The card id, or None when neither is clear.
+            The card id, or None when there is no such card.
         """
-        return self.titles.card_id(download.data, own) or self.wide.match(download.picture, download.data)
+        card_id, ratio = self.match(data, own)
+        return card_id if ratio >= min_ratio else None
 
 
 def _title_key(text: str) -> str:
     """A card title as lower-case letters only, without a bracketed epiphany name, for matching read titles to card names."""
-    return re.sub(r"[^a-z]", "", re.sub(r"\(.*?\)", "", text.casefold()))
+    return card_text._letters(re.sub(r"\(.*?\)", "", text))
 
 
 def _wide_card_art(ctx: Context) -> dict[str, list[Path]]:
@@ -701,16 +701,8 @@ def _wide_card_art(ctx: Context) -> dict[str, list[Path]]:
     Returns:
         Base card id -> its illustration, for the first card that uses each.
     """
-    art: dict[str, list[Path]] = {}
-    seen: set[str] = set()
-    for card_id in sorted(ctx.client.cards):
-        if "_rsp" in card_id or card_id.endswith("_pot"):
-            continue
-        path = ctx.client.illustration(ctx.client.cards[card_id])
-        if path is not None and path.stem not in seen:
-            seen.add(path.stem)
-            art[card_id] = [path]
-    return art
+    illustrations, card_ids = _card_candidates(ctx, sorted(ctx.client.cards))
+    return {card_ids[name]: [path] for name, path in illustrations.items()}
 
 
 class _GuideBuilder:
@@ -718,7 +710,7 @@ class _GuideBuilder:
 
     def __init__(self, ctx: Context, downloads: _Downloads, faces: images.FaceMatcher, sift_faces: _CachedSift, cards: _CachedCards,
                  sift_cards: _CachedSift, card_names: dict[str, str], shared_cards: dict[str, dict], variants_of, decks: _DeckPictures, overrides: Overrides,
-                 labels: _PictureLabels, tab_name: str, guide_slug: str, fallbacks: _CardFallbacks | None = None, read_text=None):
+                 labels: _PictureLabels, tab_name: str, guide_slug: str, titles: _TitleCards, sift_wide: _CachedSift, read_text):
         """
         Args:
             ctx: The run context.
@@ -735,8 +727,9 @@ class _GuideBuilder:
             labels: Labels by picture, which also collect what nothing identified.
             tab_name: The sheet tab, used in cell override keys and references.
             guide_slug: The guide's id, which names its potentials picture.
-            fallbacks: Identifies the card renders `cards` and `sift_cards` miss, by their title or among every card in the client.
-            read_text: Picture bytes -> its OCR text, which reads the epiphany of a repeated card in a rated row. Not read when None.
+            titles: Reads a card render's title bar and finds the card it names.
+            sift_wide: SIFT over every card illustration in the client, for the renders nothing else identified.
+            read_text: Picture bytes -> its OCR text, which reads the epiphany of a repeated card in a rated row.
         """
         self.ctx = ctx
         self.downloads = downloads
@@ -752,7 +745,8 @@ class _GuideBuilder:
         self.labels = labels
         self.tab_name = tab_name
         self.guide_slug = guide_slug
-        self.fallbacks = fallbacks
+        self.titles = titles
+        self.sift_wide = sift_wide
         self.read_text = read_text
         # File name -> picture, for the pictures this guide ships (its potentials tree).
         self.pictures: dict[str, _Download] = {}
@@ -990,6 +984,11 @@ class _GuideBuilder:
             return name
         return None
 
+    @cached_property
+    def _own_cards(self) -> set[str]:
+        """The base card ids of this guide's character."""
+        return set(self.cards.card_ids.values())
+
     def _card(self, download: _Download) -> str | None:
         """
         The card a render shows.
@@ -998,14 +997,15 @@ class _GuideBuilder:
             download: The sheet's picture.
 
         Returns:
-            The card a clearly read title names, else the base card id from this character's cards, then the deck builder's card art, then the fallbacks.
-            None when none is clear.
+            The art match, from this character's cards and then the deck builder's card art. A clearly read title replaces it only when it names a
+            different base card, as a copy of another card's art is the render with a changed title. Without an art match, the title and then the
+            art of every card in the client. None when none is clear.
         """
-        found = self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
-        if self.fallbacks is None:
-            return found
-        own = set(self.cards.card_ids.values())
-        return self.fallbacks.titles.card_id(download.data, own, _TITLE_TRUSTED) or found or self.fallbacks.card_id(download, own)
+        art = self.cards.card_id(download.picture, download.data) or self.sift_cards.match(download.picture, download.data)
+        title, ratio = self.titles.match(download.data, self._own_cards)
+        if art is None:
+            return title or self.sift_wide.match(download.picture, download.data)
+        return title if title and ratio >= _TITLE_TRUSTED and title != _EPIPHANY_ID.sub("", art) else art
 
     def _settle_repeats(self, row_cards: list[dict], ratings: dict[int, str]) -> list[dict]:
         """
@@ -1052,7 +1052,7 @@ class _GuideBuilder:
         Returns:
             Their levels, or None when any cannot be read or two show the same level.
         """
-        if self.read_text is None or not self.variants_of(run[0]["cardId"]):
+        if not self.variants_of(run[0]["cardId"]):
             return None
         levels = []
         for card in run:

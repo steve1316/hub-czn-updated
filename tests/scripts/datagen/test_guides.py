@@ -426,7 +426,7 @@ def _builder(entries: dict | None = None, picture_size=(1200, 140)) -> guides._G
     ctx = SimpleNamespace(text=lambda text, **_: text)
     downloads = SimpleNamespace(get=lambda url, key: banner)
     return guides._GuideBuilder(ctx, downloads, None, None, None, None, {}, {}, _variants_of, guides._DeckPictures(), SimpleNamespace(entries=entries or {}),
-                                guides._PictureLabels({}), "Tab", "tab")
+                                guides._PictureLabels({}), "Tab", "tab", None, None, lambda data: "")
 
 
 def _grid(*cells: Cell) -> dict[tuple[int, int], Cell]:
@@ -814,9 +814,13 @@ def test_an_unread_picture_that_does_not_complete_a_run_stays_a_gap():
     assert [card["epiphany"] for card in guides._number_runs(row)] == [1, 2]
 
 
-def test_two_pictures_of_one_card_show_as_one_card_times_two():
+def test_two_pictures_of_one_card_show_as_one_card_times_two(monkeypatch):
+    # Neither picture's epiphany can be read.
+    monkeypatch.setattr(guides, "_resolve_deck_card", lambda *args: False)
     builder = _builder()
     row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
+    for card in row:
+        card["picture"] = (_render(), "B1")
     settled = builder._settle_repeats(row, {0: "5/5", 1: "5/5"})
     assert [(card["cardId"], card["count"]) for card in settled] == [("c_30134_uni2", 2)]
     # Different ratings are two different judgements, so both stay.
@@ -835,3 +839,31 @@ def test_two_pictures_of_one_card_take_the_levels_they_show(monkeypatch):
     row = guides._number_runs(_row("c_30134_uni2", "c_30134_uni2"))
     row[0]["picture"], row[1]["picture"] = (None, "B1"), (None, "B2")
     assert [card["level"] for card in builder._settle_repeats(row, {0: "5/5", 1: "3/5"})] == [1, 4]
+
+
+def _render() -> guides._Download:
+    return guides._Download(_png(_pattern(5, (123, 183))))
+
+
+def _card_builder(art: str | None, title: tuple[str | None, float], wide: str | None = None) -> guides._GuideBuilder:
+    builder = _builder()
+    builder.cards = SimpleNamespace(card_id=lambda picture, data: art, card_ids={"x": "c_1_srt4"})
+    builder.sift_cards = SimpleNamespace(match=lambda picture, data: None)
+    builder.titles = SimpleNamespace(match=lambda data, own: title)
+    builder.sift_wide = SimpleNamespace(match=lambda picture, data: wide)
+    return builder
+
+
+def test_card_keeps_the_art_id_when_the_title_names_the_same_base_card():
+    # A title only names the base card, so it must not replace the exact epiphany id the art found.
+    assert _card_builder("c_1_srt4_rsp1", ("c_1_srt4", 1.0))._card(_render()) == "c_1_srt4_rsp1"
+
+
+def test_card_takes_a_trusted_title_over_art_of_another_card():
+    assert _card_builder("c_1_srt4", ("c_2_tut1", 0.95))._card(_render()) == "c_2_tut1"
+    assert _card_builder("c_1_srt4", ("c_2_tut1", 0.85))._card(_render()) == "c_1_srt4"
+
+
+def test_card_without_art_uses_the_title_then_the_wide_pool():
+    assert _card_builder(None, ("c_2_tut1", 0.85), "c_9")._card(_render()) == "c_2_tut1"
+    assert _card_builder(None, (None, 0.0), "c_9")._card(_render()) == "c_9"
