@@ -302,7 +302,7 @@ export function DeckBuilderHeader({
                 className="inline-flex h-9 items-center justify-center gap-2 rounded-lg border border-[#34344a] px-3 text-xs font-semibold text-[#d4d4d8] hover:bg-[#1b1b29] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Plus size={14} />
-                {t('deckBuilder.new')}
+                {t('deckBuilder.saveAs')}
               </button>
 
               <button
@@ -320,7 +320,9 @@ export function DeckBuilderHeader({
           <div className="flex shrink-0 flex-wrap items-center gap-2 xl:justify-end">
             <button
               type="button"
-              onClick={onReset}
+              onClick={() => {
+                if (window.confirm(t('deckBuilder.resetConfirm'))) onReset()
+              }}
               className="inline-flex h-9 items-center gap-2 rounded-lg border border-[#7f1d1d] px-3 text-xs font-semibold text-[#f87171] hover:bg-[#7f1d1d]/20"
             >
               <Trash2 size={14} />

@@ -85,9 +85,9 @@ export function EquipmentSlot({
             onClear()
           }}
           title={t('deckBuilder.equipment.remove', { slot: title })}
-          className="absolute right-1 top-1 grid h-[15px] w-[15px] place-items-center rounded border border-[#333348] bg-black/80 text-[#fca5a5] opacity-0 transition hover:bg-[#7f1d1d] group-hover:opacity-100"
+          className="absolute right-1 top-1 grid h-5 w-5 place-items-center rounded border border-[#333348] bg-black/80 text-[#fca5a5] opacity-0 transition hover:bg-[#7f1d1d] focus-visible:opacity-100 group-hover:opacity-100"
         >
-          <X size={9} />
+          <X size={12} />
         </button>
       )}
     </div>

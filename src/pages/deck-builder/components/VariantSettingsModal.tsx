@@ -499,7 +499,7 @@ function EpiphanyOptionButton({
             ))}
           </div>
 
-          <p className="mt-2 line-clamp-2 text-[11px] font-bold leading-snug text-white">
+          <p className="mt-2 line-clamp-2 text-xs font-bold leading-snug text-white">
             {item.description}
           </p>
         </div>
@@ -620,7 +620,7 @@ function VariantButton({
         </div>
       )}
 
-      <p className="mt-1.5 line-clamp-2 text-[11px] font-semibold leading-snug text-[#dbeafe]">
+      <p className="mt-1.5 line-clamp-2 text-xs font-semibold leading-snug text-[#dbeafe]">
         {formattedDescription.text}
       </p>
     </button>
@@ -732,7 +732,7 @@ function SelectedPersonaEngravingSlotCard({
         )}
       </div>
 
-      <p className={`mt-1 text-[11px] font-semibold leading-relaxed ${toneClasses.text}`}>
+      <p className={`mt-1 text-xs font-semibold leading-relaxed ${toneClasses.text}`}>
         {engraving?.description ?? emptyLabel}
       </p>
     </div>
@@ -759,7 +759,7 @@ function SelectedEpiphanySummaryRow({
       <p className="text-[11px] font-black uppercase tracking-wide opacity-80">
         {label}
       </p>
-      <p className="mt-0.5 line-clamp-1 text-[11px] font-bold leading-snug">
+      <p className="mt-0.5 line-clamp-1 text-xs font-bold leading-snug">
         {value}
       </p>
     </div>
@@ -1038,7 +1038,7 @@ export function VariantSettingsModal({
                     type="button"
                     onClick={() => setActiveSection('description')}
                     className={[
-                      'rounded-full px-4 py-1.5 text-[11px] font-bold transition',
+                      'rounded-full px-4 py-1.5 text-xs font-bold transition',
                       activeSection === 'description'
                         ? 'bg-[#312e81] text-white shadow'
                         : 'text-[#a1a1aa] hover:text-white',
@@ -1052,7 +1052,7 @@ export function VariantSettingsModal({
                       type="button"
                       onClick={() => setActiveSection(secondarySection)}
                       className={[
-                        'rounded-full px-4 py-1.5 text-[11px] font-bold transition',
+                        'rounded-full px-4 py-1.5 text-xs font-bold transition',
                         activeSection === secondarySection
                           ? 'bg-[#075985] text-white shadow'
                           : 'text-[#a1a1aa] hover:text-white',
@@ -1094,7 +1094,7 @@ export function VariantSettingsModal({
         </header>
 
         <main className="grid min-h-0 flex-1 grid-cols-[296px_minmax(0,1fr)] gap-4 overflow-hidden p-4">
-          <aside className="min-h-0 overflow-hidden rounded-xl border border-[#303044] bg-[#12121a] p-2.5">
+          <aside className="min-h-0 overflow-y-auto rounded-xl border border-[#303044] bg-[#12121a] p-2.5">
             <p className="mb-2 text-[11px] font-black uppercase tracking-wider text-[#8b8b9a]">
               {t('deckBuilder.variantModal.currentCard')}
             </p>
@@ -1122,7 +1122,7 @@ export function VariantSettingsModal({
                   <h3 className="truncate text-sm font-black text-white">
                     {displayTitle}
                   </h3>
-                  <p className="text-[11px] font-semibold text-[#a1a1aa]">
+                  <p className="text-xs font-semibold text-[#a1a1aa]">
                     Spark +{card.spark_count}
                   </p>
                 </div>
@@ -1138,7 +1138,7 @@ export function VariantSettingsModal({
                     </div>
                   )}
 
-                  <p className="line-clamp-2 text-[11px] font-semibold leading-relaxed text-[#dbeafe]">
+                  <p className="line-clamp-2 text-xs font-semibold leading-relaxed text-[#dbeafe]">
                     {formattedCurrentDescription.text}
                   </p>
                 </div>
@@ -1187,7 +1187,7 @@ export function VariantSettingsModal({
                     <p className="text-[11px] font-black uppercase tracking-wide text-[#8b8b9a]">
                       {t('deckBuilder.variantModal.divineGod')}
                     </p>
-                    <p className="mt-0.5 line-clamp-1 text-[11px] font-semibold text-[#8b8b9a]">
+                    <p className="mt-0.5 line-clamp-1 text-xs font-semibold text-[#8b8b9a]">
                       {selectedDivineGod
                         ? t('deckBuilder.variantModal.filteringByGod', {
                             god: selectedDivineGod.displayName,
@@ -1229,7 +1229,7 @@ export function VariantSettingsModal({
                   />
 
                   {combatantClass && (
-                    <p className="rounded-lg border border-[#303044] bg-[#101018] px-2 py-1 text-[11px] font-semibold text-[#a1a1aa]">
+                    <p className="rounded-lg border border-[#303044] bg-[#101018] px-2 py-1 text-xs font-semibold text-[#a1a1aa]">
                       {t('deckBuilder.variantModal.combatantClassLabel')}{' '}
                       <span className="font-black text-white">{combatantClass}</span>
                     </p>
@@ -1364,7 +1364,7 @@ export function VariantSettingsModal({
                         <button
                           type="button"
                           onClick={() => setSelectedVariant(null)}
-                          className="rounded-lg border border-[#333348] px-3 py-1.5 text-[11px] font-black text-[#d1d5db] hover:border-[#60a5fa] hover:text-[#93c5fd]"
+                          className="rounded-lg border border-[#333348] px-3 py-1.5 text-xs font-black text-[#d1d5db] hover:border-[#60a5fa] hover:text-[#93c5fd]"
                         >
                           {t('deckBuilder.variantModal.baseVariant')}
                         </button>

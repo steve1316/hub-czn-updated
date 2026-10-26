@@ -1,5 +1,5 @@
 import { describe, it, expect } from "vitest"
-import { calculateDeckBuilderSlotCost } from "./deck-builder-cost.utils"
+import { calculateDeckBuilderSlotCost, costBreakdownLines } from "./deck-builder-cost.utils"
 import type { DeckCardInstance, SquadSlot } from "./deck-builder.types"
 
 /**
@@ -48,5 +48,19 @@ describe("monster card cost", () => {
 
   it("falls back to common when a card has no rarity", () => {
     expect(calculateDeckBuilderSlotCost(slot([monster("a", null)])).monsterCommonCards).toBe(20)
+  })
+})
+
+describe("cost breakdown lines", () => {
+  it("lists only the categories that cost points, biggest first", () => {
+    const cost = calculateDeckBuilderSlotCost(slot([monster("a", "Common"), monster("b", "Rare"), monster("c", "Common")]))
+    expect(costBreakdownLines(cost)).toEqual([
+      { key: "monsterRareCards", points: 50 },
+      { key: "monsterCommonCards", points: 40 },
+    ])
+  })
+
+  it("is empty for a deck that costs nothing", () => {
+    expect(costBreakdownLines(calculateDeckBuilderSlotCost(slot([])))).toEqual([])
   })
 })

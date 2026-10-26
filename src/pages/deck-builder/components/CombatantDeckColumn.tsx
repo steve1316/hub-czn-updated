@@ -18,7 +18,8 @@ import type {
   DeckCardInstance,
   SquadSlot,
 } from '../deck-builder.types'
-import type { DeckBuilderSlotCostBreakdown } from '../deck-builder-cost.utils'
+import { costBreakdownLines, type DeckBuilderSlotCostBreakdown } from '../deck-builder-cost.utils'
+import { InfoPopover } from '@/components/ui/info-popover'
 import {
   formatCardDisplayDescription,
   mergeCardDisplayTags,
@@ -139,7 +140,7 @@ function CompactTypeBadge({ type }: { type: string }) {
     <span
       title={type}
       className={[
-        'inline-block min-w-0 max-w-[34px] truncate rounded border px-0.5 py-[1px] text-[11px] font-black uppercase leading-none tracking-wide shadow',
+        'inline-block min-w-0 max-w-[64px] truncate rounded border px-0.5 py-[1px] text-[11px] font-black uppercase leading-none tracking-wide shadow',
         getCompactTypeClassName(type),
       ].join(' ')}
     >
@@ -187,10 +188,6 @@ function CompactDeckCard({
   const hasEpiphanySettings = item.variants.length > 0 || canUseDeckBuilderEpiphanies(item.card)
   const epiphanySummary = getDeckCardEpiphanySummary(item)
 
-  const isLongTitle = displayName.length > 16
-  const isVeryLongTitle = displayName.length > 24
-  const isLongDescription = Boolean(displayDescription && displayDescription.length > 80)
-
   const hasCombatStats =
     item.card.eff_value > 0 ||
     item.card.hits > 0 ||
@@ -207,7 +204,7 @@ function CompactDeckCard({
           onOpenDetails()
         }
       }}
-      className="group relative flex h-[180px] cursor-pointer flex-col overflow-hidden rounded-lg border border-[#2d2d3a] bg-[#101018] shadow-lg transition hover:border-[#60a5fa] focus:outline-none focus:ring-2 focus:ring-[#60a5fa]/45"
+      className="group relative flex h-[200px] cursor-pointer flex-col overflow-hidden rounded-lg border border-[#2d2d3a] bg-[#101018] shadow-lg transition hover:border-[#60a5fa] focus:outline-none focus:ring-2 focus:ring-[#60a5fa]/45"
     >
       <div className="absolute inset-0">
         <CardImage
@@ -245,28 +242,12 @@ function CompactDeckCard({
           </div>
         )}
 
-        <h3
-          className={[
-            'line-clamp-2 font-black text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]',
-            isVeryLongTitle
-              ? 'text-[11px] leading-[1.04]'
-              : isLongTitle
-                ? 'text-[11px] leading-[1.05]'
-                : 'text-[12px] leading-[1.08]',
-          ].join(' ')}
-        >
+        <h3 title={displayName} className="line-clamp-2 text-sm font-black leading-tight text-white drop-shadow-[0_2px_2px_rgba(0,0,0,0.9)]">
           {displayName}
         </h3>
 
         {displayDescription && (
-          <p
-            className={[
-              'mt-1 font-bold text-white/95 drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]',
-              isLongDescription
-                ? 'line-clamp-2 text-[11px] leading-[1.08]'
-                : 'line-clamp-2 text-[11px] leading-[1.1]',
-            ].join(' ')}
-          >
+          <p title={displayDescription} className="mt-1 line-clamp-2 text-xs font-bold leading-snug text-white/95 drop-shadow-[0_2px_2px_rgba(0,0,0,0.95)]">
             {displayDescription}
           </p>
         )}
@@ -300,7 +281,7 @@ function CompactDeckCard({
         )}
       </div>
 
-      <div className="relative z-10 flex h-8 shrink-0 items-center justify-end gap-1.5 border-t border-white/10 bg-black/80 px-2">
+      <div className="relative z-10 flex h-9 shrink-0 items-center justify-end gap-1 border-t border-white/10 bg-black/80 px-1">
         {hasEpiphanySettings && onOpenVariants && (
           <button
             type="button"
@@ -309,9 +290,9 @@ function CompactDeckCard({
               onOpenVariants()
             }}
             title={t('deckBuilder.card.configureEpiphanies')}
-            className="inline-flex h-5 items-center gap-1 rounded border border-[#075985] bg-[#082f49]/90 px-1.5 text-[11px] font-black text-[#7dd3fc] hover:bg-[#0c4a6e]"
+            className="mr-auto inline-flex h-7 items-center gap-1 rounded border border-[#075985] bg-[#082f49]/90 px-1.5 text-xs font-black text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
-            <Sparkles size={9} />
+            <Sparkles size={12} />
             {t('deckBuilder.card.epiphanyShort')}
           </button>
         )}
@@ -323,9 +304,9 @@ function CompactDeckCard({
             onDuplicate()
           }}
           title={t('deckBuilder.card.duplicate')}
-          className="grid h-5 w-5 place-items-center rounded border border-[#333348] bg-[#111827]/90 text-[#d8b4fe] hover:bg-[#312e81]"
+          className="grid h-7 w-7 shrink-0 place-items-center rounded border border-[#333348] bg-[#111827]/90 text-[#d8b4fe] hover:bg-[#312e81]"
         >
-          <Copy size={10} />
+          <Copy size={13} />
         </button>
 
         <button
@@ -335,9 +316,9 @@ function CompactDeckCard({
             onRemove()
           }}
           title={t('deckBuilder.card.remove')}
-          className="grid h-5 w-5 place-items-center rounded border border-[#333348] bg-[#111827]/90 text-[#fca5a5] hover:bg-[#7f1d1d]"
+          className="grid h-7 w-7 shrink-0 place-items-center rounded border border-[#333348] bg-[#111827]/90 text-[#fca5a5] hover:bg-[#7f1d1d]"
         >
-          <X size={10} />
+          <X size={13} />
         </button>
       </div>
     </article>
@@ -382,6 +363,34 @@ function CardSectionButton({
   )
 }
 
+/**
+ * What each category adds to a deck's points, shown in the Deck points popover.
+ * @param breakdown The deck's cost breakdown.
+ * @returns The breakdown list.
+ */
+function CostBreakdown({ breakdown }: { breakdown: DeckBuilderSlotCostBreakdown }) {
+  const { t } = useTranslation()
+  const lines = costBreakdownLines(breakdown)
+
+  return (
+    <div className="space-y-2">
+      <p>{t('deckBuilder.costBreakdown.intro', { limit: breakdown.limit })}</p>
+      {lines.length === 0 ? (
+        <p className="text-[#b3b3b3]">{t('deckBuilder.costBreakdown.none')}</p>
+      ) : (
+        <ul className="space-y-1">
+          {lines.map(line => (
+            <li key={line.key} className="flex justify-between gap-4">
+              <span>{t(`deckBuilder.costBreakdown.${line.key}`)}</span>
+              <span className="font-mono text-[#93c5fd]">+{line.points}</span>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  )
+}
+
 function CardSelectionModal({
   kind,
   items,
@@ -398,6 +407,8 @@ function CardSelectionModal({
   const { t } = useTranslation()
   const [search, setSearch] = useState('')
   const [page, setPage] = useState(1)
+  // Cards added since the picker opened
+  const [addedCount, setAddedCount] = useState(0)
 
   const filteredItems = useMemo(() => {
     const normalizedSearch = search.trim().toLowerCase()
@@ -506,7 +517,10 @@ function CardSelectionModal({
                 <AvailableDeckBuilderCardButton
                   key={item.card.card_id}
                   item={item}
-                  onAdd={() => onAdd(item)}
+                  onAdd={() => {
+                    onAdd(item)
+                    setAddedCount(count => count + 1)
+                  }}
                   onOpenVariants={
                     getVariants(item).length > 0 || canUseDeckBuilderEpiphanies(item.card)
                       ? () => onOpenVariants(item)
@@ -521,6 +535,11 @@ function CardSelectionModal({
         <footer className="flex items-center justify-between border-t border-[#282838] px-4 py-3">
           <p className="text-xs text-[#8a8a8a]">
             {t('deckBuilder.cardsFound', { count: filteredItems.length })}
+            {addedCount > 0 && (
+              <span role="status" className="ml-3 font-semibold text-[#86efac]">
+                {t('deckBuilder.cardSelection.added', { count: addedCount })}
+              </span>
+            )}
           </p>
 
           <div className="flex items-center gap-2">
@@ -637,7 +656,7 @@ export function CombatantDeckColumn({
               <select
                 value={slot.combatantId ?? ''}
                 onChange={e => onSelectCombatant(e.target.value ? Number(e.target.value) : null)}
-                className="w-full rounded-lg border border-[#333348] bg-[#101018] px-3 py-1.5 text-xs text-white outline-none focus:border-[#60a5fa]"
+                className="w-full rounded-lg border border-[#333348] bg-[#101018] px-3 py-1.5 text-sm text-white outline-none focus:border-[#60a5fa]"
               >
                 <option value="">{t('deckBuilder.slot.selectCombatant')}</option>
                 {characters.map(character => (
@@ -664,7 +683,9 @@ export function CombatantDeckColumn({
 
           <button
             type="button"
-            onClick={onClearDeck}
+            onClick={() => {
+              if (window.confirm(t('deckBuilder.slot.clearDeckConfirm'))) onClearDeck()
+            }}
             disabled={slot.cards.length === 0 && !hasEquipment}
             title={t('deckBuilder.slot.clearDeck')}
             className="mt-5 grid h-8 w-8 place-items-center rounded-lg border border-[#333348] text-[#888] hover:border-[#7f1d1d] hover:text-[#fca5a5] disabled:opacity-40 disabled:hover:border-[#333348] disabled:hover:text-[#888]"
@@ -712,15 +733,21 @@ export function CombatantDeckColumn({
 
         <div className="mt-3 grid grid-cols-3 gap-1.5">
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.cards')}</p>
-            <p className="text-xs font-bold text-white">{slot.cards.length}</p>
+            <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cards')}</p>
+            <p className="text-sm font-bold text-white">{slot.cards.length}</p>
           </div>
 
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.cost')}</p>
+            <div className="flex items-center justify-between gap-1">
+              <p className="whitespace-nowrap text-xs text-[#b3b3b3]">{t('deckBuilder.slot.cost')}</p>
+              <InfoPopover
+                ariaLabel={t('deckBuilder.costBreakdown.title')}
+                content={<CostBreakdown breakdown={slotBuildCost} />}
+              />
+            </div>
             <p
               className={[
-                'text-xs font-bold',
+                'text-sm font-bold',
                 slotBuildCost.isOverLimit
                   ? 'text-[#f87171]'
                   : slotBuildCost.total >= slotBuildCost.limit * 0.8
@@ -733,14 +760,21 @@ export function CombatantDeckColumn({
           </div>
 
           <div className="rounded-lg bg-[#101018] px-2 py-1.5">
-            <p className="text-[11px] uppercase text-[#8a8a8a]">{t('deckBuilder.slot.epiphany')}</p>
-            <p className="text-xs font-bold text-[#93c5fd]">{epiphanyCards.length}</p>
+            <p className="text-xs text-[#b3b3b3]">{t('deckBuilder.slot.epiphany')}</p>
+            <p className="text-sm font-bold text-[#93c5fd]">{epiphanyCards.length}</p>
           </div>
         </div>
 
         {slotBuildCost.isOverLimit && (
           <div className="mt-2 rounded-lg border border-[#7f1d1d] bg-[#7f1d1d]/10 px-2.5 py-2 text-[11px] font-semibold text-[#fca5a5]">
-            {t('deckBuilder.slot.overLimitMessage')}
+            {t('deckBuilder.slot.overLimitMessage', {
+              over: slotBuildCost.total - slotBuildCost.limit,
+              limit: slotBuildCost.limit,
+              causes: costBreakdownLines(slotBuildCost)
+                .slice(0, 2)
+                .map(line => `${t(`deckBuilder.costBreakdown.${line.key}`)} (${line.points})`)
+                .join(', '),
+            })}
           </div>
         )}
       </header>
@@ -786,7 +820,7 @@ export function CombatantDeckColumn({
               </span>
             </div>
 
-            <div className="grid grid-cols-2 gap-2.5 xl:grid-cols-3 2xl:grid-cols-4">
+            <div className="grid grid-cols-2 gap-2.5 2xl:grid-cols-3">
               {groupedCards.map(group => (
                 <CompactDeckCard
                   key={getCardGroupKey(group.item)}
@@ -838,10 +872,7 @@ export function CombatantDeckColumn({
           kind={cardSelectionKind}
           items={selectedModalItems}
           onClose={() => setCardSelectionKind(null)}
-          onAdd={item => {
-            onAddDeckBuilderCard(item)
-            setCardSelectionKind(null)
-          }}
+          onAdd={onAddDeckBuilderCard}
           onOpenVariants={item => {
             onOpenAvailableCardVariants(item)
             setCardSelectionKind(null)
