@@ -37,7 +37,7 @@ export function AboutPage() {
   const { hasUpdate, latestVersion, releaseUrl, isChecking } = useUpdateCheck()
 
   return (
-    <div className="p-6 flex flex-col gap-6 max-w-md">
+    <div className="mx-auto p-6 flex flex-col gap-6 w-full max-w-md">
       <div className="flex flex-col gap-1">
         <h1 className="text-xl font-bold text-[#ffffff]">{t('about.title')}</h1>
       </div>

@@ -76,7 +76,7 @@ function AppRoutes() {
           <Route path="setup"      element={<SetupPage />} />
           <Route path="rescue"     element={<RescuePage />} />
           <Route path="about"      element={<AboutPage />} />
-          <Route path="*"          element={<Navigate to="/fragments" replace />} />
+          <Route path="*"          element={<Navigate to="/" replace />} />
         </Route>
       </Routes>
     </BrowserRouter>
