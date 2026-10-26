@@ -12,7 +12,10 @@ from game_data import (
     EQUIPMENT_SLOTS,
     RARITY,
     SETS,
-    UPGRADES_PER_RARITY,
+    LEGENDARY,
+    MAX_LEVEL,
+    MAX_LEVEL_PER_RARITY,
+    substat_roll_range,
     get_character_name,
 )
 
@@ -64,7 +67,7 @@ class MemoryFragment:
                     substat_map[slot] = Stat(
                         name=stat_info[0], raw_name=raw_stat, value=value,
                         is_percentage=stat_info[2], roll_count=1,
-                        base_value=value if stat_type in [1, 2] else 0.0
+                        base_value=value if stat_type in [1, 2] else 0.0, rarity_num=rarity_num
                     )
                     substat_rolls[slot] = [(value, stat_type)]
                 else:
@@ -77,9 +80,7 @@ class MemoryFragment:
                         substat_map[slot].base_value = value
 
         for slot, stat in substat_map.items():
-            stat_info = STATS.get(stat.raw_name, (stat.name, stat.name, stat.is_percentage, 1.0, 0.5))
-            max_roll = stat_info[3]
-            min_roll = stat_info[4]
+            max_roll, min_roll = substat_roll_range(stat.raw_name, rarity_num)
 
             for value, stat_type in substat_rolls.get(slot, []):
                 is_min = abs(value - min_roll) < 0.01
@@ -127,30 +128,23 @@ class MemoryFragment:
         return self.priority_score
 
     def calculate_potential(self) -> tuple[float, float]:
-        if self.rarity_num < 3:
-            self.potential_low = self.gear_score
-            self.potential_high = self.gear_score
-            return (self.gear_score, self.gear_score)
-
-        max_upgrades = UPGRADES_PER_RARITY.get(self.rarity_num, 3)
-        current_upgrades = sum(s.roll_count - 1 for s in self.substats)
-        remaining_upgrades = max(0, max_upgrades - current_upgrades)
-
-        if remaining_upgrades == 0 or not self.substats:
-            self.potential_low = self.gear_score
-            self.potential_high = self.gear_score
-            return (self.gear_score, self.gear_score)
-
-        min_ratio = 1.0
+        # Every level adds one roll, either a new substat or an upgrade. Each roll is scored on the Legendary scale, so a lower rarity
+        # gains less per roll.
+        remaining_rolls = max(0, MAX_LEVEL_PER_RARITY.get(self.rarity_num, MAX_LEVEL) - self.level)
+        roll_scores = []
         for sub in self.substats:
-            stat_info = STATS.get(sub.raw_name, (sub.name, sub.name, sub.is_percentage, 1.0, 0.5))
-            max_roll = stat_info[3]
-            min_roll = stat_info[4]
-            ratio = min_roll / max_roll if max_roll > 0 else 0.5
-            min_ratio = min(min_ratio, ratio)
+            legend_max = substat_roll_range(sub.raw_name, LEGENDARY)[0]
+            if legend_max > 0:
+                best, worst = substat_roll_range(sub.raw_name, self.rarity_num)
+                roll_scores.append((best / legend_max * 10, worst / legend_max * 10))
 
-        low_gain = remaining_upgrades * min_ratio * 10
-        high_gain = remaining_upgrades * 10
+        if remaining_rolls == 0 or not roll_scores:
+            self.potential_low = self.gear_score
+            self.potential_high = self.gear_score
+            return (self.gear_score, self.gear_score)
+
+        low_gain = remaining_rolls * min(worst for _, worst in roll_scores)
+        high_gain = remaining_rolls * max(best for best, _ in roll_scores)
 
         self.potential_low = round(self.gear_score + low_gain, 1)
         self.potential_high = round(self.gear_score + high_gain, 1)

@@ -49,6 +49,8 @@ EQUIPMENT_SLOTS = {
 SLOT_ORDER = [1, 2, 3, 4, 5, 6]
 
 RARITY = {1: "Common", 2: "Uncommon", 3: "Rare", 4: "Legendary"}
+# The rarity Gear Score is measured against, so pieces of every rarity share one scale.
+LEGENDARY = 4
 
 # Updated colors: Orange for Legendary, Blue for Rare, Green for Uncommon
 RARITY_COLORS = {
@@ -91,6 +93,21 @@ STATS = {
     "S_ORANGE_DMG_RATE_INC_ADD": ("Instinct DMG%", "Instinct", True, 0.0, 0.0),
 }
 
+# Each rarity's own (max, min) single roll per substat, keyed by the rarity digit in a piece res_id. Roll quality and potential use these.
+SUBSTAT_ROLLS_BY_RARITY = {
+    "S_ATK_INC_ADD_OUT": {1: (5.0, 2.0), 2: (6.0, 3.0), 3: (7.0, 4.0), 4: (8.0, 5.0)},
+    "S_ATK_INC_RATE_OUT": {1: (0.3, 0.1), 2: (0.5, 0.2), 3: (0.8, 0.5), 4: (1.3, 0.8)},
+    "S_ADDI_ATK_DMG_RATE_INC_ADD": {1: (0.6, 0.3), 2: (1.5, 0.5), 3: (2.5, 1.5), 4: (3.4, 2.7)},
+    "S_DEF_INC_ADD_OUT": {1: (2.0, 1.0), 2: (3.0, 2.0), 3: (4.0, 2.0), 4: (5.0, 3.0)},
+    "S_DEF_INC_RATE_OUT": {1: (0.3, 0.1), 2: (0.5, 0.2), 3: (0.8, 0.5), 4: (1.3, 0.8)},
+    "S_HP_INC_ADD_OUT": {1: (6.0, 4.0), 2: (8.0, 6.0), 3: (10.0, 8.0), 4: (12.0, 10.0)},
+    "S_HP_INC_RATE_OUT": {1: (0.3, 0.1), 2: (0.5, 0.2), 3: (0.8, 0.5), 4: (1.3, 0.8)},
+    "S_CRI_INC_ADD": {1: (0.4, 0.3), 2: (0.7, 0.3), 3: (1.5, 0.7), 4: (2.0, 1.2)},
+    "S_CRI_DMG_RATE_INC_ADD": {1: (0.8, 0.6), 2: (1.4, 0.7), 3: (2.9, 1.3), 4: (4.0, 2.4)},
+    "S_CHARGING_POWER_INC_ADD": {1: (1.0, 1.0), 2: (2.0, 1.0), 3: (3.0, 2.0), 4: (5.0, 2.0)},
+    "S_DOT_ATK_DMG_RATE_INC_ADD": {1: (0.6, 0.3), 2: (1.5, 0.5), 3: (2.5, 1.5), 4: (3.4, 2.7)},
+}
+
 STAT_SHORT_NAMES = {info[0]: info[1] for info in STATS.values()}
 ALL_STAT_NAMES = [s[0] for s in STATS.values()]
 
@@ -105,7 +122,13 @@ SLOT_MAIN_STATS = {
 }
 
 MAX_LEVEL = 5
-UPGRADES_PER_RARITY = {3: 3, 4: 4}
+# The top reinforce level of each rarity. Every level adds one roll, either a new substat or an upgrade.
+MAX_LEVEL_PER_RARITY = {
+    1: 2,
+    2: 3,
+    3: 4,
+    4: 5,
+}
 
 # Growth Stone items - maps res_id to (attribute, quality, icon_filename)
 GROWTH_STONES = {
@@ -130,6 +153,24 @@ GROWTH_STONES = {
     3120052: ("Justice", "Great", "growth_stone_justice_great.png"),
     3120053: ("Justice", "Premium", "growth_stone_justice_premium.png"),
 }
+
+
+def substat_roll_range(stat_id: str, rarity_num: int) -> tuple[float, float]:
+    """
+    The highest and lowest single roll of a substat on a piece of the given rarity.
+
+    Args:
+        stat_id: The client stat id, such as `S_ATK_INC_ADD_OUT`.
+        rarity_num: The rarity digit from the piece res_id.
+
+    Returns:
+        (max roll, min roll). Falls back to the Legendary range when the rarity has no range of its own.
+    """
+    rolls = SUBSTAT_ROLLS_BY_RARITY.get(stat_id, {})
+    if rarity_num in rolls:
+        return rolls[rarity_num]
+    info = STATS.get(stat_id)
+    return (info[3], info[4]) if info else (0.0, 0.0)
 
 
 def get_level_from_exp(exp: int, exp_table: list = None) -> int:
