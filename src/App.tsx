@@ -11,7 +11,6 @@ import { CombatantsPage } from './pages/combatants/CombatantsPage'
 import { OptimizerPage } from './pages/optimizer/OptimizerPage'
 import { AboutPage } from './pages/about/AboutPage'
 import { HomePage } from './pages/home/HomePage'
-import { ScoringPage } from './pages/scoring/ScoringPage'
 import { SimulatorPage } from './pages/simulator/SimulatorPage'
 import { EncyclopediaPage } from './pages/encyclopedia/EncyclopediaPage'
 import { CardsTab } from './pages/encyclopedia/components/CardsTab'
@@ -48,7 +47,7 @@ function AppRoutes() {
           <Route path="optimizer"  element={<OptimizerPage />} />
           <Route path="fragments"  element={<FragmentsPage />} />
           <Route path="combatants" element={<CombatantsPage />} />
-          <Route path="scoring"    element={<ScoringPage />} />
+          <Route path="scoring"    element={<Navigate to="/combatants" replace />} />
           <Route path="encyclopedia" element={<EncyclopediaPage />}>
             <Route index element={<Navigate to="cards" replace />} />
             <Route path="cards"      element={<CardsTab />} />
