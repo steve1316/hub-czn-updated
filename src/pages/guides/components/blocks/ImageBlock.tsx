@@ -1,13 +1,13 @@
+import { globByFileName } from '../../guides.utils'
+
 // Pictures the sheet shows that no card or portrait matched, such as relic screenshots, keyed by file name.
-const guideImages = Object.fromEntries(
-  Object.entries(
-    import.meta.glob('../../data/images/*.webp', {
-      eager: true,
-      query: '?url',
-      import: 'default',
-    }) as Record<string, string>,
-  ).map(([path, url]) => [path.split('/').pop(), url]),
-) as Record<string, string>
+const guideImages = globByFileName(
+  import.meta.glob('../../data/images/*.webp', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }) as Record<string, string>,
+)
 
 /** Props for ImageBlock. */
 interface ImageBlockProps {

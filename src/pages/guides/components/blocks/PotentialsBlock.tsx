@@ -1,18 +1,16 @@
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
-import { resolveLang, localized } from '../../guides.utils'
+import { resolveLang, localized, globByFileName } from '../../guides.utils'
 import type { EgoNote, PotentialsLegendEntry } from '../../guides.types'
 
 // Each guide's potentials tree picture, keyed by file name.
-const potentialsPictures = Object.fromEntries(
-  Object.entries(
-    import.meta.glob('../../data/potentials/*.webp', {
-      eager: true,
-      query: '?url',
-      import: 'default',
-    }) as Record<string, string>,
-  ).map(([path, url]) => [path.split('/').pop(), url]),
-) as Record<string, string>
+const potentialsPictures = globByFileName(
+  import.meta.glob('../../data/potentials/*.webp', {
+    eager: true,
+    query: '?url',
+    import: 'default',
+  }) as Record<string, string>,
+)
 
 // The legend colours, matching the highlights in the author's pictures.
 const LEGEND_COLOURS: Record<PotentialsLegendEntry['colour'], string> = {

@@ -3,6 +3,15 @@ import type { Block, EpiphanyRating, Guide } from './guides.types'
 
 export { localized, resolveLang } from '@/lib/localized-text'
 
+/**
+ * Picture URLs keyed by their file name instead of their path.
+ * @param modules The result of an eager `import.meta.glob` with the `?url` query.
+ * @returns File name -> URL.
+ */
+export function globByFileName(modules: Record<string, string>): Record<string, string> {
+  return Object.fromEntries(Object.entries(modules).map(([path, url]) => [path.split('/').pop(), url]))
+}
+
 /** The colour a rating chip takes, from its whole score. */
 export type RatingTone = 'gold' | 'purple' | 'blue' | 'grey' | 'red'
 
