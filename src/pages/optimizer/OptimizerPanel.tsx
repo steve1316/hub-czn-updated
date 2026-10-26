@@ -222,14 +222,14 @@ export function OptimizerPanel({
           {helpOpen && (
             <div className="px-3 pb-3 space-y-1">
               <p className="text-xs text-[#b3b3b3] leading-relaxed">{t('optimizer.help.body')}</p>
-              <p className="text-[11px] text-[#8a8a8a]">{t('optimizer.help.weightScale')}</p>
+              <p className="text-xs text-[#8a8a8a]">{t('optimizer.help.weightScale')}</p>
             </div>
           )}
         </div>
 
         {/* Character */}
         <div className="space-y-1">
-          <label htmlFor="optimizer-char-combobox" className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+          <label htmlFor="optimizer-char-combobox" className="text-xs font-medium text-[#b3b3b3]">
             {t('optimizer.character')}
           </label>
           <CharacterCombobox
@@ -272,7 +272,7 @@ export function OptimizerPanel({
 
         {/* 4-piece set */}
         <div className="space-y-1">
-          <label className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+          <label className="text-xs font-medium text-[#b3b3b3]">
             {t('optimizer.fourPieceSet')}
           </label>
           <SetCombobox
@@ -288,7 +288,7 @@ export function OptimizerPanel({
 
         {/* 2-piece sets */}
         <div className="space-y-1">
-          <label className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+          <label className="text-xs font-medium text-[#b3b3b3]">
             {t('optimizer.twoPieceSets')}
           </label>
           <SetCombobox
@@ -322,7 +322,7 @@ export function OptimizerPanel({
         {/* Main stats */}
         {MAIN_STAT_SLOTS.map(({ labelKey, key, opts }) => (
           <div key={key} className="space-y-1">
-            <label htmlFor={key} className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+            <label htmlFor={key} className="text-xs font-medium text-[#b3b3b3]">
               {t(labelKey)}
             </label>
             <select
@@ -330,7 +330,7 @@ export function OptimizerPanel({
               value={config[key] ?? ''}
               onChange={(e) => patch({ [key]: e.target.value || null })}
               disabled={disabled}
-              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 py-1.5 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
             >
               <option value="">{t('optimizer.anyOption')}</option>
               {opts.map((s) => (
@@ -344,24 +344,24 @@ export function OptimizerPanel({
 
         {/* Stat priority */}
         <div className="space-y-2">
-          <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+          <p className="text-xs font-medium text-[#b3b3b3]">
             {t('optimizer.statPriorityLabel')}
           </p>
-          <p className="text-[11px] text-[#8a8a8a]">
+          <p className="text-xs text-[#8a8a8a]">
             {t('optimizer.statPriorityHint')}{' '}
             <Link to="/combatants" className="text-[#c084fc] hover:underline">{t('optimizer.statPriorityHintLink')}</Link>.
           </p>
           {STAT_GROUPS.map((group) => (
             <div key={group.labelKey}>
-              <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a] mb-1">{t(group.labelKey)}</p>
-              <div className="grid grid-cols-2 gap-x-3 gap-y-1">
+              <p className="text-xs font-medium text-[#8a8a8a] mb-1">{t(group.labelKey)}</p>
+              <div className="flex flex-col gap-1">
                 {group.stats.map((stat) => {
                   const statKey = stat as string
                   const val = sw[statKey] ?? 0
                   const id = `sw-${statKey.replace(/[^a-z0-9]/gi, '-').toLowerCase()}`
                   return (
                     <div key={statKey} className="flex items-center gap-1.5">
-                      <label htmlFor={id} className="text-[11px] text-[#b3b3b3] truncate flex-1 min-w-0">
+                      <label htmlFor={id} className="text-sm text-[#b3b3b3] flex-1 min-w-0">
                         {statKey}
                       </label>
                       <input
@@ -380,7 +380,7 @@ export function OptimizerPanel({
                           const clamped = Math.max(-1, Math.min(3, Math.round(Number(e.target.value))))
                           patchWeight(statKey, clamped)
                         }}
-                        className="w-10 text-right text-xs bg-[#282828] border border-[#333333] rounded px-1 py-0.5 text-[#ffffff] focus:outline-none focus:border-[#c084fc] disabled:opacity-50"
+                        className="w-14 h-7 text-right text-sm bg-[#282828] border border-[#333333] rounded px-1.5 text-[#ffffff] focus:outline-none focus:border-[#c084fc] disabled:opacity-50"
                       />
                     </div>
                   )
@@ -393,7 +393,7 @@ export function OptimizerPanel({
         {/* Filters */}
         <div className="space-y-3">
           <div className="space-y-1">
-            <label htmlFor="optimizer-top-pct" className="text-[11px] uppercase tracking-wider text-[#b3b3b3] flex items-center gap-1">
+            <label htmlFor="optimizer-top-pct" className="text-xs font-medium text-[#b3b3b3] flex items-center gap-1">
               {t('optimizer.topPercent')}
               <InfoPopover content={t('optimizer.topPercentTip')} />
             </label>
@@ -408,12 +408,12 @@ export function OptimizerPanel({
                 patch({ top_percent: Math.min(100, Math.max(1, Number(e.target.value))) })
               }
               disabled={disabled}
-              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 py-1.5 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
           <div className="space-y-1">
-            <label className="text-[11px] uppercase tracking-wider text-[#b3b3b3] flex items-center gap-1">
+            <label className="text-xs font-medium text-[#b3b3b3] flex items-center gap-1">
               {t('optimizer.minPrioritySubstats')}
               <InfoPopover content={t('optimizer.minPrioritySubstatsTip')} />
             </label>
@@ -434,7 +434,7 @@ export function OptimizerPanel({
                     title={impossible ? t('optimizer.minPrioritySubstatsImpossible', { n, count: priorityStatCount }) : undefined}
                     onClick={() => patch({ min_priority_substats: n })}
                     className={[
-                      'flex-1 text-xs py-1 rounded border transition-colors disabled:opacity-50 disabled:cursor-not-allowed',
+                      'flex-1 text-sm h-7 rounded border transition-colors disabled:opacity-50 disabled:cursor-not-allowed',
                       config.min_priority_substats === n
                         ? 'bg-[#c084fc]/20 border-[#c084fc] text-[#c084fc] font-semibold'
                         : 'bg-[#282828] border-[#333333] text-[#b3b3b3] hover:border-[#555555]',
@@ -448,25 +448,25 @@ export function OptimizerPanel({
           </div>
 
           <div className="space-y-1">
-            <label className="text-[11px] uppercase tracking-wider text-[#b3b3b3] flex items-center gap-1">
+            <label className="text-xs font-medium text-[#b3b3b3] flex items-center gap-1">
               {t('optimizer.statConstraints')}
               <InfoPopover content={t('optimizer.statConstraintsTip')} />
             </label>
             <div className="grid grid-cols-2 gap-x-2 gap-y-1.5">
               {(
                 [
-                  { key: 'CRate', label: 'CRate %', placeholder: '0' },
-                  { key: 'CDmg',  label: 'CDmg %',  placeholder: '0' },
-                  { key: 'ATK',   label: 'ATK',      placeholder: '0' },
-                  { key: 'HP',    label: 'HP',       placeholder: '0' },
-                  { key: 'EHP',   label: 'EHP',      placeholder: '0' },
-                  { key: 'AvgDMG',label: 'AvgDMG',   placeholder: '0' },
+                  { key: 'CRate',  label: 'Crit Rate', placeholder: '0' },
+                  { key: 'CDmg',   label: 'Crit DMG',  placeholder: '0' },
+                  { key: 'ATK',    label: 'ATK',       placeholder: '0' },
+                  { key: 'HP',     label: 'HP',        placeholder: '0' },
+                  { key: 'EHP',    label: 'EHP',       placeholder: '0' },
+                  { key: 'AvgDMG', label: 'Avg DMG',   placeholder: '0' },
                 ] as const
               ).map(({ key, label, placeholder }) => {
                 const val = config.stat_constraints?.[key] ?? 0
                 return (
                   <div key={key} className="flex items-center gap-1">
-                    <span className="text-[11px] text-[#8a8a8a] w-12 shrink-0">{label}</span>
+                    <span className="text-xs text-[#b3b3b3] w-16 shrink-0">{label}</span>
                     <input
                       type="number"
                       min={0}
@@ -478,7 +478,7 @@ export function OptimizerPanel({
                         const next = { ...(config.stat_constraints ?? {}), [key]: num }
                         patch({ stat_constraints: Object.values(next).every(v => !v) ? null : next })
                       }}
-                      className="w-full bg-[#282828] border border-[#333333] rounded px-1.5 py-1 text-[11px] text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+                      className="w-full bg-[#282828] border border-[#333333] rounded px-1.5 h-7 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
                     />
                   </div>
                 )
@@ -488,16 +488,16 @@ export function OptimizerPanel({
 
           {/* AvgDMG configuration */}
           <div className="border-t border-[#282828] pt-3 space-y-2">
-            <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3]">
+            <p className="text-xs font-medium text-[#b3b3b3]">
               {t('optimizer.avgDmg.title')}
             </p>
-            <p className="text-[11px] text-[#8a8a8a]">{t('optimizer.avgDmg.hint')}</p>
+            <p className="text-xs text-[#8a8a8a]">{t('optimizer.avgDmg.hint')}</p>
 
             {/* Monster Picker - picking a monster fills target_def, its real damage decrease and treat_target_as_weak. Typing a DEF
                 below overrides it with the estimate, and clearing the chip falls back to a custom DEF. */}
             {monsterCatalog.length > 0 && (
               <div className="space-y-1">
-                <label className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">
+                <label className="text-xs font-medium text-[#8a8a8a]">
                   {t('optimizer.avgDmg.monster')}
                 </label>
                 <SetCombobox
@@ -536,7 +536,7 @@ export function OptimizerPanel({
             )}
 
             <div className="space-y-1">
-              <label htmlFor="optimizer-target-def" className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">
+              <label htmlFor="optimizer-target-def" className="text-xs font-medium text-[#8a8a8a]">
                 {t('optimizer.avgDmg.monsterDef')}
               </label>
               <div className="flex items-center gap-2">
@@ -554,9 +554,9 @@ export function OptimizerPanel({
                     })
                   }
                   disabled={disabled}
-                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <span className="text-[11px] text-[#8a8a8a] tabular-nums">
+                <span className="text-xs text-[#8a8a8a] tabular-nums">
                   DR {config.target_dmg_decrease ? '' : '≈ '}
                   {(damageDecrease(config.target_dmg_decrease ?? 0, config.target_def ?? 500) * 100).toFixed(1)}%
                 </span>
@@ -571,14 +571,14 @@ export function OptimizerPanel({
                 disabled={disabled}
                 className="accent-[#c084fc]"
               />
-              <span className="text-[11px] text-[#b3b3b3]">
+              <span className="text-xs text-[#b3b3b3]">
                 {t('optimizer.avgDmg.weak')}
               </span>
             </label>
 
             {/* Multi-target modeling. 0 = auto-detect from the character's best damage card's target_class. */}
             <div className="space-y-1">
-              <label htmlFor="optimizer-target-count" className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">
+              <label htmlFor="optimizer-target-count" className="text-xs font-medium text-[#8a8a8a]">
                 {t('optimizer.avgDmg.targetCount')}
               </label>
               <div className="flex items-center gap-2">
@@ -597,9 +597,9 @@ export function OptimizerPanel({
                     patch({ target_count: next })
                   }}
                   disabled={disabled}
-                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <span className="text-[11px] text-[#8a8a8a]">
+                <span className="text-xs text-[#8a8a8a]">
                   {t('optimizer.avgDmg.targetCountHint')}
                 </span>
               </div>
@@ -607,7 +607,7 @@ export function OptimizerPanel({
 
             {/* DoT ticks knob */}
             <div className="space-y-1">
-              <label htmlFor="optimizer-dot-ticks" className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">
+              <label htmlFor="optimizer-dot-ticks" className="text-xs font-medium text-[#8a8a8a]">
                 {t('optimizer.avgDmg.dotTicks')}
               </label>
               <div className="flex items-center gap-2">
@@ -624,9 +624,9 @@ export function OptimizerPanel({
                     })
                   }
                   disabled={disabled}
-                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="w-20 bg-[#282828] border border-[#333333] rounded px-2 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
                 />
-                <span className="text-[11px] text-[#8a8a8a]">
+                <span className="text-xs text-[#8a8a8a]">
                   {t('optimizer.avgDmg.dotTicksHint')}
                 </span>
               </div>
@@ -634,7 +634,7 @@ export function OptimizerPanel({
           </div>
 
           <div className="space-y-1">
-            <label htmlFor="optimizer-max-results" className="text-[11px] uppercase tracking-wider text-[#b3b3b3] flex items-center gap-1">
+            <label htmlFor="optimizer-max-results" className="text-xs font-medium text-[#b3b3b3] flex items-center gap-1">
               {t('optimizer.maxResults')}
               <InfoPopover content={t('optimizer.maxResultsTip')} />
             </label>
@@ -649,7 +649,7 @@ export function OptimizerPanel({
                 patch({ max_results: Math.min(50, Math.max(1, Number(e.target.value))) })
               }
               disabled={disabled}
-              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 py-1.5 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
+              className="w-full bg-[#282828] border border-[#333333] rounded px-2.5 h-8 text-sm text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
             />
           </div>
 
@@ -670,7 +670,7 @@ export function OptimizerPanel({
 
         {/* Excluded heroes */}
         <div className="space-y-1">
-          <label className="text-[11px] uppercase tracking-wider text-[#b3b3b3] flex items-center gap-1">
+          <label className="text-xs font-medium text-[#b3b3b3] flex items-center gap-1">
             {t('optimizer.excludeChars')}
             <InfoPopover content={t('optimizer.excludeCharsTip')} />
           </label>
@@ -697,7 +697,7 @@ export function OptimizerPanel({
                 style={{ width: `${progressPct}%` }}
               />
             </div>
-            <p className="text-[11px] text-[#b3b3b3] tabular-nums">
+            <p className="text-xs text-[#b3b3b3] tabular-nums">
               {progressPct}%
             </p>
           </div>

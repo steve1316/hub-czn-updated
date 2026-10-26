@@ -382,8 +382,8 @@ const en = {
     statComparison: 'Stat Comparison',
     current: 'Current',
     avgDmg: {
-      title: 'Damage estimate (AvgDMG)',
-      hint: 'The enemy each build is tested against for the AvgDMG column.',
+      title: 'Damage estimate (Avg DMG)',
+      hint: 'The enemy each build is tested against for the Avg DMG column.',
       monster: 'Monster (preset)',
       monsterPlaceholder: '— Custom DEF — (search monster…)',
       monsterDef: 'Monster DEF',

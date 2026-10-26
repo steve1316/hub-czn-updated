@@ -64,8 +64,8 @@ function StatsComparison({
     { label: 'ATK', cur: current.ATK, next: build.ATK },
     { label: 'DEF', cur: current.DEF, next: build.DEF },
     { label: 'HP', cur: current.HP, next: build.HP },
-    { label: 'CRate', cur: current.CRate, next: build.CRate, pct: true },
-    { label: 'CDmg', cur: current.CDmg, next: build.CDmg, pct: true },
+    { label: 'Crit Rate', cur: current.CRate, next: build.CRate, pct: true },
+    { label: 'Crit DMG', cur: current.CDmg, next: build.CDmg, pct: true },
     { label: 'EHP', cur: current.EHP, next: build.EHP, tip: t('combatants.detail.ehpTip') },
     ...((build.ExtraDMG ?? 0) > 0 || (current.ExtraDMG ?? 0) > 0
       ? [{ label: 'Extra DMG%', cur: current.ExtraDMG ?? 0, next: build.ExtraDMG ?? 0, pct: true }]
@@ -75,8 +75,8 @@ function StatsComparison({
   return (
     <div className="rounded-xl border border-[#282828] bg-[#181818] overflow-hidden">
       <div
-        className="grid text-[11px] uppercase tracking-wider text-[#8a8a8a] px-3 py-1.5 border-b border-[#282828]"
-        style={{ gridTemplateColumns: '4rem 1fr 1fr 1fr' }}
+        className="grid text-xs font-medium text-[#8a8a8a] px-3 py-1.5 border-b border-[#282828]"
+        style={{ gridTemplateColumns: '6rem 1fr 1fr 1fr' }}
       >
         <span>Stat</span>
         <span className="text-right">{t('optimizer.current')}</span>
@@ -94,8 +94,8 @@ function StatsComparison({
         return (
           <div
             key={label}
-            className="grid text-xs px-3 py-1 odd:bg-[#121212]"
-            style={{ gridTemplateColumns: '4rem 1fr 1fr 1fr' }}
+            className="grid text-sm px-3 py-1 odd:bg-[#121212]"
+            style={{ gridTemplateColumns: '6rem 1fr 1fr 1fr' }}
           >
             <span className="flex items-center gap-1 text-[#b3b3b3]">
               {label}
@@ -127,15 +127,15 @@ function ExpandedBuild({
     <div className="p-4 space-y-4">
       {currentStats && (
         <div>
-          <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">
+          <p className="text-xs font-medium text-[#b3b3b3] mb-2">
             {t('optimizer.statComparison')}
           </p>
           <StatsComparison current={currentStats.final_stats} build={result.final_stats} />
         </div>
       )}
       <div>
-        <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t('optimizer.pieces')}</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2">
+        <p className="text-xs font-medium text-[#b3b3b3] mb-2">{t('optimizer.pieces')}</p>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
           {result.gear_slots.map((slot) => {
             const owner = slot.equipped_to
               ? combatants.find((c) => c.char_id === slot.equipped_to)
@@ -183,12 +183,12 @@ function CurrentBuildRow({
   return (
     <div className="bg-[#1a1a2e] border border-[#c084fc]/40 rounded-lg overflow-hidden mb-2">
       <div
-        className="grid gap-2 px-3 py-2.5 text-xs"
+        className="grid gap-2 px-3 py-2.5 text-sm items-center"
         style={{ gridTemplateColumns: activeCols }}
       >
-        <span className="text-[#c084fc] font-bold text-[11px]">NOW</span>
+        <span className="text-[#c084fc] font-bold text-xs">Now</span>
         <span className="text-[#c084fc] font-semibold">{score.toFixed(1)}</span>
-        <span className="text-[#888888] truncate text-[11px]">{setSummary || '—'}</span>
+        <span title={setSummary} className="text-[#b3b3b3] text-xs leading-snug">{setSummary || '—'}</span>
         <span className="text-[#b3b3b3]">{fs.ATK.toLocaleString()}</span>
         <span className="text-[#b3b3b3]">{fs.CRate.toFixed(1)}%</span>
         <span className="text-[#b3b3b3]">{fs.CDmg.toFixed(1)}%</span>
@@ -232,8 +232,8 @@ export function ResultsArea({
   onRun,
 }: ResultsAreaProps) {
   const { t } = useTranslation()
-  const [sortKey, setSortKey] = useState<SortKey>('avgdmg')
-  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc')
+  const [sortKey, setSortKey] = useState<SortKey>('rank')
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
   const startTimeRef = useRef<number | null>(null)
   const [eta, setEta] = useState<string | null>(null)
 
@@ -379,18 +379,18 @@ export function ResultsArea({
       )}
 
       <div
-        className="grid gap-2 px-3 py-1 text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-1"
+        className="grid gap-2 px-3 py-1 text-xs font-medium text-[#b3b3b3] mb-1"
         style={{ gridTemplateColumns: activeCols }}
       >
         {colBtn('rank', '#')}
         {colBtn('score', 'Score')}
         <span>Sets</span>
         {colBtn('atk', 'ATK')}
-        {colBtn('crate', 'CRate')}
-        {colBtn('cdmg', 'CDmg')}
+        {colBtn('crate', 'Crit Rate')}
+        {colBtn('cdmg', 'Crit DMG')}
         {colBtn('ehp', 'EHP')}
-        {colBtn('avgdmg', 'AvgDMG')}
-        {hasExtraDmg && colBtn('extradmg', 'xDMG%')}
+        {colBtn('avgdmg', 'Avg DMG')}
+        {hasExtraDmg && colBtn('extradmg', 'Extra DMG')}
       </div>
 
       {currentStats && (
@@ -414,7 +414,7 @@ export function ResultsArea({
                 onClick={() => onSelectRank(r.rank)}
                 aria-pressed={expanded}
                 className={[
-                  'w-full grid gap-2 px-3 py-2.5 text-xs text-left transition-colors',
+                  'w-full grid gap-2 px-3 py-2.5 text-sm text-left items-center transition-colors',
                   expanded ? 'bg-[#c084fc]/10 border-b border-[#282828]' : 'hover:bg-[#282828]',
                 ].join(' ')}
                 style={{ gridTemplateColumns: activeCols }}
@@ -424,9 +424,9 @@ export function ResultsArea({
                 </span>
                 <div className="flex flex-col leading-tight">
                   <span className="text-[#ffffff] font-semibold">{r.score.toFixed(1)}</span>
-                  <span className="text-[11px] text-[#8a8a8a]">{Math.round(r.score / topScore * 100)}%</span>
+                  <span className="text-xs text-[#8a8a8a]">{Math.round(r.score / topScore * 100)}%</span>
                 </div>
-                <span className="text-[#b3b3b3] truncate text-[11px]">{r.set_summary}</span>
+                <span title={r.set_summary} className="text-[#b3b3b3] text-xs leading-snug">{r.set_summary}</span>
                 <span className="text-[#ffffff]">{r.final_stats.ATK.toLocaleString()}</span>
                 <span className="text-[#ffffff]">{r.final_stats.CRate.toFixed(1)}%</span>
                 <span className="text-[#ffffff]">{r.final_stats.CDmg.toFixed(1)}%</span>
