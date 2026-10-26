@@ -130,6 +130,7 @@ class AppState:
                 output_folder=OUTPUT_DIR,
                 log_callback=_log,
                 live_update_callback=_on_data_saved,
+                event_callback=self.log_queue.put,
             )
 
         return self._capture_manager

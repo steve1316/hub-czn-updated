@@ -264,3 +264,16 @@ def test_save_reports_a_fragments_event(tmp_path):
     a = Addon(tmp_path, on_saved=events.append)
     _login(a)
     assert "fragments" in events
+
+
+def test_manager_pushes_a_snapshot_updated_event_for_fragment_saves(tmp_path):
+    from api.capture.manager import CaptureManager
+
+    events = []
+    reloads = []
+    mgr = CaptureManager(output_folder=tmp_path, log_callback=lambda *a, **k: None, live_update_callback=lambda: reloads.append(1), event_callback=events.append)
+    mgr._on_saved("fragments")
+    mgr._on_saved("battle")
+    assert [e["type"] for e in events] == ["snapshot_updated"]
+    assert events[0]["kind"] == "fragments"
+    assert len(reloads) == 2

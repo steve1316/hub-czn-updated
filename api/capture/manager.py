@@ -5,6 +5,7 @@ Handles proxy lifecycle, hosts file modification, and data capture coordination.
 
 import subprocess
 import threading
+import time
 import socket
 import re
 import ctypes
@@ -224,7 +225,8 @@ class CaptureManager:
         output_folder: Path,
         log_callback: Callable[[str, Optional[str]], None],
         status_callback: Optional[Callable[[str], None]] = None,
-        live_update_callback: Optional[Callable[[], None]] = None
+        live_update_callback: Optional[Callable[[], None]] = None,
+        event_callback: Optional[Callable[[dict], None]] = None
     ):
         """
         Initialize the capture manager.
@@ -234,6 +236,7 @@ class CaptureManager:
             log_callback: Function(message, tag) for logging (tag can be None, "success", "error", "warning", "info")
             status_callback: Optional function(status) for status updates
             live_update_callback: Optional function() called when data changes (for auto-reload)
+            event_callback: Optional function(event) called with a structured event, such as `snapshot_updated`, for the UI to react to
         """
         self.output_folder = Path(output_folder)
         self.output_folder.mkdir(parents=True, exist_ok=True)
@@ -241,6 +244,7 @@ class CaptureManager:
         self.log_callback = log_callback
         self.status_callback = status_callback
         self.live_update_callback = live_update_callback
+        self.event_callback = event_callback
 
         self.capturing = False
         self.game_server_ips = {}
@@ -444,6 +448,8 @@ class CaptureManager:
             self.status_callback("[OK] Data Captured!")
         if self.live_update_callback:
             self.live_update_callback()
+        if kind == "fragments" and self.event_callback:
+            self.event_callback({"type": "snapshot_updated", "kind": kind, "timestamp": time.strftime("%H:%M:%S")})
 
     def _run_proxy(self, real_ip: str):
         """
