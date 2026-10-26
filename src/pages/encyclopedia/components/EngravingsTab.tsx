@@ -3,9 +3,9 @@ import { useTranslation } from 'react-i18next'
 import { DECK_BUILDER_PERSONA_ENGRAVING_CARDS } from '@/pages/deck-builder/deck-builder-persona-engraving.utils'
 import type { DeckBuilderPersonaEngraving } from '@/pages/deck-builder/deck-builder.types'
 import { findClarification } from '../encyclopedia-content'
-import { FilterSection } from './FilterSection'
-import { RichDescription } from './RichDescription'
 import { localized, resolveLang } from '../encyclopedia.utils'
+import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
+import { FilterSection } from './FilterSection'
 
 const ALL_ENGRAVINGS: DeckBuilderPersonaEngraving[] =
   DECK_BUILDER_PERSONA_ENGRAVING_CARDS.flatMap(card => card.engravings)
@@ -50,101 +50,53 @@ export function EngravingsTab() {
   const clar = selected ? findClarification('engraving', selected.engraving_id) : undefined
 
   return (
-    <div className="flex h-full overflow-hidden">
-      {/* Filters */}
-      <div className="flex w-52 shrink-0 flex-col gap-3 overflow-y-auto border-r border-[#282828] bg-[#181818] p-3">
-        <input
-          type="search"
-          placeholder={t('encyclopedia.search')}
-          aria-label={t('encyclopedia.search')}
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          className="w-full rounded border border-[#333] bg-[#222] px-2 py-1.5 text-xs text-[#e5e7eb] placeholder:text-[#555]"
-        />
-        <FilterSection label={t('encyclopedia.engravings.eidolon')} options={EIDOLONS} value={eidolon} onChange={setEidolon} />
-        <FilterSection label={t('encyclopedia.engravings.cardType')} options={CARD_TYPES} value={cardType} onChange={setCardType} />
-      </div>
-
-      {/* List */}
-      <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
-        {filtered.length === 0 ? (
-          <p className="p-4 text-sm text-[#8a8a8a]">{t('encyclopedia.empty')}</p>
-        ) : (
-          filtered.map(e => (
-            <button
-              key={e.engraving_id}
-              type="button"
-              onClick={() => setSelectedId(e.engraving_id)}
-              className={`block w-full border-b border-[#1e1e1e] px-3 py-2 text-left transition-colors ${
-                selectedId === e.engraving_id ? 'bg-[#1f1730]' : 'hover:bg-[#1a1a1a]'
-              }`}
-            >
-              <span className="mb-0.5 flex gap-1">
-                <Badge>{e.eidolon}</Badge>
-                <Badge>{e.card_type}</Badge>
-              </span>
-              <span className="line-clamp-2 text-sm text-[#cbd5e1]">{e.description}</span>
-            </button>
-          ))
-        )}
-      </div>
-
-      {/* Detail */}
-      <div className="flex-1 overflow-y-auto p-5">
-        {!selected ? (
-          <p className="text-sm text-[#8a8a8a]">{t('encyclopedia.selectPrompt')}</p>
-        ) : (
-          <div className="flex max-w-xl flex-col gap-4">
-            <div className="flex flex-wrap gap-1">
-              <Badge>{selected.eidolon}</Badge>
-              <Badge>{selected.card_type}</Badge>
-              {selected.modifiers.map(m => (
-                <Badge key={m}>{m}</Badge>
-              ))}
-            </div>
-
-            <div className="rounded-lg border border-[#282828] bg-[#161616] p-3">
-              {clar ? (
-                <div className="flex flex-col gap-2">
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-[#c084fc]">
-                      {t('encyclopedia.clarification')}
-                    </p>
-                    <RichDescription
-                      text={localized(clar.text, lang)}
-                      className="text-xs leading-relaxed text-[#e5e7eb]"
-                    />
-                  </div>
-                  <div>
-                    <p className="text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
-                      {t('encyclopedia.gameText')}
-                    </p>
-                    <p className="text-xs leading-relaxed text-[#8a8a8a]">{selected.description}</p>
-                  </div>
-                </div>
-              ) : (
-                <RichDescription
-                  text={selected.description}
-                  className="text-xs leading-relaxed text-[#d4d4d4]"
-                />
+    <EncyclopediaLayout
+      search={search}
+      onSearch={setSearch}
+      searchPlaceholder={t('encyclopedia.searchText')}
+      filters={
+        <>
+          <FilterSection label={t('encyclopedia.engravings.eidolon')} options={EIDOLONS} value={eidolon} onChange={setEidolon} />
+          <FilterSection label={t('encyclopedia.engravings.cardType')} options={CARD_TYPES} value={cardType} onChange={setCardType} />
+        </>
+      }
+      count={filtered.length}
+      detail={
+        selected && (
+          <div className="flex max-w-2xl flex-col gap-5">
+            <DetailHeader
+              title={`${selected.eidolon} · ${selected.card_type}`}
+              meta={selected.modifiers.length > 0 && (
+                <span className="flex flex-wrap gap-1">
+                  {selected.modifiers.map(m => <Badge key={m}>{m}</Badge>)}
+                </span>
               )}
-            </div>
+            />
+
+            <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={selected.description} />
 
             {selected.allowed_classes.length > 0 && (
-              <div>
-                <p className="mb-1 text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a]">
-                  {t('encyclopedia.engravings.classes')}
-                </p>
+              <DetailSection label={t('encyclopedia.engravings.classes')}>
                 <div className="flex flex-wrap gap-1">
-                  {selected.allowed_classes.map(c => (
-                    <Badge key={c}>{c}</Badge>
-                  ))}
+                  {selected.allowed_classes.map(c => <Badge key={c}>{c}</Badge>)}
                 </div>
-              </div>
+              </DetailSection>
             )}
           </div>
-        )}
-      </div>
-    </div>
+        )
+      }
+    >
+      {filtered.map(e => (
+        <ListRow key={e.engraving_id} selected={selectedId === e.engraving_id} onSelect={() => setSelectedId(e.engraving_id)}>
+          <span className="min-w-0 flex-1">
+            <span className="mb-1 flex gap-1">
+              <Badge>{e.eidolon}</Badge>
+              <Badge>{e.card_type}</Badge>
+            </span>
+            <span className="line-clamp-2 text-sm text-[#cbd5e1]">{e.description}</span>
+          </span>
+        </ListRow>
+      ))}
+    </EncyclopediaLayout>
   )
 }

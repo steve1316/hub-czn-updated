@@ -20,10 +20,10 @@ export function EncyclopediaPage() {
             to={tab.to}
             className={({ isActive }) =>
               cn(
-                '-mb-px border-b-2 px-3 py-2.5 text-xs font-bold uppercase tracking-wide transition-colors',
+                '-mb-px border-b-2 px-3 py-3 text-sm font-semibold transition-colors',
                 isActive
                   ? 'border-[#c084fc] text-[#ffffff]'
-                  : 'border-transparent text-[#888] hover:text-[#e5e7eb]',
+                  : 'border-transparent text-[#b3b3b3] hover:text-[#e5e7eb]',
               )
             }
           >

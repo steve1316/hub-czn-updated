@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { buildMatcher, linkDescription, resolveLang, localized } from './encyclopedia.utils'
+import { buildMatcher, filterGlossary, linkDescription, resolveLang, localized } from './encyclopedia.utils'
 import type { GlossaryEntry } from './encyclopedia.types'
 
 function entry(id: string, aliases: string[]): GlossaryEntry {
@@ -68,5 +68,23 @@ describe('resolveLang / localized', () => {
 
   it('localized returns the English text', () => {
     expect(localized({ en: 'Hello' }, 'en')).toBe('Hello')
+  })
+})
+
+describe('filterGlossary', () => {
+  const glossary: GlossaryEntry[] = [
+    { ...entry('Agony', []), category: 'status', definition: { en: 'Damage at the end of the turn.' } },
+    { ...entry('Exhaust', []), category: 'card-type', definition: { en: 'Removed after use.' } },
+    { ...entry('Quietus', []), category: 'mechanic', definition: { en: 'Procs when Discarded.' } },
+  ]
+
+  it('matches the search in the term or the definition, ignoring case', () => {
+    expect(filterGlossary(glossary, ' DISCARD ', null, 'en').map(e => e.id)).toEqual(['Quietus'])
+    expect(filterGlossary(glossary, 'agony', null, 'en').map(e => e.id)).toEqual(['Agony'])
+  })
+
+  it('keeps only the picked category, and every entry when no category is picked', () => {
+    expect(filterGlossary(glossary, '', 'card-type', 'en').map(e => e.id)).toEqual(['Exhaust'])
+    expect(filterGlossary(glossary, '', null, 'en')).toHaveLength(3)
   })
 })

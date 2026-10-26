@@ -1,6 +1,9 @@
+import { localized } from '@/lib/localized-text'
 import type {
   DescriptionSegment,
+  GlossaryCategory,
   GlossaryEntry,
+  Lang,
   Matcher,
 } from './encyclopedia.types'
 
@@ -68,4 +71,20 @@ export function linkDescription(text: string, matcher: Matcher): DescriptionSegm
     segments.push({ kind: 'text', value: text.slice(last) })
   }
   return segments
+}
+
+/**
+ * Filter the glossary by search text and category.
+ * @param glossary The glossary entries.
+ * @param query The search text, matched anywhere in the term or the definition.
+ * @param category The category to keep, or null for every category.
+ * @param lang The language the term and definition are read in.
+ * @returns The matching entries, in glossary order.
+ */
+export function filterGlossary(glossary: GlossaryEntry[], query: string, category: GlossaryCategory | null, lang: Lang): GlossaryEntry[] {
+  const q = query.trim().toLowerCase()
+  return glossary.filter(e => {
+    if (category && e.category !== category) return false
+    return !q || localized(e.term, lang).toLowerCase().includes(q) || localized(e.definition, lang).toLowerCase().includes(q)
+  })
 }
