@@ -1,7 +1,7 @@
 const en = {
   tips: {
     gs: 'Gear Score — measures how well a gear piece rolled relative to its maximum potential (0–100).',
-    potential: 'Potential — the possible final GS range based on remaining upgrade slots (low = min rolls, high = max rolls).',
+    potential: 'Potential — the possible final GS range from the levels the piece has left (low = worst rolls, high = best rolls for its rarity).',
     crate: 'Crit Rate — probability that an attack deals critical damage.',
     cdmg: 'Crit Damage — bonus damage multiplier applied on critical hits.',
     dot: 'Damage over Time — periodic damage applied after an attack (e.g. burn, bleed).',
@@ -117,7 +117,7 @@ const en = {
       },
       maxRolls: {
         heading: 'STAT MAX ROLLS',
-        body: 'These are the highest values a single roll of each substat can reach:',
+        body: "GS is always measured against a Legendary piece's best single rolls, listed below, so the same score means the same stats on any rarity. Lower rarities roll smaller values and score lower. The roll quality shown next to each substat compares it to the best roll of the piece's own rarity instead.",
       },
       weighted: {
         heading: 'WEIGHTED SCORE',
@@ -125,7 +125,7 @@ const en = {
       },
       potential: {
         heading: 'POTENTIAL',
-        body: 'Shows the range of possible final GS from the upgrades a Rare or Legendary piece has left. Each remaining upgrade adds up to 10 GS if it rolls the max (high). The low end uses the worst min-to-max roll ratio among the piece\'s substats.',
+        body: "Shows the range of possible final GS from the levels a piece has left. Every level adds one roll, either a new substat or an upgrade to one it has. The high end assumes each roll is the best its rarity can give among the piece's substats, and the low end the worst.",
       },
     },
   },

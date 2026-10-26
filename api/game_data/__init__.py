@@ -44,6 +44,7 @@ from .constants import (
     EQUIPMENT_SLOTS,
     SLOT_ORDER,
     RARITY,
+    LEGENDARY,
     RARITY_COLORS,
     RARITY_BG_COLORS,
     RARITY_ICONS,
@@ -53,11 +54,13 @@ from .constants import (
     ALL_STAT_NAMES,
     SLOT_MAIN_STATS,
     MAX_LEVEL,
-    UPGRADES_PER_RARITY,
+    MAX_LEVEL_PER_RARITY,
+    SUBSTAT_ROLLS_BY_RARITY,
     GROWTH_STONES,
     get_level_from_exp,
     get_partner_level_from_exp,
     get_friendship_bonus,
+    substat_roll_range,
 )
 
 __all__ = [
@@ -99,6 +102,7 @@ __all__ = [
     'EQUIPMENT_SLOTS',
     'SLOT_ORDER',
     'RARITY',
+    'LEGENDARY',
     'RARITY_COLORS',
     'RARITY_BG_COLORS',
     'RARITY_ICONS',
@@ -108,9 +112,11 @@ __all__ = [
     'ALL_STAT_NAMES',
     'SLOT_MAIN_STATS',
     'MAX_LEVEL',
-    'UPGRADES_PER_RARITY',
+    'MAX_LEVEL_PER_RARITY',
+    'SUBSTAT_ROLLS_BY_RARITY',
     'GROWTH_STONES',
     'get_level_from_exp',
     'get_partner_level_from_exp',
     'get_friendship_bonus',
+    'substat_roll_range',
 ]

@@ -26,6 +26,8 @@ class Stat:
     rolls: list = field(default_factory=list)
     base_value: float = 0.0
     upgrade_values: list = field(default_factory=list)
+    # The rarity digit of the piece this substat is on, which sets its roll range.
+    rarity_num: int = 4
 
     def format_value(self) -> str:
         if self.is_percentage:
@@ -42,10 +44,9 @@ class Stat:
         return 0.0
 
     def get_efficiency(self) -> int:
-        """Roll efficiency as 0-100 integer: actual value vs max possible for roll count."""
-        from game_data import STATS
-        stat_info = STATS.get(self.raw_name, (self.name, self.name, self.is_percentage, 1.0, 0.5))
-        max_roll = stat_info[3]
+        """Roll efficiency as 0-100 integer: actual value vs the best rolls this piece's rarity can give."""
+        from game_data import substat_roll_range
+        max_roll = substat_roll_range(self.raw_name, self.rarity_num)[0]
         if max_roll > 0 and self.roll_count > 0:
             return round(self.value / (max_roll * self.roll_count) * 100)
         return 0

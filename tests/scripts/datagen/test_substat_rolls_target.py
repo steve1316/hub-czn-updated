@@ -1,7 +1,8 @@
 """
 Tests for the `substat_rolls` datagen target, on a tiny fixture client written to a temp folder.
 
-The STATS table in `constants.py` gets its roll ranges from the client's `random_option` rows. Names and flags stay as written.
+The STATS table in `constants.py` gets its roll ranges from the client's `random_option` rows. Names and flags stay as written. The
+per-rarity ranges and the max level of each rarity are generated next to it.
 """
 
 from __future__ import annotations
@@ -12,6 +13,9 @@ from pathlib import Path
 
 from scripts.datagen.runner import Context
 from scripts.datagen.targets import substat_rolls
+
+# The highest reinforce level of each rarity in the fixture, matching the live client.
+REINFORCE_TOPS = {"common": 2, "uncommon": 3, "rare": 4, "legend": 5, "unique": 5}
 
 
 def _row(stat_id: str, values: str) -> dict:
@@ -42,25 +46,28 @@ def _context(root: Path, rows: list[dict]) -> Context:
     (root / "db").mkdir()
     (root / "text" / "en").mkdir(parents=True)
     (root / "db" / "piece_option@piece_option.json").write_text(json.dumps(rows), encoding="utf-8")
+    reinforce = [{"id": f"reinforce_{rarity}_{level}"} for rarity, top in REINFORCE_TOPS.items() for level in range(top + 1)]
+    (root / "db" / "piece_reinforce@piece_reinforce.json").write_text(json.dumps(reinforce), encoding="utf-8")
     (root / "text" / "en" / "text.json").write_text("[]", encoding="utf-8")
     return Context(root)
 
 
-def _stats(ctx: Context) -> dict:
+def _stats(ctx: Context, name: str = "STATS") -> dict:
     """
-    Run the target and read the STATS literal back out of the generated module.
+    Run the target and read one generated literal back out of the module.
 
     Args:
         ctx: The run context.
+        name: The literal to read.
 
     Returns:
-        The STATS dict.
+        Its value.
     """
     source = substat_rolls.build(ctx).files[substat_rolls.CONSTANTS_PATH].decode("utf-8")
     for node in ast.parse(source.lstrip("﻿")).body:
-        if isinstance(node, ast.Assign) and getattr(node.targets[0], "id", "") == "STATS":
+        if isinstance(node, ast.Assign) and getattr(node.targets[0], "id", "") == name:
             return ast.literal_eval(node.value)
-    raise AssertionError("no STATS in output")
+    raise AssertionError(f"no {name} in output")
 
 
 def test_roll_range_comes_from_the_client(tmp_path):
@@ -89,3 +96,16 @@ def test_ts_copy_lists_only_real_substats(tmp_path):
     assert '{ name: "Flat ATK", max: 8, min: 5, percent: false }' in text
     assert '{ name: "ATK%", max: 1.3, min: 0.8, percent: true }' in text
     assert "Passion" not in text
+
+
+def test_each_rarity_gets_its_own_roll_range(tmp_path):
+    """A Rare Flat ATK rolls 4 to 7 while a Legendary one rolls 5 to 8."""
+    row = _row("S_ATK_INC_ADD_OUT", "[5,6,7,8]") | {"common_value": "[2,3,4,5]", "uncommon_value": "[3,4,5,6]", "rare_value": "[4,5,6,7]"}
+    ranges = _stats(_context(tmp_path, [row]), "SUBSTAT_ROLLS_BY_RARITY")
+    assert ranges["S_ATK_INC_ADD_OUT"] == {1: (5.0, 2.0), 2: (6.0, 3.0), 3: (7.0, 4.0), 4: (8.0, 5.0)}
+
+
+def test_max_level_comes_from_the_reinforce_table(tmp_path):
+    """Each level adds one roll, so the top reinforce level is how many rolls a piece gets after it drops."""
+    levels = _stats(_context(tmp_path, [_row("S_ATK_INC_ADD_OUT", "[5,8]")]), "MAX_LEVEL_PER_RARITY")
+    assert levels == {1: 2, 2: 3, 3: 4, 4: 5}

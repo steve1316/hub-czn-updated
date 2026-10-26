@@ -8,6 +8,7 @@ run over unchanged client data touches nothing, and in `--check` mode it writes 
 from __future__ import annotations
 
 import json
+import re
 import traceback
 from dataclasses import dataclass, field
 from functools import cached_property
@@ -117,6 +118,28 @@ def json_bytes(data) -> bytes:
         UTF-8 JSON with a two-space indent and a trailing newline.
     """
     return (json.dumps(data, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+
+
+def replace_literal(module: str, name: str, source: str, path: Path) -> str:
+    """
+    Swap one top-level dict literal in a module, from its opening line to the closing brace on its own line.
+
+    Args:
+        module: The module source.
+        name: The literal's name. A type annotation after it is allowed.
+        source: The new assignment, ending with a newline.
+        path: The module's path, for the error message.
+
+    Returns:
+        The module with the literal replaced.
+
+    Raises:
+        ValueError: When the literal is not in the module.
+    """
+    block = re.compile(rf"^{re.escape(name)}(?::[^=\n]*)? = \{{\n.*?^\}}\n", re.DOTALL | re.MULTILINE)
+    if not block.search(module):
+        raise ValueError(f"could not find the {name} table in {path}")
+    return block.sub(lambda _: source, module, count=1)
 
 
 def run(targets: list[ModuleType], context: Context, *, check: bool) -> list[TargetReport]:
