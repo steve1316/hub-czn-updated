@@ -77,7 +77,7 @@ export function OptimizerPanel({
     queryFn: () => api.optimizeSets(),
   })
 
-  // Sprint 2h1: monster catalog feeds the Monster Picker dropdown.
+  // Monster catalog feeds the Monster Picker dropdown.
   const { data: monsterCatalog = [] } = useQuery<Monster[]>({
     queryKey: ['optimize/monster-catalog'],
     queryFn: () => api.monsterCatalog(),
@@ -503,11 +503,8 @@ export function OptimizerPanel({
           </p>
           <p className="text-[10px] text-[#666666]">{t('optimizer.avgDmg.hint')}</p>
 
-          {/* Sprint 2h1 + 2h4: Monster Picker — selecting a monster auto-populates
-              target_def AND treat_target_as_weak. The manual DEF input below
-              still works as an override. Sprint 2h4 upgraded the flat <select>
-              (510 monsters) to a searchable SetCombobox. Removing the chip clears
-              the preset, falling back to manual DEF input ("— Custom DEF —"). */}
+          {/* Monster Picker - picking a monster fills target_def and treat_target_as_weak. The DEF input below still overrides it,
+              and clearing the chip falls back to a custom DEF. */}
           {monsterCatalog.length > 0 && (
             <div className="space-y-1">
               <label className="text-[9px] uppercase tracking-wider text-[#666666]">
@@ -585,8 +582,7 @@ export function OptimizerPanel({
             </span>
           </label>
 
-          {/* Sprint 2h3: AoE / multi-target modeling
-              Sprint 2h9: 0 = auto-detect from char's best damage card's target_class */}
+          {/* Multi-target modeling. 0 = auto-detect from the character's best damage card's target_class. */}
           <div className="space-y-1">
             <label htmlFor="optimizer-target-count" className="text-[9px] uppercase tracking-wider text-[#666666]">
               {t('optimizer.avgDmg.targetCount')}
@@ -615,7 +611,7 @@ export function OptimizerPanel({
             </div>
           </div>
 
-          {/* Sprint 2h6: DoT ticks knob */}
+          {/* DoT ticks knob */}
           <div className="space-y-1">
             <label htmlFor="optimizer-dot-ticks" className="text-[9px] uppercase tracking-wider text-[#666666]">
               {t('optimizer.avgDmg.dotTicks')}
