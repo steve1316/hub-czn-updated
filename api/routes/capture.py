@@ -4,7 +4,7 @@ import threading
 import time
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Query
 from pydantic import BaseModel
 
 # api.state has to come first: importing it is what puts game_data on sys.path, which
@@ -65,6 +65,12 @@ def get_capture_status():
     }
 
 
+@router.get("/capture/log")
+def get_capture_log(n: int = Query(50, ge=1, le=500)):
+    """Return the last `n` capture log entries, oldest first."""
+    return {"lines": list(state.log_tail)[-n:]}
+
+
 def handle_proxy_death() -> bool:
     """
     Tidy up after the proxy stopped on its own instead of via /capture/stop.
@@ -83,11 +89,7 @@ def handle_proxy_death() -> bool:
     message = "Capture proxy stopped unexpectedly."
     if removed:
         message += " Removed the game redirect."
-    state.log_queue.put({
-        "level": "error",
-        "message": message,
-        "timestamp": time.strftime("%H:%M:%S"),
-    })
+    state.push_log("error", message)
     return removed
 
 
