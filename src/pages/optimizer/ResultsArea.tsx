@@ -91,18 +91,19 @@ function ExpandedBuild({
   currentStats: CombatantStats | undefined
   combatants: Combatant[]
 }) {
+  const { t } = useTranslation()
   return (
     <div className="p-4 space-y-4">
       {currentStats && (
         <div>
           <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">
-            Comparação de Stats
+            {t('optimizer.statComparison')}
           </p>
           <StatsComparison current={currentStats.final_stats} build={result.final_stats} />
         </div>
       )}
       <div>
-        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">Peças</p>
+        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t('optimizer.pieces')}</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2">
           {result.gear_slots.map((slot) => {
             const owner = slot.equipped_to

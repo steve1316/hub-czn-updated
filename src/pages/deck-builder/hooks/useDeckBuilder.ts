@@ -3,6 +3,7 @@ import { useQuery } from '@tanstack/react-query'
 import { save } from '@tauri-apps/plugin-dialog'
 import { writeTextFile } from '@tauri-apps/plugin-fs'
 import { api } from '@/lib/api'
+import i18n from '@/i18n'
 import type { CardCharacter } from '@/lib/types'
 import type {
   DeckBuilderCardWithVariants,
@@ -281,7 +282,7 @@ function normalizeImportedSlot(value: unknown): DeckBuilderExportSlot {
 
 function normalizeImportedPayload(value: unknown): DeckBuilderExportPayload {
   if (!isRecord(value) || !Array.isArray(value.slots)) {
-    throw new Error('Arquivo de deck inválido.')
+    throw new Error(i18n.t('deckBuilder.alerts.invalidDeckFile'))
   }
 
   return {
@@ -470,7 +471,7 @@ export function useDeckBuilder() {
             isLoading: false,
             error: error instanceof Error
               ? error.message
-              : 'Erro ao importar deck do combatente.',
+              : i18n.t('deckBuilder.alerts.importCombatantError'),
           }
         }
       }),
@@ -563,7 +564,7 @@ export function useDeckBuilder() {
             isLoading: false,
             error: error instanceof Error
               ? error.message
-              : 'Erro ao carregar cartas do combatente.',
+              : i18n.t('deckBuilder.alerts.loadCombatantCardsError'),
           }
         }),
       )
@@ -871,7 +872,7 @@ export function useDeckBuilder() {
     const savedDeck = savedDecks.find(deck => deck.id === deckId)
 
     if (!savedDeck) {
-      throw new Error('Deck salvo não encontrado.')
+      throw new Error(i18n.t('deckBuilder.alerts.savedDeckNotFound'))
     }
 
     await loadDeckFromPayload(savedDeck.payload)
@@ -880,13 +881,13 @@ export function useDeckBuilder() {
 
   async function saveCurrentDeck() {
     if (!selectedSavedDeckId) {
-      throw new Error('Nenhum deck salvo selecionado.')
+      throw new Error(i18n.t('deckBuilder.noSavedDeckSelected'))
     }
 
     const deckExists = savedDecks.some(deck => deck.id === selectedSavedDeckId)
 
     if (!deckExists) {
-      throw new Error('Deck salvo não encontrado.')
+      throw new Error(i18n.t('deckBuilder.alerts.savedDeckNotFound'))
     }
 
     const payload = createDeckBuilderExportPayload()
@@ -911,7 +912,7 @@ export function useDeckBuilder() {
     const normalizedName = name.trim()
 
     if (!normalizedName) {
-      throw new Error('Informe um nome para salvar o deck.')
+      throw new Error(i18n.t('deckBuilder.alerts.savedDeckNameRequired'))
     }
 
     const payload = createDeckBuilderExportPayload()

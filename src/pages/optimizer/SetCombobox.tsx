@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect, KeyboardEvent } from 'react'
 import { X, ChevronDown, Loader2 } from 'lucide-react'
+import { useTranslation } from 'react-i18next'
 import { assetUrl } from '@/lib/api'
 
 export interface ComboboxOption {
@@ -23,10 +24,12 @@ export function SetCombobox({
   selected,
   onChange,
   maxSelect,
-  placeholder = 'Buscar...',
+  placeholder: placeholderProp,
   disabled = false,
   isLoading = false,
 }: SetComboboxProps) {
+  const { t } = useTranslation()
+  const placeholder = placeholderProp ?? t('common.search')
   const [query, setQuery] = useState('')
   const [open, setOpen] = useState(false)
   const [highlightedIdx, setHighlightedIdx] = useState<number | null>(null)
@@ -158,7 +161,7 @@ export function SetCombobox({
                   <button
                     type="button"
                     onClick={() => remove(id)}
-                    aria-label={`Remover ${opt?.label ?? id}`}
+                    aria-label={`${t('common.remove')} ${opt?.label ?? id}`}
                     className="hover:text-[#ffffff] transition-colors"
                   >
                     <X size={10} />
