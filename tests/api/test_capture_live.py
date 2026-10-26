@@ -236,6 +236,46 @@ def test_item_and_currency_totals_are_written_not_added(addon):
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////////////////////////////////////////////////////////////////////
+# Gear changes seen before a login
+
+
+def _logged(tmp_path):
+    """An addon whose log lines are kept in `logs`."""
+    logs = []
+    a = Addon(tmp_path, log_callback=logs.append)
+    a.logs = logs
+    return a
+
+
+def _hints(addon):
+    return [m for m in addon.logs if "no inventory captured yet" in m]
+
+
+def test_equip_before_login_logs_the_hint_once(tmp_path):
+    addon = _logged(tmp_path)
+    for qid in (30, 31):
+        _client(addon, [{"cmd": "item", "qid": qid, "params": {"cmd": "equip_piece", "char_res_id": "1021", "item_db_id": 1}}])
+        _server(addon, {"res": "ok", "qid": qid, "piece": _piece(1, char=1021)})
+    assert len(_hints(addon)) == 1
+    assert addon.inventory_data is None
+
+
+def test_unequip_before_login_logs_the_hint(tmp_path):
+    addon = _logged(tmp_path)
+    _client(addon, [{"cmd": "item", "qid": 32, "params": {"cmd": "unequip_piece", "item_db_ids": [2], "char_res_id": "1009"}}])
+    _server(addon, [{"res": "ok", "qid": 32, "item_result": {}}])
+    assert len(_hints(addon)) == 1
+
+
+def test_no_hint_once_the_login_was_captured(tmp_path):
+    addon = _logged(tmp_path)
+    _login(addon)
+    _server(addon, {"res": "ok", "qid": 33, "piece": _piece(1, char=1021)})
+    assert _hints(addon) == []
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
 # Snapshot rotation
 
 

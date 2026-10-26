@@ -151,6 +151,8 @@ class Addon:
         self._save_pending = False
         # The `last_login_tm` of the account's current game launch. A change means a new launch.
         self.login_stamp = None
+        # Set once the "no inventory yet" hint has been logged, so it shows only once.
+        self._warned_no_inventory = False
 
         # Debug logging
         self.debug_file = None
@@ -340,6 +342,21 @@ class Addon:
         if self.debug_file:
             self._write_debug({"ts": datetime.now().isoformat(), "dir": direction, "keys": list(payload.keys()), "size": size, "data": payload})
 
+    def _hint_no_inventory(self, data: dict, request: PendingRequest | None):
+        """
+        Log once that a gear change was skipped because no login inventory has been captured yet.
+
+        Args:
+            data: One decoded reply object.
+            request: The client request this reply answers, if it was seen.
+        """
+        if self._warned_no_inventory:
+            return
+        gear_request = request is not None and request.name in (CMD_UNEQUIP, CMD_DISASSEMBLE)
+        if "piece" in data or "pieces" in data or gear_request or self._reward_pieces(data):
+            self._warned_no_inventory = True
+            self.log_callback("[LIVE] Gear change seen, but no inventory captured yet. Restart the game while capture is running.")
+
     def _mark_dirty(self):
         """Ask for the snapshot to be written at the end of the current frame."""
         self._save_pending = True
@@ -367,6 +384,8 @@ class Addon:
             reward = self._reward_pieces(data)
             if reward:
                 self._apply_pieces_create(reward)
+        elif "piece_items" not in data:
+            self._hint_no_inventory(data, request)
 
         # The 'info' structure (new API format)
         info = data.get("info")
