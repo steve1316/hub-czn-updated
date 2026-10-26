@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { save } from '@tauri-apps/plugin-dialog'
 import { writeTextFile } from '@tauri-apps/plugin-fs'
@@ -30,7 +30,9 @@ import {
 import {
   createSavedDeck,
   loadSavedDecks,
+  loadWorkingSquad,
   persistSavedDecks,
+  persistWorkingSquad,
   type SavedDeck,
 } from '../deck-builder-saved-decks.utils'
 import {
@@ -298,6 +300,32 @@ function normalizeImportedPayload(value: unknown): DeckBuilderExportPayload {
   }
 }
 
+/**
+ * Turn one squad slot into its export form, the same shape saved decks and exported files use.
+ * @param slot The squad slot.
+ * @returns The slot's combatant, equipment ids and cards with their chosen variants.
+ */
+export function createDeckBuilderExportSlot(slot: SquadSlot): DeckBuilderExportSlot {
+  return {
+    combatant_id: slot.combatantId,
+    equipment: {
+      weapon_id: slot.equipment.weapon?.id ?? null,
+      armor_id: slot.equipment.armor?.id ?? null,
+      accessory_id: slot.equipment.accessory?.id ?? null,
+    },
+    cards: slot.cards.map(item => ({
+      card_id: item.card.card_id,
+      selected_variant_id: item.selectedVariant?.variant_id ?? null,
+      selected_divine_god: item.selectedDivineGod?.id ?? null,
+      selected_divine_epiphany_id: item.selectedDivineEpiphany?.id ?? null,
+      selected_common_epiphany_id: item.selectedCommonEpiphany?.id ?? null,
+      selected_persona_engraving_ids: getPersonaEngravingIds(
+        item.selectedPersonaEngravings,
+      ),
+    })),
+  }
+}
+
 function resolveImportedCardSettings(
   source: DeckBuilderCardWithVariants,
   importedCard: DeckBuilderImportedCard,
@@ -337,6 +365,9 @@ export function useDeckBuilder() {
   const [variantModalTarget, setVariantModalTarget] = useState<VariantModalTarget | null>(null)
   const [savedDecks, setSavedDecks] = useState<SavedDeck[]>(() => loadSavedDecks())
   const [selectedSavedDeckId, setSelectedSavedDeckId] = useState<string | null>(null)
+  // False until the squad kept from an earlier visit is back, so the empty starting squad does not overwrite it
+  const [restored, setRestored] = useState(false)
+  const restoreStarted = useRef(false)
 
   // The sidecar API may not be reachable yet when the deck builder is the first
   // page opened: the dynamic port resolves asynchronously (useApiPort) and the
@@ -378,24 +409,7 @@ export function useDeckBuilder() {
     return {
       version: DECK_BUILDER_EXPORT_VERSION,
       exported_at: new Date().toISOString(),
-      slots: squad.map(slot => ({
-        combatant_id: slot.combatantId,
-        equipment: {
-          weapon_id: slot.equipment.weapon?.id ?? null,
-          armor_id: slot.equipment.armor?.id ?? null,
-          accessory_id: slot.equipment.accessory?.id ?? null,
-        },
-        cards: slot.cards.map(item => ({
-          card_id: item.card.card_id,
-          selected_variant_id: item.selectedVariant?.variant_id ?? null,
-          selected_divine_god: item.selectedDivineGod?.id ?? null,
-          selected_divine_epiphany_id: item.selectedDivineEpiphany?.id ?? null,
-          selected_common_epiphany_id: item.selectedCommonEpiphany?.id ?? null,
-          selected_persona_engraving_ids: getPersonaEngravingIds(
-            item.selectedPersonaEngravings,
-          ),
-        })),
-      })),
+      slots: squad.map(createDeckBuilderExportSlot),
     }
   }
 
@@ -859,6 +873,26 @@ export function useDeckBuilder() {
 
     await writeTextFile(filePath, JSON.stringify(payload, null, 2))
   }
+
+  // Bring back the squad from an earlier visit once the API is up, as loading it fetches each combatant's cards
+  useEffect(() => {
+    if (!status || restoreStarted.current) return
+    restoreStarted.current = true
+    const kept = loadWorkingSquad()
+    if (!kept) {
+      setRestored(true)
+      return
+    }
+    loadDeckFromPayload(kept.payload)
+      .then(() => setSelectedSavedDeckId(kept.savedDeckId))
+      .catch(error => console.error('[Deck Builder] Failed to restore the squad:', error))
+      .finally(() => setRestored(true))
+  }, [status])
+
+  // Keep every change, so leaving the Deck Builder by any route does not lose unsaved work
+  useEffect(() => {
+    if (restored) persistWorkingSquad({ payload: createDeckBuilderExportPayload(), savedDeckId: selectedSavedDeckId })
+  }, [restored, squad, selectedSavedDeckId])
 
   async function importDeck(file: File) {
     const text = await file.text()

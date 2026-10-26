@@ -13,6 +13,7 @@ from scripts.datagen.targets import (
     char_presets,
     deck_builder,
     eff_type_catalog,
+    enemy_presets,
     epiphanies,
     glossary,
     guides,
@@ -34,6 +35,7 @@ ALL_TARGETS: list[ModuleType] = [
     epiphanies,
     glossary,
     monster_catalog,
+    enemy_presets,
     eff_type_catalog,
     guides,
 ]

@@ -259,7 +259,6 @@ export const api = {
 deckBuilderCombatant: (charResId: number) =>
   request<DeckBuilderCombatantResponse>(`/api/deck-builder/combatants/${charResId}`),
 
-  battleLatest: () => request<BattleRecord>('/api/battle/latest'),
 
   battleHistory: (limit = 20) =>
     request<BattleRecord[]>(`/api/battle/history?limit=${limit}`),

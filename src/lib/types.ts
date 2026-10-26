@@ -376,12 +376,24 @@ export interface DeckInfo {
   bookmark_slot: number
 }
 
+/** One card of a deck sent to the simulator from the Deck Builder. */
+export interface SimDeckCard {
+  /** The base card id. */
+  card_id: string
+  /** The Deck Builder epiphany level, which the sidecar maps to the game's spark. Null or missing means the base card. */
+  epiphany_level?: number | null
+}
+
 export interface SimulateRequest {
   char_name: string
   deck_id?: number | null
+  /** A deck from the Deck Builder, simulated instead of the in-game decks. */
+  cards?: SimDeckCard[]
   morale: number
   use_sparks: boolean
   monster_def: number
+  /** The enemy's real damage decrease as a fraction. 0 or missing means the sidecar estimates it from `monster_def`. */
+  dmg_decrease?: number
   frightened: boolean
   exposed_stacks: number
   fortitude: boolean
@@ -490,7 +502,8 @@ export interface BattleOverview {
 
 export interface SimulateDamageResponse {
   char_name: string
-  deck_id: number
+  /** The in-game deck that was simulated, or null for a deck sent in the request. */
+  deck_id: number | null
   atk: number
   crate: number
   cdmg: number

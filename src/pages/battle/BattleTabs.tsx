@@ -1,14 +1,28 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import i18n from '@/i18n'
 import { Link, useNavigate } from 'react-router-dom'
-import { Sword, Shield, ChevronDown, ChevronUp, TrendingUp, LayoutGrid } from 'lucide-react'
+import { Sword, Shield, ChevronDown, ChevronUp } from 'lucide-react'
 import { api, assetUrl, isNotFound } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, BattleAnalytics, CharAnalysis, Combatant, BattleOverview, InsightCard, CharTrend } from '@/lib/types'
+import { battleEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
+import { formatBattleTime } from './battle-time.utils'
 
 // ── shared helpers ────────────────────────────────────────────────────────────
+
+/**
+ * The captured combatants, used to name and picture the characters in each battle.
+ * @returns The combatant list, empty until it loads.
+ */
+function useCombatantList(): Combatant[] {
+  const { data: combatants = [] } = useQuery<Combatant[]>({
+    queryKey: ['combatants'],
+    queryFn: () => api.combatants(),
+    staleTime: 60_000,
+  })
+  return combatants
+}
 
 function findCombatant(resId: string | number | null | undefined, combatants: Combatant[]): Combatant | undefined {
   if (resId == null || resId === '') return undefined
@@ -80,22 +94,6 @@ function ResultBadge({ result }: { result: string | null }) {
       {ok ? t('battle.clear') : t('battle.fail')}
     </span>
   )
-}
-
-function formatTime(iso: string): string {
-  try {
-    const d = new Date(iso)
-    const now = Date.now()
-    const diffMs = now - d.getTime()
-    const diffMin = Math.floor(diffMs / 60_000)
-    if (diffMin < 1) return i18n.t('battle.timeNow')
-    if (diffMin < 60) return i18n.t('battle.minutesAgo', { count: diffMin })
-    const diffH = Math.floor(diffMin / 60)
-    if (diffH < 24) return i18n.t('battle.hoursAgo', { count: diffH })
-    return d.toLocaleDateString(undefined, { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })
-  } catch {
-    return iso
-  }
 }
 
 // ── Overview tab ──────────────────────────────────────────────────────────────
@@ -210,8 +208,13 @@ function CharTrendCard({ trend, combatants }: { trend: CharTrend; combatants: Co
   )
 }
 
-function OverviewTab({ combatants }: { combatants: Combatant[] }) {
+/**
+ * The Overview tab: totals, insights and per-character trends across the captured battles.
+ * @returns The tab.
+ */
+export function OverviewTab() {
   const { t } = useTranslation()
+  const combatants = useCombatantList()
 
   const { data: overview, isLoading, error } = useQuery<BattleOverview>({
     queryKey: ['battle-overview'],
@@ -241,7 +244,7 @@ function OverviewTab({ combatants }: { combatants: Combatant[] }) {
         <StatBox label={t('battle.overview.avgEnemyDef')} value={Math.round(s.avg_enemy_def)} accent="text-[#fb923c]" />
         <StatBox label={t('battle.overview.avgTeamDmg')} value={formatDmg(s.avg_team_dmg)} accent="text-[#c084fc]" />
         {s.last_battle_time && (
-          <StatBox label={t('battle.overview.lastBattle')} value={formatTime(s.last_battle_time)} />
+          <StatBox label={t('battle.overview.lastBattle')} value={formatBattleTime(s.last_battle_time)} />
         )}
       </div>
 
@@ -285,7 +288,7 @@ function OverviewTab({ combatants }: { combatants: Combatant[] }) {
                       <span className="text-[#facc15] text-[10px]">{mvp.name}</span>
                     </div>
                   )}
-                  <span className="ml-auto text-[#444] text-[10px]">{formatTime(r.capture_time)}</span>
+                  <span className="ml-auto text-[#444] text-[10px]">{formatBattleTime(r.capture_time)}</span>
                 </div>
               )
             })}
@@ -356,7 +359,7 @@ function DptRow({
 function BattleCard({
   record, combatants, onUseDef,
 }: {
-  record: BattleRecord; combatants: Combatant[]; onUseDef: (def: number) => void
+  record: BattleRecord; combatants: Combatant[]; onUseDef: (record: BattleRecord) => void
 }) {
   const { t } = useTranslation()
   const [showChars, setShowChars] = useState(false)
@@ -386,13 +389,13 @@ function BattleCard({
               <span className="text-[#facc15] text-[10px] font-medium">{mvpName}</span>
             </div>
           )}
-          <span className="text-[#444] text-[10px]">{formatTime(record.capture_time)}</span>
+          <span className="text-[#444] text-[10px]">{formatBattleTime(record.capture_time)}</span>
         </div>
       </div>
 
       <button
         type="button"
-        onClick={() => onUseDef(record.enemy_def)}
+        onClick={() => onUseDef(record)}
         className="self-start flex items-center gap-1.5 px-3 py-1.5 rounded bg-[#c084fc]/15 text-[#c084fc] text-xs font-medium hover:bg-[#c084fc]/25 transition-colors"
       >
         <Shield size={12} />
@@ -449,6 +452,48 @@ function BattleCard({
               })}
             </div>
           )}
+        </div>
+      )}
+    </div>
+  )
+}
+
+/**
+ * The History tab: the last 30 captured battles, each of which can become the Simulator enemy.
+ * @returns The tab.
+ */
+export function HistoryTab() {
+  const { t } = useTranslation()
+  const navigate = useNavigate()
+  const { setEnemy } = useBattlesEnemy()
+  const combatants = useCombatantList()
+
+  const { data: history = [], isLoading, error } = useQuery<BattleRecord[]>({
+    queryKey: ['battle-history', 30],
+    queryFn: () => api.battleHistory(30),
+    staleTime: 10_000,
+    retry: false,
+  })
+
+  function handleUseDef(record: BattleRecord) {
+    setEnemy(battleEnemy(record))
+    navigate('/battles/simulate')
+  }
+
+  return (
+    <div className="p-4">
+      {isLoading && <p className="text-[#888] text-sm">{t('battle.loading')}</p>}
+
+      {error && (isNotFound(error) ? <NoBattles /> : <LoadFailed error={error} />)}
+
+      {!isLoading && !error && history.length === 0 && <NoBattles />}
+
+      {history.length > 0 && (
+        <div className="flex flex-col gap-3 max-w-3xl">
+          <HistorySummary history={history} />
+          {history.map((rec, i) => (
+            <BattleCard key={i} record={rec} combatants={combatants} onUseDef={handleUseDef} />
+          ))}
         </div>
       )}
     </div>
@@ -562,8 +607,13 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
   )
 }
 
-function AnalyticsTab({ combatants }: { combatants: Combatant[] }) {
+/**
+ * The Analytics tab: which stat each character in the last battle should upgrade next.
+ * @returns The tab.
+ */
+export function AnalyticsTab() {
   const { t } = useTranslation()
+  const combatants = useCombatantList()
 
   const { data: analytics, isLoading, error } = useQuery<BattleAnalytics>({
     queryKey: ['battle-analytics'],
@@ -601,96 +651,10 @@ function AnalyticsTab({ combatants }: { combatants: Combatant[] }) {
       {analytics.chars.map((c) => (
         <CharAnalyticsCard key={c.res_id} analysis={c} combatants={combatants} />
       ))}
-    </div>
-  )
-}
 
-// ── Main page ─────────────────────────────────────────────────────────────────
-
-export function BattlePage() {
-  const { t } = useTranslation()
-  const navigate = useNavigate()
-  const [tab, setTab] = useState<'overview' | 'history' | 'analytics'>('overview')
-
-  const { data: history = [], isLoading: histLoading, error: histError } = useQuery<BattleRecord[]>({
-    queryKey: ['battle-history'],
-    queryFn: () => api.battleHistory(30),
-    staleTime: 10_000,
-    retry: false,
-    enabled: tab === 'history',
-  })
-
-  const { data: combatants = [] } = useQuery<Combatant[]>({
-    queryKey: ['combatants'],
-    queryFn: () => api.combatants(),
-    staleTime: 60_000,
-  })
-
-  function handleUseDef(def: number) {
-    sessionStorage.setItem('czn_battle_def', String(Math.round(def)))
-    navigate('/simulator')
-  }
-
-  return (
-    <div className="flex h-full overflow-hidden">
-      {/* Left panel */}
-      <div className="w-52 shrink-0 flex flex-col gap-4 p-4 bg-[#181818] border-r border-[#282828] overflow-y-auto">
-        <div>
-          <h2 className="text-[#ffffff] font-bold text-sm mb-3">{t('battle.title')}</h2>
-          <p className="text-[#888] text-xs leading-relaxed">{t('battle.description')}</p>
-        </div>
-
-        {/* Tab switcher */}
-        <div className="flex flex-col gap-0.5">
-          {(['overview', 'analytics', 'history'] as const).map((k) => (
-            <button
-              key={k}
-              type="button"
-              onClick={() => setTab(k)}
-              className={`text-left text-xs px-3 py-2 rounded transition-colors flex items-center gap-2 ${
-                tab === k ? 'bg-[#282828] text-[#ffffff] font-bold' : 'text-[#b3b3b3] hover:text-[#ffffff]'
-              }`}
-            >
-              {k === 'overview' ? <LayoutGrid size={12} /> : k === 'analytics' ? <TrendingUp size={12} /> : <Sword size={12} />}
-              {t(`battle.tab.${k}`)}
-            </button>
-          ))}
-        </div>
-
-        <div className="mt-auto text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
-          <p>{t('battle.defFactorNote')}</p>
-          <p className="mt-1">{t('battle.critFactorNote')}</p>
-        </div>
-      </div>
-
-      {/* Main area */}
-      <div className="flex-1 overflow-y-auto">
-        {tab === 'overview' && (
-          <OverviewTab combatants={combatants} />
-        )}
-
-        {tab === 'analytics' && (
-          <AnalyticsTab combatants={combatants} />
-        )}
-
-        {tab === 'history' && (
-          <div className="p-4">
-            {histLoading && <p className="text-[#888] text-sm">{t('battle.loading')}</p>}
-
-            {histError && <LoadFailed error={histError} />}
-
-            {!histLoading && !histError && history.length === 0 && <NoBattles />}
-
-            {history.length > 0 && (
-              <div className="flex flex-col gap-3 max-w-3xl">
-                <HistorySummary history={history} />
-                {history.map((rec, i) => (
-                  <BattleCard key={i} record={rec} combatants={combatants} onUseDef={handleUseDef} />
-                ))}
-              </div>
-            )}
-          </div>
-        )}
+      <div className="text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
+        <p>{t('battle.defFactorNote')}</p>
+        <p className="mt-1">{t('battle.critFactorNote')}</p>
       </div>
     </div>
   )

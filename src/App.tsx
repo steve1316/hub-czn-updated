@@ -11,13 +11,14 @@ import { CombatantsPage } from './pages/combatants/CombatantsPage'
 import { OptimizerPage } from './pages/optimizer/OptimizerPage'
 import { AboutPage } from './pages/about/AboutPage'
 import { HomePage } from './pages/home/HomePage'
-import { SimulatorPage } from './pages/simulator/SimulatorPage'
 import { EncyclopediaPage } from './pages/encyclopedia/EncyclopediaPage'
 import { CardsTab } from './pages/encyclopedia/components/CardsTab'
 import { EquipmentsTab } from './pages/encyclopedia/components/EquipmentsTab'
 import { EngravingsTab } from './pages/encyclopedia/components/EngravingsTab'
 import { GlossaryTab } from './pages/encyclopedia/components/GlossaryTab'
-import { BattlePage } from './pages/battle/BattlePage'
+import { BattlesPage } from './pages/battles/BattlesPage'
+import { SimulateTab } from './pages/simulator/SimulateTab'
+import { OverviewTab, AnalyticsTab, HistoryTab } from './pages/battle/BattleTabs'
 import { DeckBuilderPage } from './pages/deck-builder/DeckBuilderPage'
 import { GuidesPage } from './pages/guides/GuidesPage'
 
@@ -58,11 +59,18 @@ function AppRoutes() {
           <Route path="cards" element={<Navigate to="/encyclopedia/cards" replace />} />
           <Route path="deck-builder" element={<DeckBuilderPage />} />
           <Route path="guides" element={<GuidesPage />} />
-          <Route path="simulator"  element={<SimulatorPage />} />
+          <Route path="battles" element={<BattlesPage />}>
+            <Route index element={<Navigate to="simulate" replace />} />
+            <Route path="simulate"  element={<SimulateTab />} />
+            <Route path="overview"  element={<OverviewTab />} />
+            <Route path="analytics" element={<AnalyticsTab />} />
+            <Route path="history"   element={<HistoryTab />} />
+          </Route>
+          <Route path="simulator"  element={<Navigate to="/battles/simulate" replace />} />
+          <Route path="battle"     element={<Navigate to="/battles/overview" replace />} />
           <Route path="capture"    element={<CapturePage />} />
           <Route path="setup"      element={<SetupPage />} />
           <Route path="rescue"     element={<RescuePage />} />
-          <Route path="battle"     element={<BattlePage />} />
           <Route path="about"      element={<AboutPage />} />
           <Route path="*"          element={<Navigate to="/fragments" replace />} />
         </Route>

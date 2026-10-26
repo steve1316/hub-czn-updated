@@ -7,6 +7,7 @@ import re
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
+from api.optimizer.expected_damage import damage_reduction
 from api.state import state
 import api.utils.text_lookup as text_lookup
 import api.utils.game_db as game_db
@@ -20,12 +21,19 @@ MORALE_PCT_PER_STACK = 20  # +20% card damage per Morale stack (cs00_0001_01 eff
 # Pydantic models
 # ---------------------------------------------------------------------------
 
+class SimDeckCard(BaseModel):
+    card_id: str
+    epiphany_level: int | None = None  # Deck Builder epiphany N, the game's spark rsp{N}_{card_id}
+
+
 class SimulateDamageRequest(BaseModel):
     char_name: str
     deck_id: int | None = None        # savedata id; None = pick highest-point deck
+    cards: list[SimDeckCard] | None = None  # a deck sent from the Deck Builder, used instead of the in-game decks
     morale: int = Field(default=0, ge=0, le=50)
     use_sparks: bool = True
     monster_def: int = Field(default=20, ge=0, le=9999)
+    dmg_decrease: float = Field(default=0, ge=0, lt=1)  # the enemy's real damage decrease; 0 = estimate it from DEF
     frightened: bool = False          # Weaken: player debuff ×0.75 damage dealt (cs00_0003)
     exposed_stacks: int = Field(default=0, ge=0, le=20)  # Vulnerable: +50% dmg taken per stack (cs00_0002)
     fortitude: bool = False           # Damage Reduction: monster buff ×0.85 dmg taken (cs00_0062)
@@ -54,7 +62,7 @@ class CardResult(BaseModel):
 
 class SimulateDamageResponse(BaseModel):
     char_name: str
-    deck_id: int
+    deck_id: int | None               # None when the request sent its own card list
     atk: float
     crate: float
     cdmg: float
@@ -355,8 +363,8 @@ def simulate_damage(body: SimulateDamageRequest):
     # Expected damage factor: (crit% × crit_dmg%) + (non-crit% × 100%)
     crit_factor = (crate / 100) * (cdmg / 100) + (1 - crate / 100)
     morale_mult = 1 + (body.morale * MORALE_PCT_PER_STACK / 100)
-    # DEF damage reduction: same formula used for EHP (def / 300)
-    def_reduction = 300 / (300 + body.monster_def)
+    # Share of damage that gets through the enemy's damage decrease
+    def_reduction = 1 - damage_reduction(body.dmg_decrease, body.monster_def)
     # Combat status buff/debuff multipliers
     buff_mult = 1.0
     if body.frightened:
@@ -382,21 +390,29 @@ def simulate_damage(body: SimulateDamageRequest):
         char_node_ids, node_effects, stats
     )
 
-    # --- Get character's card deck from save data ---
-    savedata: list = state.optimizer.raw_data.get("inventory", {}).get("savedata", [])
-
-    char_decks = [e for e in savedata if e.get("char_res_id") == res_id and e.get("card_datas")]
-    if not char_decks:
-        raise HTTPException(status_code=422, detail=f"No deck data found for {body.char_name} (res_id {res_id})")
-
-    if body.deck_id is not None:
-        deck_entry = next((e for e in char_decks if e.get("id") == body.deck_id), None)
-        if deck_entry is None:
-            raise HTTPException(status_code=422, detail=f"Deck {body.deck_id} not found for {body.char_name}")
+    # --- Get the card deck: the sent card list, or the character's deck from save data ---
+    deck_id: int | None = None
+    if body.cards is not None:
+        card_datas = [
+            {"res_id": card.card_id, "r_spark_res_id": f"rsp{card.epiphany_level}_{card.card_id}" if card.epiphany_level else None}
+            for card in body.cards
+        ]
     else:
-        deck_entry = max(char_decks, key=lambda e: e.get("point", 0))
+        savedata: list = state.optimizer.raw_data.get("inventory", {}).get("savedata", [])
 
-    card_datas = deck_entry.get("card_datas", [])
+        char_decks = [e for e in savedata if e.get("char_res_id") == res_id and e.get("card_datas")]
+        if not char_decks:
+            raise HTTPException(status_code=422, detail=f"No deck data found for {body.char_name} (res_id {res_id})")
+
+        if body.deck_id is not None:
+            deck_entry = next((e for e in char_decks if e.get("id") == body.deck_id), None)
+            if deck_entry is None:
+                raise HTTPException(status_code=422, detail=f"Deck {body.deck_id} not found for {body.char_name}")
+        else:
+            deck_entry = max(char_decks, key=lambda e: e.get("point", 0))
+
+        deck_id = deck_entry["id"]
+        card_datas = deck_entry.get("card_datas", [])
 
     # --- Simulate each card ---
     results: list[CardResult] = []
@@ -449,10 +465,6 @@ def simulate_damage(body: SimulateDamageRequest):
         # into the powerstep_define table, which stores per-power-step monster stat multipliers
         # (dmg_revise, hp_revise, cure_revise, shield_revise). The table scales MONSTER stats
         # by difficulty tier — it is NOT a multiplier on player card damage output. Excluded.
-        #
-        # The two other stat_formula constants (dmg_decrease_rate_0_value=-160,
-        # dmg_decrease_rate_curv_value=300) are parameters of the DEF reduction curve, which
-        # is already applied below as: def_reduction = 300 / (300 + monster_def). Confirmed.
         base_dmg = atk * (eff_value / 100)
         normal_dmg = base_dmg * morale_mult * buff_mult * def_reduction
         crit_dmg = base_dmg * (cdmg / 100) * morale_mult * buff_mult * def_reduction
@@ -478,7 +490,7 @@ def simulate_damage(body: SimulateDamageRequest):
 
     return SimulateDamageResponse(
         char_name=body.char_name,
-        deck_id=deck_entry["id"],
+        deck_id=deck_id,
         atk=round(atk, 1),
         crate=round(crate, 1),
         cdmg=round(cdmg, 1),

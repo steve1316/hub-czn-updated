@@ -1,81 +1,47 @@
-import { useState, useEffect } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Play, Zap, Shield } from 'lucide-react'
-import { api, assetUrl, isNotFound } from '@/lib/api'
+import { Play, Zap } from 'lucide-react'
+import { api, assetUrl } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
+import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, SimDeckCard, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
+import { damagePasses } from '@/lib/damage-reduction'
+import { formatBattleTime } from '@/pages/battle/battle-time.utils'
+import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
+import { loadSavedDecks } from '@/pages/deck-builder/deck-builder-saved-decks.utils'
+import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
+import { deckSlotToSimCards, type DeckBuilderHandoff } from './simulator-deck.utils'
 
 const MORALE_PCT = 20
 
-// DEF values from mon_stat@mon_stat.json (game data files)
-const DEF_PRESET_GROUPS = [
-  {
-    label: 'simulator.presetGroupCombat',
-    presets: [
-      { label: 'Lv5', value: 322 },
-      { label: 'Lv7', value: 220 },
-      { label: 'Lv8', value: 266 },
-      { label: 'Lv10', value: 370 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupGold',
-    presets: [
-      { label: 'Lv5', value: 322 },
-      { label: 'Lv7', value: 459 },
-      { label: 'Lv8', value: 556 },
-      { label: 'Lv10', value: 772 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupPiece',
-    presets: [
-      { label: 'Lv5', value: 357 },
-      { label: 'Lv7', value: 558 },
-      { label: 'Lv8', value: 615 },
-      { label: 'Lv10', value: 751 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupHyperspace',
-    presets: [
-      { label: 'All', value: 112 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupBoss',
-    presets: [
-      { label: 'Lv5', value: 258 },
-      { label: 'Lv7', value: 431 },
-      { label: 'Lv8', value: 488 },
-      { label: 'Lv10', value: 624 },
-    ],
-  },
-  {
-    label: 'simulator.presetGroupDisaster',
-    presets: [
-      { label: 'S1', value: 89 },
-      { label: 'S2', value: 122 },
-      { label: 'S3', value: 200 },
-      { label: 'S4', value: 219 },
-    ],
-  },
-]
-
 const STORAGE_KEY = 'czn_simulator_state'
+
+const AUTO_DECK: DeckChoice = { kind: 'game', id: null }
+
+/**
+ * The deck to simulate: an in-game deck (a null id picks the highest-scoring one), a deck sent unsaved from the Deck Builder, or one
+ * combatant's slot of a deck saved in the Deck Builder, read fresh on each run.
+ */
+type DeckChoice =
+  | { kind: 'game'; id: number | null }
+  | { kind: 'cards'; name: string; cards: SimDeckCard[] }
+  | { kind: 'saved'; id: string; slotIndex: number }
 
 interface PersistedState {
   charName: string
-  deckId: number | null
+  /** The deck to simulate. */
+  deck: DeckChoice
   morale: number
   useSparks: boolean
-  monsterDef: number
+  presetGroup: string
   weaken: boolean
   vulnerableStacks: number
   dmgReduction: boolean
   result: SimulateDamageResponse | null
+  /** The name of the Deck Builder deck behind `result`, or null for an in-game deck. */
+  resultDeckName: string | null
 }
 
 function loadPersistedState(): PersistedState | null {
@@ -86,6 +52,15 @@ function loadPersistedState(): PersistedState | null {
   } catch {
     return null
   }
+}
+
+/**
+ * The colours of an enemy chip.
+ * @param active Whether the chip is the current enemy.
+ * @returns The chip's colour classes.
+ */
+function chipClass(active: boolean): string {
+  return active ? 'bg-[#fb923c] text-white' : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
 }
 
 function savePersistedState(s: PersistedState): void {
@@ -101,6 +76,38 @@ function StatPill({ label, value, highlight }: { label: string; value: string; h
       <span className={`font-bold text-sm mt-0.5 ${highlight ? 'text-[#a3e635]' : 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
   )
+}
+
+/**
+ * One deck in the Simulator's deck list.
+ * @param label The deck's name.
+ * @param sub The smaller line under the name, if any.
+ * @param selected Whether this deck will be simulated.
+ * @param onClick Select this deck.
+ * @returns The button.
+ */
+function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?: string; selected: boolean; onClick?: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
+        selected ? 'bg-[#c084fc] text-white' : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
+      }`}
+    >
+      <div className="font-medium">{label}</div>
+      {sub && <div className={`text-[10px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#555]'}`}>{sub}</div>}
+    </button>
+  )
+}
+
+/**
+ * A heading over one group of decks in the deck list.
+ * @param children The group's name.
+ * @returns The heading.
+ */
+function DeckGroupLabel({ children }: { children: ReactNode }) {
+  return <p className="text-[9px] text-[#555] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
 }
 
 function CardRow({ card }: { card: SimCardResult }) {
@@ -166,27 +173,47 @@ function CardRow({ card }: { card: SimCardResult }) {
   )
 }
 
-export function SimulatorPage() {
+/**
+ * The Simulate tab: per-card damage for a character's deck against the shared Simulator enemy.
+ * @returns The tab.
+ */
+export function SimulateTab() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const navigate = useNavigate()
+  const { enemy, setEnemy } = useBattlesEnemy()
+  // The name of a combatant sent from the Deck Builder who is not in the capture
+  const [notOwned, setNotOwned] = useState<string | null>(null)
 
-  const [charName, setCharName] = useState(() => loadPersistedState()?.charName ?? '')
-  const [deckId, setDeckId] = useState<number | null>(() => loadPersistedState()?.deckId ?? null)
-  const [morale, setMorale] = useState(() => loadPersistedState()?.morale ?? 0)
-  const [useSparks, setUseSparks] = useState(() => loadPersistedState()?.useSparks ?? true)
-  const [monsterDef, setMonsterDef] = useState(() => loadPersistedState()?.monsterDef ?? 20)
-  const [weaken, setWeaken] = useState(() => loadPersistedState()?.weaken ?? false)
-  const [vulnerableStacks, setVulnerableStacks] = useState(() => loadPersistedState()?.vulnerableStacks ?? 0)
-  const [dmgReduction, setDmgReduction] = useState(() => loadPersistedState()?.dmgReduction ?? false)
-  const [result, setResult] = useState<SimulateDamageResponse | null>(() => loadPersistedState()?.result ?? null)
-  const [lastBattleError, setLastBattleError] = useState<string | null>(null)
+  const [initial] = useState(loadPersistedState)
+  const [charName, setCharName] = useState(initial?.charName ?? '')
+  const [deck, setDeck] = useState<DeckChoice>(initial?.deck ?? AUTO_DECK)
+  const [morale, setMorale] = useState(initial?.morale ?? 0)
+  const [useSparks, setUseSparks] = useState(initial?.useSparks ?? true)
+  const [presetGroup, setPresetGroup] = useState(initial?.presetGroup ?? ENEMY_PRESET_GROUPS[0].group)
+  const [weaken, setWeaken] = useState(initial?.weaken ?? false)
+  const [vulnerableStacks, setVulnerableStacks] = useState(initial?.vulnerableStacks ?? 0)
+  const [dmgReduction, setDmgReduction] = useState(initial?.dmgReduction ?? false)
+  const [result, setResult] = useState<SimulateDamageResponse | null>(initial?.result ?? null)
+  const [resultDeckName, setResultDeckName] = useState<string | null>(initial?.resultDeckName ?? null)
+  const [savedDecks] = useState(loadSavedDecks)
 
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
     savePersistedState({
-      charName, deckId, morale, useSparks, monsterDef,
-      weaken, vulnerableStacks, dmgReduction, result,
+      charName, deck, morale, useSparks, presetGroup,
+      weaken, vulnerableStacks, dmgReduction, result, resultDeckName,
       ...patch,
     })
+  }
+
+  /**
+   * Pick the deck to simulate.
+   * @param choice The deck.
+   */
+  function selectDeck(choice: DeckChoice) {
+    setDeck(choice)
+    persist({ deck: choice })
   }
 
   const { data: status } = useQuery({
@@ -209,47 +236,77 @@ export function SimulatorPage() {
     staleTime: 30_000,
   })
 
+  // Apply a deck sent from the Deck Builder once the combatants load, then drop it from the router state so a reload does not resend it
+  useEffect(() => {
+    const handoff = (location.state as { deckBuilder?: DeckBuilderHandoff } | null)?.deckBuilder
+    if (!handoff || combatants.length === 0) return
+    navigate(location.pathname, { replace: true, state: null })
+    const target = combatants.find((c) => c.res_id === handoff.combatantId)
+    setNotOwned(target ? null : handoff.name)
+    if (!target) return
+    const choice: DeckChoice = { kind: 'cards', name: t('simulator.builderDeck', { name: target.name }), cards: handoff.cards }
+    setCharName(target.char_id)
+    setDeck(choice)
+    persist({ charName: target.char_id, deck: choice })
+  }, [location.state, combatants])
+
+  // The slots of decks saved in the Deck Builder that belong to the selected character
+  const combatant = combatants.find((c) => c.char_id === charName)
+  const savedSlots = savedDecks.flatMap((saved) =>
+    saved.payload.slots
+      .map((slot, slotIndex) => ({ saved, slot, slotIndex }))
+      .filter(({ slot }) => slot.combatant_id === combatant?.res_id && slot.cards.length > 0),
+  )
+  const savedChoice = deck.kind === 'saved'
+    ? savedSlots.find(({ saved, slotIndex }) => saved.id === deck.id && slotIndex === deck.slotIndex)
+    : undefined
+  // A saved deck that was deleted, or belongs to another character, falls back to the auto pick
+  const activeDeck = deck.kind === 'saved' && !savedChoice ? AUTO_DECK : deck
+  // The name and cards of a Deck Builder deck, or null for an in-game deck
+  const builderDeck = activeDeck.kind === 'cards'
+    ? activeDeck
+    : savedChoice ? { name: savedChoice.saved.name, cards: deckSlotToSimCards(savedChoice.slot) } : null
+
+  // Shares the History tab's cache entry, showing only the newest few
+  const { data: recentBattles = [] } = useQuery<BattleRecord[], Error, BattleRecord[]>({
+    queryKey: ['battle-history', 30],
+    queryFn: () => api.battleHistory(30),
+    select: (battles) => battles.slice(0, 5),
+    staleTime: 10_000,
+    retry: false,
+  })
+
   const mutation = useMutation({
-    mutationFn: () =>
-      api.simulateDamage({
+    mutationFn: async () => {
+      const name = builderDeck?.name ?? null
+      const data = await api.simulateDamage({
         char_name: charName,
-        deck_id: deckId,
+        ...(builderDeck ? { cards: builderDeck.cards } : { deck_id: activeDeck.kind === 'game' ? activeDeck.id : null }),
         morale,
         use_sparks: useSparks,
-        monster_def: monsterDef,
+        monster_def: enemy.def,
+        dmg_decrease: enemy.dmgDecrease,
         frightened: weaken,
         exposed_stacks: vulnerableStacks,
         fortitude: dmgReduction,
-      }),
-    onSuccess: (data) => { setResult(data); persist({ result: data }) },
+      })
+      return { data, name }
+    },
+    onSuccess: ({ data, name }) => { setResult(data); setResultDeckName(name); persist({ result: data, resultDeckName: name }) },
   })
 
-  // Apply DEF value passed from Battle History page via sessionStorage
-  useEffect(() => {
-    const saved = sessionStorage.getItem('czn_battle_def')
-    if (saved) {
-      sessionStorage.removeItem('czn_battle_def')
-      const v = parseInt(saved, 10)
-      if (!isNaN(v) && v >= 0) {
-        setMonsterDef(v)
-        persist({ monsterDef: v })
-      }
-    }
-  }, [])
-
+  // A deck sent unsaved from the Deck Builder, listed on its own until another deck is picked
+  const sentDeck = activeDeck.kind === 'cards' ? activeDeck : null
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
   const moraleMultDisplay = `×${(1 + morale * MORALE_PCT / 100).toFixed(2)}`
-  const defReductionPreview = `${(300 / (300 + monsterDef) * 100).toFixed(1)}%`
+  const defReductionPreview = `${(damagePasses(enemy.dmgDecrease, enemy.def) * 100).toFixed(1)}%`
+  const activeGroup = ENEMY_PRESET_GROUPS.find((group) => group.group === presetGroup) ?? ENEMY_PRESET_GROUPS[0]
+  const source = enemy.source
 
   return (
     <div className="flex h-full overflow-hidden">
       {/* Left panel */}
       <div className="w-64 shrink-0 flex flex-col gap-4 p-4 bg-[#181818] border-r border-[#282828] overflow-y-auto">
-        <div>
-          <h2 className="text-[#ffffff] font-bold text-sm mb-3">{t('simulator.title')}</h2>
-          <p className="text-[#888] text-xs leading-relaxed">{t('simulator.description')}</p>
-        </div>
-
         {!status?.data_loaded && (
           <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
             {t('simulator.noData')}
@@ -261,56 +318,67 @@ export function SimulatorPage() {
           <CharacterCombobox
             combatants={combatants}
             value={charName}
-            onChange={(v) => { setCharName(v); setDeckId(null); persist({ charName: v, deckId: null }) }}
+            onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); setNotOwned(null); persist({ charName: v, deck: AUTO_DECK }) }}
           />
+          {notOwned && <p className="text-[#f87171] text-[10px]">{t('simulator.notOwned', { name: notOwned })}</p>}
         </div>
 
-        {charName && decks.length > 0 && (
+        {charName && (decks.length > 0 || savedSlots.length > 0 || sentDeck) && (
           <div className="flex flex-col gap-1">
             <label className="text-[#b3b3b3] text-xs">{t('simulator.deck')}</label>
-            <div className="flex flex-col gap-0.5 max-h-40 overflow-y-auto pr-0.5">
-              <button
-                type="button"
-                onClick={() => { setDeckId(null); persist({ deckId: null }) }}
-                className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
-                  deckId === null
-                    ? 'bg-[#c084fc] text-white'
-                    : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
-                }`}
-              >
-                {t('simulator.deckAuto')}
-              </button>
-              {decks.map((d) => {
-                const label = d.bookmark_slot > 0
-                  ? t('simulator.deckSlot', { slot: d.bookmark_slot })
-                  : `#${d.deck_id}`
-                const sub = t('simulator.deckPoints', {
-                  point: d.point.toLocaleString(),
-                  count: d.card_count,
-                })
-                return (
-                  <button
-                    key={d.deck_id}
-                    type="button"
-                    onClick={() => { setDeckId(d.deck_id); persist({ deckId: d.deck_id }) }}
-                    className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
-                      deckId === d.deck_id
-                        ? 'bg-[#c084fc] text-white'
-                        : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="truncate font-medium">{d.name || label}</span>
-                      {d.bookmark_slot > 0 && !d.name && (
-                        <span className="shrink-0 text-[9px] opacity-60">★</span>
-                      )}
-                    </div>
-                    <div className={`text-[10px] mt-0.5 ${deckId === d.deck_id ? 'text-white/70' : 'text-[#555]'}`}>
-                      {sub}
-                    </div>
-                  </button>
-                )
-              })}
+            <div className="flex flex-col gap-0.5 max-h-56 overflow-y-auto pr-0.5">
+              {sentDeck && (
+                <>
+                  <DeckGroupLabel>{t('simulator.deckGroups.builder')}</DeckGroupLabel>
+                  <DeckButton label={sentDeck.name} sub={t('simulator.unsaved')} selected />
+                </>
+              )}
+              {decks.length > 0 && (
+                <>
+                  {(sentDeck || savedSlots.length > 0) && <DeckGroupLabel>{t('simulator.deckGroups.game')}</DeckGroupLabel>}
+                  <DeckButton
+                    label={t('simulator.deckAuto')}
+                    selected={activeDeck.kind === 'game' && activeDeck.id === null}
+                    onClick={() => selectDeck(AUTO_DECK)}
+                  />
+                  {decks.map((d) => {
+                    const label = d.bookmark_slot > 0
+                      ? t('simulator.deckSlot', { slot: d.bookmark_slot })
+                      : `#${d.deck_id}`
+                    return (
+                      <DeckButton
+                        key={d.deck_id}
+                        label={
+                          <span className="flex items-center justify-between gap-2">
+                            <span className="truncate">{d.name || label}</span>
+                            {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[9px] opacity-60">★</span>}
+                          </span>
+                        }
+                        sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
+                        selected={activeDeck.kind === 'game' && activeDeck.id === d.deck_id}
+                        onClick={() => selectDeck({ kind: 'game', id: d.deck_id })}
+                      />
+                    )
+                  })}
+                </>
+              )}
+              {savedSlots.length > 0 && (
+                <>
+                  <DeckGroupLabel>{t('simulator.deckGroups.saved')}</DeckGroupLabel>
+                  {savedSlots.map(({ saved, slot, slotIndex }) => {
+                    const choice: DeckChoice = { kind: 'saved', id: saved.id, slotIndex }
+                    return (
+                      <DeckButton
+                        key={`${saved.id}-${slotIndex}`}
+                        label={<span className="block truncate">{saved.name}</span>}
+                        sub={t('simulator.deckCards', { count: slot.cards.length })}
+                        selected={savedChoice?.saved.id === saved.id && savedChoice.slotIndex === slotIndex}
+                        onClick={() => selectDeck(choice)}
+                      />
+                    )
+                  })}
+                </>
+              )}
             </div>
           </div>
         )}
@@ -341,55 +409,59 @@ export function SimulatorPage() {
             <label className="text-[#b3b3b3] text-xs">{t('simulator.monsterDef')}</label>
             <span className="text-[#fb923c] text-xs font-mono">{defReductionPreview} {t('simulator.dmgPasses')}</span>
           </div>
-          <div className="flex flex-col gap-2 mt-1">
-            {DEF_PRESET_GROUPS.map((group) => (
-              <div key={group.label}>
-                <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">
-                  {t(group.label)}
-                </p>
-                <div className="flex flex-wrap gap-1">
-                  {group.presets.map((p) => (
-                    <button
-                      key={`${group.label}-${p.label}`}
-                      type="button"
-                      onClick={() => { setMonsterDef(p.value); persist({ monsterDef: p.value }) }}
-                      className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${
-                        monsterDef === p.value
-                          ? 'bg-[#fb923c] text-white'
-                          : 'bg-[#2a2a2a] text-[#888] hover:text-[#e5e7eb]'
-                      }`}
-                    >
-                      {p.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+          <select
+            value={activeGroup.group}
+            onChange={(e) => { setPresetGroup(e.target.value); persist({ presetGroup: e.target.value }) }}
+            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1"
+          >
+            {ENEMY_PRESET_GROUPS.map((group) => (
+              <option key={group.group} value={group.group}>{t(`simulator.presetGroups.${group.group}`)}</option>
+            ))}
+          </select>
+          <div className="flex flex-wrap gap-1">
+            {activeGroup.presets.map((p) => (
+              <button
+                key={p.label}
+                type="button"
+                title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
+                onClick={() => setEnemy(presetEnemy(activeGroup.group, p))}
+                className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                  source.kind === 'preset' && source.group === activeGroup.group && source.label === p.label,
+                )}`}
+              >
+                {p.label}
+              </button>
             ))}
           </div>
-          <div className="flex gap-1">
-            <input
-              type="number"
-              min={0}
-              max={9999}
-              value={monsterDef}
-              onChange={(e) => { const v = Math.max(0, Number(e.target.value)); setMonsterDef(v); persist({ monsterDef: v }) }}
-              className="flex-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 w-0 font-mono"
-            />
-            <button
-              type="button"
-              title={t('simulator.lastBattleTip')}
-              onClick={() =>
-                api.battleLatest()
-                  .then(b => { const v = Math.round(b.enemy_def); setMonsterDef(v); persist({ monsterDef: v }); setLastBattleError(null) })
-                  .catch(err => setLastBattleError(isNotFound(err) ? t('simulator.noLastBattle') : (err as Error).message))
-              }
-              className="flex items-center gap-1 px-2 py-1 rounded bg-[#c084fc]/15 text-[#c084fc] text-[10px] hover:bg-[#c084fc]/25 transition-colors shrink-0"
-            >
-              <Shield size={10} />
-              {t('simulator.lastBattle')}
-            </button>
-          </div>
-          {lastBattleError && <p className="text-[#f87171] text-[10px]">{lastBattleError}</p>}
+          {recentBattles.length > 0 && (
+            <div className="mt-1">
+              <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
+              <div className="flex flex-wrap gap-1">
+                {recentBattles.map((b) => (
+                  <button
+                    key={b.capture_time}
+                    type="button"
+                    title={t('simulator.recentTip', { def: Math.round(b.enemy_def), pct: (b.enemy_dmg_decrease * 100).toFixed(1) })}
+                    onClick={() => setEnemy(battleEnemy(b))}
+                    className={`flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                      source.kind === 'battle' && source.captureTime === b.capture_time,
+                    )}`}
+                  >
+                    <span className={b.battle_result === 'CLEAR' ? 'text-[#a3e635]' : 'text-[#f87171]'}>●</span>
+                    {formatBattleTime(b.capture_time)} · {Math.round(b.enemy_def)}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          <input
+            type="number"
+            min={0}
+            max={9999}
+            value={enemy.def}
+            onChange={(e) => setEnemy(typedEnemy(Math.max(0, Number(e.target.value))))}
+            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 font-mono"
+          />
         </div>
 
         {/* Buffs & Debuffs */}
@@ -510,8 +582,8 @@ export function SimulatorPage() {
             <div>
               <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-[#ffffff] font-bold text-sm">{result.char_name}</h3>
-                {result.deck_id != null && (
-                  <span className="text-[#555] text-[10px]">deck #{result.deck_id}</span>
+                {(resultDeckName || result.deck_id != null) && (
+                  <span className="text-[#555] text-[10px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -576,8 +648,8 @@ export function SimulatorPage() {
                   <tbody>
                     {[...result.cards]
                       .sort((a, b) => b.avg_damage - a.avg_damage)
-                      .map((card) => (
-                        <CardRow key={`${card.card_id}-${card.spark_id}`} card={card} />
+                      .map((card, i) => (
+                        <CardRow key={`${card.card_id}-${card.spark_id}-${i}`} card={card} />
                       ))}
                   </tbody>
                 </table>
