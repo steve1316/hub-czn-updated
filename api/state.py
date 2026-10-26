@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import collections
 import queue
 import time
 
@@ -54,6 +55,8 @@ class AppState:
         self.capture_region: str = "global"
         self.rescue_file_path: str | None = None
         self.log_queue: queue.SimpleQueue = queue.SimpleQueue()
+        # Recent log lines kept for /api/capture/log. The WebSocket drains log_queue, so this copy is what stays readable.
+        self.log_tail: collections.deque = collections.deque(maxlen=500)
 
         # Optimizer job state
         self.job_id: str | None = None
@@ -86,6 +89,16 @@ class AppState:
         except Exception:
             pass
 
+    def push_log(self, entry: dict) -> None:
+        """
+        Publish a capture log entry to the WebSocket queue and the tail buffer.
+
+        Args:
+            entry: Dict with `level`, `message` and `timestamp`.
+        """
+        self.log_queue.put(entry)
+        self.log_tail.append(entry)
+
     def get_capture_manager(self):
         """Return existing manager or create a new one for this session."""
         if self._capture_manager is None:
@@ -106,7 +119,7 @@ class AppState:
                         level = "success"
                     elif "warning" in msg_lower:
                         level = "warning"
-                self.log_queue.put({
+                self.push_log({
                     "level": level,
                     "message": msg,
                     "timestamp": time.strftime("%H:%M:%S"),
