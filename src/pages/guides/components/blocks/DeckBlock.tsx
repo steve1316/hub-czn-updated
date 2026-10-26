@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom'
 import { SquareStack } from 'lucide-react'
 import { CardImage } from '@/pages/deck-builder/components/CardImage'
 import type { CardEntry } from '@/lib/types'
-import { cardEntry, guideDeckToSlot, levelNumeral, localized, resolveLang, type GuideDeckHandoff } from '../../guides.utils'
+import { cardEntry, deckCardName, guideDeckToSlot, levelNumeral, localized, resolveLang, type GuideDeckHandoff } from '../../guides.utils'
 import type { DeckCard, EpiphanyRating } from '../../guides.types'
 import { CostGem } from './CostGem'
 import { RatingChip } from './RatingChip'
@@ -63,7 +63,7 @@ export function DeckBlock({ cards, ratings, cardsById, openFor }: DeckBlockProps
         {cards.map((card, index) => {
           const level = card.epiphany?.level
           return (
-            <div key={`${card.cardId}-${index}`} className="relative h-[168px] w-[112px] shrink-0">
+            <div key={`${card.cardId}-${index}`} title={deckCardName(card)} className="relative h-[168px] w-[112px] shrink-0">
               <CardImage card={cardEntry(card.cardId, card.name, cardsById, card.persona)} className="h-full w-full rounded" />
               <CostGem cost={card.cost} className="absolute top-1.5 left-1.5" />
               {card.extra?.god && <span className="absolute top-0.5 right-1.5 text-lg text-[#fcd34d] [text-shadow:0_1px_2px_#000]">✦</span>}
@@ -89,7 +89,7 @@ export function DeckBlock({ cards, ratings, cardsById, openFor }: DeckBlockProps
             >
               {card.cost === undefined ? <span /> : <CostGem cost={card.cost} />}
               <span className="font-bold text-[#ffffff]">
-                {card.epiphany?.name ?? card.name ?? card.cardId}
+                {deckCardName(card)}
                 {level === 0 && <span className="ml-1.5 rounded border border-[#555] px-1 text-xs font-normal text-[#b3b3b3]">{t('guides.base')}</span>}
               </span>
               <span className="leading-relaxed text-[#b3b3b3]">

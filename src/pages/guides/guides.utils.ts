@@ -58,6 +58,15 @@ export function levelNumeral(level: number): string {
 }
 
 /**
+ * The name a deck card goes by: its epiphany's name when it shows one, else the card's own.
+ * @param card The deck card.
+ * @returns The name, or the card id when the sheet gave none.
+ */
+export function deckCardName(card: DeckCard): string {
+  return card.epiphany?.name ?? card.name ?? card.cardId
+}
+
+/**
  * The score of a rating.
  * @param rating The author's rating, such as "3.5/5".
  * @returns The score before the slash, or -1 when there is none.

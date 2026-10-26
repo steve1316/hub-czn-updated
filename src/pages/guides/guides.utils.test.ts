@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { DeckCard, Guide } from './guides.types'
-import { cardEntry, epiphanyRatings, filterGuides, guideDeckToSlot, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
+import { cardEntry, deckCardName, epiphanyRatings, filterGuides, guideDeckToSlot, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en for en and anything else', () => {
@@ -148,5 +148,14 @@ describe('filterGuides', () => {
 
   it('puts the latest update first and undated guides last', () => {
     expect(filterGuides(list, '', 'updated').map(g => g.name)).toEqual(['Anika', 'Nia', 'Amir', 'Beryl'])
+  })
+})
+
+describe('deckCardName', () => {
+  it('prefers the epiphany name, then the sheet name, then the card id', () => {
+    const epiphany = { level: 5, name: 'Flicker Blade (Unbound)', text: { en: '' } }
+    expect(deckCardName({ cardId: 'c_1_uni1', name: 'Flicker Blade', epiphany } as DeckCard)).toBe('Flicker Blade (Unbound)')
+    expect(deckCardName({ cardId: 'c_1_uni1', name: 'Flicker Blade' } as DeckCard)).toBe('Flicker Blade')
+    expect(deckCardName({ cardId: 'c_1_uni1' } as DeckCard)).toBe('c_1_uni1')
   })
 })
