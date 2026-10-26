@@ -76,7 +76,6 @@ const en = {
     },
   },
   scoring: {
-    title: 'Scoring',
     save: 'Save',
     saving: 'Saving...',
     reset: 'Reset',
@@ -89,8 +88,6 @@ const en = {
     edit: 'Edit',
     hide: 'Hide',
     intro: 'Every Memory Fragment gets a score for how well its substats rolled. Scoring lets you say which stats matter for each character, so fragments are ranked by your priorities, not just raw rolls. These weights decide the Score column on Memory Fragments, the Combatants averages, and which builds the Optimizer picks first.',
-    openPanel: 'Open scoring panel',
-    closePanel: 'Close panel',
     howGSWorks: 'How Gear Score Works',
     preset: {
       noPreset: 'No game preset available for this character.',
