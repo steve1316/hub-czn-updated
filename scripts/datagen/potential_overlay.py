@@ -30,6 +30,8 @@ MATCH_WIDTH = 760
 # Registration needs this many SIFT matches that agree, and an author picture scale (its size over the clean tree's) within this range.
 MIN_INLIERS = 12
 SCALE_RANGE = (0.15, 1.5)
+# The clean tree is matched at these sizes (1 is full size).
+CLEAN_SCALES = (1.0, 0.75, 0.55)
 # SIFT descriptor ratio test and the pixel error a match may have after registration.
 RATIO = 0.9
 RANSAC_ERROR = 6
@@ -174,10 +176,14 @@ def _grey(image: Image.Image) -> np.ndarray:
     return grey
 
 
-@lru_cache(maxsize=1)
-def _clean_features():
-    sift = cv2.SIFT_create()
-    return sift.detectAndCompute(np.asarray(_clean().convert("L")), None)
+@lru_cache(maxsize=None)
+def _clean_features(scale: float):
+    """The clean tree's SIFT points, sizes and descriptors, found at `scale` and given in the clean tree's own pixels."""
+    clean = _clean().convert("L")
+    if scale != 1.0:
+        clean = clean.resize((round(clean.width * scale), round(clean.height * scale)), Image.LANCZOS)
+    keys, desc = cv2.SIFT_create().detectAndCompute(np.asarray(clean), None)
+    return np.float32([key.pt for key in keys]) / scale, np.float32([key.size for key in keys]) / scale, desc
 
 
 def register(author: Image.Image) -> np.ndarray | None:
@@ -195,7 +201,7 @@ def register(author: Image.Image) -> np.ndarray | None:
 
 def fit(author: Image.Image) -> tuple[np.ndarray | None, int]:
     """
-    Register an author's picture and count the matches that support it.
+    Register an author's picture and count the matches that support it. The clean tree is tried at a few sizes, as SIFT matches best at similar sizes.
 
     Args:
         author: The author's tree picture.
@@ -206,38 +212,50 @@ def fit(author: Image.Image) -> tuple[np.ndarray | None, int]:
     if min(author.size) < MIN_SIZE:
         return None, 0
     grey = _grey(author)
-    factor = grey.shape[1] / author.width
-    sift = cv2.SIFT_create()
-    keys, desc = sift.detectAndCompute(grey, None)
-    clean_keys, clean_desc = _clean_features()
-    if desc is None or len(keys) < 2 or len(clean_keys) < 2:
+    keys, desc = cv2.SIFT_create().detectAndCompute(grey, None)
+    if desc is None or len(keys) < 2:
+        return None, 0
+    points, sizes = np.float32([key.pt for key in keys]), np.float32([key.size for key in keys])
+    best: tuple[np.ndarray | None, int] = (None, 0)
+    for scale in CLEAN_SCALES:
+        matrix, count = _fit_at(points, sizes, desc, _clean_features(scale))
+        if count > best[1]:
+            best = (matrix, count)
+    matrix, count = best
+    if matrix is None:
+        return None, count
+    # The matrix maps into the enlarged picture, so scale it back to the author's own pixels.
+    matrix = matrix * author.width / grey.shape[1]
+    scale = math.hypot(matrix[0, 0], matrix[1, 0])
+    return (matrix if SCALE_RANGE[0] <= scale <= SCALE_RANGE[1] else None), count
+
+
+def _fit_at(points: np.ndarray, sizes: np.ndarray, desc: np.ndarray, clean: tuple) -> tuple[np.ndarray | None, int]:
+    """Match the author's SIFT features to one set of clean features and fit the transform that most matches agree on."""
+    clean_points, clean_sizes, clean_desc = clean
+    if len(clean_points) < 2:
         return None, 0
     good = [pair[0] for pair in cv2.BFMatcher().knnMatch(clean_desc, desc, k=2) if len(pair) == 2 and pair[0].distance < RATIO * pair[1].distance]
     if len(good) < MIN_INLIERS:
         return None, 0
     # Keep the matches whose feature sizes agree on one scale, which drops the false ones that would otherwise collapse the fit.
-    ratios = np.array([keys[m.trainIdx].size / clean_keys[m.queryIdx].size for m in good])
+    ratios = np.array([sizes[m.trainIdx] / clean_sizes[m.queryIdx] for m in good])
     good = [m for m, ratio in zip(good, ratios) if abs(math.log(ratio / np.median(ratios))) < SIZE_SPREAD]
     if len(good) < MIN_INLIERS:
         return None, 0
-    src = np.float32([clean_keys[m.queryIdx].pt for m in good])
-    dst = np.float32([keys[m.trainIdx].pt for m in good])
+    src = np.float32([clean_points[m.queryIdx] for m in good])
+    dst = np.float32([points[m.trainIdx] for m in good])
     # Vote for the offset at the median scale, so false matches that all land on one spot cannot make a degenerate fit. Then fit the voters.
     offsets = dst - np.median(ratios) * src
     votes = [(np.linalg.norm(offsets - offset, axis=1) < OFFSET_TOLERANCE) for offset in offsets]
     voters = max(votes, key=lambda vote: vote.sum())
     if voters.sum() < MIN_INLIERS:
         return None, int(voters.sum())
-    matrix, inliers = cv2.estimateAffinePartial2D(src[voters], dst[voters], method=cv2.RANSAC, ransacReprojThreshold=RANSAC_ERROR, maxIters=2000)
+    matrix, _ = cv2.estimateAffinePartial2D(src[voters], dst[voters], method=cv2.RANSAC, ransacReprojThreshold=RANSAC_ERROR, maxIters=2000)
     if matrix is None:
         return None, 0
     count = int((np.linalg.norm(src @ matrix[:, :2].T + matrix[:, 2] - dst, axis=1) < RANSAC_ERROR).sum())
-    if count < MIN_INLIERS:
-        return None, count
-    # The matrix maps into the enlarged picture, so scale it back to the author's own pixels.
-    matrix = matrix / factor
-    scale = math.hypot(matrix[0, 0], matrix[1, 0])
-    return (matrix if SCALE_RANGE[0] <= scale <= SCALE_RANGE[1] else None), count
+    return (matrix, count) if count >= MIN_INLIERS else (None, count)
 
 
 def sample(author: Image.Image) -> dict[str, str | None] | None:
