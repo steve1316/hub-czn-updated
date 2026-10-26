@@ -5,29 +5,18 @@ import { useTranslation } from 'react-i18next'
 import { Play, Zap } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, SimDeckCard, DeckInfo } from '@/lib/types'
+import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 import { damagePasses } from '@/lib/damage-reduction'
 import { formatBattleTime } from '@/pages/battle/battle-time.utils'
 import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
 import { loadSavedDecks } from '@/pages/deck-builder/deck-builder-saved-decks.utils'
 import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
-import { deckSlotToSimCards, type DeckBuilderHandoff } from './simulator-deck.utils'
+import { AUTO_DECK, deckSlotToSimCards, persistedDeckChoice, type DeckBuilderHandoff, type DeckChoice, type StoredDeckChoice } from './simulator-deck.utils'
 
 const MORALE_PCT = 20
 
 const STORAGE_KEY = 'czn_simulator_state'
-
-const AUTO_DECK: DeckChoice = { kind: 'game', id: null }
-
-/**
- * The deck to simulate: an in-game deck (a null id picks the highest-scoring one), a deck sent unsaved from the Deck Builder, or one
- * combatant's slot of a deck saved in the Deck Builder, read fresh on each run.
- */
-type DeckChoice =
-  | { kind: 'game'; id: number | null }
-  | { kind: 'cards'; name: string; cards: SimDeckCard[] }
-  | { kind: 'saved'; id: string; slotIndex: number }
 
 interface PersistedState {
   charName: string
@@ -48,7 +37,8 @@ function loadPersistedState(): PersistedState | null {
   try {
     const raw = localStorage.getItem(STORAGE_KEY)
     if (!raw) return null
-    return JSON.parse(raw) as PersistedState
+    const parsed = JSON.parse(raw) as Omit<PersistedState, 'deck'> & StoredDeckChoice
+    return { ...parsed, deck: persistedDeckChoice(parsed) }
   } catch {
     return null
   }
@@ -244,7 +234,9 @@ export function SimulateTab() {
     const target = combatants.find((c) => c.res_id === handoff.combatantId)
     setNotOwned(target ? null : handoff.name)
     if (!target) return
-    const choice: DeckChoice = { kind: 'cards', name: t('simulator.builderDeck', { name: target.name }), cards: handoff.cards }
+    const choice: DeckChoice = handoff.saved
+      ? { kind: 'saved', ...handoff.saved }
+      : { kind: 'cards', name: t('simulator.builderDeck', { name: target.name }), cards: handoff.cards }
     setCharName(target.char_id)
     setDeck(choice)
     persist({ charName: target.char_id, deck: choice })
