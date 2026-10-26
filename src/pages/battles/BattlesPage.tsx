@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { NavLink, Outlet } from 'react-router-dom'
+import { NavLink, Outlet, useMatch } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import { enemyDecrease, enemyLabel, loadEnemy, saveEnemy, type BattlesContext, type SimEnemy } from './battles-enemy'
@@ -38,6 +38,7 @@ function EnemyBar({ enemy }: { enemy: SimEnemy }) {
 export function BattlesPage() {
   const { t } = useTranslation()
   const [enemy, setEnemyState] = useState(loadEnemy)
+  const onSimulate = useMatch('/battles/simulate') != null
 
   const context: BattlesContext = {
     enemy,
@@ -65,7 +66,7 @@ export function BattlesPage() {
           </NavLink>
         ))}
       </div>
-      <EnemyBar enemy={enemy} />
+      {onSimulate && <EnemyBar enemy={enemy} />}
       <div className="min-h-0 flex-1 overflow-y-auto">
         <Outlet context={context} />
       </div>

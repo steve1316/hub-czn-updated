@@ -8,7 +8,7 @@ import { EmptyState } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, BattleAnalytics, CharAnalysis, Combatant, BattleOverview, InsightCard, CharTrend } from '@/lib/types'
 import { battleEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
-import { formatBattleTime } from './battle-time.utils'
+import { battleTimeTitle, formatBattleTime } from './battle-time.utils'
 
 // ── shared helpers ────────────────────────────────────────────────────────────
 
@@ -163,7 +163,7 @@ function CharTrendCard({ trend, combatants }: { trend: CharTrend; combatants: Co
       <div className="flex items-center gap-2">
         <CharAvatar combatant={combatant} size={28} />
         <div className="flex-1 min-w-0">
-          <div className="text-[#e5e7eb] text-xs font-bold truncate">{name}</div>
+          <div title={name} className="text-[#e5e7eb] text-sm font-bold truncate">{name}</div>
           <div className="text-[#8a8a8a] text-[11px]">{t('battle.overview.battlesCount', { count: trend.battle_count })}</div>
         </div>
         <span className={`text-[11px] font-bold px-1.5 py-0.5 rounded ${badgeClass}`}>
@@ -227,7 +227,7 @@ export function OverviewTab() {
   const s = overview.summary
 
   return (
-    <div className="flex flex-col gap-4 max-w-3xl p-4">
+    <div className="flex flex-col gap-4 max-w-6xl p-4">
       {/* Summary strip */}
       <div className="flex gap-2 flex-wrap">
         <StatBox label={t('battle.overview.battles')} value={s.total} />
@@ -239,19 +239,9 @@ export function OverviewTab() {
         <StatBox label={t('battle.overview.avgEnemyDef')} value={Math.round(s.avg_enemy_def)} accent="text-[#fb923c]" />
         <StatBox label={t('battle.overview.avgTeamDmg')} value={formatDmg(s.avg_team_dmg)} accent="text-[#c084fc]" />
         {s.last_battle_time && (
-          <StatBox label={t('battle.overview.lastBattle')} value={formatBattleTime(s.last_battle_time)} />
+          <StatBox label={t('battle.overview.lastBattle')} value={formatBattleTime(s.last_battle_time)} title={battleTimeTitle(s.last_battle_time)} />
         )}
       </div>
-
-      {/* Insight cards */}
-      {overview.insights.length > 0 && (
-        <div className="flex flex-col gap-2">
-          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.overview.insights')}</p>
-          {overview.insights.map((card, i) => (
-            <InsightCardComp key={i} card={card} combatants={combatants} />
-          ))}
-        </div>
-      )}
 
       {/* Character trend grid */}
       {overview.chars.length > 0 && (
@@ -262,6 +252,17 @@ export function OverviewTab() {
               <CharTrendCard key={char.res_id} trend={char} combatants={combatants} />
             ))}
           </div>
+        </div>
+      )}
+
+      <div className="grid gap-4 lg:grid-cols-2 items-start">
+      {/* Insight cards */}
+      {overview.insights.length > 0 && (
+        <div className="flex flex-col gap-2">
+          <p className="text-[#8a8a8a] text-[11px] uppercase tracking-wide">{t('battle.overview.insights')}</p>
+          {overview.insights.map((card, i) => (
+            <InsightCardComp key={i} card={card} combatants={combatants} />
+          ))}
         </div>
       )}
 
@@ -283,22 +284,23 @@ export function OverviewTab() {
                       <span className="text-[#facc15] text-[11px]">{mvp.name}</span>
                     </div>
                   )}
-                  <span className="ml-auto text-[#8a8a8a] text-[11px]">{formatBattleTime(r.capture_time)}</span>
+                  <span title={battleTimeTitle(r.capture_time)} className="ml-auto text-[#8a8a8a] text-[11px]">{formatBattleTime(r.capture_time)}</span>
                 </div>
               )
             })}
           </div>
         </div>
       )}
+      </div>
     </div>
   )
 }
 
 // ── History tab ───────────────────────────────────────────────────────────────
 
-function StatBox({ label, value, accent }: { label: string; value: string | number; accent?: string }) {
+function StatBox({ label, value, accent, title }: { label: string; value: string | number; accent?: string; title?: string }) {
   return (
-    <div className="flex flex-col items-center bg-[#1e1e1e] rounded px-4 py-3 min-w-[90px]">
+    <div title={title} className="flex flex-col items-center bg-[#1e1e1e] rounded px-4 py-3 min-w-[90px]">
       <span className="text-[#888] text-[11px] uppercase tracking-wide">{label}</span>
       <span className={`font-bold text-lg font-mono mt-0.5 ${accent ?? 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
@@ -313,7 +315,7 @@ function HistorySummary({ history }: { history: BattleRecord[] }) {
   const avgDef = total > 0 ? Math.round(history.reduce((s, r) => s + r.enemy_def, 0) / total) : 0
   return (
     <div className="flex gap-2 flex-wrap mb-3">
-      <StatBox label={t('battle.history')} value={total} />
+      <StatBox label={t('battle.overview.battles')} value={total} />
       <StatBox
         label={t('battle.winRate')}
         value={`${winRate}%`}
@@ -335,7 +337,7 @@ function DptRow({
   return (
     <div className="flex items-center gap-2">
       <CharAvatar combatant={combatant} size={22} />
-      <span className={`text-xs w-20 truncate ${isMvp ? 'text-[#facc15] font-bold' : 'text-[#b3b3b3]'}`}>
+      <span title={name} className={`text-xs w-24 truncate ${isMvp ? 'text-[#facc15] font-bold' : 'text-[#b3b3b3]'}`}>
         {name}{isMvp ? ' ★' : ''}
       </span>
       <div className="flex-1 h-1.5 rounded-full bg-[#2a2a2a] min-w-[60px]">
@@ -384,7 +386,7 @@ function BattleCard({
               <span className="text-[#facc15] text-[11px] font-medium">{mvpName}</span>
             </div>
           )}
-          <span className="text-[#8a8a8a] text-[11px]">{formatBattleTime(record.capture_time)}</span>
+          <span title={battleTimeTitle(record.capture_time)} className="text-[#8a8a8a] text-[11px]">{formatBattleTime(record.capture_time)}</span>
         </div>
       </div>
 
@@ -484,11 +486,13 @@ export function HistoryTab() {
       {!isLoading && !error && history.length === 0 && <NoBattles />}
 
       {history.length > 0 && (
-        <div className="flex flex-col gap-3 max-w-3xl">
+        <div className="flex flex-col gap-3 max-w-6xl">
           <HistorySummary history={history} />
-          {history.map((rec, i) => (
-            <BattleCard key={i} record={rec} combatants={combatants} onUseDef={handleUseDef} />
-          ))}
+          <div className="grid gap-3 lg:grid-cols-2 items-start">
+            {history.map((rec, i) => (
+              <BattleCard key={i} record={rec} combatants={combatants} onUseDef={handleUseDef} />
+            ))}
+          </div>
         </div>
       )}
     </div>
@@ -626,7 +630,7 @@ export function AnalyticsTab() {
   const defPct = (analytics.def_factor * 100).toFixed(1)
 
   return (
-    <div className="flex flex-col gap-4 max-w-3xl p-4">
+    <div className="flex flex-col gap-4 max-w-6xl p-4">
       {/* Context banner */}
       <div className="bg-[#1a1a1a] border border-[#282828] rounded-lg px-4 py-3 flex flex-wrap gap-4 items-center">
         <div className="flex flex-col">
@@ -643,9 +647,11 @@ export function AnalyticsTab() {
       </div>
 
       {/* Character cards */}
-      {analytics.chars.map((c) => (
-        <CharAnalyticsCard key={c.res_id} analysis={c} combatants={combatants} />
-      ))}
+      <div className="grid gap-4 lg:grid-cols-2 items-start">
+        {analytics.chars.map((c) => (
+          <CharAnalyticsCard key={c.res_id} analysis={c} combatants={combatants} />
+        ))}
+      </div>
 
       <div className="text-[#8a8a8a] text-[11px] leading-relaxed border-t border-[#282828] pt-3">
         <p>{t('battle.defFactorNote')}</p>

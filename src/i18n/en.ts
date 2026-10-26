@@ -570,7 +570,6 @@ const en = {
     charDpt: 'Damage per Character',
     useDefBtn: 'Simulate vs this enemy',
     noCharDpt: 'No DPT data (wave-mode battles reset per wave)',
-    history: 'History',
     winRate: 'Win Rate',
     avgDef: 'Avg DEF',
     clear: 'CLEAR',
