@@ -17,7 +17,7 @@ from api.game_data.constants import STATS
 from scripts.datagen import roster
 from scripts.datagen.client import parse_list
 from scripts.datagen.overrides import Issue
-from scripts.datagen.runner import REPO_ROOT, Context, TargetResult
+from scripts.datagen.runner import REPO_ROOT, Context, TargetResult, replace_literal
 
 NAME = "char_presets"
 OFFLINE = True
@@ -28,8 +28,6 @@ ANDROID_PATH = Path("android-app/app/src/main/assets/char_presets.json")
 COMBATANT_TABLE = "char_base@char_combatant.json"
 SETTING_TABLE = "piece_valid_setting@piece_valid_setting.json"
 
-# The `_RAW` literal in char_presets.py, from its opening line to the closing brace on its own line.
-_RAW_BLOCK = re.compile(r"_RAW: dict\[int, dict\] = \{\n.*?\n\}\n", re.DOTALL)
 _SET_OPTION = re.compile(r"set_public_0*(\d+)$")
 
 
@@ -61,9 +59,7 @@ def build(ctx: Context) -> TargetResult:
         }
 
     module = (REPO_ROOT / PRESETS_PATH).read_text(encoding="utf-8-sig")
-    if not _RAW_BLOCK.search(module):
-        raise ValueError(f"could not find the _RAW table in {PRESETS_PATH}")
-    module = _RAW_BLOCK.sub(lambda _: _render(raw), module, count=1)
+    module = replace_literal(module, "_RAW", _render(raw), PRESETS_PATH)
     return TargetResult(
         {PRESETS_PATH: module.encode("utf-8"), ANDROID_PATH: json.dumps(_android(raw), indent=2).encode("utf-8")},
         f"{len(raw)} presets",
