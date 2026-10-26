@@ -1,0 +1,2 @@
+# Dev-only tooling, not bundled into the sidecar
+mcp>=2  # tools/mcp/server.py
