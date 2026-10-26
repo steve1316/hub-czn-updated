@@ -45,8 +45,8 @@ export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: Pot
   const [showAuthor, setShowAuthor] = useState(false)
   const tree = potentialsPictures[treeImage]
   const author = image ? potentialsPictures[image] : undefined
-  const picture = showAuthor && author ? author : tree ?? author
   const authorSelected = showAuthor && !!author
+  const picture = authorSelected ? author : tree ?? author
 
   return (
     <div className="flex flex-col gap-6">
