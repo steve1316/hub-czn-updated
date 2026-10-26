@@ -63,9 +63,6 @@ class RequestTracker:
     def __init__(self):
         self._requests: "OrderedDict[Any, PendingRequest]" = OrderedDict()
 
-    def __len__(self) -> int:
-        return len(self._requests)
-
     def note_frame(self, data: Any):
         """
         Record every command in a client frame, and forget everything on `helo`.
@@ -100,6 +97,18 @@ class RequestTracker:
         """
         return self._requests.get(qid)
 
+    def pop(self, qid: Any) -> Optional[PendingRequest]:
+        """
+        Look up and forget the request a reply answers, so a repeated reply is not paired twice.
+
+        Args:
+            qid: The `qid` carried by the server reply.
+
+        Returns:
+            The matching request, or None when it was never seen.
+        """
+        return self._requests.pop(qid, None)
+
     def clear(self):
         """Forget every request. A new connection restarts its qids, so old ones would pair with the wrong reply."""
         self._requests.clear()
@@ -116,30 +125,20 @@ class CommandDispatch:
         Add a handler for a command.
 
         Args:
-            name: "cmd/inner" for one call, or "cmd" for every call in that family.
+            name: "cmd/inner" for a call with an inner command, or "cmd" for one without.
             handler: Called with the server reply and the request it answers.
         """
         self._handlers.setdefault(name, []).append(handler)
 
-    def dispatch(self, request: Optional[PendingRequest], payload: Dict[str, Any]) -> int:
+    def dispatch(self, request: Optional[PendingRequest], payload: Dict[str, Any]):
         """
-        Run the handlers that match a reply's request. The exact name goes first, then the family.
+        Run the handlers registered for a reply's request name.
 
         Args:
             request: The request the reply answers, or None when it is unknown.
             payload: The server reply.
-
-        Returns:
-            How many handlers ran.
         """
         if request is None:
-            return 0
-        names = [request.name]
-        if request.inner:
-            names.append(request.cmd)
-        ran = 0
-        for name in names:
-            for handler in self._handlers.get(name, ()):
-                handler(payload, request)
-                ran += 1
-        return ran
+            return
+        for handler in self._handlers.get(request.name, ()):
+            handler(payload, request)

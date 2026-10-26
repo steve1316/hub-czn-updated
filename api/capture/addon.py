@@ -53,6 +53,43 @@ CMD_UNEQUIP = "item/unequip_piece"
 TOTALS_KEYS = ("add_result", "item_result", "dec_result")
 
 
+def _upsert(rows: list, row, key="id"):
+    """
+    Replace the row with the same key in place, or append it.
+
+    Args:
+        rows: The list to update.
+        row: The new row.
+        key: A dict key name, or a function that returns the identity of a row.
+
+    Returns:
+        The row that was replaced, or None when `row` was appended.
+    """
+    ident = key if callable(key) else (lambda r: r.get(key))
+    target = ident(row)
+    for i, existing in enumerate(rows):
+        if ident(existing) == target:
+            rows[i] = row
+            return existing
+    rows.append(row)
+    return None
+
+
+def _docs(rows) -> list:
+    """
+    Pull the `doc` out of each `{diff, doc}` entry in a dict.
+
+    Args:
+        rows: A dict of entries, or anything else.
+
+    Returns:
+        The dict docs found, or an empty list when `rows` is not a dict.
+    """
+    if not isinstance(rows, dict):
+        return []
+    return [e["doc"] for e in rows.values() if isinstance(e, dict) and isinstance(e.get("doc"), dict)]
+
+
 def _rescue_record_key(record: dict) -> str:
     """Stable dedup key using only semantic fields, tolerating extra fields and type differences."""
     gacha_id = str(record.get("gacha_id", ""))
@@ -303,6 +340,10 @@ class Addon:
         if self.debug_file:
             self._write_debug({"ts": datetime.now().isoformat(), "dir": direction, "keys": list(payload.keys()), "size": size, "data": payload})
 
+    def _mark_dirty(self):
+        """Ask for the snapshot to be written at the end of the current frame."""
+        self._save_pending = True
+
     def _handle_server_payload(self, data: dict):
         """
         Act on one server reply. A frame yields one of these, or several when the server answers a batch.
@@ -313,7 +354,7 @@ class Addon:
         if data.get("res") != "ok":
             return
 
-        request = self.tracker.get(data.get("qid"))
+        request = self.tracker.pop(data.get("qid"))
         self.dispatch.dispatch(request, data)
         unequip = request is not None and request.name == CMD_UNEQUIP
 
@@ -327,35 +368,23 @@ class Addon:
             if reward:
                 self._apply_pieces_create(reward)
 
-        # Check for 'info' structure (new API format)
-        if "info" in data:
-            info = data.get("info", {})
-
-            # Check for item data in new format
-            if isinstance(info, dict) and "item" in info:
-                item_info = info.get("item", {})
-
-                # Check for piece (Memory Fragment) data
-                if "piece" in item_info:
-                    piece_info = item_info.get("piece", {})
-                    # Store this as inventory data (new format)
-                    if not self.inventory_data:
-                        self.inventory_data = {}
-                    self.inventory_data["info_item_piece"] = piece_info
-                    self._save_pending = True
-
-            # Check for character data in new format
-            if isinstance(info, dict) and "character" in info:
-                char_info = info.get("character", {})
-                if not self.character_data:
-                    self.character_data = {}
-                self.character_data["info_character"] = char_info
-                self._save_pending = True
+        # The 'info' structure (new API format)
+        info = data.get("info")
+        info = info if isinstance(info, dict) else {}
+        item_info = info.get("item")
+        if isinstance(item_info, dict) and "piece" in item_info:
+            self.inventory_data = self.inventory_data or {}
+            self.inventory_data["info_item_piece"] = item_info["piece"]
+            self._mark_dirty()
+        if "character" in info:
+            self.character_data = self.character_data or {}
+            self.character_data["info_character"] = info["character"]
+            self._mark_dirty()
 
         # Capture inventory data (Memory Fragments)
         if "piece_items" in data:
             self.inventory_data = data
-            self._save_pending = True
+            self._mark_dirty()
 
         # Item and currency totals state what a holding now is.
         for key in TOTALS_KEYS:
@@ -371,14 +400,14 @@ class Addon:
 
         if has_characters:
             self._merge_character_data(data)
-            self._save_pending = True
+            self._mark_dirty()
         elif has_user:
             # A user update with no roster is patched in so the roster survives.
             if self.character_data:
                 self.character_data["user"] = data["user"]
             else:
                 self.character_data = data
-            self._save_pending = True
+            self._mark_dirty()
 
         # Capture rescue/gacha records (pull history)
         for key in RESCUE_KEYS:
@@ -494,30 +523,13 @@ class Addon:
         """Apply a piece delta update to inventory and log the change."""
         piece_items = self.inventory_data.get("piece_items", [])
         new_piece = data["piece"]
-        new_id = new_piece["id"]
         equipped_piece = data.get("equippedPiece")
 
-        # Find old piece for comparison
-        old_piece = None
-        for i, p in enumerate(piece_items):
-            if p["id"] == new_id:
-                old_piece = p
-                piece_items[i] = new_piece
-                break
-        else:
-            piece_items.append(new_piece)
-
-        # Apply equippedPiece (displaced piece in swap)
+        old_piece = _upsert(piece_items, new_piece)
         if equipped_piece:
-            eq_id = equipped_piece["id"]
-            for i, p in enumerate(piece_items):
-                if p["id"] == eq_id:
-                    piece_items[i] = equipped_piece
-                    break
-            else:
-                piece_items.append(equipped_piece)
+            _upsert(piece_items, equipped_piece)
 
-        self._save_pending = True
+        self._mark_dirty()
 
         # Build log message
         desc = self._describe_piece(new_piece)
@@ -551,7 +563,7 @@ class Addon:
         if not removed:
             return
         self.inventory_data["piece_items"] = [p for p in piece_items if p.get("id") not in target]
-        self._save_pending = True
+        self._mark_dirty()
         if len(removed) == 1:
             self.log_callback(f"[LIVE] Deleted {self._describe_piece(removed[0])}")
         else:
@@ -577,13 +589,11 @@ class Addon:
         for new_piece in pieces:
             if not isinstance(new_piece, dict):
                 continue
-            for i, p in enumerate(piece_items):
-                if p.get("id") == new_piece.get("id"):
-                    piece_items[i] = new_piece
-                    updated += 1
-                    break
+            if any(p.get("id") == new_piece.get("id") for p in piece_items):
+                _upsert(piece_items, new_piece)
+                updated += 1
         if updated:
-            self._save_pending = True
+            self._mark_dirty()
             char_name = CHAR_NAMES.get(char_id, f"Character {char_id}")
             self.log_callback(f"[LIVE] Unequipped {updated} pieces from {char_name}")
 
@@ -605,12 +615,7 @@ class Addon:
         found = []
         for carrier in carriers:
             rows = carrier.get("pieces") if isinstance(carrier, dict) else None
-            if not isinstance(rows, dict):
-                continue
-            for row in rows.values():
-                doc = row.get("doc") if isinstance(row, dict) else None
-                if isinstance(doc, dict):
-                    found.append(doc)
+            found.extend(_docs(rows))
         return found
 
     def _apply_pieces_create(self, new_pieces):
@@ -632,7 +637,7 @@ class Addon:
                 added.append(piece)
         if not added:
             return
-        self._save_pending = True
+        self._mark_dirty()
         if len(added) == 1:
             self.log_callback(f"[LIVE] Created {self._describe_piece(added[0])}")
         else:
@@ -645,31 +650,19 @@ class Addon:
         Args:
             result: The envelope from `add_result`, `item_result` or `dec_result`.
         """
-        items = result.get("items")
-        if isinstance(items, dict) and self.inventory_data is not None:
-            held = self.inventory_data.setdefault("items", [])
-            if isinstance(held, list):
-                for entry in items.values():
-                    doc = entry.get("doc") if isinstance(entry, dict) else None
-                    if not isinstance(doc, dict) or "res_id" not in doc:
-                        continue
-                    for i, row in enumerate(held):
-                        if isinstance(row, dict) and row.get("res_id") == doc["res_id"]:
-                            held[i] = doc
-                            break
-                    else:
-                        held.append(doc)
-                    self._save_pending = True
+        held = self.inventory_data.setdefault("items", []) if self.inventory_data is not None else None
+        if isinstance(held, list):
+            for doc in _docs(result.get("items")):
+                if "res_id" in doc:
+                    _upsert(held, doc, "res_id")
+                    self._mark_dirty()
 
-        currencies = result.get("currency")
-        if isinstance(currencies, dict) and self.character_data is not None:
-            held = self.character_data.setdefault("currencies", {})
-            if isinstance(held, dict):
-                for entry in currencies.values():
-                    doc = entry.get("doc") if isinstance(entry, dict) else None
-                    if isinstance(doc, dict) and "res_id" in doc:
-                        held[str(doc["res_id"])] = doc
-                        self._save_pending = True
+        held = self.character_data.setdefault("currencies", {}) if self.character_data is not None else None
+        if isinstance(held, dict):
+            for doc in _docs(result.get("currency")):
+                if "res_id" in doc:
+                    held[str(doc["res_id"])] = doc
+                    self._mark_dirty()
 
     @staticmethod
     def _entry_identity(entry):
@@ -699,16 +692,8 @@ class Addon:
             self.character_data = data
             return
         merged = list(cached)
-        index = {}
-        for i, entry in enumerate(merged):
-            index.setdefault(self._entry_identity(entry), i)
         for entry in incoming:
-            key = self._entry_identity(entry)
-            if key in index:
-                merged[index[key]] = entry
-            else:
-                index[key] = len(merged)
-                merged.append(entry)
+            _upsert(merged, entry, self._entry_identity)
         self.character_data["characters"] = merged
 
     def _check_for_relaunch(self, user):

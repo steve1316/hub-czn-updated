@@ -226,7 +226,7 @@ class CaptureManager:
         log_callback: Callable[[str, Optional[str]], None],
         status_callback: Optional[Callable[[str], None]] = None,
         live_update_callback: Optional[Callable[[], None]] = None,
-        event_callback: Optional[Callable[[dict], None]] = None
+        event_callback: Optional[Callable[[dict], None]] = None,
     ):
         """
         Initialize the capture manager.

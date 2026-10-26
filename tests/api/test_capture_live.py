@@ -84,19 +84,25 @@ def test_helo_clears_pending_requests():
     t.note_frame([{"cmd": "item", "qid": 5, "params": {"cmd": "disassemble_piece"}}])
     t.note_frame([{"cmd": "helo", "qid": 1}])
     assert t.get(5) is None
-    assert len(t) == 0
 
 
-def test_dispatch_calls_exact_and_family_handlers():
+def test_pop_pairs_a_reply_once():
+    t = RequestTracker()
+    t.note_frame([{"cmd": "item", "qid": 5, "params": {"cmd": "unequip_piece"}}])
+    assert t.pop(5).name == "item/unequip_piece"
+    assert t.pop(5) is None
+
+
+def test_dispatch_runs_handlers_registered_for_the_exact_name():
     seen = []
     d = CommandDispatch()
-    d.register("gacha/run", lambda payload, req: seen.append(("run", req.name)))
-    d.register("gacha", lambda payload, req: seen.append(("family", req.name)))
+    d.register("gacha/run", lambda payload, req: seen.append(req.name))
+    d.register("gacha/history", lambda payload, req: seen.append("wrong"))
     t = RequestTracker()
     t.note_frame([{"cmd": "gacha", "qid": 7, "params": {"cmd": "run"}}])
-    assert d.dispatch(t.get(7), {"qid": 7}) == 2
-    assert seen == [("run", "gacha/run"), ("family", "gacha/run")]
-    assert d.dispatch(None, {"qid": 8}) == 0
+    d.dispatch(t.get(7), {"qid": 7})
+    d.dispatch(None, {"qid": 8})
+    assert seen == ["gacha/run"]
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
