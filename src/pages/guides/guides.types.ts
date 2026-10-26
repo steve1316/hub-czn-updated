@@ -89,6 +89,8 @@ export interface SetItem {
   bonus?: string
   /** The set icon path, served by the sidecar. */
   icon?: string
+  /** True when the sheet labelled the set "Flex", so any set works and this one is only the author's example. */
+  flex?: boolean
 }
 
 /** One character in a team-grid group. */

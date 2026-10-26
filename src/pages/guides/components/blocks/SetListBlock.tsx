@@ -40,6 +40,9 @@ export function SetListBlock({ items }: SetListBlockProps) {
                 {item.pieces !== undefined && (
                   <span className="shrink-0 rounded bg-[#c084fc]/20 px-1.5 text-[10px] font-bold text-[#c084fc]">{item.pieces}pc</span>
                 )}
+                {item.flex && (
+                  <span className="shrink-0 rounded-full border border-dashed border-[#555] px-1.5 text-[10px] text-[#b3b3b3]">{t('guides.flex')}</span>
+                )}
               </div>
               {item.bonus && <p className="mt-0.5 text-xs leading-relaxed text-[#b3b3b3]">{item.bonus}</p>}
             </div>

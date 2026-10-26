@@ -76,10 +76,13 @@ def set_item(label: str, set_id: int) -> dict:
         set_id: The set's id.
 
     Returns:
-        The label with the set's id, name, pieces, bonus and icon (when it has one).
+        The label with the set's id, name, pieces, bonus and icon (when it has one). `flex` is true when the label says "Flex", as the set is then
+        only the sheet's example.
     """
     entry = SETS[set_id]
     item = {"label": label, "setId": set_id, "name": entry["name"], "pieces": entry["pieces"], "bonus": entry["bonus"]}
+    if re.search("flex", label, re.IGNORECASE):
+        item["flex"] = True
     if entry.get("icon_path"):
         item["icon"] = entry["icon_path"]
     return item

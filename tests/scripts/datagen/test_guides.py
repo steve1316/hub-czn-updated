@@ -1078,3 +1078,16 @@ def test_rated_personas_with_different_art_are_not_merged_into_one_card():
     obsidian = {"cardId": "eidolon_card", "col": 2, "picture": None, "epiphany": 1, "name": "Persona of Obsidian", "persona": "all_umbra"}
     settled = _builder()._settle_repeats([luster, obsidian], {1: "4/5", 2: "4/5"})
     assert [card["persona"] for card in settled] == ["all_lux", "all_umbra"] and all("count" not in card for card in settled)
+
+
+def test_set_item_flags_a_flex_label_that_resolved_to_a_set():
+    assert set_names.set_item("Scrab Flex", 10)["flex"] is True
+    assert set_names.set_item("Flex", 19)["flex"] is True
+    assert "flex" not in set_names.set_item("Scrab", 10)
+    assert "flex" not in set_names.set_line("BlackWing | Executioners | Flex")[2]
+
+
+def test_flex_piece_picture_carries_the_flex_flag():
+    [section] = _loadout(_piece_builder(found={1: 30, 2: 11, 3: 19}), labels=("Radiance", "Executioners", "Agony Flex"))
+    flags = [item.get("flex", False) for item in section["blocks"][0]["items"]]
+    assert flags == [False, False, True]
