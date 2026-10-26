@@ -94,17 +94,17 @@ export function AboutPage() {
           <LinkRow
             icon={<GitFork size={16} />}
             label={t('about.github')}
-            url={data?.github_url ?? 'https://github.com/sostenesfreitas/hub-czn'}
+            url={data?.github_url ?? 'https://github.com/steve1316/hub-czn-updated'}
           />
           <LinkRow
             icon={<Bug size={16} />}
             label={t('about.report')}
-            url={data?.issues_url ?? 'https://github.com/sostenesfreitas/hub-czn/issues'}
+            url={data?.issues_url ?? 'https://github.com/steve1316/hub-czn-updated/issues'}
           />
           <LinkRow
             icon={<BookOpen size={16} />}
             label={t('about.docs')}
-            url={`${data?.github_url ?? 'https://github.com/sostenesfreitas/hub-czn'}#readme`}
+            url={`${data?.github_url ?? 'https://github.com/steve1316/hub-czn-updated'}#readme`}
           />
         </div>
       </div>
