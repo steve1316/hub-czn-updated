@@ -25,6 +25,12 @@ const en = {
     battles: 'Battles',
     about: 'About',
     beta: 'beta',
+    groups: {
+      start: 'Get started',
+      account: 'Your account',
+      tools: 'Tools',
+      reference: 'Reference',
+    },
   },
   home: {
     tagline: 'Gear management and optimization for Chaos Zero Nightmare — inspired by Fribbels.',
