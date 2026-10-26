@@ -11,6 +11,32 @@ import type {
   ExtractStatus, ExtractSettings,
 } from './types'
 
+/** A failed API call, keeping the HTTP status next to the server's message. */
+export class ApiError extends Error {
+  /** The HTTP status code of the failed response. */
+  status: number
+
+  /**
+   * @param message The server's `detail` text, or the status text when there is none.
+   * @param status The HTTP status code.
+   */
+  constructor(message: string, status: number) {
+    super(message)
+    this.name = 'ApiError'
+    this.status = status
+  }
+}
+
+/**
+ * Whether an error is the API saying there is nothing there yet, as opposed to a real failure.
+ *
+ * @param err Any thrown value.
+ * @returns True for an `ApiError` with status 404.
+ */
+export function isNotFound(err: unknown): boolean {
+  return err instanceof ApiError && err.status === 404
+}
+
 let _port: number = Number(import.meta.env.VITE_API_PORT ?? 7842)
 let _token: string = (import.meta.env.VITE_API_TOKEN as string | undefined) ?? ''
 
@@ -103,7 +129,7 @@ async function request<T>(path: string, options?: RequestInit): Promise<T> {
   })
   if (!res.ok) {
     const err = await res.json().catch(() => ({ detail: res.statusText }))
-    throw new Error((err as { detail: string }).detail ?? res.statusText)
+    throw new ApiError((err as { detail: string }).detail ?? res.statusText, res.status)
   }
   return res.json() as Promise<T>
 }
