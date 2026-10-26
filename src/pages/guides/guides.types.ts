@@ -29,6 +29,8 @@ export interface CardItem {
   rating?: string
   /** The author's comment on the card. */
   note: LocalizedText
+  /** How many pictures of this card the sheet shows side by side with the same rating, set when more than one. */
+  count?: number
   /** Every rated epiphany level, when the sheet rates the card's levels one by one. */
   epiphanies?: EpiphanyRating[]
 }
@@ -107,6 +109,8 @@ export interface EgoNote {
   level: number
   /** The comment. */
   text: LocalizedText
+  /** True when the sheet writes the comment mostly in bold, which marks the author's key lines. */
+  bold?: boolean
 }
 
 export type Block =
@@ -122,6 +126,10 @@ export type Block =
       type: 'card-list'
       intro?: LocalizedText
       items: CardItem[]
+    }
+  | {
+      type: 'image'
+      image: string
     }
   | {
       type: 'deck'
