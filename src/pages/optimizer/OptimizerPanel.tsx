@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { ChevronDown, ChevronRight, Play, Square } from 'lucide-react'
 import { api } from '@/lib/api'
+import { estimatedDamageDecrease } from '@/lib/damage-reduction'
 import type { OptimizerConfig, EquipmentSet, Monster, Combatant, OptimizeProgress, CharPreset } from '@/lib/types'
 import { InfoPopover } from '@/components/ui/info-popover'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
@@ -564,7 +565,7 @@ export function OptimizerPanel({
                 className="w-20 bg-[#282828] border border-[#333333] rounded px-2 py-1 text-xs text-[#ffffff] outline-none focus:border-[#c084fc] disabled:opacity-50 disabled:cursor-not-allowed"
               />
               <span className="text-[10px] text-[#666666] tabular-nums">
-                DR ≈ {((268.0 / ((config.target_def ?? 500) + 503.0)) * 100).toFixed(1)}%
+                DR ≈ {(estimatedDamageDecrease(config.target_def ?? 500) * 100).toFixed(1)}%
               </span>
             </div>
           </div>

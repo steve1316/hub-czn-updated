@@ -1,9 +1,13 @@
 """Pure-math expected-damage helpers used by the optimizer."""
 import math
+import re
+from pathlib import Path
 
 import pytest
 
 from api.optimizer.expected_damage import (
+    DEF_REDUCE_DEN_C,
+    DEF_REDUCE_NUM,
     DUMMY_DEF,
     damage_reduction,
     default_damage_reduction,
@@ -181,3 +185,9 @@ def test_damage_reduction_prefers_the_captured_rate():
 
 def test_damage_reduction_falls_back_to_the_fit():
     assert damage_reduction(0.0, 300) == pytest.approx(268.0 / 803.0, abs=1e-6)
+
+
+def test_the_frontend_copy_of_the_fit_matches():
+    source = (Path(__file__).resolve().parents[2] / "src" / "lib" / "damage-reduction.ts").read_text(encoding="utf-8")
+    assert float(re.search(r"DEF_REDUCE_NUM = ([\d.]+)", source).group(1)) == DEF_REDUCE_NUM
+    assert float(re.search(r"DEF_REDUCE_DEN_C = ([\d.]+)", source).group(1)) == DEF_REDUCE_DEN_C
