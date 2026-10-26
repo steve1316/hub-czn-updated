@@ -33,6 +33,8 @@ interface ScoringPanelProps {
   onSystemPreset?: () => void
   hasCharOverride?: boolean
   onResetToGlobal?: () => void
+  /** When true, render as a plain card inside the page instead of the sidebar and drawer. */
+  inline?: boolean
 }
 
 function WeightInput({
@@ -86,6 +88,7 @@ function PanelContent({
   onSystemPreset,
   hasCharOverride,
   onResetToGlobal,
+  inline,
 }: ScoringPanelProps) {
   const { t } = useTranslation()
 
@@ -107,7 +110,7 @@ function PanelContent({
   ] as const
 
   return (
-    <div className="flex flex-col gap-4 h-full overflow-hidden">
+    <div className={`flex flex-col gap-4 ${inline ? "" : "h-full overflow-hidden"}`}>
       {/* Presets */}
       <div className="flex gap-1 flex-wrap shrink-0">
         {(['dps', 'tank'] as const).map(p => (
@@ -152,7 +155,7 @@ function PanelContent({
       </div>
 
       {/* Weight inputs */}
-      <div className="flex-1 overflow-y-auto space-y-4 pr-1">
+      <div className={inline ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" : "flex-1 overflow-y-auto space-y-4 pr-1"}>
         {STAT_GROUPS.map(group => (
           <div key={group.labelKey}>
             <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">
@@ -208,6 +211,8 @@ export function ScoringPanel(props: ScoringPanelProps) {
       dialogRef.current?.focus()
     }
   }, [drawerOpen])
+
+  if (props.inline) return <PanelContent {...props} />
 
   return (
     <>
