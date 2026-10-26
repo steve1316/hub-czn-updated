@@ -22,6 +22,7 @@ const en = {
     simulator: 'Simulator',
     battle: 'Battle History',
     about: 'About',
+    beta: 'beta',
   },
   home: {
     tagline: 'Gear management and optimization for Chaos Zero Nightmare — inspired by Fribbels.',

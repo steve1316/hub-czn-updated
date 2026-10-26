@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
-  Home, Swords, Layers, Users,
+  Home, Swords, Layers, Users, SquareStack,
   Radio, Settings, Gift, Info, Zap, Sword, BookOpen, BookMarked,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -13,7 +13,7 @@ const NAV = [
   { to: '/optimizer',  key: 'nav.optimizer',   icon: Swords },
   { to: '/fragments',  key: 'nav.fragments',   icon: Layers },
   { to: '/combatants', key: 'nav.combatants',  icon: Users },
-  { to: '/deck-builder', key: 'nav.deckBuilder', icon: Swords, beta: true },
+  { to: '/deck-builder', key: 'nav.deckBuilder', icon: SquareStack, beta: true },
   { to: '/encyclopedia', key: 'nav.encyclopedia', icon: BookOpen },
   { to: '/guides',     key: 'nav.guides',      icon: BookMarked },
   { to: '/simulator',  key: 'nav.simulator',   icon: Zap,  beta: true },
@@ -53,7 +53,7 @@ export function Sidebar() {
             <span className="flex-1">{t(key)}</span>
             {beta && (
               <span className="text-[8px] font-bold px-1 py-px rounded bg-[#c084fc]/20 text-[#c084fc] uppercase tracking-wide shrink-0">
-                beta
+                {t('nav.beta')}
               </span>
             )}
             {key === 'nav.about' && hasUpdate && (
