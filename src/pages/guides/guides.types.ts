@@ -119,6 +119,8 @@ export type Block =
   | {
       type: 'potentials'
       image: string | null
+      treeImage: string
+      coloured: boolean
       legend: PotentialsLegendEntry[]
       ego: EgoNote[]
     }

@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { cn } from '@/lib/utils'
 import { resolveLang, localized, globByFileName } from '../../guides.utils'
@@ -21,8 +22,12 @@ const LEGEND_COLOURS: Record<PotentialsLegendEntry['colour'], string> = {
 
 /** Props for PotentialsBlock. */
 interface PotentialsBlockProps {
-  /** The tree picture's file name under `data/potentials`, or null when the sheet has none. */
+  /** The author's tree picture file name under `data/potentials`, or null when the sheet has none. */
   image: string | null
+  /** The file name of the clean tree drawn with the author's ring colours, under `data/potentials`. */
+  treeImage: string
+  /** True when the author's ring colours could be read onto `treeImage`. */
+  coloured: boolean
   /** What each highlight colour in the picture means. */
   legend: PotentialsLegendEntry[]
   /** The author's comment on each ego manifestation level. */
@@ -31,24 +36,48 @@ interface PotentialsBlockProps {
 
 /**
  * The potentials tree with its colour legend, and the ego manifestation notes.
- * @param props The picture, legend and ego notes.
+ * @param props The pictures, legend and ego notes.
  * @returns The block.
  */
-export function PotentialsBlock({ image, legend, ego }: PotentialsBlockProps) {
+export function PotentialsBlock({ image, treeImage, coloured, legend, ego }: PotentialsBlockProps) {
   const { t, i18n } = useTranslation()
   const lang = resolveLang(i18n.language)
-  const picture = image ? potentialsPictures[image] : undefined
+  const [showAuthor, setShowAuthor] = useState(false)
+  const tree = potentialsPictures[treeImage]
+  const author = image ? potentialsPictures[image] : undefined
+  const picture = showAuthor && author ? author : tree ?? author
+  const authorSelected = showAuthor && !!author
 
   return (
     <div className="flex flex-col gap-6">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-start">
-        {picture ? (
-          <img src={picture} alt="" className="max-w-full rounded-lg border border-[#282828] sm:max-w-sm" />
-        ) : (
-          <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed border-[#555] text-sm text-[#666] italic sm:w-80">
-            {t('guides.potentialsPictureMissing')}
-          </div>
-        )}
+        <div className="flex flex-col gap-2 sm:max-w-sm">
+          {picture ? (
+            <img src={picture} alt="" className="max-w-full rounded-lg border border-[#282828]" />
+          ) : (
+            <div className="flex h-40 w-full items-center justify-center rounded-lg border border-dashed border-[#555] text-sm text-[#666] italic sm:w-80">
+              {t('guides.potentialsPictureMissing')}
+            </div>
+          )}
+          {tree && author && (
+            <div className="flex gap-2 text-xs">
+              {[
+                { label: t('guides.potentialsTree'), active: !authorSelected, onClick: () => setShowAuthor(false) },
+                { label: t('guides.potentialsAuthorPicture'), active: authorSelected, onClick: () => setShowAuthor(true) },
+              ].map(tab => (
+                <button
+                  key={tab.label}
+                  type="button"
+                  onClick={tab.onClick}
+                  className={cn('rounded px-2 py-1', tab.active ? 'bg-[#c084fc]/20 font-bold text-[#c084fc]' : 'bg-[#181818] text-[#b3b3b3] hover:text-white')}
+                >
+                  {tab.label}
+                </button>
+              ))}
+            </div>
+          )}
+          {tree && !coloured && !authorSelected && <p className="text-xs text-[#666] italic">{t('guides.potentialsNoColours')}</p>}
+        </div>
         <ul className="flex flex-col gap-2">
           {legend.map(entry => (
             <li key={entry.colour} className="flex items-center gap-2 text-sm text-[#cbd5e1]">
