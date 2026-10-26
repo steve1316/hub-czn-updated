@@ -1,23 +1,37 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Play, Zap } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
+import type { BattleRecord, Combatant, SimulateDamageResponse, SimulateRequest, SimCardResult, SimDeckCard, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 import { damagePasses } from '@/lib/damage-reduction'
 import { formatBattleTime } from '@/pages/battle/battle-time.utils'
 import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
+import { loadSavedDecks } from '@/pages/deck-builder/deck-builder-saved-decks.utils'
 import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
+import { deckSlotToSimCards } from './simulator-deck.utils'
 
 const MORALE_PCT = 20
 
 const STORAGE_KEY = 'czn_simulator_state'
 
+const AUTO_DECK: DeckChoice = { kind: 'game', id: null }
+
+/**
+ * The deck to simulate: an in-game deck (a null id picks the highest-scoring one), a deck sent from the Deck Builder, or one combatant's
+ * slot of a deck saved in the Deck Builder.
+ */
+type DeckChoice =
+  | { kind: 'game'; id: number | null }
+  | { kind: 'builder'; name: string; cards: SimDeckCard[] }
+  | { kind: 'saved'; savedId: string; slotIndex: number }
+
 interface PersistedState {
   charName: string
-  deckId: number | null
+  /** The deck to simulate. */
+  deck: DeckChoice
   morale: number
   useSparks: boolean
   presetGroup: string
@@ -25,6 +39,8 @@ interface PersistedState {
   vulnerableStacks: number
   dmgReduction: boolean
   result: SimulateDamageResponse | null
+  /** The name of the Deck Builder deck behind `result`, or null for an in-game deck. */
+  resultDeckName: string | null
 }
 
 function loadPersistedState(): PersistedState | null {
@@ -50,6 +66,38 @@ function StatPill({ label, value, highlight }: { label: string; value: string; h
       <span className={`font-bold text-sm mt-0.5 ${highlight ? 'text-[#a3e635]' : 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
   )
+}
+
+/**
+ * One deck in the Simulator's deck list.
+ * @param label The deck's name.
+ * @param sub The smaller line under the name, if any.
+ * @param selected Whether this deck will be simulated.
+ * @param onClick Select this deck.
+ * @returns The button.
+ */
+function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?: string; selected: boolean; onClick: () => void }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
+        selected ? 'bg-[#c084fc] text-white' : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
+      }`}
+    >
+      <div className="font-medium">{label}</div>
+      {sub && <div className={`text-[10px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#555]'}`}>{sub}</div>}
+    </button>
+  )
+}
+
+/**
+ * A heading over one group of decks in the deck list.
+ * @param children The group's name.
+ * @returns The heading.
+ */
+function DeckGroupLabel({ children }: { children: ReactNode }) {
+  return <p className="text-[9px] text-[#555] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
 }
 
 function CardRow({ card }: { card: SimCardResult }) {
@@ -124,7 +172,7 @@ export function SimulateTab() {
   const { enemy, setEnemy } = useBattlesEnemy()
 
   const [charName, setCharName] = useState(() => loadPersistedState()?.charName ?? '')
-  const [deckId, setDeckId] = useState<number | null>(() => loadPersistedState()?.deckId ?? null)
+  const [deck, setDeck] = useState<DeckChoice>(() => loadPersistedState()?.deck ?? AUTO_DECK)
   const [morale, setMorale] = useState(() => loadPersistedState()?.morale ?? 0)
   const [useSparks, setUseSparks] = useState(() => loadPersistedState()?.useSparks ?? true)
   const [presetGroup, setPresetGroup] = useState(() => loadPersistedState()?.presetGroup ?? ENEMY_PRESET_GROUPS[0].group)
@@ -132,12 +180,14 @@ export function SimulateTab() {
   const [vulnerableStacks, setVulnerableStacks] = useState(() => loadPersistedState()?.vulnerableStacks ?? 0)
   const [dmgReduction, setDmgReduction] = useState(() => loadPersistedState()?.dmgReduction ?? false)
   const [result, setResult] = useState<SimulateDamageResponse | null>(() => loadPersistedState()?.result ?? null)
+  const [resultDeckName, setResultDeckName] = useState<string | null>(() => loadPersistedState()?.resultDeckName ?? null)
+  const [savedDecks] = useState(loadSavedDecks)
 
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
     savePersistedState({
-      charName, deckId, morale, useSparks, presetGroup,
-      weaken, vulnerableStacks, dmgReduction, result,
+      charName, deck, morale, useSparks, presetGroup,
+      weaken, vulnerableStacks, dmgReduction, result, resultDeckName,
       ...patch,
     })
   }
@@ -162,6 +212,14 @@ export function SimulateTab() {
     staleTime: 30_000,
   })
 
+  // The slots of decks saved in the Deck Builder that belong to the selected character
+  const combatant = combatants.find((c) => c.name === charName)
+  const savedSlots = savedDecks.flatMap((saved) =>
+    saved.payload.slots
+      .map((slot, slotIndex) => ({ saved, slot, slotIndex }))
+      .filter(({ slot }) => slot.combatant_id === combatant?.res_id && slot.cards.length > 0),
+  )
+
   const { data: recentBattles = [] } = useQuery<BattleRecord[]>({
     queryKey: ['battle-history', 5],
     queryFn: () => api.battleHistory(5),
@@ -169,11 +227,25 @@ export function SimulateTab() {
     retry: false,
   })
 
+  /**
+   * The request fields that pick the deck, and the name shown above its results.
+   * @returns The deck fields, and the deck's name or null for an in-game deck.
+   */
+  function deckRequest(): { fields: Pick<SimulateRequest, 'deck_id' | 'cards'>; name: string | null } {
+    if (deck.kind === 'game') return { fields: { deck_id: deck.id }, name: null }
+    if (deck.kind === 'builder') return { fields: { cards: deck.cards }, name: t('simulator.builderDeck', { name: deck.name }) }
+    const saved = savedDecks.find((d) => d.id === deck.savedId)
+    const slot = saved?.payload.slots[deck.slotIndex]
+    if (!saved || !slot) throw new Error(t('simulator.savedMissing'))
+    return { fields: { cards: deckSlotToSimCards(slot) }, name: saved.name }
+  }
+
   const mutation = useMutation({
-    mutationFn: () =>
-      api.simulateDamage({
+    mutationFn: async () => {
+      const { fields, name } = deckRequest()
+      const data = await api.simulateDamage({
         char_name: charName,
-        deck_id: deckId,
+        ...fields,
         morale,
         use_sparks: useSparks,
         monster_def: enemy.def,
@@ -181,8 +253,10 @@ export function SimulateTab() {
         frightened: weaken,
         exposed_stacks: vulnerableStacks,
         fortitude: dmgReduction,
-      }),
-    onSuccess: (data) => { setResult(data); persist({ result: data }) },
+      })
+      return { data, name }
+    },
+    onSuccess: ({ data, name }) => { setResult(data); setResultDeckName(name); persist({ result: data, resultDeckName: name }) },
   })
 
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
@@ -206,56 +280,67 @@ export function SimulateTab() {
           <CharacterCombobox
             combatants={combatants}
             value={charName}
-            onChange={(v) => { setCharName(v); setDeckId(null); persist({ charName: v, deckId: null }) }}
+            onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); persist({ charName: v, deck: AUTO_DECK }) }}
           />
         </div>
 
-        {charName && decks.length > 0 && (
+        {charName && (decks.length > 0 || savedSlots.length > 0 || deck.kind === 'builder') && (
           <div className="flex flex-col gap-1">
             <label className="text-[#b3b3b3] text-xs">{t('simulator.deck')}</label>
-            <div className="flex flex-col gap-0.5 max-h-40 overflow-y-auto pr-0.5">
-              <button
-                type="button"
-                onClick={() => { setDeckId(null); persist({ deckId: null }) }}
-                className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
-                  deckId === null
-                    ? 'bg-[#c084fc] text-white'
-                    : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
-                }`}
-              >
-                {t('simulator.deckAuto')}
-              </button>
-              {decks.map((d) => {
-                const label = d.bookmark_slot > 0
-                  ? t('simulator.deckSlot', { slot: d.bookmark_slot })
-                  : `#${d.deck_id}`
-                const sub = t('simulator.deckPoints', {
-                  point: d.point.toLocaleString(),
-                  count: d.card_count,
-                })
-                return (
-                  <button
-                    key={d.deck_id}
-                    type="button"
-                    onClick={() => { setDeckId(d.deck_id); persist({ deckId: d.deck_id }) }}
-                    className={`text-left text-xs px-2 py-1.5 rounded transition-colors ${
-                      deckId === d.deck_id
-                        ? 'bg-[#c084fc] text-white'
-                        : 'bg-[#222] text-[#888] hover:text-[#e5e7eb]'
-                    }`}
-                  >
-                    <div className="flex items-center justify-between gap-2">
-                      <span className="truncate font-medium">{d.name || label}</span>
-                      {d.bookmark_slot > 0 && !d.name && (
-                        <span className="shrink-0 text-[9px] opacity-60">★</span>
-                      )}
-                    </div>
-                    <div className={`text-[10px] mt-0.5 ${deckId === d.deck_id ? 'text-white/70' : 'text-[#555]'}`}>
-                      {sub}
-                    </div>
-                  </button>
-                )
-              })}
+            <div className="flex flex-col gap-0.5 max-h-56 overflow-y-auto pr-0.5">
+              {deck.kind === 'builder' && (
+                <>
+                  <DeckGroupLabel>{t('simulator.deckGroups.builder')}</DeckGroupLabel>
+                  <DeckButton label={t('simulator.builderDeck', { name: deck.name })} sub={t('simulator.unsaved')} selected onClick={() => {}} />
+                </>
+              )}
+              {decks.length > 0 && (
+                <>
+                  {(deck.kind === 'builder' || savedSlots.length > 0) && <DeckGroupLabel>{t('simulator.deckGroups.game')}</DeckGroupLabel>}
+                  <DeckButton
+                    label={t('simulator.deckAuto')}
+                    selected={deck.kind === 'game' && deck.id === null}
+                    onClick={() => { setDeck(AUTO_DECK); persist({ deck: AUTO_DECK }) }}
+                  />
+                  {decks.map((d) => {
+                    const label = d.bookmark_slot > 0
+                      ? t('simulator.deckSlot', { slot: d.bookmark_slot })
+                      : `#${d.deck_id}`
+                    const choice: DeckChoice = { kind: 'game', id: d.deck_id }
+                    return (
+                      <DeckButton
+                        key={d.deck_id}
+                        label={
+                          <span className="flex items-center justify-between gap-2">
+                            <span className="truncate">{d.name || label}</span>
+                            {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[9px] opacity-60">★</span>}
+                          </span>
+                        }
+                        sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
+                        selected={deck.kind === 'game' && deck.id === d.deck_id}
+                        onClick={() => { setDeck(choice); persist({ deck: choice }) }}
+                      />
+                    )
+                  })}
+                </>
+              )}
+              {savedSlots.length > 0 && (
+                <>
+                  <DeckGroupLabel>{t('simulator.deckGroups.saved')}</DeckGroupLabel>
+                  {savedSlots.map(({ saved, slot, slotIndex }) => {
+                    const choice: DeckChoice = { kind: 'saved', savedId: saved.id, slotIndex }
+                    return (
+                      <DeckButton
+                        key={`${saved.id}-${slotIndex}`}
+                        label={<span className="block truncate">{saved.name}</span>}
+                        sub={t('simulator.deckCards', { count: slot.cards.length })}
+                        selected={deck.kind === 'saved' && deck.savedId === saved.id && deck.slotIndex === slotIndex}
+                        onClick={() => { setDeck(choice); persist({ deck: choice }) }}
+                      />
+                    )
+                  })}
+                </>
+              )}
             </div>
           </div>
         )}
@@ -463,8 +548,8 @@ export function SimulateTab() {
             <div>
               <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-[#ffffff] font-bold text-sm">{result.char_name}</h3>
-                {result.deck_id != null && (
-                  <span className="text-[#555] text-[10px]">deck #{result.deck_id}</span>
+                {(resultDeckName || result.deck_id != null) && (
+                  <span className="text-[#555] text-[10px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
