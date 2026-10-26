@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+from math import comb
 from pathlib import Path
 
 from api.frozen_path import add_vribbels_to_path
@@ -18,6 +19,18 @@ router = APIRouter()
 
 PITY_CAP = 70
 LOCAL_FACE_BASE = "/assets/game/faces/bookmark_face_character_map_{res_id}.png"
+# The 5-star rate used for the luck percentile. It is an assumption until a `gacha/get_rate` reply has been captured, so the page says so.
+ASSUMED_SSR_RATE = 0.015
+# Which server pity group each kind of banner counts toward, as named by `gacha/get_list`. Checked in order.
+PITY_GROUPS = (
+    ("pickup_combatant", "gacha_pity_pickup_combatant"),
+    ("pickup_partner", "gacha_pity_pickup_supporter"),
+    ("pickup_supporter", "gacha_pity_pickup_supporter"),
+    ("supporter", "gacha_pity_general_supporter"),
+    ("standard", "gacha_pity_general"),
+    ("normal", "gacha_pity_general"),
+    ("general", "gacha_pity_general"),
+)
 
 
 def _char_details(res_id: int) -> dict:
@@ -86,8 +99,48 @@ def _expand_batch(record: dict) -> list[dict]:
     ]
 
 
-def _process_records(raw: list[dict]) -> list[dict]:
-    """Group raw rescue records by banner, compute stats, return API shape."""
+def _luck_percentile(five_stars: int, pulls: int, rate: float) -> float | None:
+    """
+    How lucky a run of pulls was.
+
+    Args:
+        five_stars: The 5-stars got.
+        pulls: The pulls made.
+        rate: The chance of a 5-star on each pull.
+
+    Returns:
+        The percent of players expected to get fewer 5-stars than this, counting ties as half. None when there are no pulls.
+    """
+    if pulls <= 0:
+        return None
+    pmf = [comb(pulls, i) * rate**i * (1 - rate) ** (pulls - i) for i in range(five_stars + 1)]
+    return round((sum(pmf[:-1]) + pmf[-1] / 2) * 100, 1)
+
+
+def _pity_group(gacha_id: str) -> str | None:
+    """Name the server pity group that a banner's pulls count toward, or None when it is not known."""
+    for needle, group in PITY_GROUPS:
+        if needle in gacha_id:
+            return group
+    return None
+
+
+def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
+    """
+    Group raw rescue records by banner, compute stats, return API shape.
+
+    Args:
+        raw: The stored rescue records.
+        meta: The rest of the stored document, with `pity` (server pity by group), `pool_fetches` (when each pool's history was last
+            received) and `session_start` (when the latest capture began).
+
+    Returns:
+        One entry per banner.
+    """
+    meta = meta or {}
+    server_pity = meta.get("pity") if isinstance(meta.get("pity"), dict) else {}
+    fetches = meta.get("pool_fetches") if isinstance(meta.get("pool_fetches"), dict) else {}
+    session_start = meta.get("session_start") or 0
     all_pulls = []
     for rec in raw:
         all_pulls.extend(_expand_batch(rec))
@@ -140,10 +193,27 @@ def _process_records(raw: list[dict]) -> list[dict]:
         total = len(pulls)
         processed_pulls.reverse()
 
+        pool_ids = sorted({p["gacha_id"] for p in pulls if p["gacha_id"]})
+        group = _pity_group(pool_ids[0]) if pool_ids else None
+        server_entry = server_pity.get(group) if group else None
+        has_server_pity = isinstance(server_entry, dict) and "pity_ssr_count" in server_entry
+        refreshed = [int(fetches[g]) for g in pool_ids if g in fetches]
+        last_refreshed = max(refreshed) if refreshed else None
+
         result.append({
             "banner_name": banner_name,
+            "pool_ids": pool_ids,
+            "pity_current": int(server_entry["pity_ssr_count"]) if has_server_pity else pity,
+            "pity_source": "server" if has_server_pity else "computed",
+            "last_refreshed": last_refreshed,
+            "stale": last_refreshed is None or last_refreshed < session_start,
             "pulls": processed_pulls,
             "stats": {
+                "wins_50_50": wins_50_50,
+                "losses_50_50": five_stars - wins_50_50,
+                "luck_percentile": _luck_percentile(five_stars, total, ASSUMED_SSR_RATE),
+                "assumed_rate": ASSUMED_SSR_RATE,
+                "rate_assumed": True,
                 "total": total,
                 "five_star": five_stars,
                 "four_star": four_stars,
@@ -175,6 +245,6 @@ def get_rescue_records():
     try:
         raw = json.loads(path.read_text(encoding="utf-8"))
         records = raw.get("records", []) if isinstance(raw, dict) else raw
-        return _process_records(records)
+        return _process_records(records, raw if isinstance(raw, dict) else None)
     except Exception:
         return []
