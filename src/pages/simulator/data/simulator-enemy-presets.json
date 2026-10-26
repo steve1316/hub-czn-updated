@@ -1,0 +1,257 @@
+[
+  {
+    "group": "combat",
+    "presets": [
+      {
+        "label": "Lv1",
+        "def": 65,
+        "dmg_decrease": 0.4953
+      },
+      {
+        "label": "Lv2",
+        "def": 109,
+        "dmg_decrease": 0.4688
+      },
+      {
+        "label": "Lv3",
+        "def": 164,
+        "dmg_decrease": 0.4431
+      },
+      {
+        "label": "Lv4",
+        "def": 244,
+        "dmg_decrease": 0.4126
+      },
+      {
+        "label": "Lv5",
+        "def": 322,
+        "dmg_decrease": 0.3854
+      },
+      {
+        "label": "Lv6",
+        "def": 419,
+        "dmg_decrease": 0.3609
+      },
+      {
+        "label": "Lv7",
+        "def": 220,
+        "dmg_decrease": 0.2735
+      },
+      {
+        "label": "Lv8",
+        "def": 266,
+        "dmg_decrease": 0.2612
+      },
+      {
+        "label": "Lv9",
+        "def": 317,
+        "dmg_decrease": 0.25
+      },
+      {
+        "label": "Lv10",
+        "def": 370,
+        "dmg_decrease": 0.2402
+      }
+    ]
+  },
+  {
+    "group": "gold",
+    "presets": [
+      {
+        "label": "Lv1",
+        "def": 65,
+        "dmg_decrease": 0.4953
+      },
+      {
+        "label": "Lv2",
+        "def": 109,
+        "dmg_decrease": 0.4688
+      },
+      {
+        "label": "Lv3",
+        "def": 164,
+        "dmg_decrease": 0.4431
+      },
+      {
+        "label": "Lv4",
+        "def": 244,
+        "dmg_decrease": 0.4126
+      },
+      {
+        "label": "Lv5",
+        "def": 322,
+        "dmg_decrease": 0.3854
+      },
+      {
+        "label": "Lv6",
+        "def": 419,
+        "dmg_decrease": 0.3609
+      },
+      {
+        "label": "Lv7",
+        "def": 459,
+        "dmg_decrease": 0.2735
+      },
+      {
+        "label": "Lv8",
+        "def": 556,
+        "dmg_decrease": 0.2612
+      },
+      {
+        "label": "Lv9",
+        "def": 662,
+        "dmg_decrease": 0.25
+      },
+      {
+        "label": "Lv10",
+        "def": 772,
+        "dmg_decrease": 0.2402
+      }
+    ]
+  },
+  {
+    "group": "piece",
+    "presets": [
+      {
+        "label": "Lv1",
+        "def": 73,
+        "dmg_decrease": 0.4953
+      },
+      {
+        "label": "Lv2",
+        "def": 105,
+        "dmg_decrease": 0.4688
+      },
+      {
+        "label": "Lv3",
+        "def": 140,
+        "dmg_decrease": 0.4431
+      },
+      {
+        "label": "Lv4",
+        "def": 240,
+        "dmg_decrease": 0.4126
+      },
+      {
+        "label": "Lv5",
+        "def": 357,
+        "dmg_decrease": 0.3854
+      },
+      {
+        "label": "Lv6",
+        "def": 466,
+        "dmg_decrease": 0.3609
+      },
+      {
+        "label": "Lv7",
+        "def": 558,
+        "dmg_decrease": 0.3454
+      },
+      {
+        "label": "Lv8",
+        "def": 615,
+        "dmg_decrease": 0.3404
+      },
+      {
+        "label": "Lv9",
+        "def": 677,
+        "dmg_decrease": 0.335
+      },
+      {
+        "label": "Lv10",
+        "def": 751,
+        "dmg_decrease": 0.3282
+      }
+    ]
+  },
+  {
+    "group": "hyperspace",
+    "presets": [
+      {
+        "label": "All",
+        "def": 112,
+        "dmg_decrease": 0.4357
+      }
+    ]
+  },
+  {
+    "group": "boss",
+    "presets": [
+      {
+        "label": "Lv1",
+        "def": 61,
+        "dmg_decrease": 0.4953
+      },
+      {
+        "label": "Lv2",
+        "def": 88,
+        "dmg_decrease": 0.4688
+      },
+      {
+        "label": "Lv3",
+        "def": 117,
+        "dmg_decrease": 0.4431
+      },
+      {
+        "label": "Lv4",
+        "def": 182,
+        "dmg_decrease": 0.4126
+      },
+      {
+        "label": "Lv5",
+        "def": 258,
+        "dmg_decrease": 0.3854
+      },
+      {
+        "label": "Lv6",
+        "def": 348,
+        "dmg_decrease": 0.3609
+      },
+      {
+        "label": "Lv7",
+        "def": 431,
+        "dmg_decrease": 0.3454
+      },
+      {
+        "label": "Lv8",
+        "def": 488,
+        "dmg_decrease": 0.3404
+      },
+      {
+        "label": "Lv9",
+        "def": 551,
+        "dmg_decrease": 0.335
+      },
+      {
+        "label": "Lv10",
+        "def": 624,
+        "dmg_decrease": 0.3282
+      }
+    ]
+  },
+  {
+    "group": "disaster",
+    "presets": [
+      {
+        "label": "R1",
+        "def": 89,
+        "dmg_decrease": 0.3697
+      },
+      {
+        "label": "R2",
+        "def": 122,
+        "dmg_decrease": 0.3697
+      },
+      {
+        "label": "R3",
+        "def": 200,
+        "dmg_decrease": 0.3697
+      },
+      {
+        "label": "R4",
+        "def": 219,
+        "dmg_decrease": 0.3697
+      }
+    ]
+  }
+]
