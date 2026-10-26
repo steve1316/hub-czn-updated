@@ -49,7 +49,8 @@ export function presetEnemy(group: string, preset: EnemyPreset): SimEnemy {
  * @returns The enemy with the decrease the game reported.
  */
 export function battleEnemy(record: BattleRecord): SimEnemy {
-  return { def: Math.round(record.enemy_def), dmgDecrease: record.enemy_dmg_decrease, source: { kind: 'battle', captureTime: record.capture_time } }
+  // A negative decrease is clamped to 0, which the simulate endpoint accepts and treats as "estimate from DEF"
+  return { def: Math.round(record.enemy_def), dmgDecrease: Math.max(0, record.enemy_dmg_decrease), source: { kind: 'battle', captureTime: record.capture_time } }
 }
 
 /**
@@ -97,7 +98,11 @@ export function parseStoredEnemy(raw: string | null, legacyRaw: string | null): 
  */
 export function loadEnemy(): SimEnemy {
   try {
-    return parseStoredEnemy(localStorage.getItem(STORAGE_KEY), localStorage.getItem(LEGACY_SIMULATOR_KEY))
+    const stored = localStorage.getItem(STORAGE_KEY)
+    const enemy = parseStoredEnemy(stored, localStorage.getItem(LEGACY_SIMULATOR_KEY))
+    // Store a migrated enemy right away, as the Simulator rewrites its old state without the DEF
+    if (!stored) saveEnemy(enemy)
+    return enemy
   } catch {
     return DEFAULT_ENEMY
   }

@@ -21,12 +21,13 @@ const STORAGE_KEY = 'czn_simulator_state'
 const AUTO_DECK: DeckChoice = { kind: 'game', id: null }
 
 /**
- * The deck to simulate: an in-game deck (a null id picks the highest-scoring one), or a Deck Builder card list. A card list with `saved`
- * came from a deck saved in the Deck Builder, one without was sent from it unsaved.
+ * The deck to simulate: an in-game deck (a null id picks the highest-scoring one), a deck sent unsaved from the Deck Builder, or one
+ * combatant's slot of a deck saved in the Deck Builder, read fresh on each run.
  */
 type DeckChoice =
   | { kind: 'game'; id: number | null }
-  | { kind: 'cards'; name: string; cards: SimDeckCard[]; saved?: { id: string; slotIndex: number } }
+  | { kind: 'cards'; name: string; cards: SimDeckCard[] }
+  | { kind: 'saved'; id: string; slotIndex: number }
 
 interface PersistedState {
   charName: string
@@ -256,6 +257,15 @@ export function SimulateTab() {
       .map((slot, slotIndex) => ({ saved, slot, slotIndex }))
       .filter(({ slot }) => slot.combatant_id === combatant?.res_id && slot.cards.length > 0),
   )
+  const savedChoice = deck.kind === 'saved'
+    ? savedSlots.find(({ saved, slotIndex }) => saved.id === deck.id && slotIndex === deck.slotIndex)
+    : undefined
+  // A saved deck that was deleted, or belongs to another character, falls back to the auto pick
+  const activeDeck = deck.kind === 'saved' && !savedChoice ? AUTO_DECK : deck
+  // The name and cards of a Deck Builder deck, or null for an in-game deck
+  const builderDeck = activeDeck.kind === 'cards'
+    ? activeDeck
+    : savedChoice ? { name: savedChoice.saved.name, cards: deckSlotToSimCards(savedChoice.slot) } : null
 
   // Shares the History tab's cache entry, showing only the newest few
   const { data: recentBattles = [] } = useQuery<BattleRecord[], Error, BattleRecord[]>({
@@ -268,10 +278,10 @@ export function SimulateTab() {
 
   const mutation = useMutation({
     mutationFn: async () => {
-      const name = deck.kind === 'cards' ? deck.name : null
+      const name = builderDeck?.name ?? null
       const data = await api.simulateDamage({
         char_name: charName,
-        ...(deck.kind === 'game' ? { deck_id: deck.id } : { cards: deck.cards }),
+        ...(builderDeck ? { cards: builderDeck.cards } : { deck_id: activeDeck.kind === 'game' ? activeDeck.id : null }),
         morale,
         use_sparks: useSparks,
         monster_def: enemy.def,
@@ -286,7 +296,7 @@ export function SimulateTab() {
   })
 
   // A deck sent unsaved from the Deck Builder, listed on its own until another deck is picked
-  const sentDeck = deck.kind === 'cards' && !deck.saved ? deck : null
+  const sentDeck = activeDeck.kind === 'cards' ? activeDeck : null
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
   const moraleMultDisplay = `×${(1 + morale * MORALE_PCT / 100).toFixed(2)}`
   const defReductionPreview = `${(damagePasses(enemy.dmgDecrease, enemy.def) * 100).toFixed(1)}%`
@@ -328,7 +338,7 @@ export function SimulateTab() {
                   {(sentDeck || savedSlots.length > 0) && <DeckGroupLabel>{t('simulator.deckGroups.game')}</DeckGroupLabel>}
                   <DeckButton
                     label={t('simulator.deckAuto')}
-                    selected={deck.kind === 'game' && deck.id === null}
+                    selected={activeDeck.kind === 'game' && activeDeck.id === null}
                     onClick={() => selectDeck(AUTO_DECK)}
                   />
                   {decks.map((d) => {
@@ -345,7 +355,7 @@ export function SimulateTab() {
                           </span>
                         }
                         sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
-                        selected={deck.kind === 'game' && deck.id === d.deck_id}
+                        selected={activeDeck.kind === 'game' && activeDeck.id === d.deck_id}
                         onClick={() => selectDeck({ kind: 'game', id: d.deck_id })}
                       />
                     )
@@ -356,13 +366,13 @@ export function SimulateTab() {
                 <>
                   <DeckGroupLabel>{t('simulator.deckGroups.saved')}</DeckGroupLabel>
                   {savedSlots.map(({ saved, slot, slotIndex }) => {
-                    const choice: DeckChoice = { kind: 'cards', name: saved.name, cards: deckSlotToSimCards(slot), saved: { id: saved.id, slotIndex } }
+                    const choice: DeckChoice = { kind: 'saved', id: saved.id, slotIndex }
                     return (
                       <DeckButton
                         key={`${saved.id}-${slotIndex}`}
                         label={<span className="block truncate">{saved.name}</span>}
                         sub={t('simulator.deckCards', { count: slot.cards.length })}
-                        selected={deck.kind === 'cards' && deck.saved?.id === saved.id && deck.saved.slotIndex === slotIndex}
+                        selected={savedChoice?.saved.id === saved.id && savedChoice.slotIndex === slotIndex}
                         onClick={() => selectDeck(choice)}
                       />
                     )

@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { save } from '@tauri-apps/plugin-dialog'
 import { writeTextFile } from '@tauri-apps/plugin-fs'
@@ -48,6 +48,8 @@ import {
 
 const DECK_BUILDER_EXPORT_VERSION = 4
 const DECK_BUILDER_MAX_SLOTS = 3
+// The squad kept for this session while the user is away in the Simulator
+const WORKING_SQUAD_KEY = 'hub-czn:deck-builder:working-squad'
 
 function getDeckBuilderExportFileName() {
   const date = new Date().toISOString().slice(0, 10)
@@ -869,6 +871,30 @@ export function useDeckBuilder() {
     await writeTextFile(filePath, JSON.stringify(payload, null, 2))
   }
 
+  /**
+   * Keep the current squad for this session, so leaving for the Simulator does not lose unsaved work.
+   */
+  function stashSquad() {
+    try {
+      sessionStorage.setItem(WORKING_SQUAD_KEY, JSON.stringify({ payload: createDeckBuilderExportPayload(), savedDeckId: selectedSavedDeckId }))
+    } catch { }
+  }
+
+  // Bring back a squad stashed by `stashSquad`, once
+  useEffect(() => {
+    let stashed: { payload: unknown; savedDeckId: string | null } | null = null
+    try {
+      const raw = sessionStorage.getItem(WORKING_SQUAD_KEY)
+      sessionStorage.removeItem(WORKING_SQUAD_KEY)
+      stashed = raw ? JSON.parse(raw) : null
+    } catch { }
+    if (!stashed) return
+    const { payload, savedDeckId } = stashed
+    loadDeckFromPayload(payload)
+      .then(() => setSelectedSavedDeckId(savedDeckId))
+      .catch(error => console.error('[Deck Builder] Failed to restore the squad:', error))
+  }, [])
+
   async function importDeck(file: File) {
     const text = await file.text()
     const parsed = JSON.parse(text) as unknown
@@ -973,5 +999,6 @@ export function useDeckBuilder() {
     saveCurrentDeck,
     saveCurrentDeckAs,
     deleteSavedDeck,
+    stashSquad,
   }
 }
