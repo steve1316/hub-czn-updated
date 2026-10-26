@@ -13,11 +13,21 @@ export function estimatedDamageDecrease(def: number): number {
 }
 
 /**
+ * An enemy's damage decrease, using the game's own value when it is known.
+ * @param dmgDecrease The enemy's real damage decrease, or 0 when it is unknown.
+ * @param monsterDef The enemy's DEF, used to estimate the decrease when it is unknown.
+ * @returns The damage decrease as a fraction.
+ */
+export function damageDecrease(dmgDecrease: number, monsterDef: number): number {
+  return dmgDecrease > 0 ? dmgDecrease : estimatedDamageDecrease(monsterDef)
+}
+
+/**
  * Share of damage that gets through an enemy's damage decrease.
  * @param dmgDecrease The enemy's real damage decrease, or 0 when it is unknown.
  * @param monsterDef The enemy's DEF, used to estimate the decrease when it is unknown.
  * @returns The fraction of damage that passes, from 0 to 1.
  */
 export function damagePasses(dmgDecrease: number, monsterDef: number): number {
-  return 1 - (dmgDecrease > 0 ? dmgDecrease : estimatedDamageDecrease(monsterDef))
+  return 1 - damageDecrease(dmgDecrease, monsterDef)
 }

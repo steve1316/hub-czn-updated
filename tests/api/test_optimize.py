@@ -588,3 +588,44 @@ def test_optimize_route_accepts_dot_ticks_field(client):
     resp = client.post("/api/optimize/start", json=payload)
     assert resp.status_code != 500, f"500 error: {resp.text[:300]}"
 
+
+
+def test_calculate_build_stats_uses_target_dmg_decrease_from_config():
+    """A monster's real damage decrease from the settings changes AvgDMG."""
+    import pytest
+    from api.optimizer.optimizer import GearOptimizer
+
+    opt = GearOptimizer()
+    opt._config_target_def = 500
+    stats_fit = opt.calculate_build_stats([], char_name="Diana")
+    opt._config_target_dmg_decrease = 0.6
+    stats_real = opt.calculate_build_stats([], char_name="Diana")
+    if stats_fit.get("ATK", 0) <= 0:
+        pytest.skip("Diana base stats not loaded")
+    assert stats_real["Avg DMG"] < stats_fit["Avg DMG"]
+
+
+def test_optimize_start_route_passes_target_dmg_decrease(client, monkeypatch):
+    """The route forwards target_dmg_decrease in the settings, and rejects 1 or more."""
+    import time
+    from api.state import state
+
+    captured = {}
+
+    def fake_optimize(char_name, settings, progress_cb=None, cancel_flag=None):
+        captured["settings"] = settings
+        return []
+
+    state.data_loaded = True
+    state.optimizer.character_info["Diana"] = object()
+    monkeypatch.setattr(state.optimizer, "optimize", fake_optimize)
+
+    payload = {"char_name": "Diana", "max_results": 1, "target_def": 258, "target_dmg_decrease": 0.3509}
+    assert client.post("/api/optimize/start", json={**payload, "target_dmg_decrease": 1}).status_code == 422
+    resp = client.post("/api/optimize/start", json=payload)
+    assert resp.status_code == 200, resp.text[:200]
+    for _ in range(20):
+        if "settings" in captured:
+            break
+        time.sleep(0.05)
+    assert captured["settings"].get("target_dmg_decrease") == 0.3509

@@ -47,6 +47,8 @@ class GearOptimizer:
         self.raw_data = {}
         # Sprint 2f4: AvgDMG configuration knobs
         self._config_target_def: int = 500
+        # The picked monster's real damage decrease, or 0 to estimate it from target DEF
+        self._config_target_dmg_decrease: float = 0.0
         self._config_treat_target_as_weak: bool = False
         # Sprint 2h3: AoE / multi-target modeling
         self._config_target_count: int = 1
@@ -467,6 +469,7 @@ class GearOptimizer:
             cri_dmg_rate=total_cd,
             eff_pct=eff_pct,
             dummy_def=target_def,
+            dmg_decrease=getattr(self, "_config_target_dmg_decrease", 0.0) or 0.0,
             weak_mult=weak_mult,
             extra_dmg_pct=extra_dmg,  # Sprint 2h2: include Extra DMG%
             target_count=target_count,  # Sprint 2h3
@@ -518,6 +521,7 @@ class GearOptimizer:
         """
         # Sprint 2f4: thread AvgDMG config from settings → instance attributes
         self._config_target_def = int(settings.get("target_def", 500) or 500)
+        self._config_target_dmg_decrease = float(settings.get("target_dmg_decrease", 0) or 0)
         self._config_treat_target_as_weak = bool(settings.get("treat_target_as_weak", False))
         # Sprint 2h3: thread target_count from settings
         self._config_target_count = int(settings.get("target_count", 1) or 1)

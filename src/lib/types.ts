@@ -301,6 +301,8 @@ export interface OptimizerConfig {
   min_priority_substats: number
   stat_constraints: Record<string, number> | null
   target_def?: number  // Sprint 2f4: default 500 (handled by backend)
+  /** The picked monster's real damage decrease, or 0 to estimate it from `target_def`. */
+  target_dmg_decrease?: number
   treat_target_as_weak?: boolean  // Sprint 2f4: default false (handled by backend)
   target_count?: number  // Sprint 2h3: default 1 (handled by backend)
   dot_ticks?: number  // Sprint 2h6: default 3 (handled by backend)
@@ -332,6 +334,8 @@ export interface Monster {
   id: string
   name: string
   def: number
+  /** The monster's real damage decrease from the game, a fraction from 0 to 1. */
+  dmg_decrease: number
   has_weak: boolean
 }
 

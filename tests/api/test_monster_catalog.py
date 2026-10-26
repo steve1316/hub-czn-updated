@@ -92,3 +92,17 @@ def test_no_def_above_stat_def_pct_cap(catalog_by_id):
     for mid, e in catalog_by_id.items():
         d = e["def"]
         assert 20 <= d <= 800, f"{mid} DEF={d} out of plausible range"
+
+
+def test_every_monster_has_its_real_dmg_decrease(catalog_by_id):
+    """Each monster carries the damage decrease of its stat row, a rate between 0 and 1."""
+    for mid, e in catalog_by_id.items():
+        assert 0 < e["dmg_decrease"] < 1, f"{mid} dmg_decrease={e.get('dmg_decrease')}"
+
+
+def test_tier_1_dmg_decrease_matches_stat_1(catalog_by_id):
+    """A _01 monster uses stat_1, whose damage decrease is 0.5035. It does not scale with stat_def_pct."""
+    entry = catalog_by_id.get("1002001_01")
+    if entry is None:
+        pytest.skip("1002001_01 not in catalog")
+    assert entry["dmg_decrease"] == pytest.approx(0.5035)

@@ -41,6 +41,8 @@ class OptimizeStartRequest(BaseModel):
     stat_constraints: dict[str, float] | None = None
     # Sprint 2f4: AvgDMG configuration knobs
     target_def: int = Field(default=500, ge=0)
+    # The picked monster's real damage decrease. 0 = estimate it from target_def
+    target_dmg_decrease: float = Field(default=0, ge=0, lt=1)
     treat_target_as_weak: bool = False
     # Sprint 2h3: AoE / multi-target modeling
     # Sprint 2h9: 0 = auto-detect from char's best damage card's target_class
@@ -119,7 +121,7 @@ def optimize_monster_catalog():
 
     Catalog is built offline by scripts/build_monster_catalog.py from
     client_db monster definitions. Returns a list of
-    {id, name, def, has_weak} dicts (sorted by DEF then name).
+    {id, name, def, dmg_decrease, has_weak} dicts (sorted by DEF then name).
     Returns an empty list when the catalog file is missing.
     """
     path = Path(__file__).resolve().parents[1] / "data" / "monster_catalog.json"
@@ -157,6 +159,7 @@ async def optimize_start(body: OptimizeStartRequest):
         "stat_constraints": body.stat_constraints,
         # Sprint 2f4: AvgDMG configuration knobs
         "target_def": body.target_def,
+        "target_dmg_decrease": body.target_dmg_decrease,
         "treat_target_as_weak": body.treat_target_as_weak,
         # Sprint 2h3: AoE / multi-target modeling
         "target_count": body.target_count,

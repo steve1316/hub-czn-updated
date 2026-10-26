@@ -60,7 +60,7 @@ def _write_client(root: Path) -> None:
         {"id": "1", "stage_enter_link_mon_stat_id": "stat_1"},
         {"id": "2", "stage_enter_link_mon_stat_id": "stat_2"},
     ]), encoding="utf-8")
-    (db / "mon_stat@mon_stat.json").write_text(json.dumps([{"id": "stat_1", "stat_def": "47"}, {"id": "stat_2", "stat_def": "49"}]), encoding="utf-8")
+    (db / "mon_stat@mon_stat.json").write_text(json.dumps([{"id": "stat_1", "stat_def": "47", "dmg_decrease_rate": "0.5035"}, {"id": "stat_2", "stat_def": "49", "dmg_decrease_rate": "0.5"}]), encoding="utf-8")
     (db / "monster(test)@monster.json").write_text(json.dumps(MONSTERS), encoding="utf-8")
     text = root / "text" / "en"
     text.mkdir(parents=True)
@@ -76,8 +76,8 @@ def test_build_catalog_reads_the_given_client(tmp_path):
     _write_client(tmp_path)
     catalog, counts = build_monster_catalog.build_catalog(tmp_path)
     assert catalog == [
-        {"id": "1001001_01", "name": "Zed", "def": 47, "has_weak": True},
-        {"id": "1001002_02", "name": f"Pharanes{CURLY_APOSTROPHE}s Fragment", "def": 98, "has_weak": False},
+        {"id": "1001001_01", "name": "Zed", "def": 47, "dmg_decrease": 0.5035, "has_weak": True},
+        {"id": "1001002_02", "name": f"Pharanes{CURLY_APOSTROPHE}s Fragment", "def": 98, "dmg_decrease": 0.5, "has_weak": False},
     ]
     assert counts == {"skipped_no_id": 0, "skipped_dup": 0, "tier_miss": 0}
 

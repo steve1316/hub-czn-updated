@@ -2,7 +2,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useNavigate } from 'react-router-dom'
 import type { CardCharacter } from '@/lib/types'
-import { deckSlotToSimCards, type DeckBuilderHandoff } from '@/pages/simulator/simulator-deck.utils'
+import { deckSlotToSimCards, matchingSavedSlot, type DeckBuilderHandoff } from '@/pages/simulator/simulator-deck.utils'
 import { CombatantDeckColumn } from './components/CombatantDeckColumn'
 import { DeckBuilderHeader } from './components/DeckBuilderHeader'
 import {
@@ -28,14 +28,17 @@ export function DeckBuilderPage() {
   /**
    * Open the Simulate tab with one combatant's deck, epiphanies included.
    * @param slot The squad slot to simulate.
+   * @param index The slot's index in the squad.
    */
-  function simulateSlot(slot: SquadSlot) {
+  function simulateSlot(slot: SquadSlot, index: number) {
     if (slot.combatantId === null) return
     const character = deckBuilder.characters.find(c => c.char_res_id === slot.combatantId)
+    const exported = createDeckBuilderExportSlot(slot)
     const handoff: DeckBuilderHandoff = {
       combatantId: slot.combatantId,
       name: character?.name || `#${slot.combatantId}`,
-      cards: deckSlotToSimCards(createDeckBuilderExportSlot(slot)),
+      cards: deckSlotToSimCards(exported),
+      saved: matchingSavedSlot(deckBuilder.savedDecks, deckBuilder.selectedSavedDeckId, index, exported),
     }
     navigate('/battles/simulate', { state: { deckBuilder: handoff } })
   }
@@ -104,7 +107,7 @@ export function DeckBuilderPage() {
                 deckBuilder.clearEquipment(index, equipmentSlot)
               }
               onClearDeck={() => deckBuilder.clearDeck(index)}
-              onSimulate={() => simulateSlot(slot)}
+              onSimulate={() => simulateSlot(slot, index)}
             />
           ))}
         </main>
