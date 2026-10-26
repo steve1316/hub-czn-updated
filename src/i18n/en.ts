@@ -94,6 +94,8 @@ const en = {
       empty: 'Empty',
       finalStats: 'Final Stats',
       baseStats: 'Base Stats',
+      gradeCeiling: 'Ceiling {{grade}}',
+      gradeCeilingTip: 'The grade this piece can reach once it is fully upgraded',
       ehpTip: 'Effective HP — how much raw damage the character can absorb before dying, factoring in DEF reduction.',
     },
   },

@@ -77,7 +77,7 @@ export function GearSlotCard({
   if (slot.main_stat === null) {
     return (
       <div className="bg-[#121212] border border-[#282828] rounded-xl p-3 space-y-1">
-        <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a]">{slot.slot}</p>
+        <p className="text-xs font-medium text-[#8a8a8a]">{slot.slot}</p>
         <p className="text-xs text-[#8a8a8a] italic">{t('combatants.detail.empty')}</p>
       </div>
     )
@@ -91,6 +91,8 @@ export function GearSlotCard({
   // Falls back to gear_score if potential_high is absent (e.g. optimizer results).
   const gradeBase = slot.potential_high ?? slot.score
   const grade = gradeBase != null ? scoreGrade(gradeBase) : null
+  // The grade is a ceiling when the piece can still grow past its current score
+  const gradeIsCeiling = slot.potential_high != null && slot.potential_high > (slot.score ?? 0)
   const hasPieceImg = slot.set_id != null && slot.slot_num != null
 
   const pieceFallback = (
@@ -122,10 +124,10 @@ export function GearSlotCard({
         </div>
 
         <div className="flex-1 min-w-0">
-          <p className="text-[11px] uppercase tracking-wider text-[#8a8a8a] truncate">
+          <p title={slot.set_name ?? slot.slot} className="text-xs text-[#b3b3b3] truncate">
             {slot.set_name ?? slot.slot}
           </p>
-          <p className="text-xs font-semibold text-[#ffffff] truncate">{slot.main_stat}</p>
+          <p className="text-sm font-semibold text-[#ffffff] truncate">{slot.main_stat}</p>
         </div>
 
         <EquippedByAvatar portrait={equippedToPortrait} name={equippedToName} />
@@ -137,7 +139,7 @@ export function GearSlotCard({
           const eff = s.efficiency
           const effColor = eff == null ? '' : eff >= 80 ? 'text-[#4ade80]' : eff >= 60 ? 'text-[#facc15]' : 'text-[#f87171]'
           return (
-            <div key={i} className="flex items-center justify-between text-[11px]">
+            <div key={i} className="flex items-center justify-between text-xs">
               <div className="flex items-center text-[#b3b3b3]">
                 <RollArrows count={s.roll_count} />
                 <span>{s.name}</span>
@@ -145,7 +147,7 @@ export function GearSlotCard({
               <div className="flex items-center gap-1.5 tabular-nums">
                 <span className="text-[#ffffff] font-medium">{s.value}</span>
                 {eff != null && (
-                  <span className={`text-[11px] ${effColor}`}>{eff}%</span>
+                  <span className={effColor}>{eff}%</span>
                 )}
               </div>
             </div>
@@ -156,12 +158,17 @@ export function GearSlotCard({
       {/* Score */}
       {displayScore != null && (
         <div className="px-3 pb-3 pt-1 border-t border-[#1e1e1e] mt-1">
-          <div className="flex items-center justify-between text-xs">
-            <span className="text-[#8a8a8a]">Score</span>
+          <div className="flex items-center justify-between text-sm">
+            <span className="text-[#b3b3b3]">Score</span>
             <div className="flex items-center gap-1.5">
               <span className="text-[#c084fc] font-bold">{displayScore.toFixed(1)}</span>
               {grade && (
-                <span className={`text-[11px] font-bold ${grade.color}`}>({grade.label})</span>
+                <span
+                  title={gradeIsCeiling ? t('combatants.detail.gradeCeilingTip') : undefined}
+                  className={`text-xs font-bold ${grade.color}`}
+                >
+                  {gradeIsCeiling ? t('combatants.detail.gradeCeiling', { grade: grade.label }) : `(${grade.label})`}
+                </span>
               )}
             </div>
           </div>
@@ -178,8 +185,8 @@ export function FinalStatsPanel({ stats, compact = false }: { stats: FinalStats;
     { label: 'ATK', value: stats.ATK.toLocaleString() },
     { label: 'DEF', value: stats.DEF.toLocaleString() },
     { label: 'HP', value: stats.HP.toLocaleString() },
-    { label: 'CRate', value: `${stats.CRate.toFixed(1)}%` },
-    { label: 'CDmg', value: `${stats.CDmg.toFixed(1)}%` },
+    { label: 'Crit Rate', value: `${stats.CRate.toFixed(1)}%` },
+    { label: 'Crit DMG', value: `${stats.CDmg.toFixed(1)}%` },
     { label: 'EHP', value: stats.EHP.toLocaleString(), tip: t('combatants.detail.ehpTip') },
     { label: 'Avg DMG', value: stats.AvgDMG.toLocaleString() },
     ...(stats.ExtraDMG && stats.ExtraDMG > 0 ? [{ label: 'Extra DMG%', value: `+${stats.ExtraDMG.toFixed(1)}%` }] : []),
@@ -187,12 +194,12 @@ export function FinalStatsPanel({ stats, compact = false }: { stats: FinalStats;
   ]
   return (
     <div className={`bg-[#181818] border border-[#282828] rounded-xl ${compact ? 'p-2.5' : 'p-4'}`}>
-      <p className={`uppercase tracking-wider text-[#b3b3b3] ${compact ? 'text-[11px] mb-1.5' : 'text-[11px] mb-3'}`}>
+      <p className={`text-xs font-medium text-[#b3b3b3] ${compact ? 'mb-1.5' : 'mb-3'}`}>
         {t('combatants.detail.finalStats')}
       </p>
       <div className={`grid grid-cols-2 ${compact ? 'gap-x-4 gap-y-0.5' : 'gap-x-6 gap-y-2'}`}>
         {rows.map(r => (
-          <div key={r.label} className={`flex justify-between ${compact ? 'text-[11px]' : 'text-sm'}`}>
+          <div key={r.label} className={`flex justify-between ${compact ? 'text-xs' : 'text-sm'}`}>
             <span className="flex items-center gap-1 text-[#b3b3b3]">
               {r.label}
               {r.tip && <InfoPopover content={r.tip} />}
@@ -212,13 +219,13 @@ export function BaseStatsPanel({ stats }: { stats: BaseStats }) {
     { label: 'ATK', value: stats.s_atk.toLocaleString() },
     { label: 'DEF', value: stats.s_def.toLocaleString() },
     { label: 'HP', value: stats.s_hp.toLocaleString() },
-    { label: 'CRate', value: `${stats.s_cri}%` },
-    { label: 'CDmg', value: `${stats.s_cri_dmg_rate}%` },
+    { label: 'Crit Rate', value: `${stats.s_cri}%` },
+    { label: 'Crit DMG', value: `${stats.s_cri_dmg_rate}%` },
   ]
 
   return (
     <div className="bg-[#181818] border border-[#282828] rounded-xl p-4">
-      <p className="text-[11px] uppercase tracking-wider text-[#b3b3b3] mb-3">
+      <p className="text-xs font-medium text-[#b3b3b3] mb-3">
         {t('combatants.detail.baseStats')}
       </p>
       <div className="grid grid-cols-2 gap-x-6 gap-y-2">

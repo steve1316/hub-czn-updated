@@ -134,21 +134,16 @@ function ExpandedContent({
             {/* Top: partner + compact stats — right-aligned, spanning right 3 of 6 cols */}
             <div className="px-4 mb-3 flex flex-col items-end gap-2">
               <PartnerBadge partnerResId={partnerResId} partnerName={partnerName} />
-              <div style={{ width: 'calc(50% - 4px)', opacity: 0.72 }}>
+              <div style={{ width: 'calc(50% - 4px)' }}>
                 <FinalStatsPanel stats={data.final_stats} compact />
               </div>
             </div>
 
             {/* Bottom: gear cards — full width */}
-            <div className="grid grid-cols-3 xl:grid-cols-6 gap-2 px-4">
-              {data.gear_slots.map((slot, i) => {
-                const opacity = i === 0 ? 0.72 : i === 1 ? 0.86 : 1
-                return (
-                  <div key={slot.slot} style={{ opacity }}>
-                    <GearSlotCard slot={slot} />
-                  </div>
-                )
-              })}
+            <div className="grid grid-cols-3 2xl:grid-cols-6 gap-2 px-4">
+              {data.gear_slots.map((slot) => (
+                <GearSlotCard key={slot.slot} slot={slot} />
+              ))}
             </div>
 
             <CharacterScoring charId={charId} resId={resId} />
