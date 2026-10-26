@@ -309,12 +309,16 @@ export function CombatantsPage() {
     )
   }
 
+  // Global weights also score Memory Fragments, so they stay editable before any combatant is captured.
   if (combatants.length === 0) {
     return (
-      <div role="status" className="h-full flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
-        <User size={40} className="opacity-30" />
-        <p className="text-sm">{t('combatants.empty')}</p>
-        <p className="text-xs">{t('combatants.emptyHint')}</p>
+      <div className="h-full flex flex-col gap-4 p-4">
+        <GlobalScoring />
+        <div role="status" className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
+          <User size={40} className="opacity-30" />
+          <p className="text-sm">{t('combatants.empty')}</p>
+          <p className="text-xs">{t('combatants.emptyHint')}</p>
+        </div>
       </div>
     )
   }
