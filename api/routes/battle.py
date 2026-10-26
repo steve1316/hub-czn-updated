@@ -8,7 +8,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from api.frozen_path import add_vribbels_to_path
-from api.optimizer.expected_damage import default_damage_reduction
+from api.optimizer.expected_damage import damage_reduction
 add_vribbels_to_path()
 
 try:
@@ -134,10 +134,7 @@ def _def_factor(battle: dict) -> float:
     Returns:
         1 minus the damage decrease the game reported, or minus the fitted DEF curve when the capture has none.
     """
-    decrease = float(battle.get("enemy_dmg_decrease") or 0)
-    if decrease <= 0:
-        decrease = default_damage_reduction(float(battle.get("enemy_def", 0)))
-    return 1 - decrease
+    return 1 - damage_reduction(float(battle.get("enemy_dmg_decrease") or 0), float(battle.get("enemy_def", 0)))
 
 
 def _analyze_char(char: dict, def_factor: float) -> CharAnalysis:

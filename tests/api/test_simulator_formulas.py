@@ -303,7 +303,7 @@ def test_f_base_dmg_applies_weak_mult_when_outline_and_weak():
         hand=[firing_card], deck=[], discard=[],
         morale=0, ego_state={}, spark_state={}, cs_stacks={}, rng=random.Random(0),
     )
-    # _def_reduce(0) = 268/503 ≈ 0.533
+    # damage_reduction(0, 0) = 268/503 ≈ 0.533
     # cf with rng seed 0: random() first call returns 0.844; 84.4 vs cri=0.0 → no crit, cf=1.0
     # weak_mult = 125/100 = 1.25
     # expected: 1000 * 1.0 * (1 - 0.533) * 1.0 * 1.25 ≈ 583
