@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, KeyboardEvent } from 'react'
 import { X, ChevronDown, Loader2 } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 import { assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 
 export interface ComboboxOption {
   id: string
@@ -149,11 +150,11 @@ export function SetCombobox({
                 className="inline-flex items-center gap-1 bg-[#c084fc]/20 border border-[#c084fc]/40 text-[#c084fc] text-xs rounded px-2 py-0.5"
               >
                 {opt?.icon_path && (
-                  <img
+                  <AssetImage
                     src={assetUrl(opt.icon_path)}
                     alt=""
                     className="w-3.5 h-3.5 object-contain shrink-0"
-                    onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                    fallback={null}
                   />
                 )}
                 {opt?.label ?? id}
@@ -239,11 +240,11 @@ export function SetCombobox({
               ].join(' ')}
             >
               {opt.icon_path && (
-                <img
+                <AssetImage
                   src={assetUrl(opt.icon_path)}
                   alt=""
                   className="w-4 h-4 object-contain shrink-0"
-                  onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = 'none' }}
+                  fallback={null}
                 />
               )}
               {opt.label}

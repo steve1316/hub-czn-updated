@@ -1,8 +1,8 @@
-import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Loader2, User } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { GearSlot, FinalStats, BaseStats } from '@/lib/types'
 import { InfoPopover } from '@/components/ui/info-popover'
 
@@ -34,35 +34,31 @@ function pieceImageUrl(setId: number, slotNum: number): string {
 // ─── EquippedByAvatar ──────────────────────────────────────────────────────
 
 function EquippedByAvatar({ portrait, name }: { portrait?: string; name?: string }) {
-  const [imgErr, setImgErr] = useState(false)
-
   if (!name && !portrait) return null
 
-  if (portrait && !imgErr) {
+  const initial = name ? (
+    <div
+      className="absolute top-2 right-2 w-6 h-6 rounded-full bg-[#282828] flex items-center justify-center"
+      title={name}
+      aria-label={name}
+    >
+      <User size={12} className="text-[#555]" />
+    </div>
+  ) : null
+
+  if (portrait) {
     return (
-      <img
+      <AssetImage
         src={portrait}
         alt={name ?? ''}
         title={name}
         className="absolute top-2 right-2 w-6 h-6 rounded-full object-cover border border-[#282828]"
-        onError={() => setImgErr(true)}
+        fallback={initial}
       />
     )
   }
 
-  if (name) {
-    return (
-      <div
-        className="absolute top-2 right-2 w-6 h-6 rounded-full bg-[#282828] flex items-center justify-center"
-        title={name}
-        aria-label={name}
-      >
-        <User size={12} className="text-[#555]" />
-      </div>
-    )
-  }
-
-  return null
+  return initial
 }
 
 // ─── GearSlotCard ──────────────────────────────────────────────────────────
@@ -97,30 +93,27 @@ export function GearSlotCard({
   const grade = gradeBase != null ? scoreGrade(gradeBase) : null
   const hasPieceImg = slot.set_id != null && slot.slot_num != null
 
+  const pieceFallback = (
+    <div className="w-10 h-10 bg-[#282828] rounded-lg flex items-center justify-center">
+      <span className="text-[9px] text-[#444]">{slot.slot_num ?? '?'}</span>
+    </div>
+  )
+
   return (
     <div className="bg-[#181818] border border-[#282828] rounded-xl overflow-hidden">
       {/* Header */}
       <div className="relative flex items-center gap-2.5 px-3 pt-3 pb-2.5 border-b border-[#1e1e1e]">
         <div className="relative shrink-0">
           {hasPieceImg ? (
-            <img
+            <AssetImage
               src={pieceImageUrl(slot.set_id!, slot.slot_num!)}
               alt={slot.set_name ?? slot.slot}
               className="w-10 h-10 object-contain rounded-lg"
-              onError={(e) => {
-                const el = e.currentTarget as HTMLImageElement
-                el.style.display = 'none'
-                const fb = el.nextElementSibling as HTMLElement | null
-                if (fb) fb.style.display = 'flex'
-              }}
+              fallback={pieceFallback}
             />
-          ) : null}
-          <div
-            className="w-10 h-10 bg-[#282828] rounded-lg items-center justify-center"
-            style={{ display: hasPieceImg ? 'none' : 'flex' }}
-          >
-            <span className="text-[9px] text-[#444]">{slot.slot_num ?? '?'}</span>
-          </div>
+          ) : (
+            pieceFallback
+          )}
           {slot.level != null && slot.level > 0 && (
             <span className="absolute -bottom-1 -right-1 bg-[#c084fc] text-[#121212] text-[8px] font-bold px-1 py-px rounded leading-tight">
               +{slot.level}

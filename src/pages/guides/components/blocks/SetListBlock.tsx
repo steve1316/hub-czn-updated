@@ -1,5 +1,6 @@
 import { useTranslation } from 'react-i18next'
 import { assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { SetItem } from '../../guides.types'
 
 /** Props for SetListBlock. */
@@ -32,7 +33,7 @@ export function SetListBlock({ items }: SetListBlockProps) {
             title={t('guides.sheetSays', { label: item.label })}
             className="flex max-w-xs gap-2.5 rounded-lg border border-[#282828] bg-[#181818] p-2.5"
           >
-            {item.icon && <img src={assetUrl(item.icon)} alt="" className="h-9 w-9 shrink-0 object-contain" />}
+            {item.icon && <AssetImage src={assetUrl(item.icon)} alt="" className="h-9 w-9 shrink-0 object-contain" />}
             <div className="min-w-0">
               <div className="flex items-center gap-1.5">
                 <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name}</h4>

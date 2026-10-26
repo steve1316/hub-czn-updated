@@ -3,6 +3,7 @@ import { useQuery, useMutation } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { Play, Zap, Shield } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 
@@ -115,7 +116,7 @@ function CardRow({ card }: { card: SimCardResult }) {
         <td className="px-3 py-2 text-xs">
           <div className="flex items-center gap-2">
             {card.icon_path && !imgError ? (
-              <img
+              <AssetImage
                 src={assetUrl(card.icon_path)}
                 alt=""
                 className="w-12 h-12 rounded flex-shrink-0 object-cover"

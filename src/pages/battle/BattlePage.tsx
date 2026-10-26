@@ -5,6 +5,7 @@ import i18n from '@/i18n'
 import { useNavigate } from 'react-router-dom'
 import { Sword, Shield, ChevronDown, ChevronUp, TrendingUp, AlertCircle, LayoutGrid } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, BattleAnalytics, CharAnalysis, Combatant, BattleOverview, InsightCard, CharTrend } from '@/lib/types'
 
 // ── shared helpers ────────────────────────────────────────────────────────────
@@ -28,7 +29,7 @@ function CharAvatar({ combatant, size = 24 }: { combatant?: Combatant; size?: nu
     )
   }
   return (
-    <img
+    <AssetImage
       src={assetUrl(combatant.portrait_url)}
       alt=""
       className="rounded object-cover shrink-0"
@@ -468,11 +469,11 @@ function CharAnalyticsCard({ analysis, combatants }: { analysis: CharAnalysis; c
       <div className="flex items-center justify-between gap-2">
         <div className="flex items-center gap-2">
           {char?.portrait_url && (
-            <img
+            <AssetImage
               src={assetUrl(char.portrait_url)}
               alt=""
               className="w-8 h-8 rounded object-cover flex-shrink-0"
-              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+              fallback={null}
             />
           )}
           <div>

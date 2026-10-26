@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import {
-  Home, Swords, Layers, Users, BarChart2,
+  Home, Swords, Layers, Users,
   Radio, Settings, Gift, Info, Zap, Sword, BookOpen, BookMarked,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -13,7 +13,6 @@ const NAV = [
   { to: '/optimizer',  key: 'nav.optimizer',   icon: Swords },
   { to: '/fragments',  key: 'nav.fragments',   icon: Layers },
   { to: '/combatants', key: 'nav.combatants',  icon: Users },
-  { to: '/scoring',    key: 'nav.scoring',     icon: BarChart2 },
   { to: '/deck-builder', key: 'nav.deckBuilder', icon: Swords, beta: true },
   { to: '/encyclopedia', key: 'nav.encyclopedia', icon: BookOpen },
   { to: '/guides',     key: 'nav.guides',      icon: BookMarked },

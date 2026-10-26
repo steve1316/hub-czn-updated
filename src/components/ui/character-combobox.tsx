@@ -2,6 +2,7 @@ import { useState, useRef, useEffect, useId } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ChevronDown, User } from 'lucide-react'
 import { assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import type { Combatant } from '@/lib/types'
 
 interface CharacterComboboxProps {
@@ -26,7 +27,7 @@ function CharAvatar({ combatant }: { combatant: Combatant }) {
     )
   }
   return (
-    <img
+    <AssetImage
       src={assetUrl(combatant.portrait_url)}
       alt=""
       className="w-6 h-6 rounded-full object-cover shrink-0"

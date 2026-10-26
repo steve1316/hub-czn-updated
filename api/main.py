@@ -18,11 +18,32 @@ from api.routes import status, data, ws, setup, capture, rescue, scoring, combat
 # check off and is only used by the test suite.
 API_TOKEN = os.environ.get("HUB_CZN_API_TOKEN", secrets.token_urlsafe(32))
 
+# Cache header for /assets files.
+ASSET_CACHE_CONTROL = "public, max-age=86400"
+
 
 def _assets_dir() -> Path:
     if hasattr(sys, '_MEIPASS'):
         return Path(sys._MEIPASS) / 'assets'
     return Path(__file__).parent / 'assets'
+
+
+class CachedStaticFiles(StaticFiles):
+    """StaticFiles that lets the browser cache art for a day, so revisits do not refetch."""
+
+    async def get_response(self, path, scope):
+        """
+        Args:
+            path: Path of the requested file under the mount.
+            scope: ASGI scope of the request.
+
+        Returns:
+            The static response, with a Cache-Control header added when it succeeded.
+        """
+        response = await super().get_response(path, scope)
+        if response.status_code == 200:
+            response.headers["Cache-Control"] = ASSET_CACHE_CONTROL
+        return response
 
 
 def create_app(token: str | None = None) -> FastAPI:
@@ -47,7 +68,7 @@ def create_app(token: str | None = None) -> FastAPI:
     )
     assets_dir = _assets_dir()
     if assets_dir.exists():
-        app.mount(ASSETS_PREFIX, StaticFiles(directory=str(assets_dir)), name="assets")
+        app.mount(ASSETS_PREFIX, CachedStaticFiles(directory=str(assets_dir)), name="assets")
 
     app.include_router(status.router, prefix="/api", tags=["status"])
     app.include_router(data.router, prefix="/api", tags=["data"])

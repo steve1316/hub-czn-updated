@@ -3,10 +3,12 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { RefreshCw, User, Loader2, ChevronDown, ChevronRight, Download, Cloud } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
 import type { Combatant } from '@/lib/types'
 import { GearSlotCard, FinalStatsPanel } from './CombatantDetail'
+import { GlobalScoring, CharacterScoring } from './ScoringSection'
 import { Button } from '@/components/ui/button'
 
 // ─── Attribute badge ───────────────────────────────────────────────────────
@@ -23,7 +25,7 @@ function AttrBadge({ attr }: { attr: string }) {
   const icon = ATTR_ICON[attr]
   if (icon) {
     return (
-      <img
+      <AssetImage
         src={assetUrl(icon)}
         alt={attr}
         title={attr}
@@ -41,18 +43,17 @@ function AttrBadge({ attr }: { attr: string }) {
 // ─── Collapse art — absolute, fills container height, natural width ────────
 
 function CollapseBackground({ resId }: { resId: number }) {
-  const [variant, setVariant] = useState<'02' | '01' | null>('02')
-  if (!variant) return null
+  const cls = 'absolute left-0 top-0 pointer-events-none select-none'
+  const style = { height: '100%', width: 'auto' }
+  const url = (variant: string) => assetUrl(`/assets/game/collapse/collapse_${resId}_${variant}.png`)
   return (
-    <img
-      src={assetUrl(`/assets/game/collapse/collapse_${resId}_${variant}.png`)}
+    <AssetImage
+      src={url('02')}
       alt=""
-      className="absolute left-0 top-0 pointer-events-none select-none"
-      style={{ height: '100%', width: 'auto' }}
-      onError={() => {
-        if (variant === '02') setVariant('01')
-        else setVariant(null)
-      }}
+      className={cls}
+      style={style}
+      maxRetries={0}
+      fallback={<AssetImage src={url('01')} alt="" className={cls} style={style} fallback={null} />}
     />
   )
 }
@@ -71,7 +72,7 @@ function PartnerBadge({
   return (
     <div className="flex items-center gap-2 bg-[#141414]/90 border border-[#2a2a2a] rounded-lg px-2 py-1.5">
       {partnerResId && imgOk ? (
-        <img
+        <AssetImage
           src={assetUrl(`/assets/game/tp_skill/battle_icon_tp_skill_${partnerResId}.png`)}
           alt={partnerName ?? ''}
           className="w-10 h-[26px] rounded object-cover shrink-0"
@@ -148,6 +149,8 @@ function ExpandedContent({
                 )
               })}
             </div>
+
+            <CharacterScoring charId={charId} resId={resId} />
           </>
         ) : null}
       </div>
@@ -191,11 +194,10 @@ function CombatantRow({
 
         {/* Rectangular battle icon */}
         <div className="w-14 h-9 shrink-0 rounded-lg overflow-hidden bg-[#121212] border border-[#252525]">
-          <img
+          <AssetImage
             src={tpUrl}
             alt={combatant.name}
             className="w-full h-full object-cover"
-            onError={(e) => { (e.currentTarget as HTMLImageElement).style.opacity = '0' }}
           />
         </div>
 
@@ -307,12 +309,16 @@ export function CombatantsPage() {
     )
   }
 
+  // Global weights also score Memory Fragments, so they stay editable before any combatant is captured.
   if (combatants.length === 0) {
     return (
-      <div role="status" className="h-full flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
-        <User size={40} className="opacity-30" />
-        <p className="text-sm">{t('combatants.empty')}</p>
-        <p className="text-xs">{t('combatants.emptyHint')}</p>
+      <div className="h-full flex flex-col gap-4 p-4">
+        <GlobalScoring />
+        <div role="status" className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
+          <User size={40} className="opacity-30" />
+          <p className="text-sm">{t('combatants.empty')}</p>
+          <p className="text-xs">{t('combatants.emptyHint')}</p>
+        </div>
       </div>
     )
   }
@@ -344,6 +350,9 @@ export function CombatantsPage() {
         </Button>
       </div>
       <div className="flex-1 overflow-y-auto px-4 pb-4 space-y-1.5">
+        <div className="pb-2">
+          <GlobalScoring />
+        </div>
         {combatants.map((c, i) => (
           <CombatantRow
             key={c.char_id}
