@@ -42,7 +42,7 @@ export function DeckBlock({ cards, ratings, cardsById }: DeckBlockProps) {
           const level = card.epiphany?.level
           return (
             <div key={`${card.cardId}-${index}`} className="relative h-[114px] w-[76px] shrink-0">
-              <CardImage card={cardEntry(card.cardId, card.name, cardsById)} className="h-full w-full rounded" />
+              <CardImage card={cardEntry(card.cardId, card.name, cardsById, card.persona)} className="h-full w-full rounded" />
               <CostGem cost={card.cost} small className="absolute top-1 left-1" />
               {card.extra?.god && <span className="absolute top-0.5 right-1 text-sm text-[#fcd34d] [text-shadow:0_1px_2px_#000]">✦</span>}
               {level !== undefined && (

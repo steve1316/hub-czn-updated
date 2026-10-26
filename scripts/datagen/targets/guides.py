@@ -215,6 +215,7 @@ class _PictureLabels:
 
     The sheet reuses the same picture on many tabs, so one label keyed by the picture's hash identifies every use of it.
     A label is `{"charResId": 1003}`, `{"cardId": "c_1003_uni1"}`, `{"setId": 11}` (a memory fragment piece) or `{"skip": true}`.
+    A card label can also carry a `name` and a `persona` art key, for a Persona card whose engravings give it its own name and art.
     """
 
     def __init__(self, labels: dict[str, dict]):
@@ -238,11 +239,11 @@ class _PictureLabels:
             hash_value: The picture's `images.dhash`.
 
         Returns:
-            The label, or an empty dict when it has none.
+            The nearest label within `PICTURE_LABEL_DISTANCE` bits, or an empty dict when it has none.
         """
-        for key, label in self._labels:
-            if (key ^ hash_value).bit_count() <= PICTURE_LABEL_DISTANCE:
-                return label
+        nearest = min(self._labels, key=lambda entry: (entry[0] ^ hash_value).bit_count(), default=None)
+        if nearest is not None and (nearest[0] ^ hash_value).bit_count() <= PICTURE_LABEL_DISTANCE:
+            return nearest[1]
         return {}
 
     def unidentify(self, hash_value: int, data: bytes, kind: str, ref: str) -> None:
@@ -1034,7 +1035,7 @@ class _GuideBuilder:
                         card_id = label.get("cardId") or self._card(download)
                         if card_id is None:
                             self._miss(download, kind, ref, bool(ratings))
-                        row_cards.append({"cardId": card_id, "col": cell.col, "picture": (download, ref)})
+                        row_cards.append({"cardId": card_id, "col": cell.col, "picture": (download, ref), **{key: label[key] for key in ("name", "persona") if key in label}})
                     elif _is_icon(download.picture):
                         # An icon-sized picture that is not square, such as a piece the sheet stretched a little, may still be a piece.
                         if (set_id := self._piece(download)) is not None:
@@ -1119,7 +1120,7 @@ class _GuideBuilder:
             When they cannot be read, equally rated pictures become one card with a `count`. Otherwise the run is left as it is.
         """
         settled: list[dict] = []
-        for card_id, group in groupby(row_cards, key=lambda card: card["cardId"]):
+        for (card_id, _), group in groupby(row_cards, key=lambda card: (card["cardId"], card.get("persona"))):
             run = list(group)
             if len(run) == 1 or len(run) == len(self.variants_of(card_id)) - 1:
                 settled.extend(run)
@@ -1214,8 +1215,10 @@ class _GuideBuilder:
         for card in cards:
             card_id = card["cardId"]
             item = {"cardId": card_id}
-            if card_id in self.card_names:
-                item["name"] = self.card_names[card_id]
+            if card.get("name") or card_id in self.card_names:
+                item["name"] = card.get("name") or self.card_names[card_id]
+            if "persona" in card:
+                item["persona"] = card["persona"]
             if card_id in self.ctx.client.cards:
                 item["cost"] = epiphany.printed_cost(self.ctx, card_id)
             elif shared := self.shared_cards.get(card_id):
@@ -1637,7 +1640,7 @@ def _as_deck(block: dict) -> dict | None:
     """
     if any(item.get("rating") or item["note"]["en"] or "epiphanies" in item for item in block["items"]):
         return None
-    return {"type": "deck", "cards": [{key: item[key] for key in ("cardId", "name", "cost") if key in item} for item in block["items"]]}
+    return {"type": "deck", "cards": [{key: item[key] for key in ("cardId", "name", "cost", "persona") if key in item} for item in block["items"]]}
 
 
 def _find_epiphany(card_id: str, download: _Download, ref: str, decks: _DeckPictures, overrides: dict[str, dict], read, variants_of) -> tuple[Variant, Extra | None] | None:

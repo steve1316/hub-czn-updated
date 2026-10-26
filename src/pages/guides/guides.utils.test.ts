@@ -1,6 +1,6 @@
 import { describe, it, expect } from 'vitest'
 import type { Guide } from './guides.types'
-import { epiphanyRatings, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
+import { cardEntry, epiphanyRatings, headsNext, levelNumeral, localized, proseParts, ratingScore, ratingTone, resolveLang } from './guides.utils'
 
 describe('resolveLang', () => {
   it('returns en for en and anything else', () => {
@@ -86,5 +86,14 @@ describe('epiphanyRatings', () => {
     }
     expect(epiphanyRatings(guide).get('c_30134_uni2:5')).toEqual(flow.epiphanies[0])
     expect(epiphanyRatings(guide).has('c_30134_uni2:4')).toBe(false)
+  })
+})
+
+describe('cardEntry', () => {
+  it('gives a Persona the picture of its engraving combination', () => {
+    const card = cardEntry('eidolon_card', 'Persona of Obsidian', {}, 'all_umbra') as unknown as Record<string, unknown>
+    expect(card.name).toBe('Persona of Obsidian')
+    expect(card.__deckBuilderPersonaImagePath).toBe('all_umbra.webp')
+    expect((cardEntry('eidolon_card', 'Persona', {}) as unknown as Record<string, unknown>).__deckBuilderPersonaImagePath).toBeUndefined()
   })
 })

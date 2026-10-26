@@ -1036,3 +1036,45 @@ def test_a_stretched_picture_that_is_no_piece_is_still_dropped_as_an_icon():
     builder = _piece_builder(found={}, size=(123, 120))
     _loadout(builder)
     assert len(builder.dropped_icons) == 3 and not builder.labels.unidentified
+
+
+def test_picture_label_prefers_the_nearest_of_two_close_labels():
+    picture = _pattern(3)
+    base = images.dhash(picture)
+    # Two labels within the match distance of the picture, the second one nearer.
+    far = base ^ 0b111111111
+    near = base ^ 0b11
+    labels = guides._PictureLabels({f"{far:064x}": {"cardId": "far"}, f"{near:064x}": {"cardId": "near"}})
+    assert labels.find(base) == {"cardId": "near"}
+
+
+def test_persona_pictures_one_slot_combination_apart_keep_their_own_labels():
+    obsidian = {"cardId": "eidolon_card", "name": "Persona of Obsidian", "persona": "all_umbra"}
+    luster = {"cardId": "eidolon_card", "name": "Persona of Luster", "persona": "all_lux"}
+    keys = {"1873a0f86ac4d8e2d462f2dad358d932e934e46c60fce1e6c1d8da9ad8fa187b": obsidian, "087536c9346da8e6c8f2a4ead4c2dad2d9326c6ccc66d6c2d2d2d6c6d24e9067": luster}
+    labels = guides._PictureLabels(keys)
+    for key, label in keys.items():
+        assert labels.find(int(key, 16)) == label
+        # A re-encoded copy a few bits off still finds its own label.
+        assert labels.find(int(key, 16) ^ 0b1011) == label
+    first, second = (int(key, 16) for key in keys)
+    assert (first ^ second).bit_count() > guides.PICTURE_LABEL_DISTANCE
+
+
+def test_persona_card_keeps_its_variant_name_and_art():
+    builder = _builder()
+    builder.ctx = SimpleNamespace(client=SimpleNamespace(cards={}))
+    obsidian = {"cardId": "eidolon_card", "col": 1, "picture": None, "epiphany": 1, "name": "Persona of Obsidian", "persona": "all_umbra"}
+    plain = {"cardId": "eidolon_card", "col": 2, "picture": None, "epiphany": 1, "name": "Persona"}
+    block = builder._card_list([obsidian, plain], {})
+    assert block["items"][0]["name"] == "Persona of Obsidian" and block["items"][0]["persona"] == "all_umbra"
+    assert block["items"][1]["name"] == "Persona" and "persona" not in block["items"][1]
+    deck = guides._as_deck({"type": "card-list", "items": [{**item, "note": {"en": ""}} for item in block["items"]]})
+    assert [card.get("persona") for card in deck["cards"]] == ["all_umbra", None]
+
+
+def test_rated_personas_with_different_art_are_not_merged_into_one_card():
+    luster = {"cardId": "eidolon_card", "col": 1, "picture": None, "epiphany": 1, "name": "Persona of Luster", "persona": "all_lux"}
+    obsidian = {"cardId": "eidolon_card", "col": 2, "picture": None, "epiphany": 1, "name": "Persona of Obsidian", "persona": "all_umbra"}
+    settled = _builder()._settle_repeats([luster, obsidian], {1: "4/5", 2: "4/5"})
+    assert [card["persona"] for card in settled] == ["all_lux", "all_umbra"] and all("count" not in card for card in settled)
