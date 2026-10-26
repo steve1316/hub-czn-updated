@@ -8,6 +8,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from api.frozen_path import add_vribbels_to_path
+from api.optimizer.expected_damage import default_damage_reduction
 add_vribbels_to_path()
 
 try:
@@ -20,6 +21,9 @@ _DEF_SCALE_IDS: set[int] = {
     res_id for res_id, c in _CHARACTERS.items()
     if c and c.get("node_50") == "DEF%"
 }
+
+# Below this CRate a character is flagged as critically low, in the per-battle analytics and the overview insights alike.
+LOW_CRATE_PCT = 30
 
 router = APIRouter()
 
@@ -120,7 +124,23 @@ class BattleOverview(BaseModel):
 # Analytics logic
 # ---------------------------------------------------------------------------
 
-def _analyze_char(char: dict, enemy_def: float) -> CharAnalysis:
+def _def_factor(battle: dict) -> float:
+    """
+    The share of damage that gets through the enemy's defence.
+
+    Args:
+        battle: A saved battle record.
+
+    Returns:
+        1 minus the damage decrease the game reported, or minus the fitted DEF curve when the capture has none.
+    """
+    decrease = float(battle.get("enemy_dmg_decrease") or 0)
+    if decrease <= 0:
+        decrease = default_damage_reduction(float(battle.get("enemy_def", 0)))
+    return 1 - decrease
+
+
+def _analyze_char(char: dict, def_factor: float) -> CharAnalysis:
     res_id_int = int(char.get("res_id", 0))
     is_def_scale = res_id_int in _DEF_SCALE_IDS
     scale_stat = "def" if is_def_scale else "atk"
@@ -130,8 +150,6 @@ def _analyze_char(char: dict, enemy_def: float) -> CharAnalysis:
     primary = float(char.get("def", 0)) if is_def_scale else atk
     crate = min(float(char.get("cri", 0)), 100.0)
     cdmg  = float(char.get("cri_dmg", 0))
-
-    def_factor = 300 / (300 + enemy_def) if enemy_def >= 0 else 1.0
 
     def crit_factor_of(r: float, d: float) -> float:
         return (r / 100) * (d / 100) + (1 - r / 100)
@@ -156,7 +174,7 @@ def _analyze_char(char: dict, enemy_def: float) -> CharAnalysis:
 
     MARGIN = 1.20  # need 20% lead to call a clear winner
 
-    if crate < 20:
+    if crate < LOW_CRATE_PCT:
         priority = "crate_low"
         tip = (
             f"CRate {crate:.0f}% extremamente baixa — quase sem criticos. "
@@ -277,7 +295,7 @@ def _compute_overview_summary(records: list[dict]) -> OverviewSummary:
 def _compute_char_trends(records: list[dict]) -> list[CharTrend]:
     char_appearances: dict[str, list[dict]] = defaultdict(list)
     char_dpt_values: dict[str, list[float]] = defaultdict(list)
-    latest_enemy_def = float(records[-1].get("enemy_def", 0)) if records else 0.0
+    latest_def_factor = _def_factor(records[-1]) if records else 1.0
 
     for rec in records:
         dpt_data = rec.get("char_dpt", {})
@@ -312,7 +330,7 @@ def _compute_char_trends(records: list[dict]) -> list[CharTrend]:
         else:
             dpt_sparkline = []
 
-        analysis = _analyze_char(latest, latest_enemy_def)
+        analysis = _analyze_char(latest, latest_def_factor)
         crate = float(latest.get("cri", 0))
         cdmg = float(latest.get("cri_dmg", 0))
         breakeven_delta = round(cdmg - (2 * crate + 100), 1)
@@ -337,9 +355,9 @@ def _compute_char_trends(records: list[dict]) -> list[CharTrend]:
 def _compute_insights(records: list[dict], chars: list[CharTrend]) -> list[InsightCard]:
     insights: list[InsightCard] = []
 
-    # Rule 1: CRate extremamente baixa (< 30%)
+    # Rule 1: CRate below the low cutoff
     for char in chars:
-        if char.latest_crate < 30:
+        if char.latest_crate < LOW_CRATE_PCT:
             insights.append(InsightCard(
                 level="urgent",
                 title="CRate Crítica",
@@ -354,7 +372,7 @@ def _compute_insights(records: list[dict], chars: list[CharTrend]) -> list[Insig
 
     # Rule 2: CDmg > 2×CRate+100 with gap > 30pp → CRate priority
     for char in chars:
-        if char.latest_crate >= 30 and char.breakeven_delta > 30:
+        if char.latest_crate >= LOW_CRATE_PCT and char.breakeven_delta > 30:
             insights.append(InsightCard(
                 level="urgent",
                 title="CDmg acima do breakeven",
@@ -456,10 +474,10 @@ def get_battle_analytics() -> BattleAnalytics:
     data = _latest_battle_data(snap_dir)
 
     enemy_def    = float(data.get("enemy_def", 0))
-    def_factor   = round(300 / (300 + enemy_def), 4) if enemy_def >= 0 else 1.0
+    def_factor   = round(_def_factor(data), 4)
     player_chars = data.get("player_chars", [])
 
-    chars = [_analyze_char(c, enemy_def) for c in player_chars]
+    chars = [_analyze_char(c, def_factor) for c in player_chars]
     chars.sort(key=lambda x: x.dmg_per_100coeff, reverse=True)
 
     return BattleAnalytics(
