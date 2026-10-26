@@ -558,6 +558,8 @@
         {
           "type": "potentials",
           "image": "rin.webp",
+          "treeImage": "rin-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1009,6 +1011,10 @@
                   "name": "Rin"
                 },
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 1040,
                   "name": "Beryl"
                 }
@@ -1043,6 +1049,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1040,
@@ -1101,6 +1111,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1040,

@@ -125,6 +125,11 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "cost": 0,
               "epiphany": {
                 "level": 4,
@@ -134,10 +139,28 @@
                 }
               },
               "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
+                "id": "div_0015",
+                "god": "Caligo",
                 "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -216,6 +239,11 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "cost": 0,
               "epiphany": {
                 "level": 4,
@@ -225,10 +253,28 @@
                 }
               },
               "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
+                "id": "div_0015",
+                "god": "Caligo",
                 "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -368,6 +414,11 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "cost": 0,
               "epiphany": {
                 "level": 4,
@@ -377,10 +428,27 @@
                 }
               },
               "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
+                "id": "com_0117",
                 "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -610,21 +678,7 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "cost": 0,
-              "epiphany": {
-                "level": 4,
-                "name": "Homing Laser IV",
-                "text": {
-                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
-                }
-              },
-              "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
-                "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
-                }
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30075_uni1",
@@ -831,6 +885,11 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
+              "cost": 0
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
               "cost": 0,
               "epiphany": {
                 "level": 4,
@@ -840,10 +899,27 @@
                 }
               },
               "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
+                "id": "com_0117",
                 "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
+                  "en": "Gain 1 AP."
+                }
+              }
+            },
+            {
+              "cardId": "c_30075_srt4",
+              "name": "Homing Laser",
+              "cost": 0,
+              "epiphany": {
+                "level": 4,
+                "name": "Homing Laser IV",
+                "text": {
+                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
                 }
               }
             },
@@ -930,21 +1006,7 @@
             {
               "cardId": "c_30075_srt4",
               "name": "Homing Laser",
-              "cost": 0,
-              "epiphany": {
-                "level": 4,
-                "name": "Homing Laser IV",
-                "text": {
-                  "en": "120% Damage. 1 Afterglow. On Ravage or at the start of the turn, move to hand."
-                }
-              },
-              "extra": {
-                "id": "div_0102",
-                "god": "Sekred",
-                "text": {
-                  "en": "At the start of each turn, when this card is the first card activated, Draw 2."
-                }
-              }
+              "cost": 0
             },
             {
               "cardId": "c_30075_srt4",
@@ -1159,7 +1221,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1240,6 +1308,8 @@
         {
           "type": "potentials",
           "image": null,
+          "treeImage": "sereniel-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -1874,6 +1944,47 @@
           "body": {
             "en": "Season 3 | Song Rippling through the Stars"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",

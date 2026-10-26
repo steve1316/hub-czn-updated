@@ -798,6 +798,8 @@
         {
           "type": "potentials",
           "image": "lucas.webp",
+          "treeImage": "lucas-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1344,6 +1346,10 @@
                 {
                   "charResId": 1049,
                   "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1040,

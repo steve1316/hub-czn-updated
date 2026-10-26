@@ -967,7 +967,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Agony Flex"
+              "label": "Agony Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -997,7 +1003,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Agony Flex"
+              "label": "Agony Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1018,6 +1030,8 @@
         {
           "type": "potentials",
           "image": "nine.webp",
+          "treeImage": "nine-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1808,6 +1822,20 @@
           "body": {
             "en": "Season 3 | Song Rippling through the Stars"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            }
+          ]
         },
         {
           "type": "prose",

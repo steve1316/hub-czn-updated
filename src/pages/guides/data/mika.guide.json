@@ -241,21 +241,7 @@
             {
               "cardId": "c_1039_uni2",
               "name": "Tactical Analysis",
-              "cost": 0,
-              "epiphany": {
-                "level": 0,
-                "name": "Tactical Analysis",
-                "text": {
-                  "en": "1 Wave. +50% Heal Amount for 1 turn."
-                }
-              },
-              "extra": {
-                "id": "div_0099",
-                "god": "Nihilum",
-                "text": {
-                  "en": "Gain 1 AP."
-                }
-              }
+              "cost": 0
             },
             {
               "cardId": "c_1039_uni4",
@@ -829,7 +815,13 @@
               "icon": "/assets/pieces/icon_piece_set_008.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -883,6 +875,8 @@
         {
           "type": "potentials",
           "image": "mika.webp",
+          "treeImage": "mika-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1408,6 +1402,24 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
             {
               "cardId": "n_0027",
               "name": "Dream World",

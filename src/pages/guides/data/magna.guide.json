@@ -669,7 +669,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 8,
+              "name": "Healer's Journey",
+              "pieces": 2,
+              "bonus": "+12% Max HP",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_008.png"
             }
           ]
         },
@@ -750,6 +756,8 @@
         {
           "type": "potentials",
           "image": "magna.webp",
+          "treeImage": "magna-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1261,6 +1269,10 @@
                   "name": "Veronica"
                 },
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 1049,
                   "name": "Cassius"
                 },
@@ -1286,6 +1298,10 @@
                 {
                   "charResId": 1064,
                   "name": "Kayron"
+                },
+                {
+                  "charResId": 1057,
+                  "name": "Yuki"
                 },
                 {
                   "charResId": 1008,

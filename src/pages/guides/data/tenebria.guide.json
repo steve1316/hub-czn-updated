@@ -1482,6 +1482,8 @@
         {
           "type": "potentials",
           "image": "tenebria.webp",
+          "treeImage": "tenebria-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -2265,6 +2267,29 @@
           "text": {
             "en": "Skill Persona"
           }
+        },
+        {
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            }
+          ]
         },
         {
           "type": "prose",

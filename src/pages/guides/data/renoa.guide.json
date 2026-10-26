@@ -932,6 +932,8 @@
         {
           "type": "potentials",
           "image": "renoa.webp",
+          "treeImage": "renoa-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1022,6 +1024,15 @@
               "rating": "5/5"
             },
             {
+              "cardId": "m_0015",
+              "name": "Hunger of the Void",
+              "cost": 0,
+              "note": {
+                "en": "2 Moral"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "c_1041_uni2",
               "name": "Ballad of Pitch Black",
               "cost": 1,
@@ -1044,7 +1055,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: 2 Moral\nDominion: Very expensive memory wise and takes a long time to scale"
+            "en": "Dominion: Very expensive memory wise and takes a long time to scale"
           }
         },
         {
@@ -1405,6 +1416,10 @@
                   "name": "Renoa"
                 },
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 1056,
                   "name": "Rei"
                 }
@@ -1415,6 +1430,10 @@
                 {
                   "charResId": 1041,
                   "name": "Renoa"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1049,
@@ -1431,6 +1450,10 @@
                 {
                   "charResId": 1061,
                   "name": "Diana"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
@@ -1443,6 +1466,10 @@
                 {
                   "charResId": 1005,
                   "name": "Selena"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             }
@@ -1456,6 +1483,10 @@
                 "en": "Draw Engines"
               },
               "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
                 {
                   "charResId": 1049,
                   "name": "Cassius"

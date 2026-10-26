@@ -444,6 +444,11 @@
               "text": {
                 "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
               }
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux"
             }
           ]
         },
@@ -508,7 +513,20 @@
             {
               "cardId": "c_1003_uni3",
               "name": "Adagio",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Adagio I",
+                "text": {
+                  "en": "Draw 2. Discard 2. Move the card Discarded through this effect to the top of Draw Pile."
+                }
+              },
+              "extra": {
+                "id": "com_0117",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_1003_uni3",
@@ -690,6 +708,11 @@
               "text": {
                 "en": "Check 3 random cards in Draw Pile. Select and Draw one. Discard the rest."
               }
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux"
             }
           ]
         },
@@ -1784,7 +1807,13 @@
               "icon": "/assets/pieces/icon_piece_set_008.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -1820,7 +1849,13 @@
               "icon": "/assets/pieces/icon_piece_set_007.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -1841,6 +1876,8 @@
         {
           "type": "potentials",
           "image": "nia.webp",
+          "treeImage": "nia-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -2618,6 +2655,24 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
             {
               "cardId": "n_0027",
               "name": "Dream World",

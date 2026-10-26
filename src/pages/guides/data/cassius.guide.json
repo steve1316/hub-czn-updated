@@ -1477,7 +1477,13 @@
               "icon": "/assets/pieces/icon_piece_set_008.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -1507,7 +1513,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Agony Flex"
+              "label": "Agony Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1534,6 +1546,8 @@
         {
           "type": "potentials",
           "image": "cassius.webp",
+          "treeImage": "cassius-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -2163,6 +2177,24 @@
         {
           "type": "card-list",
           "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
             {
               "cardId": "n_0027",
               "name": "Dream World",

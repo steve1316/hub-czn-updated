@@ -1005,7 +1005,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1053,6 +1059,8 @@
         {
           "type": "potentials",
           "image": "arabella.webp",
+          "treeImage": "arabella-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",

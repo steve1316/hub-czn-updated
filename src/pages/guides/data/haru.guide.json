@@ -822,7 +822,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Agony Flex"
+              "label": "Agony Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -903,6 +909,8 @@
         {
           "type": "potentials",
           "image": "haru.webp",
+          "treeImage": "haru-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -1292,6 +1300,10 @@
                   "name": "Haru"
                 },
                 {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
+                {
                   "charResId": 1052,
                   "name": "Narja"
                 }
@@ -1387,6 +1399,10 @@
                 "en": "Draw Engines"
               },
               "members": [
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
+                },
                 {
                   "charResId": 1033,
                   "name": "Veronica"
@@ -1485,20 +1501,55 @@
                 "en": "1 AP Draw 2 is good and Hilde loves Inquiry for the Draw"
               },
               "rating": "5/5"
+            },
+            {
+              "cardId": "card_ds04_des_30031",
+              "name": "Sever Ties",
+              "cost": 1,
+              "note": {
+                "en": "Haru can somewhat Benefit from this, but like meh"
+              },
+              "rating": "3/5"
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Sever: Haru can somewhat Benefit from this, but like meh"
+            "en": "Season 3 | Song Rippling through the Stars"
           }
         },
         {
-          "type": "prose",
-          "body": {
-            "en": "Season 3 | Song Rippling through the Stars"
-          }
+          "type": "card-list",
+          "items": [
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "3/5"
+            }
+          ]
         },
         {
           "type": "prose",

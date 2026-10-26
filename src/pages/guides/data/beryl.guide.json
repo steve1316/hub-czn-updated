@@ -687,6 +687,8 @@
         {
           "type": "potentials",
           "image": "beryl.webp",
+          "treeImage": "beryl-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1188,6 +1190,10 @@
                 {
                   "charResId": 1033,
                   "name": "Veronica"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1043,

@@ -30,6 +30,22 @@
               "text": {
                 "en": "[Exhaust] Heal 50%. 1 AP."
               }
+            },
+            {
+              "cardId": "c_30084_cre2",
+              "name": "Archetype: △",
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] 50% Shield. Increase Damage Amount of the first Hit of next Attack Card by 30%. (max 300%)."
+              }
+            },
+            {
+              "cardId": "c_30084_cre3",
+              "name": "Archetype: □",
+              "cost": 0,
+              "text": {
+                "en": "[Exhaust] Heal 50%. Draw 1 Archetype card(s)."
+              }
             }
           ]
         },
@@ -392,6 +408,11 @@
               "text": {
                 "en": "[Unique] [Form Upgrade 3] 1 AP. Draw 1. Increase Damage Amount of the first Hit of next Attack Card by 40%."
               }
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra"
             }
           ]
         },
@@ -1134,17 +1155,59 @@
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quantum Seed I",
+                "text": {
+                  "en": "Heal 150%. Create 3 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quantum Seed I",
+                "text": {
+                  "en": "Heal 150%. Create 3 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Quantum Seed I",
+                "text": {
+                  "en": "Heal 150%. Create 3 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni1",
@@ -1350,17 +1413,59 @@
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Quantum Seed",
+                "text": {
+                  "en": "Heal 100%. Create 2 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Quantum Seed",
+                "text": {
+                  "en": "Heal 100%. Create 2 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_srt4",
               "name": "Quantum Seed",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 0,
+                "name": "Quantum Seed",
+                "text": {
+                  "en": "Heal 100%. Create 2 Archetype card(s) in Draw Pile. Draw 1 of them."
+                }
+              },
+              "extra": {
+                "id": "div_0015",
+                "god": "Caligo",
+                "text": {
+                  "en": "Treated as a Neutral Card. Draw 1 Neutral Card(s)."
+                }
+              }
             },
             {
               "cardId": "c_30084_uni1",
@@ -1563,7 +1668,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Agony Flex"
+              "label": "Agony Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1590,6 +1701,8 @@
         {
           "type": "potentials",
           "image": "tiphera.webp",
+          "treeImage": "tiphera-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -2271,6 +2384,25 @@
           "type": "card-list",
           "items": [
             {
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5",
+              "count": 2
+            },
+            {
               "cardId": "n_0027",
               "name": "Dream World",
               "cost": 3,
@@ -2382,13 +2514,21 @@
               "note": {
                 "en": ""
               }
+            },
+            {
+              "cardId": "n_0017",
+              "name": "Confiscation",
+              "cost": 0,
+              "note": {
+                "en": "Repeatable AP"
+              }
             }
           ]
         },
         {
           "type": "prose",
           "body": {
-            "en": "Portrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng\nConfiscation: Repeatable AP"
+            "en": "Portrait: 1 AP Draw 3\nSelf Generating: Cost Reudction rng"
           }
         },
         {

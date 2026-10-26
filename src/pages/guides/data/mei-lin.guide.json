@@ -579,7 +579,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Scrab Flex"
+              "label": "Scrab Flex",
+              "setId": 10,
+              "name": "Seth's Scarab",
+              "pieces": 2,
+              "bonus": "+20% Basic Card DMG",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_010.png"
             }
           ]
         },
@@ -660,6 +666,8 @@
         {
           "type": "potentials",
           "image": "mei-lin.webp",
+          "treeImage": "mei-lin-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -751,6 +759,15 @@
               "rating": "5/5"
             },
             {
+              "cardId": "m_0015",
+              "name": "Hunger of the Void",
+              "cost": 0,
+              "note": {
+                "en": "2 Moral"
+              },
+              "rating": "5/5"
+            },
+            {
               "cardId": "m_0009",
               "name": "Dominion",
               "cost": 2,
@@ -773,7 +790,7 @@
         {
           "type": "prose",
           "body": {
-            "en": "Hunger: 2 Moral\nResidual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
+            "en": "Residual Herb is Amazing on Mei Lin, giving 3 more hits to Spire"
           }
         },
         {
@@ -1137,6 +1154,10 @@
                 {
                   "charResId": 1049,
                   "name": "Cassius"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1040,

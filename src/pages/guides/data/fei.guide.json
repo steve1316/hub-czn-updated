@@ -206,17 +206,59 @@
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni1",
               "name": "Soliloquy",
-              "cost": 0
+              "cost": 0,
+              "epiphany": {
+                "level": 1,
+                "name": "Soliloquy I",
+                "text": {
+                  "en": "Draw 3. Of those Drawn cards, Discard all 1-Cost or higher cards."
+                }
+              },
+              "extra": {
+                "id": "div_0007",
+                "god": "Caligo",
+                "text": {
+                  "en": "Gain 1 AP."
+                }
+              }
             },
             {
               "cardId": "c_30048_uni2",
@@ -923,7 +965,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -950,6 +998,8 @@
         {
           "type": "potentials",
           "image": "fei.webp",
+          "treeImage": "fei-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -1650,9 +1700,36 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30048_cre2",
-              "name": "Inferno Rhapsody",
-              "cost": 0,
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
               "note": {
                 "en": ""
               },

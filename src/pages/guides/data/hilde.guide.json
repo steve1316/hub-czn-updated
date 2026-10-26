@@ -77,6 +77,22 @@
               "text": {
                 "en": "[Unactivatable] [Exhaust] 120% Extra Attack to the enemy with the lowest HP. Draw 1. Attunement: Proc this card."
               }
+            },
+            {
+              "cardId": "c_30113_cre2",
+              "name": "Homing Arrow (Fracture)",
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Exhaust] 50% Extra Attack to all enemies. 1 Fracture. Draw 1. Attunement: Proc this card."
+              }
+            },
+            {
+              "cardId": "c_30113_cre3",
+              "name": "Homing Arrow (Grand)",
+              "cost": 0,
+              "text": {
+                "en": "[Unactivatable] [Exhaust] 500% Extra Attack to the enemy with the highest HP. Draw 1. Attunement: Proc this card."
+              }
             }
           ]
         },
@@ -1374,7 +1390,13 @@
               "icon": "/assets/pieces/icon_piece_set_011.png"
             },
             {
-              "label": "Flex"
+              "label": "Flex",
+              "setId": 19,
+              "name": "Cursed Corpse",
+              "pieces": 2,
+              "bonus": "+10% DMG to targets inflicted with Agony",
+              "flex": true,
+              "icon": "/assets/pieces/icon_piece_set_019.png"
             }
           ]
         },
@@ -1422,6 +1444,8 @@
         {
           "type": "potentials",
           "image": "hilde.webp",
+          "treeImage": "hilde-tree.webp",
+          "coloured": false,
           "legend": [
             {
               "colour": "purple",
@@ -2216,27 +2240,36 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "c_30113_srt4",
-              "name": "Quiver Reload",
-              "cost": 1,
-              "note": {
-                "en": ""
-              },
-              "rating": "4/5"
-            },
-            {
-              "cardId": "c_30113_srt4",
-              "name": "Quiver Reload",
-              "cost": 1,
+              "cardId": "eidolon_card",
+              "name": "Persona of Luster",
+              "persona": "all_lux",
               "note": {
                 "en": ""
               },
               "rating": "5/5"
             },
             {
-              "cardId": "c_30113_srt4",
-              "name": "Quiver Reload",
-              "cost": 1,
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "4/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
+              "note": {
+                "en": ""
+              },
+              "rating": "5/5"
+            },
+            {
+              "cardId": "eidolon_card",
+              "name": "Persona of Obsidian",
+              "persona": "all_umbra",
               "note": {
                 "en": ""
               },

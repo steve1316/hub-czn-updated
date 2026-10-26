@@ -773,6 +773,8 @@
         {
           "type": "potentials",
           "image": "chizuru.webp",
+          "treeImage": "chizuru-tree.webp",
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
@@ -1198,6 +1200,10 @@
                 {
                   "charResId": 1004,
                   "name": "Luke"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 }
               ]
             },
@@ -1238,6 +1244,10 @@
                 {
                   "charResId": 1004,
                   "name": "Luke"
+                },
+                {
+                  "charResId": 1003,
+                  "name": "Nia"
                 },
                 {
                   "charResId": 1040,
