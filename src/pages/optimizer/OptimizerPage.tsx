@@ -1,7 +1,11 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
+import { Swords } from 'lucide-react'
 import { useApiPort } from '@/hooks/useApiPort'
 import i18n from '@/i18n'
 import { api, wsUrl } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
 import type { OptimizerConfig, OptimizeProgress, OptimizeResult } from '@/lib/types'
 import { OptimizerPanel } from './OptimizerPanel'
 import { ResultsArea } from './ResultsArea'
@@ -26,7 +30,13 @@ const DEFAULT_CONFIG: OptimizerConfig = {
 }
 
 export function OptimizerPage() {
+  const { t } = useTranslation()
   const port = useApiPort()
+  const { data: status } = useQuery({
+    queryKey: ['status'],
+    queryFn: () => api.status(),
+    refetchInterval: 5_000,
+  })
   const [config, setConfig] = useState<OptimizerConfig>(DEFAULT_CONFIG)
   const [jobState, setJobState] = useState<JobState>('idle')
   const [progress, setProgress] = useState<OptimizeProgress | null>(null)
@@ -186,6 +196,10 @@ export function OptimizerPage() {
   const handleSelectRank = useCallback((rank: number) => {
     setSelectedRank((prev) => (prev === rank ? null : rank))
   }, [])
+
+  if (status && !status.data_loaded) {
+    return <EmptyState icon={Swords} title={t('optimizer.noData')} hint={t('optimizer.noDataHint')} className="h-full" />
+  }
 
   return (
     <div className="flex h-full overflow-hidden">

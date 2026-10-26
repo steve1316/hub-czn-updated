@@ -2,8 +2,9 @@ import { useState, useMemo } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
-import { User, RefreshCw, Download, Cloud } from 'lucide-react'
-import { api, assetUrl } from '@/lib/api'
+import { User, RefreshCw, Download, ExternalLink, History } from 'lucide-react'
+import { api, assetUrl, ApiError } from '@/lib/api'
+import { EmptyState, GoToCaptureButton, RetryButton } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -284,21 +285,27 @@ export function RescuePage() {
 
   if (isLoading) return <div className="p-8 text-[#b3b3b3]">{t('rescue.loading')}</div>
 
+  const retry = () => qc.invalidateQueries({ queryKey: ['rescue-records'] })
+
   if (error) {
     return (
-      <div className="p-8 text-[#f3727f]">
-        {t('rescue.loadError')}
+      <div className="p-8">
+        <p className="text-sm text-[#f3727f]">{t('rescue.loadError')}</p>
+        <p className="mt-1 mb-3 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
+        <RetryButton onClick={retry} />
       </div>
     )
   }
 
   if (banners.length === 0) {
     return (
-      <div className="p-8 text-[#b3b3b3]">
-        <p className="text-lg text-[#ffffff] mb-2">{t('rescue.title')}</p>
-        <p className="text-sm">{t('rescue.empty')}</p>
-        <p className="text-sm mt-2">{t('rescue.howTo')}</p>
-      </div>
+      <EmptyState
+        icon={History}
+        title={t('rescue.empty')}
+        hint={t('rescue.howTo')}
+        action={<><GoToCaptureButton /><RetryButton onClick={retry} /></>}
+        className="h-full"
+      />
     )
   }
 
@@ -324,7 +331,7 @@ export function RescuePage() {
             className="border-[#282828] text-[#b3b3b3] hover:text-[#ffffff]"
             onClick={() => openExternal('https://hub-czn.lovable.app')}
           >
-            <Cloud size={13} className="mr-1" />
+            <ExternalLink size={13} className="mr-1" />
             {t('rescue.saveCloud')}
           </Button>
           <Button

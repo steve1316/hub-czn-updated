@@ -2,8 +2,9 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Play, Zap } from 'lucide-react'
+import { Play, Zap, Users } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
@@ -295,15 +296,14 @@ export function SimulateTab() {
   const activeGroup = ENEMY_PRESET_GROUPS.find((group) => group.group === presetGroup) ?? ENEMY_PRESET_GROUPS[0]
   const source = enemy.source
 
+  if (status && !status.data_loaded) {
+    return <EmptyState icon={Users} title={t('simulator.noData')} hint={t('simulator.noDataHint')} className="h-full" />
+  }
+
   return (
     <div className="flex h-full overflow-hidden">
       {/* Left panel */}
       <div className="w-64 shrink-0 flex flex-col gap-4 p-4 bg-[#181818] border-r border-[#282828] overflow-y-auto">
-        {!status?.data_loaded && (
-          <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
-            {t('simulator.noData')}
-          </div>
-        )}
 
         <div className="flex flex-col gap-1">
           <label className="text-[#b3b3b3] text-xs">{t('simulator.character')}</label>

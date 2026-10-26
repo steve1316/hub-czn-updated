@@ -200,16 +200,6 @@ export function OptimizerPanel({
 
   const panelBase = 'w-72 shrink-0 bg-[#181818] border-r border-[#282828] p-4'
 
-  if (!dataLoaded) {
-    return (
-      <aside className={`${panelBase} flex items-start`}>
-        <p className="text-sm text-[#b3b3b3] mt-2">
-          {t('optimizer.noData')}
-        </p>
-      </aside>
-    )
-  }
-
   const progressPct =
     progress && progress.total > 0
       ? Math.round((progress.checked / progress.total) * 100)

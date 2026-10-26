@@ -2,7 +2,8 @@ import { useState } from 'react'
 import type React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { api, assetUrl } from '@/lib/api'
+import { api, assetUrl, isNoData, ApiError } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { MemoryFragment, SetInfo } from '@/lib/types'
 import {
@@ -11,7 +12,7 @@ import {
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
 import { InfoPopover } from '@/components/ui/info-popover'
-import { ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react'
+import { ChevronUp, ChevronDown, ChevronsUpDown, Layers } from 'lucide-react'
 
 const RARITY_COLOR: Record<number, string> = {
   1: '#a8a29e',
@@ -118,10 +119,15 @@ export function FragmentsPage() {
     return <div className="p-8 text-[#b3b3b3]">{t('fragments.loading')}</div>
   }
 
+  if (isNoData(error) || (!error && fragments.length === 0)) {
+    return <EmptyState icon={Layers} title={t('fragments.empty')} hint={t('fragments.emptyHint')} className="h-full" />
+  }
+
   if (error) {
     return (
-      <div className="p-8 text-[#f3727f]">
-        {t('fragments.loadError')}
+      <div className="p-8">
+        <p className="text-sm text-[#f3727f]">{t('fragments.loadError')}</p>
+        <p className="mt-1 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
       </div>
     )
   }

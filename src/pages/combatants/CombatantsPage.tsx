@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { RefreshCw, User, Loader2, ChevronDown, ChevronRight, Download, Cloud } from 'lucide-react'
-import { api, assetUrl } from '@/lib/api'
+import { Users, Loader2, ChevronDown, ChevronRight, Download, ExternalLink } from 'lucide-react'
+import { api, assetUrl, ApiError } from '@/lib/api'
+import { EmptyState, RetryButton } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -286,15 +287,9 @@ export function CombatantsPage() {
   if (error) {
     return (
       <div className="p-4">
-        <p className="text-[#f3727f] text-sm mb-2">{t('combatants.loadError')}</p>
-        <button
-          type="button"
-          onClick={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })}
-          className="flex items-center gap-1 text-xs text-[#b3b3b3] hover:text-[#ffffff]"
-        >
-          <RefreshCw size={12} />
-          {t('combatants.retry')}
-        </button>
+        <p className="text-sm text-[#f3727f]">{t('combatants.loadError')}</p>
+        <p className="mt-1 mb-3 text-sm text-[#b3b3b3]">{error instanceof ApiError ? error.message : t('empty.serviceDown')}</p>
+        <RetryButton onClick={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })} />
       </div>
     )
   }
@@ -314,11 +309,7 @@ export function CombatantsPage() {
     return (
       <div className="h-full flex flex-col gap-4 p-4">
         <GlobalScoring />
-        <div role="status" className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
-          <User size={40} className="opacity-30" />
-          <p className="text-sm">{t('combatants.empty')}</p>
-          <p className="text-xs">{t('combatants.emptyHint')}</p>
-        </div>
+        <EmptyState icon={Users} title={t('combatants.empty')} hint={t('combatants.emptyHint')} className="flex-1" />
       </div>
     )
   }
@@ -345,7 +336,7 @@ export function CombatantsPage() {
           onClick={() => openExternal('https://hub-czn.lovable.app')}
           className="border-[#282828] text-[#b3b3b3] hover:text-[#ffffff]"
         >
-          <Cloud size={13} className="mr-1" />
+          <ExternalLink size={13} className="mr-1" />
           {t('combatants.saveCloud')}
         </Button>
       </div>

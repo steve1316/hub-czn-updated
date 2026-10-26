@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { Link, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { Sword, Shield, ChevronDown, ChevronUp } from 'lucide-react'
 import { api, assetUrl, isNotFound } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, BattleAnalytics, CharAnalysis, Combatant, BattleOverview, InsightCard, CharTrend } from '@/lib/types'
 import { battleEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
@@ -37,13 +38,7 @@ function findCombatant(resId: string | number | null | undefined, combatants: Co
  */
 function NoBattles() {
   const { t } = useTranslation()
-  return (
-    <div className="flex flex-col items-center justify-center gap-3 text-[#8a8a8a] p-4 mt-20">
-      <Sword size={40} />
-      <p className="text-sm text-center">{t('battle.noBattles')}</p>
-      <Link to="/capture" className="text-xs text-[#c084fc] hover:underline">{t('battle.goToCapture')}</Link>
-    </div>
-  )
+  return <EmptyState icon={Sword} title={t('battle.noBattles')} hint={t('battle.noBattlesHint')} className="mt-16" />
 }
 
 /**
@@ -57,7 +52,7 @@ function LoadFailed({ error }: { error: unknown }) {
   return (
     <div className="m-4 max-w-3xl text-[#f87171] text-sm bg-[#2a1a1a] border border-[#5a2020] rounded px-4 py-3">
       {t('battle.loadError')}
-      {error instanceof Error && <p className="text-[#888] text-xs mt-1">{error.message}</p>}
+      {error instanceof Error && <p className="text-[#b3b3b3] text-sm mt-1">{error.message}</p>}
     </div>
   )
 }
