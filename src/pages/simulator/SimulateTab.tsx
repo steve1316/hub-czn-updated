@@ -1,5 +1,6 @@
-import { useState, type ReactNode } from 'react'
+import { useEffect, useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
+import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Play, Zap } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
@@ -11,7 +12,7 @@ import { formatBattleTime } from '@/pages/battle/battle-time.utils'
 import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
 import { loadSavedDecks } from '@/pages/deck-builder/deck-builder-saved-decks.utils'
 import { ENEMY_PRESET_GROUPS } from './simulator-damage.utils'
-import { deckSlotToSimCards } from './simulator-deck.utils'
+import { deckSlotToSimCards, type DeckBuilderHandoff } from './simulator-deck.utils'
 
 const MORALE_PCT = 20
 
@@ -169,7 +170,15 @@ function CardRow({ card }: { card: SimCardResult }) {
  */
 export function SimulateTab() {
   const { t } = useTranslation()
+  const location = useLocation()
+  const navigate = useNavigate()
   const { enemy, setEnemy } = useBattlesEnemy()
+  // A deck sent from the Deck Builder, waiting for the combatants to load
+  const [handoff, setHandoff] = useState<DeckBuilderHandoff | null>(
+    () => (location.state as { deckBuilder?: DeckBuilderHandoff } | null)?.deckBuilder ?? null,
+  )
+  // The name of a sent combatant who is not in the capture
+  const [notOwned, setNotOwned] = useState<string | null>(null)
 
   const [charName, setCharName] = useState(() => loadPersistedState()?.charName ?? '')
   const [deck, setDeck] = useState<DeckChoice>(() => loadPersistedState()?.deck ?? AUTO_DECK)
@@ -212,8 +221,28 @@ export function SimulateTab() {
     staleTime: 30_000,
   })
 
+  // Drop the router state so a reload or back navigation does not send the deck again
+  useEffect(() => {
+    if (location.state) navigate(location.pathname, { replace: true, state: null })
+  }, [location.state, location.pathname, navigate])
+
+  useEffect(() => {
+    if (!handoff || combatants.length === 0) return
+    const target = combatants.find((c) => c.res_id === handoff.combatantId)
+    setHandoff(null)
+    if (!target) {
+      setNotOwned(handoff.name)
+      return
+    }
+    const choice: DeckChoice = { kind: 'builder', name: target.name, cards: handoff.cards }
+    setNotOwned(null)
+    setCharName(target.char_id)
+    setDeck(choice)
+    persist({ charName: target.char_id, deck: choice })
+  }, [handoff, combatants])
+
   // The slots of decks saved in the Deck Builder that belong to the selected character
-  const combatant = combatants.find((c) => c.name === charName)
+  const combatant = combatants.find((c) => c.char_id === charName)
   const savedSlots = savedDecks.flatMap((saved) =>
     saved.payload.slots
       .map((slot, slotIndex) => ({ saved, slot, slotIndex }))
@@ -280,8 +309,9 @@ export function SimulateTab() {
           <CharacterCombobox
             combatants={combatants}
             value={charName}
-            onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); persist({ charName: v, deck: AUTO_DECK }) }}
+            onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); setNotOwned(null); persist({ charName: v, deck: AUTO_DECK }) }}
           />
+          {notOwned && <p className="text-[#f87171] text-[10px]">{t('simulator.notOwned', { name: notOwned })}</p>}
         </div>
 
         {charName && (decks.length > 0 || savedSlots.length > 0 || deck.kind === 'builder') && (

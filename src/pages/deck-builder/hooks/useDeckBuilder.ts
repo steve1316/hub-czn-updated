@@ -298,6 +298,32 @@ function normalizeImportedPayload(value: unknown): DeckBuilderExportPayload {
   }
 }
 
+/**
+ * Turn one squad slot into its export form, the same shape saved decks and exported files use.
+ * @param slot The squad slot.
+ * @returns The slot's combatant, equipment ids and cards with their chosen variants.
+ */
+export function createDeckBuilderExportSlot(slot: SquadSlot): DeckBuilderExportSlot {
+  return {
+    combatant_id: slot.combatantId,
+    equipment: {
+      weapon_id: slot.equipment.weapon?.id ?? null,
+      armor_id: slot.equipment.armor?.id ?? null,
+      accessory_id: slot.equipment.accessory?.id ?? null,
+    },
+    cards: slot.cards.map(item => ({
+      card_id: item.card.card_id,
+      selected_variant_id: item.selectedVariant?.variant_id ?? null,
+      selected_divine_god: item.selectedDivineGod?.id ?? null,
+      selected_divine_epiphany_id: item.selectedDivineEpiphany?.id ?? null,
+      selected_common_epiphany_id: item.selectedCommonEpiphany?.id ?? null,
+      selected_persona_engraving_ids: getPersonaEngravingIds(
+        item.selectedPersonaEngravings,
+      ),
+    })),
+  }
+}
+
 function resolveImportedCardSettings(
   source: DeckBuilderCardWithVariants,
   importedCard: DeckBuilderImportedCard,
@@ -378,24 +404,7 @@ export function useDeckBuilder() {
     return {
       version: DECK_BUILDER_EXPORT_VERSION,
       exported_at: new Date().toISOString(),
-      slots: squad.map(slot => ({
-        combatant_id: slot.combatantId,
-        equipment: {
-          weapon_id: slot.equipment.weapon?.id ?? null,
-          armor_id: slot.equipment.armor?.id ?? null,
-          accessory_id: slot.equipment.accessory?.id ?? null,
-        },
-        cards: slot.cards.map(item => ({
-          card_id: item.card.card_id,
-          selected_variant_id: item.selectedVariant?.variant_id ?? null,
-          selected_divine_god: item.selectedDivineGod?.id ?? null,
-          selected_divine_epiphany_id: item.selectedDivineEpiphany?.id ?? null,
-          selected_common_epiphany_id: item.selectedCommonEpiphany?.id ?? null,
-          selected_persona_engraving_ids: getPersonaEngravingIds(
-            item.selectedPersonaEngravings,
-          ),
-        })),
-      })),
+      slots: squad.map(createDeckBuilderExportSlot),
     }
   }
 

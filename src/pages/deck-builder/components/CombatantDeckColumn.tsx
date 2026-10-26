@@ -8,6 +8,7 @@ import {
   Sparkles,
   Trash2,
   X,
+  Zap,
 } from 'lucide-react'
 import type { CardCharacter } from '@/lib/types'
 import type {
@@ -565,6 +566,7 @@ export function CombatantDeckColumn({
   onSelectEquipment,
   onClearEquipment,
   onClearDeck,
+  onSimulate,
 }: {
   slotIndex: number
   slot: SquadSlot
@@ -582,6 +584,7 @@ export function CombatantDeckColumn({
   onSelectEquipment: (equipmentSlot: DeckBuilderItemSlot, item: DeckBuilderItem) => void
   onClearEquipment: (equipmentSlot: DeckBuilderItemSlot) => void
   onClearDeck: () => void
+  onSimulate: () => void
 }) {
   const { t } = useTranslation()
   const [cardSelectionKind, setCardSelectionKind] = useState<CardSelectionKind | null>(null)
@@ -641,6 +644,17 @@ export function CombatantDeckColumn({
               </select>
             </div>
           </div>
+
+          <button
+            type="button"
+            onClick={onSimulate}
+            disabled={!selectedCombatant || slot.cards.length === 0}
+            title={t('deckBuilder.slot.simulateTip')}
+            className="mt-5 flex h-8 shrink-0 items-center gap-1 rounded-lg border border-[#333348] px-2 text-xs text-[#888] hover:border-[#c084fc] hover:text-[#c084fc] disabled:opacity-40 disabled:hover:border-[#333348] disabled:hover:text-[#888]"
+          >
+            <Zap size={13} />
+            {t('deckBuilder.slot.simulate')}
+          </button>
 
           <button
             type="button"

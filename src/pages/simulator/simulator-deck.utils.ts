@@ -3,6 +3,16 @@ import type { DeckBuilderExportSlot } from "@/pages/deck-builder/deck-builder.ty
 
 const EPIPHANY_VARIANT = /_epiphany_(\d+)$/
 
+/** One Deck Builder combatant's deck, sent to the Simulate tab through router state. */
+export interface DeckBuilderHandoff {
+  /** The combatant's character res_id, matched against `Combatant.res_id`. */
+  combatantId: number
+  /** The combatant's name, shown when they are not in the loaded capture. */
+  name: string
+  /** The deck's cards with their epiphany levels. */
+  cards: SimDeckCard[]
+}
+
 /**
  * Turn a Deck Builder slot into the simulate endpoint's card list. Divine epiphanies and persona engravings are dropped, as the simulator cannot model them.
  * @param slot The exported Deck Builder slot.
