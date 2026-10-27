@@ -6,7 +6,8 @@ each Chaos season, monster cards, status ailments and curses. Epiphanies fold in
 ego skill is added, since the archive leaves it out. Art the deck builder already ships is reused, the rest is added.
 
 The keywords and card names the game marks in card text are listed too, with their definitions and the cards they name,
-so the page can link them.
+so the page can link them. A keyword no tooltip title matches can be mapped by hand in the overrides, by name, to a
+`tooltip` or a written `definition`.
 """
 
 from __future__ import annotations
@@ -129,8 +130,31 @@ def build(ctx: Context) -> TargetResult:
         "card_links": [{"name": name, "id": card_id} for name, card_id in sorted(card_links.items())],
         "linked_cards": [builder.linked_card(card_id) for card_id in sorted(set(card_links.values()) - listed)],
     }
+    issues = builder.issues + _keyword_override_issues(ctx, builder.keywords)
     summary = f"{len(builder.cards)} cards, {len(keywords)} keywords, {len(card_links)} card links, {len(builder.new_files)} image(s) to add"
-    return TargetResult({OUTPUT_PATH: json_bytes(document)}, summary, builder.issues, new_files=builder.new_files)
+    return TargetResult({OUTPUT_PATH: json_bytes(document)}, summary, issues, new_files=builder.new_files)
+
+
+def _keyword_override_issues(ctx: Context, keywords: dict[str, str | None]) -> list[Issue]:
+    """
+    Check the hand-mapped keywords, so a tooltip the client drops or a keyword the text stops marking is not missed.
+
+    Args:
+        ctx: The run context.
+        keywords: Every keyword the card text marks, as built.
+
+    Returns:
+        Errors for entries without a `_why`, for tooltips the client lacks and for names no card text marks.
+    """
+    overrides = ctx.overrides(NAME)
+    issues = overrides.validate({}, keyed_by_output=False)
+    for name, fields in overrides.entries.items():
+        tooltip_id = fields.get("tooltip")
+        if tooltip_id and tooltip_id not in ctx.client.tooltips:
+            issues.append(Issue("error", f"{NAME}: keyword override '{name}' names tooltip {tooltip_id}, which the client lacks"))
+        if name not in keywords:
+            issues.append(Issue("error", f"{NAME}: keyword override '{name}' matches no keyword the card text marks"))
+    return issues
 
 
 class _Builder:
@@ -155,6 +179,8 @@ class _Builder:
         self._extra_rows = {row["id"]: row for shard in EXTRA_CARD_SHARDS for row in ctx.client.rows(shard) if "id" in row}
         self._pool_images = _pool_images(ctx)
         self._folders = card_art.existing_folders()
+        # Keyword name -> a hand-picked `tooltip` or written `definition`, for keywords no tooltip title matches.
+        self._keyword_overrides = ctx.overrides(NAME).entries
         # Tooltip title -> its tooltip ids, in id order, and the same keyed by `_stem` for keywords that miss by an ending.
         self._tooltips_by_title: dict[str, list[str]] = {}
         self._tooltips_by_stem: dict[str, list[str]] = {}
@@ -358,6 +384,7 @@ class _Builder:
         """
         Add a keyword with the first definition its tooltips give, preferring one with every placeholder filled. Values
         only known in battle read "X". Lower-case keywords such as "activate" are verbs whose sense shifts, so they are skipped.
+        A hand-mapped keyword uses its override's tooltip or definition instead.
 
         Args:
             name: The keyword as the card text shows it.
@@ -365,9 +392,12 @@ class _Builder:
         """
         if name in self.keywords or len(name) < MIN_KEYWORD_LENGTH or "#" in name or not name[0].isupper():
             return
+        override = self._keyword_overrides.get(name, {})
+        if "tooltip" in override:
+            tooltip_ids = [override["tooltip"]]
         found = [glossary.source_text(self.ctx, {"tooltip": tooltip_id}, self.ctx.client.constants) for tooltip_id in tooltip_ids]
         defined = [(definition, unresolved) for _, definition, unresolved in found if definition]
-        definition = next((definition for definition, unresolved in defined if not unresolved), defined[0][0] if defined else None)
+        definition = override.get("definition") or next((definition for definition, unresolved in defined if not unresolved), defined[0][0] if defined else None)
         self.keywords[name] = _PLACEHOLDER.sub("X", _PLACEHOLDER_SENTENCE.sub("", definition)) if definition else None
 
     def _shared_image(self, row: dict) -> str | None:

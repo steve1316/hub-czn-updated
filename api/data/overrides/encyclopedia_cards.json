@@ -1,0 +1,23 @@
+{
+  "_about": "Keywords that Encyclopedia card text marks but no tooltip title matches, since the game links them by their Korean text. Each entry is keyed by the keyword as the card text writes it, and gives either `tooltip` (the tooltip whose description defines it) or `definition` (written by hand where no tooltip defines it).",
+  "Attack Weakness": {
+    "tooltip": "CARD_EGO_ATTACK",
+    "_why": "The tooltip is titled \"Weakness Attack\". Its description explains what a weakness attack does."
+  },
+  "Card Unactivatable": {
+    "tooltip": "TALENT_UNPLAYABLE",
+    "_why": "The trait is titled \"Unactivatable\""
+  },
+  "Crystallize": {
+    "tooltip": "T_CS00_0010",
+    "_why": "The tooltip is titled \"Crystallization\""
+  },
+  "Drawn": {
+    "tooltip": "CARD_DRAW",
+    "_why": "The same as Draw"
+  },
+  "Quest": {
+    "definition": "One of Cassius' 4 challenges: Triple 0, Triple 1, Straight or Full House. Completing one creates a Quest card.",
+    "_why": "Cassius' mechanic. Only each Quest's own title and the Quest card have tooltips, and none defines a Quest itself."
+  }
+}

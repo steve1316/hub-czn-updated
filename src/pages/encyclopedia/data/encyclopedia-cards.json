@@ -13446,6 +13446,10 @@
       "definition": "-% Damage Amount taken, and on effect activation, remove effect (cannot stack)."
     },
     {
+      "name": "Attack Weakness",
+      "definition": "If attacking a monster's Weakness Attribute, increase Damage Amount. Further decrease Tenacity."
+    },
+    {
       "name": "Attunement",
       "definition": "When this card is Drawn, activate effect."
     },
@@ -13488,6 +13492,10 @@
     {
       "name": "Bullet",
       "definition": "Cards with the Bullet keyword."
+    },
+    {
+      "name": "Card Unactivatable",
+      "definition": "This card cannot be activated."
     },
     {
       "name": "Celestial",
@@ -13539,6 +13547,10 @@
     },
     {
       "name": "Crystallization",
+      "definition": "At the end of the turn, gain 20% Fixed Shield for each Crystallization."
+    },
+    {
+      "name": "Crystallize",
       "definition": "At the end of the turn, gain 20% Fixed Shield for each Crystallization."
     },
     {
@@ -13620,6 +13632,10 @@
     {
       "name": "Draw Pile",
       "definition": "The pile from which cards are drawn."
+    },
+    {
+      "name": "Drawn",
+      "definition": "Move a card from Draw Pile to hand."
     },
     {
       "name": "Efficiency:",
@@ -13880,6 +13896,10 @@
     {
       "name": "Purity:",
       "definition": "When no cards of other Attributes are in hand, enable this effect."
+    },
+    {
+      "name": "Quest",
+      "definition": "One of Cassius' 4 challenges: Triple 0, Triple 1, Straight or Full House. Completing one creates a Quest card."
     },
     {
       "name": "Quest card",

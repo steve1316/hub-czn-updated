@@ -34,7 +34,7 @@ TEXT = {
     "card@name@card_ne_1": "Heavy Bash",
     "card@desc@card_ne_1": "#result_coeff_ev_0# Damage",
     "card@name@card_mon_1": "Shy Gardener",
-    "card@desc@card_mon_1": "Draw 1",
+    "card@desc@card_mon_1": "When this card is $Drawn$, start a $Quest$",
     "card@name@card_ds05_a_1": "Memory: Suppression",
     "card@desc@card_ds05_a_1": "#result_coeff_ev_0# Damage to all enemies",
     "card@name@card_ab_1": "Bleed",
@@ -67,6 +67,8 @@ TEXT = {
     "card_power": "Power",
     "card_curse": "Curse",
     "tooltip@title@talent_unplayable": "Unplayable",
+    "tooltip@title@card_draw": "Draw",
+    "tooltip@desc@card_draw": "Move a card from $Draw Pile$ to hand",
     "archive_card@title@public_striker": "Striker",
     "archive_card@title@monster_nihilum": "Nihilum Faction",
     "archive_card@title@season_s5": "A Promise Upon the Snow",
@@ -138,7 +140,7 @@ def _context(root: Path) -> Context:
         root: The temp folder to write the client into.
 
     Returns:
-        The context, with the public card pinned to the legacy deck builder id `n_0001`.
+        The context, with the public card pinned to the legacy deck builder id `n_0001` and two hand-mapped keywords.
     """
     write_client(root, {
         "card(ikarus)@card.json": [
@@ -168,6 +170,7 @@ def _context(root: Path) -> Context:
             {"id": "TALENT_EXHAUST", "title": "tooltip@title@talent_exhaust", "desc": "tooltip@desc@talent_exhaust", "link_cs_id": "none"},
             {"id": "CARD_FIXEDCURE", "title": "tooltip@title@card_fixedcure", "desc": "tooltip@desc@card_fixedcure", "link_cs_id": "none"},
             {"id": "CARD_ACTIVATE", "title": "tooltip@title@card_activate", "desc": "tooltip@desc@card_activate", "link_cs_id": "none"},
+            {"id": "CARD_DRAW", "title": "tooltip@title@card_draw", "desc": "tooltip@desc@card_draw", "link_cs_id": "none"},
         ],
         "memory_grade_define@card.json": [_card("card_ds05_a_1", "CARD_POWER", cost="0")],
         "card(public)@skill_eff.json": [{"id": "eff_dmg", "eff": "SKILL_EFF_DMG", "eff_attr": "[]", "eff_value": "200"}],
@@ -189,6 +192,10 @@ def _context(root: Path) -> Context:
         Image.new("RGBA", (42, 63), (200, 30, 30, 255)).save(art / f"{name}.png")
     ctx = Context(root)
     ctx._overrides[neutral_cards.NAME] = Overrides(neutral_cards.NAME, directives={"_ids": {"n_0001": "card_ne_1"}})
+    ctx._overrides[encyclopedia_cards.NAME] = Overrides(encyclopedia_cards.NAME, {
+        "Drawn": {"tooltip": "CARD_DRAW", "_why": "Draw's own tooltip"},
+        "Quest": {"definition": "One of Cassius' challenges.", "_why": "no tooltip defines it"},
+    })
     return ctx
 
 
@@ -272,14 +279,27 @@ def test_collects_the_keywords_the_card_text_marks_with_their_definitions(tmp_pa
     # Marked keywords, triggers (which keep their colon) and traits. Wave has no definition, so it is left out.
     # Battle-only values read X, and lines that are only such a value are dropped. Fixed Heal is a near miss of the
     # tooltip title "Fixed Healing", which the game matches by its Korean text instead. Lower-case keywords such as
-    # "activate" are verbs whose sense shifts, so they are left out.
+    # "activate" are verbs whose sense shifts, so they are left out. Drawn and Quest come from the overrides.
     assert document["keywords"] == [
+        {"name": "Drawn", "definition": "Move a card from Draw Pile to hand."},
         {"name": "Exhaust", "definition": "When this card is activated, move to Exhaust Pile."},
         {"name": "Fixed Heal", "definition": "Heal that ignores healing effects."},
         {"name": "Ignition", "definition": "If a card is Exhausted, decrease Cost of this card by 1."},
         {"name": "Incinerate:", "definition": "When this card is Exhausted, activate effect."},
+        {"name": "Quest", "definition": "One of Cassius' challenges."},
         {"name": "Spore Propagation", "definition": "For X turn(s), spread 1 spore."},
     ]
+
+
+def test_reports_keyword_overrides_that_point_nowhere(tmp_path):
+    ctx = _context(tmp_path)
+    ctx._overrides[encyclopedia_cards.NAME] = Overrides(encyclopedia_cards.NAME, {
+        "Drawn": {"tooltip": "CARD_GONE", "_why": "a tooltip the client lost"},
+        "Never Marked": {"definition": "Unused.", "_why": "a keyword no card text marks"},
+    })
+    _, _, _, issues = _built(ctx)
+    assert "encyclopedia_cards: keyword override 'Drawn' names tooltip CARD_GONE, which the client lacks" in issues
+    assert "encyclopedia_cards: keyword override 'Never Marked' matches no keyword the card text marks" in issues
 
 
 def test_links_the_cards_the_card_text_names(tmp_path):
