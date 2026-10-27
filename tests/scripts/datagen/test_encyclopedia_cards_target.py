@@ -7,6 +7,7 @@ Season 5 cards that live outside the `card(*)` shards, and which art is reused o
 
 from __future__ import annotations
 
+import io
 import json
 from pathlib import Path
 
@@ -215,3 +216,5 @@ def test_reuses_deck_builder_art_and_adds_the_rest(tmp_path):
     assert cards["card_ds05_a_1"]["image"] == "encyclopedia/data/card-art/art_card_ds05_a_1.webp"
     added = {path.as_posix() for path in result.new_files}
     assert added == {"src/pages/encyclopedia/data/card-art/art_card_ds05_a_1.webp", "src/pages/encyclopedia/data/card-art/art_card_ab_1.webp"}
+    # Added art keeps the client illustration's own size.
+    assert {Image.open(io.BytesIO(data)).size for data in result.new_files.values()} == {(42, 63)}

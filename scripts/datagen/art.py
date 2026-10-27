@@ -13,22 +13,22 @@ from PIL import Image
 from api.client_db import REPO_ROOT
 from scripts.datagen.runner import Context
 
+# Client art is kept at its full size, encoded at this WebP quality.
+CLIENT_ART_QUALITY = 90
 
-def webp(source: Path | IO[bytes], *, quality: int, size: tuple[int, int] | None = None) -> bytes:
+
+def webp(source: Path | IO[bytes], *, quality: int) -> bytes:
     """
     Encode a client illustration as WebP.
 
     Args:
         source: The client PNG, or an open picture file.
         quality: WebP quality.
-        size: Resize to this size first, or keep the original size.
 
     Returns:
         The encoded bytes.
     """
     image = Image.open(source).convert("RGBA")
-    if size:
-        image = image.resize(size, Image.LANCZOS)
     buffer = io.BytesIO()
     image.save(buffer, "WEBP", quality=quality)
     return buffer.getvalue()

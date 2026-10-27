@@ -10,7 +10,7 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from scripts.datagen.art import wanted, webp
+from scripts.datagen.art import CLIENT_ART_QUALITY, wanted, webp
 from scripts.datagen.client import parse_list
 from scripts.datagen.naming import RARITIES, card_type, class_names, legacy_ids
 from scripts.datagen.overrides import Issue, Overrides
@@ -43,10 +43,6 @@ TABOO_SORT = "SORT_TABOO"
 
 # An extra tag of this type marks a card that belongs to one Chaos season, such as `ds03`.
 SEASON_TAG_TYPE = "DISASTER_SEASON"
-
-# Deck builder art is a 200x300 WebP thumbnail of the client illustration.
-IMAGE_SIZE = (200, 300)
-IMAGE_QUALITY = 80
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -88,7 +84,7 @@ def build(ctx: Context) -> TargetResult:
         row = rows_by_output[card["id"]]
         source = ctx.client.illustration(row, columns=("sct_name",))
         if source is not None:
-            new_files[path] = webp(source, quality=IMAGE_QUALITY, size=IMAGE_SIZE)
+            new_files[path] = webp(source, quality=CLIENT_ART_QUALITY)
         else:
             issues.append(Issue("warning", f"{NAME}: no illustration in the client for {card['id']} ({row.get('sct_name')}.png)"))
 

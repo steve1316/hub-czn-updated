@@ -12,7 +12,7 @@ import re
 from pathlib import Path
 
 from scripts.datagen import epiphany, roster
-from scripts.datagen.art import wanted, webp
+from scripts.datagen.art import CLIENT_ART_QUALITY, wanted, webp
 from scripts.datagen.client import parse_list
 from scripts.datagen.naming import card_type, legacy_ids, slug
 from scripts.datagen.overrides import Issue
@@ -44,10 +44,6 @@ ETC_GROUPS = {"etc_abnorm": "ailment", "etc_curse": "curse"}
 
 _COMBATANT_CARD = re.compile(r"^c_(\d+)_(srt|uni)\d+$")
 _SEASON = re.compile(r"^season_s(\d+)$")
-
-# Added art matches the deck builder's neutral card thumbnails.
-IMAGE_SIZE = (200, 300)
-IMAGE_QUALITY = 80
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -204,7 +200,7 @@ class _Builder:
         # Cards that share an illustration, such as the four grades of a Season 5 memory, share one image.
         image = ART_DIR / f"{source.stem}.webp"
         if wanted(self.ctx, PAGES_DIR / image) and PAGES_DIR / image not in self.new_files:
-            self.new_files[PAGES_DIR / image] = webp(source, quality=IMAGE_QUALITY, size=IMAGE_SIZE)
+            self.new_files[PAGES_DIR / image] = webp(source, quality=CLIENT_ART_QUALITY)
         return image.as_posix()
 
     def _title(self, sub_category: str) -> str:
