@@ -69,6 +69,11 @@ export function wsUrl(path: string): string {
 let _tokenPromise: Promise<string> | null = null
 let _bootstrapPromise: Promise<void> | null = null
 
+/** How often the app asks whether the sidecar is up at launch, in milliseconds. */
+const API_READY_POLL_MS = 250
+/** How long the app waits for the sidecar at launch before rendering anyway, so a sidecar that never starts still shows its errors. */
+const API_READY_TIMEOUT_MS = 60_000
+
 /**
  * True when the page is running inside the Tauri shell.
  *
@@ -86,9 +91,8 @@ export function inTauri(): boolean {
  * Fetch the token from Tauri once and remember it. App waits on this before rendering, so the
  * synchronous `wsUrl()` always has it by the time a socket opens.
  *
- * The Rust side holds the call until the sidecar has printed its token, so this does not race the
- * sidecar's startup. An empty answer means something went wrong, so it is not cached - otherwise
- * one bad reply would leave every later request unauthenticated for the rest of the session.
+ * Tauri makes the token before it starts the sidecar, so it is ready at once. An empty answer means something went wrong (or dev mode, where the
+ * token comes from `.env.development`), so it is not cached - otherwise one bad reply would leave every later request unauthenticated.
  *
  * @returns The API token, or an empty string in dev mode.
  */
@@ -109,9 +113,9 @@ export async function ensureToken(): Promise<string> {
 }
 
 /**
- * Resolve the sidecar's port and token into module state. Both Tauri commands block until the
- * sidecar has actually printed them, so this settles only once the API is really reachable.
- * Doing it in one place keeps the port from arriving after a page has already started fetching.
+ * Resolve the sidecar's port and token into module state, then wait until the sidecar answers. Tauri knows the port and token straight away, but the
+ * bundled sidecar takes a few seconds to start, and a page that fetched in that window would show its fallback (such as an unticked setting) for
+ * good. Doing it in one place keeps the port from arriving after a page has already started fetching.
  */
 export async function ensureApi(): Promise<void> {
   if (!_bootstrapPromise) {
@@ -122,9 +126,25 @@ export async function ensureApi(): Promise<void> {
         if (port) _port = port
       }
       await ensureToken()
+      if (inTauri()) await waitForApi()
     })()
   }
   return _bootstrapPromise
+}
+
+/** Ask the sidecar for its status until it answers, giving up after `API_READY_TIMEOUT_MS`. */
+async function waitForApi(): Promise<void> {
+  const deadline = Date.now() + API_READY_TIMEOUT_MS
+  while (Date.now() < deadline) {
+    try {
+      await request('/api/status')
+      return
+    } catch (err) {
+      // Any HTTP answer means the sidecar is up. Only a failed connection means it is still starting.
+      if (err instanceof ApiError) return
+      await new Promise(resolve => setTimeout(resolve, API_READY_POLL_MS))
+    }
+  }
 }
 
 async function request<T>(path: string, options?: RequestInit): Promise<T> {

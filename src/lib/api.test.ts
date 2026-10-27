@@ -47,11 +47,14 @@ describe('ensureToken', () => {
 })
 
 describe('ensureApi', () => {
+  const okResponse = { ok: true, json: async () => ({ ok: true }) }
+
   beforeEach(() => {
     invoke.mockReset()
     // The suite runs in the node environment, so there is no window to attach the global to.
     // Only __TAURI_INTERNALS__ is set, because that is all the packaged app actually gets.
     vi.stubGlobal('window', { __TAURI_INTERNALS__: {} })
+    vi.stubGlobal('fetch', vi.fn().mockResolvedValue(okResponse))
   })
 
   it('resolves the port before the token so no request uses the default port', async () => {
@@ -62,6 +65,32 @@ describe('ensureApi', () => {
 
     expect(invoke).toHaveBeenCalledWith('get_api_port')
     expect(api.wsUrl('/ws')).toBe('ws://127.0.0.1:7845/ws?token=real-token')
+  })
+
+  it('waits until the sidecar answers, so the first page does not fetch while it is still starting', async () => {
+    // Regression: the bundled sidecar takes a few seconds to unpack, and the Capture page's settings request failed in that
+    // window, which showed "Start capture when the app opens" unticked although it was saved.
+    const api = await freshApi()
+    invoke.mockImplementation(async (cmd: string) => (cmd === 'get_api_port' ? 7845 : 'real-token'))
+    const starting = new TypeError('Failed to fetch')
+    const fetchMock = vi.fn().mockRejectedValueOnce(starting).mockRejectedValueOnce(starting).mockResolvedValue(okResponse)
+    vi.stubGlobal('fetch', fetchMock)
+
+    await api.ensureApi()
+
+    expect(fetchMock).toHaveBeenCalledTimes(3)
+    expect(fetchMock.mock.calls[2][0]).toBe('http://127.0.0.1:7845/api/status')
+  })
+
+  it('stops waiting once the sidecar answers, even with an error, so a bad token does not hold the app for a minute', async () => {
+    const api = await freshApi()
+    invoke.mockImplementation(async (cmd: string) => (cmd === 'get_api_port' ? 7845 : 'wrong-token'))
+    const fetchMock = vi.fn().mockResolvedValue({ ok: false, status: 401, statusText: 'Unauthorized', json: async () => ({ detail: 'Bad token' }) })
+    vi.stubGlobal('fetch', fetchMock)
+
+    await api.ensureApi()
+
+    expect(fetchMock).toHaveBeenCalledTimes(1)
   })
 })
 
