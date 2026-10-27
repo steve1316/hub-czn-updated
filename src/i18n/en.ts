@@ -163,7 +163,7 @@ const en = {
     server: 'Server',
     debugMode: 'Debug mode',
     autoStart: 'Start capture when the app opens',
-    autoStartTip: 'Ticking this starts capture now, and again every time this app opens, so it is already running before the game. While it runs, the game connects through the local proxy and the certificate stays trusted. Both are undone when you close the app or stop capture. If the game is already open, restart it once so it logs in again.',
+    autoStartTip: 'Open this app before the game and capture is already running. While it runs, the game connects through the local proxy and the certificate stays trusted. Both are undone when you close the app or stop capture. If the game is already open, restart it once so it logs in again.',
     autoStartedBanner: 'Capture was started automatically when the app opened.',
     start: 'Start Capture',
     stop: 'Stop Capture',

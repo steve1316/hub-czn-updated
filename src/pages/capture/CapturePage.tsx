@@ -435,11 +435,7 @@ export function CapturePage() {
 
   const settingsMutation = useMutation({
     mutationFn: (change: CaptureSettingsChange) => api.captureSetSettings(change),
-    onSuccess: (settings, change) => {
-      qc.setQueryData(['capture-settings'], settings)
-      // Turning auto-start on means capture should be running whenever the app is open, so start it now rather than at the next launch.
-      if (change.auto_start && !running && prereqsOk) startMutation.mutate()
-    },
+    onSuccess: settings => qc.setQueryData(['capture-settings'], settings),
   })
 
   const regionMutation = useMutation({
