@@ -13411,5 +13411,1343 @@
       "kind": "curse",
       "image": "encyclopedia/data/card-art/job_00662.webp"
     }
+  ],
+  "keywords": [
+    {
+      "name": "AP",
+      "definition": "The resource consumed when cards are used."
+    },
+    {
+      "name": "Action Count",
+      "definition": "The number of card uses remaining until the monster acts. When a card is used, decrease by 1. When it reaches 0, the monster performs an action."
+    },
+    {
+      "name": "Action Slow",
+      "definition": "When an ally Haste card is activated, decrease Morale of all enemies by 1 for 1 turn. On effect activation, decrease Action Slow by 1."
+    },
+    {
+      "name": "Afterglow",
+      "definition": "+1 to Tenacity Damage of Attack Cards, and +100% Damage Amount against enemies in a Ravage state and enemies without Tenacity. On effect activation, decrease Afterglow by 1."
+    },
+    {
+      "name": "Aftershock",
+      "definition": "When a target inflicted with this effect is attacked through a card, 300% Fixed Damage to remaining targets. When the effect is activated, decrease by 1."
+    },
+    {
+      "name": "Agony",
+      "definition": "At the end of the turn, 50 Fixed DoT × Agony count. On effect activation, decrease Agony stacks by half (max 20 stacks)."
+    },
+    {
+      "name": "All Piles",
+      "definition": "All piles except for the exhaust pile."
+    },
+    {
+      "name": "Arbitum - Damage Reduction",
+      "definition": "-% Damage Amount taken, and on effect activation, remove effect (cannot stack)."
+    },
+    {
+      "name": "Attunement:",
+      "definition": "When this card is Drawn, activate effect."
+    },
+    {
+      "name": "Basic Card",
+      "definition": "Cards with only Damage, Shield, or Heal functions among Combatant's Starting Cards."
+    },
+    {
+      "name": "Bind",
+      "definition": "When Bind cards of a given unit are in the same Pile or in hand, stack into 1 card."
+    },
+    {
+      "name": "Blessing",
+      "definition": "When Shield in possession is lower than 30% of max Health, if this card moves from hand to Graveyard, 60% Fixed Shield."
+    },
+    {
+      "name": "Brand of Agony",
+      "definition": "When Agony inflicted by this unit is activated, move 1 Rift of Severance to hand and decrease Cost by 1 until activated. When Rift of Severance is moved to hand, decrease Brand of Agony by 1 (max 3 stacks)."
+    },
+    {
+      "name": "Brand of Fracture",
+      "definition": "When Fracture inflicted by this unit is activated, move 1 Dispersed Desire to hand and decrease Cost by 1 until activated. When Dispersed Desire is moved to hand, decrease Brand of Fracture by 1 (max 3 stacks)."
+    },
+    {
+      "name": "Brand of the Cycle",
+      "definition": "Increase Damage Amount taken from Rossweisse by 20%, and when activated, decrease Brand of the Cycle by 1."
+    },
+    {
+      "name": "Bullet",
+      "definition": "Cards with the Bullet keyword."
+    },
+    {
+      "name": "Celestial",
+      "definition": "When a 2-Cost or higher card is used, proc this card."
+    },
+    {
+      "name": "Chronal Ascension",
+      "definition": "When Rita's Basic or Signature Cards are activated, use Chronal Ascension as Cost. Unable to gain Chronicle for Costs used through Chronal Ascension. At the end of the turn, remove Chronal Ascension."
+    },
+    {
+      "name": "Chronicle",
+      "definition": "At the start of the turn, decrease all Chronicle. Gain Chronal Ascension for each decreased (max 6). When Chronal Ascension is owned, unable to gain Chronicle."
+    },
+    {
+      "name": "Claim",
+      "definition": "Claim Synergy: Apply effect based on the total number of [ Claim ] talents possessed by allies."
+    },
+    {
+      "name": "Combo",
+      "definition": "When a card of a different Combatant is used, proc this card."
+    },
+    {
+      "name": "Commence the Hunt",
+      "definition": "When a Targeting Attack Card is activated, 50% Extra Attack on the target, then decrease Commence the Hunt by 1. +30% base Damage Amount to Extra Attacks for each Commence the Hunt (max 5 stacks)."
+    },
+    {
+      "name": "Control",
+      "definition": "Control Synergy: Apply effect based on the total number of [ Control ] talents possessed by allies."
+    },
+    {
+      "name": "Coordinated Attack",
+      "definition": "Damage that applies Extra Attack Damage Amount."
+    },
+    {
+      "name": "Counterattack",
+      "definition": "When taking Damage, 150% Defense-Based Damage to the attacker. If an attack is completely blocked by Shield, 300% Defense-Based Damage to the attacker. When the effect is activated, decrease Counterattack by 1. (Max 10)."
+    },
+    {
+      "name": "Creation",
+      "definition": "Three types of cards summoned by Orlea. If a card of the same creature★ is in hand, it evolves and merges. Evolution can reach up to 3 stages."
+    },
+    {
+      "name": "Credits",
+      "definition": "Currency tradable in shops."
+    },
+    {
+      "name": "Crystallization",
+      "definition": "At the end of the turn, gain 20% Fixed Shield for each Crystallization."
+    },
+    {
+      "name": "Cursed Shackles",
+      "definition": "When an Attack Card other than a Bind card is activated by allies on a target in a Cursed Shackles state, gain 1 Will-O'-Wisp for each Hit Count. When applied to a different target, remove Cursed Shackles."
+    },
+    {
+      "name": "Cursed Shackles:",
+      "definition": "If the target is in a Cursed Shackles state, enable effect."
+    },
+    {
+      "name": "DMG-Based Recovery",
+      "definition": "Fixed Recovery based on the Damage coefficient. Cannot exceed 20% of Max HP."
+    },
+    {
+      "name": "DMG-Based Shield",
+      "definition": "Gain Fixed Shield based on the Damage coefficient. Cannot exceed 20% of Max HP."
+    },
+    {
+      "name": "Damage Reduction",
+      "definition": "Decrease Damage Taken by 15%. When the effect is activated, decrease Damage Reduction by 1."
+    },
+    {
+      "name": "Dark",
+      "definition": "At the start of the turn, move this card to hand and place it on the rightmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+    },
+    {
+      "name": "Dark Mist Stance",
+      "definition": "Enable the Dark Mist Stance effect for Rin's cards. When an Attack Card of another Combatant is activated, remove Dark Mist Stance."
+    },
+    {
+      "name": "Dark Mist Stance:",
+      "definition": "If in a Dark Mist Stance state, enable effect."
+    },
+    {
+      "name": "Death Brand",
+      "definition": "+80% Damage Amount each time this card is used to attack the target inflicted with Death Brand."
+    },
+    {
+      "name": "Decibel",
+      "definition": "On Shuffle, 50% Extra Attack by allies to a random enemy, and on activation, remove Decibel. Heal 50% × Decibel count, and +50% Damage Amount × Decibel count to Extra Attacks (max 5 stacks)."
+    },
+    {
+      "name": "Defeat:",
+      "definition": "When an enemy is defeated, activate effect."
+    },
+    {
+      "name": "Defense-Based Damage",
+      "definition": "Damage applied as 210% of Defense and 30% of Attack."
+    },
+    {
+      "name": "Descent",
+      "definition": "When Descent stacks to 8 or more, create 1 Heavensfall in hand. When Heavensfall is created, decrease Descent by 8 (activates max 10 times per turn)."
+    },
+    {
+      "name": "Destroy:",
+      "definition": "Activates effect on target Ravage or when the target is in a Ravaged state."
+    },
+    {
+      "name": "Discard",
+      "definition": "Discard this card from hand to Discard Pile."
+    },
+    {
+      "name": "Discard Pile",
+      "definition": "The pile where Discarded Cards move to (max 200)."
+    },
+    {
+      "name": "DoT",
+      "definition": "Damage applied as DoT."
+    },
+    {
+      "name": "Draw",
+      "definition": "Move a card from Draw Pile to hand."
+    },
+    {
+      "name": "Draw Pile",
+      "definition": "The pile from which cards are drawn."
+    },
+    {
+      "name": "Efficiency:",
+      "definition": "When this card is in a Cost-reduced state relative to its base Cost, enable this effect."
+    },
+    {
+      "name": "Effulgent Light",
+      "definition": "When Effulgent Light stacks to 3, change Effulgent Compression into Effulgent Release. On effect activation, remove Effulgent Light."
+    },
+    {
+      "name": "Ego Points",
+      "definition": "Resource consumed when using Awakening Skills or Partner Skills."
+    },
+    {
+      "name": "Ego Skill",
+      "definition": "Refers to the combatant's Awakening Skill and the Partner's Skill."
+    },
+    {
+      "name": "Elasticity",
+      "definition": "On ally Extra Attack, Heal 50% for each Elasticity. On activation, remove Elasticity (max 5 stack(s))."
+    },
+    {
+      "name": "Ember",
+      "definition": "When hitting or putting a target in a Ravage state, deal +30% Damage for each stack of Ember the target has (up to 5 stacks). Upon activation, an Ember is removed."
+    },
+    {
+      "name": "Ephemeral",
+      "definition": "If this card is in hand at the end of the turn, Exhaust it."
+    },
+    {
+      "name": "Epiphany",
+      "definition": "Epiphany occurs, granting the card a new effect."
+    },
+    {
+      "name": "Equilux",
+      "definition": "At the start of the turn, move this card to hand. When moved to hand, polarize into Light and Dark cards (1 time per turn). Hit Count of this card is fixed to 1."
+    },
+    {
+      "name": "Evasion",
+      "definition": "Does not lose Health. On activation, reduce Evasion by 1."
+    },
+    {
+      "name": "Exhaust",
+      "definition": "When this card is activated, move to Exhaust Pile."
+    },
+    {
+      "name": "Extra Attack",
+      "definition": "Damage affected by Critical Chance and Extra Damage."
+    },
+    {
+      "name": "Finale",
+      "definition": "When this card is activated, end turn."
+    },
+    {
+      "name": "Fixed Damage",
+      "definition": "A damage that ignores persistent effects."
+    },
+    {
+      "name": "Fixed Shield",
+      "definition": "A shield that ignores persistent effects."
+    },
+    {
+      "name": "Flame Arts",
+      "definition": "When Flame Arts reaches 3 stacks, 120% Extra Damage to the enemy that was attacked last. On effect activation, decrease Flame Arts by 3."
+    },
+    {
+      "name": "Form Upgrade",
+      "definition": "While in hand, when an Archetype card is activated, increase a random effect by 100% until activated. Max X stacks (current: X stack(s))."
+    },
+    {
+      "name": "Fortitude",
+      "definition": "--20% Damage Amount taken for each Fortitude."
+    },
+    {
+      "name": "Fracture",
+      "definition": "At the end of the turn, 40% DoT for each Fracture. On effect activation, decrease Fracture stacks by half (max 30 stacks)."
+    },
+    {
+      "name": "Fracture Amplification",
+      "definition": "When Fracture inflicted by allies is activated, 1 Fracture to the target, and if there is only one enemy, 2 Fracture. Increase Damage Amount of Fracture inflicted by Arabella by 20%. When applied to a different target, remove Fracture Amplification (cannot stack)."
+    },
+    {
+      "name": "Fracture Amplification:",
+      "definition": "If the target is in a Fracture Amplification state, enable effect."
+    },
+    {
+      "name": "Graveyard",
+      "definition": "Cards that were activated this turn or the Discard Pile."
+    },
+    {
+      "name": "Hand Lock",
+      "definition": "For X turn(s), cannot move or Draw cards to hand (except for Turn Draw)."
+    },
+    {
+      "name": "Handgun Bullet",
+      "definition": "Magnum Shot, Silver Shot, Uranium Shot, Tracer Shot. These are standardized bullets."
+    },
+    {
+      "name": "Harmonization:",
+      "definition": "If the Cost of this card and Action Points are identical, activate this effect."
+    },
+    {
+      "name": "Haste",
+      "definition": "This card does not reduce the enemy's Action Count."
+    },
+    {
+      "name": "Heart Bullet",
+      "definition": "Heart Breaker, Heart Shaker."
+    },
+    {
+      "name": "Honed Edge",
+      "definition": "Increase Defense-Based Damage Amount of Attack Cards by 20% for 1 turn (max 3 stack(s))."
+    },
+    {
+      "name": "Honed Edge+",
+      "definition": "Increase Defense-Based Damage Amount of Attack Cards of allies by 20% for 1 turn (max 3 stack(s))."
+    },
+    {
+      "name": "Ignition",
+      "definition": "When this card is in hand, if a card is Exhausted, decrease Cost of this card by 1 until activated."
+    },
+    {
+      "name": "Immunity",
+      "definition": "Do not gain harmful effects."
+    },
+    {
+      "name": "Impair",
+      "definition": "Decrease Shield Gain Amount by 50%. When the effect is activated, decrease Impair by 1."
+    },
+    {
+      "name": "Incinerate:",
+      "definition": "When this card is Exhausted, activate effect."
+    },
+    {
+      "name": "Inhibit",
+      "definition": "Cannot be influenced by AP gain or loss effects (except for what is given through cards and continuous effects of this unit, at the start of the turn or on Ravage) add 1 Hit to Shadow of the Moon and Shadow of the Moon+."
+    },
+    {
+      "name": "Initiation",
+      "definition": "At the start of battle, place this card at the top of Draw Pile."
+    },
+    {
+      "name": "Inquiry",
+      "definition": "Inquiry Synergy: Apply effect based on the total number of [ Inquiry ] talents possessed by allies."
+    },
+    {
+      "name": "Inspiration",
+      "definition": "When you create a card except Status or Curse cards, 50% chance to create 1 additional card."
+    },
+    {
+      "name": "Inspiration:",
+      "definition": "When this card is moved to hand by Ability, enable Inspiration. Excludes draw at the start of the turn."
+    },
+    {
+      "name": "Instinct Weakness",
+      "definition": "Apply Weakness Attack to Instinct Cards. When another Attribute Weakness is applied, remove Instinct Weakness."
+    },
+    {
+      "name": "Ionization",
+      "definition": "+8% Damage Amount taken for each Ionization, and +4% additional Damage Amount taken from Hilde for each Ionization (max 12 stack(s))."
+    },
+    {
+      "name": "Kyrken's Aegis",
+      "definition": "Increase Damage Amount of Attack Cards by 20%, and increase final Damage Amount of Flicker Blade by 15%."
+    },
+    {
+      "name": "Launcher Bullet",
+      "definition": "Armor-Piercing Rounds, Explosive Shot, Dispersing Shot, Flame Shot, Cold Shot. These are Launcher Bullets."
+    },
+    {
+      "name": "Lead",
+      "definition": "At the start of the turn, 50% chance to decrease Cost of this card by 1. When a different card is used, remove effect."
+    },
+    {
+      "name": "Light",
+      "definition": "At the start of the turn, move this card to hand and place it on the leftmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+    },
+    {
+      "name": "Linked",
+      "definition": "When this card is used, Discard all other Linked cards in hand."
+    },
+    {
+      "name": "Lux Blessing",
+      "definition": "Fixed Damage equal to Damage blocked by Shield, and increase Damage Amount by 50% for each Lux Engraving. On effect activation, decrease by 1."
+    },
+    {
+      "name": "Mark",
+      "definition": "When an Attack Card is activated, inflict 100% Extra Attack, inflict Tenacity Damage equal to 0 Cost, and decrease Mark by 1."
+    },
+    {
+      "name": "Memory",
+      "definition": "This card cannot spark an Epiphany, be Duplicated or Removed, or be moved to hand."
+    },
+    {
+      "name": "Metallization",
+      "definition": "When Shield is gained through an ability, 80% Defense-Based Damage to a random enemy, 80% Shield, and decrease Metallization by 1."
+    },
+    {
+      "name": "Morale",
+      "definition": "+20% Damage Amount for each Morale."
+    },
+    {
+      "name": "Morale Leech",
+      "definition": "Decrease Morale of the target by 1, increase ally Morale by 1."
+    },
+    {
+      "name": "Next Turn Draw",
+      "definition": "After 1 turn(s), gain 1 Draw at the start of the turn."
+    },
+    {
+      "name": "Opener",
+      "definition": "At the start of battle, proc this card by using AP. If AP is insufficient, does not proc."
+    },
+    {
+      "name": "Passion Weakness",
+      "definition": "Apply Weakness Attack to Passion Cards. When another Attribute Weakness is applied, remove Passion Weakness."
+    },
+    {
+      "name": "Performance Buzz",
+      "definition": "At the end of the turn, 100% Damage × Performance Buzz count to random enemies. At the end of the turn, remove Performance Buzz (max 10 stacks)."
+    },
+    {
+      "name": "Piercing Damage",
+      "definition": "Damage that ignores Shield."
+    },
+    {
+      "name": "Predation",
+      "definition": "If in a Voracity state, +80% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1."
+    },
+    {
+      "name": "Proc",
+      "definition": "Activating a card through an effect."
+    },
+    {
+      "name": "Pulverize",
+      "definition": "When hitting a target holding Shield, increase Damage Amount by 20%."
+    },
+    {
+      "name": "Purity:",
+      "definition": "When no cards of other Attributes are in hand, enable this effect."
+    },
+    {
+      "name": "Quietus",
+      "definition": "When this card is Discarded, proc this card. This card cannot be moved from the Activated Pile for this turn."
+    },
+    {
+      "name": "Rapacity",
+      "definition": "Also treat Damage dealt by this card as DoT. When Fracture or Agony is applied through an ability, increase Rapacity by 1. When Reckoning is activated, reset Rapacity stack count. Max X stacks."
+    },
+    {
+      "name": "Ravage:",
+      "definition": "When the monster's Tenacity is fully reduced, activate effect. On Ravage, gain 1 Action Point."
+    },
+    {
+      "name": "Recover",
+      "definition": "Increase current HP."
+    },
+    {
+      "name": "Reload",
+      "definition": "Increase Damage Amount of Ballista cards by 50%. At the end of the turn, remove Reload (max 3 stacks)."
+    },
+    {
+      "name": "Remove",
+      "definition": "When this card is activated, completely remove it from Deck. This card cannot be saved."
+    },
+    {
+      "name": "Resolve",
+      "definition": "+20% Shield Gain Amount for each Resolve."
+    },
+    {
+      "name": "Resonance",
+      "definition": "On card Discard, 80% Extra Attack, then decrease Resonance by 1."
+    },
+    {
+      "name": "Retain",
+      "definition": "This card is not discarded at the end of the turn."
+    },
+    {
+      "name": "Retain Counterattack",
+      "definition": "When Counterattack is activated, does not decrease Counterattack."
+    },
+    {
+      "name": "Retain Dark Mist Stance",
+      "definition": "For 1 turn, when an Attack Card of a different Combatant is activated, retain Dark Mist Stance."
+    },
+    {
+      "name": "Retain:",
+      "definition": "When this card is Retained, activate effect."
+    },
+    {
+      "name": "Retrieve",
+      "definition": "If this card moves to the Graveyard, return it to hand. Upon activation, remove Retrieve."
+    },
+    {
+      "name": "Scorched",
+      "definition": "When Action Count is decreased, the amount decreased × 80% DoT (max 10 stack(s)). On effect activation, decrease by 1, and at the end of the turn, remove effect."
+    },
+    {
+      "name": "Shattered Memory",
+      "definition": "This card cannot spark an Epiphany or be Duplicated. This card is not included in battle."
+    },
+    {
+      "name": "Shattering",
+      "definition": "When a DoT effect of the target is activated, inflict Fixed Damage equal to 30% of Damage Amount taken (this Damage cannot inflict a Critical Hit). At the end of the turn, decrease Shattering by 1."
+    },
+    {
+      "name": "Shield",
+      "definition": "Decrease Damage Amount taken until the next turn."
+    },
+    {
+      "name": "Shield Break",
+      "definition": "An effect that is activated when Shield of a target is removed through a card."
+    },
+    {
+      "name": "Shield Retention",
+      "definition": "At the end of the turn, Retain Shield equal to the current amount. When multiple instances exist, only the highest value is applied."
+    },
+    {
+      "name": "Shockwave",
+      "definition": "For X turn(s), increase Tenacity Damage taken of the target by 2x, and if in a Ravage state, +50% Damage Amount taken."
+    },
+    {
+      "name": "Silver Veil",
+      "definition": "When Silver Veil reaches 3 stacks, 500% Defense-Based Damage to all enemies. On activation, remove Silver Veil."
+    },
+    {
+      "name": "Spore Propagation",
+      "definition": "Increase Damage Amount taken by 5%. On effect activation, remove all Spore Propagation (max 20 stacks)."
+    },
+    {
+      "name": "Streak:",
+      "definition": "If the last card used was of the same Attribute, enable effect."
+    },
+    {
+      "name": "Survival",
+      "definition": "Survival Synergy: Apply effect based on the total number of [ Survival ] talents possessed by allies."
+    },
+    {
+      "name": "Tenacity",
+      "definition": "Represents the Tenacity level of the monster. Decreases when attacked, decreases further when attacked with a weakness attribute."
+    },
+    {
+      "name": "Tenacity Damage",
+      "definition": "Damage dealt to a monster's Tenacity."
+    },
+    {
+      "name": "Turn Draw",
+      "definition": "At the start of the turn, automatically Draw 5."
+    },
+    {
+      "name": "Unactivatable",
+      "definition": "This card cannot be activated."
+    },
+    {
+      "name": "Unique",
+      "definition": "Only 1 of each Unique card can be included in the Deck."
+    },
+    {
+      "name": "Voracity",
+      "definition": "When Hitting with an Attack Card, 40% Fixed Heal. If Health is 50% or higher, +30% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1. (max 30 stacks)."
+    },
+    {
+      "name": "Vulnerable",
+      "definition": "Damage taken increased by 50%. Upon activation, decrease Vulnerable by 1."
+    },
+    {
+      "name": "Wave",
+      "definition": "If Wave is 3, gain 1 Action Points and reduce Wave by 3."
+    },
+    {
+      "name": "Weaken",
+      "definition": "Decrease Damage Amount by 25%. When the effect is activated, decrease Weaken by 1."
+    },
+    {
+      "name": "Weakness Attack",
+      "definition": "This card's attack is applied as Weakness."
+    },
+    {
+      "name": "Weakness Attack:",
+      "definition": "When this card is used to attack the target's weakness, activate effect."
+    },
+    {
+      "name": "Will-O'-Wisp",
+      "definition": "When 5 Will-O-Wisp are gained, create 1 Shadow of the Moon. When the effect is activated, decrease Will-O-Wisp by 5."
+    },
+    {
+      "name": "Zero In",
+      "definition": "At the end of the turn, 35% Extra Attack to the enemy with the highest HP for each Zero In, and on effect activation, remove Zero In (max 60 stack(s))."
+    }
+  ],
+  "card_links": [
+    {
+      "name": "Adagio",
+      "id": "c_1003_uni3"
+    },
+    {
+      "name": "Advanced Shadow Dagger",
+      "id": "c_1009_cre2"
+    },
+    {
+      "name": "Anchor Shot",
+      "id": "c_1062_srt4"
+    },
+    {
+      "name": "Archetype: □",
+      "id": "c_30084_cre3"
+    },
+    {
+      "name": "Ballista",
+      "id": "c_1033_cre1"
+    },
+    {
+      "name": "Celestial Wrath",
+      "id": "card_ds05_00008"
+    },
+    {
+      "name": "Charged Shot",
+      "id": "c_1040_uni1"
+    },
+    {
+      "name": "Contaminated Spore",
+      "id": "card_ds02_00009"
+    },
+    {
+      "name": "Creation and Destruction",
+      "id": "c_30084_uni2"
+    },
+    {
+      "name": "Cupid Shot",
+      "id": "c_1061_cre3"
+    },
+    {
+      "name": "Dark Mist Secret Art: Annihilation",
+      "id": "c_1018_uni2"
+    },
+    {
+      "name": "Dark Mist Secret Art: Black Dance",
+      "id": "c_1018_uni4"
+    },
+    {
+      "name": "Dirge Bullet",
+      "id": "c_1041_cre1"
+    },
+    {
+      "name": "Doggie",
+      "id": "c_1055_cre1"
+    },
+    {
+      "name": "Doggie (Morphed)",
+      "id": "c_1055_cre4"
+    },
+    {
+      "name": "Doggie (Pack)",
+      "id": "c_1055_cre3"
+    },
+    {
+      "name": "Effulgent Blade",
+      "id": "c_30093_cre1"
+    },
+    {
+      "name": "Effulgent Release",
+      "id": "c_30093_uni4_mut1"
+    },
+    {
+      "name": "Enhanced Ballista",
+      "id": "c_1033_cre3"
+    },
+    {
+      "name": "Fate Imprint",
+      "id": "c_30097_cre1"
+    },
+    {
+      "name": "Fracturing Memories",
+      "id": "card_ab_00039"
+    },
+    {
+      "name": "Giant Ballista",
+      "id": "c_1033_cre4"
+    },
+    {
+      "name": "Heart Breaker",
+      "id": "c_1061_cre1"
+    },
+    {
+      "name": "Heart Shaker",
+      "id": "c_1061_cre2"
+    },
+    {
+      "name": "Heavensfall",
+      "id": "c_30048_cre1"
+    },
+    {
+      "name": "Hew",
+      "id": "c_30047_srt4"
+    },
+    {
+      "name": "Hew (Ambush) Lv. 1",
+      "id": "c_30047_srt4_rsp5_mut"
+    },
+    {
+      "name": "Hew (Extreme) Lv. 1",
+      "id": "c_30047_srt4_rsp2_mut"
+    },
+    {
+      "name": "Hew (Flash) Lv. 1",
+      "id": "c_30047_srt4_rsp3_mut"
+    },
+    {
+      "name": "Hew (Ironclad) Lv. 1",
+      "id": "c_30047_srt4_rsp1_mut"
+    },
+    {
+      "name": "Hew (Massacre) Lv. 1",
+      "id": "c_30047_srt4_rsp4_mut"
+    },
+    {
+      "name": "Hew Lv. 1",
+      "id": "c_30047_srt4_mut"
+    },
+    {
+      "name": "Homing Arrow",
+      "id": "c_30113_cre1"
+    },
+    {
+      "name": "Homing Arrow (Fracture)",
+      "id": "c_30113_cre2"
+    },
+    {
+      "name": "Homing Arrow (Grand)",
+      "id": "c_30113_cre3"
+    },
+    {
+      "name": "Homing Laser",
+      "id": "c_30075_srt4"
+    },
+    {
+      "name": "Homing Laser L",
+      "id": "c_30075_srt4_mut"
+    },
+    {
+      "name": "Horrifying Memory",
+      "id": "card_ab_00020"
+    },
+    {
+      "name": "Inferno Rhapsody",
+      "id": "c_30048_cre2"
+    },
+    {
+      "name": "Inferno Rhapsody: Heaven",
+      "id": "c_30048_cre3"
+    },
+    {
+      "name": "Judgment",
+      "id": "card_arena_00007"
+    },
+    {
+      "name": "Mealtime",
+      "id": "c_1052_uni4"
+    },
+    {
+      "name": "Micro Ballista",
+      "id": "c_1033_cre6"
+    },
+    {
+      "name": "Moonslash",
+      "id": "c_1060_srt1"
+    },
+    {
+      "name": "Opening Found",
+      "id": "c_1040_srt4"
+    },
+    {
+      "name": "Overload",
+      "id": "card_ab_00014"
+    },
+    {
+      "name": "Piercing Ballista",
+      "id": "c_1033_cre2"
+    },
+    {
+      "name": "Reckoning",
+      "id": "c_30117_uni4_mut1"
+    },
+    {
+      "name": "Rhythm",
+      "id": "c_1069_cre1"
+    },
+    {
+      "name": "Rhythm: Arpeggio",
+      "id": "c_1069_cre6"
+    },
+    {
+      "name": "Rhythm: Crescendo",
+      "id": "c_1069_cre2"
+    },
+    {
+      "name": "Rhythm: Fermata",
+      "id": "c_1069_cre5"
+    },
+    {
+      "name": "Rhythm: Fortissimo",
+      "id": "c_1069_cre4"
+    },
+    {
+      "name": "Rhythm: Staccato",
+      "id": "c_1069_cre3"
+    },
+    {
+      "name": "Rift of Severance",
+      "id": "c_30117_srt4"
+    },
+    {
+      "name": "Shadow Dagger",
+      "id": "c_1009_cre1"
+    },
+    {
+      "name": "Shadow of the Moon",
+      "id": "c_1060_uni4"
+    },
+    {
+      "name": "Shadow of the Moon+",
+      "id": "c_1060_uni4_lbk_mut"
+    },
+    {
+      "name": "Shard:Dark",
+      "id": "c_30134_srt4_mut2"
+    },
+    {
+      "name": "Shard:Dark (Aegis)",
+      "id": "c_30134_srt4_rsp3_mut2"
+    },
+    {
+      "name": "Shard:Dark (Amped)",
+      "id": "c_30134_srt4_rsp1_mut2"
+    },
+    {
+      "name": "Shard:Dark (Blink)",
+      "id": "c_30134_srt4_rsp4_mut2"
+    },
+    {
+      "name": "Shard:Dark (Cycle)",
+      "id": "c_30134_srt4_rsp2_mut2"
+    },
+    {
+      "name": "Shard:Dark (Unbound)",
+      "id": "c_30134_srt4_rsp5_mut2"
+    },
+    {
+      "name": "Shard:Light",
+      "id": "c_30134_srt4_mut1"
+    },
+    {
+      "name": "Shard:Light (Aegis)",
+      "id": "c_30134_srt4_rsp3_mut1"
+    },
+    {
+      "name": "Shard:Light (Amped)",
+      "id": "c_30134_srt4_rsp1_mut1"
+    },
+    {
+      "name": "Shard:Light (Blink)",
+      "id": "c_30134_srt4_rsp4_mut1"
+    },
+    {
+      "name": "Shard:Light (Cycle)",
+      "id": "c_30134_srt4_rsp2_mut1"
+    },
+    {
+      "name": "Shard:Light (Unbound)",
+      "id": "c_30134_srt4_rsp5_mut1"
+    },
+    {
+      "name": "Shelling Ballista",
+      "id": "c_1033_cre5"
+    },
+    {
+      "name": "Source of Water",
+      "id": "c_1039_srt4"
+    },
+    {
+      "name": "Spotlight",
+      "id": "c_1069_uni1"
+    },
+    {
+      "name": "Strike",
+      "id": "c_1027_srt1"
+    },
+    {
+      "name": "Sturdie ★★★",
+      "id": "c_1024_cre9"
+    },
+    {
+      "name": "Sword Tassel",
+      "id": "c_30134_cre1"
+    },
+    {
+      "name": "Teddy",
+      "id": "c_1055_cre2"
+    },
+    {
+      "name": "Vulture Ejection",
+      "id": "c_1008_srt4"
+    },
+    {
+      "name": "Wind Charge",
+      "id": "c_1050_srt4"
+    }
+  ],
+  "linked_cards": [
+    {
+      "id": "c_1009_cre1",
+      "name": "Shadow Dagger",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Exhaust] 80% Damage. 2 Agony.",
+      "image": "deck-builder/data/combatants/tressa/c_1009_cre1.webp"
+    },
+    {
+      "id": "c_1009_cre2",
+      "name": "Advanced Shadow Dagger",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Retain] [Exhaust] 4 Agony. 50% Damage. +10% Damage Amount for each Agony on the target.",
+      "image": "deck-builder/data/combatants/tressa/c_1009_cre2.webp"
+    },
+    {
+      "id": "c_1024_cre9",
+      "name": "Sturdie ★★★",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Exhaust] [Retain] [Creation] 350% Shield. Retain: Heal 200%.",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre9.webp"
+    },
+    {
+      "id": "c_1033_cre1",
+      "name": "Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 150% Extra Attack to a random enemy. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre1.webp"
+    },
+    {
+      "id": "c_1033_cre2",
+      "name": "Piercing Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 200% Piercing Damage to a random enemy. If the target possesses Shield, +50% Damage Amount. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre2.webp"
+    },
+    {
+      "id": "c_1033_cre3",
+      "name": "Enhanced Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 200% Extra Attack to a random enemy. +30% Critical Chance. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre3.webp"
+    },
+    {
+      "id": "c_1033_cre4",
+      "name": "Giant Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 150% Extra Attack to all enemies. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre4.webp"
+    },
+    {
+      "id": "c_1033_cre5",
+      "name": "Shelling Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 100% Extra Attack to random enemies. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre5.webp"
+    },
+    {
+      "id": "c_1033_cre6",
+      "name": "Micro Ballista",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Ephemeral] [Ballista] 40% Extra Attack to a random enemy. At the end of the turn, proc.",
+      "image": "deck-builder/data/combatants/veronica/c_1033_cre6.webp"
+    },
+    {
+      "id": "c_1041_cre1",
+      "name": "Dirge Bullet",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Bullet] [Exhaust] 160% Damage. When moved to Discard Pile, 120% Extra Attack to a random enemy.",
+      "image": "deck-builder/data/combatants/renoa/c_1041_cre1.webp"
+    },
+    {
+      "id": "c_1055_cre1",
+      "name": "Doggie",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Haste] [Blessing] 60% Defense-Based Damage.",
+      "image": "deck-builder/data/combatants/adelheid/c_1055_cre1.webp"
+    },
+    {
+      "id": "c_1055_cre2",
+      "name": "Teddy",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Haste] [Blessing] 200% Shield. 2 Damage Reduction.",
+      "image": "deck-builder/data/combatants/adelheid/c_1055_cre2.webp"
+    },
+    {
+      "id": "c_1055_cre3",
+      "name": "Doggie (Pack)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Blessing] [Linked] [Quietus] 200% Defense-Based Damage. Increase Damage Amount by 50% for each Doggie in hand before activation.",
+      "image": "deck-builder/data/combatants/adelheid/c_1055_cre3.webp"
+    },
+    {
+      "id": "c_1055_cre4",
+      "name": "Doggie (Morphed)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Haste] [Blessing] 90% Defense-Based Damage. When an Attack Card is used, change this card into Teddy (Morphed).",
+      "image": "deck-builder/data/combatants/adelheid/c_1055_cre4.webp"
+    },
+    {
+      "id": "c_1060_uni4_lbk_mut",
+      "name": "Shadow of the Moon+",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Unique] [Retain] 200% Damage × 2. Recover 8% of Max HP. +80% Damage Amount for each Bind stack.",
+      "image": "deck-builder/data/combatants/chizuru/c_1060_uni4.webp"
+    },
+    {
+      "id": "c_1061_cre1",
+      "name": "Heart Breaker",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Bullet] [Haste] [Exhaust] 80% Damage. Discard 1 random Bullet card(s). If this card is Discarded, 120% Extra Attack to a random enemy.",
+      "image": "deck-builder/data/combatants/diana/c_1061_cre1.webp"
+    },
+    {
+      "id": "c_1061_cre2",
+      "name": "Heart Shaker",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Bullet] [Haste] [Exhaust] 1 Resonance. Discard 1 random card(s) in Draw Pile. When this card is Discarded, 2 Resonance to a random enemy.",
+      "image": "deck-builder/data/combatants/diana/c_1061_cre2.webp"
+    },
+    {
+      "id": "c_1061_cre3",
+      "name": "Cupid Shot",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Bullet] [Quietus] 120% Damage. 60% Extra Attack × Bullet card count in hand to a random enemy.",
+      "image": "deck-builder/data/combatants/diana/c_1061_cre3.webp"
+    },
+    {
+      "id": "c_1069_cre1",
+      "name": "Rhythm",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Rhythm Cards] 60% Damage. +30% base Damage Amount for each Rhythm. Proc 1 Rhythm in hand.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre1.webp"
+    },
+    {
+      "id": "c_1069_cre2",
+      "name": "Rhythm: Crescendo",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Rhythm Cards] 180% Damage. +40% base Damage Amount for each Rhythm in Graveyard. For 1 turn, decrease Cost of the next Rhythm card activated by 1.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre2.webp"
+    },
+    {
+      "id": "c_1069_cre3",
+      "name": "Rhythm: Staccato",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Rhythm Cards] 80% Damage. +50% base Damage Amount for each Rhythm. If the last card activated was a Rhythm card, increase Cost by 1.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre3.webp"
+    },
+    {
+      "id": "c_1069_cre4",
+      "name": "Rhythm: Fortissimo",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Linked] [Retain] [Rhythm Cards] 90% Damage. +55% base Damage Amount for each Linked Rhythm before activation. When 3 or more cards are Linked, add 1 Hit.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre4.webp"
+    },
+    {
+      "id": "c_1069_cre5",
+      "name": "Rhythm: Fermata",
+      "cost": 1,
+      "card_type": "Skill",
+      "description": "[Haste] [Rhythm Cards] Select 1 of 4 Rhythm cards. Change all Rhythm cards into the selected card for 1 turn and Draw 2 of them.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre5.webp"
+    },
+    {
+      "id": "c_1069_cre6",
+      "name": "Rhythm: Arpeggio",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Rhythm Cards] 15% Damage for each Rhythm. Draw 1 of the lowest-Cost Rhythm cards and decrease Cost by 1 until activated.",
+      "image": "deck-builder/data/combatants/tenebria/c_1069_cre6.webp"
+    },
+    {
+      "id": "c_30047_srt4_mut",
+      "name": "Hew Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Exhaust] [Ephemeral] 420% Defense-Based Damage. Incinerate: Create 1 Hew Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30047_srt4_rsp1_mut",
+      "name": "Hew (Ironclad) Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Exhaust] [Ephemeral] 480% Defense-Based Damage. 200% Shield. Incinerate: Create 1 Hew (Ironclad) Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30047_srt4_rsp2_mut",
+      "name": "Hew (Extreme) Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Exhaust] [Ephemeral] 360% Defense-Based Damage. Incinerate: Create 1 Hew (Extreme) Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30047_srt4_rsp3_mut",
+      "name": "Hew (Flash) Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Ignition] [Exhaust] [Retain] 480% Defense-Based Damage. Incinerate: Create 1 Hew (Flash) Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30047_srt4_rsp4_mut",
+      "name": "Hew (Massacre) Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Exhaust] [Ephemeral] 480% Defense-Based Damage to all enemies. Decrease Damage Amount by 10% for each target. Incinerate: Create 1 Hew (Massacre) Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30047_srt4_rsp5_mut",
+      "name": "Hew (Ambush) Lv. 1",
+      "cost": 3,
+      "card_type": "Attack",
+      "description": "[Unique] [Exhaust] [Retain] 480% Defense-Based Damage. On ally Counterattack, proc this card. Incinerate: Create 1 Hew (Ambush) Lv. 2.",
+      "image": "deck-builder/data/combatants/nine/c_30047_srt4.webp"
+    },
+    {
+      "id": "c_30048_cre1",
+      "name": "Heavensfall",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Ephemeral] [Exhaust] 100% Damage × 3.",
+      "image": "deck-builder/data/combatants/fei/c_30048_cre1.webp"
+    },
+    {
+      "id": "c_30048_cre2",
+      "name": "Inferno Rhapsody",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "70% Damage. 1 Flame Arts. When Flame Arts is activated through this card, Draw 1.",
+      "image": "deck-builder/data/combatants/fei/c_30048_cre2.webp"
+    },
+    {
+      "id": "c_30048_cre3",
+      "name": "Inferno Rhapsody: Heaven",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "110% Damage. 1 Flame Arts. When Flame Arts is activated through this card, 3 Descent.",
+      "image": "deck-builder/data/combatants/fei/c_30048_cre3.webp"
+    },
+    {
+      "id": "c_30075_srt4_mut",
+      "name": "Homing Laser L",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Exhaust 2] 60% Damage. 1 Afterglow. On Ravage, move from Graveyard to hand.",
+      "image": "deck-builder/data/combatants/sereniel/c_30075_srt4.webp"
+    },
+    {
+      "id": "c_30084_cre3",
+      "name": "Archetype: □",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Exhaust] Heal 50%. Draw 1 Archetype card(s).",
+      "image": "deck-builder/data/combatants/tiphera/c_30084_cre3.webp"
+    },
+    {
+      "id": "c_30093_cre1",
+      "name": "Effulgent Blade",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Linked] 120% Damage. When this card is Discarded, 120% Extra Attack to a random enemy. This card does not move to Draw Pile on Shuffle.",
+      "image": "deck-builder/data/combatants/heidemarie/c_30093_cre1.webp"
+    },
+    {
+      "id": "c_30093_uni4_mut1",
+      "name": "Effulgent Release",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unique] 500% Damage. Exhaust all Effulgent Blade in Graveyard, then +100% base Damage Amount for each Exhausted. At the end of the turn, change this card into Effulgent Compression.",
+      "image": "deck-builder/data/combatants/heidemarie/c_30093_uni4_mut1.webp"
+    },
+    {
+      "id": "c_30097_cre1",
+      "name": "Fate Imprint",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Retain] [Exhaust] 120% Damage for each Cost of this card. Increase Cost of all Fate Imprint in hand by 1. When this card leaves the hand, change Cost to 2.",
+      "image": "deck-builder/data/combatants/rita/c_30097_cre1.webp"
+    },
+    {
+      "id": "c_30113_cre1",
+      "name": "Homing Arrow",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Exhaust] 120% Extra Attack to the enemy with the lowest HP. Draw 1. Attunement: Proc this card.",
+      "image": "deck-builder/data/combatants/hilde/c_30113_cre1.webp"
+    },
+    {
+      "id": "c_30113_cre2",
+      "name": "Homing Arrow (Fracture)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Exhaust] 50% Extra Attack to all enemies. 1 Fracture. Draw 1. Attunement: Proc this card.",
+      "image": "deck-builder/data/combatants/hilde/c_30113_cre2.webp"
+    },
+    {
+      "id": "c_30113_cre3",
+      "name": "Homing Arrow (Grand)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unactivatable] [Exhaust] 500% Extra Attack to the enemy with the highest HP. Draw 1. Attunement: Proc this card.",
+      "image": "deck-builder/data/combatants/hilde/c_30113_cre3.webp"
+    },
+    {
+      "id": "c_30117_uni4_mut1",
+      "name": "Reckoning",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Unique] [Rapacity 30] 400% Damage. +20% base Damage Amount for each Rapacity. Activate Agony and Fracture inflicted by this unit. When this card is activated, change into End of the Line.",
+      "image": "deck-builder/data/combatants/olga/c_30117_uni4_mut1.webp"
+    },
+    {
+      "id": "c_30134_cre1",
+      "name": "Sword Tassel",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Unactivatable] [Retain] When coalesced into the Equilux card, for each stack, +80% base Damage Amount to the Equilux card for 1 turn (currently%).",
+      "image": "deck-builder/data/combatants/rossweisse/c_30134_cre1.webp"
+    },
+    {
+      "id": "c_30134_srt4_mut1",
+      "name": "Shard:Light",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] 80% Damage to a random enemy. Create 1 Sword Tassel. When 1 card of this unit is activated, activate effect (2 times per turn).",
+      "image": "deck-builder/data/combatants/rossweisse/c_30134_srt4_mut1.webp"
+    },
+    {
+      "id": "c_30134_srt4_mut2",
+      "name": "Shard:Dark",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] 80% Damage to a random enemy. Create 1 Sword Tassel. When 2 cards of other Combatants are activated, activate effect (2 times per turn).",
+      "image": "deck-builder/data/combatants/rossweisse/c_30134_srt4_mut2.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp1_mut1",
+      "name": "Shard:Light (Amped)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 1 card of this unit is activated, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_06.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp1_mut2",
+      "name": "Shard:Dark (Amped)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When 2 cards of other Combatants are activated, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp2_mut1",
+      "name": "Shard:Light (Cycle)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When a card is Discarded through an ability, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_06.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp2_mut2",
+      "name": "Shard:Dark (Cycle)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. On Draw through an ability, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp3_mut1",
+      "name": "Shard:Light (Aegis)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] 240% Damage to a random enemy. Create 1 Sword Tassel. When attacked, activate effect (1 time per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_06.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp3_mut2",
+      "name": "Shard:Dark (Aegis)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] 240% Damage to a random enemy. Create 1 Sword Tassel. When Shield is gained through an ability, activate effect (1 time per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp4_mut1",
+      "name": "Shard:Light (Blink)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] [Retrieve] 240% Damage. Create 1 Sword Tassel. Discard 1 random Status Ailment or Curse Card(s) in hand.",
+      "image": "encyclopedia/data/card-art/unique_30134_06.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp4_mut2",
+      "name": "Shard:Dark (Blink)",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] [Retrieve] 240% Damage. Create 1 Sword Tassel. Discard 1 card(s) of a random different Combatant in hand.",
+      "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp5_mut1",
+      "name": "Shard:Light (Unbound)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Light] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When AP is gained through an ability, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_06.webp"
+    },
+    {
+      "id": "c_30134_srt4_rsp5_mut2",
+      "name": "Shard:Dark (Unbound)",
+      "cost": 2,
+      "card_type": "Attack",
+      "description": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When a 1-Cost or higher card is activated, activate effect (2 times per turn).",
+      "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    }
   ]
 }

@@ -27,9 +27,9 @@ TEXT = {
     "card@name@c_1003_srt1_rsp1": "Strike",
     "card@desc@c_1003_srt1_rsp1": "#result_coeff_ev_0# Damage, twice",
     "card@name@c_1003_uni1": "G Chord",
-    "card@desc@c_1003_uni1": "Draw 1",
+    "card@desc@c_1003_uni1": "Gain $Spore Propagation#1$ and $Wave$<br>Create <cc><u>Contaminated Spore</u></> and <cc><u>Echo</u></>",
     "card@name@c_1003_eps": "Finale",
-    "card@desc@c_1003_eps": "Draw 2",
+    "card@desc@c_1003_eps": "^TRIGGER_EXHAUST^ Draw 2<br>Create ^card@card_ab_2^ and <cc><u>Heavy Bash</u></>",
     "card@name@card_ne_1": "Heavy Bash",
     "card@desc@card_ne_1": "#result_coeff_ev_0# Damage",
     "card@name@card_mon_1": "Shy Gardener",
@@ -38,6 +38,21 @@ TEXT = {
     "card@desc@card_ds05_a_1": "#result_coeff_ev_0# Damage to all enemies",
     "card@name@card_ab_1": "Bleed",
     "card@desc@card_ab_1": "Unplayable",
+    "card@name@card_ds02_9": "Contaminated Spore",
+    "card@desc@card_ds02_9": "Lose 1 Health",
+    "card@name@card_ab_2": "Horrifying Memory",
+    "card@desc@card_ab_2": "Unplayable",
+    "card@name@c_2001_cre1": "Echo",
+    "card@name@card_mon_2": "Echo",
+    "tooltip@title@t_spore": "Spore Propagation",
+    "tooltip@desc@t_spore": "For #tv# turn(s), spread <cc>1</> spore<br>#synergy_ds04_01#",
+    "tooltip@title@t_wave": "Wave",
+    "tooltip@title@trigger_exhaust": "Incinerate:",
+    "tooltip@desc@trigger_exhaust": "When this card is $Exhaust$ed, activate effect",
+    "tooltip@title@talent_ignite": "Ignition",
+    "tooltip@desc@talent_ignite": "If a card is Exhausted, decrease Cost of this card by <cc>1</>",
+    "tooltip@title@talent_exhaust": "Exhaust",
+    "tooltip@desc@talent_exhaust": "When this card is activated, move to Exhaust Pile",
     "card_atk": "Attack",
     "card_skill": "Skill",
     "card_power": "Power",
@@ -121,12 +136,24 @@ def _context(root: Path) -> Context:
             _card("c_1003_srt1"),
             _card("c_1003_srt1_rsp1"),
             _card("c_1003_uni1", "CARD_SKILL", cost="-1"),
-            _card("c_1003_eps", "CARD_SKILL"),
+            _card("c_1003_eps", "CARD_SKILL", talent="[TALENT_IGNITE,TALENT_EXHAUST_2]"),
             _card("c_1003_col", "CARD_SKILL"),
+            _card("c_2001_cre1"),
         ],
         "card(public)@card.json": [_card("card_ne_1")],
-        "card(monster)@card.json": [_card("card_mon_1", "CARD_SKILL", sort="SORT_MONSTER_UNIQUE", rarity="RARITY_RARE")],
-        "card(etc)@card.json": [_card("card_ab_1", "CARD_CURSE", sort="SORT_NEGATIVE", desc="none", talent="[TALENT_UNPLAYABLE]")],
+        "card(season)@card.json": [_card("card_ds02_9", "CARD_CURSE", cost="0")],
+        "card(monster)@card.json": [_card("card_mon_1", "CARD_SKILL", sort="SORT_MONSTER_UNIQUE", rarity="RARITY_RARE"), _card("card_mon_2")],
+        "card(etc)@card.json": [
+            _card("card_ab_1", "CARD_CURSE", sort="SORT_NEGATIVE", desc="none", talent="[TALENT_UNPLAYABLE]"),
+            _card("card_ab_2", "CARD_CURSE", sort="SORT_NEGATIVE"),
+        ],
+        "tooltip@tooltip.json": [
+            {"id": "T_SPORE", "title": "tooltip@title@t_spore", "desc": "tooltip@desc@t_spore", "link_cs_id": "none"},
+            {"id": "T_WAVE", "title": "tooltip@title@t_wave", "desc": "none", "link_cs_id": "none"},
+            {"id": "TRIGGER_EXHAUST", "title": "tooltip@title@trigger_exhaust", "desc": "tooltip@desc@trigger_exhaust", "link_cs_id": "none"},
+            {"id": "TALENT_IGNITE", "title": "tooltip@title@talent_ignite", "desc": "tooltip@desc@talent_ignite", "link_cs_id": "none"},
+            {"id": "TALENT_EXHAUST", "title": "tooltip@title@talent_exhaust", "desc": "tooltip@desc@talent_exhaust", "link_cs_id": "none"},
+        ],
         "memory_grade_define@card.json": [_card("card_ds05_a_1", "CARD_POWER", cost="0")],
         "card(public)@skill_eff.json": [{"id": "eff_dmg", "eff": "SKILL_EFF_DMG", "eff_attr": "[]", "eff_value": "200"}],
         "card(ikarus)@card_r_spark.json": [{"id": "rsp1_c_1003_srt1", "link_card_id": "c_1003_srt1", "change_link_card_id": "c_1003_srt1_rsp1"}],
@@ -218,3 +245,44 @@ def test_reuses_deck_builder_art_and_adds_the_rest(tmp_path):
     assert added == {"src/pages/encyclopedia/data/card-art/art_card_ds05_a_1.webp", "src/pages/encyclopedia/data/card-art/art_card_ab_1.webp"}
     # Added art keeps the client illustration's own size.
     assert {Image.open(io.BytesIO(data)).size for data in result.new_files.values()} == {(42, 63)}
+
+
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# //////////////////////////////////////////////////////////////////////////////////////////////////
+# Keywords and card links
+
+
+def test_collects_the_keywords_the_card_text_marks_with_their_definitions(tmp_path):
+    document, _, _, _ = _built(_context(tmp_path))
+    # Marked keywords, triggers (which keep their colon) and traits. Wave has no definition, so it is left out.
+    # Battle-only values read X, and lines that are only such a value are dropped.
+    assert document["keywords"] == [
+        {"name": "Exhaust", "definition": "When this card is activated, move to Exhaust Pile."},
+        {"name": "Ignition", "definition": "If a card is Exhausted, decrease Cost of this card by 1."},
+        {"name": "Incinerate:", "definition": "When this card is Exhausted, activate effect."},
+        {"name": "Spore Propagation", "definition": "For X turn(s), spread 1 spore."},
+    ]
+
+
+def test_links_the_cards_the_card_text_names(tmp_path):
+    document, _, _, _ = _built(_context(tmp_path))
+    # Echo names cards of two different families, so it is not linked.
+    assert document["card_links"] == [
+        {"name": "Contaminated Spore", "id": "card_ds02_9"},
+        {"name": "Heavy Bash", "id": "card_ne_1"},
+        {"name": "Horrifying Memory", "id": "card_ab_2"},
+    ]
+
+
+def test_named_cards_missing_from_the_list_are_carried_for_their_preview(tmp_path):
+    document, _, _, _ = _built(_context(tmp_path))
+    linked = {card["id"]: card for card in document["linked_cards"]}
+    assert set(linked) == {"card_ds02_9", "card_ab_2"}
+    assert linked["card_ds02_9"] == {
+        "id": "card_ds02_9",
+        "name": "Contaminated Spore",
+        "cost": 0,
+        "card_type": "Curse",
+        "description": "Lose 1 Health.",
+        "image": None,
+    }

@@ -4,6 +4,9 @@ The Encyclopedia's card list: every card in the game's own card archive, grouped
 The archive lists combatant cards (starting and epiphany cards, plus each one's epiphanies), neutral cards, the cards of
 each Chaos season, monster cards, status ailments and curses. Epiphanies fold into their base card, and each combatant's
 ego skill is added, since the archive leaves it out. Art the deck builder already ships is reused, the rest is added.
+
+The keywords and card names the game marks in card text are listed too, with their definitions and the cards they name,
+so the page can link them.
 """
 
 from __future__ import annotations
@@ -11,13 +14,14 @@ from __future__ import annotations
 import re
 from pathlib import Path
 
+from api.client_db import REPO_ROOT
 from scripts.datagen import epiphany, roster
 from scripts.datagen.art import CLIENT_ART_QUALITY, wanted, webp
 from scripts.datagen.client import parse_list
 from scripts.datagen.naming import card_type, legacy_ids, slug
 from scripts.datagen.overrides import Issue
 from scripts.datagen.runner import Context, TargetResult, json_bytes
-from scripts.datagen.targets import card_art, neutral_cards
+from scripts.datagen.targets import card_art, glossary, neutral_cards
 
 NAME = "encyclopedia_cards"
 OFFLINE = True
@@ -43,7 +47,24 @@ SEASON_KINDS = {"neutral": "neutral", "season_power": "power", "system": "system
 ETC_GROUPS = {"etc_abnorm": "ailment", "etc_curse": "curse"}
 
 _COMBATANT_CARD = re.compile(r"^c_(\d+)_(srt|uni)\d+$")
+_COMBATANT_ID = re.compile(r"^c_(\d+)_")
 _SEASON = re.compile(r"^season_s(\d+)$")
+
+# Card text markers: `$Draw$` or `$Retain#1$` for a keyword, `^TRIGGER_EXHAUST^` for a trigger, `^card@id^` or an
+# underlined name for a card.
+_KEYWORD = re.compile(r"\$([^$#]+)(?:#\d+)?\$")
+_TRIGGER = re.compile(r"\^([A-Z][A-Z0-9_]+)\^")
+_CARD_ID = re.compile(r"\^card@([A-Za-z0-9_]+)\^")
+_UNDERLINED = re.compile(r"<u>(.*?)</u>")
+_TAG = re.compile(r"<[^>]*>")
+_TALENT_COUNT = re.compile(r"^(TALENT_[A-Z_]+?)_(\d+)$")
+# A card's family is its id up to the second "_", such as "c_1055" or "card_ab".
+_FAMILY = re.compile(r"^[^_]+_[^_]+")
+# A battle-only value left in a definition, such as `#tv#`, and a sentence that is only such a value.
+_PLACEHOLDER = re.compile(r"#[A-Za-z0-9_]+#")
+_PLACEHOLDER_SENTENCE = re.compile(r"\s*#[A-Za-z0-9_]+#\.")
+# Keywords shorter than this, such as "X", are left unlinked.
+MIN_KEYWORD_LENGTH = 2
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -68,12 +89,18 @@ def build(ctx: Context) -> TargetResult:
             builder.add_shared(table, archive)
 
     seasons = sorted({card["season"] for card in builder.cards if "season" in card})
+    card_links = builder.card_links()
+    listed = {card["id"] for card in builder.cards}
+    keywords = sorted((name, definition) for name, definition in builder.keywords.items() if definition)
     document = {
         "seasons": [{"number": number, "title": ctx.client.text(f"archive_card@title@season_s{number}") or f"Season {number}"} for number in seasons],
         "characters": [{"id": res_id, "name": character["name"]} for res_id, character in roster.by_name() if res_id in builder.characters],
         "cards": builder.cards,
+        "keywords": [{"name": name, "definition": definition} for name, definition in keywords],
+        "card_links": [{"name": name, "id": card_id} for name, card_id in sorted(card_links.items())],
+        "linked_cards": [builder.linked_card(card_id) for card_id in sorted(set(card_links.values()) - listed)],
     }
-    summary = f"{len(builder.cards)} cards, {len(builder.new_files)} image(s) to add"
+    summary = f"{len(builder.cards)} cards, {len(keywords)} keywords, {len(card_links)} card links, {len(builder.new_files)} image(s) to add"
     return TargetResult({OUTPUT_PATH: json_bytes(document)}, summary, builder.issues, new_files=builder.new_files)
 
 
@@ -94,9 +121,19 @@ class _Builder:
         self.new_files: dict[Path, bytes] = {}
         # Problems found while building.
         self.issues: list[Issue] = []
+        # Keyword name -> its definition, or None when the client has none. Trigger names keep their colon.
+        self.keywords: dict[str, str | None] = {}
         self._extra_rows = {row["id"]: row for shard in EXTRA_CARD_SHARDS for row in ctx.client.rows(shard) if "id" in row}
         self._pool_images = _pool_images(ctx)
         self._folders = card_art.existing_folders()
+        # Tooltip title -> its tooltip ids, in id order.
+        self._tooltips_by_title: dict[str, list[str]] = {}
+        for tooltip_id in sorted(ctx.client.tooltips):
+            title = ctx.client.text(ctx.client.tooltips[tooltip_id].get("title"))
+            if title:
+                self._tooltips_by_title.setdefault(title, []).append(tooltip_id)
+        # Card references found in card text, as (card id, None) or (None, card name), with the referring card row.
+        self._references: list[tuple[str | None, str | None, dict]] = []
 
     def add_combatants(self) -> None:
         """Add each shipped combatant's starting and epiphany cards, then its ego skill, in roster order."""
@@ -157,29 +194,143 @@ class _Builder:
         Returns:
             Whether the card was added. A card missing from the client, or with no name, is left out with a warning.
         """
-        row = self.ctx.client.cards.get(card_id) or self._extra_rows.get(card_id)
-        name = self.ctx.client.text(row.get("name")) if row else None
-        if not name:
+        row = self._row(card_id)
+        if not row or not self.ctx.client.text(row.get("name")):
             self.issues.append(Issue("warning", f"{NAME}: {card_id} is in the card archive but has no card or name in the client"))
             return False
-        resolution = self.ctx.resolver.describe(row)
-        if resolution.unresolved:
-            self.issues.append(Issue("warning", f"{NAME}: {card_id} has unresolved placeholders {resolution.unresolved}"))
-        card = {
-            "id": card_id,
-            "name": self.ctx.text(name, sentences=False),
-            "cost": neutral_cards.parse_cost(row.get("cost")),
-            "card_type": card_type(self.ctx, row.get("card_category")),
-            # A card with no text, such as Wound, still shows its traits.
-            "description": self.ctx.text(resolution.text) or " ".join(f"[{tag}]" for tag in self.ctx.resolver.talent_tags(row)),
-            **fields,
-            "image": image or self._shared_image(row),
-        }
+        card = {**self._card(row), **fields, "image": image or self._shared_image(row)}
         found = epiphany.variants(self.ctx, card_id)[1:]
         if found:
             card["epiphanies"] = [{"level": v.level, "name": v.name, "cost": v.cost, "description": v.text} for v in found]
         self.cards.append(card)
+        base_template = self.ctx.client.text(row.get("desc")) or ""
+        for marked in [row] + [self.ctx.client.cards[v.card_id] for v in found]:
+            self._collect_marks(marked, self.ctx.client.text(marked.get("desc")) or base_template, row)
         return True
+
+    def card_links(self) -> dict[str, str]:
+        """
+        The cards named in card text, by the name the text shows.
+
+        Returns:
+            card name -> card id. A name shared by cards of more than one family is left out, since it is unclear which one
+            the text means. Otherwise a listed card is preferred, then one the referring card creates, then the first by id.
+        """
+        listed = {card["id"] for card in self.cards}
+        by_name: dict[str, list[str]] = {}
+        for card_id in sorted([*self.ctx.client.cards, *self._extra_rows]):
+            name = self.ctx.client.text(self._row(card_id).get("name"))
+            if name:
+                by_name.setdefault(name, []).append(card_id)
+        links: dict[str, str] = {}
+        for card_id, name, referrer in self._references:
+            if card_id:
+                name = self.ctx.client.text(self._row(card_id).get("name")) if self._row(card_id) else None
+                candidates = [card_id] if name else []
+            else:
+                candidates = by_name.get(name, [])
+            if not candidates or name in links or len({_FAMILY.match(c).group(0) for c in candidates}) > 1:
+                continue
+            created = parse_list(referrer.get("child_link_card_id"))
+            links[name] = next((c for c in candidates if c in listed), None) or next((c for c in candidates if c in created), candidates[0])
+        return links
+
+    def linked_card(self, card_id: str) -> dict:
+        """
+        A card named in card text but not in the list, with just what its preview shows.
+
+        Args:
+            card_id: The client card id.
+
+        Returns:
+            The card, with the deck builder's combatant art for it, else its own illustration, else the art of the card it
+            was made from, such as `c_1060_uni4` for `c_1060_uni4_lbk_mut`.
+        """
+        row = self._row(card_id)
+        match = _COMBATANT_ID.match(card_id)
+        folder = self._folders.get(int(match.group(1))) if match else None
+        parts = card_id.split("_")
+        art = [DECK_BUILDER_DIR / "combatants" / folder / f"{'_'.join(parts[:end])}.webp" for end in range(len(parts), 2, -1)] if folder else []
+        if art and (REPO_ROOT / PAGES_DIR / art[0]).is_file():
+            return {**self._card(row), "image": art[0].as_posix()}
+        if self.ctx.client.illustration(row, columns=("sct_name",)) or not art:
+            return {**self._card(row), "image": self._shared_image(row)}
+        return {**self._card(row), "image": next((path.as_posix() for path in art if (REPO_ROOT / PAGES_DIR / path).is_file()), None)}
+
+    def _row(self, card_id: str) -> dict | None:
+        """
+        A card row from the `card(*)` shards or the extra shards.
+
+        Args:
+            card_id: The client card id.
+
+        Returns:
+            The row, or None when the client has no such card.
+        """
+        return self.ctx.client.cards.get(card_id) or self._extra_rows.get(card_id)
+
+    def _card(self, row: dict) -> dict:
+        """
+        The fields every output card has, apart from its art.
+
+        Args:
+            row: The card row, which must have a name.
+
+        Returns:
+            The id, name, cost, type and resolved description.
+        """
+        resolution = self.ctx.resolver.describe(row)
+        if resolution.unresolved:
+            self.issues.append(Issue("warning", f"{NAME}: {row['id']} has unresolved placeholders {resolution.unresolved}"))
+        return {
+            "id": row["id"],
+            "name": self.ctx.text(self.ctx.client.text(row.get("name")), sentences=False),
+            "cost": neutral_cards.parse_cost(row.get("cost")),
+            "card_type": card_type(self.ctx, row.get("card_category")),
+            # A card with no text, such as Wound, still shows its traits.
+            "description": self.ctx.text(resolution.text) or " ".join(f"[{tag}]" for tag in self.ctx.resolver.talent_tags(row)),
+        }
+
+    def _collect_marks(self, row: dict, template: str, referrer: dict) -> None:
+        """
+        Note the keywords, traits and card references one card's text marks.
+
+        Args:
+            row: The card row, for its traits.
+            template: Its raw text template.
+            referrer: The listed card the text belongs to, whose created cards break ties between same-named cards.
+        """
+        for name in _KEYWORD.findall(template):
+            self._keyword(name.strip(), self._tooltips_by_title.get(name.strip(), []))
+        for trigger in _TRIGGER.findall(template):
+            title = self.ctx.resolver.tooltip_title(trigger)
+            if title:
+                self._keyword(title if title.endswith(":") else f"{title}:", [trigger])
+        for talent in parse_list(row.get("talent")):
+            talent = talent.strip("[")
+            numbered = _TALENT_COUNT.match(talent)
+            candidates = [talent, f"{numbered.group(1)}_N", numbered.group(1)] if numbered else [talent]
+            tooltip_id = next((c for c in candidates if self.ctx.resolver.tooltip_title(c)), None)
+            if tooltip_id:
+                self._keyword(self.ctx.resolver.tooltip_title(tooltip_id), [tooltip_id])
+        self._references += [(card_id, None, referrer) for card_id in _CARD_ID.findall(template)]
+        self._references += [(None, _TAG.sub("", name).strip(), referrer) for name in _UNDERLINED.findall(template)]
+
+    def _keyword(self, name: str, tooltip_ids: list[str]) -> None:
+        """
+        Add a keyword with the first definition its tooltips give, preferring one with every placeholder filled. Values
+        only known in battle read "X".
+
+        Args:
+            name: The keyword as the card text shows it.
+            tooltip_ids: The tooltips that may define it, in order.
+        """
+        if name in self.keywords or len(name) < MIN_KEYWORD_LENGTH or "#" in name:
+            return
+        found = [glossary.source_text(self.ctx, {"tooltip": tooltip_id}, self.ctx.client.constants) for tooltip_id in tooltip_ids]
+        defined = [(definition, unresolved) for _, definition, unresolved in found if definition]
+        definition = next((definition for definition, unresolved in defined if not unresolved), defined[0][0] if defined else None)
+        self.keywords[name] = _PLACEHOLDER.sub("X", _PLACEHOLDER_SENTENCE.sub("", definition)) if definition else None
 
     def _shared_image(self, row: dict) -> str | None:
         """

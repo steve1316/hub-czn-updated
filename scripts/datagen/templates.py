@@ -197,19 +197,28 @@ class TemplateResolver:
         """
         if talent in self.talent_titles:
             return self.talent_titles[talent]
-        title = self._tooltip_title(talent)
+        title = self.tooltip_title(talent)
         if title:
             return title
         numbered = _TALENT_COUNT.match(talent)
         if numbered:
             base, count = numbered.groups()
-            title = self._tooltip_title(f"{base}_N") or self._tooltip_title(base)
+            title = self.tooltip_title(f"{base}_N") or self.tooltip_title(base)
             if title:
                 # Numbered titles read "Bind #bind_count#" or just "Exhaust".
                 return _TOKEN.sub(count, title) if _TOKEN.search(title) else f"{title} {count}"
         return None
 
-    def _tooltip_title(self, tooltip_id: str) -> str | None:
+    def tooltip_title(self, tooltip_id: str) -> str | None:
+        """
+        A tooltip's title, such as "Incinerate:".
+
+        Args:
+            tooltip_id: The tooltip id, such as "TRIGGER_EXHAUST".
+
+        Returns:
+            The English title, or None when the client has none.
+        """
         tooltip = self.client.tooltips.get(tooltip_id)
         key = tooltip.get("title") if tooltip else f"tooltip@title@{tooltip_id}"
         return self.client.text(key)
@@ -272,7 +281,7 @@ class TemplateResolver:
             return ""
 
     def _trigger(self, match: re.Match) -> str:
-        title = self._tooltip_title(match.group(1))
+        title = self.tooltip_title(match.group(1))
         if not title:
             return match.group(0)
         return title if title.endswith(":") else f"{title}:"
