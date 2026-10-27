@@ -197,17 +197,45 @@ class TemplateResolver:
         """
         if talent in self.talent_titles:
             return self.talent_titles[talent]
-        title = self.tooltip_title(talent)
-        if title:
-            return title
+        tooltip_id = self.talent_tooltip_id(talent)
+        if not tooltip_id:
+            return None
+        title = self.tooltip_title(tooltip_id)
         numbered = _TALENT_COUNT.match(talent)
-        if numbered:
-            base, count = numbered.groups()
-            title = self.tooltip_title(f"{base}_N") or self.tooltip_title(base)
-            if title:
-                # Numbered titles read "Bind #bind_count#" or just "Exhaust".
-                return _TOKEN.sub(count, title) if _TOKEN.search(title) else f"{title} {count}"
-        return None
+        if tooltip_id == talent or not numbered:
+            return title
+        # Numbered titles read "Bind #bind_count#" or just "Exhaust".
+        count = numbered.group(2)
+        return _TOKEN.sub(count, title) if _TOKEN.search(title) else f"{title} {count}"
+
+    def talent_tooltip_id(self, talent: str) -> str | None:
+        """
+        The tooltip that names one card trait. A numbered trait like TALENT_EXHAUST_2 falls back to TALENT_EXHAUST_N, then TALENT_EXHAUST.
+
+        Args:
+            talent: The talent id.
+
+        Returns:
+            The tooltip id, or None when the client has no title for the trait.
+        """
+        numbered = _TALENT_COUNT.match(talent)
+        candidates = [talent, f"{numbered.group(1)}_N", numbered.group(1)] if numbered else [talent]
+        return next((candidate for candidate in candidates if self.tooltip_title(candidate)), None)
+
+    def trigger_title(self, trigger_id: str) -> str | None:
+        """
+        A trigger's title as card text shows it, always ending in a colon, such as "Incinerate:".
+
+        Args:
+            trigger_id: The trigger's tooltip id, such as "TRIGGER_IGNITE".
+
+        Returns:
+            The title, or None when the client has none.
+        """
+        title = self.tooltip_title(trigger_id)
+        if not title:
+            return None
+        return title if title.endswith(":") else f"{title}:"
 
     def tooltip_title(self, tooltip_id: str) -> str | None:
         """
@@ -281,10 +309,7 @@ class TemplateResolver:
             return ""
 
     def _trigger(self, match: re.Match) -> str:
-        title = self.tooltip_title(match.group(1))
-        if not title:
-            return match.group(0)
-        return title if title.endswith(":") else f"{title}:"
+        return self.trigger_title(match.group(1)) or match.group(0)
 
     # //////////////////////////////////////////////////////////////////////////////////////////////////
     # //////////////////////////////////////////////////////////////////////////////////////////////////

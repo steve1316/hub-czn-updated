@@ -57,7 +57,6 @@ _TRIGGER = re.compile(r"\^([A-Z][A-Z0-9_]+)\^")
 _CARD_ID = re.compile(r"\^card@([A-Za-z0-9_]+)\^")
 _UNDERLINED = re.compile(r"<u>(.*?)</u>")
 _TAG = re.compile(r"<[^>]*>")
-_TALENT_COUNT = re.compile(r"^(TALENT_[A-Z_]+?)_(\d+)$")
 # A card's family is its id up to the second "_", such as "c_1055" or "card_ab".
 _FAMILY = re.compile(r"^[^_]+_[^_]+")
 # A battle-only value left in a definition, such as `#tv#`, and a sentence that is only such a value.
@@ -89,8 +88,8 @@ def build(ctx: Context) -> TargetResult:
             builder.add_shared(table, archive)
 
     seasons = sorted({card["season"] for card in builder.cards if "season" in card})
-    card_links = builder.card_links()
     listed = {card["id"] for card in builder.cards}
+    card_links = builder.card_links(listed)
     keywords = sorted((name, definition) for name, definition in builder.keywords.items() if definition)
     document = {
         "seasons": [{"number": number, "title": ctx.client.text(f"archive_card@title@season_s{number}") or f"Season {number}"} for number in seasons],
@@ -208,15 +207,17 @@ class _Builder:
             self._collect_marks(marked, self.ctx.client.text(marked.get("desc")) or base_template, row)
         return True
 
-    def card_links(self) -> dict[str, str]:
+    def card_links(self, listed: set[str]) -> dict[str, str]:
         """
         The cards named in card text, by the name the text shows.
+
+        Args:
+            listed: The ids of the cards in the list.
 
         Returns:
             card name -> card id. A name shared by cards of more than one family is left out, since it is unclear which one
             the text means. Otherwise a listed card is preferred, then one the referring card creates, then the first by id.
         """
-        listed = {card["id"] for card in self.cards}
         by_name: dict[str, list[str]] = {}
         for card_id in sorted([*self.ctx.client.cards, *self._extra_rows]):
             name = self.ctx.client.text(self._row(card_id).get("name"))
@@ -251,11 +252,12 @@ class _Builder:
         folder = self._folders.get(int(match.group(1))) if match else None
         parts = card_id.split("_")
         art = [DECK_BUILDER_DIR / "combatants" / folder / f"{'_'.join(parts[:end])}.webp" for end in range(len(parts), 2, -1)] if folder else []
-        if art and (REPO_ROOT / PAGES_DIR / art[0]).is_file():
-            return {**self._card(row), "image": art[0].as_posix()}
-        if self.ctx.client.illustration(row, columns=("sct_name",)) or not art:
-            return {**self._card(row), "image": self._shared_image(row)}
-        return {**self._card(row), "image": next((path.as_posix() for path in art if (REPO_ROOT / PAGES_DIR / path).is_file()), None)}
+        existing = [path for path in art if (REPO_ROOT / PAGES_DIR / path).is_file()]
+        if art and (existing[:1] == art[:1] or not self.ctx.client.illustration(row, columns=("sct_name",))):
+            image = existing[0].as_posix() if existing else None
+        else:
+            image = self._shared_image(row)
+        return {**self._card(row), "image": image}
 
     def _row(self, card_id: str) -> dict | None:
         """
@@ -303,14 +305,11 @@ class _Builder:
         for name in _KEYWORD.findall(template):
             self._keyword(name.strip(), self._tooltips_by_title.get(name.strip(), []))
         for trigger in _TRIGGER.findall(template):
-            title = self.ctx.resolver.tooltip_title(trigger)
+            title = self.ctx.resolver.trigger_title(trigger)
             if title:
-                self._keyword(title if title.endswith(":") else f"{title}:", [trigger])
+                self._keyword(title, [trigger])
         for talent in parse_list(row.get("talent")):
-            talent = talent.strip("[")
-            numbered = _TALENT_COUNT.match(talent)
-            candidates = [talent, f"{numbered.group(1)}_N", numbered.group(1)] if numbered else [talent]
-            tooltip_id = next((c for c in candidates if self.ctx.resolver.tooltip_title(c)), None)
+            tooltip_id = self.ctx.resolver.talent_tooltip_id(talent.strip("["))
             if tooltip_id:
                 self._keyword(self.ctx.resolver.tooltip_title(tooltip_id), [tooltip_id])
         self._references += [(card_id, None, referrer) for card_id in _CARD_ID.findall(template)]
