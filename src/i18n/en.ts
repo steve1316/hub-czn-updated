@@ -407,6 +407,8 @@ const en = {
     anyClass: 'Any class',
     noText: 'This card has no text.',
     epiphanies: 'Epiphanies',
+    viewArt: 'View full size',
+    closeArt: 'Click or press Esc to close',
     seasonTitle: 'Season {{n}}: {{title}}',
     groups: {
       combatant: 'Combatant',

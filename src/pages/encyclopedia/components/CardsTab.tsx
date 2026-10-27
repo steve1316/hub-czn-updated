@@ -1,6 +1,8 @@
 import { memo, useDeferredValue, useMemo, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import type { TFunction } from 'i18next'
+import { Maximize2 } from 'lucide-react'
+import { Dialog } from 'radix-ui'
 import { cn } from '@/lib/utils'
 import { CostGem } from '@/pages/guides/components/blocks/CostGem'
 import { CARD_CHARACTERS, CARD_SEASONS, ENCYCLOPEDIA_CARDS, cardImageUrl } from '../encyclopedia-cards'
@@ -92,6 +94,51 @@ const CardTile = memo(function CardTile({ card, selected, onSelect }: CardTilePr
   )
 })
 
+/** Props for CardArt. */
+interface CardArtProps {
+  /** The bundled URL of the card's art. */
+  url: string
+  /** The card's name, used for the alt text and the viewer's title. */
+  name: string
+}
+
+/**
+ * The card's art in the detail pane. Clicking it opens the art as large as the window allows, so the details can be seen.
+ * @param props See `CardArtProps`.
+ * @returns The art button and its full-size viewer.
+ */
+function CardArt({ url, name }: CardArtProps) {
+  const { t } = useTranslation()
+  return (
+    <Dialog.Root>
+      <Dialog.Trigger asChild>
+        <button
+          type="button"
+          title={t('cards.viewArt')}
+          className="group relative h-60 w-40 shrink-0 cursor-zoom-in overflow-hidden rounded-lg border border-[#282828] hover:border-[#c084fc]"
+        >
+          <img src={url} alt={name} className="h-full w-full object-cover" />
+          <span className="absolute right-1.5 bottom-1.5 rounded bg-[#0d0d0d]/80 p-1 text-white opacity-0 transition-opacity group-hover:opacity-100 group-focus-visible:opacity-100">
+            <Maximize2 size={14} />
+          </span>
+        </button>
+      </Dialog.Trigger>
+      <Dialog.Portal>
+        <Dialog.Overlay className="fixed inset-0 z-50 bg-black/80" />
+        <Dialog.Content className="fixed top-1/2 left-1/2 z-50 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3 focus:outline-none">
+          <Dialog.Title className="text-base font-semibold text-white">{name}</Dialog.Title>
+          <Dialog.Description className="sr-only">{t('cards.closeArt')}</Dialog.Description>
+          <Dialog.Close asChild>
+            <button type="button" title={t('cards.closeArt')} className="cursor-zoom-out">
+              <img src={url} alt={name} className="h-[min(85vh,632px)] w-auto rounded-xl shadow-2xl" />
+            </button>
+          </Dialog.Close>
+        </Dialog.Content>
+      </Dialog.Portal>
+    </Dialog.Root>
+  )
+}
+
 /**
  * The Cards tab: every card in the game's card archive, filtered by group, combatant and card type.
  * @returns The tab body.
@@ -157,9 +204,7 @@ export function CardsTab() {
                   <span className="mt-1 block font-mono text-[#93c5fd]">{t('cards.cost', { cost: costLabel(selected.cost) })}</span>
                 </>
               }
-              media={imageUrl && (
-                <img src={imageUrl} alt={selected.name} className="h-48 w-32 shrink-0 rounded-lg border border-[#282828] object-cover" />
-              )}
+              media={imageUrl && <CardArt url={imageUrl} name={selected.name} />}
             />
 
             <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={selected.description || t('cards.noText')} />
