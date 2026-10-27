@@ -328,7 +328,8 @@ def build(ctx: Context) -> TargetResult:
     potential_rows = ctx.client.rows(POTENTIAL_NODE_TABLE)
     sift_faces = _CachedSift("sift-faces", _face_art(ctx), match_cache)
     pieces = images.PieceMatcher(_piece_art(REPO_ROOT / PIECE_DIR))
-    sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW)
+    sift_cards = _CachedSift("sift-cards", _card_art(), match_cache, query_size=images.CARD_RENDER_SIZE, query_box=images.CARD_ART_WINDOW,
+                             candidate_size=images.CARD_MATCH_SIZE)
     shared_cards = _shared_cards()
     card_names = _card_names(ctx, shared_cards)
     variants_of = lru_cache(maxsize=None)(partial(epiphany.variants, ctx))

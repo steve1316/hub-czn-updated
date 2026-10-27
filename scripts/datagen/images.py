@@ -56,6 +56,8 @@ SIFT_MAX_COLOUR_DIFFERENCE = 64
 SIFT_COLOUR_MARGIN = 8
 # Sheet pictures are enlarged by this much before matching, since they are small next to the client art.
 SIFT_QUERY_SCALE = 2
+# Card art is resized to a render at that enlarged scale, so its features line up with the sheet's whatever size the file is.
+CARD_MATCH_SIZE = (CARD_RENDER_SIZE[0] * SIFT_QUERY_SCALE, CARD_RENDER_SIZE[1] * SIFT_QUERY_SCALE)
 
 # Memory fragment piece pictures are compared as tiny thumbnails, since the sheet shows them from 20 px inventory icons up to full art.
 PIECE_THUMB = 20
@@ -260,12 +262,14 @@ class PieceMatcher:
 class SiftMatcher(Generic[_Key]):
     """Finds which candidate a picture shows by matching SIFT features, then checking the colours of the closest ones."""
 
-    def __init__(self, candidates: dict[_Key, list[Path]], query_box: tuple[int, int, int, int] | None = None, query_size: tuple[int, int] | None = None):
+    def __init__(self, candidates: dict[_Key, list[Path]], query_box: tuple[int, int, int, int] | None = None, query_size: tuple[int, int] | None = None,
+                 candidate_size: tuple[int, int] | None = None):
         """
         Args:
             candidates: Key -> the images that show it. A key scores the best of its images.
             query_box: The part of a resized picture to match, such as a card's art window. The whole picture when None.
             query_size: The size a picture is resized to before matching. Its own size when None.
+            candidate_size: The size every candidate is resized to, such as `CARD_MATCH_SIZE`. Shrunk to at most `SIFT_MAX_SIDE` when None.
         """
         import cv2  # Only uncached guide pictures need OpenCV, so it is not a sidecar dependency.
         import numpy
@@ -276,6 +280,7 @@ class SiftMatcher(Generic[_Key]):
         self._matcher = cv2.BFMatcher()
         self.query_box = query_box
         self.query_size = query_size
+        self.candidate_size = candidate_size
         self._candidates: list[tuple[_Key, Path, list, object]] = []
         for key, paths in candidates.items():
             for path in paths:
@@ -369,10 +374,11 @@ class SiftMatcher(Generic[_Key]):
             image = image.crop(self.query_box)
         return image.resize((image.width * SIFT_QUERY_SCALE, image.height * SIFT_QUERY_SCALE), Image.BICUBIC)
 
-    @staticmethod
-    def _candidate_image(path: Path) -> Image.Image:
-        """A candidate image, flattened and shrunk to at most `SIFT_MAX_SIDE`."""
+    def _candidate_image(self, path: Path) -> Image.Image:
+        """A candidate image, flattened and resized to `candidate_size`, or shrunk to at most `SIFT_MAX_SIDE` without one."""
         art = load(path.read_bytes())
+        if self.candidate_size:
+            return art.resize(self.candidate_size, Image.LANCZOS)
         art.thumbnail((SIFT_MAX_SIDE, SIFT_MAX_SIDE), Image.LANCZOS)
         return art
 
