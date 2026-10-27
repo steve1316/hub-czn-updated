@@ -2,8 +2,8 @@
 Equipment for the deck builder and the encyclopedia: every weapon, armor and accessory a player can find in a run.
 
 Rows come from the client's relic tables, kept to the three equipment slots. Descriptions are the client's own templates.
-The relic-only value tokens are filled in here, then the shared resolver handles the rest of the markup. The item icons
-are not in the extracted client, so `image_path` comes from the overrides file.
+The relic-only value tokens are filled in here, then the shared resolver handles the rest of the markup. Icons are the
+client's own, added at their full size.
 """
 
 from __future__ import annotations
@@ -12,6 +12,7 @@ import json
 import re
 from pathlib import Path
 
+from scripts.datagen.art import CLIENT_ART_QUALITY, wanted, webp
 from scripts.datagen.client import parse_list
 from scripts.datagen.naming import RARITIES
 from scripts.datagen.overrides import Issue, Overrides
@@ -25,6 +26,8 @@ ITEMS_PATH = Path("src/pages/deck-builder/data/deck-builder-items.json")
 
 # `image_path` values are relative to this folder.
 IMAGES_ROOT = Path("src/pages/deck-builder/data")
+# Icons are added to this folder, under `IMAGES_ROOT`.
+ICON_DIR = Path("itens")
 
 # Relic tables that hold equipment, in output order. The `relic(assault)` table only holds `_ca` copies for another mode.
 RELIC_TABLES = ("relic@relic.json", "relic(disaster)@relic.json")
@@ -52,23 +55,25 @@ def build(ctx: Context) -> TargetResult:
     overrides = ctx.overrides(NAME)
     issues: list[Issue] = []
     generated: dict[str, dict] = {}
+    new_files: dict[Path, bytes] = {}
     for table in RELIC_TABLES:
         for row in ctx.client.rows(table):
             slot = SLOTS.get(row.get("relic_type", ""))
             item_id = row.get("id")
             if slot is None or not item_id or not overrides.keeps(item_id):
                 continue
-            generated[item_id] = _item(ctx, row, slot, overrides, issues)
+            generated[item_id] = _item(ctx, row, slot, _icon(ctx, row, new_files), overrides, issues)
 
     issues.extend(overrides.validate(generated))
     items = list(overrides.apply(generated).values())
     for item in items:
-        if item["image_path"] and not (REPO_ROOT / IMAGES_ROOT / item["image_path"]).is_file():
+        path = IMAGES_ROOT / item["image_path"]
+        if item["image_path"] and path not in new_files and not (REPO_ROOT / path).is_file():
             issues.append(Issue("error", f"{NAME}: {item['id']} points at a missing image {item['image_path']}"))
-    return TargetResult({ITEMS_PATH: json_bytes(items)}, _summary(items), issues)
+    return TargetResult({ITEMS_PATH: json_bytes(items)}, _summary(items), issues, new_files=new_files)
 
 
-def _item(ctx: Context, row: dict, slot: str, overrides: Overrides, issues: list[Issue]) -> dict:
+def _item(ctx: Context, row: dict, slot: str, image_path: str, overrides: Overrides, issues: list[Issue]) -> dict:
     """
     One equipment row in the items file's format, before overrides.
 
@@ -76,11 +81,12 @@ def _item(ctx: Context, row: dict, slot: str, overrides: Overrides, issues: list
         ctx: The run context.
         row: The relic row.
         slot: The display slot, such as "Weapon".
+        image_path: The icon path relative to `IMAGES_ROOT`, or "".
         overrides: The target's overrides. Any entry for this id silences unresolved placeholders.
         issues: Problems with the row are reported here.
 
     Returns:
-        The item, with an empty `image_path` and an English-only description.
+        The item, with an English-only description.
     """
     item_id = row["id"]
     name = ctx.client.text(row.get("name"))
@@ -101,8 +107,32 @@ def _item(ctx: Context, row: dict, slot: str, overrides: Overrides, issues: list
         "slot": slot,
         "tags": [],
         "description": {"en": ctx.text(resolution.text)},
-        "image_path": "",
+        "image_path": image_path,
     }
+
+
+def _icon(ctx: Context, row: dict, new_files: dict[Path, bytes]) -> str:
+    """
+    The item's icon, encoded from the client when it is missing or art is being refreshed.
+
+    Args:
+        ctx: The run context.
+        row: The relic row.
+        new_files: The icon to add is put here, repo-relative path -> WebP bytes.
+
+    Returns:
+        The icon path relative to `IMAGES_ROOT`, or "" when neither the client nor the app has one.
+    """
+    icon_name = row.get("icon_name")
+    if not icon_name:
+        return ""
+    # The name, such as "relics/relic_1060", is a PNG path under the client's item folder.
+    source = ctx.client.root / "item" / f"{icon_name}.png"
+    image = ICON_DIR / f"{Path(icon_name).name}.webp"
+    target = IMAGES_ROOT / image
+    if target not in new_files and source.is_file() and wanted(ctx, target):
+        new_files[target] = webp(source, quality=CLIENT_ART_QUALITY)
+    return image.as_posix() if target in new_files or (REPO_ROOT / target).is_file() else ""
 
 
 def fill_relic_values(template: str, row: dict) -> str:

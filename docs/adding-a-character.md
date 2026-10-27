@@ -59,7 +59,7 @@ then **Scan Tree**. The tree lists one folder per asset category, and Ctrl+Right
 few and export only those.
 
 **Do not export the whole tree.** That is over 5 GB and slow enough that it is easy to interrupt.
-Only six folders are ever read:
+Only seven folders are ever read:
 
 | Folder | Feeds | Size |
 |---|---|---|
@@ -67,6 +67,7 @@ Only six folders are ever read:
 | `collapse/collapse_illustration/` | Full-art character illustrations, optional | ~80 MB |
 | `db/` | Every character, scaling, potential and monster value | ~180 MB |
 | `face/character/` | The 72x72 portraits | tiny |
+| `item/relics/` | The 124x124 equipment icons, read by `python -m scripts.datagen` | ~11 MB |
 | `text/en/` | English display names. The equipment pipeline also wants `text/ko/` | tiny |
 | `tp_skill/` | The 108x76 battle icons | tiny |
 

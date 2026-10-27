@@ -5,7 +5,7 @@ A file lives at `api/data/overrides/<target>.json`:
 
     {
       "_exclude": ["eq_dpt_test_*"],
-      "eq_pub_021": {"image_path": "itens/item_0021.webp", "_why": "client icon not extracted"}
+      "eq_ds02_004": {"description": {"en": "1 Evasion (2 times per battle)."}, "_why": "a token the resolver cannot fill"}
     }
 
 Keys starting with an underscore are directives rather than output ids. `_exclude` and `_include` filter source ids by
