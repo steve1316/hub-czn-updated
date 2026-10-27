@@ -48,7 +48,7 @@
               }
             },
             {
-              "cardId": "card_ta_00006",
+              "cardId": "n_0043",
               "name": "Forbidden: Gesture of Freedom",
               "cost": 0,
               "text": {
@@ -1582,7 +1582,7 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "card_ta_00003",
+              "cardId": "n_0040",
               "name": "Forbidden: Ecstasy of Violence",
               "cost": 9,
               "note": {
@@ -1591,7 +1591,7 @@
               "rating": "4/5"
             },
             {
-              "cardId": "card_ta_00006",
+              "cardId": "n_0043",
               "name": "Forbidden: Gesture of Freedom",
               "cost": 0,
               "note": {

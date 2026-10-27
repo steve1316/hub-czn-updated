@@ -1476,7 +1476,7 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "card_ta_00002",
+              "cardId": "n_0045",
               "name": "Forbidden: Portrait of Fury",
               "cost": 1,
               "note": {
@@ -1494,7 +1494,7 @@
               "rating": "2/5"
             },
             {
-              "cardId": "card_ta_00007",
+              "cardId": "n_0042",
               "name": "Forbidden: Eternal Hunger",
               "cost": 0,
               "note": {

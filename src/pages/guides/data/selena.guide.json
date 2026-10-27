@@ -135,7 +135,7 @@
               }
             },
             {
-              "cardId": "card_ta_00007",
+              "cardId": "n_0042",
               "name": "Forbidden: Eternal Hunger",
               "cost": 0,
               "text": {
@@ -739,7 +739,7 @@
               }
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "text": {
@@ -747,7 +747,7 @@
               }
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "text": {
@@ -755,7 +755,7 @@
               }
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "text": {
@@ -763,7 +763,7 @@
               }
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "text": {
@@ -889,7 +889,7 @@
               }
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "text": {
@@ -1177,7 +1177,7 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "note": {
@@ -1938,7 +1938,7 @@
           "type": "card-list",
           "items": [
             {
-              "cardId": "card_ta_00007",
+              "cardId": "n_0042",
               "name": "Forbidden: Eternal Hunger",
               "cost": 0,
               "note": {
@@ -1947,7 +1947,7 @@
               "rating": "5/5"
             },
             {
-              "cardId": "card_ta_00003",
+              "cardId": "n_0040",
               "name": "Forbidden: Ecstasy of Violence",
               "cost": 9,
               "note": {
@@ -1956,7 +1956,7 @@
               "rating": "3/5"
             },
             {
-              "cardId": "card_ta_00002",
+              "cardId": "n_0045",
               "name": "Forbidden: Portrait of Fury",
               "cost": 1,
               "note": {

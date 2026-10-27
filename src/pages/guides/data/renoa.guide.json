@@ -452,7 +452,7 @@
               }
             },
             {
-              "cardId": "card_ta_00003",
+              "cardId": "n_0040",
               "name": "Forbidden: Ecstasy of Violence",
               "cost": 9,
               "text": {
@@ -1071,7 +1071,7 @@
               "rating": "4/5"
             },
             {
-              "cardId": "card_ne_00013",
+              "cardId": "n_0109",
               "name": "Quick Shelling",
               "cost": 0,
               "note": {
