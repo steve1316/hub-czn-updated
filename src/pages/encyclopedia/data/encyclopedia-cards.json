@@ -13446,11 +13446,23 @@
       "definition": "-% Damage Amount taken, and on effect activation, remove effect (cannot stack)."
     },
     {
+      "name": "Attunement",
+      "definition": "When this card is Drawn, activate effect."
+    },
+    {
       "name": "Attunement:",
       "definition": "When this card is Drawn, activate effect."
     },
     {
+      "name": "Ballista card",
+      "definition": "Ballista, Piercing Ballista, Enhanced Ballista, Giant Ballista, Shelling Ballista, Micro Ballista. These are types of Ballista."
+    },
+    {
       "name": "Basic Card",
+      "definition": "Cards with only Damage, Shield, or Heal functions among Combatant's Starting Cards."
+    },
+    {
+      "name": "Basic Cards",
       "definition": "Cards with only Damage, Shield, or Heal functions among Combatant's Starting Cards."
     },
     {
@@ -13518,6 +13530,10 @@
       "definition": "Three types of cards summoned by Orlea. If a card of the same creature★ is in hand, it evolves and merges. Evolution can reach up to 3 stages."
     },
     {
+      "name": "Credit",
+      "definition": "Currency tradable in shops."
+    },
+    {
       "name": "Credits",
       "definition": "Currency tradable in shops."
     },
@@ -13574,6 +13590,10 @@
       "definition": "Damage applied as 210% of Defense and 30% of Attack."
     },
     {
+      "name": "Defense-based Damage",
+      "definition": "Damage applied as 210% of Defense and 30% of Attack."
+    },
+    {
       "name": "Descent",
       "definition": "When Descent stacks to 8 or more, create 1 Heavensfall in hand. When Heavensfall is created, decrease Descent by 8 (activates max 10 times per turn)."
     },
@@ -13608,6 +13628,10 @@
     {
       "name": "Effulgent Light",
       "definition": "When Effulgent Light stacks to 3, change Effulgent Compression into Effulgent Release. On effect activation, remove Effulgent Light."
+    },
+    {
+      "name": "Ego Point",
+      "definition": "Resource consumed when using Awakening Skills or Partner Skills."
     },
     {
       "name": "Ego Points",
@@ -13646,6 +13670,10 @@
       "definition": "When this card is activated, move to Exhaust Pile."
     },
     {
+      "name": "Exhausted",
+      "definition": "When this card is activated, move to Exhaust Pile."
+    },
+    {
       "name": "Extra Attack",
       "definition": "Damage affected by Critical Chance and Extra Damage."
     },
@@ -13656,6 +13684,10 @@
     {
       "name": "Fixed Damage",
       "definition": "A damage that ignores persistent effects."
+    },
+    {
+      "name": "Fixed Heal",
+      "definition": "Healing that ignores persistent effects."
     },
     {
       "name": "Fixed Shield",
@@ -13704,6 +13736,10 @@
     {
       "name": "Haste",
       "definition": "This card does not reduce the enemy's Action Count."
+    },
+    {
+      "name": "Heal",
+      "definition": "Increase current HP based on Defense. Decrease Stress of a random Combatant by 1-6 based on the amount increased."
     },
     {
       "name": "Heart Bullet",
@@ -13778,6 +13814,10 @@
       "definition": "At the start of the turn, move this card to hand and place it on the leftmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
     },
     {
+      "name": "Link",
+      "definition": "When this card is used, Discard all other Linked cards in hand."
+    },
+    {
       "name": "Linked",
       "definition": "When this card is used, Discard all other Linked cards in hand."
     },
@@ -13842,12 +13882,20 @@
       "definition": "When no cards of other Attributes are in hand, enable this effect."
     },
     {
+      "name": "Quest card",
+      "definition": "Triple 0, Triple 1, Straight, Full House. Obtainable upon completing Cassius Quests."
+    },
+    {
       "name": "Quietus",
       "definition": "When this card is Discarded, proc this card. This card cannot be moved from the Activated Pile for this turn."
     },
     {
       "name": "Rapacity",
       "definition": "Also treat Damage dealt by this card as DoT. When Fracture or Agony is applied through an ability, increase Rapacity by 1. When Reckoning is activated, reset Rapacity stack count. Max X stacks."
+    },
+    {
+      "name": "Ravage",
+      "definition": "When the monster's Tenacity is fully reduced, activate effect. On Ravage, gain 1 Action Point."
     },
     {
       "name": "Ravage:",
@@ -13892,6 +13940,14 @@
     {
       "name": "Retrieve",
       "definition": "If this card moves to the Graveyard, return it to hand. Upon activation, remove Retrieve."
+    },
+    {
+      "name": "Rhythm card",
+      "definition": "Signature cards created by Tenebria. Changes Damage Type according to the Class of the unit who owns the card. Each time a Rhythm card is activated, gain 1 Performance Burnout."
+    },
+    {
+      "name": "Rhythm card(s)",
+      "definition": "Signature cards created by Tenebria. Changes Damage Type according to the Class of the unit who owns the card. Each time a Rhythm card is activated, gain 1 Performance Burnout."
     },
     {
       "name": "Scorched",
@@ -14004,6 +14060,10 @@
       "id": "c_1062_srt4"
     },
     {
+      "name": "Anchor Shots",
+      "id": "c_1062_srt4"
+    },
+    {
       "name": "Archetype: □",
       "id": "c_30084_cre3"
     },
@@ -14074,6 +14134,10 @@
     {
       "name": "Fracturing Memories",
       "id": "card_ab_00039"
+    },
+    {
+      "name": "Futility",
+      "id": "c_1064_cre1"
     },
     {
       "name": "Giant Ballista",
@@ -14276,6 +14340,14 @@
       "id": "c_1033_cre5"
     },
     {
+      "name": "Softie★",
+      "id": "c_1024_cre1"
+    },
+    {
+      "name": "Softie★★★",
+      "id": "c_1024_cre3"
+    },
+    {
       "name": "Source of Water",
       "id": "c_1039_srt4"
     },
@@ -14290,6 +14362,18 @@
     {
       "name": "Sturdie ★★★",
       "id": "c_1024_cre9"
+    },
+    {
+      "name": "Sturdie★",
+      "id": "c_1024_cre7"
+    },
+    {
+      "name": "Swiftie★",
+      "id": "c_1024_cre4"
+    },
+    {
+      "name": "Swiftie★★★",
+      "id": "c_1024_cre6"
     },
     {
       "name": "Sword Tassel",
@@ -14324,6 +14408,46 @@
       "card_type": "Attack",
       "description": "[Retain] [Exhaust] 4 Agony. 50% Damage. +10% Damage Amount for each Agony on the target.",
       "image": "deck-builder/data/combatants/tressa/c_1009_cre2.webp"
+    },
+    {
+      "id": "c_1024_cre1",
+      "name": "Softie ★",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Exhaust] [Retain] [Creation] Increase Damage Amount by 10% for 1 turn. Retain: Increase Damage Amount of the next Attack Card activated by 10% (max 350%).",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre1.webp"
+    },
+    {
+      "id": "c_1024_cre3",
+      "name": "Softie ★★★",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Exhaust] [Retain] [Creation] Increase Damage Amount by 35% for 1 turn. Retain: Increase Damage Amount of the next Attack Card activated by 35% (max 350%).",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre3.webp"
+    },
+    {
+      "id": "c_1024_cre4",
+      "name": "Swiftie ★",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Exhaust] [Retain] [Creation] 100% Damage. Retain: +40% Damage Amount.",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre4.webp"
+    },
+    {
+      "id": "c_1024_cre6",
+      "name": "Swiftie ★★★",
+      "cost": 0,
+      "card_type": "Attack",
+      "description": "[Exhaust] [Retain] [Creation] 350% Damage. Retain: +150% Damage Amount.",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre6.webp"
+    },
+    {
+      "id": "c_1024_cre7",
+      "name": "Sturdie ★",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "[Exhaust] [Retain] [Creation] 100% Shield. Retain: Heal 60%.",
+      "image": "deck-builder/data/combatants/orlea/c_1024_cre7.webp"
     },
     {
       "id": "c_1024_cre9",
@@ -14452,6 +14576,14 @@
       "card_type": "Attack",
       "description": "[Bullet] [Quietus] 120% Damage. 60% Extra Attack × Bullet card count in hand to a random enemy.",
       "image": "deck-builder/data/combatants/diana/c_1061_cre3.webp"
+    },
+    {
+      "id": "c_1064_cre1",
+      "name": "Futility",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "[Exhaust] 100% Damage. Heal 100%.",
+      "image": "deck-builder/data/combatants/kayron/c_1064_cre1.webp"
     },
     {
       "id": "c_1069_cre1",

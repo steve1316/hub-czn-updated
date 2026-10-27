@@ -62,6 +62,9 @@ _FAMILY = re.compile(r"^[^_]+_[^_]+")
 # A battle-only value left in a definition, such as `#tv#`, and a sentence that is only such a value.
 _PLACEHOLDER = re.compile(r"#[A-Za-z0-9_]+#")
 _PLACEHOLDER_SENTENCE = re.compile(r"\s*#[A-Za-z0-9_]+#\.")
+# The endings `_stem` drops, so "Fixed Heal" meets the tooltip titled "Fixed Healing".
+_STEM_ENDING = re.compile(r"(ing|ed|s)$")
+_SPACES = re.compile(r"\s+")
 # Keywords shorter than this, such as "X", are left unlinked.
 MIN_KEYWORD_LENGTH = 2
 
@@ -69,6 +72,33 @@ MIN_KEYWORD_LENGTH = 2
 # //////////////////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////////////////////////////////////////////////////////////////////
 # Build
+
+
+def _stem(name: str) -> str:
+    """
+    A keyword name reduced to its stem. The game matches card keywords to tooltips by their Korean text, which the client
+    export lacks, and the English keyword often differs from the tooltip title by an ending, such as "Ego Point" and "Ego Points".
+
+    Args:
+        name: The keyword or tooltip title.
+
+    Returns:
+        The lower-cased name without a trailing colon, "(s)" or a final "ing", "ed" or "s".
+    """
+    return _STEM_ENDING.sub("", name.lower().replace("(s)", "").strip().rstrip(":"))
+
+
+def _name_key(name: str) -> str:
+    """
+    A card name without its spaces, since card text sometimes writes "Softie ★" as "Softie★".
+
+    Args:
+        name: The card name.
+
+    Returns:
+        The name with every space removed.
+    """
+    return _SPACES.sub("", name)
 
 
 def build(ctx: Context) -> TargetResult:
@@ -125,12 +155,14 @@ class _Builder:
         self._extra_rows = {row["id"]: row for shard in EXTRA_CARD_SHARDS for row in ctx.client.rows(shard) if "id" in row}
         self._pool_images = _pool_images(ctx)
         self._folders = card_art.existing_folders()
-        # Tooltip title -> its tooltip ids, in id order.
+        # Tooltip title -> its tooltip ids, in id order, and the same keyed by `_stem` for keywords that miss by an ending.
         self._tooltips_by_title: dict[str, list[str]] = {}
+        self._tooltips_by_stem: dict[str, list[str]] = {}
         for tooltip_id in sorted(ctx.client.tooltips):
             title = ctx.client.text(ctx.client.tooltips[tooltip_id].get("title"))
             if title:
                 self._tooltips_by_title.setdefault(title, []).append(tooltip_id)
+                self._tooltips_by_stem.setdefault(_stem(title), []).append(tooltip_id)
         # Card references found in card text, as (card id, None) or (None, card name), with the referring card row.
         self._references: list[tuple[str | None, str | None, dict]] = []
 
@@ -216,21 +248,27 @@ class _Builder:
 
         Returns:
             card name -> card id. A name shared by cards of more than one family is left out, since it is unclear which one
-            the text means. Otherwise a listed card is preferred, then one the referring card creates, then the first by id.
+            the text means, unless one family is the referring card's own. A name the text writes without its spaces or as a
+            plural, such as "Softie★" or "Anchor Shots", still counts. Otherwise a listed card is preferred, then one the
+            referring card creates, then the first by id.
         """
         by_name: dict[str, list[str]] = {}
         for card_id in sorted([*self.ctx.client.cards, *self._extra_rows]):
             name = self.ctx.client.text(self._row(card_id).get("name"))
             if name:
-                by_name.setdefault(name, []).append(card_id)
+                by_name.setdefault(_name_key(name), []).append(card_id)
         links: dict[str, str] = {}
         for card_id, name, referrer in self._references:
             if card_id:
                 name = self.ctx.client.text(self._row(card_id).get("name")) if self._row(card_id) else None
                 candidates = [card_id] if name else []
             else:
-                candidates = by_name.get(name, [])
-            if not candidates or name in links or len({_FAMILY.match(c).group(0) for c in candidates}) > 1:
+                key = _name_key(name)
+                candidates = by_name.get(key) or by_name.get(key.removesuffix("s"), [])
+            if len({_FAMILY.match(c).group(0) for c in candidates}) > 1:
+                own = _FAMILY.match(referrer["id"]).group(0)
+                candidates = [c for c in candidates if _FAMILY.match(c).group(0) == own]
+            if not candidates or name in links:
                 continue
             created = parse_list(referrer.get("child_link_card_id"))
             links[name] = next((c for c in candidates if c in listed), None) or next((c for c in candidates if c in created), candidates[0])
@@ -303,7 +341,8 @@ class _Builder:
             referrer: The listed card the text belongs to, whose created cards break ties between same-named cards.
         """
         for name in _KEYWORD.findall(template):
-            self._keyword(name.strip(), self._tooltips_by_title.get(name.strip(), []))
+            name = name.strip()
+            self._keyword(name, self._tooltips_by_title.get(name) or self._tooltips_by_stem.get(_stem(name), []))
         for trigger in _TRIGGER.findall(template):
             title = self.ctx.resolver.trigger_title(trigger)
             if title:
@@ -318,13 +357,13 @@ class _Builder:
     def _keyword(self, name: str, tooltip_ids: list[str]) -> None:
         """
         Add a keyword with the first definition its tooltips give, preferring one with every placeholder filled. Values
-        only known in battle read "X".
+        only known in battle read "X". Lower-case keywords such as "activate" are verbs whose sense shifts, so they are skipped.
 
         Args:
             name: The keyword as the card text shows it.
             tooltip_ids: The tooltips that may define it, in order.
         """
-        if name in self.keywords or len(name) < MIN_KEYWORD_LENGTH or "#" in name:
+        if name in self.keywords or len(name) < MIN_KEYWORD_LENGTH or "#" in name or not name[0].isupper():
             return
         found = [glossary.source_text(self.ctx, {"tooltip": tooltip_id}, self.ctx.client.constants) for tooltip_id in tooltip_ids]
         defined = [(definition, unresolved) for _, definition, unresolved in found if definition]
