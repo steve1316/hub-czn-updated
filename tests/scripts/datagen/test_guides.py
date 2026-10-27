@@ -754,6 +754,15 @@ def test_sift_matcher_tells_recoloured_art_apart_by_colour(tmp_path):
     assert matcher.match(_framed_render(red)) == "m_0001"
 
 
+def test_sift_matcher_prepares_card_art_of_any_resolution_at_one_size(tmp_path):
+    pytest.importorskip("cv2")
+    # The deck builder's art went from 200x300 to 420x632 files, which moved its features away from the sheet's small renders.
+    _textured(22).resize((200, 300)).save(tmp_path / "small.png")
+    _textured(22, (840, 1264)).save(tmp_path / "large.png")
+    matcher = images.SiftMatcher({"small": [tmp_path / "small.png"], "large": [tmp_path / "large.png"]}, candidate_size=images.CARD_MATCH_SIZE)
+    assert {matcher._candidate_image(tmp_path / name).size for name in ("small.png", "large.png")} == {images.CARD_MATCH_SIZE}
+
+
 def test_card_art_lists_a_shared_image_once_under_its_plainest_id(tmp_path, monkeypatch):
     folder = tmp_path / "combatants" / "rin"
     folder.mkdir(parents=True)
