@@ -409,6 +409,7 @@ const en = {
     epiphanies: 'Epiphanies',
     viewArt: 'View full size',
     closeArt: 'Click or press Esc to close',
+    openCard: 'Open card',
     seasonTitle: 'Season {{n}}: {{title}}',
     groups: {
       combatant: 'Combatant',

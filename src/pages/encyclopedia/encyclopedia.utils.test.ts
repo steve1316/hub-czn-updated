@@ -59,6 +59,41 @@ describe('buildMatcher / linkDescription', () => {
   })
 })
 
+describe('buildMatcher / linkDescription with card keywords and card names', () => {
+  const keywords = [
+    { name: 'Ignition', definition: 'Cost goes down.' },
+    { name: 'Incinerate:', definition: 'When Exhausted.' },
+    { name: 'Agony', definition: 'Game definition.' },
+  ]
+  const cardLinks = [{ name: 'Contaminated Spore', id: 'card_ds02_00009' }]
+
+  it('links keywords and card names with their exact case only', () => {
+    const m = buildMatcher([], keywords, cardLinks)
+    expect(linkDescription('[Ignition] Create Contaminated Spore', m)).toEqual([
+      { kind: 'text', value: '[' },
+      { kind: 'keyword', value: 'Ignition', definition: 'Cost goes down.' },
+      { kind: 'text', value: '] Create ' },
+      { kind: 'card', value: 'Contaminated Spore', cardId: 'card_ds02_00009' },
+    ])
+    expect(linkDescription('ignition and contaminated spore', m)).toEqual([{ kind: 'text', value: 'ignition and contaminated spore' }])
+  })
+
+  it('keeps glossary aliases case-insensitive', () => {
+    const m = buildMatcher([entry('quietus', ['Quietus'])], keywords, cardLinks)
+    expect(linkDescription('quietus', m)).toEqual([{ kind: 'term', value: 'quietus', termId: 'quietus' }])
+  })
+
+  it('prefers a glossary alias over a keyword of the same name', () => {
+    const m = buildMatcher([entry('agony', ['Agony'])], keywords, cardLinks)
+    expect(linkDescription('Agony', m)).toEqual([{ kind: 'term', value: 'Agony', termId: 'agony' }])
+  })
+
+  it('prefers the longest name on overlap', () => {
+    const m = buildMatcher([entry('incinerate', ['Incinerate'])], keywords, cardLinks)
+    expect(linkDescription('Incinerate: Draw 1', m)[0]).toEqual({ kind: 'keyword', value: 'Incinerate:', definition: 'When Exhausted.' })
+  })
+})
+
 describe('resolveLang / localized', () => {
   it('resolveLang always returns en', () => {
     expect(resolveLang('en')).toBe('en')

@@ -1,6 +1,8 @@
 import { localized } from '@/lib/localized-text'
 import type {
   CardFilters,
+  CardKeyword,
+  CardLink,
   DescriptionSegment,
   EncyclopediaCard,
   GlossaryCategory,
@@ -18,34 +20,61 @@ function escapeRegExp(value: string): string {
   return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')
 }
 
-/** Builds a matcher from the glossary. Only explicit `aliases` are linkable. */
-export function buildMatcher(glossary: GlossaryEntry[]): Matcher {
+/**
+ * A regex source that matches a name in any case, for use in a regex without the `i` flag.
+ * @param name The name.
+ * @returns The escaped name with each letter as a class of both cases, such as "[aA][pP]".
+ */
+function anyCase(name: string): string {
+  return [...escapeRegExp(name)].map(c => (c.toLowerCase() === c.toUpperCase() ? c : `[${c.toLowerCase()}${c.toUpperCase()}]`)).join('')
+}
+
+/**
+ * Builds a matcher from the glossary and the game's own keywords and card names. Only explicit glossary `aliases` are linkable.
+ * @param glossary The hand-written glossary. Its aliases match in any case and win over a keyword or card of the same name.
+ * @param keywords The game keywords card text names, matched only in their exact case.
+ * @param cardLinks The card names card text refers to, matched only in their exact case.
+ * @returns The matcher.
+ */
+export function buildMatcher(glossary: GlossaryEntry[], keywords: CardKeyword[] = [], cardLinks: CardLink[] = []): Matcher {
   const aliasToTermId = new Map<string, string>()
-  const aliases: string[] = []
+  const keywordDefinitions = new Map<string, string>()
+  const cardIds = new Map<string, string>()
+  // Each linkable name with its regex source.
+  const names: { name: string; source: string }[] = []
 
   for (const entry of glossary) {
     for (const alias of entry.aliases) {
       const key = alias.toLowerCase()
       if (!aliasToTermId.has(key)) {
         aliasToTermId.set(key, entry.id)
-        aliases.push(alias)
+        names.push({ name: alias, source: anyCase(alias) })
       }
     }
   }
+  for (const { name, definition } of keywords) {
+    if (!aliasToTermId.has(name.toLowerCase()) && !keywordDefinitions.has(name)) {
+      keywordDefinitions.set(name, definition)
+      names.push({ name, source: escapeRegExp(name) })
+    }
+  }
+  for (const { name, id } of cardLinks) {
+    if (!aliasToTermId.has(name.toLowerCase()) && !keywordDefinitions.has(name) && !cardIds.has(name)) {
+      cardIds.set(name, id)
+      names.push({ name, source: escapeRegExp(name) })
+    }
+  }
 
-  // Longest first so regex alternation prefers multi-word aliases.
-  aliases.sort((a, b) => b.length - a.length)
+  // Longest first so regex alternation prefers multi-word names.
+  names.sort((a, b) => b.name.length - a.name.length)
 
   // `(?!)` never matches — used when there is nothing to link.
-  const regex =
-    aliases.length === 0
-      ? /(?!)/g
-      : new RegExp(`(?<![\\w])(?:${aliases.map(escapeRegExp).join('|')})(?![\\w])`, 'gi')
+  const regex = names.length === 0 ? /(?!)/g : new RegExp(`(?<![\\w])(?:${names.map(n => n.source).join('|')})(?![\\w])`, 'g')
 
-  return { regex, aliasToTermId }
+  return { regex, aliasToTermId, keywords: keywordDefinitions, cardIds }
 }
 
-/** Splits `text` into plain-text and glossary-term segments. */
+/** Splits `text` into plain-text, glossary-term, keyword and card-name segments. */
 export function linkDescription(text: string, matcher: Matcher): DescriptionSegment[] {
   if (!text) return []
 
@@ -65,10 +94,15 @@ export function linkDescription(text: string, matcher: Matcher): DescriptionSegm
     if (match.index > last) {
       segments.push({ kind: 'text', value: text.slice(last, match.index) })
     }
-    // The regex is built only from aliasToTermId's keys, so a match always
+    // The regex is built only from the matcher's names, so a match always
     // resolves; the text fallback is a defensive default.
     const termId = matcher.aliasToTermId.get(value.toLowerCase())
-    segments.push(termId ? { kind: 'term', value, termId } : { kind: 'text', value })
+    const definition = matcher.keywords.get(value)
+    const cardId = matcher.cardIds.get(value)
+    if (termId) segments.push({ kind: 'term', value, termId })
+    else if (definition) segments.push({ kind: 'keyword', value, definition })
+    else if (cardId) segments.push({ kind: 'card', value, cardId })
+    else segments.push({ kind: 'text', value })
     last = match.index + value.length
   }
 
@@ -92,6 +126,15 @@ export function filterGlossary(glossary: GlossaryEntry[], query: string, categor
     if (category && e.category !== category) return false
     return !q || localized(e.term, lang).toLowerCase().includes(q) || localized(e.definition, lang).toLowerCase().includes(q)
   })
+}
+
+/**
+ * A card's cost as printed.
+ * @param cost The cost, -1 for X, or null.
+ * @returns Such as "2", "X" or "-".
+ */
+export function costLabel(cost: number | null): string {
+  return cost == null ? '-' : cost < 0 ? 'X' : String(cost)
 }
 
 /**

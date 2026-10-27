@@ -165,7 +165,7 @@ export function ClarifiedText({ clarification, gameText }: ClarifiedTextProps) {
           </div>
           <div>
             <p className="mb-1 text-xs font-semibold text-[#8a8a8a]">{t('encyclopedia.gameText')}</p>
-            <p className="text-sm leading-relaxed text-[#b3b3b3]">{gameText}</p>
+            <RichDescription text={gameText} className="text-sm leading-relaxed text-[#b3b3b3]" />
           </div>
         </>
       ) : (

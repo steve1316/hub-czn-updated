@@ -8,7 +8,8 @@ import { CostGem } from '@/pages/guides/components/blocks/CostGem'
 import { CARD_CHARACTERS, CARD_SEASONS, ENCYCLOPEDIA_CARDS, cardImageUrl } from '../encyclopedia-cards'
 import { findClarification } from '../encyclopedia-content'
 import type { EncyclopediaCard } from '../encyclopedia.types'
-import { SEASON_GROUP_PREFIX, cardGroupKey, filterCards, localized, resolveLang, uniqueSorted } from '../encyclopedia.utils'
+import { SEASON_GROUP_PREFIX, cardGroupKey, costLabel, filterCards, localized, resolveLang, uniqueSorted } from '../encyclopedia.utils'
+import { OpenCardContext } from './CardLink'
 import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
 import { RichDescription } from './RichDescription'
@@ -26,15 +27,6 @@ const SEASON_TITLES = new Map(CARD_SEASONS.map(s => [s.number, s.title]))
  */
 function groupLabel(key: string, t: TFunction): string {
   return key.startsWith(SEASON_GROUP_PREFIX) ? t('cards.groups.season', { n: key.slice(SEASON_GROUP_PREFIX.length) }) : t(`cards.groups.${key}`)
-}
-
-/**
- * A card's cost as printed.
- * @param cost The cost, -1 for X, or null.
- * @returns Such as "2", "X" or "-".
- */
-function costLabel(cost: number | null): string {
-  return cost == null ? '-' : cost < 0 ? 'X' : String(cost)
 }
 
 /**
@@ -173,68 +165,70 @@ export function CardsTab() {
   const clar = selected ? findClarification('card', selected.id) : undefined
 
   return (
-    <EncyclopediaLayout
-      search={search}
-      onSearch={setSearch}
-      searchPlaceholder={t('cards.search')}
-      filters={
-        <>
-          <FilterSection label={t('cards.group')} options={GROUPS} value={group} onChange={pickGroup} format={key => groupLabel(key, t)} />
-          {group === 'combatant' && (
-            <FilterSection
-              label={t('cards.character')}
-              options={CARD_CHARACTERS.map(c => String(c.id))}
-              value={character}
-              onChange={setCharacter}
-              format={id => CHARACTER_NAMES.get(Number(id)) ?? id}
-            />
-          )}
-          <FilterSection label={t('cards.type')} options={types} value={type} onChange={setType} />
-        </>
-      }
-      count={filtered.length}
-      detail={
-        selected && (
-          <div className="flex max-w-2xl flex-col gap-5">
-            <DetailHeader
-              title={selected.name}
-              meta={
-                <>
-                  <span>{cardMeta(selected, t, true)}</span>
-                  <span className="mt-1 block font-mono text-[#93c5fd]">{t('cards.cost', { cost: costLabel(selected.cost) })}</span>
-                </>
-              }
-              media={imageUrl && <CardArt url={imageUrl} name={selected.name} />}
-            />
-
-            <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={selected.description || t('cards.noText')} />
-
-            {selected.epiphanies && (
-              <DetailSection label={t('cards.epiphanies')}>
-                <ol className="flex flex-col gap-2">
-                  {selected.epiphanies.map(epiphany => (
-                    <li key={epiphany.level} className="rounded-lg border border-[#282828] bg-[#161616] p-3">
-                      <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-[#e5e7eb]">
-                        <span className="grid h-6 w-6 shrink-0 place-items-center rounded border border-[#075985] bg-[#082f49] font-mono text-xs text-[#93c5fd]">
-                          {costLabel(epiphany.cost)}
-                        </span>
-                        {epiphany.name}
-                      </p>
-                      <RichDescription text={epiphany.description} className="text-sm leading-relaxed text-[#d4d4d4]" />
-                    </li>
-                  ))}
-                </ol>
-              </DetailSection>
+    <OpenCardContext value={setSelectedId}>
+      <EncyclopediaLayout
+        search={search}
+        onSearch={setSearch}
+        searchPlaceholder={t('cards.search')}
+        filters={
+          <>
+            <FilterSection label={t('cards.group')} options={GROUPS} value={group} onChange={pickGroup} format={key => groupLabel(key, t)} />
+            {group === 'combatant' && (
+              <FilterSection
+                label={t('cards.character')}
+                options={CARD_CHARACTERS.map(c => String(c.id))}
+                value={character}
+                onChange={setCharacter}
+                format={id => CHARACTER_NAMES.get(Number(id)) ?? id}
+              />
             )}
-          </div>
-        )
-      }
-    >
-      <div className="grid grid-cols-3 gap-1 p-2">
-        {filtered.map(card => (
-          <CardTile key={card.id} card={card} selected={selectedId === card.id} onSelect={setSelectedId} />
-        ))}
-      </div>
-    </EncyclopediaLayout>
+            <FilterSection label={t('cards.type')} options={types} value={type} onChange={setType} />
+          </>
+        }
+        count={filtered.length}
+        detail={
+          selected && (
+            <div className="flex max-w-2xl flex-col gap-5">
+              <DetailHeader
+                title={selected.name}
+                meta={
+                  <>
+                    <span>{cardMeta(selected, t, true)}</span>
+                    <span className="mt-1 block font-mono text-[#93c5fd]">{t('cards.cost', { cost: costLabel(selected.cost) })}</span>
+                  </>
+                }
+                media={imageUrl && <CardArt url={imageUrl} name={selected.name} />}
+              />
+
+              <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={selected.description || t('cards.noText')} />
+
+              {selected.epiphanies && (
+                <DetailSection label={t('cards.epiphanies')}>
+                  <ol className="flex flex-col gap-2">
+                    {selected.epiphanies.map(epiphany => (
+                      <li key={epiphany.level} className="rounded-lg border border-[#282828] bg-[#161616] p-3">
+                        <p className="mb-1 flex items-center gap-2 text-sm font-semibold text-[#e5e7eb]">
+                          <span className="grid h-6 w-6 shrink-0 place-items-center rounded border border-[#075985] bg-[#082f49] font-mono text-xs text-[#93c5fd]">
+                            {costLabel(epiphany.cost)}
+                          </span>
+                          {epiphany.name}
+                        </p>
+                        <RichDescription text={epiphany.description} className="text-sm leading-relaxed text-[#d4d4d4]" />
+                      </li>
+                    ))}
+                  </ol>
+                </DetailSection>
+              )}
+            </div>
+          )
+        }
+      >
+        <div className="grid grid-cols-3 gap-1 p-2">
+          {filtered.map(card => (
+            <CardTile key={card.id} card={card} selected={selectedId === card.id} onSelect={setSelectedId} />
+          ))}
+        </div>
+      </EncyclopediaLayout>
+    </OpenCardContext>
   )
 }

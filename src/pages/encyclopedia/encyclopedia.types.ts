@@ -87,6 +87,25 @@ export interface CardCharacterEntry {
   name: string
 }
 
+/** A game keyword that card text names, with the game's own definition. */
+export interface CardKeyword {
+  /** The keyword as card text shows it, such as "Ignition". Trigger names keep their colon, such as "Incinerate:". */
+  name: string
+  /** The game's definition of the keyword. */
+  definition: string
+}
+
+/** A card name that card text refers to. */
+export interface CardLink {
+  /** The name as card text shows it, such as "Contaminated Spore". */
+  name: string
+  /** The client id of the card it refers to. */
+  id: string
+}
+
+/** A card that card text names but the card list leaves out, with only what its preview shows. */
+export type LinkedCard = Pick<EncyclopediaCard, 'id' | 'name' | 'cost' | 'card_type' | 'description' | 'image'>
+
 /** The whole `encyclopedia-cards.json` file. */
 export interface EncyclopediaCards {
   /** The seasons that have cards, in order. */
@@ -95,6 +114,12 @@ export interface EncyclopediaCards {
   characters: CardCharacterEntry[]
   /** Every card, in archive order. */
   cards: EncyclopediaCard[]
+  /** The keywords card text names, by name. */
+  keywords: CardKeyword[]
+  /** The card names card text refers to, by name. */
+  card_links: CardLink[]
+  /** The cards `card_links` refers to that `cards` leaves out. */
+  linked_cards: LinkedCard[]
 }
 
 /** What the Cards tab is filtered by. */
@@ -109,11 +134,21 @@ export interface CardFilters {
   query: string
 }
 
+/** One piece of linked text: plain text, a glossary term, a game keyword, or a card name. */
 export type DescriptionSegment =
   | { kind: 'text'; value: string }
   | { kind: 'term'; value: string; termId: string }
+  | { kind: 'keyword'; value: string; definition: string }
+  | { kind: 'card'; value: string; cardId: string }
 
+/** Finds the linkable names in text. */
 export interface Matcher {
+  /** Matches every linkable name, longest first. Glossary aliases match in any case, keywords and card names only exactly. */
   regex: RegExp
+  /** Lower-cased glossary alias -> glossary term id. */
   aliasToTermId: Map<string, string>
+  /** Keyword name -> its definition. */
+  keywords: Map<string, string>
+  /** Card name -> card id. */
+  cardIds: Map<string, string>
 }

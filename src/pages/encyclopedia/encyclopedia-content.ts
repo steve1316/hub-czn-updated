@@ -5,6 +5,7 @@ import type {
   EncyclopediaContent,
   GlossaryEntry,
 } from './encyclopedia.types'
+import { CARD_KEYWORDS, CARD_LINKS } from './encyclopedia-cards'
 import { buildMatcher } from './encyclopedia.utils'
 
 // Cast is safe at the top level (resolveJsonModule infers the shape); the
@@ -16,8 +17,8 @@ export const CLARIFICATIONS: Clarification[] = content.clarifications
 
 export const glossaryById = new Map(GLOSSARY.map(entry => [entry.id, entry]))
 
-/** Prebuilt matcher over the whole glossary — built once at module load. */
-export const matcher = buildMatcher(GLOSSARY)
+/** Prebuilt matcher over the whole glossary and the game's card keywords and card names, built once at module load. */
+export const matcher = buildMatcher(GLOSSARY, CARD_KEYWORDS, CARD_LINKS)
 
 const clarificationIndex = new Map(
   CLARIFICATIONS.map(c => [`${c.kind}:${c.refId}`, c]),
