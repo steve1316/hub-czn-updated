@@ -12,7 +12,7 @@ export function CharacterAvatar({
 
   if (!character) {
     return (
-      <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-[#333348] bg-[#101018] text-[#777]">
+      <div className="grid h-10 w-10 shrink-0 place-items-center rounded-lg border border-[#333348] bg-[#101018] text-[#8a8a8a]">
         <Plus size={16} />
       </div>
     )

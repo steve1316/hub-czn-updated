@@ -2,12 +2,16 @@ import { useEffect, useState, type ReactNode } from 'react'
 import { useQuery, useMutation } from '@tanstack/react-query'
 import { useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Play, Zap } from 'lucide-react'
+import { Play, Zap, Users, UserX } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { StaleBanner } from '@/components/ui/stale-banner'
 import { AssetImage } from '@/components/ui/asset-image'
 import type { BattleRecord, Combatant, SimulateDamageResponse, SimCardResult, DeckInfo } from '@/lib/types'
 import { CharacterCombobox } from '@/components/ui/character-combobox'
 import { damagePasses } from '@/lib/damage-reduction'
+import { settingsKey } from '@/lib/run-settings'
 import { formatBattleTime } from '@/pages/battle/battle-time.utils'
 import { battleEnemy, presetEnemy, typedEnemy, useBattlesEnemy } from '@/pages/battles/battles-enemy'
 import { loadSavedDecks } from '@/pages/deck-builder/deck-builder-saved-decks.utils'
@@ -31,6 +35,8 @@ interface PersistedState {
   result: SimulateDamageResponse | null
   /** The name of the Deck Builder deck behind `result`, or null for an in-game deck. */
   resultDeckName: string | null
+  /** The settings key of the run behind `result`, or null when it is not known. */
+  runKey?: string | null
 }
 
 function loadPersistedState(): PersistedState | null {
@@ -62,7 +68,7 @@ function savePersistedState(s: PersistedState): void {
 function StatPill({ label, value, highlight }: { label: string; value: string; highlight?: boolean }) {
   return (
     <div className={`flex flex-col items-center rounded px-3 py-2 min-w-[80px] ${highlight ? 'bg-[#1a2a1a]' : 'bg-[#222]'}`}>
-      <span className="text-[#888] text-[10px] uppercase tracking-wide">{label}</span>
+      <span className="text-[#888] text-[11px] uppercase tracking-wide">{label}</span>
       <span className={`font-bold text-sm mt-0.5 ${highlight ? 'text-[#a3e635]' : 'text-[#e5e7eb]'}`}>{value}</span>
     </div>
   )
@@ -86,7 +92,7 @@ function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?:
       }`}
     >
       <div className="font-medium">{label}</div>
-      {sub && <div className={`text-[10px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#555]'}`}>{sub}</div>}
+      {sub && <div className={`text-[11px] mt-0.5 ${selected ? 'text-white/70' : 'text-[#8a8a8a]'}`}>{sub}</div>}
     </button>
   )
 }
@@ -97,7 +103,7 @@ function DeckButton({ label, sub, selected, onClick }: { label: ReactNode; sub?:
  * @returns The heading.
  */
 function DeckGroupLabel({ children }: { children: ReactNode }) {
-  return <p className="text-[9px] text-[#555] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
+  return <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mt-1 first:mt-0">{children}</p>
 }
 
 function CardRow({ card }: { card: SimCardResult }) {
@@ -125,7 +131,7 @@ function CardRow({ card }: { card: SimCardResult }) {
             <div className="flex items-center gap-1">
               <span className="text-[#e5e7eb] font-medium">{displayName}</span>
               {hasSpark && (
-                <span className="text-[#facc15] text-[10px]" title={t('simulator.epiphanyApplied')}>✦</span>
+                <span className="text-[#facc15] text-[11px]" title={t('simulator.epiphanyApplied')}>✦</span>
               )}
             </div>
           </div>
@@ -145,16 +151,16 @@ function CardRow({ card }: { card: SimCardResult }) {
       </tr>
       {card.hits > 1 && (
         <tr className="border-b border-[#282828] bg-[#141414]">
-          <td className="px-3 py-1 text-[9px] text-[#555] pl-14" colSpan={4}>
+          <td className="px-3 py-1 text-[11px] text-[#8a8a8a] pl-14" colSpan={4}>
             {t('simulator.perHit')}
           </td>
-          <td className="px-3 py-1 text-right text-[#555] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#8a8a8a] text-[11px] font-mono">
             {(card.normal_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
-          <td className="px-3 py-1 text-right text-[#555] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#8a8a8a] text-[11px] font-mono">
             {(card.crit_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
-          <td className="px-3 py-1 text-right text-[#6a9e35] text-[10px] font-mono">
+          <td className="px-3 py-1 text-right text-[#6a9e35] text-[11px] font-mono">
             {(card.avg_damage / card.hits).toLocaleString(undefined, { maximumFractionDigits: 0 })}
           </td>
         </tr>
@@ -186,13 +192,16 @@ export function SimulateTab() {
   const [dmgReduction, setDmgReduction] = useState(initial?.dmgReduction ?? false)
   const [result, setResult] = useState<SimulateDamageResponse | null>(initial?.result ?? null)
   const [resultDeckName, setResultDeckName] = useState<string | null>(initial?.resultDeckName ?? null)
+  const [runKey, setRunKey] = useState<string | null>(initial?.runKey ?? null)
+  // Set when a Deck Builder deck arrives, so it runs once its character and deck are in place
+  const [autoRun, setAutoRun] = useState(false)
   const [savedDecks] = useState(loadSavedDecks)
 
   // Callers must pass every field that just changed in `patch` to override the closure snapshot.
   function persist(patch: Partial<PersistedState>) {
     savePersistedState({
       charName, deck, morale, useSparks, presetGroup,
-      weaken, vulnerableStacks, dmgReduction, result, resultDeckName,
+      weaken, vulnerableStacks, dmgReduction, result, resultDeckName, runKey,
       ...patch,
     })
   }
@@ -226,20 +235,29 @@ export function SimulateTab() {
     staleTime: 30_000,
   })
 
-  // Apply a deck sent from the Deck Builder once the combatants load, then drop it from the router state so a reload does not resend it
+  const handoff = (location.state as { deckBuilder?: DeckBuilderHandoff } | null)?.deckBuilder
+
+  // Apply a deck sent from the Deck Builder once the combatants load and run it, then drop it from the router state so a reload does not resend it
   useEffect(() => {
-    const handoff = (location.state as { deckBuilder?: DeckBuilderHandoff } | null)?.deckBuilder
     if (!handoff || combatants.length === 0) return
     navigate(location.pathname, { replace: true, state: null })
     const target = combatants.find((c) => c.res_id === handoff.combatantId)
+    // The old result is for another deck, so it goes either way
+    setResult(null)
+    setResultDeckName(null)
+    setRunKey(null)
     setNotOwned(target ? null : handoff.name)
-    if (!target) return
+    if (!target) {
+      persist({ result: null, resultDeckName: null, runKey: null })
+      return
+    }
     const choice: DeckChoice = handoff.saved
       ? { kind: 'saved', ...handoff.saved }
       : { kind: 'cards', name: t('simulator.builderDeck', { name: target.name }), cards: handoff.cards }
     setCharName(target.char_id)
     setDeck(choice)
-    persist({ charName: target.char_id, deck: choice })
+    setAutoRun(true)
+    persist({ charName: target.char_id, deck: choice, result: null, resultDeckName: null, runKey: null })
   }, [location.state, combatants])
 
   // The slots of decks saved in the Deck Builder that belong to the selected character
@@ -268,9 +286,16 @@ export function SimulateTab() {
     retry: false,
   })
 
+  // Everything that changes the result, so a result can be marked out of date once the settings move on
+  const currentKey = settingsKey({
+    charName, deck: builderDeck?.cards ?? activeDeck, morale, useSparks,
+    def: enemy.def, dmgDecrease: enemy.dmgDecrease, weaken, vulnerableStacks, dmgReduction,
+  })
+
   const mutation = useMutation({
     mutationFn: async () => {
       const name = builderDeck?.name ?? null
+      const key = currentKey
       const data = await api.simulateDamage({
         char_name: charName,
         ...(builderDeck ? { cards: builderDeck.cards } : { deck_id: activeDeck.kind === 'game' ? activeDeck.id : null }),
@@ -282,288 +307,314 @@ export function SimulateTab() {
         exposed_stacks: vulnerableStacks,
         fortitude: dmgReduction,
       })
-      return { data, name }
+      return { data, name, key }
     },
-    onSuccess: ({ data, name }) => { setResult(data); setResultDeckName(name); persist({ result: data, resultDeckName: name }) },
+    onSuccess: ({ data, name, key }) => {
+      setResult(data)
+      setResultDeckName(name)
+      setRunKey(key)
+      persist({ result: data, resultDeckName: name, runKey: key })
+    },
   })
+
+  useEffect(() => {
+    if (!autoRun || charName === '') return
+    setAutoRun(false)
+    mutation.mutate()
+  }, [autoRun, charName])
 
   // A deck sent unsaved from the Deck Builder, listed on its own until another deck is picked
   const sentDeck = activeDeck.kind === 'cards' ? activeDeck : null
   const canRun = charName !== '' && !mutation.isPending && (status?.data_loaded ?? false)
+  // An older saved result has no key, so it is never marked out of date
+  const stale = result != null && runKey != null && runKey !== currentKey && !mutation.isPending
   const moraleMultDisplay = `×${(1 + morale * MORALE_PCT / 100).toFixed(2)}`
   const defReductionPreview = `${(damagePasses(enemy.dmgDecrease, enemy.def) * 100).toFixed(1)}%`
   const activeGroup = ENEMY_PRESET_GROUPS.find((group) => group.group === presetGroup) ?? ENEMY_PRESET_GROUPS[0]
   const source = enemy.source
 
+  if (status && !status.data_loaded) {
+    return <EmptyState icon={Users} title={t('simulator.noData')} hint={t('simulator.noDataHint')} className="h-full" />
+  }
+
   return (
     <div className="flex h-full overflow-hidden">
       {/* Left panel */}
-      <div className="w-64 shrink-0 flex flex-col gap-4 p-4 bg-[#181818] border-r border-[#282828] overflow-y-auto">
-        {!status?.data_loaded && (
-          <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
-            {t('simulator.noData')}
-          </div>
-        )}
+      <div className="w-64 shrink-0 flex flex-col bg-[#181818] border-r border-[#282828]">
+        <div className="flex-1 flex flex-col gap-4 p-4 overflow-y-auto">
 
-        <div className="flex flex-col gap-1">
-          <label className="text-[#b3b3b3] text-xs">{t('simulator.character')}</label>
-          <CharacterCombobox
-            combatants={combatants}
-            value={charName}
-            onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); setNotOwned(null); persist({ charName: v, deck: AUTO_DECK }) }}
-          />
-          {notOwned && <p className="text-[#f87171] text-[10px]">{t('simulator.notOwned', { name: notOwned })}</p>}
-        </div>
-
-        {charName && (decks.length > 0 || savedSlots.length > 0 || sentDeck) && (
           <div className="flex flex-col gap-1">
-            <label className="text-[#b3b3b3] text-xs">{t('simulator.deck')}</label>
-            <div className="flex flex-col gap-0.5 max-h-56 overflow-y-auto pr-0.5">
-              {sentDeck && (
-                <>
-                  <DeckGroupLabel>{t('simulator.deckGroups.builder')}</DeckGroupLabel>
-                  <DeckButton label={sentDeck.name} sub={t('simulator.unsaved')} selected />
-                </>
-              )}
-              {decks.length > 0 && (
-                <>
-                  {(sentDeck || savedSlots.length > 0) && <DeckGroupLabel>{t('simulator.deckGroups.game')}</DeckGroupLabel>}
-                  <DeckButton
-                    label={t('simulator.deckAuto')}
-                    selected={activeDeck.kind === 'game' && activeDeck.id === null}
-                    onClick={() => selectDeck(AUTO_DECK)}
-                  />
-                  {decks.map((d) => {
-                    const label = d.bookmark_slot > 0
-                      ? t('simulator.deckSlot', { slot: d.bookmark_slot })
-                      : `#${d.deck_id}`
-                    return (
-                      <DeckButton
-                        key={d.deck_id}
-                        label={
-                          <span className="flex items-center justify-between gap-2">
-                            <span className="truncate">{d.name || label}</span>
-                            {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[9px] opacity-60">★</span>}
-                          </span>
-                        }
-                        sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
-                        selected={activeDeck.kind === 'game' && activeDeck.id === d.deck_id}
-                        onClick={() => selectDeck({ kind: 'game', id: d.deck_id })}
-                      />
-                    )
-                  })}
-                </>
-              )}
-              {savedSlots.length > 0 && (
-                <>
-                  <DeckGroupLabel>{t('simulator.deckGroups.saved')}</DeckGroupLabel>
-                  {savedSlots.map(({ saved, slot, slotIndex }) => {
-                    const choice: DeckChoice = { kind: 'saved', id: saved.id, slotIndex }
-                    return (
-                      <DeckButton
-                        key={`${saved.id}-${slotIndex}`}
-                        label={<span className="block truncate">{saved.name}</span>}
-                        sub={t('simulator.deckCards', { count: slot.cards.length })}
-                        selected={savedChoice?.saved.id === saved.id && savedChoice.slotIndex === slotIndex}
-                        onClick={() => selectDeck(choice)}
-                      />
-                    )
-                  })}
-                </>
-              )}
-            </div>
+            <label className="text-[#b3b3b3] text-xs">{t('simulator.character')}</label>
+            <CharacterCombobox
+              combatants={combatants}
+              value={charName}
+              onChange={(v) => { setCharName(v); setDeck(AUTO_DECK); setNotOwned(null); persist({ charName: v, deck: AUTO_DECK }) }}
+            />
           </div>
-        )}
 
-        <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center">
-            <label className="text-[#b3b3b3] text-xs">{t('simulator.morale')}</label>
-            <span className="text-[#c084fc] text-xs font-mono">{morale} {moraleMultDisplay}</span>
-          </div>
-          <input
-            type="range"
-            min={0}
-            max={20}
-            value={morale}
-            onChange={(e) => { const v = Number(e.target.value); setMorale(v); persist({ morale: v }) }}
-            className="w-full accent-[#c084fc]"
-          />
-          <div className="flex justify-between text-[#555] text-[10px]">
-            <span>0</span>
-            <span>10</span>
-            <span>20</span>
-          </div>
-        </div>
-
-        {/* Monster DEF */}
-        <div className="flex flex-col gap-1">
-          <div className="flex justify-between items-center">
-            <label className="text-[#b3b3b3] text-xs">{t('simulator.monsterDef')}</label>
-            <span className="text-[#fb923c] text-xs font-mono">{defReductionPreview} {t('simulator.dmgPasses')}</span>
-          </div>
-          <select
-            value={activeGroup.group}
-            onChange={(e) => { setPresetGroup(e.target.value); persist({ presetGroup: e.target.value }) }}
-            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1"
-          >
-            {ENEMY_PRESET_GROUPS.map((group) => (
-              <option key={group.group} value={group.group}>{t(`simulator.presetGroups.${group.group}`)}</option>
-            ))}
-          </select>
-          <div className="flex flex-wrap gap-1">
-            {activeGroup.presets.map((p) => (
-              <button
-                key={p.label}
-                type="button"
-                title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
-                onClick={() => setEnemy(presetEnemy(activeGroup.group, p))}
-                className={`text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
-                  source.kind === 'preset' && source.group === activeGroup.group && source.label === p.label,
-                )}`}
-              >
-                {p.label}
-              </button>
-            ))}
-          </div>
-          {recentBattles.length > 0 && (
-            <div className="mt-1">
-              <p className="text-[9px] text-[#555] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
-              <div className="flex flex-wrap gap-1">
-                {recentBattles.map((b) => (
-                  <button
-                    key={b.capture_time}
-                    type="button"
-                    title={t('simulator.recentTip', { def: Math.round(b.enemy_def), pct: (b.enemy_dmg_decrease * 100).toFixed(1) })}
-                    onClick={() => setEnemy(battleEnemy(b))}
-                    className={`flex items-center gap-1 text-[10px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
-                      source.kind === 'battle' && source.captureTime === b.capture_time,
-                    )}`}
-                  >
-                    <span className={b.battle_result === 'CLEAR' ? 'text-[#a3e635]' : 'text-[#f87171]'}>●</span>
-                    {formatBattleTime(b.capture_time)} · {Math.round(b.enemy_def)}
-                  </button>
-                ))}
+          {charName && (decks.length > 0 || savedSlots.length > 0 || sentDeck) && (
+            <div className="flex flex-col gap-1">
+              <label className="text-[#b3b3b3] text-xs">{t('simulator.deck')}</label>
+              <div className="flex flex-col gap-0.5 max-h-56 overflow-y-auto pr-0.5">
+                {sentDeck && (
+                  <>
+                    <DeckGroupLabel>{t('simulator.deckGroups.builder')}</DeckGroupLabel>
+                    <DeckButton label={sentDeck.name} sub={t('simulator.unsaved')} selected />
+                  </>
+                )}
+                {decks.length > 0 && (
+                  <>
+                    {(sentDeck || savedSlots.length > 0) && <DeckGroupLabel>{t('simulator.deckGroups.game')}</DeckGroupLabel>}
+                    <DeckButton
+                      label={t('simulator.deckAuto')}
+                      selected={activeDeck.kind === 'game' && activeDeck.id === null}
+                      onClick={() => selectDeck(AUTO_DECK)}
+                    />
+                    {decks.map((d) => {
+                      const label = d.bookmark_slot > 0
+                        ? t('simulator.deckSlot', { slot: d.bookmark_slot })
+                        : `#${d.deck_id}`
+                      return (
+                        <DeckButton
+                          key={d.deck_id}
+                          label={
+                            <span className="flex items-center justify-between gap-2">
+                              <span className="truncate">{d.name || label}</span>
+                              {d.bookmark_slot > 0 && !d.name && <span className="shrink-0 text-[11px] opacity-60">★</span>}
+                            </span>
+                          }
+                          sub={t('simulator.deckPoints', { point: d.point.toLocaleString(), count: d.card_count })}
+                          selected={activeDeck.kind === 'game' && activeDeck.id === d.deck_id}
+                          onClick={() => selectDeck({ kind: 'game', id: d.deck_id })}
+                        />
+                      )
+                    })}
+                  </>
+                )}
+                {savedSlots.length > 0 && (
+                  <>
+                    <DeckGroupLabel>{t('simulator.deckGroups.saved')}</DeckGroupLabel>
+                    {savedSlots.map(({ saved, slot, slotIndex }) => {
+                      const choice: DeckChoice = { kind: 'saved', id: saved.id, slotIndex }
+                      return (
+                        <DeckButton
+                          key={`${saved.id}-${slotIndex}`}
+                          label={<span className="block truncate">{saved.name}</span>}
+                          sub={t('simulator.deckCards', { count: slot.cards.length })}
+                          selected={savedChoice?.saved.id === saved.id && savedChoice.slotIndex === slotIndex}
+                          onClick={() => selectDeck(choice)}
+                        />
+                      )
+                    })}
+                  </>
+                )}
               </div>
             </div>
           )}
-          <input
-            type="number"
-            min={0}
-            max={9999}
-            value={enemy.def}
-            onChange={(e) => setEnemy(typedEnemy(Math.max(0, Number(e.target.value))))}
-            className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 font-mono"
-          />
-        </div>
 
-        {/* Buffs & Debuffs */}
-        <div className="flex flex-col gap-2">
-          <label className="text-[#b3b3b3] text-xs">{t('simulator.buffsDebuffs')}</label>
-
-          <div className="flex flex-col gap-1.5 bg-[#1e1e1e] rounded p-2">
-            <div className="flex items-center justify-between">
-              <label className="text-[#f87171] text-xs cursor-pointer" htmlFor="weaken">
-                {t('simulator.weaken')}
-                <span className="ml-1 text-[#555] text-[10px]">{t('simulator.weakenHint')}</span>
-              </label>
-              <input
-                id="weaken"
-                type="checkbox"
-                checked={weaken}
-                onChange={(e) => { setWeaken(e.target.checked); persist({ weaken: e.target.checked }) }}
-                className="accent-[#f87171]"
-              />
+          <div className="flex flex-col gap-1">
+            <div className="flex justify-between items-center">
+              <label className="text-[#b3b3b3] text-xs">{t('simulator.morale')}</label>
+              <span className="text-[#c084fc] text-xs font-mono">{morale} {moraleMultDisplay}</span>
             </div>
-
-            <div className="flex items-center justify-between">
-              <label className="text-[#34d399] text-xs cursor-pointer" htmlFor="dmg-reduction">
-                {t('simulator.dmgReduction')}
-                <span className="ml-1 text-[#555] text-[10px]">{t('simulator.dmgReductionHint')}</span>
-              </label>
-              <input
-                id="dmg-reduction"
-                type="checkbox"
-                checked={dmgReduction}
-                onChange={(e) => { setDmgReduction(e.target.checked); persist({ dmgReduction: e.target.checked }) }}
-                className="accent-[#34d399]"
-              />
+            <input
+              type="range"
+              min={0}
+              max={20}
+              value={morale}
+              onChange={(e) => { const v = Number(e.target.value); setMorale(v); persist({ morale: v }) }}
+              className="w-full accent-[#c084fc]"
+            />
+            <div className="flex justify-between text-[#8a8a8a] text-[11px]">
+              <span>0</span>
+              <span>10</span>
+              <span>20</span>
             </div>
+          </div>
 
-            <div className="flex flex-col gap-0.5 mt-1">
-              <div className="flex justify-between items-center">
-                <span className="text-[#facc15] text-xs">{t('simulator.vulnerable')}</span>
-                <span className="text-[#facc15] text-xs font-mono">
-                  {vulnerableStacks > 0
-                    ? t('simulator.vulnerableHint', { mult: (1 + vulnerableStacks * 0.5).toFixed(1) })
-                    : 'off'}
-                </span>
+          {/* Monster DEF */}
+          <div className="flex flex-col gap-1">
+            <div className="flex justify-between items-center">
+              <label className="text-[#b3b3b3] text-xs">{t('simulator.monsterDef')}</label>
+              <span className="text-[#fb923c] text-xs font-mono">{defReductionPreview} {t('simulator.dmgPasses')}</span>
+            </div>
+            <select
+              value={activeGroup.group}
+              onChange={(e) => { setPresetGroup(e.target.value); persist({ presetGroup: e.target.value }) }}
+              className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1"
+            >
+              {ENEMY_PRESET_GROUPS.map((group) => (
+                <option key={group.group} value={group.group}>{t(`simulator.presetGroups.${group.group}`)}</option>
+              ))}
+            </select>
+            <div className="flex flex-wrap gap-1">
+              {activeGroup.presets.map((p) => (
+                <button
+                  key={p.label}
+                  type="button"
+                  title={t('simulator.presetTip', { def: p.def, pct: (p.dmg_decrease * 100).toFixed(1) })}
+                  onClick={() => setEnemy(presetEnemy(activeGroup.group, p))}
+                  className={`text-[11px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                    source.kind === 'preset' && source.group === activeGroup.group && source.label === p.label,
+                  )}`}
+                >
+                  {p.label}
+                </button>
+              ))}
+            </div>
+            {recentBattles.length > 0 && (
+              <div className="mt-1">
+                <p className="text-[11px] text-[#8a8a8a] uppercase tracking-wider mb-1">{t('simulator.recentBattles')}</p>
+                <div className="flex flex-wrap gap-1">
+                  {recentBattles.map((b) => (
+                    <button
+                      key={b.capture_time}
+                      type="button"
+                      title={t('simulator.recentTip', { def: Math.round(b.enemy_def), pct: (b.enemy_dmg_decrease * 100).toFixed(1) })}
+                      onClick={() => setEnemy(battleEnemy(b))}
+                      className={`flex items-center gap-1 text-[11px] px-1.5 py-0.5 rounded transition-colors ${chipClass(
+                        source.kind === 'battle' && source.captureTime === b.capture_time,
+                      )}`}
+                    >
+                      <span className={b.battle_result === 'CLEAR' ? 'text-[#a3e635]' : 'text-[#f87171]'}>●</span>
+                      {formatBattleTime(b.capture_time)} · {Math.round(b.enemy_def)}
+                    </button>
+                  ))}
+                </div>
               </div>
-              <input
-                type="range"
-                min={0}
-                max={5}
-                value={vulnerableStacks}
-                onChange={(e) => { const v = Number(e.target.value); setVulnerableStacks(v); persist({ vulnerableStacks: v }) }}
-                className="w-full accent-[#facc15]"
-              />
-              <div className="flex justify-between text-[#555] text-[10px]">
-                <span>0</span>
-                <span>1</span>
-                <span>2</span>
-                <span>3</span>
-                <span>4</span>
-                <span>5</span>
+            )}
+            <input
+              type="number"
+              min={0}
+              max={9999}
+              value={enemy.def}
+              onChange={(e) => setEnemy(typedEnemy(Math.max(0, Number(e.target.value))))}
+              className="mt-1 bg-[#222] border border-[#333] text-[#e5e7eb] text-xs rounded px-2 py-1 font-mono"
+            />
+          </div>
+
+          {/* Buffs & Debuffs */}
+          <div className="flex flex-col gap-2">
+            <label className="text-[#b3b3b3] text-xs">{t('simulator.buffsDebuffs')}</label>
+
+            <div className="flex flex-col gap-1.5 bg-[#1e1e1e] rounded p-2">
+              <div className="flex items-center justify-between">
+                <label className="text-[#f87171] text-xs cursor-pointer" htmlFor="weaken">
+                  {t('simulator.weaken')}
+                  <span className="ml-1 text-[#8a8a8a] text-[11px]">{t('simulator.weakenHint')}</span>
+                </label>
+                <input
+                  id="weaken"
+                  type="checkbox"
+                  checked={weaken}
+                  onChange={(e) => { setWeaken(e.target.checked); persist({ weaken: e.target.checked }) }}
+                  className="accent-[#f87171]"
+                />
+              </div>
+
+              <div className="flex items-center justify-between">
+                <label className="text-[#34d399] text-xs cursor-pointer" htmlFor="dmg-reduction">
+                  {t('simulator.dmgReduction')}
+                  <span className="ml-1 text-[#8a8a8a] text-[11px]">{t('simulator.dmgReductionHint')}</span>
+                </label>
+                <input
+                  id="dmg-reduction"
+                  type="checkbox"
+                  checked={dmgReduction}
+                  onChange={(e) => { setDmgReduction(e.target.checked); persist({ dmgReduction: e.target.checked }) }}
+                  className="accent-[#34d399]"
+                />
+              </div>
+
+              <div className="flex flex-col gap-0.5 mt-1">
+                <div className="flex justify-between items-center">
+                  <span className="text-[#facc15] text-xs">{t('simulator.vulnerable')}</span>
+                  <span className="text-[#facc15] text-xs font-mono">
+                    {vulnerableStacks > 0
+                      ? t('simulator.vulnerableHint', { mult: (1 + vulnerableStacks * 0.5).toFixed(1) })
+                      : 'off'}
+                  </span>
+                </div>
+                <input
+                  type="range"
+                  min={0}
+                  max={5}
+                  value={vulnerableStacks}
+                  onChange={(e) => { const v = Number(e.target.value); setVulnerableStacks(v); persist({ vulnerableStacks: v }) }}
+                  className="w-full accent-[#facc15]"
+                />
+                <div className="flex justify-between text-[#8a8a8a] text-[11px]">
+                  <span>0</span>
+                  <span>1</span>
+                  <span>2</span>
+                  <span>3</span>
+                  <span>4</span>
+                  <span>5</span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex items-center gap-2">
-          <input
-            id="use-sparks"
-            type="checkbox"
-            checked={useSparks}
-            onChange={(e) => { setUseSparks(e.target.checked); persist({ useSparks: e.target.checked }) }}
-            className="accent-[#c084fc]"
-          />
-          <label htmlFor="use-sparks" className="text-[#b3b3b3] text-xs cursor-pointer">
-            {t('simulator.useSparks')}
-          </label>
-        </div>
-
-        <button
-          type="button"
-          disabled={!canRun}
-          onClick={() => mutation.mutate()}
-          className="flex items-center justify-center gap-2 px-4 py-2 rounded bg-[#c084fc] text-[#fff] text-sm font-bold disabled:opacity-40 disabled:cursor-not-allowed hover:bg-[#a855f7] transition-colors"
-        >
-          <Play size={14} />
-          {mutation.isPending ? t('simulator.running') : t('simulator.run')}
-        </button>
-
-        {mutation.isError && (
-          <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
-            {(mutation.error as Error)?.message ?? t('simulator.error')}
+          <div className="flex items-center gap-2">
+            <input
+              id="use-sparks"
+              type="checkbox"
+              checked={useSparks}
+              onChange={(e) => { setUseSparks(e.target.checked); persist({ useSparks: e.target.checked }) }}
+              className="accent-[#c084fc]"
+            />
+            <label htmlFor="use-sparks" className="text-[#b3b3b3] text-xs cursor-pointer">
+              {t('simulator.useSparks')}
+            </label>
           </div>
-        )}
 
-        <div className="mt-auto text-[#555] text-[10px] leading-relaxed border-t border-[#282828] pt-3">
-          <p>{t('simulator.formulaNote', { pct: MORALE_PCT })}</p>
-          <p className="mt-1">{t('simulator.buffNote')}</p>
+          <div className="mt-auto text-[#8a8a8a] text-[11px] leading-relaxed border-t border-[#282828] pt-3">
+            <p>{t('simulator.formulaNote', { pct: MORALE_PCT })}</p>
+            <p className="mt-1">{t('simulator.buffNote')}</p>
+          </div>
+        </div>
+
+        <div className="shrink-0 border-t border-[#282828] p-4 space-y-2">
+          <button
+            type="button"
+            disabled={!canRun}
+            onClick={() => mutation.mutate()}
+            className={`${PRIMARY_ACTION} w-full`}
+          >
+            <Play size={14} />
+            {mutation.isPending ? t('simulator.running') : t('simulator.run')}
+          </button>
+
+          {mutation.isError && (
+            <div className="text-[#f87171] text-xs bg-[#2a1a1a] border border-[#5a2020] rounded px-3 py-2">
+              {(mutation.error as Error)?.message ?? t('simulator.error')}
+            </div>
+          )}
+
+          {charName === '' && <p className="text-xs text-[#b3b3b3]">{t('simulator.pickCharacter')}</p>}
         </div>
       </div>
 
       {/* Right results area */}
-      <div className="flex-1 overflow-y-auto p-4">
+      <div className="flex-1 flex flex-col overflow-y-auto p-4">
+        {notOwned && (
+          <div role="alert" className="mb-3 flex items-center gap-3 rounded-lg border border-[#5a2020] bg-[#2a1a1a] px-4 py-2.5">
+            <UserX size={15} className="shrink-0 text-[#f87171]" />
+            <p className="flex-1 text-sm text-[#ffffff]">{t('simulator.notOwned', { name: notOwned })}</p>
+          </div>
+        )}
+
+        {stale && <StaleBanner message={t('simulator.stale')} runLabel={t('simulator.runAgain')} onRun={() => mutation.mutate()} disabled={!canRun} />}
+
         {!result && !mutation.isPending && (
-          <div className="flex flex-col items-center justify-center h-full gap-3 text-[#444]">
+          <div className="flex-1 flex flex-col items-center justify-center gap-3 text-[#8a8a8a]">
             <Zap size={40} />
-            <p className="text-sm">{t('simulator.empty')}</p>
+            <p className="text-sm">{handoff ? t('simulator.waiting') : t('simulator.empty')}</p>
           </div>
         )}
 
         {mutation.isPending && (
-          <div className="flex items-center justify-center h-full text-[#888] text-sm">
+          <div className="flex-1 flex items-center justify-center text-[#b3b3b3] text-sm">
             {t('simulator.running')}…
           </div>
         )}
@@ -575,7 +626,7 @@ export function SimulateTab() {
               <div className="flex items-baseline gap-2 mb-3">
                 <h3 className="text-[#ffffff] font-bold text-sm">{result.char_name}</h3>
                 {(resultDeckName || result.deck_id != null) && (
-                  <span className="text-[#555] text-[10px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
+                  <span className="text-[#8a8a8a] text-[11px]">{resultDeckName ?? `deck #${result.deck_id}`}</span>
                 )}
               </div>
               <div className="flex flex-wrap gap-2 mb-4">
@@ -601,19 +652,19 @@ export function SimulateTab() {
             {/* Totals */}
             <div className="grid grid-cols-3 gap-2">
               <div className="bg-[#1e1e1e] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalNormal')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalNormal')}</span>
                 <span className="text-[#e5e7eb] font-bold text-lg font-mono">
                   {result.total_normal.toLocaleString()}
                 </span>
               </div>
               <div className="bg-[#1e1e1e] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalCrit')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalCrit')}</span>
                 <span className="text-[#e5e7eb] font-bold text-lg font-mono">
                   {result.total_crit.toLocaleString()}
                 </span>
               </div>
               <div className="bg-[#1a2a1a] rounded px-4 py-3 flex flex-col gap-0.5">
-                <span className="text-[#888] text-[10px] uppercase tracking-wide">{t('simulator.totalAvg')}</span>
+                <span className="text-[#888] text-[11px] uppercase tracking-wide">{t('simulator.totalAvg')}</span>
                 <span className="text-[#a3e635] font-bold text-lg font-mono">
                   {result.total_avg.toLocaleString()}
                 </span>
@@ -645,7 +696,7 @@ export function SimulateTab() {
                       ))}
                   </tbody>
                 </table>
-                <p className="text-[#555] text-[10px] mt-2 px-1">
+                <p className="text-[#8a8a8a] text-[11px] mt-2 px-1">
                   ✦ = {t('simulator.epiphanyApplied')}
                   &nbsp;·&nbsp; {t('simulator.avgNote')}
                 </p>

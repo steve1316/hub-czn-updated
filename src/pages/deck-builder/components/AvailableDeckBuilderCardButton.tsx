@@ -59,25 +59,25 @@ export function AvailableDeckBuilderCardButton({
                 ))}
 
                 {hiddenTypesCount > 0 && (
-                  <span className="rounded bg-[#1f1b2e] px-1.5 py-0.5 text-[9px] font-black text-[#c4b5fd]">
+                  <span className="rounded bg-[#1f1b2e] px-1.5 py-0.5 text-[11px] font-black text-[#c4b5fd]">
                     +{hiddenTypesCount}
                   </span>
                 )}
               </>
             ) : (
-              <span className="text-[10px] text-[#777]">
+              <span className="text-[11px] text-[#8a8a8a]">
                 {t('deckBuilder.support')}
               </span>
             )}
           </div>
 
           {displayDescription && (
-            <p className="mt-2 line-clamp-2 text-[10px] leading-relaxed text-[#b3b3b3]">
+            <p className="mt-2 line-clamp-2 text-[11px] leading-relaxed text-[#b3b3b3]">
               {displayDescription}
             </p>
           )}
 
-          <div className="mt-2 flex items-center justify-between gap-2 text-[10px]">
+          <div className="mt-2 flex items-center justify-between gap-2 text-[11px]">
             {hasDamage ? (
               <span className="text-[#888]">
                 {card.eff_value}% {t('deckBuilder.damage').toLowerCase()}
@@ -98,7 +98,7 @@ export function AvailableDeckBuilderCardButton({
           <button
             type="button"
             onClick={onOpenVariants}
-            className="inline-flex items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/70 px-2 py-1 text-[10px] font-semibold text-[#7dd3fc] hover:bg-[#0c4a6e]"
+            className="inline-flex items-center gap-1 rounded-md border border-[#075985] bg-[#082f49]/70 px-2 py-1 text-[11px] font-semibold text-[#7dd3fc] hover:bg-[#0c4a6e]"
           >
             <Sparkles size={12} />
             {variants.length > 0

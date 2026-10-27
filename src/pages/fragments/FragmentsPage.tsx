@@ -2,16 +2,18 @@ import { useState } from 'react'
 import type React from 'react'
 import { useQuery } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { api, assetUrl } from '@/lib/api'
+import { api, assetUrl, isNoData } from '@/lib/api'
+import { EmptyState, LoadError } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
-import type { MemoryFragment, SetInfo } from '@/lib/types'
+import type { MemoryFragment, SetInfo, Stat } from '@/lib/types'
 import {
   Table, TableBody, TableCell, TableHead,
   TableHeader, TableRow,
 } from '@/components/ui/table'
 import { Badge } from '@/components/ui/badge'
 import { InfoPopover } from '@/components/ui/info-popover'
-import { ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react'
+import { ChevronUp, ChevronDown, ChevronsUpDown, Layers } from 'lucide-react'
+import { compareFragments, type SortDir } from './fragment-sort'
 
 const RARITY_COLOR: Record<number, string> = {
   1: '#a8a29e',
@@ -23,13 +25,18 @@ const RARITY_COLOR: Record<number, string> = {
 function GsCell({ gearScore, priorityScore }: { gearScore: number; priorityScore: number }) {
   const score = priorityScore > 0 ? priorityScore : gearScore
   return (
-    <span className="font-mono text-[#c084fc]">{score.toFixed(1)}</span>
+    <span className="font-mono text-base text-[#c084fc]">{score.toFixed(1)}</span>
   )
 }
 
-function SubCell({ text }: { text: string | undefined }) {
-  if (!text) return <span className="text-[#404040]">—</span>
-  return <span className="text-[#b3b3b3] text-xs">{text}</span>
+function StatCell({ stat }: { stat: Stat | null | undefined }) {
+  if (!stat) return <span className="text-[#8a8a8a]">—</span>
+  return (
+    <span className="flex flex-col leading-tight">
+      <span className="text-xs text-[#b3b3b3]">{stat.name}</span>
+      <span className="text-sm text-[#ffffff]">{stat.formatted}</span>
+    </span>
+  )
 }
 
 function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
@@ -38,35 +45,16 @@ function PieceThumb({ setId, slotNum }: { setId: number; slotNum: number }) {
     <AssetImage
       src={src}
       alt=""
-      className="w-8 h-8 object-contain shrink-0"
+      className="w-10 h-10 object-contain shrink-0"
     />
   )
 }
 
-type SortDir = 'asc' | 'desc'
-
-function getSortValue(f: MemoryFragment, key: string): string | number {
-  switch (key) {
-    case 'slot':      return f.slot_num
-    case 'set':       return f.set_name
-    case 'level':     return f.level
-    case 'main':      return f.main_stat?.formatted ?? ''
-    case 'sub1':      return f.substats[0]?.formatted ?? ''
-    case 'sub2':      return f.substats[1]?.formatted ?? ''
-    case 'sub3':      return f.substats[2]?.formatted ?? ''
-    case 'sub4':      return f.substats[3]?.formatted ?? ''
-    case 'gs':        return f.priority_score > 0 ? f.priority_score : f.gear_score
-    case 'potential': return f.potential_low
-    case 'equipped':  return f.equipped_to ?? ''
-    default:          return ''
-  }
-}
-
 function SortIcon({ active, dir }: { active: boolean; dir: SortDir }) {
-  if (!active) return <ChevronsUpDown size={12} className="text-[#404040]" />
+  if (!active) return <ChevronsUpDown size={14} className="text-[#8a8a8a]" />
   return dir === 'asc'
-    ? <ChevronUp size={12} className="text-[#c084fc]" />
-    : <ChevronDown size={12} className="text-[#c084fc]" />
+    ? <ChevronUp size={14} className="text-[#c084fc]" />
+    : <ChevronDown size={14} className="text-[#c084fc]" />
 }
 
 export function FragmentsPage() {
@@ -74,7 +62,7 @@ export function FragmentsPage() {
   const [sortKey, setSortKey] = useState<string | null>(null)
   const [sortDir, setSortDir] = useState<SortDir>('asc')
 
-  const { data: fragments = [], isLoading, error } = useQuery({
+  const { data: fragments = [], isLoading, error, refetch } = useQuery({
     queryKey: ['fragments'],
     queryFn: () => api.fragments(),
   })
@@ -101,29 +89,20 @@ export function FragmentsPage() {
     }
   }
 
-  const sorted = sortKey
-    ? [...fragments].sort((a, b) => {
-        const av = getSortValue(a, sortKey)
-        const bv = getSortValue(b, sortKey)
-        if (typeof av === 'number' && typeof bv === 'number') {
-          return sortDir === 'asc' ? av - bv : bv - av
-        }
-        return sortDir === 'asc'
-          ? String(av).localeCompare(String(bv))
-          : String(bv).localeCompare(String(av))
-      })
-    : fragments
+  const sorted = sortKey ? [...fragments].sort((a, b) => compareFragments(a, b, sortKey, sortDir)) : fragments
+  // The score column shows the weighted score once scoring weights are set, so its name and tip follow
+  const weighted = fragments.some(f => f.priority_score > 0)
 
   if (isLoading) {
     return <div className="p-8 text-[#b3b3b3]">{t('fragments.loading')}</div>
   }
 
+  if (isNoData(error) || (!error && fragments.length === 0)) {
+    return <EmptyState icon={Layers} title={t('fragments.empty')} hint={t('fragments.emptyHint')} className="h-full" />
+  }
+
   if (error) {
-    return (
-      <div className="p-8 text-[#f3727f]">
-        {t('fragments.loadError')}
-      </div>
-    )
+    return <LoadError title={t('fragments.loadError')} error={error} onRetry={() => refetch()} className="h-full" />
   }
 
   const COLS: { key: string; label: string; info?: React.ReactNode }[] = [
@@ -135,13 +114,13 @@ export function FragmentsPage() {
     { key: 'sub2',      label: t('fragments.col.sub2') },
     { key: 'sub3',      label: t('fragments.col.sub3') },
     { key: 'sub4',      label: t('fragments.col.sub4') },
-    { key: 'gs',        label: t('fragments.col.gs'),        info: <InfoPopover content={t('tips.gs')} /> },
+    { key: 'gs',        label: t(weighted ? 'fragments.col.score' : 'fragments.col.gs'), info: <InfoPopover content={t(weighted ? 'tips.score' : 'tips.gs')} /> },
     { key: 'potential', label: t('fragments.col.potential'), info: <InfoPopover content={t('tips.potential')} /> },
     { key: 'equipped',  label: t('fragments.col.equipped') },
   ]
 
   return (
-    <div className="p-6 flex flex-col gap-4">
+    <div className="p-6 flex flex-col gap-4 h-full">
       <div className="flex items-center justify-between">
         <h1 className="text-xl font-bold text-[#ffffff]">{t('fragments.title')}</h1>
         <Badge variant="secondary" className="bg-[#181818] text-[#b3b3b3]">
@@ -149,12 +128,12 @@ export function FragmentsPage() {
         </Badge>
       </div>
 
-      <div className="rounded-md border border-[#282828] overflow-hidden">
-        <Table>
-          <TableHeader>
+      <div className="flex-1 min-h-0 rounded-md border border-[#282828] overflow-hidden">
+        <Table containerClassName="h-full overflow-auto">
+          <TableHeader className="sticky top-0 z-10 bg-[#121212]">
             <TableRow className="bg-[#121212] hover:bg-[#121212] border-[#282828]">
               {COLS.map(col => (
-                <TableHead key={col.key} className="text-[#b3b3b3] text-xs font-medium h-9 px-3">
+                <TableHead key={col.key} className="text-[#b3b3b3] text-sm font-medium h-11 px-3">
                   <div className="flex items-center gap-1">
                     <button
                       onClick={() => handleSort(col.key)}
@@ -173,34 +152,34 @@ export function FragmentsPage() {
             {sorted.map((f: MemoryFragment) => (
               <TableRow
                 key={f.id}
-                className="border-[#282828] hover:bg-[#282828] cursor-default h-7"
+                className="border-[#282828] hover:bg-[#282828] cursor-default"
               >
-                <TableCell className="text-[#666666] text-xs tabular-nums py-1">{f.slot_num}</TableCell>
-                <TableCell className="py-1">
-                  <span className="flex items-center gap-1.5" style={{ color: RARITY_COLOR[f.rarity_num] }}>
+                <TableCell className="text-[#b3b3b3] tabular-nums py-2">{f.slot_num}</TableCell>
+                <TableCell className="py-2">
+                  <span className="flex items-center gap-2" style={{ color: RARITY_COLOR[f.rarity_num] }}>
                     <PieceThumb setId={f.set_id} slotNum={f.slot_num} />
                     {f.set_name}
                   </span>
                 </TableCell>
-                <TableCell className="text-[#ffffff] py-1">+{f.level}</TableCell>
-                <TableCell className="text-[#ffffff] py-1 text-xs">
-                  {f.main_stat?.formatted ?? '—'}
+                <TableCell className="text-[#ffffff] py-2">+{f.level}</TableCell>
+                <TableCell className="py-2 whitespace-normal">
+                  <StatCell stat={f.main_stat} />
                 </TableCell>
                 {[0, 1, 2, 3].map(i => (
-                  <TableCell key={i} className="py-1">
-                    <SubCell text={f.substats[i]?.formatted} />
+                  <TableCell key={i} className="py-2 whitespace-normal">
+                    <StatCell stat={f.substats[i]} />
                   </TableCell>
                 ))}
-                <TableCell className="py-1">
+                <TableCell className="py-2">
                   <GsCell gearScore={f.gear_score} priorityScore={f.priority_score} />
                 </TableCell>
-                <TableCell className="text-[#b3b3b3] font-mono text-xs py-1">
+                <TableCell className="text-[#b3b3b3] font-mono py-2">
                   {f.potential_low.toFixed(1)}–{f.potential_high.toFixed(1)}
                 </TableCell>
-                <TableCell className="py-1 text-xs">
+                <TableCell className="py-2">
                   {f.equipped_to
                     ? <span className="text-[#ffffff]">{f.equipped_to}</span>
-                    : <span className="text-[#404040]">—</span>
+                    : <span className="text-[#8a8a8a]">—</span>
                   }
                 </TableCell>
               </TableRow>

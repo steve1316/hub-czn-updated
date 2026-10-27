@@ -38,7 +38,8 @@ const personaCardImages = import.meta.glob(
   },
 ) as Record<string, string>
 
-const cardImages = {
+// Combatant and shared pool card art, keyed by path relative to `src/lib/`. The Encyclopedia reuses it.
+export const cardImages = {
   ...combatantCardImages,
   ...neutralAndMonsterCardImages,
 }

@@ -20,3 +20,13 @@ export function formatBattleTime(iso: string): string {
     return iso
   }
 }
+
+/**
+ * Format a capture time as a full local date and time, for a tooltip on the short form.
+ * @param iso The capture time as an ISO string.
+ * @returns The full date and time, or an empty string when it cannot be parsed.
+ */
+export function battleTimeTitle(iso: string): string {
+  const d = new Date(iso)
+  return Number.isNaN(d.getTime()) ? '' : d.toLocaleString()
+}

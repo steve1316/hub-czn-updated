@@ -137,6 +137,11 @@ class Client:
         return self.union("@tooltip.json")
 
     @cached_property
+    def synergies(self) -> dict[str, dict]:
+        """Every synergy tier row, such as Season 4's "3+ Inquiry", across all `*@synergy_define.json` shards."""
+        return self.union("@synergy_define.json")
+
+    @cached_property
     def card_r_spark(self) -> dict[str, dict]:
         """Every epiphany variant row, across all `*@card_r_spark.json` shards."""
         return self.union("@card_r_spark.json")

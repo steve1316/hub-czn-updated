@@ -85,7 +85,14 @@ TEXT = {
     "tooltip@title@talent_lead": "Lead",
     "tooltip@title@trigger_c1018_stance": "Dark Mist Stance",
     "tooltip@title@c30115_debuff_trigger": "Fracture Amplification:",
+    "synergy_define@desc@ds04_desire_control_01": "3+ Control: When an enemy acts, <cc>2</> $Agony$ to all enemies",
+    "synergy_define@desc@ds04_desire_control_02": "5+ Control: +<cc>5</>% Critical Chance for each enemy present",
 }
+
+SYNERGIES = [
+    {"id": "ds04_desire_control_01", "condition_value": "[3]", "desc": "synergy_define@desc@ds04_desire_control_01"},
+    {"id": "ds04_desire_control_02", "condition_value": "[5]", "desc": "synergy_define@desc@ds04_desire_control_02"},
+]
 
 
 @pytest.fixture(scope="module")
@@ -95,6 +102,7 @@ def resolver(tmp_path_factory) -> TemplateResolver:
         "card(test)@skill_eff.json": EFFECTS,
         "cs(test)@cs.json": STATUSES,
         "tooltip@tooltip.json": TOOLTIPS,
+        "synergy_define@synergy_define.json": SYNERGIES,
     }, TEXT)
     return TemplateResolver(Client(root), {"TALENT_UNIQUE_TEST": "Test Title"})
 
@@ -144,6 +152,14 @@ def test_card_name(resolver):
 def test_character_triggers_use_their_tooltip_title(resolver):
     assert resolver.resolve("^C30115_DEBUFF_TRIGGER^ Activate", []).text == "Fracture Amplification: Activate"
     assert resolver.resolve("^C9999_UNKNOWN^ Activate", []).text == "^C9999_UNKNOWN^ Activate"
+
+
+def test_synergy_tiers_read_their_own_text(resolver):
+    template = "Control Synergy: Apply effect<br>#synergy_ds04_desire_control_01#<br>#synergy_ds04_desire_control_02#"
+    resolution = resolver.resolve(template, [])
+    assert resolution.text == "Control Synergy: Apply effect\n3+ Control: When an enemy acts, 2 Agony to all enemies\n5+ Control: +5% Critical Chance for each enemy present"
+    assert resolution.unresolved == []
+    assert resolver.resolve("#synergy_unknown#", []).unresolved == ["synergy_unknown"]
 
 
 def test_status_max(resolver):

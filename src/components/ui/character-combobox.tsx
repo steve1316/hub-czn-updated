@@ -22,7 +22,7 @@ function CharAvatar({ combatant }: { combatant: Combatant }) {
   if (!combatant.portrait_url || error) {
     return (
       <div className="w-6 h-6 rounded-full bg-[#282828] flex items-center justify-center shrink-0">
-        <User size={12} className="text-[#555]" />
+        <User size={12} className="text-[#8a8a8a]" />
       </div>
     )
   }
@@ -110,9 +110,9 @@ export function CharacterCombobox({
             <span className="flex-1 truncate text-[#ffffff]">{selected.name}</span>
           </>
         ) : (
-          <span className="flex-1 text-[#666666]">{placeholder ?? t('common.select')}</span>
+          <span className="flex-1 text-[#8a8a8a]">{placeholder ?? t('common.select')}</span>
         )}
-        <ChevronDown size={12} className="text-[#666] shrink-0" />
+        <ChevronDown size={12} className="text-[#8a8a8a] shrink-0" />
       </button>
 
       {open && (
@@ -188,7 +188,7 @@ export function CharacterCombobox({
             ))}
           </div>
           {filtered.length === 0 && (
-            <p className="px-3 py-2 text-xs text-[#444]">{emptyLabel ?? t('common.noCharacterFound')}</p>
+            <p className="px-3 py-2 text-xs text-[#8a8a8a]">{emptyLabel ?? t('common.noCharacterFound')}</p>
           )}
         </div>
       )}

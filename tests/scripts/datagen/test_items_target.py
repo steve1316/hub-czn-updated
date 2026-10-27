@@ -7,15 +7,18 @@ mapping, the output order and how overrides land.
 
 from __future__ import annotations
 
+import io
 import json
 from pathlib import Path
+
+from PIL import Image
 
 from scripts.datagen.overrides import Overrides
 from scripts.datagen.runner import Context
 from scripts.datagen.targets import items
 
 # An image the app already ships, so the missing-image check passes for it.
-SHIPPED_IMAGE = "itens/item_0001.webp"
+SHIPPED_IMAGE = "itens/relic_1060.webp"
 
 TEXT = {
     "relic@name@eq_pub_001": "Second Method",
@@ -36,7 +39,7 @@ TEXT = {
 # Helpers
 
 
-def _relic(relic_id: str, relic_type: str, rarity: str = "RARITY_RARE", cs_values: str = "[]", nb_values: str = "[]") -> dict:
+def _relic(relic_id: str, relic_type: str, rarity: str = "RARITY_RARE", cs_values: str = "[]", nb_values: str = "[]", icon: str = "") -> dict:
     """
     One relic row with only the columns the target reads.
 
@@ -46,6 +49,7 @@ def _relic(relic_id: str, relic_type: str, rarity: str = "RARITY_RARE", cs_value
         rarity: Such as "RARITY_LEGEND".
         cs_values: The `s1_cs_value` cell.
         nb_values: The `s1_nb_eff_value` cell.
+        icon: The `icon_name` cell, such as "relics/relic_test_001".
 
     Returns:
         The row.
@@ -58,6 +62,7 @@ def _relic(relic_id: str, relic_type: str, rarity: str = "RARITY_RARE", cs_value
         "s1_description": f"relic@s1_description@{relic_id}",
         "s1_cs_value": cs_values,
         "s1_nb_eff_value": nb_values,
+        "icon_name": icon,
     }
 
 
@@ -75,15 +80,17 @@ def _context(root: Path, overrides: Overrides) -> Context:
     (root / "db").mkdir()
     (root / "text" / "en").mkdir(parents=True)
     public = [
-        _relic("eq_pub_001", "EQUIP_WEAPON", "RARITY_LEGEND", cs_values="[35]"),
+        _relic("eq_pub_001", "EQUIP_WEAPON", "RARITY_LEGEND", cs_values="[35]", icon="relics/relic_test_001"),
         _relic("relic_001", "RELIC"),
         _relic("eq_dpt_test_001", "EQUIP_WEAPON"),
-        _relic("eq_pub_042", "EQUIP_ACC", "RARITY_UNIQUE", nb_values="[10]"),
+        _relic("eq_pub_042", "EQUIP_ACC", "RARITY_UNIQUE", nb_values="[10]", icon="relics/relic_test_missing"),
     ]
     disaster = [_relic("eq_ds02_004", "EQUIP_ARMOR", cs_values="[2]")]
     (root / "db" / "relic@relic.json").write_text(json.dumps(public), encoding="utf-8")
     (root / "db" / "relic(disaster)@relic.json").write_text(json.dumps(disaster), encoding="utf-8")
     (root / "text" / "en" / "text.json").write_text(json.dumps([{"id": key, "text": text} for key, text in TEXT.items()]), encoding="utf-8")
+    (root / "item" / "relics").mkdir(parents=True)
+    Image.new("RGBA", (124, 124), (30, 200, 30, 255)).save(root / "item" / "relics" / "relic_test_001.png")
     ctx = Context(root)
     ctx._overrides[items.NAME] = overrides
     return ctx
@@ -101,6 +108,16 @@ def _built(ctx: Context) -> tuple[list[dict], list[str]]:
     """
     result = items.build(ctx)
     return json.loads(result.files[items.ITEMS_PATH]), [issue.message for issue in result.issues]
+
+
+def _no_extra_rows() -> Overrides:
+    """
+    The `items` overrides most tests use.
+
+    Returns:
+        Overrides that only drop the test-only row.
+    """
+    return Overrides(items.NAME, exclude=["eq_dpt_test_*"])
 
 
 # //////////////////////////////////////////////////////////////////////////////////////////////////
@@ -136,12 +153,12 @@ def test_other_tokens_are_untouched():
 
 
 def test_build_keeps_equipment_in_table_order(tmp_path):
-    output, issues = _built(_context(tmp_path, Overrides(items.NAME, exclude=["eq_dpt_test_*"])))
+    output, issues = _built(_context(tmp_path, _no_extra_rows()))
     assert [item["id"] for item in output] == ["eq_pub_001", "eq_pub_042", "eq_ds02_004"]
 
 
 def test_build_maps_fields_and_resolves_text(tmp_path):
-    output, _ = _built(_context(tmp_path, Overrides(items.NAME, exclude=["eq_dpt_test_*"])))
+    output, _ = _built(_context(tmp_path, _no_extra_rows()))
     first, second = output[0], output[1]
     assert first == {
         "id": "eq_pub_001",
@@ -150,14 +167,14 @@ def test_build_maps_fields_and_resolves_text(tmp_path):
         "slot": "Weapon",
         "tags": [],
         "description": {"en": "+35% Damage Amount to Extra Attacks."},
-        "image_path": "",
+        "image_path": "itens/relic_test_001.webp",
     }
     assert (second["slot"], second["rarity"]) == ("Accessory", "Unique")
     assert second["description"] == {"en": "+10% max HP. At the start of battle, +1 AP."}
 
 
 def test_build_reports_unresolved_tokens(tmp_path):
-    output, issues = _built(_context(tmp_path, Overrides(items.NAME, exclude=["eq_dpt_test_*"])))
+    output, issues = _built(_context(tmp_path, _no_extra_rows()))
     assert output[2]["description"] == {"en": "1 Evasion (2 times per battle). #rev_1_0# more."}
     assert issues == ["items: eq_ds02_004 has unresolved placeholders ['rev_1_0']"]
 
@@ -168,6 +185,19 @@ def test_an_override_silences_unresolved_tokens(tmp_path):
     output, issues = _built(_context(tmp_path, overrides))
     assert output[2]["description"] == fixed
     assert issues == []
+
+
+def test_build_adds_the_client_icon_at_its_own_size(tmp_path):
+    result = items.build(_context(tmp_path, _no_extra_rows()))
+    added = items.IMAGES_ROOT / "itens" / "relic_test_001.webp"
+    assert list(result.new_files) == [added]
+    assert Image.open(io.BytesIO(result.new_files[added])).size == (124, 124)
+
+
+def test_an_item_whose_icon_is_not_in_the_client_has_no_image(tmp_path):
+    output, issues = _built(_context(tmp_path, _no_extra_rows()))
+    assert output[1]["image_path"] == ""
+    assert not any("eq_pub_042" in issue for issue in issues)
 
 
 def test_build_applies_overrides_and_checks_images(tmp_path):

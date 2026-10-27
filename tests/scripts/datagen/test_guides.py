@@ -523,6 +523,20 @@ def test_potentials_picture_that_does_not_register_gets_the_clean_tree():
     assert builder.trees["tab-tree.webp"][:4] == b"RIFF"
 
 
+def test_hand_marked_potentials_colour_the_tree():
+    builder = _builder(picture_size=(371, 318))
+    builder.potential_colours = {"04": "gold"}
+    [section], _ = builder.sections(_potentials_grid())
+    assert section["blocks"][0]["coloured"] is True
+
+
+def test_hand_marked_potentials_drop_unknown_nodes_and_colours():
+    issues = []
+    colours = guides._potential_colours({"Nia": {"04": "gold", "99": "blue", "05": "red"}}, issues)
+    assert colours == {"Nia": {"04": "gold"}}
+    assert [issue.message for issue in issues] == ["guides: `_potentials` marks unknown node '99' on 'Nia'", "guides: `_potentials` gives 'Nia' node '05' unknown colour 'red'"]
+
+
 def test_potentials_legend_keeps_other_wording_and_extra_lines():
     legend = "Purple: Main Identity Boost\nGold: QOL\nBlue: Irrelevant usually\nNothing is THAT important"
     [section], _ = _builder().sections(_potentials_grid(legend=legend))

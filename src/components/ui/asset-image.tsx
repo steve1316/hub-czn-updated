@@ -34,7 +34,7 @@ export function AssetImage({ src, fallback, maxRetries = MAX_IMAGE_RETRIES, clas
   if (failed) {
     if (fallback !== undefined) return <>{fallback}</>
     return (
-      <div className={`${className ?? ""} flex items-center justify-center bg-[#282828] text-[#555]`} role="img" aria-label={alt}>
+      <div className={`${className ?? ""} flex items-center justify-center bg-[#282828] text-[#8a8a8a]`} role="img" aria-label={alt}>
         <ImageOff className="h-1/2 w-1/2 max-h-4 max-w-4" />
       </div>
     )

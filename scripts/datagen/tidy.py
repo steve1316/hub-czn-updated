@@ -74,7 +74,7 @@ class TidyRules:
         return {name: _word_pattern(getattr(self, name)) for name in ("typos", "casing", "soften")}
 
 
-def tidy(text: str, rules: TidyRules, *, soften: bool = False, sentences: bool = True) -> str:
+def tidy(text: str, rules: TidyRules, *, soften: bool = False, sentences: bool = True, keep_lines: bool = False) -> str:
     """
     Clean up one generated description.
 
@@ -83,6 +83,7 @@ def tidy(text: str, rules: TidyRules, *, soften: bool = False, sentences: bool =
         rules: The word lists to apply.
         soften: Also apply the swear-softening list. Only Guides set this.
         sentences: Join the lines into sentences that each end with a period. Off for short labels such as names.
+        keep_lines: Keep each sentence on its own line instead, for text whose lines read as a list, such as synergy tiers.
 
     Returns:
         The cleaned text.
@@ -95,7 +96,7 @@ def tidy(text: str, rules: TidyRules, *, soften: bool = False, sentences: bool =
     lines = _join_wrapped([line for line in lines if line])
     if sentences:
         lines = [line if line.endswith(_SENTENCE_END) else f"{line}." for line in lines]
-    result = " ".join(lines) if sentences else "\n".join(lines)
+    result = " ".join(lines) if sentences and not keep_lines else "\n".join(lines)
     result = _replace_words(result, rules.typos, rules.patterns["typos"])
     result = _replace_words(result, rules.casing, rules.patterns["casing"], keep_case=False)
     if soften:

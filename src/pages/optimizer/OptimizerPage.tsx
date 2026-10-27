@@ -1,10 +1,16 @@
 import { useState, useRef, useEffect, useCallback } from 'react'
+import { useQuery } from '@tanstack/react-query'
+import { useTranslation } from 'react-i18next'
+import { Swords } from 'lucide-react'
 import { useApiPort } from '@/hooks/useApiPort'
 import i18n from '@/i18n'
 import { api, wsUrl } from '@/lib/api'
+import { EmptyState } from '@/components/ui/empty-state'
+import { settingsKey } from '@/lib/run-settings'
 import type { OptimizerConfig, OptimizeProgress, OptimizeResult } from '@/lib/types'
 import { OptimizerPanel } from './OptimizerPanel'
 import { ResultsArea } from './ResultsArea'
+import { runnableConfig } from './optimizer-run'
 
 type JobState = 'idle' | 'running' | 'done' | 'cancelled' | 'error'
 
@@ -26,7 +32,13 @@ const DEFAULT_CONFIG: OptimizerConfig = {
 }
 
 export function OptimizerPage() {
+  const { t } = useTranslation()
   const port = useApiPort()
+  const { data: status } = useQuery({
+    queryKey: ['status'],
+    queryFn: () => api.status(),
+    refetchInterval: 5_000,
+  })
   const [config, setConfig] = useState<OptimizerConfig>(DEFAULT_CONFIG)
   const [jobState, setJobState] = useState<JobState>('idle')
   const [progress, setProgress] = useState<OptimizeProgress | null>(null)
@@ -34,6 +46,7 @@ export function OptimizerPage() {
   const [selectedRank, setSelectedRank] = useState<number | null>(null)
   const [jobError, setJobError] = useState<string | null>(null)
   const [runError, setRunError] = useState<string | null>(null)
+  const [runConfig, setRunConfig] = useState<OptimizerConfig | null>(null)
 
   // Ref so WS onclose callback can read current jobState without stale closure
   const jobStateRef = useRef<JobState>('idle')
@@ -42,6 +55,9 @@ export function OptimizerPage() {
   const configRef = useRef<OptimizerConfig>(DEFAULT_CONFIG)
   configRef.current = config
 
+  const runConfigRef = useRef<OptimizerConfig | null>(null)
+  runConfigRef.current = runConfig
+
   // Restore last session state
   useEffect(() => {
     try {
@@ -49,6 +65,7 @@ export function OptimizerPage() {
       if (!raw) return
       const saved = JSON.parse(raw) as {
         config: OptimizerConfig
+        runConfig?: OptimizerConfig
         results: OptimizeResult[]
         selectedRank: number | null
       }
@@ -58,6 +75,7 @@ export function OptimizerPage() {
       if (saved.results?.length) {
         setResults(saved.results)
         setSelectedRank(saved.selectedRank ?? null)
+        setRunConfig({ ...DEFAULT_CONFIG, ...(saved.runConfig ?? saved.config) })
         setJobState('done')
       }
     } catch { /* malformed — fall back to default */ }
@@ -100,7 +118,7 @@ export function OptimizerPage() {
           try {
             localStorage.setItem(
               'czn_optimizer_state',
-              JSON.stringify({ config: configRef.current, results: newResults, selectedRank: null })
+              JSON.stringify({ config: configRef.current, runConfig: runConfigRef.current, results: newResults, selectedRank: null })
             )
           } catch { /* storage quota — ignore */ }
           break
@@ -133,30 +151,14 @@ export function OptimizerPage() {
     }
   }, [port])
 
+  // Results stay on screen after a settings change. The results area marks them out of date instead.
   const handleConfigChange = useCallback((newConfig: OptimizerConfig) => {
     setConfig(newConfig)
-    if (jobStateRef.current === 'done') {
-      setJobState('idle')
-      setResults([])
-      setSelectedRank(null)
-      // Config changed — invalidate saved results too
-      try {
-        localStorage.setItem(
-          'czn_optimizer_state',
-          JSON.stringify({ config: newConfig, results: [], selectedRank: null })
-        )
-      } catch { /* ignore */ }
-    } else {
-      // Not done — just update the saved config (preserve any saved results)
-      try {
-        const raw = localStorage.getItem('czn_optimizer_state')
-        const prev = raw ? (JSON.parse(raw) as Record<string, unknown>) : {}
-        localStorage.setItem(
-          'czn_optimizer_state',
-          JSON.stringify({ ...prev, config: newConfig })
-        )
-      } catch { /* ignore */ }
-    }
+    try {
+      const raw = localStorage.getItem('czn_optimizer_state')
+      const prev = raw ? (JSON.parse(raw) as Record<string, unknown>) : {}
+      localStorage.setItem('czn_optimizer_state', JSON.stringify({ ...prev, config: newConfig }))
+    } catch { /* ignore */ }
   }, [])
 
   const handleRun = useCallback(async () => {
@@ -166,10 +168,9 @@ export function OptimizerPage() {
     setResults([])
     setSelectedRank(null)
     setJobError(null)
+    setRunConfig(config)
     try {
-      const sw = config.stat_weights
-      const hasWeights = sw != null && Object.values(sw).some((v) => v !== 0)
-      await api.optimizeStart({ ...config, stat_weights: hasWeights ? sw : null })
+      await api.optimizeStart(runnableConfig(config))
     } catch (e) {
       const msg = e instanceof Error ? e.message : i18n.t('optimizer.startError')
       setRunError(
@@ -186,6 +187,12 @@ export function OptimizerPage() {
   const handleSelectRank = useCallback((rank: number) => {
     setSelectedRank((prev) => (prev === rank ? null : rank))
   }, [])
+
+  const stale = jobState === 'done' && runConfig != null && settingsKey(runnableConfig(runConfig)) !== settingsKey(runnableConfig(config))
+
+  if (status && !status.data_loaded) {
+    return <EmptyState icon={Swords} title={t('optimizer.noData')} hint={t('optimizer.noDataHint')} className="h-full" />
+  }
 
   return (
     <div className="flex h-full overflow-hidden">
@@ -205,7 +212,9 @@ export function OptimizerPage() {
         selectedRank={selectedRank}
         onSelectRank={handleSelectRank}
         jobError={jobError}
-        charId={config.char_name}
+        charId={runConfig?.char_name ?? config.char_name}
+        stale={stale}
+        onRun={config.char_name !== '' ? handleRun : undefined}
       />
     </div>
   )

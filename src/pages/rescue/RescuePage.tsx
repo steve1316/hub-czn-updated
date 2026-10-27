@@ -2,8 +2,9 @@ import { useState, useMemo } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts'
-import { User, RefreshCw, Download, Cloud } from 'lucide-react'
+import { User, RefreshCw, Download, ExternalLink, History } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { EmptyState, GoToCaptureButton, LoadError, RetryButton } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -58,7 +59,7 @@ function PortraitCard({ pull }: { pull: RescuePull }) {
           onError={() => setImgError(true)}
         />
       )}
-      <span className={`absolute bottom-0 left-0 bg-black/70 text-[10px] px-1 py-0.5 font-mono ${pitColor(pull.pity)}`}>
+      <span className={`absolute bottom-0 left-0 bg-black/70 text-[11px] px-1 py-0.5 font-mono ${pitColor(pull.pity)}`}>
         {pull.pity}
       </span>
     </div>
@@ -111,7 +112,7 @@ function FreshnessLine({ banner }: FreshnessLineProps) {
   return (
     <div className="flex items-center gap-2 text-xs text-[#b3b3b3]">
       {banner.stale && (
-        <Badge variant="secondary" title={t('rescue.staleTip')} className="text-[10px] h-4 px-1 bg-[#3b2a12] text-[#fbbf24]">
+        <Badge variant="secondary" title={t('rescue.staleTip')} className="text-[11px] h-4 px-1 bg-[#3b2a12] text-[#fbbf24]">
           {t('rescue.stale')}
         </Badge>
       )}
@@ -226,7 +227,7 @@ function BannerView({ banner }: { banner: RescueBanner }) {
                       <span className={`text-sm ${pull.rarity >= 5 ? 'text-[#c084fc]' : pull.rarity >= 4 ? 'text-purple-400' : 'text-[#ffffff]'}`}>
                         {pull.name}
                       </span>
-                      <Badge variant="secondary" className="text-[10px] h-4 px-1 bg-[#282828] text-[#b3b3b3]">
+                      <Badge variant="secondary" className="text-[11px] h-4 px-1 bg-[#282828] text-[#b3b3b3]">
                         {pull.kind}
                       </Badge>
                     </div>
@@ -284,21 +285,21 @@ export function RescuePage() {
 
   if (isLoading) return <div className="p-8 text-[#b3b3b3]">{t('rescue.loading')}</div>
 
+  const retry = () => qc.invalidateQueries({ queryKey: ['rescue-records'] })
+
   if (error) {
-    return (
-      <div className="p-8 text-[#f3727f]">
-        {t('rescue.loadError')}
-      </div>
-    )
+    return <LoadError title={t('rescue.loadError')} error={error} onRetry={retry} className="h-full" />
   }
 
   if (banners.length === 0) {
     return (
-      <div className="p-8 text-[#b3b3b3]">
-        <p className="text-lg text-[#ffffff] mb-2">{t('rescue.title')}</p>
-        <p className="text-sm">{t('rescue.empty')}</p>
-        <p className="text-sm mt-2">{t('rescue.howTo')}</p>
-      </div>
+      <EmptyState
+        icon={History}
+        title={t('rescue.empty')}
+        hint={t('rescue.howTo')}
+        action={<><GoToCaptureButton /><RetryButton onClick={retry} /></>}
+        className="h-full"
+      />
     )
   }
 
@@ -324,7 +325,7 @@ export function RescuePage() {
             className="border-[#282828] text-[#b3b3b3] hover:text-[#ffffff]"
             onClick={() => openExternal('https://hub-czn.lovable.app')}
           >
-            <Cloud size={13} className="mr-1" />
+            <ExternalLink size={13} className="mr-1" />
             {t('rescue.saveCloud')}
           </Button>
           <Button

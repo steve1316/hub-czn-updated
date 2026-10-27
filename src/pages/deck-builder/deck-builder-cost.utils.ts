@@ -34,6 +34,28 @@ export type DeckBuilderSlotCostBreakdown = {
   isOverLimit: boolean
 }
 
+/** A cost category of `DeckBuilderSlotCostBreakdown`, which also names its label under `deckBuilder.costBreakdown`. */
+export type DeckBuilderCostKey = Exclude<keyof DeckBuilderSlotCostBreakdown, 'total' | 'limit' | 'isOverLimit'>
+
+/** One category's share of a deck's points. */
+export interface DeckBuilderCostLine {
+  /** The category. */
+  key: DeckBuilderCostKey
+  /** The points it adds to the deck. */
+  points: number
+}
+
+const COST_KEYS: DeckBuilderCostKey[] = [
+  'removedStartingCards',
+  'thirdCopies',
+  'divineEpiphanies',
+  'neutralCards',
+  'forbiddenCards',
+  'monsterCommonCards',
+  'monsterRareCards',
+  'monsterLegendaryCards',
+]
+
 function normalizeComparable(value: string) {
   return value.trim().toLowerCase()
 }
@@ -183,4 +205,16 @@ export function calculateDeckBuilderSlotCost(slot: SquadSlot): DeckBuilderSlotCo
     limit: DECK_BUILDER_SLOT_COST_LIMIT,
     isOverLimit: total > DECK_BUILDER_SLOT_COST_LIMIT,
   }
+}
+
+/**
+ * The categories that add points to a deck, biggest first.
+ * @param breakdown The deck's cost breakdown.
+ * @returns One line per category that costs something.
+ */
+export function costBreakdownLines(breakdown: DeckBuilderSlotCostBreakdown): DeckBuilderCostLine[] {
+  return COST_KEYS
+    .map(key => ({ key, points: breakdown[key] }))
+    .filter(line => line.points > 0)
+    .sort((a, b) => b.points - a.points)
 }

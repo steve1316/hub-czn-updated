@@ -48,7 +48,7 @@ function EpiphanyRows({ epiphanies }: EpiphanyRowsProps) {
             key={ep.level}
             title={ep.name}
             className={cn(
-              'grid grid-cols-[44px_34px_1fr] items-start gap-2 rounded px-1.5 py-1 text-xs',
+              'grid grid-cols-[56px_40px_1fr] items-start gap-2 rounded px-2 py-1 text-sm',
               highlighted !== null && ratingScore(ep.rating) === highlighted && 'bg-[#c084fc]/9 outline outline-[#c084fc]/30',
             )}
           >
@@ -88,17 +88,17 @@ export function CardListBlock({ intro, items, cardsById }: CardListBlockProps) {
               key={`${item.cardId}-${index}`}
               className={cn('flex gap-3 rounded-lg border border-[#282828] bg-[#181818] p-3', item.epiphanies && 'sm:col-span-2')}
             >
-              <div className="relative h-24 w-16 shrink-0">
+              <div className="relative h-36 w-24 shrink-0">
                 <CardImage card={card} className="h-full w-full rounded" />
-                <CostGem cost={item.cost} small className="absolute top-1 left-1" />
+                <CostGem cost={item.cost} className="absolute top-1.5 left-1.5" />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2">
-                  <h4 className="truncate text-sm font-bold text-[#ffffff]">{item.name ?? card.name}</h4>
-                  {item.count && item.count > 1 && <span className="shrink-0 text-xs font-bold text-[#b3b3b3]">x{item.count}</span>}
+                  <h4 className="truncate text-base font-bold text-[#ffffff]">{item.name ?? card.name}</h4>
+                  {item.count && item.count > 1 && <span className="shrink-0 text-sm font-bold text-[#b3b3b3]">x{item.count}</span>}
                   {item.rating && <RatingChip rating={item.rating} />}
                 </div>
-                {note && <p className="mt-1 text-xs leading-relaxed whitespace-pre-line text-[#b3b3b3]">{note}</p>}
+                {note && <p className="mt-1 text-sm leading-relaxed whitespace-pre-line text-[#b3b3b3]">{note}</p>}
                 {item.epiphanies && <EpiphanyRows epiphanies={item.epiphanies} />}
               </div>
             </article>

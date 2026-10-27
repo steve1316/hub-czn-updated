@@ -5,43 +5,17 @@ import {
   getDeckBuilderItemImageUrl,
   getItemRarityClassName,
 } from '@/pages/deck-builder/deck-builder-items.utils'
-import type { DeckBuilderItem } from '@/pages/deck-builder/deck-builder.types'
 import { findClarification } from '../encyclopedia-content'
 import { localized, resolveLang } from '../encyclopedia.utils'
+import { ClarifiedText, DetailHeader, DetailSection, EncyclopediaLayout, ListRow } from './EncyclopediaLayout'
 import { FilterSection } from './FilterSection'
-import { RichDescription } from './RichDescription'
 
 const SLOTS = ['Weapon', 'Armor', 'Accessory']
 const RARITIES = ['Rare', 'Legendary', 'Unique']
 
-function ClarifiedDescription({ item }: { item: DeckBuilderItem }) {
+export function EquipmentsTab() {
   const { t, i18n } = useTranslation()
   const lang = resolveLang(i18n.language)
-  const clar = findClarification('equipment', item.id)
-
-  if (!clar) {
-    return <RichDescription text={localized(item.description, lang)} className="text-xs leading-relaxed text-[#d4d4d4]" />
-  }
-  return (
-    <div className="flex flex-col gap-2">
-      <div>
-        <p className="text-[10px] font-bold uppercase tracking-wide text-[#c084fc]">
-          {t('encyclopedia.clarification')}
-        </p>
-        <RichDescription text={localized(clar.text, lang)} className="text-xs leading-relaxed text-[#e5e7eb]" />
-      </div>
-      <div>
-        <p className="text-[10px] font-bold uppercase tracking-wide text-[#555]">
-          {t('encyclopedia.gameText')}
-        </p>
-        <p className="text-xs leading-relaxed text-[#777]">{localized(item.description, lang)}</p>
-      </div>
-    </div>
-  )
-}
-
-export function EquipmentsTab() {
-  const { t } = useTranslation()
   const [search, setSearch] = useState('')
   const [slot, setSlot] = useState<string | null>(null)
   const [rarity, setRarity] = useState<string | null>(null)
@@ -62,100 +36,67 @@ export function EquipmentsTab() {
     [selectedId],
   )
   const imageUrl = selected ? getDeckBuilderItemImageUrl(selected) : null
+  const clar = selected ? findClarification('equipment', selected.id) : undefined
 
   return (
-    <div className="flex h-full overflow-hidden">
-      {/* Filters */}
-      <div className="flex w-52 shrink-0 flex-col gap-3 overflow-y-auto border-r border-[#282828] bg-[#181818] p-3">
-        <input
-          type="search"
-          placeholder={t('encyclopedia.search')}
-          aria-label={t('encyclopedia.search')}
-          value={search}
-          onChange={e => setSearch(e.target.value)}
-          className="w-full rounded border border-[#333] bg-[#222] px-2 py-1.5 text-xs text-[#e5e7eb] placeholder:text-[#555]"
-        />
-        <FilterSection label={t('encyclopedia.equipments.slot')} options={SLOTS} value={slot} onChange={setSlot} />
-        <FilterSection label={t('encyclopedia.equipments.rarity')} options={RARITIES} value={rarity} onChange={setRarity} />
-      </div>
-
-      {/* List */}
-      <div className="w-72 shrink-0 overflow-y-auto border-r border-[#282828]">
-        {filtered.length === 0 ? (
-          <p className="p-4 text-xs text-[#555]">{t('encyclopedia.empty')}</p>
-        ) : (
-          filtered.map(item => (
-            <button
-              key={item.id}
-              type="button"
-              onClick={() => setSelectedId(item.id)}
-              className={`flex w-full items-center gap-2 border-b border-[#1e1e1e] px-3 py-2 text-left transition-colors ${
-                selectedId === item.id ? 'bg-[#1f1730]' : 'hover:bg-[#1a1a1a]'
-              }`}
-            >
-              <span className={`h-2 w-2 shrink-0 rounded-full border ${getItemRarityClassName(item.rarity)}`} />
-              <span className="min-w-0 flex-1">
-                <span className="block truncate text-xs font-medium text-[#e5e7eb]">{item.name}</span>
-                <span className="block text-[10px] text-[#555]">{item.slot} · {item.rarity}</span>
-              </span>
-            </button>
-          ))
-        )}
-      </div>
-
-      {/* Detail */}
-      <div className="flex-1 overflow-y-auto p-5">
-        {!selected ? (
-          <p className="text-sm text-[#555]">{t('encyclopedia.selectPrompt')}</p>
-        ) : (
-          <div className="flex max-w-xl flex-col gap-4">
-            <div className="flex items-center gap-3">
-              {imageUrl && (
+    <EncyclopediaLayout
+      search={search}
+      onSearch={setSearch}
+      searchPlaceholder={t('encyclopedia.search')}
+      filters={
+        <>
+          <FilterSection label={t('encyclopedia.equipments.slot')} options={SLOTS} value={slot} onChange={setSlot} />
+          <FilterSection label={t('encyclopedia.equipments.rarity')} options={RARITIES} value={rarity} onChange={setRarity} />
+        </>
+      }
+      count={filtered.length}
+      detail={
+        selected && (
+          <div className="flex max-w-2xl flex-col gap-5">
+            <DetailHeader
+              title={selected.name}
+              meta={`${selected.slot} · ${selected.rarity}`}
+              media={imageUrl && (
                 <img
                   src={imageUrl}
                   alt={selected.name}
-                  className={`h-14 w-14 rounded-lg border object-cover ${getItemRarityClassName(selected.rarity)}`}
+                  className={`h-20 w-20 shrink-0 rounded-lg border object-cover ${getItemRarityClassName(selected.rarity)}`}
                 />
               )}
-              <div>
-                <h3 className="text-base font-bold text-white">{selected.name}</h3>
-                <p className="text-xs text-[#888]">
-                  {selected.slot} · {selected.rarity}
-                </p>
-              </div>
-            </div>
+            />
 
-            <div className="rounded-lg border border-[#282828] bg-[#161616] p-3">
-              <ClarifiedDescription item={selected} />
-            </div>
+            <ClarifiedText clarification={clar && localized(clar.text, lang)} gameText={localized(selected.description, lang)} />
 
             {selected.stat_type && selected.stat_values?.length ? (
-              <div>
-                <p className="mb-1 text-[10px] font-bold uppercase tracking-wide text-[#666]">
-                  {t('encyclopedia.equipments.stat')} · {selected.stat_type}
-                </p>
-                <div className="flex gap-2">
+              <DetailSection label={`${t('encyclopedia.equipments.stat')} · ${selected.stat_type}`}>
+                <div className="flex flex-wrap gap-2">
                   {selected.stat_values.map((v, i) => (
-                    <span
-                      key={i}
-                      className="rounded bg-[#222] px-2 py-1 text-xs font-mono text-[#e5e7eb]"
-                      title={`Lv ${i + 1}`}
-                    >
+                    <span key={i} className="rounded bg-[#222] px-2.5 py-1 font-mono text-sm text-[#e5e7eb]" title={`Lv ${i + 1}`}>
                       {v}
                     </span>
                   ))}
                 </div>
-              </div>
+              </DetailSection>
             ) : null}
 
             {selected.source && (
-              <p className="text-xs text-[#666]">
-                {t('encyclopedia.equipments.source')}: {selected.source}
-              </p>
+              <DetailSection label={t('encyclopedia.equipments.source')}>
+                <p className="text-sm text-[#d4d4d4]">{selected.source}</p>
+              </DetailSection>
             )}
           </div>
-        )}
-      </div>
-    </div>
+        )
+      }
+    >
+      {filtered.map(item => (
+        <ListRow key={item.id} selected={selectedId === item.id} onSelect={() => setSelectedId(item.id)}>
+          <span className={`h-2.5 w-2.5 shrink-0 rounded-full border ${getItemRarityClassName(item.rarity)}`} />
+          <span className="min-w-0 flex-1">
+            <span className="block truncate text-sm font-medium text-[#e5e7eb]">{item.name}</span>
+            <span className="block text-xs text-[#8a8a8a]">{item.slot} · {item.rarity}</span>
+          </span>
+        </ListRow>
+      ))}
+    </EncyclopediaLayout>
   )
 }

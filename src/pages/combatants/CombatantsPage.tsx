@@ -1,8 +1,9 @@
 import { useState, useCallback } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { useTranslation } from 'react-i18next'
-import { RefreshCw, User, Loader2, ChevronDown, ChevronRight, Download, Cloud } from 'lucide-react'
+import { Users, Loader2, ChevronDown, ChevronRight, Download, ExternalLink } from 'lucide-react'
 import { api, assetUrl } from '@/lib/api'
+import { EmptyState, LoadError } from '@/components/ui/empty-state'
 import { AssetImage } from '@/components/ui/asset-image'
 import { openExternal } from '@/lib/browser'
 import { downloadJson } from '@/lib/download'
@@ -29,12 +30,12 @@ function AttrBadge({ attr }: { attr: string }) {
         src={assetUrl(icon)}
         alt={attr}
         title={attr}
-        className="w-5 h-5 shrink-0 object-contain"
+        className="w-7 h-7 shrink-0 object-contain"
       />
     )
   }
   return (
-    <span className="text-[9px] font-semibold px-1.5 py-0.5 rounded border leading-tight shrink-0 bg-[#282828] text-[#888888] border-[#333333]">
+    <span className="text-xs font-semibold px-1.5 py-0.5 rounded border leading-tight shrink-0 bg-[#282828] text-[#b3b3b3] border-[#333333]">
       {attr}
     </span>
   )
@@ -75,15 +76,15 @@ function PartnerBadge({
         <AssetImage
           src={assetUrl(`/assets/game/tp_skill/battle_icon_tp_skill_${partnerResId}.png`)}
           alt={partnerName ?? ''}
-          className="w-10 h-[26px] rounded object-cover shrink-0"
+          className="w-14 h-9 rounded object-cover shrink-0"
           onError={() => setImgOk(false)}
         />
       ) : (
-        <div className="w-10 h-[26px] rounded bg-[#282828] shrink-0" />
+        <div className="w-14 h-9 rounded bg-[#282828] shrink-0" />
       )}
       <div className="min-w-0">
-        <p className="text-[9px] uppercase tracking-wider text-[#555555] leading-tight">Partner</p>
-        <p className="text-[11px] text-[#b3b3b3] truncate leading-tight">{partnerName ?? '—'}</p>
+        <p className="text-xs text-[#8a8a8a] leading-tight">Partner</p>
+        <p className="text-sm text-[#e5e7eb] truncate leading-tight">{partnerName ?? '—'}</p>
       </div>
     </div>
   )
@@ -133,21 +134,16 @@ function ExpandedContent({
             {/* Top: partner + compact stats — right-aligned, spanning right 3 of 6 cols */}
             <div className="px-4 mb-3 flex flex-col items-end gap-2">
               <PartnerBadge partnerResId={partnerResId} partnerName={partnerName} />
-              <div style={{ width: 'calc(50% - 4px)', opacity: 0.72 }}>
+              <div style={{ width: 'calc(50% - 4px)' }}>
                 <FinalStatsPanel stats={data.final_stats} compact />
               </div>
             </div>
 
             {/* Bottom: gear cards — full width */}
-            <div className="grid grid-cols-3 xl:grid-cols-6 gap-2 px-4">
-              {data.gear_slots.map((slot, i) => {
-                const opacity = i === 0 ? 0.72 : i === 1 ? 0.86 : 1
-                return (
-                  <div key={slot.slot} style={{ opacity }}>
-                    <GearSlotCard slot={slot} />
-                  </div>
-                )
-              })}
+            <div className="grid grid-cols-3 2xl:grid-cols-6 gap-2 px-4">
+              {data.gear_slots.map((slot) => (
+                <GearSlotCard key={slot.slot} slot={slot} />
+              ))}
             </div>
 
             <CharacterScoring charId={charId} resId={resId} />
@@ -183,17 +179,17 @@ function CombatantRow({
         type="button"
         onClick={onToggle}
         aria-pressed={expanded}
-        className={`w-full flex items-center gap-3 px-3 py-2 text-left transition-colors ${
+        className={`w-full flex items-center gap-4 px-4 py-3 text-left transition-colors ${
           expanded ? 'bg-[#c084fc]/5' : 'hover:bg-[#1e1e1e]'
         }`}
       >
         {/* Rank */}
-        <span className="w-5 text-right text-[10px] text-[#444444] tabular-nums shrink-0">
+        <span className="w-6 text-right text-sm text-[#8a8a8a] tabular-nums shrink-0">
           {rank}
         </span>
 
         {/* Rectangular battle icon */}
-        <div className="w-14 h-9 shrink-0 rounded-lg overflow-hidden bg-[#121212] border border-[#252525]">
+        <div className="w-24 h-14 shrink-0 rounded-lg overflow-hidden bg-[#121212] border border-[#252525]">
           <AssetImage
             src={tpUrl}
             alt={combatant.name}
@@ -203,42 +199,42 @@ function CombatantRow({
 
         {/* Name + level */}
         <div className="flex-1 min-w-0">
-          <p className="text-sm font-semibold text-[#ffffff] truncate leading-tight">{combatant.name}</p>
-          <p className="text-[10px] text-[#666666] leading-tight">Lv. {combatant.level}</p>
+          <p className="text-base font-semibold text-[#ffffff] truncate leading-tight">{combatant.name}</p>
+          <p className="mt-0.5 text-sm text-[#b3b3b3] leading-tight">Lv. {combatant.level}</p>
         </div>
 
         {/* Attribute */}
         <AttrBadge attr={combatant.attribute} />
 
         {/* Class */}
-        <span className="hidden sm:block text-[10px] px-2 py-0.5 rounded bg-[#232323] text-[#888888] border border-[#2e2e2e] shrink-0">
+        <span className="hidden sm:block w-24 text-center text-sm px-2 py-0.5 rounded bg-[#232323] text-[#b3b3b3] border border-[#2e2e2e] shrink-0">
           {combatant.class}
         </span>
 
         {/* Ego Manifestation */}
         {combatant.ego != null && (
-          <span className={`text-[10px] font-bold shrink-0 tabular-nums ${
-            combatant.ego === 6 ? 'text-[#ffd700]' : 'text-[#888888]'
+          <span className={`w-7 text-sm font-bold shrink-0 tabular-nums ${
+            combatant.ego === 6 ? 'text-[#ffd700]' : 'text-[#b3b3b3]'
           }`}>
             E{combatant.ego}
           </span>
         )}
 
         {/* GS score */}
-        <div className="shrink-0 text-right w-12">
+        <div className="shrink-0 text-right w-16">
           {combatant.avg_gear_score > 0 ? (
-            <span className="text-sm font-bold text-[#c084fc] tabular-nums">
+            <span className="text-lg font-bold text-[#c084fc] tabular-nums">
               {combatant.avg_gear_score.toFixed(1)}
             </span>
           ) : (
-            <span className="text-sm text-[#444444]">—</span>
+            <span className="text-lg text-[#8a8a8a]">—</span>
           )}
-          <p className="text-[9px] text-[#555555]">GS</p>
+          <p className="text-xs text-[#8a8a8a]">GS</p>
         </div>
 
         {/* Chevron */}
-        <div className={`shrink-0 transition-colors ${expanded ? 'text-[#c084fc]' : 'text-[#444444]'}`}>
-          {expanded ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+        <div className={`shrink-0 transition-colors ${expanded ? 'text-[#c084fc]' : 'text-[#8a8a8a]'}`}>
+          {expanded ? <ChevronDown size={18} /> : <ChevronRight size={18} />}
         </div>
       </button>
 
@@ -284,26 +280,14 @@ export function CombatantsPage() {
   }, [])
 
   if (error) {
-    return (
-      <div className="p-4">
-        <p className="text-[#f3727f] text-sm mb-2">{t('combatants.loadError')}</p>
-        <button
-          type="button"
-          onClick={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })}
-          className="flex items-center gap-1 text-xs text-[#b3b3b3] hover:text-[#ffffff]"
-        >
-          <RefreshCw size={12} />
-          {t('combatants.retry')}
-        </button>
-      </div>
-    )
+    return <LoadError title={t('combatants.loadError')} error={error} onRetry={() => queryClient.invalidateQueries({ queryKey: ['combatants'] })} className="h-full" />
   }
 
   if (isLoading) {
     return (
       <div role="status" aria-label={t('combatants.loading')} className="flex-1 p-4 space-y-1.5">
         {Array.from({ length: 10 }).map((_, i) => (
-          <div key={i} className="h-14 rounded-xl bg-[#181818] border border-[#282828] animate-pulse" />
+          <div key={i} className="h-20 rounded-xl bg-[#181818] border border-[#282828] animate-pulse" />
         ))}
       </div>
     )
@@ -314,11 +298,7 @@ export function CombatantsPage() {
     return (
       <div className="h-full flex flex-col gap-4 p-4">
         <GlobalScoring />
-        <div role="status" className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3]">
-          <User size={40} className="opacity-30" />
-          <p className="text-sm">{t('combatants.empty')}</p>
-          <p className="text-xs">{t('combatants.emptyHint')}</p>
-        </div>
+        <EmptyState icon={Users} title={t('combatants.empty')} hint={t('combatants.emptyHint')} className="flex-1" />
       </div>
     )
   }
@@ -345,7 +325,7 @@ export function CombatantsPage() {
           onClick={() => openExternal('https://hub-czn.lovable.app')}
           className="border-[#282828] text-[#b3b3b3] hover:text-[#ffffff]"
         >
-          <Cloud size={13} className="mr-1" />
+          <ExternalLink size={13} className="mr-1" />
           {t('combatants.saveCloud')}
         </Button>
       </div>

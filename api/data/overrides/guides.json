@@ -1,5 +1,5 @@
 {
-  "_about": "Overrides for the Guides import from the community Google Sheet. `_tabs` maps a sheet tab whose name is not a character's name to that character's res_id. `_pictures` labels a sheet picture the importer could not identify, keyed by the hash the review page shows (client_db/.cache/guides/unidentified.html): {\"charResId\": 1003}, {\"cardId\": \"c_1003_uni1\"}, {\"setId\": 11} (a memory fragment piece) or {\"skip\": true}. One label covers every use of that picture on every tab. A single cell can also be labelled with an entry keyed \"<tab>!<cell>\", such as \"Tenebria!B11\", plus a `_why`. `_sections` moves a band the importer put on the wrong page: {\"<tab>\": {\"<band title>\": \"decks\"}}, using a page id from `PAGES` in scripts/datagen/targets/guides.py.",
+  "_about": "Overrides for the Guides import from the community Google Sheet. `_tabs` maps a sheet tab whose name is not a character's name to that character's res_id. `_pictures` labels a sheet picture the importer could not identify, keyed by the hash the review page shows (client_db/.cache/guides/unidentified.html): {\"charResId\": 1003}, {\"cardId\": \"c_1003_uni1\"}, {\"setId\": 11} (a memory fragment piece) or {\"skip\": true}. One label covers every use of that picture on every tab. A single cell can also be labelled with an entry keyed \"<tab>!<cell>\", such as \"Tenebria!B11\", plus a `_why`. `_sections` moves a band the importer put on the wrong page: {\"<tab>\": {\"<band title>\": \"decks\"}}, using a page id from `PAGES` in scripts/datagen/targets/guides.py. `_potentials` gives the potentials ring colours by hand for a tab whose picture the importer could not read: {\"<tab>\": {\"<node>\": \"purple\" | \"gold\" | \"blue\"}}, using the node labels in scripts/datagen/data/potentials_nodes.json.",
   "_tabs": {
     "Babybell": 1028
   },
@@ -47,6 +47,15 @@
     "c660e168b3cd8ce38c039803b403be27b2e6a36ee93cf138d4cc8f97ed39e738": {"cardId": "c_30113_cre2"}
   },
   "_sections": {},
+  "_potentials": {
+    "Arabella": {"01": "purple", "02": "gold", "03": "blue", "03-1": "gold", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"},
+    "Fei": {"01": "purple", "02": "gold", "03": "blue", "03-1": "purple", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"},
+    "Haru": {"01": "gold", "02": "blue", "03": "blue", "03-1": "gold", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"},
+    "Hilde": {"01": "purple", "02": "gold", "03": "blue", "03-1": "gold", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"},
+    "Nia": {"01": "gold", "02": "blue", "03": "gold", "03-1": "blue", "04": "blue", "05": "blue", "05-1": "blue", "05-2": "gold", "06": "gold", "07": "gold"},
+    "Olga": {"01": "purple", "02": "gold", "03": "blue", "03-1": "gold", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"},
+    "Sereniel": {"01": "gold", "02": "gold", "03": "blue", "03-1": "purple", "04": "purple", "05": "purple", "05-1": "blue", "05-2": "gold", "06": "purple", "07": "purple"}
+  },
   "Adelheid/ADHD!B35": {
     "cardId": "eidolon_card",
     "name": "Persona",

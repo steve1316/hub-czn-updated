@@ -1343,7 +1343,7 @@
           "type": "potentials",
           "image": "olga.webp",
           "treeImage": "olga-tree.webp",
-          "coloured": false,
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",

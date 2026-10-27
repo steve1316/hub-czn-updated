@@ -24,7 +24,7 @@ from api import client_db
 FOLDERS = ("db", "face/character", "text/en", "tp_skill")
 
 # Art the dev-mode generators (`python -m scripts.datagen`) also need, about 480 MB. The installed app never reads it.
-ART_FOLDERS = ("card_illustration", "collapse/collapse_illustration")
+ART_FOLDERS = ("card_illustration", "collapse/collapse_illustration", "item/relics")
 
 # STOVE registers the game under this uninstall key. Its `DisplayIcon` points at the loader inside `bin`.
 UNINSTALL_KEYS = (

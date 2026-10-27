@@ -19,7 +19,7 @@ export function EgoSkillCard({
         </div>
 
         <div className="min-w-0 flex-1">
-          <p className="text-[10px] uppercase tracking-wide text-[#fbbf24]">
+          <p className="text-[11px] uppercase tracking-wide text-[#fbbf24]">
             Ego Skill
           </p>
 
@@ -39,7 +39,7 @@ export function EgoSkillCard({
                 <TypeBadge key={type} type={type} />
               ))
             ) : (
-              <span className="text-[10px] text-[#777]">
+              <span className="text-[11px] text-[#8a8a8a]">
                 {t('deckBuilder.support')}
               </span>
             )}
@@ -47,7 +47,7 @@ export function EgoSkillCard({
 
           {displayDescription && (
             <div className="mt-2 rounded-md border border-[#f59e0b]/20 bg-[#78350f]/20 p-2">
-              <p className="line-clamp-3 text-[10px] leading-relaxed text-[#fde68a]">
+              <p className="line-clamp-3 text-[11px] leading-relaxed text-[#fde68a]">
                 {displayDescription}
               </p>
             </div>

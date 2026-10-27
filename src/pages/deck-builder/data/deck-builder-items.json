@@ -8,7 +8,7 @@
     "description": {
       "en": "+35% Damage Amount to Extra Attacks."
     },
-    "image_path": "itens/item_0157.webp"
+    "image_path": "itens/relic_1168.webp"
   },
   {
     "id": "eq_pub_002",
@@ -19,7 +19,7 @@
     "description": {
       "en": "When a 2-Cost or higher Attack Card is activated, 3 Agony to the target."
     },
-    "image_path": "itens/item_0073.webp"
+    "image_path": "itens/relic_1037.webp"
   },
   {
     "id": "eq_pub_003",
@@ -30,7 +30,7 @@
     "description": {
       "en": "+10% Critical Chance of Attack Cards with cost 0."
     },
-    "image_path": "itens/item_0149.webp"
+    "image_path": "itens/relic_0072.webp"
   },
   {
     "id": "eq_pub_004",
@@ -41,7 +41,7 @@
     "description": {
       "en": "Increase Damage Amount of Attack Cards by 25% (1 time per turn)."
     },
-    "image_path": "itens/item_0117.webp"
+    "image_path": "itens/relic_0072_6.webp"
   },
   {
     "id": "eq_pub_005",
@@ -52,7 +52,7 @@
     "description": {
       "en": "When an Upgrade Card is activated, 150% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0108.webp"
+    "image_path": "itens/relic_0084.webp"
   },
   {
     "id": "eq_pub_006",
@@ -63,7 +63,7 @@
     "description": {
       "en": "Increase Damage Amount by 12%."
     },
-    "image_path": "itens/item_0128.webp"
+    "image_path": "itens/relic_1060.webp"
   },
   {
     "id": "eq_pub_007",
@@ -74,7 +74,7 @@
     "description": {
       "en": "When an enemy is defeated, 2 Vulnerable to all enemies."
     },
-    "image_path": "itens/item_0165.webp"
+    "image_path": "itens/relic_1154.webp"
   },
   {
     "id": "eq_pub_008",
@@ -85,7 +85,7 @@
     "description": {
       "en": "When dealing Damage with a targeting Attack Card, 3 Agony (1 per turn)."
     },
-    "image_path": "itens/item_0042.webp"
+    "image_path": "itens/relic_1170.webp"
   },
   {
     "id": "eq_pub_009",
@@ -96,7 +96,7 @@
     "description": {
       "en": "Increase Tenacity Damage of the first Attack Card activated each battle by 100%."
     },
-    "image_path": "itens/item_0012.webp"
+    "image_path": "itens/relic_1195.webp"
   },
   {
     "id": "eq_pub_010",
@@ -107,7 +107,7 @@
     "description": {
       "en": "When hitting a target under Weakened status, +30% Damage."
     },
-    "image_path": "itens/item_0016.webp"
+    "image_path": "itens/relic_1200.webp"
   },
   {
     "id": "eq_pub_011",
@@ -118,7 +118,7 @@
     "description": {
       "en": "Increase Damage of Attack Cards by 40% (1 time per battle)."
     },
-    "image_path": "itens/item_0035.webp"
+    "image_path": "itens/relic_1202.webp"
   },
   {
     "id": "eq_pub_012",
@@ -129,7 +129,7 @@
     "description": {
       "en": "At the start of battle, 2 Mark to a random enemy."
     },
-    "image_path": "itens/item_0189.webp"
+    "image_path": "itens/relic_1164.webp"
   },
   {
     "id": "eq_pub_013",
@@ -140,7 +140,7 @@
     "description": {
       "en": "At the start of battle, apply 3 Weaken to a random enemy."
     },
-    "image_path": "itens/item_0066.webp"
+    "image_path": "itens/relic_1161.webp"
   },
   {
     "id": "eq_pub_014",
@@ -151,7 +151,7 @@
     "description": {
       "en": "When an ally inflicts Ravage, 40% Fixed Shield."
     },
-    "image_path": "itens/item_0032.webp"
+    "image_path": "itens/relic_1188.webp"
   },
   {
     "id": "eq_pub_015",
@@ -162,7 +162,7 @@
     "description": {
       "en": "At the start of battle, gain 2 Damage Reduction."
     },
-    "image_path": "itens/item_0074.webp"
+    "image_path": "itens/relic_1165.webp"
   },
   {
     "id": "eq_pub_016",
@@ -173,7 +173,7 @@
     "description": {
       "en": "When defeating the enemy, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0156.webp"
+    "image_path": "itens/relic_0070.webp"
   },
   {
     "id": "eq_pub_017",
@@ -184,7 +184,7 @@
     "description": {
       "en": "At the start of battle, 1 Immunity."
     },
-    "image_path": "itens/item_0170.webp"
+    "image_path": "itens/relic_0074.webp"
   },
   {
     "id": "eq_pub_018",
@@ -195,7 +195,7 @@
     "description": {
       "en": "At the start of the second turn, 200% Fixed Shield."
     },
-    "image_path": "itens/item_0009.webp"
+    "image_path": "itens/relic_1065.webp"
   },
   {
     "id": "eq_pub_019",
@@ -206,7 +206,7 @@
     "description": {
       "en": "At the start of battle, gain 3 Counterattack."
     },
-    "image_path": "itens/item_0010.webp"
+    "image_path": "itens/relic_1072.webp"
   },
   {
     "id": "eq_pub_020",
@@ -217,7 +217,7 @@
     "description": {
       "en": "At the end of the turn, if there is no Shield, gain 60% Fixed Shield."
     },
-    "image_path": "itens/item_0145.webp"
+    "image_path": "itens/relic_1076.webp"
   },
   {
     "id": "eq_pub_021",
@@ -228,7 +228,7 @@
     "description": {
       "en": "When Damage is taken, Recover 2% of Max HP (1 time per turn)."
     },
-    "image_path": "itens/item_0188.webp"
+    "image_path": "itens/relic_1136.webp"
   },
   {
     "id": "eq_pub_022",
@@ -239,7 +239,7 @@
     "description": {
       "en": "At the start of battle, gain 140% Fixed Shield."
     },
-    "image_path": "itens/item_0177.webp"
+    "image_path": "itens/relic_1148.webp"
   },
   {
     "id": "eq_pub_024",
@@ -250,7 +250,7 @@
     "description": {
       "en": "When Shield is gained through a card, 30% Fixed Shield."
     },
-    "image_path": "itens/item_0104.webp"
+    "image_path": "itens/relic_1196.webp"
   },
   {
     "id": "eq_pub_026",
@@ -261,7 +261,7 @@
     "description": {
       "en": "At the start of battle, if the Initiation card is in hand, 1 Tenacity Damage to all enemies."
     },
-    "image_path": "itens/item_0110.webp"
+    "image_path": "itens/relic_0008.webp"
   },
   {
     "id": "eq_pub_027",
@@ -272,7 +272,7 @@
     "description": {
       "en": "When an Upgrade Card is activated by allies, increase Damage, Shield Gain, Heal Amounts by 20% for 1 turn."
     },
-    "image_path": "itens/item_0141.webp"
+    "image_path": "itens/relic_1043.webp"
   },
   {
     "id": "eq_pub_028",
@@ -283,7 +283,7 @@
     "description": {
       "en": "At the end of battle, if HP is 50% or less, Recover 8% of Max HP."
     },
-    "image_path": "itens/item_0085.webp"
+    "image_path": "itens/relic_1048.webp"
   },
   {
     "id": "eq_pub_029",
@@ -294,7 +294,7 @@
     "description": {
       "en": "At the start of the turn, proc 1 random Lead card in hand."
     },
-    "image_path": "itens/item_0118.webp"
+    "image_path": "itens/relic_1059.webp"
   },
   {
     "id": "eq_pub_030",
@@ -305,7 +305,7 @@
     "description": {
       "en": "At the start of battle, +20% Shield."
     },
-    "image_path": "itens/item_0002.webp"
+    "image_path": "itens/relic_1063.webp"
   },
   {
     "id": "eq_pub_031",
@@ -316,7 +316,7 @@
     "description": {
       "en": "+25% Damage Amount."
     },
-    "image_path": "itens/item_0005.webp"
+    "image_path": "itens/relic_1075.webp"
   },
   {
     "id": "eq_pub_034",
@@ -327,7 +327,7 @@
     "description": {
       "en": "At the start of battle, 200% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0115.webp"
+    "image_path": "itens/relic_1080.webp"
   },
   {
     "id": "eq_pub_035",
@@ -338,7 +338,7 @@
     "description": {
       "en": "Activate Epiphany for the equipped combatant."
     },
-    "image_path": "itens/item_0187.webp"
+    "image_path": "itens/relic_1130.webp"
   },
   {
     "id": "eq_pub_036",
@@ -349,7 +349,7 @@
     "description": {
       "en": "X is applied as X+1."
     },
-    "image_path": "itens/item_0086.webp"
+    "image_path": "itens/relic_1146.webp"
   },
   {
     "id": "eq_pub_037",
@@ -360,7 +360,7 @@
     "description": {
       "en": "At the start of battle, gain 3 Damage Reduction."
     },
-    "image_path": "itens/item_0080.webp"
+    "image_path": "itens/relic_5002.webp"
   },
   {
     "id": "eq_pub_038",
@@ -371,7 +371,7 @@
     "description": {
       "en": "+18% Attack. On Ravage, decrease Stress of allies by 1."
     },
-    "image_path": "itens/item_0092.webp"
+    "image_path": "itens/relic_0094.webp"
   },
   {
     "id": "eq_pub_039",
@@ -382,7 +382,7 @@
     "description": {
       "en": "+8% ally Attack. Upon enemy Defeat, -2 Stress to the Combatant with the highest Stress."
     },
-    "image_path": "itens/item_0180.webp"
+    "image_path": "itens/relic_0095.webp"
   },
   {
     "id": "eq_pub_040",
@@ -393,7 +393,7 @@
     "description": {
       "en": "+12% Defense. When Stress increases, there is a 50% chance that Stress increases by 1 less."
     },
-    "image_path": "itens/item_0159.webp"
+    "image_path": "itens/relic_0098.webp"
   },
   {
     "id": "eq_pub_041",
@@ -404,7 +404,7 @@
     "description": {
       "en": "+12% Defense. Decrease the number of Break Recovery cards required by all Combatants by 1."
     },
-    "image_path": "itens/item_0007.webp"
+    "image_path": "itens/relic_0099.webp"
   },
   {
     "id": "eq_pub_042",
@@ -415,7 +415,7 @@
     "description": {
       "en": "+10% max HP. At the start of battle, +1 AP, Draw 1."
     },
-    "image_path": "itens/item_0169.webp"
+    "image_path": "itens/relic_0096.webp"
   },
   {
     "id": "eq_pub_043",
@@ -426,7 +426,7 @@
     "description": {
       "en": "+8% Max HP. At the end of battle, if HP is below 50%, recover 8% Max HP. At the end of the battle, if HP is 50% or higher, -5 Stress to the Combatant with the highest Stress."
     },
-    "image_path": "itens/item_0050.webp"
+    "image_path": "itens/relic_0097.webp"
   },
   {
     "id": "eq_pub_023",
@@ -437,7 +437,7 @@
     "description": {
       "en": "When a card is Exhausted, 30% Fixed Shield (5 times per turn)."
     },
-    "image_path": "itens/item_0139.webp"
+    "image_path": "itens/relic_1158_6.webp"
   },
   {
     "id": "eq_pub_032",
@@ -448,7 +448,7 @@
     "description": {
       "en": "When a card is Discarded by an ally, +15% Damage Amount for 1 turn (max 3 times)."
     },
-    "image_path": "itens/item_0052.webp"
+    "image_path": "itens/relic_1077.webp"
   },
   {
     "id": "eq_pub_033",
@@ -459,7 +459,7 @@
     "description": {
       "en": "At the start of battle, 1 Stockpile."
     },
-    "image_path": "itens/item_0209.webp"
+    "image_path": "itens/relic_1079.webp"
   },
   {
     "id": "eq_chr_001",
@@ -470,7 +470,7 @@
     "description": {
       "en": "When defeating an enemy, gain 5-10 Credits (1 time per battle)."
     },
-    "image_path": "itens/item_0172.webp"
+    "image_path": "itens/relic_1298.webp"
   },
   {
     "id": "eq_chr_002",
@@ -481,7 +481,7 @@
     "description": {
       "en": "At the start of an Elite Battle, +50% Damage Amount."
     },
-    "image_path": "itens/item_0109.webp"
+    "image_path": "itens/relic_1184.webp"
   },
   {
     "id": "eq_chr_003",
@@ -492,7 +492,7 @@
     "description": {
       "en": "10% Attack, -5% Critical Chance."
     },
-    "image_path": "itens/item_0055.webp"
+    "image_path": "itens/relic_1085.webp"
   },
   {
     "id": "eq_chr_005",
@@ -503,7 +503,7 @@
     "description": {
       "en": "At the start of the fourth turn, 400% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0028.webp"
+    "image_path": "itens/relic_0009.webp"
   },
   {
     "id": "eq_chr_006",
@@ -514,7 +514,7 @@
     "description": {
       "en": "When an Attack Card is activated, 6% DMG-Based Recovery (1 time per turn)."
     },
-    "image_path": "itens/item_0014.webp"
+    "image_path": "itens/relic_1299.webp"
   },
   {
     "id": "eq_chr_007",
@@ -525,7 +525,7 @@
     "description": {
       "en": "At the start of the fourth turn, 550% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0069.webp"
+    "image_path": "itens/relic_1300.webp"
   },
   {
     "id": "eq_chr_008",
@@ -536,7 +536,7 @@
     "description": {
       "en": "When an Attack Card is activated, 9% DMG-Based Recovery (1 time per turn)."
     },
-    "image_path": "itens/item_0041.webp"
+    "image_path": "itens/relic_1214.webp"
   },
   {
     "id": "eq_chr_010",
@@ -547,7 +547,7 @@
     "description": {
       "en": "Increase Damage Amount by 35% against enemies with 50% of Max HP or less."
     },
-    "image_path": "itens/item_0059.webp"
+    "image_path": "itens/relic_1151_6.webp"
   },
   {
     "id": "eq_chr_011",
@@ -558,7 +558,7 @@
     "description": {
       "en": "When an enemy is defeated, +25% Attack Card Damage amount (Max 2 times)."
     },
-    "image_path": "itens/item_0151.webp"
+    "image_path": "itens/relic_1186.webp"
   },
   {
     "id": "eq_chr_012",
@@ -569,7 +569,7 @@
     "description": {
       "en": "In Chaos Order battles, +15% Defense."
     },
-    "image_path": "itens/item_0130.webp"
+    "image_path": "itens/relic_1308.webp"
   },
   {
     "id": "eq_chr_013",
@@ -580,7 +580,7 @@
     "description": {
       "en": "At the start of the third turn, 250% Fixed Shield."
     },
-    "image_path": "itens/item_0181.webp"
+    "image_path": "itens/relic_1218.webp"
   },
   {
     "id": "eq_chr_014",
@@ -591,7 +591,7 @@
     "description": {
       "en": "At the start of Chaos Order battle, +20% Damage, 1 Damage Reduction."
     },
-    "image_path": "itens/item_0147.webp"
+    "image_path": "itens/relic_1219.webp"
   },
   {
     "id": "eq_chr_016",
@@ -602,7 +602,7 @@
     "description": {
       "en": "In Chaos Order battles, +10% Defense."
     },
-    "image_path": "itens/item_0138.webp"
+    "image_path": "itens/relic_1107.webp"
   },
   {
     "id": "eq_chr_017",
@@ -613,7 +613,7 @@
     "description": {
       "en": "Increase Damage Amount by 25% against targets that haven't acted."
     },
-    "image_path": "itens/item_0122.webp"
+    "image_path": "itens/relic_1111_6.webp"
   },
   {
     "id": "eq_chr_018",
@@ -624,7 +624,7 @@
     "description": {
       "en": "Increase Damage Amount by 20% against targets in a Agony state."
     },
-    "image_path": "itens/item_0057.webp"
+    "image_path": "itens/relic_1151.webp"
   },
   {
     "id": "eq_chr_019",
@@ -635,7 +635,7 @@
     "description": {
       "en": "At the start of turn, Heal 60% for each Status Ailment and Curse card in hand."
     },
-    "image_path": "itens/item_0045.webp"
+    "image_path": "itens/relic_0056.webp"
   },
   {
     "id": "eq_chr_020",
@@ -646,7 +646,7 @@
     "description": {
       "en": "At the start of the turn, increase Action Count of all enemies by 1."
     },
-    "image_path": "itens/item_0191.webp"
+    "image_path": "itens/relic_1157.webp"
   },
   {
     "id": "eq_chr_021",
@@ -657,7 +657,7 @@
     "description": {
       "en": "When an Attack Card is activated, 1% HP Reduction, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0027.webp"
+    "image_path": "itens/relic_1152_6.webp"
   },
   {
     "id": "eq_chr_022",
@@ -668,7 +668,7 @@
     "description": {
       "en": "When a Duplicated card is activated, increase Action Count of all enemies by 3 (1 time per battle)."
     },
-    "image_path": "itens/item_0015.webp"
+    "image_path": "itens/relic_1223.webp"
   },
   {
     "id": "eq_chr_023",
@@ -679,7 +679,7 @@
     "description": {
       "en": "At the end of the turn, activate 1 of the following effects at random: 60% Fixed Damage x 2-6 to random enemies, or 200% Fixed Damage to allies."
     },
-    "image_path": "itens/item_0051.webp"
+    "image_path": "itens/relic_1185.webp"
   },
   {
     "id": "eq_dll_001",
@@ -690,7 +690,7 @@
     "description": {
       "en": "When there is an enemy whose Anticipated Action is Attack, 60% Fixed Shield (1 time per turn)."
     },
-    "image_path": "itens/item_0082.webp"
+    "image_path": "itens/relic_1291.webp"
   },
   {
     "id": "eq_dll_002",
@@ -701,7 +701,7 @@
     "description": {
       "en": "When using 5 or more Action Points, +25% Damage Amount, Shield gain, and Healing (1 time per battle)."
     },
-    "image_path": "itens/item_0155.webp"
+    "image_path": "itens/relic_1296.webp"
   },
   {
     "id": "eq_dll_003",
@@ -712,7 +712,7 @@
     "description": {
       "en": "When a card is Exhausted, 1 Punishment on a random enemy (2 times per turn)."
     },
-    "image_path": "itens/item_0065.webp"
+    "image_path": "itens/relic_1295.webp"
   },
   {
     "id": "eq_dll_004",
@@ -723,7 +723,7 @@
     "description": {
       "en": "When Draw a card, +20% Damage for 1 turn (2 per turn)."
     },
-    "image_path": "itens/item_0192.webp"
+    "image_path": "itens/relic_1294.webp"
   },
   {
     "id": "eq_dll_005",
@@ -734,7 +734,7 @@
     "description": {
       "en": "When 10 or more Action Points are used, 2 Immunity (1 time per battle)."
     },
-    "image_path": "itens/item_0194.webp"
+    "image_path": "itens/relic_1293.webp"
   },
   {
     "id": "eq_dll_006",
@@ -745,7 +745,7 @@
     "description": {
       "en": "At the start of battle, 2 Immunity."
     },
-    "image_path": "itens/item_0137.webp"
+    "image_path": "itens/relic_1292.webp"
   },
   {
     "id": "eq_dll_007",
@@ -756,7 +756,7 @@
     "description": {
       "en": "At the end of the turn, if there is a Retained card, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0154.webp"
+    "image_path": "itens/relic_1297.webp"
   },
   {
     "id": "eq_dll_008",
@@ -767,7 +767,7 @@
     "description": {
       "en": "If an attack is perfectly blocked with Shield, 1 Impair on all enemies (1 per turn)."
     },
-    "image_path": "itens/item_0038.webp"
+    "image_path": "itens/relic_1290.webp"
   },
   {
     "id": "eq_dll_009",
@@ -778,7 +778,7 @@
     "description": {
       "en": "+15% Defense, 20% Shield Retention."
     },
-    "image_path": "itens/item_0039.webp"
+    "image_path": "itens/relic_1289.webp"
   },
   {
     "id": "eq_dll_010",
@@ -789,7 +789,7 @@
     "description": {
       "en": "+15% Attack. When dealing Damage to a target with Shield, 1 Punishment."
     },
-    "image_path": "itens/item_0164.webp"
+    "image_path": "itens/relic_1098.webp"
   },
   {
     "id": "eq_inv_001",
@@ -800,7 +800,7 @@
     "description": {
       "en": "Increase Damage Amount of Attack Cards with a Cost of 1 or less by 20%."
     },
-    "image_path": "itens/item_0204.webp"
+    "image_path": "itens/relic_1226.webp"
   },
   {
     "id": "eq_inv_002",
@@ -811,7 +811,7 @@
     "description": {
       "en": "Increase Damage Amount by 6% for each enemy."
     },
-    "image_path": "itens/item_0070.webp"
+    "image_path": "itens/relic_1229.webp"
   },
   {
     "id": "eq_inv_003",
@@ -822,7 +822,7 @@
     "description": {
       "en": "Increases Damage Amount by 7% for each enemy. Increase Damage Amount of All-Target Attacks by 10%."
     },
-    "image_path": "itens/item_0071.webp"
+    "image_path": "itens/relic_1230.webp"
   },
   {
     "id": "eq_inv_004",
@@ -833,7 +833,7 @@
     "description": {
       "en": "At the start of the battle, 1 Evasion."
     },
-    "image_path": "itens/item_0100.webp"
+    "image_path": "itens/relic_1283.webp"
   },
   {
     "id": "eq_inv_005",
@@ -844,7 +844,7 @@
     "description": {
       "en": "When an Attack Card is activated, 1 Agony on the target (1 time per turn). If it is an Invader battle, add 2 Agony."
     },
-    "image_path": "itens/item_0024.webp"
+    "image_path": "itens/relic_1282.webp"
   },
   {
     "id": "eq_inv_006",
@@ -855,7 +855,7 @@
     "description": {
       "en": "Increase Damage Amount of Attack Cards with a Cost of 1 or less by 25%."
     },
-    "image_path": "itens/item_0099.webp"
+    "image_path": "itens/relic_1288.webp"
   },
   {
     "id": "eq_inv_007",
@@ -866,7 +866,7 @@
     "description": {
       "en": "At the start of the next turn after taking Damage, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0044.webp"
+    "image_path": "itens/relic_0063.webp"
   },
   {
     "id": "eq_inv_008",
@@ -877,7 +877,7 @@
     "description": {
       "en": "At the start of the turn, if below 40% of Max HP, Recover 5% of Max HP."
     },
-    "image_path": "itens/item_0095.webp"
+    "image_path": "itens/relic_1287.webp"
   },
   {
     "id": "eq_inv_009",
@@ -888,7 +888,7 @@
     "description": {
       "en": "At the end of battle, Recover 5% of Max HP."
     },
-    "image_path": "itens/item_0064.webp"
+    "image_path": "itens/relic_1001.webp"
   },
   {
     "id": "eq_nih_001",
@@ -899,7 +899,7 @@
     "description": {
       "en": "Increase Damage Amount of the second Attack Card onward each turn by 20%."
     },
-    "image_path": "itens/item_0067.webp"
+    "image_path": "itens/relic_1243.webp"
   },
   {
     "id": "eq_nih_002",
@@ -910,7 +910,7 @@
     "description": {
       "en": "When a card is Exhausted, 1 Tenacity Damage to all enemies (1 time per battle)."
     },
-    "image_path": "itens/item_0167.webp"
+    "image_path": "itens/relic_1244.webp"
   },
   {
     "id": "eq_nih_003",
@@ -921,7 +921,7 @@
     "description": {
       "en": "When a card is Exhausted, +25% Damage Amount and Recover 5% of Max HP (1 times per battle)."
     },
-    "image_path": "itens/item_0184.webp"
+    "image_path": "itens/relic_1245.webp"
   },
   {
     "id": "eq_nih_004",
@@ -932,7 +932,7 @@
     "description": {
       "en": "Max HP +6%, Defense +12%."
     },
-    "image_path": "itens/item_0037.webp"
+    "image_path": "itens/relic_1246.webp"
   },
   {
     "id": "eq_nih_005",
@@ -943,7 +943,7 @@
     "description": {
       "en": "At the start of Nihilum battle, 2 Vulnerable to all enemies."
     },
-    "image_path": "itens/item_0105.webp"
+    "image_path": "itens/relic_1247.webp"
   },
   {
     "id": "eq_nih_006",
@@ -954,7 +954,7 @@
     "description": {
       "en": "When an Attack Card is activated, 20% Fixed Shield (10 times per turn)."
     },
-    "image_path": "itens/item_0148.webp"
+    "image_path": "itens/relic_1248.webp"
   },
   {
     "id": "eq_nih_007",
@@ -965,7 +965,7 @@
     "description": {
       "en": "+40% Damage amount. At the end of the turn, 30% chance to Exhaust 1 card in hand."
     },
-    "image_path": "itens/item_0060.webp"
+    "image_path": "itens/relic_1249.webp"
   },
   {
     "id": "eq_nih_008",
@@ -976,7 +976,7 @@
     "description": {
       "en": "At the start of Nihilum battle, 3 Vulnerable to all enemies."
     },
-    "image_path": "itens/item_0106.webp"
+    "image_path": "itens/relic_1250.webp"
   },
   {
     "id": "eq_nih_009",
@@ -987,7 +987,7 @@
     "description": {
       "en": "For 1 turn, if a harmful effect is inflicted, at the end of the turn, 80% Fixed Shield."
     },
-    "image_path": "itens/item_0107.webp"
+    "image_path": "itens/relic_0060.webp"
   },
   {
     "id": "eq_nih_010",
@@ -998,7 +998,7 @@
     "description": {
       "en": "When a card is Exhausted, increase Damage Amount of the next card activated by 25% (cannot stack)."
     },
-    "image_path": "itens/item_0054.webp"
+    "image_path": "itens/relic_1285.webp"
   },
   {
     "id": "eq_nih_011",
@@ -1009,7 +1009,7 @@
     "description": {
       "en": "When a card is Exhausted, increase Damage Amount of the next card activated by 35% (cannot stack)."
     },
-    "image_path": "itens/item_0206.webp"
+    "image_path": "itens/relic_1286.webp"
   },
   {
     "id": "eq_sec_003",
@@ -1020,7 +1020,7 @@
     "description": {
       "en": "On Heal or Recover through an ally ability, inflict Fixed Damage equal to 35% of Recover Amount to all enemies."
     },
-    "image_path": "itens/item_0021.webp"
+    "image_path": "itens/relic_1061.webp"
   },
   {
     "id": "eq_sec_004",
@@ -1031,7 +1031,7 @@
     "description": {
       "en": "On Recover through a card, +10% Attack to allies for 1 turn (max 1 stack)."
     },
-    "image_path": "itens/item_0033.webp"
+    "image_path": "itens/relic_1232.webp"
   },
   {
     "id": "eq_sec_005",
@@ -1042,7 +1042,7 @@
     "description": {
       "en": "In Sekred battle, +25% Damage, 2 Vulnerable to all enemies."
     },
-    "image_path": "itens/item_0136.webp"
+    "image_path": "itens/relic_1160.webp"
   },
   {
     "id": "eq_sec_006",
@@ -1053,7 +1053,7 @@
     "description": {
       "en": "At the start of the next turn after taking Damage, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0112.webp"
+    "image_path": "itens/relic_1117.webp"
   },
   {
     "id": "eq_sec_007",
@@ -1064,7 +1064,7 @@
     "description": {
       "en": "If at max HP, +40% Damage Amount."
     },
-    "image_path": "itens/item_0183.webp"
+    "image_path": "itens/relic_1301.webp"
   },
   {
     "id": "eq_sec_008",
@@ -1075,7 +1075,7 @@
     "description": {
       "en": "If at max HP, +50% Damage Amount."
     },
-    "image_path": "itens/item_0185.webp"
+    "image_path": "itens/relic_1302.webp"
   },
   {
     "id": "eq_sec_009",
@@ -1086,7 +1086,7 @@
     "description": {
       "en": "On Heal or Recover through an ability, inflict Fixed Damage equal to 50% of Recover Amount to a random enemy."
     },
-    "image_path": "itens/item_0020.webp"
+    "image_path": "itens/relic_1303.webp"
   },
   {
     "id": "eq_sec_010",
@@ -1097,7 +1097,7 @@
     "description": {
       "en": "On Heal or Recover through an ability, inflict Fixed Damage equal to 50% of Recover Amount to all enemies."
     },
-    "image_path": "itens/item_0019.webp"
+    "image_path": "itens/relic_1304.webp"
   },
   {
     "id": "eq_sec_011",
@@ -1108,7 +1108,7 @@
     "description": {
       "en": "On odd turns, +8% Attack, +12% Defense."
     },
-    "image_path": "itens/item_0198.webp"
+    "image_path": "itens/relic_1305.webp"
   },
   {
     "id": "eq_sec_012",
@@ -1119,7 +1119,7 @@
     "description": {
       "en": "On even turns, +12% Attack, +8% Defense."
     },
-    "image_path": "itens/item_0199.webp"
+    "image_path": "itens/relic_1306.webp"
   },
   {
     "id": "eq_sec_013",
@@ -1130,7 +1130,7 @@
     "description": {
       "en": "+12% Attack, +12% Defense."
     },
-    "image_path": "itens/item_0200.webp"
+    "image_path": "itens/relic_1307.webp"
   },
   {
     "id": "eq_p_dll_001",
@@ -1141,7 +1141,7 @@
     "description": {
       "en": "When Damage is dealt to a target possessing Shield, +100% Damage Amount to the next activated Attack Card."
     },
-    "image_path": "itens/item_0026.webp"
+    "image_path": "itens/relic_1095.webp"
   },
   {
     "id": "eq_p_dll_002",
@@ -1152,7 +1152,7 @@
     "description": {
       "en": "Increase Damage Amount by 25% against targets holding Shield."
     },
-    "image_path": "itens/item_0142.webp"
+    "image_path": "itens/relic_1096.webp"
   },
   {
     "id": "eq_p_dll_004",
@@ -1163,7 +1163,7 @@
     "description": {
       "en": "Increase Shield Gain Amount by 25%."
     },
-    "image_path": "itens/item_0036.webp"
+    "image_path": "itens/relic_1094.webp"
   },
   {
     "id": "eq_p_dll_005",
@@ -1174,7 +1174,7 @@
     "description": {
       "en": "When Ego Points are 3 or lower, 0.2 Ego Points on Critical Hit."
     },
-    "image_path": "itens/item_0212.webp"
+    "image_path": "itens/relic_1179.webp"
   },
   {
     "id": "eq_p_dll_006",
@@ -1185,7 +1185,7 @@
     "description": {
       "en": "When an Upgrade Card is activated, +30% Damage Amount for 1 turn."
     },
-    "image_path": "itens/item_0150.webp"
+    "image_path": "itens/relic_1181.webp"
   },
   {
     "id": "eq_p_dll_007",
@@ -1196,7 +1196,7 @@
     "description": {
       "en": "On Ravage, 2 Impair to the target."
     },
-    "image_path": "itens/item_0097.webp"
+    "image_path": "itens/relic_0002.webp"
   },
   {
     "id": "eq_p_dll_008",
@@ -1207,7 +1207,7 @@
     "description": {
       "en": "If the enemy is alone, increase damage by 30%."
     },
-    "image_path": "itens/item_0062.webp"
+    "image_path": "itens/relic_1097.webp"
   },
   {
     "id": "eq_p_dll_009",
@@ -1218,7 +1218,7 @@
     "description": {
       "en": "When an Upgrade Card is activated, 1 Damage Reduction."
     },
-    "image_path": "itens/item_0205.webp"
+    "image_path": "itens/relic_1099.webp"
   },
   {
     "id": "eq_p_dll_010",
@@ -1229,7 +1229,7 @@
     "description": {
       "en": "+20% Damage Amount, +20 Shield gain."
     },
-    "image_path": "itens/item_0186.webp"
+    "image_path": "itens/relic_1180.webp"
   },
   {
     "id": "eq_p_inv_001",
@@ -1240,7 +1240,7 @@
     "description": {
       "en": "Increase Damage Amount by 30% against targets in a Ravaged state."
     },
-    "image_path": "itens/item_0193.webp"
+    "image_path": "itens/relic_1081.webp"
   },
   {
     "id": "eq_p_inv_002",
@@ -1251,7 +1251,7 @@
     "description": {
       "en": "+20% Critical Damage."
     },
-    "image_path": "itens/item_0158.webp"
+    "image_path": "itens/relic_1082.webp"
   },
   {
     "id": "eq_p_inv_003",
@@ -1262,7 +1262,7 @@
     "description": {
       "en": "On Critical Hit, 50% chance to 1 Agony."
     },
-    "image_path": "itens/item_0003.webp"
+    "image_path": "itens/relic_1083.webp"
   },
   {
     "id": "eq_p_inv_004",
@@ -1273,7 +1273,7 @@
     "description": {
       "en": "When an Attack Card is activated, 5% chance to add 1 Hit."
     },
-    "image_path": "itens/item_0182.webp"
+    "image_path": "itens/relic_1141_6.webp"
   },
   {
     "id": "eq_p_inv_005",
@@ -1284,7 +1284,7 @@
     "description": {
       "en": "At the start of the turn, gain 40% Fixed Shield."
     },
-    "image_path": "itens/item_0081.webp"
+    "image_path": "itens/relic_0064.webp"
   },
   {
     "id": "eq_p_inv_006",
@@ -1295,7 +1295,7 @@
     "description": {
       "en": "On Ravage, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0047.webp"
+    "image_path": "itens/relic_1143_6.webp"
   },
   {
     "id": "eq_p_inv_007",
@@ -1306,7 +1306,7 @@
     "description": {
       "en": "At the start of battle, 2 Immunity."
     },
-    "image_path": "itens/item_0213.webp"
+    "image_path": "itens/relic_1143.webp"
   },
   {
     "id": "eq_p_inv_008",
@@ -1317,7 +1317,7 @@
     "description": {
       "en": "+15% Attack, +10% Max HP."
     },
-    "image_path": "itens/item_0140.webp"
+    "image_path": "itens/relic_1140.webp"
   },
   {
     "id": "eq_p_inv_009",
@@ -1328,7 +1328,7 @@
     "description": {
       "en": "On Ravage, +100% Damage Amount to next 1 Attack Card activated."
     },
-    "image_path": "itens/item_0123.webp"
+    "image_path": "itens/relic_1144_6.webp"
   },
   {
     "id": "eq_p_inv_010",
@@ -1339,7 +1339,7 @@
     "description": {
       "en": "When taking Damage, 4 Agony on the attacker."
     },
-    "image_path": "itens/item_0207.webp"
+    "image_path": "itens/relic_1176.webp"
   },
   {
     "id": "eq_p_nih_001",
@@ -1350,7 +1350,7 @@
     "description": {
       "en": "Increase Damage Amount of Attack Cards with a Cost of 0 by 40%."
     },
-    "image_path": "itens/item_0068.webp"
+    "image_path": "itens/relic_0040.webp"
   },
   {
     "id": "eq_p_nih_002",
@@ -1361,7 +1361,7 @@
     "description": {
       "en": "When a card is Exhausted, 40% Fixed Damage on a random enemy."
     },
-    "image_path": "itens/item_0196.webp"
+    "image_path": "itens/relic_1088.webp"
   },
   {
     "id": "eq_p_nih_003",
@@ -1372,7 +1372,7 @@
     "description": {
       "en": "On Ravage, 150% Fixed Damage to the target."
     },
-    "image_path": "itens/item_0013.webp"
+    "image_path": "itens/relic_1092.webp"
   },
   {
     "id": "eq_p_nih_004",
@@ -1383,7 +1383,7 @@
     "description": {
       "en": "Max HP +12%."
     },
-    "image_path": "itens/item_0144.webp"
+    "image_path": "itens/relic_1089.webp"
   },
   {
     "id": "eq_p_nih_005",
@@ -1394,7 +1394,7 @@
     "description": {
       "en": "At the start of battle, Discard up to 3 cards, Draw equal to the number."
     },
-    "image_path": "itens/item_0072.webp"
+    "image_path": "itens/relic_1093.webp"
   },
   {
     "id": "eq_p_nih_006",
@@ -1405,7 +1405,7 @@
     "description": {
       "en": "At the start of the next turn after taking Damage, 80% Fixed Shield."
     },
-    "image_path": "itens/item_0077.webp"
+    "image_path": "itens/relic_1183.webp"
   },
   {
     "id": "eq_p_nih_007",
@@ -1416,7 +1416,7 @@
     "description": {
       "en": "Increase damage of Basic attack cards by 40%."
     },
-    "image_path": "itens/item_0061.webp"
+    "image_path": "itens/relic_1040.webp"
   },
   {
     "id": "eq_p_nih_008",
@@ -1427,7 +1427,7 @@
     "description": {
       "en": "When Vulnerable is applied by a card, also 1 Weaken to the target."
     },
-    "image_path": "itens/item_0132.webp"
+    "image_path": "itens/relic_1090.webp"
   },
   {
     "id": "eq_p_nih_009",
@@ -1438,7 +1438,7 @@
     "description": {
       "en": "If you have Shield at the start of turn, 80% Fixed Shield."
     },
-    "image_path": "itens/item_0190.webp"
+    "image_path": "itens/relic_1132.webp"
   },
   {
     "id": "eq_p_sec_001",
@@ -1449,7 +1449,7 @@
     "description": {
       "en": "+12% Critical Damage."
     },
-    "image_path": "itens/item_0046.webp"
+    "image_path": "itens/relic_1231.webp"
   },
   {
     "id": "eq_p_sec_002",
@@ -1460,7 +1460,7 @@
     "description": {
       "en": "When there are 6 or more cards in hand, increase Damage Amount by 25%."
     },
-    "image_path": "itens/item_0179.webp"
+    "image_path": "itens/relic_1187.webp"
   },
   {
     "id": "eq_p_sec_003",
@@ -1471,7 +1471,7 @@
     "description": {
       "en": "Increase Damage Amount of Attack Cards with a Cost of 2 or higher by 30% (1 time per turn)."
     },
-    "image_path": "itens/item_0175.webp"
+    "image_path": "itens/relic_1191.webp"
   },
   {
     "id": "eq_p_sec_004",
@@ -1482,7 +1482,7 @@
     "description": {
       "en": "When gaining Counterattack through an ability, add 1 Counterattack."
     },
-    "image_path": "itens/item_0089.webp"
+    "image_path": "itens/relic_1114.webp"
   },
   {
     "id": "eq_p_sec_005",
@@ -1493,7 +1493,7 @@
     "description": {
       "en": "Decrease Damage Taken by 10% (1 time per turn)."
     },
-    "image_path": "itens/item_0171.webp"
+    "image_path": "itens/relic_1189.webp"
   },
   {
     "id": "eq_p_sec_006",
@@ -1504,7 +1504,7 @@
     "description": {
       "en": "+6% Critical Chance."
     },
-    "image_path": "itens/item_0063.webp"
+    "image_path": "itens/relic_1062.webp"
   },
   {
     "id": "eq_p_sec_007",
@@ -1515,7 +1515,7 @@
     "description": {
       "en": "Increase Damage Amount by 35% against targets in a Vulnerable state."
     },
-    "image_path": "itens/item_0113.webp"
+    "image_path": "itens/relic_1115.webp"
   },
   {
     "id": "eq_p_sec_008",
@@ -1526,7 +1526,7 @@
     "description": {
       "en": "When an Upgrade Card is activated, +30% Damage Amount for 1 turn."
     },
-    "image_path": "itens/item_0017.webp"
+    "image_path": "itens/relic_1113.webp"
   },
   {
     "id": "eq_p_sec_009",
@@ -1537,7 +1537,7 @@
     "description": {
       "en": "When Shield is gained through a card, 100% Fixed Shield (1 time per turn)."
     },
-    "image_path": "itens/item_0053.webp"
+    "image_path": "itens/relic_1112.webp"
   },
   {
     "id": "eq_p_sec_010",
@@ -1548,7 +1548,7 @@
     "description": {
       "en": "On Critical Hit, 10% Fixed Heal."
     },
-    "image_path": "itens/item_0025.webp"
+    "image_path": "itens/relic_1116.webp"
   },
   {
     "id": "eq_p_var_001",
@@ -1559,7 +1559,7 @@
     "description": {
       "en": "Increase Damage Amount of All-Target Attacks by 25%."
     },
-    "image_path": "itens/item_0048.webp"
+    "image_path": "itens/relic_1118.webp"
   },
   {
     "id": "eq_p_var_002",
@@ -1570,7 +1570,7 @@
     "description": {
       "en": "When an enemy is defeated, 200% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0125.webp"
+    "image_path": "itens/relic_1120.webp"
   },
   {
     "id": "eq_p_var_003",
@@ -1581,7 +1581,7 @@
     "description": {
       "en": "When Drawing a Status Ailment or Curse Card, +15% Damage Amount for 1 turn."
     },
-    "image_path": "itens/item_0121.webp"
+    "image_path": "itens/relic_0048.webp"
   },
   {
     "id": "eq_p_var_004",
@@ -1592,7 +1592,7 @@
     "description": {
       "en": "On Critical Hit, 10% Fixed Shield."
     },
-    "image_path": "itens/item_0214.webp"
+    "image_path": "itens/relic_1119.webp"
   },
   {
     "id": "eq_p_var_005",
@@ -1603,7 +1603,7 @@
     "description": {
       "en": "At turn start, Counterattack 1."
     },
-    "image_path": "itens/item_0210.webp"
+    "image_path": "itens/relic_1122.webp"
   },
   {
     "id": "eq_p_var_006",
@@ -1614,7 +1614,7 @@
     "description": {
       "en": "Increase Shield Gain Amount of allies by 15%."
     },
-    "image_path": "itens/item_0093.webp"
+    "image_path": "itens/relic_1123.webp"
   },
   {
     "id": "eq_p_var_007",
@@ -1625,7 +1625,7 @@
     "description": {
       "en": "When taking Damage, 1 Mark on the attacker."
     },
-    "image_path": "itens/item_0161.webp"
+    "image_path": "itens/relic_1171.webp"
   },
   {
     "id": "eq_p_var_008",
@@ -1636,7 +1636,7 @@
     "description": {
       "en": "Heal 40% at the end of turn."
     },
-    "image_path": "itens/item_0124.webp"
+    "image_path": "itens/relic_0023.webp"
   },
   {
     "id": "eq_p_var_009",
@@ -1647,7 +1647,7 @@
     "description": {
       "en": "At the start of the turn, 25% Fixed Shield for each enemy count."
     },
-    "image_path": "itens/item_0058.webp"
+    "image_path": "itens/relic_1047.webp"
   },
   {
     "id": "eq_p_var_010",
@@ -1658,7 +1658,7 @@
     "description": {
       "en": "+40% Shield Gain Amount."
     },
-    "image_path": "itens/item_0076.webp"
+    "image_path": "itens/relic_1121.webp"
   },
   {
     "id": "eq_ds01_001",
@@ -1669,7 +1669,7 @@
     "description": {
       "en": "When you Draw through an ability, 50% Fixed Damage to a random enemy."
     },
-    "image_path": "itens/item_0131.webp"
+    "image_path": "itens/relic_0100.webp"
   },
   {
     "id": "eq_ds01_002",
@@ -1680,7 +1680,7 @@
     "description": {
       "en": "When a Forbidden Card is activated by an ally, +20% Damage Amount and +20% Shield Gain Amount (2 times per battle)."
     },
-    "image_path": "itens/item_0126.webp"
+    "image_path": "itens/relic_0101.webp"
   },
   {
     "id": "eq_ds01_004",
@@ -1691,7 +1691,7 @@
     "description": {
       "en": "When you Draw through an ability, +25% Shield gain for 1 turn (Max 2 times per turn)."
     },
-    "image_path": "itens/item_0088.webp"
+    "image_path": "itens/relic_0103.webp"
   },
   {
     "id": "eq_ds01_005",
@@ -1702,7 +1702,7 @@
     "description": {
       "en": "At the end of the turn, if there are 3 or more cards in hand, 140% Fixed Shield."
     },
-    "image_path": "itens/item_0090.webp"
+    "image_path": "itens/relic_0104.webp"
   },
   {
     "id": "eq_ds01_006",
@@ -1713,7 +1713,7 @@
     "description": {
       "en": "When a Forbidden Card is activated by an ally, Recover 3% of max HP and gain 80% Fixed Shield."
     },
-    "image_path": "itens/item_0195.webp"
+    "image_path": "itens/relic_0105.webp"
   },
   {
     "id": "eq_ds01_007",
@@ -1724,7 +1724,7 @@
     "description": {
       "en": "When Drawing a Status Ailment or Curse Card, +12% Damage Amount for 1 turn."
     },
-    "image_path": "itens/item_0119.webp"
+    "image_path": "itens/relic_0106.webp"
   },
   {
     "id": "eq_ds01_008",
@@ -1735,7 +1735,7 @@
     "description": {
       "en": "When Drawing through an ability, increase Damage Amount by 20% for 1 turn (2 times per turn)."
     },
-    "image_path": "itens/item_0208.webp"
+    "image_path": "itens/relic_0107.webp"
   },
   {
     "id": "eq_ds01_009",
@@ -1746,7 +1746,7 @@
     "description": {
       "en": "When there are 4 or more cards in hand, increase Damage Amount of cards by 30%."
     },
-    "image_path": "itens/item_0120.webp"
+    "image_path": "itens/relic_0108.webp"
   },
   {
     "id": "eq_ds01_010",
@@ -1757,7 +1757,7 @@
     "description": {
       "en": "At the start of the battle, change the cost of 1 card in your hand to 0 for 1 turn."
     },
-    "image_path": "itens/item_0176.webp"
+    "image_path": "itens/relic_0109.webp"
   },
   {
     "id": "eq_ds01_003",
@@ -1768,7 +1768,7 @@
     "description": {
       "en": "When Drawing through an ability, 40% Fixed Shield (5 times per turn)."
     },
-    "image_path": "itens/item_0018.webp"
+    "image_path": "itens/relic_0102.webp"
   },
   {
     "id": "eq_ds02_001",
@@ -1779,7 +1779,7 @@
     "description": {
       "en": "When a 3-Cost or higher card is activated, 1 Vulnerable to a random enemy."
     },
-    "image_path": "itens/item_0114.webp"
+    "image_path": "itens/relic_5021.webp"
   },
   {
     "id": "eq_ds02_002",
@@ -1790,7 +1790,7 @@
     "description": {
       "en": "If Damage through a card was not dealt to an enemy by an ally for 1 turn, at the start of the next turn, increase Damage Amount by 50% for 1 turn."
     },
-    "image_path": "itens/item_0197.webp"
+    "image_path": "itens/relic_5022.webp"
   },
   {
     "id": "eq_ds02_003",
@@ -1801,7 +1801,7 @@
     "description": {
       "en": "When Shield is gained through a card, increase Damage Amount of the next 1 Attack Card activated by 20% for 1 turn (2 time(s) per turn)."
     },
-    "image_path": "itens/item_0134.webp"
+    "image_path": "itens/relic_5023.webp"
   },
   {
     "id": "eq_ds02_004",
@@ -1812,7 +1812,7 @@
     "description": {
       "en": "At the start of the turn, if Health is 30% or less, 1 Evasion (2 times per battle)."
     },
-    "image_path": "itens/item_0202.webp"
+    "image_path": "itens/relic_5025.webp"
   },
   {
     "id": "eq_ds02_005",
@@ -1823,7 +1823,7 @@
     "description": {
       "en": "When an ally Attack Card was not activated for 1 turn and the turn is ended, 100% Fixed Shield."
     },
-    "image_path": "itens/item_0116.webp"
+    "image_path": "itens/relic_5024.webp"
   },
   {
     "id": "eq_ds02_006",
@@ -1834,7 +1834,7 @@
     "description": {
       "en": "When 3 2-Cost or higher cards are used, 1 Stockpile."
     },
-    "image_path": "itens/item_0098.webp"
+    "image_path": "itens/relic_5026.webp"
   },
   {
     "id": "eq_ds02_007",
@@ -1845,7 +1845,7 @@
     "description": {
       "en": "When 4 Skill Cards are Exhausted, decrease Stress of a random ally by 1."
     },
-    "image_path": "itens/item_0135.webp"
+    "image_path": "itens/relic_5027.webp"
   },
   {
     "id": "eq_ds02_008",
@@ -1856,7 +1856,7 @@
     "description": {
       "en": "Double the effect of Spore Propagation on the 6th Attack Card created for 1 turn."
     },
-    "image_path": "itens/item_0103.webp"
+    "image_path": "itens/relic_5028.webp"
   },
   {
     "id": "eq_ds03_001",
@@ -1867,7 +1867,7 @@
     "description": {
       "en": "Each time a card is created, +20% Damage Amount for 1 turn (2 times per turn)."
     },
-    "image_path": "itens/item_0129.webp"
+    "image_path": "itens/relic_5041.webp"
   },
   {
     "id": "eq_ds03_002",
@@ -1878,7 +1878,7 @@
     "description": {
       "en": "On Extra Attack, increase Critical Chance by 2% for 1 turn (5 times per turn)."
     },
-    "image_path": "itens/item_0040.webp"
+    "image_path": "itens/relic_5043.webp"
   },
   {
     "id": "eq_ds03_003",
@@ -1889,7 +1889,7 @@
     "description": {
       "en": "When attacked, 2 Resonance to the attacker (3 times per turn)."
     },
-    "image_path": "itens/item_0111.webp"
+    "image_path": "itens/relic_5044.webp"
   },
   {
     "id": "eq_ds03_004",
@@ -1900,7 +1900,7 @@
     "description": {
       "en": "When a card is Discarded through an ally ability, 1 Damage Reduction (1 time per turn)."
     },
-    "image_path": "itens/item_0031.webp"
+    "image_path": "itens/relic_5045.webp"
   },
   {
     "id": "eq_ds03_005",
@@ -1911,7 +1911,7 @@
     "description": {
       "en": "Each time 3 cards are Discarded through an ally ability, randomly inflict 1 of either Vulnerable or Mark on a random enemy (5 times per turn)."
     },
-    "image_path": "itens/item_0173.webp"
+    "image_path": "itens/relic_5047.webp"
   },
   {
     "id": "eq_ds03_006",
@@ -1922,7 +1922,7 @@
     "description": {
       "en": "+40% Damage Amount to Attack Cards. When the target count of the Attack Card is 2 or more, -10% Damage Amount for each target (max -30%)."
     },
-    "image_path": "itens/item_0094.webp"
+    "image_path": "itens/relic_5042.webp"
   },
   {
     "id": "eq_ds03_007",
@@ -1933,7 +1933,7 @@
     "description": {
       "en": "When a Single-Target Attack Card is activated, increase Action Count of the target by 1 (1 time per turn)."
     },
-    "image_path": "itens/item_0127.webp"
+    "image_path": "itens/relic_5046.webp"
   },
   {
     "id": "eq_ds03_008",
@@ -1944,7 +1944,7 @@
     "description": {
       "en": "When Action Count of the enemy is increased through an ability, +30% Damage Amount for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0079.webp"
+    "image_path": "itens/relic_5048.webp"
   },
   {
     "id": "eq_arena_001",
@@ -1955,7 +1955,7 @@
     "description": {
       "en": "When an Attack Card was not activated for 1 turn and the turn is ended, create 1 Rocket Punch."
     },
-    "image_path": "itens/item_0008.webp"
+    "image_path": "itens/relic_5029.webp"
   },
   {
     "id": "eq_arena_002",
@@ -1966,7 +1966,7 @@
     "description": {
       "en": "Create 1 Pierce each odd turn."
     },
-    "image_path": "itens/item_0084.webp"
+    "image_path": "itens/relic_5030.webp"
   },
   {
     "id": "eq_arena_003",
@@ -1977,7 +1977,7 @@
     "description": {
       "en": "If Damage is completely blocked, at the start of the next turn, create 1 Shield Blast."
     },
-    "image_path": "itens/item_0160.webp"
+    "image_path": "itens/relic_5031.webp"
   },
   {
     "id": "eq_arena_004",
@@ -1988,7 +1988,7 @@
     "description": {
       "en": "Create 1 Heavy Blow each even turn."
     },
-    "image_path": "itens/item_0096.webp"
+    "image_path": "itens/relic_5032.webp"
   },
   {
     "id": "eq_arena_005",
@@ -1999,7 +1999,7 @@
     "description": {
       "en": "If a turn is ended with 1 or more AP remaining, at the start of the next turn, create 1 Charged Strike."
     },
-    "image_path": "itens/item_0029.webp"
+    "image_path": "itens/relic_5033.webp"
   },
   {
     "id": "eq_arena_006",
@@ -2010,7 +2010,7 @@
     "description": {
       "en": "When 5 Skill Cards are created, increase Damage Amount of the next ally card activated by 20% (cannot stack)."
     },
-    "image_path": "itens/item_0034.webp"
+    "image_path": "itens/relic_5034.webp"
   },
   {
     "id": "eq_arena_007",
@@ -2021,7 +2021,7 @@
     "description": {
       "en": "For 1 turn, when each of Damage, Shield, and Heal has been activated through ally cards, increase Damage Amount of allies by 15% for 1 turn."
     },
-    "image_path": "itens/item_0083.webp"
+    "image_path": "itens/relic_5035.webp"
   },
   {
     "id": "eq_arena_008",
@@ -2032,7 +2032,7 @@
     "description": {
       "en": "When Shield is gained 3 times through cards, 100% Fixed Damage to all enemies."
     },
-    "image_path": "itens/item_0075.webp"
+    "image_path": "itens/relic_5036.webp"
   },
   {
     "id": "eq_arena_009",
@@ -2043,7 +2043,7 @@
     "description": {
       "en": "When Attack Cards are activated 4 times, increase Damage Amount of the next Attack Card activated by 40%."
     },
-    "image_path": "itens/item_0143.webp"
+    "image_path": "itens/relic_5037.webp"
   },
   {
     "id": "eq_arena_010",
@@ -2054,7 +2054,7 @@
     "description": {
       "en": "Increase Damage Amount of Counterattack by 40%."
     },
-    "image_path": "itens/item_0201.webp"
+    "image_path": "itens/relic_5038.webp"
   },
   {
     "id": "eq_arena_011",
@@ -2065,7 +2065,7 @@
     "description": {
       "en": "Increase Damage Amount of ally Arena cards by 20%. At the start of battle, create 1 Forgotten Sword."
     },
-    "image_path": "itens/item_0011.webp"
+    "image_path": "itens/relic_5039.webp"
   },
   {
     "id": "eq_g01_001",
@@ -2076,7 +2076,7 @@
     "description": {
       "en": "At the start of the battle, 1 Evasion."
     },
-    "image_path": "itens/item_0004.webp"
+    "image_path": "itens/relic_5003.webp"
   },
   {
     "id": "eq_g01_002",
@@ -2087,7 +2087,7 @@
     "description": {
       "en": "At the start of the battle, 1 Damage Reduction and Draw 1."
     },
-    "image_path": "itens/item_0153.webp"
+    "image_path": "itens/relic_5004.webp"
   },
   {
     "id": "eq_g01_003",
@@ -2098,7 +2098,7 @@
     "description": {
       "en": "When hit, increase Damage Amount 10% (can stack up to 3 times)."
     },
-    "image_path": "itens/item_0211.webp"
+    "image_path": "itens/relic_5005.webp"
   },
   {
     "id": "eq_g01_004",
@@ -2109,7 +2109,7 @@
     "description": {
       "en": "+30% Damage Amount. Stress received becomes 0 (1 for each battle)."
     },
-    "image_path": "itens/item_0056.webp"
+    "image_path": "itens/relic_5006.webp"
   },
   {
     "id": "eq_g01_005",
@@ -2120,7 +2120,7 @@
     "description": {
       "en": "When drawing your own Attack Card through an ability, that card +50% Damage Amount for 1 turn."
     },
-    "image_path": "itens/item_0146.webp"
+    "image_path": "itens/relic_5007.webp"
   },
   {
     "id": "eq_g01_006",
@@ -2131,7 +2131,7 @@
     "description": {
       "en": "When hit, inflict 1 random effects among Vulnerable, Weaken, or Impair to the attacker (3 times per turn)."
     },
-    "image_path": "itens/item_0168.webp"
+    "image_path": "itens/relic_5008.webp"
   },
   {
     "id": "eq_g01_007",
@@ -2142,7 +2142,7 @@
     "description": {
       "en": "When Drawing through an ability, increase Damage Amount of Attack Cards of this unit by 35% for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0030.webp"
+    "image_path": "itens/relic_5009.webp"
   },
   {
     "id": "eq_g02_001",
@@ -2153,7 +2153,7 @@
     "description": {
       "en": "When a card is Exhausted, increase Damage Amount by 10% for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0178.webp"
+    "image_path": "itens/relic_5013.webp"
   },
   {
     "id": "eq_g02_002",
@@ -2164,7 +2164,7 @@
     "description": {
       "en": "At the start of the turn, if an ally Exhaust card is in hand, 60% Fixed Shield."
     },
-    "image_path": "itens/item_0162.webp"
+    "image_path": "itens/relic_5011.webp"
   },
   {
     "id": "eq_g02_003",
@@ -2175,7 +2175,7 @@
     "description": {
       "en": "At the start of battle, decrease Stress of a random ally by 3."
     },
-    "image_path": "itens/item_0078.webp"
+    "image_path": "itens/relic_5012.webp"
   },
   {
     "id": "eq_g02_004",
@@ -2186,7 +2186,7 @@
     "description": {
       "en": "Increase Damage Amount of the third Attack Card created by 30% for 1 turn."
     },
-    "image_path": "itens/item_0174.webp"
+    "image_path": "itens/relic_5010.webp"
   },
   {
     "id": "eq_g02_005",
@@ -2197,7 +2197,7 @@
     "description": {
       "en": "Increase Heal Amount by 15%."
     },
-    "image_path": "itens/item_0102.webp"
+    "image_path": "itens/relic_5014.webp"
   },
   {
     "id": "eq_g02_006",
@@ -2208,7 +2208,7 @@
     "description": {
       "en": "Increase Heal Amount by 25%."
     },
-    "image_path": "itens/item_0163.webp"
+    "image_path": "itens/relic_5015.webp"
   },
   {
     "id": "eq_g02_007",
@@ -2219,7 +2219,7 @@
     "description": {
       "en": "When Shield is gained through an Exhaust card, increase Damage Amount by 20% for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0152.webp"
+    "image_path": "itens/relic_5016.webp"
   },
   {
     "id": "eq_g02_008",
@@ -2230,7 +2230,7 @@
     "description": {
       "en": "When Drawing an Exhaust card through an ally ability, 80% Fixed Shield (2 times per turn)."
     },
-    "image_path": "itens/item_0203.webp"
+    "image_path": "itens/relic_5017.webp"
   },
   {
     "id": "eq_g02_009",
@@ -2241,7 +2241,7 @@
     "description": {
       "en": "When a card is Exhausted, increase Damage Amount of allies by 10% for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0133.webp"
+    "image_path": "itens/relic_5018.webp"
   },
   {
     "id": "eq_g02_010",
@@ -2252,7 +2252,7 @@
     "description": {
       "en": "Increase Damage Amount of 2-Cost or higher Exhaust cards by 40%."
     },
-    "image_path": "itens/item_0022.webp"
+    "image_path": "itens/relic_5019.webp"
   },
   {
     "id": "eq_g02_011",
@@ -2263,7 +2263,7 @@
     "description": {
       "en": "At the start of the turn, decrease Cost of 1 random Exhaust card in hand by 1 for 1 turn."
     },
-    "image_path": "itens/item_0101.webp"
+    "image_path": "itens/relic_5020.webp"
   },
   {
     "id": "eq_g03_001",
@@ -2274,7 +2274,7 @@
     "description": {
       "en": "When a Linked card is Discarded through an ability, increase Damage Amount by 20% for 1 turn (1 time per turn)."
     },
-    "image_path": "itens/item_0023.webp"
+    "image_path": "itens/relic_5049.webp"
   },
   {
     "id": "eq_g03_002",
@@ -2285,7 +2285,7 @@
     "description": {
       "en": "At the start of the turn, Discard 1 random ally Quietus card in hand."
     },
-    "image_path": "itens/item_0001.webp"
+    "image_path": "itens/relic_5050.webp"
   },
   {
     "id": "eq_g03_003",
@@ -2296,7 +2296,7 @@
     "description": {
       "en": "At the end of the turn, if an ally Persona Card is in hand, 150% Fixed Damage to a random enemy."
     },
-    "image_path": "itens/item_0166.webp"
+    "image_path": "itens/relic_5051.webp"
   },
   {
     "id": "eq_g03_004",
@@ -2307,7 +2307,7 @@
     "description": {
       "en": "Each time a Quietus card is Discarded through an ability, 80% Fixed Shield (2 times per turn)."
     },
-    "image_path": "itens/item_0091.webp"
+    "image_path": "itens/relic_5052.webp"
   },
   {
     "id": "eq_g03_005",
@@ -2318,7 +2318,7 @@
     "description": {
       "en": "At the start of the turn, if an ally Persona Card is in hand, decrease Stress of allies by 2."
     },
-    "image_path": "itens/item_0049.webp"
+    "image_path": "itens/relic_5053.webp"
   },
   {
     "id": "eq_g03_006",
@@ -2329,7 +2329,7 @@
     "description": {
       "en": "Increase Damage Amount by 30% to targets in an Aftershock state."
     },
-    "image_path": "itens/item_0215.webp"
+    "image_path": "itens/relic_5054.webp"
   },
   {
     "id": "eq_g03_007",
@@ -2340,7 +2340,7 @@
     "description": {
       "en": "When a card is Discarded through an ability, 1 Resonance to all enemies (3 times per turn)."
     },
-    "image_path": "itens/item_0087.webp"
+    "image_path": "itens/relic_5055.webp"
   },
   {
     "id": "eq_g03_008",
@@ -2351,7 +2351,7 @@
     "description": {
       "en": "When ally Linked cards are activated, increase Action Count of all enemies by 1 (1 time per turn)."
     },
-    "image_path": "itens/item_0043.webp"
+    "image_path": "itens/relic_5056.webp"
   },
   {
     "id": "eq_g03_009",
@@ -2362,7 +2362,7 @@
     "description": {
       "en": "At the start of the turn, increase Damage Amount of this unit by 20% for each ally Persona Card in hand for 1 turn."
     },
-    "image_path": "itens/item_0006.webp"
+    "image_path": "itens/relic_5057.webp"
   },
   {
     "id": "eq_ds04_001",
@@ -2373,7 +2373,7 @@
     "description": {
       "en": "When an Attack Card is activated, 2 Scorched to the target (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5058.webp"
   },
   {
     "id": "eq_ds04_002",
@@ -2384,7 +2384,7 @@
     "description": {
       "en": "When a base 3-Cost or higher Attack Card is used, 250% Fixed Damage to all enemies (2 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5059.webp"
   },
   {
     "id": "eq_ds04_003",
@@ -2395,7 +2395,7 @@
     "description": {
       "en": "On Critical Hit, 150% Fixed Damage to all enemies (3 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5060.webp"
   },
   {
     "id": "eq_ds04_004",
@@ -2406,7 +2406,7 @@
     "description": {
       "en": "3 Counterattack. On Counterattack, 1 Aftershock to the target (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5061.webp"
   },
   {
     "id": "eq_ds04_005",
@@ -2417,7 +2417,7 @@
     "description": {
       "en": "When Shield is gained through an ability, +30% Critical Chance to Attack Cards for 1 turn until activated (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5062.webp"
   },
   {
     "id": "eq_ds04_006",
@@ -2428,7 +2428,7 @@
     "description": {
       "en": "When attacked, apply 1 random effect(s) among Agony, Vulnerable, or Scorched to the attacker (3 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5063.webp"
   },
   {
     "id": "eq_ds04_007",
@@ -2439,7 +2439,7 @@
     "description": {
       "en": "When 3 enemies are defeated by allies in 1 turn, gain 1 AP (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5064.webp"
   },
   {
     "id": "eq_ds04_008",
@@ -2450,7 +2450,7 @@
     "description": {
       "en": "At the start of the turn, +30% Critical Damage to the first Attack Card activated."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5065.webp"
   },
   {
     "id": "eq_g04_001",
@@ -2461,7 +2461,7 @@
     "description": {
       "en": "When attacked, apply 1 random effect(s) among Vulnerable, Weaken, Agony, or Scorched to the attacker (2 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5066.webp"
   },
   {
     "id": "eq_g04_002",
@@ -2472,7 +2472,7 @@
     "description": {
       "en": "At the start of the turn, increase Stress of a random ally by 2, then 150% Damage to all enemies."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5067.webp"
   },
   {
     "id": "eq_g04_003",
@@ -2483,7 +2483,7 @@
     "description": {
       "en": "When Weaken is applied through an ability, 1 Weaken and 3 Scorched to the target (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5068.webp"
   },
   {
     "id": "eq_g04_004",
@@ -2494,7 +2494,7 @@
     "description": {
       "en": "At the start of the turn, 100% Fixed Damage to a random enemy possessing DoT effects."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5069.webp"
   },
   {
     "id": "eq_g04_005",
@@ -2505,7 +2505,7 @@
     "description": {
       "en": "When an ally Desire Card is activated, 100% Fixed Damage to all enemies (3 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5070.webp"
   },
   {
     "id": "eq_g04_006",
@@ -2516,7 +2516,7 @@
     "description": {
       "en": "On an All-Target Attack through an ally ability, 1 Vulnerable to a random enemy (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5071.webp"
   },
   {
     "id": "eq_g04_007",
@@ -2527,7 +2527,7 @@
     "description": {
       "en": "At the start of the turn, if an ally Desire Card is in hand, decrease Stress of a random ally by 2."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5072.webp"
   },
   {
     "id": "eq_g04_008",
@@ -2538,7 +2538,7 @@
     "description": {
       "en": "When 2 Attack Cards are activated, 4 Scorched to all enemies (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5073.webp"
   },
   {
     "id": "eq_g04_009",
@@ -2549,7 +2549,7 @@
     "description": {
       "en": "At the end of the turn, if HP is less than 50%, 70% Fixed Heal (3 times per battle)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5074.webp"
   },
   {
     "id": "eq_g04_010",
@@ -2560,7 +2560,7 @@
     "description": {
       "en": "+20% Damage Amount to Attack Cards, and for each enemy present, +2% Critical Chance."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5075.webp"
   },
   {
     "id": "eq_ds05_001",
@@ -2571,7 +2571,7 @@
     "description": {
       "en": "+20% Critical Damage to ally Unique Attack Cards (cannot stack)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5084.webp"
   },
   {
     "id": "eq_ds05_002",
@@ -2582,7 +2582,7 @@
     "description": {
       "en": "When an enemy with Shield is Hit by this unit, 2 Tenacity Damage (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5085.webp"
   },
   {
     "id": "eq_ds05_003",
@@ -2593,7 +2593,7 @@
     "description": {
       "en": "When an Attack Card of this unit is used, 60% Fixed Damage for each Cost of the card used to a random enemy (2 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5086.webp"
   },
   {
     "id": "eq_ds05_004",
@@ -2604,7 +2604,7 @@
     "description": {
       "en": "At the end of the turn, 2 Vulnerable to all enemies that have Shield (1 time per battle)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5087.webp"
   },
   {
     "id": "eq_ds05_005",
@@ -2615,7 +2615,7 @@
     "description": {
       "en": "Decrease max HP by 10%. +10% Critical Chance to Justice Attack Cards of this unit."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5088.webp"
   },
   {
     "id": "eq_ds05_006",
@@ -2626,7 +2626,7 @@
     "description": {
       "en": "At the start of the turn, if an ally is in a harmful effect state, 50% Fixed Shield."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5089.webp"
   },
   {
     "id": "eq_ds05_007",
@@ -2637,7 +2637,7 @@
     "description": {
       "en": "+3% Critical Damage to Attack Cards of this unit for each Bind card of this unit stacked this turn (max 30%)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5090.webp"
   },
   {
     "id": "eq_ds05_008",
@@ -2648,7 +2648,7 @@
     "description": {
       "en": "At the end of the turn, Fixed Heal 20% for each card in hand (max 100%)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5091.webp"
   },
   {
     "id": "eq_g05_001",
@@ -2659,7 +2659,7 @@
     "description": {
       "en": "When attacked, increase Damage Amount of the next Attack Card of this unit used by 20% (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5078.webp"
   },
   {
     "id": "eq_g05_002",
@@ -2670,7 +2670,7 @@
     "description": {
       "en": "+50% Critical Damage to Bind Attack Cards of this unit."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5079.webp"
   },
   {
     "id": "eq_g05_003",
@@ -2681,7 +2681,7 @@
     "description": {
       "en": "On Weakness Attack through an Attack Card of this unit, +40% Damage Amount."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5080.webp"
   },
   {
     "id": "eq_g05_004",
@@ -2692,7 +2692,7 @@
     "description": {
       "en": "At the end of the turn, Fixed Heal 100% (3 times per battle)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5076.webp"
   },
   {
     "id": "eq_g05_005",
@@ -2703,7 +2703,7 @@
     "description": {
       "en": "At the start of battle, gain 2 Damage Reduction. When attacked, Fixed Heal 80% (1 time per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5082.webp"
   },
   {
     "id": "eq_g05_006",
@@ -2714,7 +2714,7 @@
     "description": {
       "en": "When an Attack Card is used by allies, 20% Fixed Shield (5 times per turn)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5077.webp"
   },
   {
     "id": "eq_g05_007",
@@ -2725,7 +2725,7 @@
     "description": {
       "en": "At the start of the turn, increase Damage Amount of allies by 8% (max 3 stacks)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5081.webp"
   },
   {
     "id": "eq_g05_008",
@@ -2736,6 +2736,6 @@
     "description": {
       "en": "When AP is gained through a card or Ego Skill of this unit, +3% Attack to allies for 1 turn (max 6 stacks)."
     },
-    "image_path": ""
+    "image_path": "itens/relic_5083.webp"
   }
 ]

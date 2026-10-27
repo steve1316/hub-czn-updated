@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { api } from '@/lib/api'
 import { CheckCircle, XCircle, Loader2, ChevronDown, ChevronRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { GoToCaptureButton } from '@/components/ui/empty-state'
 import { GameDataCard } from './GameDataCard'
 
 function StatusIcon({ ok }: { ok: boolean }) {
@@ -38,7 +39,7 @@ function Row({
       <StatusIcon ok={ok} />
       <div className="flex-1 min-w-0">
         <p className="text-[#ffffff] font-medium text-sm">{label}</p>
-        <p className="text-[#b3b3b3] text-xs mt-0.5">{detail}</p>
+        <p className="text-[#b3b3b3] text-sm mt-0.5">{detail}</p>
         <MutationError error={error} />
       </div>
       {action}
@@ -50,6 +51,7 @@ export function SetupPage() {
   const { t } = useTranslation()
   const qc = useQueryClient()
   const [howOpen, setHowOpen] = useState(false)
+  const [advancedOpen, setAdvancedOpen] = useState(false)
 
   const { data: status, isLoading, isError, error } = useQuery({
     queryKey: ['setup-status'],
@@ -89,16 +91,24 @@ export function SetupPage() {
     return (
       <div className="p-8 flex flex-col gap-2">
         <p className="text-[#f3727f] text-sm font-medium">{t('setup.apiError')}</p>
-        <p className="text-[#b3b3b3] text-xs">
-          {error instanceof Error ? error.message : t('setup.apiErrorHint')}
-        </p>
+        <p className="text-[#b3b3b3] text-sm">{t('setup.apiErrorHint')}</p>
+        {error instanceof Error && <p className="text-[#8a8a8a] text-xs">{error.message}</p>}
       </div>
     )
   }
 
   return (
-    <div className="p-6 flex flex-col gap-4 max-w-xl">
+    <div className="mx-auto p-6 flex flex-col gap-4 w-full max-w-xl">
       <h1 className="text-xl font-bold text-[#ffffff]">{t('setup.title')}</h1>
+
+      {/* Same bar as the Capture page's prerequisites, so both pages agree on when capture can start. */}
+      {status.admin && status.mitmproxy && !status.hosts_redirect_active && (
+        <div className="flex items-center gap-4 p-4 rounded-lg bg-[#181818] border border-[#c084fc55]">
+          <CheckCircle size={18} className="text-green-500 shrink-0" />
+          <p className="flex-1 text-sm text-[#ffffff]">{t('setup.ready')}</p>
+          <GoToCaptureButton label={t('setup.nextCapture')} />
+        </div>
+      )}
 
       {status.hosts_redirect_active && (
         <Row
@@ -164,7 +174,7 @@ export function SetupPage() {
                 size="sm"
                 onClick={() => certMutation.mutate()}
                 disabled={certMutation.isPending}
-                className="bg-[#c084fc] hover:bg-[#9333ea] text-white shrink-0"
+                className="shrink-0"
               >
                 {certMutation.isPending ? <Loader2 size={14} className="animate-spin" /> : t('setup.certificate.generate')}
               </Button>
@@ -192,7 +202,7 @@ export function SetupPage() {
           <div className="flex items-start gap-4">
             <div className="flex-1">
               <p className="text-[#ffffff] font-medium text-sm">{t('setup.installCert.label')}</p>
-              <p className="text-[#b3b3b3] text-xs mt-0.5">{t('setup.installCert.detail')}</p>
+              <p className="text-[#b3b3b3] text-sm mt-0.5">{t('setup.installCert.detail')}</p>
             </div>
           </div>
           <div className="flex flex-col gap-2 pl-8">
@@ -200,7 +210,7 @@ export function SetupPage() {
               size="sm"
               onClick={() => installCertMutation.mutate()}
               disabled={installCertMutation.isPending}
-              className="bg-[#c084fc] hover:bg-[#9333ea] text-white self-start"
+              className="self-start"
             >
               {installCertMutation.isPending ? (
                 <>
@@ -230,7 +240,7 @@ export function SetupPage() {
             >
               {t('setup.installCert.manualLink')}
             </button>
-            <p className="text-xs text-[#666666]">{t('setup.installCert.manualHint')}</p>
+            <p className="text-xs text-[#8a8a8a]">{t('setup.installCert.manualHint')}</p>
             {openCertMutation.isError && (
               <p className="text-[#f3727f] text-xs">
                 {openCertMutation.error instanceof Error
@@ -242,7 +252,18 @@ export function SetupPage() {
         </div>
       )}
 
-      <GameDataCard />
+      <div className="flex flex-col gap-2">
+        <button
+          type="button"
+          aria-expanded={advancedOpen}
+          className="flex items-center gap-2 px-1 py-1 text-sm text-[#b3b3b3] hover:text-[#ffffff] self-start"
+          onClick={() => setAdvancedOpen(v => !v)}
+        >
+          {advancedOpen ? <ChevronDown size={14} /> : <ChevronRight size={14} />}
+          {t('setup.advanced')}
+        </button>
+        {advancedOpen && <GameDataCard />}
+      </div>
 
       <div className="rounded-lg bg-[#181818] border border-[#282828] overflow-hidden">
         <button
@@ -255,7 +276,7 @@ export function SetupPage() {
           {t('setup.howItWorks')}
         </button>
         {howOpen && (
-          <div className="px-4 pb-4 text-xs text-[#b3b3b3] leading-relaxed">
+          <div className="px-4 pb-4 text-sm text-[#b3b3b3] leading-relaxed">
             {t('setup.howItWorksDetail')}
           </div>
         )}

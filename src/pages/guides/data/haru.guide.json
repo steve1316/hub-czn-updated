@@ -910,7 +910,7 @@
           "type": "potentials",
           "image": "haru.webp",
           "treeImage": "haru-tree.webp",
-          "coloured": false,
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",

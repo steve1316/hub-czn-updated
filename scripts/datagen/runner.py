@@ -92,7 +92,7 @@ class Context:
         titles = {talent: fields["title"] for talent, fields in self.overrides("templates").entries.items() if "title" in fields}
         return TemplateResolver(self.client, titles)
 
-    def text(self, raw: str, *, soften: bool = False, sentences: bool = True) -> str:
+    def text(self, raw: str, *, soften: bool = False, sentences: bool = True, keep_lines: bool = False) -> str:
         """
         Run resolved text through the tidy pass.
 
@@ -100,11 +100,12 @@ class Context:
             raw: Resolved text, lines separated by "\n".
             soften: Apply the swear-softening list.
             sentences: Join lines into sentences ending with a period.
+            keep_lines: Keep each sentence on its own line.
 
         Returns:
             The tidied text.
         """
-        return tidy(raw, self.rules, soften=soften, sentences=sentences)
+        return tidy(raw, self.rules, soften=soften, sentences=sentences, keep_lines=keep_lines)
 
 
 def json_bytes(data) -> bytes:

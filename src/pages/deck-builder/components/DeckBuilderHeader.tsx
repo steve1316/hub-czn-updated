@@ -69,7 +69,7 @@ function SaveDeckModal({
         </header>
 
         <div className="p-4">
-          <label className="text-[10px] font-black uppercase tracking-wide text-[#777]">
+          <label className="text-[11px] font-black uppercase tracking-wide text-[#8a8a8a]">
             {t('deckBuilder.saveDeckName')}
           </label>
 
@@ -81,7 +81,7 @@ function SaveDeckModal({
             className="mt-2 w-full rounded-lg border border-[#333348] bg-[#0f0f14] px-3 py-2 text-sm text-white outline-none placeholder:text-[#666] focus:border-[#60a5fa]"
           />
 
-          <p className="mt-2 text-xs text-[#777]">
+          <p className="mt-2 text-xs text-[#8a8a8a]">
             {t('deckBuilder.saveDeckLocalHint')}
           </p>
         </div>
@@ -256,11 +256,11 @@ export function DeckBuilderHeader({
 
           <div className="w-full rounded-lg border border-[#282838] bg-[#15151f] px-3 py-2 xl:w-[455px]">
             <div className="mb-1.5 flex items-center justify-between gap-2">
-              <p className="text-[9px] font-black uppercase tracking-wide text-[#777]">
+              <p className="text-[11px] font-black uppercase tracking-wide text-[#8a8a8a]">
                 {t('deckBuilder.localSavedDecks')}
               </p>
 
-              <span className="text-[9px] text-[#666]">
+              <span className="text-[11px] text-[#8a8a8a]">
                 {t('deckBuilder.localSavedCount', { count: savedDecks.length })}
               </span>
             </div>
@@ -302,7 +302,7 @@ export function DeckBuilderHeader({
                 className="inline-flex h-9 items-center justify-center gap-2 rounded-lg border border-[#34344a] px-3 text-xs font-semibold text-[#d4d4d8] hover:bg-[#1b1b29] disabled:cursor-not-allowed disabled:opacity-60"
               >
                 <Plus size={14} />
-                {t('deckBuilder.new')}
+                {t('deckBuilder.saveAs')}
               </button>
 
               <button
@@ -320,7 +320,9 @@ export function DeckBuilderHeader({
           <div className="flex shrink-0 flex-wrap items-center gap-2 xl:justify-end">
             <button
               type="button"
-              onClick={onReset}
+              onClick={() => {
+                if (window.confirm(t('deckBuilder.resetConfirm'))) onReset()
+              }}
               className="inline-flex h-9 items-center gap-2 rounded-lg border border-[#7f1d1d] px-3 text-xs font-semibold text-[#f87171] hover:bg-[#7f1d1d]/20"
             >
               <Trash2 size={14} />

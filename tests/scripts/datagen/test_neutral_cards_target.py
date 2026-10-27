@@ -232,7 +232,8 @@ def test_build_adds_missing_art_and_reports_art_it_cannot_find(tmp_path):
     _, result, issues = _built(_context(tmp_path, _overrides()))
     added = neutral_cards.DATA_DIR / "neutral-cards" / "neutral" / "card_test_ne_1.webp"
     assert list(result.new_files) == [added]
-    assert Image.open(io.BytesIO(result.new_files[added])).size == neutral_cards.IMAGE_SIZE
+    # Art keeps the client illustration's own size.
+    assert Image.open(io.BytesIO(result.new_files[added])).size == (42, 63)
     assert "neutral_cards: no illustration in the client for card_test_mon_1 (art_card_test_mon_1.png)" in issues
 
 

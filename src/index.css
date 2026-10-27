@@ -3,26 +3,26 @@
 
 @custom-variant dark (&:is(.dark *));
 
-:root {
-  --background: 0 0% 100%;
-  --foreground: 20 14% 4%;
-  --card: 0 0% 100%;
-  --card-foreground: 20 14% 4%;
-  --popover: 0 0% 100%;
-  --popover-foreground: 20 14% 4%;
-  --primary: 271 91% 65%;
-  --primary-foreground: 0 0% 100%;
-  --secondary: 0 0% 10%;
-  --secondary-foreground: 0 0% 97%;
-  --muted: 0 0% 40%;
-  --muted-foreground: 0 0% 40%;
-  --accent: 271 91% 65%;
-  --accent-foreground: 0 0% 100%;
-  --destructive: 354 80% 70%;
-  --border: 0 0% 16%;
-  --input: 0 0% 16%;
-  --ring: 271 91% 65%;
-  --radius: 0.5rem;
+/* Colours for the shared shadcn components in src/components/ui, matched to the app's hardcoded hex. */
+@theme {
+  --color-background: #121212;
+  --color-foreground: #ffffff;
+  --color-card: #181818;
+  --color-card-foreground: #ffffff;
+  --color-popover: #181818;
+  --color-popover-foreground: #ffffff;
+  --color-primary: #c084fc;
+  --color-primary-foreground: #1a1022;
+  --color-secondary: #282828;
+  --color-secondary-foreground: #ffffff;
+  --color-muted: #282828;
+  --color-muted-foreground: #b3b3b3;
+  --color-accent: #282828;
+  --color-accent-foreground: #ffffff;
+  --color-destructive: #f87171;
+  --color-border: #333333;
+  --color-input: #333333;
+  --color-ring: #c084fc;
 }
 
 html {
@@ -34,4 +34,11 @@ body {
   color: #ffffff;
   font-family: "Segoe UI", system-ui, sans-serif;
   margin: 0;
+}
+
+/* Unlayered, so it wins over the outline-none utilities and keyboard users always see where they are. The shared
+   components in src/components/ui carry data-slot and draw their own focus ring. */
+:focus-visible:not([data-slot]) {
+  outline: 2px solid #c084fc;
+  outline-offset: 2px;
 }

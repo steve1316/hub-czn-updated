@@ -48,7 +48,7 @@ function PathField({ label, value, badge, hint, disabled, onBrowse, onSave }: Pa
     <div className="flex flex-col gap-1">
       <label className="text-xs text-[#b3b3b3] flex items-center gap-2">
         {label}
-        {badge && <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#282828] text-[#c084fc]">{badge}</span>}
+        {badge && <span className="text-[11px] px-1.5 py-0.5 rounded bg-[#282828] text-[#c084fc]">{badge}</span>}
       </label>
       <div className="flex gap-2">
         <input
@@ -66,7 +66,7 @@ function PathField({ label, value, badge, hint, disabled, onBrowse, onSave }: Pa
           </Button>
         )}
       </div>
-      {hint && <p className="text-[11px] text-[#666666]">{hint}</p>}
+      {hint && <p className="text-[11px] text-[#8a8a8a]">{hint}</p>}
     </div>
   )
 }
@@ -136,7 +136,7 @@ export function GameDataCard() {
       <div>
         <p className="text-[#ffffff] font-medium text-sm flex items-center gap-2">
           {t("setup.gameData.title")}
-          {status.dev_mode && <span className="text-[10px] px-1.5 py-0.5 rounded bg-[#282828] text-[#b3b3b3]">{t("setup.gameData.devOnly")}</span>}
+          {status.dev_mode && <span className="text-[11px] px-1.5 py-0.5 rounded bg-[#282828] text-[#b3b3b3]">{t("setup.gameData.devOnly")}</span>}
         </p>
         <p className="text-[#b3b3b3] text-xs mt-0.5">{t("setup.gameData.detail")}</p>
       </div>

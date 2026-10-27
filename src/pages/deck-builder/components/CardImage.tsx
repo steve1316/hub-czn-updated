@@ -30,7 +30,7 @@ export function CardImage({ card, variant = 'cover', className = '' }: CardImage
   if (!imageUrl) {
     return (
       <div
-        className={`grid place-items-center rounded-lg bg-[#1f1f2a] text-center text-[10px] font-bold uppercase tracking-wide text-[#777] ${className}`}
+        className={`grid place-items-center rounded-lg bg-[#1f1f2a] text-center text-[11px] font-bold uppercase tracking-wide text-[#8a8a8a] ${className}`}
       >
         No image
       </div>

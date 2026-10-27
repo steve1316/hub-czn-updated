@@ -104,6 +104,13 @@ def test_build_falls_back_to_the_clean_tree_without_colours():
     assert coloured is False
 
 
+def test_build_uses_hand_marked_colours_over_the_picture():
+    tree, coloured = po.build(None, {}, {"04": "gold"})
+    assert coloured is True
+    cx, cy, r = NODES.centre("04", CLEAN.size)
+    assert tree.convert("RGB").getpixel((round(cx + r - 2), round(cy))) == po.RING_COLOURS["gold"]
+
+
 def test_build_colours_a_registered_picture():
     tree, coloured = po.build(_author({"04": (170, 60, 190)}), {"05": "crit_chance", "06": "crit_damage"})
     assert coloured is True

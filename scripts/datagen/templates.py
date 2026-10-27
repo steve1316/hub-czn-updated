@@ -30,6 +30,8 @@ _ASSIGNED_COMBATANT = "the assigned Combatant"
 _BATTLE_ONLY = re.compile(r"^(n_.*|.*_stack_.*|.*vt_mul.*|.*vt_add.*|cs_tv_(?!max_).*|xvalue|hand_count.*|hand_connect.*|.*during_turn.*)$")
 
 _TOKEN = re.compile(r"#([A-Za-z0-9_]+)#")
+# One tier of a synergy, such as `#synergy_ds04_desire_exploration_01#`, which stands for that tier's own text.
+_SYNERGY = re.compile(r"#synergy_([A-Za-z0-9_]+)#")
 _CAL = re.compile(r"\{cal\}(.*?)\{/\}", re.DOTALL)
 # Shared triggers such as `TRIGGER_EFFICIENCY` and character ones such as `C30115_DEBUFF_TRIGGER`. Card references are lower case.
 _TRIGGER = re.compile(r"\^([A-Z][A-Z0-9_]+)\^")
@@ -140,10 +142,23 @@ class TemplateResolver:
         Returns:
             The resolved description. Empty text when the card has no description at all.
         """
-        card = self.client.cards.get(card_id, {})
+        base = self.client.cards.get(base_card_id, {}) if base_card_id else None
+        return self.describe(self.client.cards.get(card_id, {}), base)
+
+    def describe(self, card: dict, base: dict | None = None) -> Resolution:
+        """
+        A card row's description with its trait tags in front, for rows that may live outside the `card(*)` shards.
+
+        Args:
+            card: The card row.
+            base: For an epiphany variant whose own description is "none", the row whose template it shares.
+
+        Returns:
+            The resolved description. Empty text when the card has no description at all.
+        """
         template = self.client.text(card.get("desc"))
-        if template is None and base_card_id:
-            template = self.client.text(self.client.cards.get(base_card_id, {}).get("desc"))
+        if template is None and base:
+            template = self.client.text(base.get("desc"))
         if template is None:
             return Resolution("")
         resolution = self.resolve(template, parse_list(card.get("link_skill_eff_id")))
@@ -184,19 +199,56 @@ class TemplateResolver:
         """
         if talent in self.talent_titles:
             return self.talent_titles[talent]
-        title = self._tooltip_title(talent)
-        if title:
-            return title
+        tooltip_id = self.talent_tooltip_id(talent)
+        if not tooltip_id:
+            return None
+        title = self.tooltip_title(tooltip_id)
         numbered = _TALENT_COUNT.match(talent)
-        if numbered:
-            base, count = numbered.groups()
-            title = self._tooltip_title(f"{base}_N") or self._tooltip_title(base)
-            if title:
-                # Numbered titles read "Bind #bind_count#" or just "Exhaust".
-                return _TOKEN.sub(count, title) if _TOKEN.search(title) else f"{title} {count}"
-        return None
+        if tooltip_id == talent or not numbered:
+            return title
+        # Numbered titles read "Bind #bind_count#" or just "Exhaust".
+        count = numbered.group(2)
+        return _TOKEN.sub(count, title) if _TOKEN.search(title) else f"{title} {count}"
 
-    def _tooltip_title(self, tooltip_id: str) -> str | None:
+    def talent_tooltip_id(self, talent: str) -> str | None:
+        """
+        The tooltip that names one card trait. A numbered trait like TALENT_EXHAUST_2 falls back to TALENT_EXHAUST_N, then TALENT_EXHAUST.
+
+        Args:
+            talent: The talent id.
+
+        Returns:
+            The tooltip id, or None when the client has no title for the trait.
+        """
+        numbered = _TALENT_COUNT.match(talent)
+        candidates = [talent, f"{numbered.group(1)}_N", numbered.group(1)] if numbered else [talent]
+        return next((candidate for candidate in candidates if self.tooltip_title(candidate)), None)
+
+    def trigger_title(self, trigger_id: str) -> str | None:
+        """
+        A trigger's title as card text shows it, always ending in a colon, such as "Incinerate:".
+
+        Args:
+            trigger_id: The trigger's tooltip id, such as "TRIGGER_IGNITE".
+
+        Returns:
+            The title, or None when the client has none.
+        """
+        title = self.tooltip_title(trigger_id)
+        if not title:
+            return None
+        return title if title.endswith(":") else f"{title}:"
+
+    def tooltip_title(self, tooltip_id: str) -> str | None:
+        """
+        A tooltip's title, such as "Incinerate:".
+
+        Args:
+            tooltip_id: The tooltip id, such as "TRIGGER_EXHAUST".
+
+        Returns:
+            The English title, or None when the client has none.
+        """
         tooltip = self.client.tooltips.get(tooltip_id)
         key = tooltip.get("title") if tooltip else f"tooltip@title@{tooltip_id}"
         return self.client.text(key)
@@ -218,6 +270,7 @@ class TemplateResolver:
         """
         effects = [self.client.effects.get(effect_id, {}) for effect_id in effect_ids]
         unresolved: list[str] = []
+        template = _SYNERGY.sub(self._synergy, template)
 
         def fill(match: re.Match) -> str:
             name = match.group(1)
@@ -259,10 +312,12 @@ class TemplateResolver:
             return ""
 
     def _trigger(self, match: re.Match) -> str:
-        title = self._tooltip_title(match.group(1))
-        if not title:
-            return match.group(0)
-        return title if title.endswith(":") else f"{title}:"
+        return self.trigger_title(match.group(1)) or match.group(0)
+
+    def _synergy(self, match: re.Match) -> str:
+        # An unknown tier is left in place, so the token pass reports it.
+        row = self.client.synergies.get(match.group(1))
+        return (self.client.text(row.get("desc")) if row else None) or match.group(0)
 
     # //////////////////////////////////////////////////////////////////////////////////////////////////
     # //////////////////////////////////////////////////////////////////////////////////////////////////

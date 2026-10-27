@@ -1877,7 +1877,7 @@
           "type": "potentials",
           "image": "nia.webp",
           "treeImage": "nia-tree.webp",
-          "coloured": false,
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",

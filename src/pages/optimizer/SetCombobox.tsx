@@ -165,7 +165,7 @@ export function SetCombobox({
                     aria-label={`${t('common.remove')} ${opt?.label ?? id}`}
                     className="hover:text-[#ffffff] transition-colors"
                   >
-                    <X size={10} />
+                    <X size={12} />
                   </button>
                 )}
               </span>
@@ -210,8 +210,8 @@ export function SetCombobox({
               : placeholder
           }
           className={[
-            'w-full bg-[#282828] border border-[#333333] rounded px-2.5 py-1.5 text-xs',
-            'text-[#ffffff] placeholder-[#333333] outline-none focus:border-[#c084fc]',
+            'w-full bg-[#282828] border border-[#333333] rounded px-2.5 h-8 text-sm',
+            'text-[#ffffff] placeholder-[#8a8a8a] outline-none focus:border-[#c084fc]',
             isLoading ? 'pl-7' : '',
             inputDisabled ? 'opacity-50 cursor-not-allowed' : '',
           ].join(' ')}
@@ -235,7 +235,7 @@ export function SetCombobox({
               onClick={() => add(opt.id)}
               onMouseEnter={() => setHighlightedIdx(idx)}
               className={[
-                'w-full text-left flex items-center gap-2 px-3 py-1.5 text-xs text-[#ffffff] transition-colors',
+                'w-full text-left flex items-center gap-2 px-3 py-1.5 text-sm text-[#ffffff] transition-colors',
                 idx === highlightedIdx ? 'bg-[#282828]' : 'hover:bg-[#282828]',
               ].join(' ')}
             >

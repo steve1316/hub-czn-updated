@@ -20,14 +20,14 @@ export function ProseBlock({ body, beforeNonProse }: ProseBlockProps) {
   const lang = resolveLang(i18n.language)
 
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex max-w-3xl flex-col gap-2">
       {proseParts(localized(body, lang), beforeNonProse).map((part, i) => {
         if (part.kind === 'heading') {
-          return <h3 key={i} className="text-sm font-bold tracking-wide text-[#c084fc]">{part.text}</h3>
+          return <h3 key={i} className="text-base font-bold tracking-wide text-[#c084fc]">{part.text}</h3>
         }
         if (part.kind === 'terms') {
           return (
-            <dl key={i} className="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-1.5 rounded-lg bg-[#151515] px-3 py-2.5 text-sm">
+            <dl key={i} className="grid grid-cols-[max-content_1fr] gap-x-4 gap-y-1.5 rounded-lg bg-[#151515] px-4 py-3 text-base">
               {part.terms.map((term, ti) => (
                 <div key={ti} className="contents">
                   <dt className="font-bold text-[#ffffff]">{term.term}</dt>
@@ -37,7 +37,7 @@ export function ProseBlock({ body, beforeNonProse }: ProseBlockProps) {
             </dl>
           )
         }
-        return <p key={i} className="text-sm leading-relaxed text-[#cbd5e1]">{part.text}</p>
+        return <p key={i} className="text-base leading-relaxed text-[#cbd5e1]">{part.text}</p>
       })}
     </div>
   )

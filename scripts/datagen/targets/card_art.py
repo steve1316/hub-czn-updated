@@ -11,7 +11,7 @@ import re
 from pathlib import Path
 
 from scripts.datagen import roster
-from scripts.datagen.art import wanted, webp
+from scripts.datagen.art import CLIENT_ART_QUALITY, wanted, webp
 from scripts.datagen.naming import slug
 from scripts.datagen.overrides import Issue
 from scripts.datagen.runner import REPO_ROOT, Context, TargetResult
@@ -26,11 +26,6 @@ COMBATANTS_DIR = DECK_BUILDER_DIR / "combatants"
 IMAGE_MAP_PATH = DECK_BUILDER_DIR / "deck-builder-card-images.ts"
 ICONS_DIR = Path("api/assets/cards")
 ANDROID_COLLAPSE_DIR = Path("android-app/app/src/main/assets/collapse")
-
-# The simulator's card icons are thumbnails of the full illustration.
-ICON_SIZE = (120, 180)
-ICON_QUALITY = 85
-DECK_BUILDER_QUALITY = 90
 
 # The deck builder shows a combatant's starting cards, epiphany cards and ego skill. Variants reuse their base card's art.
 _CARD_COLUMNS = [f"start_{n}_link_card_id" for n in range(1, 5)] + [f"spark_card_{n}_link_card_id" for n in range(1, 5)]
@@ -54,7 +49,7 @@ def build(ctx: Context) -> TargetResult:
         The image map as a normal file, the images as files created only when missing, and a summary.
     """
     combatants = ctx.client.by_id(COMBATANT_TABLE)
-    folders = _existing_folders()
+    folders = existing_folders()
     new_files: dict[Path, bytes] = {}
     issues: list[Issue] = []
     for res_id, character in roster.by_name():
@@ -65,12 +60,10 @@ def build(ctx: Context) -> TargetResult:
             source = ctx.client.illustration(card) if card else None
             if source is None:
                 continue
-            deck_path = COMBATANTS_DIR / folder / f"{card_id}.webp"
-            if wanted(ctx, deck_path):
-                new_files[deck_path] = webp(source, quality=DECK_BUILDER_QUALITY)
-            icon_path = ICONS_DIR / f"{source.stem}.webp"
-            if wanted(ctx, icon_path):
-                new_files[icon_path] = webp(source, quality=ICON_QUALITY, size=ICON_SIZE)
+            # The deck builder art and the simulator icon are the same image, so it is encoded once for both.
+            paths = [path for path in (COMBATANTS_DIR / folder / f"{card_id}.webp", ICONS_DIR / f"{source.stem}.webp") if wanted(ctx, path)]
+            if paths:
+                new_files.update(dict.fromkeys(paths, webp(source, quality=CLIENT_ART_QUALITY)))
         android = _android_collapse(ctx, res_id)
         if android is None:
             issues.append(Issue("warning", f"{NAME}: no full illustration in the client for {character['name']} ({res_id})"))
@@ -78,6 +71,7 @@ def build(ctx: Context) -> TargetResult:
             target = ANDROID_COLLAPSE_DIR / android.name
             if wanted(ctx, target) and not _has_android_collapse(res_id):
                 new_files[target] = android.read_bytes()
+    refresh_shipped_icons(ctx, new_files)
 
     image_map = _image_map(set(new_files))
     summary = f"{len(roster.combatants())} characters, {len(new_files)} image(s) to add, {len(image_map)} mapped deck builder cards"
@@ -96,6 +90,23 @@ def extra_cards(ctx: Context, res_id: int) -> list[str]:
         Their card ids, sorted.
     """
     return sorted(card_id for card_id in ctx.client.cards if (match := _EXTRA_CARD.match(card_id)) and int(match.group(1)) == res_id)
+
+
+def refresh_shipped_icons(ctx: Context, new_files: dict[Path, bytes]) -> None:
+    """
+    On an art refresh, re-encode the simulator icons of every other card, such as neutral cards and curses, which no target adds.
+
+    Args:
+        ctx: The run context.
+        new_files: Icons to re-encode are added here, skipping any this run already encodes.
+    """
+    if not ctx.refresh_art:
+        return
+    for icon in sorted((REPO_ROOT / ICONS_DIR).glob("*.webp")):
+        path = ICONS_DIR / icon.name
+        source = ctx.client.root / "card_illustration" / f"{icon.stem}.png"
+        if path not in new_files and source.is_file():
+            new_files[path] = webp(source, quality=CLIENT_ART_QUALITY)
 
 
 def _android_collapse(ctx: Context, res_id: int) -> Path | None:
@@ -121,7 +132,7 @@ def _has_android_collapse(res_id: int) -> bool:
     return any((REPO_ROOT / ANDROID_COLLAPSE_DIR / f"collapse_{res_id}_{variant}.png").exists() for variant in ("01", "02"))
 
 
-def _existing_folders() -> dict[int, str]:
+def existing_folders() -> dict[int, str]:
     """
     Which deck builder folder each combatant's images already live in.
 

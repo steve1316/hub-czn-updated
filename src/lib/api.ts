@@ -37,6 +37,17 @@ export function isNotFound(err: unknown): boolean {
   return err instanceof ApiError && err.status === 404
 }
 
+/**
+ * Whether an error is the sidecar saying no capture has been loaded yet. The routes answer this with 400, 404 or 422, so
+ * the message is what identifies it.
+ *
+ * @param err Any thrown value.
+ * @returns True for an `ApiError` whose message starts with "No data loaded".
+ */
+export function isNoData(err: unknown): boolean {
+  return err instanceof ApiError && err.message.startsWith('No data loaded')
+}
+
 let _port: number = Number(import.meta.env.VITE_API_PORT ?? 7842)
 let _token: string = (import.meta.env.VITE_API_TOKEN as string | undefined) ?? ''
 

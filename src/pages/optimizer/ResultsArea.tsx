@@ -1,6 +1,9 @@
 import { useState, useRef, useEffect } from 'react'
 import { useQuery } from '@tanstack/react-query'
-import { Loader2, ChevronUp, ChevronDown, ChevronsUpDown } from 'lucide-react'
+import { Loader2, ChevronUp, ChevronDown, ChevronsUpDown, Play } from 'lucide-react'
+import { PRIMARY_ACTION } from '@/components/ui/action-classes'
+import { StaleBanner } from '@/components/ui/stale-banner'
+import { cn } from '@/lib/utils'
 import { useTranslation } from 'react-i18next'
 import { InfoPopover } from '@/components/ui/info-popover'
 import { api, assetUrl } from '@/lib/api'
@@ -9,14 +12,41 @@ import { GearSlotCard } from '../combatants/CombatantDetail'
 
 type JobState = 'idle' | 'running' | 'done' | 'cancelled' | 'error'
 
+/** Props for ResultsArea. */
 interface ResultsAreaProps {
+  /** Where the current optimizer job is. */
   jobState: JobState
+  /** Live progress of a running job, or null. */
   progress: OptimizeProgress | null
+  /** Builds from the last finished run. */
   results: OptimizeResult[]
+  /** Rank of the expanded build, or null when none is open. */
   selectedRank: number | null
+  /** Called with a build's rank when its row is clicked. */
   onSelectRank: (rank: number) => void
+  /** Message from a failed run. */
   jobError: string | null
+  /** Character the results were built for. */
   charId: string
+  /** True when the panel settings no longer match the run that made these results. */
+  stale: boolean
+  /** Starts a new run, or undefined when one cannot start yet. */
+  onRun?: () => void
+}
+
+/**
+ * A button that starts the optimizer again after a cancelled or failed run.
+ * @param onRun Starts the run.
+ * @returns The button.
+ */
+function RunAgainButton({ onRun }: { onRun: () => void }) {
+  const { t } = useTranslation()
+  return (
+    <button type="button" onClick={onRun} className={cn(PRIMARY_ACTION, 'px-3 py-1.5')}>
+      <Play size={13} />
+      {t('optimizer.runAgain')}
+    </button>
+  )
 }
 
 // ─── Stats Comparison ─────────────────────────────────────────────────────────
@@ -33,8 +63,8 @@ function StatsComparison({
     { label: 'ATK', cur: current.ATK, next: build.ATK },
     { label: 'DEF', cur: current.DEF, next: build.DEF },
     { label: 'HP', cur: current.HP, next: build.HP },
-    { label: 'CRate', cur: current.CRate, next: build.CRate, pct: true },
-    { label: 'CDmg', cur: current.CDmg, next: build.CDmg, pct: true },
+    { label: 'Crit Rate', cur: current.CRate, next: build.CRate, pct: true },
+    { label: 'Crit DMG', cur: current.CDmg, next: build.CDmg, pct: true },
     { label: 'EHP', cur: current.EHP, next: build.EHP, tip: t('combatants.detail.ehpTip') },
     ...((build.ExtraDMG ?? 0) > 0 || (current.ExtraDMG ?? 0) > 0
       ? [{ label: 'Extra DMG%', cur: current.ExtraDMG ?? 0, next: build.ExtraDMG ?? 0, pct: true }]
@@ -44,8 +74,8 @@ function StatsComparison({
   return (
     <div className="rounded-xl border border-[#282828] bg-[#181818] overflow-hidden">
       <div
-        className="grid text-[10px] uppercase tracking-wider text-[#666666] px-3 py-1.5 border-b border-[#282828]"
-        style={{ gridTemplateColumns: '4rem 1fr 1fr 1fr' }}
+        className="grid text-xs font-medium text-[#8a8a8a] px-3 py-1.5 border-b border-[#282828]"
+        style={{ gridTemplateColumns: '6rem 1fr 1fr 1fr' }}
       >
         <span>Stat</span>
         <span className="text-right">{t('optimizer.current')}</span>
@@ -56,15 +86,15 @@ function StatsComparison({
         const delta = next - cur
         const sign = delta > 0 ? '+' : ''
         const deltaColor =
-          delta > 0 ? 'text-[#4ade80]' : delta < 0 ? 'text-[#f3727f]' : 'text-[#555555]'
+          delta > 0 ? 'text-[#4ade80]' : delta < 0 ? 'text-[#f3727f]' : 'text-[#8a8a8a]'
         const fmt = (v: number) => (pct ? `${v.toFixed(1)}%` : v.toLocaleString())
         const fmtDelta = (v: number) =>
           pct ? `${sign}${v.toFixed(1)}%` : `${sign}${Math.round(v).toLocaleString()}`
         return (
           <div
             key={label}
-            className="grid text-xs px-3 py-1 odd:bg-[#121212]"
-            style={{ gridTemplateColumns: '4rem 1fr 1fr 1fr' }}
+            className="grid text-sm px-3 py-1 odd:bg-[#121212]"
+            style={{ gridTemplateColumns: '6rem 1fr 1fr 1fr' }}
           >
             <span className="flex items-center gap-1 text-[#b3b3b3]">
               {label}
@@ -96,15 +126,15 @@ function ExpandedBuild({
     <div className="p-4 space-y-4">
       {currentStats && (
         <div>
-          <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">
+          <p className="text-xs font-medium text-[#b3b3b3] mb-2">
             {t('optimizer.statComparison')}
           </p>
           <StatsComparison current={currentStats.final_stats} build={result.final_stats} />
         </div>
       )}
       <div>
-        <p className="text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-2">{t('optimizer.pieces')}</p>
-        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-6 gap-2">
+        <p className="text-xs font-medium text-[#b3b3b3] mb-2">{t('optimizer.pieces')}</p>
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
           {result.gear_slots.map((slot) => {
             const owner = slot.equipped_to
               ? combatants.find((c) => c.char_id === slot.equipped_to)
@@ -152,12 +182,12 @@ function CurrentBuildRow({
   return (
     <div className="bg-[#1a1a2e] border border-[#c084fc]/40 rounded-lg overflow-hidden mb-2">
       <div
-        className="grid gap-2 px-3 py-2.5 text-xs"
+        className="grid gap-2 px-3 py-2.5 text-sm items-center"
         style={{ gridTemplateColumns: activeCols }}
       >
-        <span className="text-[#c084fc] font-bold text-[10px]">NOW</span>
+        <span className="text-[#c084fc] font-bold text-xs">Now</span>
         <span className="text-[#c084fc] font-semibold">{score.toFixed(1)}</span>
-        <span className="text-[#888888] truncate text-[10px]">{setSummary || '—'}</span>
+        <span title={setSummary} className="text-[#b3b3b3] text-xs leading-snug">{setSummary || '—'}</span>
         <span className="text-[#b3b3b3]">{fs.ATK.toLocaleString()}</span>
         <span className="text-[#b3b3b3]">{fs.CRate.toFixed(1)}%</span>
         <span className="text-[#b3b3b3]">{fs.CDmg.toFixed(1)}%</span>
@@ -178,7 +208,7 @@ function CurrentBuildRow({
 type SortKey = 'rank' | 'score' | 'atk' | 'crate' | 'cdmg' | 'ehp' | 'avgdmg' | 'extradmg'
 
 function SortIcon({ col, sortKey, sortDir }: { col: SortKey; sortKey: SortKey; sortDir: 'asc' | 'desc' }) {
-  if (col !== sortKey) return <ChevronsUpDown size={10} className="text-[#555555] inline ml-0.5" />
+  if (col !== sortKey) return <ChevronsUpDown size={10} className="text-[#8a8a8a] inline ml-0.5" />
   return sortDir === 'asc'
     ? <ChevronUp size={10} className="text-[#c084fc] inline ml-0.5" />
     : <ChevronDown size={10} className="text-[#c084fc] inline ml-0.5" />
@@ -197,10 +227,12 @@ export function ResultsArea({
   onSelectRank,
   jobError,
   charId,
+  stale,
+  onRun,
 }: ResultsAreaProps) {
   const { t } = useTranslation()
-  const [sortKey, setSortKey] = useState<SortKey>('avgdmg')
-  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('desc')
+  const [sortKey, setSortKey] = useState<SortKey>('rank')
+  const [sortDir, setSortDir] = useState<'asc' | 'desc'>('asc')
   const startTimeRef = useRef<number | null>(null)
   const [eta, setEta] = useState<string | null>(null)
 
@@ -243,7 +275,7 @@ export function ResultsArea({
 
   if (jobState === 'idle') {
     return (
-      <div className="flex-1 flex items-center justify-center text-[#333333] text-sm">
+      <div className="flex-1 flex items-center justify-center text-[#8a8a8a] text-sm">
         {t('optimizer.idle')}
       </div>
     )
@@ -263,7 +295,7 @@ export function ResultsArea({
             : t('optimizer.starting')}
         </p>
         {eta && (
-          <p className="text-xs text-[#666666]">{eta} {t('optimizer.remaining')}</p>
+          <p className="text-xs text-[#8a8a8a]">{eta} {t('optimizer.remaining')}</p>
         )}
         {progress && progress.total > 0 && (
           <div className="w-48 bg-[#282828] rounded-full h-1">
@@ -279,18 +311,20 @@ export function ResultsArea({
 
   if (jobState === 'cancelled') {
     return (
-      <div className="flex-1 flex items-center justify-center text-[#b3b3b3] text-sm">
+      <div className="flex-1 flex flex-col items-center justify-center gap-3 text-[#b3b3b3] text-sm">
         {t('optimizer.cancelled')}
+        {onRun && <RunAgainButton onRun={onRun} />}
       </div>
     )
   }
 
   if (jobState === 'error') {
     return (
-      <div className="flex-1 flex items-center justify-center p-8">
+      <div className="flex-1 flex flex-col items-center justify-center gap-3 p-8">
         <p role="alert" className="text-sm text-[#f3727f] text-center">
           {jobError ?? t('optimizer.error')}
         </p>
+        {onRun && <RunAgainButton onRun={onRun} />}
       </div>
     )
   }
@@ -335,19 +369,21 @@ export function ResultsArea({
 
   return (
     <div className="flex-1 overflow-y-auto p-4">
+      {stale && <StaleBanner message={t('optimizer.stale')} runLabel={t('optimizer.runAgain')} onRun={onRun} />}
+
       <div
-        className="grid gap-2 px-3 py-1 text-[10px] uppercase tracking-wider text-[#b3b3b3] mb-1"
+        className="grid gap-2 px-3 py-1 text-xs font-medium text-[#b3b3b3] mb-1"
         style={{ gridTemplateColumns: activeCols }}
       >
         {colBtn('rank', '#')}
         {colBtn('score', 'Score')}
         <span>Sets</span>
         {colBtn('atk', 'ATK')}
-        {colBtn('crate', 'CRate')}
-        {colBtn('cdmg', 'CDmg')}
+        {colBtn('crate', 'Crit Rate')}
+        {colBtn('cdmg', 'Crit DMG')}
         {colBtn('ehp', 'EHP')}
-        {colBtn('avgdmg', 'AvgDMG')}
-        {hasExtraDmg && colBtn('extradmg', 'xDMG%')}
+        {colBtn('avgdmg', 'Avg DMG')}
+        {hasExtraDmg && colBtn('extradmg', 'Extra DMG')}
       </div>
 
       {currentStats && (
@@ -371,7 +407,7 @@ export function ResultsArea({
                 onClick={() => onSelectRank(r.rank)}
                 aria-pressed={expanded}
                 className={[
-                  'w-full grid gap-2 px-3 py-2.5 text-xs text-left transition-colors',
+                  'w-full grid gap-2 px-3 py-2.5 text-sm text-left items-center transition-colors',
                   expanded ? 'bg-[#c084fc]/10 border-b border-[#282828]' : 'hover:bg-[#282828]',
                 ].join(' ')}
                 style={{ gridTemplateColumns: activeCols }}
@@ -381,9 +417,9 @@ export function ResultsArea({
                 </span>
                 <div className="flex flex-col leading-tight">
                   <span className="text-[#ffffff] font-semibold">{r.score.toFixed(1)}</span>
-                  <span className="text-[9px] text-[#666666]">{Math.round(r.score / topScore * 100)}%</span>
+                  <span className="text-xs text-[#8a8a8a]">{Math.round(r.score / topScore * 100)}%</span>
                 </div>
-                <span className="text-[#b3b3b3] truncate text-[10px]">{r.set_summary}</span>
+                <span title={r.set_summary} className="text-[#b3b3b3] text-xs leading-snug">{r.set_summary}</span>
                 <span className="text-[#ffffff]">{r.final_stats.ATK.toLocaleString()}</span>
                 <span className="text-[#ffffff]">{r.final_stats.CRate.toFixed(1)}%</span>
                 <span className="text-[#ffffff]">{r.final_stats.CDmg.toFixed(1)}%</span>
