@@ -13,6 +13,11 @@ def test_lines_become_sentences():
     assert tidy("120% Damage\n100% Shield\n1 Silver Veil", RULES) == "120% Damage. 100% Shield. 1 Silver Veil."
 
 
+def test_lines_can_stay_on_their_own_lines():
+    text = "Control Synergy: Apply effect\n3+ Control: 2 Agony\n5+ Control: +5% Critical Chance"
+    assert tidy(text, RULES, keep_lines=True) == "Control Synergy: Apply effect.\n3+ Control: 2 Agony.\n5+ Control: +5% Critical Chance."
+
+
 def test_existing_end_punctuation_is_kept():
     assert tidy("Dark Mist Stance:\nIncrease Damage Amount by 100%", RULES) == "Dark Mist Stance: Increase Damage Amount by 100%."
 

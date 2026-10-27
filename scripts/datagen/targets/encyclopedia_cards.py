@@ -384,7 +384,7 @@ class _Builder:
         """
         Add a keyword with the first definition its tooltips give, preferring one with every placeholder filled. Values
         only known in battle read "X". Lower-case keywords such as "activate" are verbs whose sense shifts, so they are skipped.
-        A hand-mapped keyword uses its override's tooltip or definition instead.
+        A hand-mapped keyword uses its override's tooltip or definition instead. Lines stay apart, so synergy tiers read as a list.
 
         Args:
             name: The keyword as the card text shows it.
@@ -395,7 +395,7 @@ class _Builder:
         override = self._keyword_overrides.get(name, {})
         if "tooltip" in override:
             tooltip_ids = [override["tooltip"]]
-        found = [glossary.source_text(self.ctx, {"tooltip": tooltip_id}, self.ctx.client.constants) for tooltip_id in tooltip_ids]
+        found = [glossary.source_text(self.ctx, {"tooltip": tooltip_id}, self.ctx.client.constants, keep_lines=True) for tooltip_id in tooltip_ids]
         defined = [(definition, unresolved) for _, definition, unresolved in found if definition]
         definition = override.get("definition") or next((definition for definition, unresolved in defined if not unresolved), defined[0][0] if defined else None)
         self.keywords[name] = _PLACEHOLDER.sub("X", _PLACEHOLDER_SENTENCE.sub("", definition)) if definition else None

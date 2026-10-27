@@ -62,7 +62,9 @@ function TermPopover({ children, title, definition }: TermPopoverProps) {
   return (
     <LinkPopover label={children} linkClassName="text-[#c084fc] hover:text-[#d8b4fe]">
       <p className="mb-1 font-bold text-[#e9d5ff]">{title}</p>
-      <p className="leading-relaxed">{definition}</p>
+      <div className="space-y-1.5 leading-relaxed">
+        {definition.split('\n').map((line, index) => <p key={index}>{line}</p>)}
+      </div>
     </LinkPopover>
   )
 }

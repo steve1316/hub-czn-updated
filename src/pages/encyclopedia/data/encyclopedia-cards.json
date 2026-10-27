@@ -13419,23 +13419,23 @@
     },
     {
       "name": "Action Count",
-      "definition": "The number of card uses remaining until the monster acts. When a card is used, decrease by 1. When it reaches 0, the monster performs an action."
+      "definition": "The number of card uses remaining until the monster acts.\nWhen a card is used, decrease by 1.\nWhen it reaches 0, the monster performs an action."
     },
     {
       "name": "Action Slow",
-      "definition": "When an ally Haste card is activated, decrease Morale of all enemies by 1 for 1 turn. On effect activation, decrease Action Slow by 1."
+      "definition": "When an ally Haste card is activated, decrease Morale of all enemies by 1 for 1 turn.\nOn effect activation, decrease Action Slow by 1."
     },
     {
       "name": "Afterglow",
-      "definition": "+1 to Tenacity Damage of Attack Cards, and +100% Damage Amount against enemies in a Ravage state and enemies without Tenacity. On effect activation, decrease Afterglow by 1."
+      "definition": "+1 to Tenacity Damage of Attack Cards, and +100% Damage Amount against enemies in a Ravage state and enemies without Tenacity.\nOn effect activation, decrease Afterglow by 1."
     },
     {
       "name": "Aftershock",
-      "definition": "When a target inflicted with this effect is attacked through a card, 300% Fixed Damage to remaining targets. When the effect is activated, decrease by 1."
+      "definition": "When a target inflicted with this effect is attacked through a card, 300% Fixed Damage to remaining targets.\nWhen the effect is activated, decrease by 1."
     },
     {
       "name": "Agony",
-      "definition": "At the end of the turn, 50 Fixed DoT × Agony count. On effect activation, decrease Agony stacks by half (max 20 stacks)."
+      "definition": "At the end of the turn, 50 Fixed DoT × Agony count.\nOn effect activation, decrease Agony stacks by half (max 20 stacks)."
     },
     {
       "name": "All Piles",
@@ -13447,7 +13447,7 @@
     },
     {
       "name": "Attack Weakness",
-      "definition": "If attacking a monster's Weakness Attribute, increase Damage Amount. Further decrease Tenacity."
+      "definition": "If attacking a monster's Weakness Attribute, increase Damage Amount.\nFurther decrease Tenacity."
     },
     {
       "name": "Attunement",
@@ -13459,7 +13459,7 @@
     },
     {
       "name": "Ballista card",
-      "definition": "Ballista, Piercing Ballista, Enhanced Ballista, Giant Ballista, Shelling Ballista, Micro Ballista. These are types of Ballista."
+      "definition": "Ballista, Piercing Ballista, Enhanced Ballista, Giant Ballista, Shelling Ballista, Micro Ballista.\nThese are types of Ballista."
     },
     {
       "name": "Basic Card",
@@ -13479,11 +13479,11 @@
     },
     {
       "name": "Brand of Agony",
-      "definition": "When Agony inflicted by this unit is activated, move 1 Rift of Severance to hand and decrease Cost by 1 until activated. When Rift of Severance is moved to hand, decrease Brand of Agony by 1 (max 3 stacks)."
+      "definition": "When Agony inflicted by this unit is activated, move 1 Rift of Severance to hand and decrease Cost by 1 until activated.\nWhen Rift of Severance is moved to hand, decrease Brand of Agony by 1 (max 3 stacks)."
     },
     {
       "name": "Brand of Fracture",
-      "definition": "When Fracture inflicted by this unit is activated, move 1 Dispersed Desire to hand and decrease Cost by 1 until activated. When Dispersed Desire is moved to hand, decrease Brand of Fracture by 1 (max 3 stacks)."
+      "definition": "When Fracture inflicted by this unit is activated, move 1 Dispersed Desire to hand and decrease Cost by 1 until activated.\nWhen Dispersed Desire is moved to hand, decrease Brand of Fracture by 1 (max 3 stacks)."
     },
     {
       "name": "Brand of the Cycle",
@@ -13503,15 +13503,15 @@
     },
     {
       "name": "Chronal Ascension",
-      "definition": "When Rita's Basic or Signature Cards are activated, use Chronal Ascension as Cost. Unable to gain Chronicle for Costs used through Chronal Ascension. At the end of the turn, remove Chronal Ascension."
+      "definition": "When Rita's Basic or Signature Cards are activated, use Chronal Ascension as Cost.\nUnable to gain Chronicle for Costs used through Chronal Ascension.\nAt the end of the turn, remove Chronal Ascension."
     },
     {
       "name": "Chronicle",
-      "definition": "At the start of the turn, decrease all Chronicle. Gain Chronal Ascension for each decreased (max 6). When Chronal Ascension is owned, unable to gain Chronicle."
+      "definition": "At the start of the turn, decrease all Chronicle.\nGain Chronal Ascension for each decreased (max 6).\nWhen Chronal Ascension is owned, unable to gain Chronicle."
     },
     {
       "name": "Claim",
-      "definition": "Claim Synergy: Apply effect based on the total number of [ Claim ] talents possessed by allies."
+      "definition": "Claim Synergy: Apply effect based on the total number of [ Claim ] talents possessed by allies.\n3+ Claim: When a harmful effect is applied to the enemy, 2 Morale for 1 turn (2 times per turn).\n5+ Claim: Increase DoT Amount by35%.\n7+ Claim: At the start of battle, 9 Claim: Desire.\nWhen a Claim Card is activated, gain 1 Claim: Desire for each stack. When Claim: Desire reaches 10, create 1 Desire Manifestation: Claim card in hand."
     },
     {
       "name": "Combo",
@@ -13519,11 +13519,11 @@
     },
     {
       "name": "Commence the Hunt",
-      "definition": "When a Targeting Attack Card is activated, 50% Extra Attack on the target, then decrease Commence the Hunt by 1. +30% base Damage Amount to Extra Attacks for each Commence the Hunt (max 5 stacks)."
+      "definition": "When a Targeting Attack Card is activated, 50% Extra Attack on the target, then decrease Commence the Hunt by 1.\n+30% base Damage Amount to Extra Attacks for each Commence the Hunt (max 5 stacks)."
     },
     {
       "name": "Control",
-      "definition": "Control Synergy: Apply effect based on the total number of [ Control ] talents possessed by allies."
+      "definition": "Control Synergy: Apply effect based on the total number of [ Control ] talents possessed by allies.\n3+ Control: When an enemy acts, 2 Agony to all enemies.\n5+ Control: +5% Critical Chance for each enemy present.\n7+ Control: At the start of battle, 9 Control: Desire.\nWhen a Control Card is activated, gain 1 Control: Desire for each stack. When Control: Desire reaches 10, create 1 Desire Manifestation: Control card in hand."
     },
     {
       "name": "Coordinated Attack",
@@ -13531,11 +13531,11 @@
     },
     {
       "name": "Counterattack",
-      "definition": "When taking Damage, 150% Defense-Based Damage to the attacker. If an attack is completely blocked by Shield, 300% Defense-Based Damage to the attacker. When the effect is activated, decrease Counterattack by 1. (Max 10)."
+      "definition": "When taking Damage, 150% Defense-Based Damage to the attacker.\nIf an attack is completely blocked by Shield, 300% Defense-Based Damage to the attacker.\nWhen the effect is activated, decrease Counterattack by 1.\n(Max 10)."
     },
     {
       "name": "Creation",
-      "definition": "Three types of cards summoned by Orlea. If a card of the same creature★ is in hand, it evolves and merges. Evolution can reach up to 3 stages."
+      "definition": "Three types of cards summoned by Orlea.\nIf a card of the same creature★ is in hand, it evolves and merges.\nEvolution can reach up to 3 stages."
     },
     {
       "name": "Credit",
@@ -13555,7 +13555,7 @@
     },
     {
       "name": "Cursed Shackles",
-      "definition": "When an Attack Card other than a Bind card is activated by allies on a target in a Cursed Shackles state, gain 1 Will-O'-Wisp for each Hit Count. When applied to a different target, remove Cursed Shackles."
+      "definition": "When an Attack Card other than a Bind card is activated by allies on a target in a Cursed Shackles state, gain 1 Will-O'-Wisp for each Hit Count.\nWhen applied to a different target, remove Cursed Shackles."
     },
     {
       "name": "Cursed Shackles:",
@@ -13563,23 +13563,23 @@
     },
     {
       "name": "DMG-Based Recovery",
-      "definition": "Fixed Recovery based on the Damage coefficient. Cannot exceed 20% of Max HP."
+      "definition": "Fixed Recovery based on the Damage coefficient.\nCannot exceed 20% of Max HP."
     },
     {
       "name": "DMG-Based Shield",
-      "definition": "Gain Fixed Shield based on the Damage coefficient. Cannot exceed 20% of Max HP."
+      "definition": "Gain Fixed Shield based on the Damage coefficient.\nCannot exceed 20% of Max HP."
     },
     {
       "name": "Damage Reduction",
-      "definition": "Decrease Damage Taken by 15%. When the effect is activated, decrease Damage Reduction by 1."
+      "definition": "Decrease Damage Taken by 15%.\nWhen the effect is activated, decrease Damage Reduction by 1."
     },
     {
       "name": "Dark",
-      "definition": "At the start of the turn, move this card to hand and place it on the rightmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+      "definition": "At the start of the turn, move this card to hand and place it on the rightmost side of the hand.\nIf Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
     },
     {
       "name": "Dark Mist Stance",
-      "definition": "Enable the Dark Mist Stance effect for Rin's cards. When an Attack Card of another Combatant is activated, remove Dark Mist Stance."
+      "definition": "Enable the Dark Mist Stance effect for Rin's cards.\nWhen an Attack Card of another Combatant is activated, remove Dark Mist Stance."
     },
     {
       "name": "Dark Mist Stance:",
@@ -13591,7 +13591,7 @@
     },
     {
       "name": "Decibel",
-      "definition": "On Shuffle, 50% Extra Attack by allies to a random enemy, and on activation, remove Decibel. Heal 50% × Decibel count, and +50% Damage Amount × Decibel count to Extra Attacks (max 5 stacks)."
+      "definition": "On Shuffle, 50% Extra Attack by allies to a random enemy, and on activation, remove Decibel.\nHeal 50% × Decibel count, and +50% Damage Amount × Decibel count to Extra Attacks (max 5 stacks)."
     },
     {
       "name": "Defeat:",
@@ -13607,7 +13607,7 @@
     },
     {
       "name": "Descent",
-      "definition": "When Descent stacks to 8 or more, create 1 Heavensfall in hand. When Heavensfall is created, decrease Descent by 8 (activates max 10 times per turn)."
+      "definition": "When Descent stacks to 8 or more, create 1 Heavensfall in hand.\nWhen Heavensfall is created, decrease Descent by 8 (activates max 10 times per turn)."
     },
     {
       "name": "Destroy:",
@@ -13643,7 +13643,7 @@
     },
     {
       "name": "Effulgent Light",
-      "definition": "When Effulgent Light stacks to 3, change Effulgent Compression into Effulgent Release. On effect activation, remove Effulgent Light."
+      "definition": "When Effulgent Light stacks to 3, change Effulgent Compression into Effulgent Release.\nOn effect activation, remove Effulgent Light."
     },
     {
       "name": "Ego Point",
@@ -13659,7 +13659,7 @@
     },
     {
       "name": "Elasticity",
-      "definition": "On ally Extra Attack, Heal 50% for each Elasticity. On activation, remove Elasticity (max 5 stack(s))."
+      "definition": "On ally Extra Attack, Heal 50% for each Elasticity.\nOn activation, remove Elasticity (max 5 stack(s))."
     },
     {
       "name": "Ember",
@@ -13675,11 +13675,11 @@
     },
     {
       "name": "Equilux",
-      "definition": "At the start of the turn, move this card to hand. When moved to hand, polarize into Light and Dark cards (1 time per turn). Hit Count of this card is fixed to 1."
+      "definition": "At the start of the turn, move this card to hand.\nWhen moved to hand, polarize into Light and Dark cards (1 time per turn).\nHit Count of this card is fixed to 1."
     },
     {
       "name": "Evasion",
-      "definition": "Does not lose Health. On activation, reduce Evasion by 1."
+      "definition": "Does not lose Health.\nOn activation, reduce Evasion by 1."
     },
     {
       "name": "Exhaust",
@@ -13711,11 +13711,11 @@
     },
     {
       "name": "Flame Arts",
-      "definition": "When Flame Arts reaches 3 stacks, 120% Extra Damage to the enemy that was attacked last. On effect activation, decrease Flame Arts by 3."
+      "definition": "When Flame Arts reaches 3 stacks, 120% Extra Damage to the enemy that was attacked last.\nOn effect activation, decrease Flame Arts by 3."
     },
     {
       "name": "Form Upgrade",
-      "definition": "While in hand, when an Archetype card is activated, increase a random effect by 100% until activated. Max X stacks (current: X stack(s))."
+      "definition": "While in hand, when an Archetype card is activated, increase a random effect by 100% until activated.\nMax X stacks (current: X stack(s))."
     },
     {
       "name": "Fortitude",
@@ -13723,11 +13723,11 @@
     },
     {
       "name": "Fracture",
-      "definition": "At the end of the turn, 40% DoT for each Fracture. On effect activation, decrease Fracture stacks by half (max 30 stacks)."
+      "definition": "At the end of the turn, 40% DoT for each Fracture.\nOn effect activation, decrease Fracture stacks by half (max 30 stacks)."
     },
     {
       "name": "Fracture Amplification",
-      "definition": "When Fracture inflicted by allies is activated, 1 Fracture to the target, and if there is only one enemy, 2 Fracture. Increase Damage Amount of Fracture inflicted by Arabella by 20%. When applied to a different target, remove Fracture Amplification (cannot stack)."
+      "definition": "When Fracture inflicted by allies is activated, 1 Fracture to the target, and if there is only one enemy, 2 Fracture.\nIncrease Damage Amount of Fracture inflicted by Arabella by 20%.\nWhen applied to a different target, remove Fracture Amplification (cannot stack)."
     },
     {
       "name": "Fracture Amplification:",
@@ -13743,7 +13743,7 @@
     },
     {
       "name": "Handgun Bullet",
-      "definition": "Magnum Shot, Silver Shot, Uranium Shot, Tracer Shot. These are standardized bullets."
+      "definition": "Magnum Shot, Silver Shot, Uranium Shot, Tracer Shot.\nThese are standardized bullets."
     },
     {
       "name": "Harmonization:",
@@ -13755,7 +13755,7 @@
     },
     {
       "name": "Heal",
-      "definition": "Increase current HP based on Defense. Decrease Stress of a random Combatant by 1-6 based on the amount increased."
+      "definition": "Increase current HP based on Defense.\nDecrease Stress of a random Combatant by 1-6 based on the amount increased."
     },
     {
       "name": "Heart Bullet",
@@ -13779,7 +13779,7 @@
     },
     {
       "name": "Impair",
-      "definition": "Decrease Shield Gain Amount by 50%. When the effect is activated, decrease Impair by 1."
+      "definition": "Decrease Shield Gain Amount by 50%.\nWhen the effect is activated, decrease Impair by 1."
     },
     {
       "name": "Incinerate:",
@@ -13795,7 +13795,7 @@
     },
     {
       "name": "Inquiry",
-      "definition": "Inquiry Synergy: Apply effect based on the total number of [ Inquiry ] talents possessed by allies."
+      "definition": "Inquiry Synergy: Apply effect based on the total number of [ Inquiry ] talents possessed by allies.\n3+ Inquiry: On Draw, randomly apply 1 Weaken or Vulnerable to a random enemy (4 times per turn).\n5+ Inquiry: When a harmful effect is applied to the enemy, Draw 1 (2 times per turn).\n7+ Inquiry: At the start of battle, 9 Inquiry: Desire.\nWhen an Inquiry Card is activated, gain 1 Inquiry: Desire for each stack. When Inquiry: Desire reaches 10, create 1 Desire Manifestation: Inquiry card in hand."
     },
     {
       "name": "Inspiration",
@@ -13803,11 +13803,11 @@
     },
     {
       "name": "Inspiration:",
-      "definition": "When this card is moved to hand by Ability, enable Inspiration. Excludes draw at the start of the turn."
+      "definition": "When this card is moved to hand by Ability, enable Inspiration.\nExcludes draw at the start of the turn."
     },
     {
       "name": "Instinct Weakness",
-      "definition": "Apply Weakness Attack to Instinct Cards. When another Attribute Weakness is applied, remove Instinct Weakness."
+      "definition": "Apply Weakness Attack to Instinct Cards.\nWhen another Attribute Weakness is applied, remove Instinct Weakness."
     },
     {
       "name": "Ionization",
@@ -13819,15 +13819,15 @@
     },
     {
       "name": "Launcher Bullet",
-      "definition": "Armor-Piercing Rounds, Explosive Shot, Dispersing Shot, Flame Shot, Cold Shot. These are Launcher Bullets."
+      "definition": "Armor-Piercing Rounds, Explosive Shot, Dispersing Shot, Flame Shot, Cold Shot.\nThese are Launcher Bullets."
     },
     {
       "name": "Lead",
-      "definition": "At the start of the turn, 50% chance to decrease Cost of this card by 1. When a different card is used, remove effect."
+      "definition": "At the start of the turn, 50% chance to decrease Cost of this card by 1.\nWhen a different card is used, remove effect."
     },
     {
       "name": "Light",
-      "definition": "At the start of the turn, move this card to hand and place it on the leftmost side of the hand. If Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
+      "definition": "At the start of the turn, move this card to hand and place it on the leftmost side of the hand.\nIf Light, Dark, and Bind are the only cards remaining in hand, coalesce the Light, Dark, and Sword Tassel cards into the Equilux card."
     },
     {
       "name": "Link",
@@ -13839,7 +13839,7 @@
     },
     {
       "name": "Lux Blessing",
-      "definition": "Fixed Damage equal to Damage blocked by Shield, and increase Damage Amount by 50% for each Lux Engraving. On effect activation, decrease by 1."
+      "definition": "Fixed Damage equal to Damage blocked by Shield, and increase Damage Amount by 50% for each Lux Engraving.\nOn effect activation, decrease by 1."
     },
     {
       "name": "Mark",
@@ -13867,15 +13867,15 @@
     },
     {
       "name": "Opener",
-      "definition": "At the start of battle, proc this card by using AP. If AP is insufficient, does not proc."
+      "definition": "At the start of battle, proc this card by using AP.\nIf AP is insufficient, does not proc."
     },
     {
       "name": "Passion Weakness",
-      "definition": "Apply Weakness Attack to Passion Cards. When another Attribute Weakness is applied, remove Passion Weakness."
+      "definition": "Apply Weakness Attack to Passion Cards.\nWhen another Attribute Weakness is applied, remove Passion Weakness."
     },
     {
       "name": "Performance Buzz",
-      "definition": "At the end of the turn, 100% Damage × Performance Buzz count to random enemies. At the end of the turn, remove Performance Buzz (max 10 stacks)."
+      "definition": "At the end of the turn, 100% Damage × Performance Buzz count to random enemies.\nAt the end of the turn, remove Performance Buzz (max 10 stacks)."
     },
     {
       "name": "Piercing Damage",
@@ -13883,7 +13883,7 @@
     },
     {
       "name": "Predation",
-      "definition": "If in a Voracity state, +80% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1."
+      "definition": "If in a Voracity state, +80% Damage Amount dealt by Attack Cards.\nWhen the effect is activated, decrease by 1."
     },
     {
       "name": "Proc",
@@ -13903,23 +13903,23 @@
     },
     {
       "name": "Quest card",
-      "definition": "Triple 0, Triple 1, Straight, Full House. Obtainable upon completing Cassius Quests."
+      "definition": "Triple 0, Triple 1, Straight, Full House.\nObtainable upon completing Cassius Quests."
     },
     {
       "name": "Quietus",
-      "definition": "When this card is Discarded, proc this card. This card cannot be moved from the Activated Pile for this turn."
+      "definition": "When this card is Discarded, proc this card.\nThis card cannot be moved from the Activated Pile for this turn."
     },
     {
       "name": "Rapacity",
-      "definition": "Also treat Damage dealt by this card as DoT. When Fracture or Agony is applied through an ability, increase Rapacity by 1. When Reckoning is activated, reset Rapacity stack count. Max X stacks."
+      "definition": "Also treat Damage dealt by this card as DoT.\nWhen Fracture or Agony is applied through an ability, increase Rapacity by 1.\nWhen Reckoning is activated, reset Rapacity stack count.\nMax X stacks."
     },
     {
       "name": "Ravage",
-      "definition": "When the monster's Tenacity is fully reduced, activate effect. On Ravage, gain 1 Action Point."
+      "definition": "When the monster's Tenacity is fully reduced, activate effect.\nOn Ravage, gain 1 Action Point."
     },
     {
       "name": "Ravage:",
-      "definition": "When the monster's Tenacity is fully reduced, activate effect. On Ravage, gain 1 Action Point."
+      "definition": "When the monster's Tenacity is fully reduced, activate effect.\nOn Ravage, gain 1 Action Point."
     },
     {
       "name": "Recover",
@@ -13927,11 +13927,11 @@
     },
     {
       "name": "Reload",
-      "definition": "Increase Damage Amount of Ballista cards by 50%. At the end of the turn, remove Reload (max 3 stacks)."
+      "definition": "Increase Damage Amount of Ballista cards by 50%.\nAt the end of the turn, remove Reload (max 3 stacks)."
     },
     {
       "name": "Remove",
-      "definition": "When this card is activated, completely remove it from Deck. This card cannot be saved."
+      "definition": "When this card is activated, completely remove it from Deck.\nThis card cannot be saved."
     },
     {
       "name": "Resolve",
@@ -13959,27 +13959,27 @@
     },
     {
       "name": "Retrieve",
-      "definition": "If this card moves to the Graveyard, return it to hand. Upon activation, remove Retrieve."
+      "definition": "If this card moves to the Graveyard, return it to hand.\nUpon activation, remove Retrieve."
     },
     {
       "name": "Rhythm card",
-      "definition": "Signature cards created by Tenebria. Changes Damage Type according to the Class of the unit who owns the card. Each time a Rhythm card is activated, gain 1 Performance Burnout."
+      "definition": "Signature cards created by Tenebria.\nChanges Damage Type according to the Class of the unit who owns the card.\nEach time a Rhythm card is activated, gain 1 Performance Burnout."
     },
     {
       "name": "Rhythm card(s)",
-      "definition": "Signature cards created by Tenebria. Changes Damage Type according to the Class of the unit who owns the card. Each time a Rhythm card is activated, gain 1 Performance Burnout."
+      "definition": "Signature cards created by Tenebria.\nChanges Damage Type according to the Class of the unit who owns the card.\nEach time a Rhythm card is activated, gain 1 Performance Burnout."
     },
     {
       "name": "Scorched",
-      "definition": "When Action Count is decreased, the amount decreased × 80% DoT (max 10 stack(s)). On effect activation, decrease by 1, and at the end of the turn, remove effect."
+      "definition": "When Action Count is decreased, the amount decreased × 80% DoT (max 10 stack(s)).\nOn effect activation, decrease by 1, and at the end of the turn, remove effect."
     },
     {
       "name": "Shattered Memory",
-      "definition": "This card cannot spark an Epiphany or be Duplicated. This card is not included in battle."
+      "definition": "This card cannot spark an Epiphany or be Duplicated.\nThis card is not included in battle."
     },
     {
       "name": "Shattering",
-      "definition": "When a DoT effect of the target is activated, inflict Fixed Damage equal to 30% of Damage Amount taken (this Damage cannot inflict a Critical Hit). At the end of the turn, decrease Shattering by 1."
+      "definition": "When a DoT effect of the target is activated, inflict Fixed Damage equal to 30% of Damage Amount taken (this Damage cannot inflict a Critical Hit).\nAt the end of the turn, decrease Shattering by 1."
     },
     {
       "name": "Shield",
@@ -13991,7 +13991,7 @@
     },
     {
       "name": "Shield Retention",
-      "definition": "At the end of the turn, Retain Shield equal to the current amount. When multiple instances exist, only the highest value is applied."
+      "definition": "At the end of the turn, Retain Shield equal to the current amount.\nWhen multiple instances exist, only the highest value is applied."
     },
     {
       "name": "Shockwave",
@@ -13999,11 +13999,11 @@
     },
     {
       "name": "Silver Veil",
-      "definition": "When Silver Veil reaches 3 stacks, 500% Defense-Based Damage to all enemies. On activation, remove Silver Veil."
+      "definition": "When Silver Veil reaches 3 stacks, 500% Defense-Based Damage to all enemies.\nOn activation, remove Silver Veil."
     },
     {
       "name": "Spore Propagation",
-      "definition": "Increase Damage Amount taken by 5%. On effect activation, remove all Spore Propagation (max 20 stacks)."
+      "definition": "Increase Damage Amount taken by 5%.\nOn effect activation, remove all Spore Propagation (max 20 stacks)."
     },
     {
       "name": "Streak:",
@@ -14011,11 +14011,11 @@
     },
     {
       "name": "Survival",
-      "definition": "Survival Synergy: Apply effect based on the total number of [ Survival ] talents possessed by allies."
+      "definition": "Survival Synergy: Apply effect based on the total number of [ Survival ] talents possessed by allies.\n3+ Survival: Decrease Damage Amount taken by 10%, and at the end of the turn, 100% Fixed Shield.\n5+ Survival: At the start of the turn, when at 50% or more of Max HP, 3 Morale, Resolve, and Fortitude for 1 turn.\n7+ Survival: At the start of battle, 9 Survival: Desire.\nWhen a Survival card is activated, gain 1 Survival: Desire for each stack, and when Survival: Desire reaches 10 stacks, create 1 Desire Manifestation: Survival card in hand."
     },
     {
       "name": "Tenacity",
-      "definition": "Represents the Tenacity level of the monster. Decreases when attacked, decreases further when attacked with a weakness attribute."
+      "definition": "Represents the Tenacity level of the monster.\nDecreases when attacked, decreases further when attacked with a weakness attribute."
     },
     {
       "name": "Tenacity Damage",
@@ -14035,11 +14035,11 @@
     },
     {
       "name": "Voracity",
-      "definition": "When Hitting with an Attack Card, 40% Fixed Heal. If Health is 50% or higher, +30% Damage Amount dealt by Attack Cards. When the effect is activated, decrease by 1. (max 30 stacks)."
+      "definition": "When Hitting with an Attack Card, 40% Fixed Heal.\nIf Health is 50% or higher, +30% Damage Amount dealt by Attack Cards.\nWhen the effect is activated, decrease by 1.\n(max 30 stacks)."
     },
     {
       "name": "Vulnerable",
-      "definition": "Damage taken increased by 50%. Upon activation, decrease Vulnerable by 1."
+      "definition": "Damage taken increased by 50%.\nUpon activation, decrease Vulnerable by 1."
     },
     {
       "name": "Wave",
@@ -14047,7 +14047,7 @@
     },
     {
       "name": "Weaken",
-      "definition": "Decrease Damage Amount by 25%. When the effect is activated, decrease Weaken by 1."
+      "definition": "Decrease Damage Amount by 25%.\nWhen the effect is activated, decrease Weaken by 1."
     },
     {
       "name": "Weakness Attack",
@@ -14059,7 +14059,7 @@
     },
     {
       "name": "Will-O'-Wisp",
-      "definition": "When 5 Will-O-Wisp are gained, create 1 Shadow of the Moon. When the effect is activated, decrease Will-O-Wisp by 5."
+      "definition": "When 5 Will-O-Wisp are gained, create 1 Shadow of the Moon.\nWhen the effect is activated, decrease Will-O-Wisp by 5."
     },
     {
       "name": "Zero In",

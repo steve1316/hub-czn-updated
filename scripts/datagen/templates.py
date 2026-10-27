@@ -30,6 +30,8 @@ _ASSIGNED_COMBATANT = "the assigned Combatant"
 _BATTLE_ONLY = re.compile(r"^(n_.*|.*_stack_.*|.*vt_mul.*|.*vt_add.*|cs_tv_(?!max_).*|xvalue|hand_count.*|hand_connect.*|.*during_turn.*)$")
 
 _TOKEN = re.compile(r"#([A-Za-z0-9_]+)#")
+# One tier of a synergy, such as `#synergy_ds04_desire_exploration_01#`, which stands for that tier's own text.
+_SYNERGY = re.compile(r"#synergy_([A-Za-z0-9_]+)#")
 _CAL = re.compile(r"\{cal\}(.*?)\{/\}", re.DOTALL)
 # Shared triggers such as `TRIGGER_EFFICIENCY` and character ones such as `C30115_DEBUFF_TRIGGER`. Card references are lower case.
 _TRIGGER = re.compile(r"\^([A-Z][A-Z0-9_]+)\^")
@@ -268,6 +270,7 @@ class TemplateResolver:
         """
         effects = [self.client.effects.get(effect_id, {}) for effect_id in effect_ids]
         unresolved: list[str] = []
+        template = _SYNERGY.sub(self._synergy, template)
 
         def fill(match: re.Match) -> str:
             name = match.group(1)
@@ -310,6 +313,11 @@ class TemplateResolver:
 
     def _trigger(self, match: re.Match) -> str:
         return self.trigger_title(match.group(1)) or match.group(0)
+
+    def _synergy(self, match: re.Match) -> str:
+        # An unknown tier is left in place, so the token pass reports it.
+        row = self.client.synergies.get(match.group(1))
+        return (self.client.text(row.get("desc")) if row else None) or match.group(0)
 
     # //////////////////////////////////////////////////////////////////////////////////////////////////
     # //////////////////////////////////////////////////////////////////////////////////////////////////

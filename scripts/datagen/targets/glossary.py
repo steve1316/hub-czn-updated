@@ -82,7 +82,7 @@ def build_content(lookup, overrides: Overrides, issues: list[Issue]) -> tuple[li
     return glossary, clarifications
 
 
-def source_text(ctx: Context, fields: dict, constants: dict[str, str]) -> tuple[str | None, str | None, list[str]]:
+def source_text(ctx: Context, fields: dict, constants: dict[str, str], *, keep_lines: bool = False) -> tuple[str | None, str | None, list[str]]:
     """
     A term's name and definition as the client writes them.
 
@@ -91,6 +91,7 @@ def source_text(ctx: Context, fields: dict, constants: dict[str, str]) -> tuple[
         fields: The term's override fields. `tooltip` names a tooltip id, and `term_key` / `definition_key` name text keys
             directly, taking precedence over the tooltip.
         constants: The client's game constants, for placeholders such as `#lead_pct#`.
+        keep_lines: Keep each line of the definition on its own line, as the game shows it.
 
     Returns:
         The tidied term, the tidied definition, and the placeholders the definition still contains. Term or definition
@@ -121,7 +122,7 @@ def source_text(ctx: Context, fields: dict, constants: dict[str, str]) -> tuple[
     if stack_cap.isdigit():
         constants = {**constants, "tv_max": stack_cap}
     resolution = ctx.resolver.resolve(fill_constants(template, constants), effects)
-    return term, ctx.text(resolution.text) or None, resolution.unresolved
+    return term, ctx.text(resolution.text, keep_lines=keep_lines) or None, resolution.unresolved
 
 
 def fill_constants(template: str, constants: dict[str, str]) -> str:

@@ -54,7 +54,8 @@ TEXT = {
     "tooltip@title@card_activate": "Activate",
     "tooltip@desc@card_activate": "Using or proccing a card",
     "tooltip@title@t_spore": "Spore Propagation",
-    "tooltip@desc@t_spore": "For #tv# turn(s), spread <cc>1</> spore<br>#synergy_ds04_01#",
+    "tooltip@desc@t_spore": "For #tv# turn(s), spread <cc>1</> spore<br>#synergy_ds04_01#<br>#synergy_ds04_02#",
+    "synergy_define@desc@ds04_01": "3+ Spore: Draw <cc>1</>",
     "tooltip@title@t_wave": "Wave",
     "tooltip@title@trigger_exhaust": "Incinerate:",
     "tooltip@desc@trigger_exhaust": "When this card is $Exhaust$ed, activate effect",
@@ -173,6 +174,7 @@ def _context(root: Path) -> Context:
             {"id": "CARD_DRAW", "title": "tooltip@title@card_draw", "desc": "tooltip@desc@card_draw", "link_cs_id": "none"},
         ],
         "memory_grade_define@card.json": [_card("card_ds05_a_1", "CARD_POWER", cost="0")],
+        "synergy_define@synergy_define.json": [{"id": "ds04_01", "condition_value": "[3]", "desc": "synergy_define@desc@ds04_01"}],
         "card(public)@skill_eff.json": [{"id": "eff_dmg", "eff": "SKILL_EFF_DMG", "eff_attr": "[]", "eff_value": "200"}],
         "card(ikarus)@card_r_spark.json": [{"id": "rsp1_c_1003_srt1", "link_card_id": "c_1003_srt1", "change_link_card_id": "c_1003_srt1_rsp1"}],
         "char_base@char_combatant.json": [{"id": str(NIA), "collapse_skill_link_card_id": "c_1003_eps"}],
@@ -279,7 +281,8 @@ def test_collects_the_keywords_the_card_text_marks_with_their_definitions(tmp_pa
     # Marked keywords, triggers (which keep their colon) and traits. Wave has no definition, so it is left out.
     # Battle-only values read X, and lines that are only such a value are dropped. Fixed Heal is a near miss of the
     # tooltip title "Fixed Healing", which the game matches by its Korean text instead. Lower-case keywords such as
-    # "activate" are verbs whose sense shifts, so they are left out. Drawn and Quest come from the overrides.
+    # "activate" are verbs whose sense shifts, so they are left out. Drawn and Quest come from the overrides. A synergy
+    # tier keeps its own line, and one the client lacks is dropped.
     assert document["keywords"] == [
         {"name": "Drawn", "definition": "Move a card from Draw Pile to hand."},
         {"name": "Exhaust", "definition": "When this card is activated, move to Exhaust Pile."},
@@ -287,7 +290,7 @@ def test_collects_the_keywords_the_card_text_marks_with_their_definitions(tmp_pa
         {"name": "Ignition", "definition": "If a card is Exhausted, decrease Cost of this card by 1."},
         {"name": "Incinerate:", "definition": "When this card is Exhausted, activate effect."},
         {"name": "Quest", "definition": "One of Cassius' challenges."},
-        {"name": "Spore Propagation", "definition": "For X turn(s), spread 1 spore."},
+        {"name": "Spore Propagation", "definition": "For X turn(s), spread 1 spore.\n3+ Spore: Draw 1."},
     ]
 
 
