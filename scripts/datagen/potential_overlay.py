@@ -348,16 +348,17 @@ def draw(clean: Image.Image, nodes: NodeMap, colours: dict[str, str | None], ico
     return out
 
 
-def build(author: Image.Image | None, icons: dict[str, str]) -> tuple[Image.Image, bool]:
+def build(author: Image.Image | None, icons: dict[str, str], marked: dict[str, str] | None = None) -> tuple[Image.Image, bool]:
     """
     Build one character's tree picture.
 
     Args:
         author: The author's tree picture, or None when the guide has none.
         icons: Node label -> icon name for this character, from `variant_icons()`.
+        marked: Node label -> colour, marked by hand. Used instead of reading the author's picture.
 
     Returns:
         The tree and whether it has colours. A missing, too small or unregistered author picture gives the tree with its icons and no rings.
     """
-    colours = sample(author) if author is not None else None
+    colours = marked or (sample(author) if author is not None else None)
     return draw(_clean(), _nodes(), colours or {}, icons), colours is not None

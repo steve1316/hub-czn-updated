@@ -342,6 +342,7 @@ def build(ctx: Context) -> TargetResult:
     decks = _DeckPictures()
     issues: list[Issue] = []
     section_fixes = _section_fixes(overrides.directives.get("_sections", {}), issues)
+    potential_colours = _potential_colours(overrides.directives.get("_potentials", {}), issues)
     files: dict[Path, bytes] = {}
     new_files: dict[Path, bytes] = {}
     guides: list[tuple[str, str, dict]] = []
@@ -367,6 +368,7 @@ def build(ctx: Context) -> TargetResult:
             "source": {"url": EDIT_URL.format(gid=gid), "label": {"en": SOURCE_LABEL}},
         }
         builder.icons = potential_overlay.variant_icons(potential_rows, str(res_id))
+        builder.potential_colours = potential_colours.get(tab_name)
         sections, updated = builder.sections(grid)
         if updated:
             guide["updated"] = updated
@@ -454,6 +456,30 @@ def _section_fixes(directive: dict[str, dict[str, str]], issues: list[Issue]) ->
             else:
                 issues.append(Issue("error", f"{NAME}: `_sections` puts {tab_name!r} band {title!r} on unknown page {page_id!r}"))
     return fixes
+
+
+def _potential_colours(directive: dict[str, dict[str, str]], issues: list[Issue]) -> dict[str, dict[str, str]]:
+    """
+    The `_potentials` directive without the nodes or colours the tree does not have.
+
+    Args:
+        directive: Tab -> node label -> ring colour, marked by hand.
+        issues: Updated in place with an error for each unknown node or colour.
+
+    Returns:
+        The usable entries, in the same shape.
+    """
+    nodes = potential_overlay.NodeMap.load(potential_overlay.NODES_PATH).nodes
+    marks: dict[str, dict[str, str]] = {}
+    for tab_name, colours in directive.items():
+        for label, colour in colours.items():
+            if label not in nodes:
+                issues.append(Issue("error", f"{NAME}: `_potentials` marks unknown node {label!r} on {tab_name!r}"))
+            elif colour not in potential_overlay.RING_COLOURS:
+                issues.append(Issue("error", f"{NAME}: `_potentials` gives {tab_name!r} node {label!r} unknown colour {colour!r}"))
+            else:
+                marks.setdefault(tab_name, {})[label] = colour
+    return marks
 
 
 def _cards_by_owner(ctx: Context) -> dict[str, list[str]]:
@@ -817,6 +843,8 @@ class _GuideBuilder:
         self.trees: dict[str, bytes] = {}
         # Node label -> icon name for the character's two stat nodes, set by `build`.
         self.icons: dict[str, str] = {}
+        # Node label -> ring colour marked by hand in the `_potentials` override, set by `build`. Used instead of reading the author's picture.
+        self.potential_colours: dict[str, str] | None = None
         # File name -> picture, for the wide strips this guide shows as image blocks.
         self.strips: dict[str, _Download] = {}
         # For the QC report: the cells of dropped icons, of pictures given a card by the run they sit in, and the note lines placed by their number.
@@ -917,9 +945,9 @@ class _GuideBuilder:
             author: The author's tree picture, or None when the tab has none.
 
         Returns:
-            The file name of the tree, which is kept in `trees`, and whether the author's ring colours were read.
+            The file name of the tree, which is kept in `trees`, and whether it has ring colours, read or marked by hand.
         """
-        picture, coloured = potential_overlay.build(author, self.icons)
+        picture, coloured = potential_overlay.build(author, self.icons, self.potential_colours)
         name = f"{self.guide_slug}-tree.webp"
         buffer = io.BytesIO()
         picture.save(buffer, "WEBP", quality=POTENTIALS_QUALITY)

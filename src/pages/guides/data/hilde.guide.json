@@ -1445,7 +1445,7 @@
           "type": "potentials",
           "image": "hilde.webp",
           "treeImage": "hilde-tree.webp",
-          "coloured": false,
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",

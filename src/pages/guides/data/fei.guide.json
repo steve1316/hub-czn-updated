@@ -999,7 +999,7 @@
           "type": "potentials",
           "image": "fei.webp",
           "treeImage": "fei-tree.webp",
-          "coloured": false,
+          "coloured": true,
           "legend": [
             {
               "colour": "purple",
