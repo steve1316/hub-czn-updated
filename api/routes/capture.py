@@ -61,7 +61,9 @@ class SetRegionRequest(BaseModel):
 
 
 class CaptureSettingsRequest(BaseModel):
-    auto_start: bool
+    # Each setting is saved on its own, so a field left out keeps its stored value.
+    auto_start: bool | None = None
+    debug: bool | None = None
 
 
 @router.get("/capture/status")
@@ -83,7 +85,7 @@ def get_capture_settings():
 
 @router.post("/capture/settings")
 def post_capture_settings(body: CaptureSettingsRequest):
-    return save_capture_settings({**load_capture_settings(), "auto_start": body.auto_start})
+    return save_capture_settings({**load_capture_settings(), **body.model_dump(exclude_none=True)})
 
 
 @router.get("/capture/log")
@@ -168,7 +170,7 @@ def auto_start_capture() -> bool:
     if not settings["auto_start"]:
         return False
     try:
-        begin_capture(settings["region"], auto=True)
+        begin_capture(settings["region"], settings["debug"], auto=True)
     except HTTPException as exc:
         state.push_log("error", f"Auto-start could not begin capture: {exc.detail}")
         return False

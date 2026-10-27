@@ -9,7 +9,7 @@ import { useCaptureLog } from '@/hooks/useCaptureLog'
 import { Button } from '@/components/ui/button'
 import { CheckCircle, XCircle, Radio, Square, FolderOpen, Download, Loader2, Info } from 'lucide-react'
 import { InfoPopover } from '@/components/ui/info-popover'
-import type { CaptureLogMessage, CaptureStatus } from '@/lib/types'
+import type { CaptureLogMessage, CaptureSettingsChange, CaptureStatus } from '@/lib/types'
 
 /** Queries whose data comes from the loaded capture, refreshed after "Load latest". */
 const LOADED_DATA_KEYS = ['status', 'fragments', 'combatants', 'simulate-decks']
@@ -367,7 +367,6 @@ export function CapturePage() {
   const qc = useQueryClient()
   const { messages, clear } = useCaptureLog()
   const [autoScroll, setAutoScroll] = useState(true)
-  const [debug, setDebug] = useState(false)
   const [region, setRegion] = useState<'global' | 'asia'>('global')
   const logRef = useRef<HTMLDivElement>(null)
 
@@ -376,6 +375,12 @@ export function CapturePage() {
     queryFn: () => api.captureStatus(),
     refetchInterval: 3000,
   })
+
+  const { data: captureSettings } = useQuery({
+    queryKey: ['capture-settings'],
+    queryFn: () => api.captureSettings(),
+  })
+  const debug = captureSettings?.debug ?? false
 
   const { data: setupStatus, isPending: setupPending } = useQuery({
     queryKey: ['setup-status'],
@@ -428,14 +433,13 @@ export function CapturePage() {
     onSuccess: () => qc.invalidateQueries({ queryKey: ['capture-status'] }),
   })
 
-  const { data: captureSettings } = useQuery({
-    queryKey: ['capture-settings'],
-    queryFn: () => api.captureSettings(),
-  })
-
-  const autoStartMutation = useMutation({
-    mutationFn: (autoStart: boolean) => api.captureSetSettings({ auto_start: autoStart }),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ['capture-settings'] }),
+  const settingsMutation = useMutation({
+    mutationFn: (change: CaptureSettingsChange) => api.captureSetSettings(change),
+    onSuccess: (settings, change) => {
+      qc.setQueryData(['capture-settings'], settings)
+      // Turning auto-start on means capture should be running whenever the app is open, so start it now rather than at the next launch.
+      if (change.auto_start && !running && prereqsOk) startMutation.mutate()
+    },
   })
 
   const regionMutation = useMutation({
@@ -500,8 +504,8 @@ export function CapturePage() {
           <input
             type="checkbox"
             checked={debug}
-            disabled={running}
-            onChange={e => setDebug(e.target.checked)}
+            disabled={running || settingsMutation.isPending}
+            onChange={e => settingsMutation.mutate({ debug: e.target.checked })}
             className="accent-[#c084fc]"
           />
           {t('capture.debugMode')}
@@ -513,14 +517,14 @@ export function CapturePage() {
             <input
               type="checkbox"
               checked={captureSettings?.auto_start ?? false}
-              disabled={autoStartMutation.isPending}
-              onChange={e => autoStartMutation.mutate(e.target.checked)}
+              disabled={settingsMutation.isPending}
+              onChange={e => settingsMutation.mutate({ auto_start: e.target.checked })}
               className="accent-[#c084fc]"
             />
             {t('capture.autoStart')}
             <InfoPopover content={t('capture.autoStartTip')} />
           </label>
-          <MutationError error={autoStartMutation.isError ? autoStartMutation.error : undefined} />
+          <MutationError error={settingsMutation.isError ? settingsMutation.error : undefined} />
         </div>
 
         {running && captureStatus?.auto_started && (

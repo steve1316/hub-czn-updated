@@ -1,7 +1,7 @@
 import type {
   ApiStatus, GameData, LoadResponse, MemoryFragment,
   SetupStatus, SetupActionResponse, RemoveCertResponse, ClearRedirectResponse, CaptureStatus,
-  CaptureStartRequest, CaptureStopResponse, CaptureSettings, RescueBanner,
+  CaptureStartRequest, CaptureStopResponse, CaptureSettings, CaptureSettingsChange, RescueBanner,
   Combatant, CombatantStats, ScoringPriorities,
   OptimizerConfig, EquipmentSet, Monster, AboutInfo, CharPreset,
   SimulateRequest, SimulateDamageResponse, DeckInfo,
@@ -230,7 +230,7 @@ export const api = {
 
   captureSettings: () => request<CaptureSettings>('/api/capture/settings'),
 
-  captureSetSettings: (body: { auto_start: boolean }) =>
+  captureSetSettings: (body: CaptureSettingsChange) =>
     request<CaptureSettings>('/api/capture/settings', { method: 'POST', body: JSON.stringify(body) }),
 
   captureOpenSnapshots: () =>

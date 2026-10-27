@@ -150,7 +150,12 @@ export interface CaptureSettings {
   auto_start: boolean
   /** Server region used for auto-start. */
   region: 'global' | 'asia'
+  /** Whether capture also logs every WebSocket message to a debug file. Remembered across launches. */
+  debug: boolean
 }
+
+/** The capture settings a save can change. A setting left out keeps its stored value. */
+export type CaptureSettingsChange = Partial<Pick<CaptureSettings, 'auto_start' | 'debug'>>
 
 export interface CaptureStartRequest {
   region: 'global' | 'asia'

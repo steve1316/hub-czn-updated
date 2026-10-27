@@ -35,6 +35,13 @@ def test_settings_round_trip():
     assert capture_settings.load_capture_settings()["auto_start"] is True
 
 
+def test_debug_mode_is_remembered_without_touching_auto_start():
+    client.post("/api/capture/settings", json={"auto_start": True})
+    r = client.post("/api/capture/settings", json={"debug": True})
+    assert r.json()["debug"] is True
+    assert capture_settings.load_capture_settings() == {"auto_start": True, "region": "global", "debug": True}
+
+
 def test_settings_corrupt_file_falls_back_to_defaults():
     capture_settings.SETTINGS_PATH.write_text("{not json", encoding="utf-8")
     assert capture_settings.load_capture_settings()["auto_start"] is False
@@ -65,6 +72,17 @@ def test_auto_start_starts_capture_with_saved_region():
     assert state.capture_running is True
     assert state.capture_auto_started is True
     assert any("automatically" in e["message"] for e in state.log_tail)
+    state.capture_running = False
+    state.reset_capture_manager()
+
+
+def test_auto_start_uses_the_saved_debug_mode():
+    capture_settings.save_capture_settings({"auto_start": True, "region": "global", "debug": True})
+    mgr = MagicMock()
+    a, b, c = _patched(mgr)
+    with a, b, c:
+        assert capture_routes.auto_start_capture() is True
+    mgr.start_capture.assert_called_once_with(debug_mode=True)
     state.capture_running = False
     state.reset_capture_manager()
 
