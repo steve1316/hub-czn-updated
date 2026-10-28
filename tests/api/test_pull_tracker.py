@@ -1,8 +1,7 @@
 """
-Pull tracker: the addon pairs `gacha/history` pages with their banner, keeps `gacha/get_list` pity, and merges history across sessions.
+Pull tracker: the addon pairs `gacha/history` pages with their banner, keeps `gacha/get_list` pity, saves `gacha/run` pulls live, and merges history across sessions.
 
-`gacha/get_list` and the record shape come from real captures (account ids scrubbed). The `gacha/history` request shape is from the project plan and
-has not been seen in a capture yet.
+`gacha/get_list`, `gacha/history`, `gacha/run` and the record shape come from real captures (account ids scrubbed).
 """
 
 import json
@@ -147,3 +146,88 @@ def test_manager_pushes_a_snapshot_updated_event_for_rescue_saves(tmp_path):
     mgr._on_saved("rescue")
     mgr._on_saved("battle")
     assert [(e["type"], e["kind"]) for e in events] == [("snapshot_updated", "rescue")]
+
+
+# A trimmed `gacha/run` reply from a real 10-pull. The pity entity is the state after the pull.
+RUN_REPLY = {
+    "res": "ok",
+    "result": True,
+    "list": [
+        {"index": 1, "res_id": 20013, "is_new": 0, "is_prism": 0},
+        {"index": 0, "res_id": 20012, "is_new": 0, "is_prism": 0},
+        {"index": 2, "res_id": 1021, "is_new": 0, "is_prism": 1},
+    ],
+    "gacha_pity_entity": {"user_id": "300000000001", "res_id": "gacha_pity_card_factor", "pity_ssr_count": 14, "pity_sr_count": 0, "mileage": 736,
+                          "updateAt": "1792620656"},
+    "service_server_time": 1793136810,
+    "qid": 44,
+}
+
+
+def _pull(addon, reply=RUN_REPLY, pool="gacha_card_factor"):
+    _ask(addon, 44, "gacha", "run", id=pool, count=len(reply["list"]))
+    _reply(addon, reply)
+
+
+def test_a_pull_is_saved_as_it_happens(addon, tmp_path):
+    _pull(addon)
+    doc = _load(tmp_path)
+    [record] = doc["records"]
+    assert record["gacha_id"] == "gacha_card_factor"
+    assert json.loads(record["reward"]) == [20012, 20013, 1021]
+    assert json.loads(record["prism"]) == [0, 0, 1]
+    assert record["createAt"] == "1793136810"
+    assert record["live"] is True
+    assert doc["pity"]["gacha_pity_card_factor"]["pity_ssr_count"] == 14
+    assert "rescue" in addon.saved_kinds
+
+
+def test_a_pull_does_not_mark_its_banner_history_as_refreshed(addon, tmp_path):
+    # Pulls made on another device are only in the history, so a live pull must not hide that the history is out of date.
+    _pull(addon)
+    assert "gacha_card_factor" not in _load(tmp_path).get("pool_fetches", {})
+
+
+def test_a_pull_reply_without_its_request_is_ignored(addon, tmp_path):
+    _reply(addon, RUN_REPLY)
+    assert not list(tmp_path.glob("rescue_records_*.json"))
+
+
+def test_the_history_entry_for_a_live_pull_replaces_it(addon, tmp_path):
+    _pull(addon)
+    _ask(addon, 7, "gacha", "history", id="gacha_card_factor", last_db_id=0)
+    _reply(addon, {"res": "ok", "qid": 7, "next_page_exists": False, "gacha_history_list": [
+        _record(900, gacha_id="gacha_card_factor", reward=(20012, 20013, 1021), create_at=1793136811)]})
+    [record] = _load(tmp_path)["records"]
+    assert record["id"] == "900"
+    assert "live" not in record
+
+
+def test_a_history_entry_replaces_only_one_of_two_identical_pulls(addon, tmp_path):
+    _pull(addon)
+    _pull(addon)
+    _ask(addon, 7, "gacha", "history", id="gacha_card_factor", last_db_id=0)
+    _reply(addon, {"res": "ok", "qid": 7, "next_page_exists": True, "gacha_history_list": [
+        _record(900, gacha_id="gacha_card_factor", reward=(20012, 20013, 1021), create_at=1793136811)]})
+    assert sorted(bool(r.get("live")) for r in _load(tmp_path)["records"]) == [False, True]
+
+
+def test_a_different_history_entry_keeps_the_live_pull(addon, tmp_path):
+    _pull(addon)
+    _reply(addon, {"res": "ok", "qid": 7, "gacha_history_list": [
+        _record(900, gacha_id="gacha_card_factor", reward=(20012, 20013, 1021), create_at=1793130000)]})
+    assert len(_load(tmp_path)["records"]) == 2
+
+
+def test_a_history_page_says_whether_another_page_follows(addon, tmp_path):
+    _ask(addon, 7, "gacha", "history", id="gacha_card_factor", last_db_id=0)
+    _reply(addon, {"res": "ok", "qid": 7, "next_page_exists": True, "gacha_history_list": [_record(10)]})
+    first = _load(tmp_path)["last_history_page"]
+    assert first["pool"] == "gacha_card_factor"
+    assert first["has_more"] is True
+    _ask(addon, 8, "gacha", "history", id="gacha_card_factor", last_db_id=10)
+    _reply(addon, {"res": "ok", "qid": 8, "next_page_exists": False, "gacha_history_list": [_record(9)]})
+    last = _load(tmp_path)["last_history_page"]
+    assert last["has_more"] is False
+    assert last["seq"] == first["seq"] + 1
+    assert len(_load(tmp_path)["records"]) == 2

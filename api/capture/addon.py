@@ -53,7 +53,11 @@ CMD_UNEQUIP = "item/unequip_piece"
 # Pull tracker commands. History pages name their banner in the request, and the pity list has its own reply key.
 CMD_GACHA_HISTORY = "gacha/history"
 CMD_GACHA_LIST = "gacha/get_list"
+CMD_GACHA_RUN = "gacha/run"
 PITY_KEY = "gacha_pity_entity_list"
+# A pull is saved from its reply as it happens. The history entry the server writes for it replaces that copy when the pool and results match
+# and the times are this close.
+LIVE_MATCH_SECONDS = 120
 
 # Reply keys that state what a holding now is, with `doc.amount` as the total.
 TOTALS_KEYS = ("add_result", "item_result", "dec_result")
@@ -96,23 +100,46 @@ def _docs(rows) -> list:
     return [e["doc"] for e in rows.values() if isinstance(e, dict) and isinstance(e.get("doc"), dict)]
 
 
+def _rewards(record: dict) -> list[int]:
+    """The reward ids of a rescue record, sorted. History pages store `reward` as a JSON string."""
+    raw = record.get("reward", [])
+    if isinstance(raw, str):
+        try:
+            raw = json.loads(raw)
+        except Exception:
+            raw = []
+    return sorted(int(r) for r in (raw or []) if r is not None)
+
+
+def _create_at(record: dict) -> int:
+    """The record's `createAt` in seconds, or 0 when it is missing or malformed."""
+    try:
+        return int(record.get("createAt", 0))
+    except (ValueError, TypeError):
+        return 0
+
+
+def _is_history_of(server: dict, live: dict) -> bool:
+    """Whether a history entry is the server's copy of a pull that was saved live."""
+    return bool(live.get("live") and server.get("gacha_id") == live.get("gacha_id") and _rewards(server) == _rewards(live)
+                and abs(_create_at(server) - _create_at(live)) <= LIVE_MATCH_SECONDS)
+
+
+def _pity_fields(entry: dict) -> dict:
+    """The parts of a server pity entity the Rescue page uses."""
+    return {
+        "pity_ssr_count": entry.get("pity_ssr_count", 0),
+        "pity_sr_count": entry.get("pity_sr_count", 0),
+        "mileage": entry.get("mileage", 0),
+        "updated_at": entry.get("updateAt"),
+    }
+
+
 def _rescue_record_key(record: dict) -> str:
     """Stable dedup key. The server record id wins when there is one, otherwise the semantic fields are used."""
     if record.get("id") not in (None, ""):
         return f"id|{record['id']}"
-    gacha_id = str(record.get("gacha_id", ""))
-    try:
-        create_at = int(record.get("createAt", 0))
-    except (ValueError, TypeError):
-        create_at = 0
-    reward_raw = record.get("reward", [])
-    if isinstance(reward_raw, str):
-        try:
-            reward_raw = json.loads(reward_raw)
-        except Exception:
-            reward_raw = []
-    reward = sorted(int(r) for r in (reward_raw or []) if r is not None)
-    return f"{gacha_id}|{create_at}|{reward}"
+    return f"{record.get('gacha_id', '')}|{_create_at(record)}|{_rewards(record)}"
 
 
 class Addon:
@@ -157,6 +184,7 @@ class Addon:
         self.dispatch.register(CMD_UNEQUIP, self._on_unequip)
         self.dispatch.register(CMD_GACHA_HISTORY, self._on_gacha_history)
         self.dispatch.register(CMD_GACHA_LIST, self._on_gacha_list)
+        self.dispatch.register(CMD_GACHA_RUN, self._on_gacha_run)
         # When this capture started, so the page can tell which banners were refreshed during it.
         self.session_start = int(time.time())
         # Set by a delta so the snapshot is written once at the end of the frame.
@@ -440,10 +468,13 @@ class Addon:
                 self.character_data = data
             self._mark_dirty()
 
-        # Capture rescue/gacha records (pull history)
+        # Capture rescue/gacha records (pull history). A history page also notes whether another follows, for Auto-Scroll.
+        page = None
+        if request is not None and request.name == CMD_GACHA_HISTORY:
+            page = {"pool": str(request.params.get("id") or ""), "has_more": bool(data.get("next_page_exists"))}
         for key in RESCUE_KEYS:
             if key in data:
-                self._save_rescue_data(key, data[key])
+                self._save_rescue_data(key, data[key], page)
                 break
 
         # Capture battle data
@@ -785,8 +816,17 @@ class Addon:
         self.log_callback(f"[RESCUE] Saved: {len(doc['records'])} rescue records -> {self.rescue_path.name}")
         self.on_saved("rescue")
 
-    def _save_rescue_data(self, key: str, records):
-        """Save rescue/gacha records, accumulating across pages and sessions and never dropping old ones."""
+    def _save_rescue_data(self, key: str, records, page: dict | None = None):
+        """
+        Save rescue/gacha records, accumulating across pages and sessions and never dropping old ones.
+
+        A history entry replaces the copy of the same pull that was saved live.
+
+        Args:
+            key: The reply key the records came from.
+            records: One record or a list of them.
+            page: For a history page, its pool and whether another page follows. Auto-Scroll reads it to know when to stop.
+        """
         doc = self._load_rescue()
         seen = {_rescue_record_key(r) for r in doc["records"]}
         fetches = doc.setdefault("pool_fetches", {})
@@ -798,8 +838,15 @@ class Addon:
                 fetches[str(record["gacha_id"])] = now
             key_str = _rescue_record_key(record)
             if key_str not in seen:
+                # One live copy per history entry, so two identical pulls close together each keep their own.
+                twin = next((r for r in doc["records"] if _is_history_of(record, r)), None)
+                if twin is not None:
+                    doc["records"].remove(twin)
                 doc["records"].append(record)
                 seen.add(key_str)
+        if page is not None:
+            # A counter rather than a time, so two pages a moment apart still read as two.
+            doc["last_history_page"] = {**page, "seq": doc.get("last_history_page", {}).get("seq", 0) + 1}
         self._write_rescue(doc, key)
 
     def _on_gacha_history(self, data: dict, request: PendingRequest):
@@ -836,13 +883,36 @@ class Addon:
         pity = doc.setdefault("pity", {})
         for entry in entries:
             if isinstance(entry, dict) and entry.get("res_id"):
-                pity[str(entry["res_id"])] = {
-                    "pity_ssr_count": entry.get("pity_ssr_count", 0),
-                    "pity_sr_count": entry.get("pity_sr_count", 0),
-                    "mileage": entry.get("mileage", 0),
-                    "updated_at": entry.get("updateAt"),
-                }
+                pity[str(entry["res_id"])] = _pity_fields(entry)
         self._write_rescue(doc, PITY_KEY)
+
+    def _on_gacha_run(self, data: dict, request: PendingRequest):
+        """
+        Save a pull as it happens, in the same shape as a history entry, and keep the pity it left.
+
+        The record has no server id and is marked `live`. The history entry for it replaces it once a history page brings it in.
+
+        Args:
+            data: The `gacha/run` reply, whose `list` holds one result per pull and whose pity entity is the state after the pull.
+            request: The request it answers, whose `id` param is the banner.
+        """
+        pool = request.params.get("id")
+        results = sorted((r for r in data.get("list") or [] if isinstance(r, dict)), key=lambda r: r.get("index", 0))
+        if not pool or not results:
+            return
+        doc = self._load_rescue()
+        doc["records"].append({
+            "gacha_id": str(pool),
+            "count": len(results),
+            "reward": json.dumps([r.get("res_id") for r in results]),
+            "prism": json.dumps([1 if r.get("is_prism") else 0 for r in results]),
+            "createAt": str(data.get("service_server_time") or int(time.time())),
+            "live": True,
+        })
+        entry = data.get("gacha_pity_entity")
+        if isinstance(entry, dict) and entry.get("res_id"):
+            doc.setdefault("pity", {})[str(entry["res_id"])] = _pity_fields(entry)
+        self._write_rescue(doc, CMD_GACHA_RUN)
 
     def _on_battle_info(self, battle_info: dict):
         """Save enemy stats when a new battle begins."""
