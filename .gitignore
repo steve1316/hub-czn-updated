@@ -79,6 +79,7 @@ node_modules/
 dist/
 src-tauri/target/
 src-tauri/binaries/*.exe
+src-tauri/binaries/hub-czn-api-lib/
 
 # Test artifacts
 test_output.txt

@@ -143,12 +143,14 @@ jobs:
           python sync_version.py
 
       # check_sidecar_version.py aborts the Tauri build when the sidecar is older than the version file,
-      # so PyInstaller has to run after sync_version.py. Do not reorder these two steps.
+      # so PyInstaller has to run after sync_version.py. Do not reorder these two steps. The sidecar is a one-folder build, so its
+      # hub-czn-api-lib folder is copied too, where tauri.conf.json picks it up as a resource.
       - name: Build the sidecar
         shell: cmd
         run: |
-          pyinstaller api/hub_czn_api.spec --clean --noconfirm
-          copy /Y "dist\hub-czn-api.exe" "src-tauri\binaries\hub-czn-api-x86_64-pc-windows-msvc.exe"
+          pyinstaller api/hub_czn_api.spec --clean --noconfirm || exit /b 1
+          copy /Y "dist\hub-czn-api\hub-czn-api.exe" "src-tauri\binaries\hub-czn-api-x86_64-pc-windows-msvc.exe" || exit /b 1
+          xcopy /E /I /Q /Y "dist\hub-czn-api\hub-czn-api-lib" "src-tauri\binaries\hub-czn-api-lib" || exit /b 1
 
       # beforeBuildCommand already runs check_sidecar_version.py and the frontend build, so neither
       # needs its own step here.

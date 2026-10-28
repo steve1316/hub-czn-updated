@@ -30,9 +30,18 @@ if errorlevel 1 (
 
 :: Tauri expects the sidecar at src-tauri/binaries/<name>-<target-triple>.exe
 set TARGET_TRIPLE=x86_64-pc-windows-msvc
-copy /Y "dist\hub-czn-api.exe" "src-tauri\binaries\hub-czn-api-%TARGET_TRIPLE%.exe"
+copy /Y "dist\hub-czn-api\hub-czn-api.exe" "src-tauri\binaries\hub-czn-api-%TARGET_TRIPLE%.exe"
 if errorlevel 1 (
     echo ERROR: Failed to copy sidecar binary.
+    pause & exit /b 1
+)
+
+:: The sidecar's libraries and data sit in a folder next to it, which tauri.conf.json bundles as a resource.
+:: Cleared first so files dropped from the build do not linger.
+if exist "src-tauri\binaries\hub-czn-api-lib" rmdir /S /Q "src-tauri\binaries\hub-czn-api-lib"
+xcopy /E /I /Q /Y "dist\hub-czn-api\hub-czn-api-lib" "src-tauri\binaries\hub-czn-api-lib"
+if errorlevel 1 (
+    echo ERROR: Failed to copy sidecar libraries.
     pause & exit /b 1
 )
 

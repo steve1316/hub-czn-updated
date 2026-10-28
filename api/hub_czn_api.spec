@@ -72,17 +72,19 @@ a = Analysis(
 
 pyz = PYZ(a.pure)
 
+# One-folder build. A one-file exe unpacks everything (~130 MB with the art) into %TEMP% on every launch, which added seconds to startup.
+# The libraries and data go in hub-czn-api-lib/ next to the exe, and Tauri installs that folder alongside it as a resource.
 exe = EXE(
     pyz,
     a.scripts,
-    a.binaries,
-    a.zipfiles,
-    a.datas,
+    [],
+    exclude_binaries=True,
+    contents_directory='hub-czn-api-lib',
     name='hub-czn-api',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
-    upx=True,
+    upx=False,  # UPX-packed DLLs are unpacked again on every load, which would undo the startup gain
     console=True,   # Must be True — Tauri reads PORT:xxxx from stdout
     disable_windowed_traceback=False,
     argv_emulation=False,
@@ -90,4 +92,14 @@ exe = EXE(
     codesign_identity=None,
     entitlements_file=None,
     uac_admin=True,  # embed requireAdministrator so the sidecar is always elevated on Windows 10/11
+)
+
+coll = COLLECT(
+    exe,
+    a.binaries,
+    a.zipfiles,
+    a.datas,
+    strip=False,
+    upx=False,
+    name='hub-czn-api',
 )
