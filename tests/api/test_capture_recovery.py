@@ -75,6 +75,12 @@ def test_setup_status_reports_a_stuck_redirect(client, fake_hosts):
     assert res.json()["hosts_redirect_active"] is True
 
 
+def test_setup_status_ignores_the_redirect_of_a_running_capture(client, fake_hosts, monkeypatch):
+    # A running capture needs the block, so it is not stuck and Setup must not offer to remove it.
+    monkeypatch.setattr(state_mod.state, "capture_running", True)
+    assert client.get("/api/setup/status").json()["hosts_redirect_active"] is False
+
+
 def test_setup_status_is_quiet_when_the_hosts_file_is_clean(client, fake_hosts):
     fake_hosts.write_text(CLEAN)
     assert client.get("/api/setup/status").json()["hosts_redirect_active"] is False

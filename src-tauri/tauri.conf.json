@@ -36,6 +36,9 @@
     "externalBin": [
       "binaries/hub-czn-api"
     ],
+    "resources": {
+      "binaries/hub-czn-api-lib/": "hub-czn-api-lib/"
+    },
     "windows": {
       "nsis": {
         "installerHooks": "nsis/installer-hooks.nsi"

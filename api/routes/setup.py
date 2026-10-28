@@ -17,6 +17,7 @@ from api.capture.setup import (
     CertificateInstallError,
 )
 from api.capture.manager import has_capture_entries, remove_capture_entries
+from api.state import state
 
 router = APIRouter()
 
@@ -35,8 +36,9 @@ def get_setup_status():
         "can_write_hosts": s.can_write_hosts,
         "hosts_block_reason": s.hosts_block_reason,
         # Runtime state rather than a prerequisite: a block left by a capture that did not shut down
-        # cleanly stops the game connecting, so Setup has to show it and offer a way out.
-        "hosts_redirect_active": has_capture_entries(),
+        # cleanly stops the game connecting, so Setup has to show it and offer a way out. A running
+        # capture needs its block, so it only counts as leftover once capture has stopped.
+        "hosts_redirect_active": has_capture_entries() and not state.capture_running,
     }
 
 
