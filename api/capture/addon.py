@@ -800,20 +800,21 @@ class Addon:
                 pass
         return {"records": []}
 
-    def _write_rescue(self, doc: dict, key: str):
+    def _write_rescue(self, doc: dict, key: str, message: str):
         """
         Write the rescue document and tell the UI.
 
         Args:
             doc: The full document to store.
             key: The reply key the latest change came from.
+            message: What changed, for the capture log.
         """
         doc["capture_time"] = datetime.now().isoformat()
         doc["source_key"] = key
         doc["session_start"] = self.session_start
         with open(self.rescue_path, "w", encoding="utf-8") as f:
             json.dump(doc, f, indent=2)
-        self.log_callback(f"[RESCUE] Saved: {len(doc['records'])} rescue records -> {self.rescue_path.name}")
+        self.log_callback(f"[RESCUE] {message}")
         self.on_saved("rescue")
 
     def _save_rescue_data(self, key: str, records, page: dict | None = None):
@@ -828,6 +829,7 @@ class Addon:
             page: For a history page, its pool and whether another page follows. Auto-Scroll reads it to know when to stop.
         """
         doc = self._load_rescue()
+        before = len(doc["records"])
         seen = {_rescue_record_key(r) for r in doc["records"]}
         fetches = doc.setdefault("pool_fetches", {})
         now = int(time.time())
@@ -847,7 +849,8 @@ class Addon:
         if page is not None:
             # A counter rather than a time, so two pages a moment apart still read as two.
             doc["last_history_page"] = {**page, "seq": doc.get("last_history_page", {}).get("seq", 0) + 1}
-        self._write_rescue(doc, key)
+        added, total = len(doc["records"]) - before, len(doc["records"])
+        self._write_rescue(doc, key, f"Saved: {added} new pull{'' if added == 1 else 's'} ({total} total) -> {self.rescue_path.name}")
 
     def _on_gacha_history(self, data: dict, request: PendingRequest):
         """
@@ -884,7 +887,8 @@ class Addon:
         for entry in entries:
             if isinstance(entry, dict) and entry.get("res_id"):
                 pity[str(entry["res_id"])] = _pity_fields(entry)
-        self._write_rescue(doc, PITY_KEY)
+        # Logging in sends only these counters, so say so rather than suggest new pulls were saved.
+        self._write_rescue(doc, PITY_KEY, "Pity counters updated. Open a banner's Rescue Records in the game to save its pulls.")
 
     def _on_gacha_run(self, data: dict, request: PendingRequest):
         """
@@ -912,7 +916,7 @@ class Addon:
         entry = data.get("gacha_pity_entity")
         if isinstance(entry, dict) and entry.get("res_id"):
             doc.setdefault("pity", {})[str(entry["res_id"])] = _pity_fields(entry)
-        self._write_rescue(doc, CMD_GACHA_RUN)
+        self._write_rescue(doc, CMD_GACHA_RUN, f"Saved: {len(results)}-pull as it happened ({len(doc['records'])} total) -> {self.rescue_path.name}")
 
     def _on_battle_info(self, battle_info: dict):
         """Save enemy stats when a new battle begins."""

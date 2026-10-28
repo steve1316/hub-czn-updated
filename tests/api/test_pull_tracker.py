@@ -47,10 +47,14 @@ def _reply(addon, payload):
     addon.websocket_message(_flow([payload]))
 
 
-def _load(tmp_path):
+def _load_path(tmp_path):
     files = sorted(tmp_path.glob("rescue_records_*.json"))
     assert files, "no rescue file written"
-    return json.loads(files[-1].read_text(encoding="utf-8"))
+    return files[-1]
+
+
+def _load(tmp_path):
+    return json.loads(_load_path(tmp_path).read_text(encoding="utf-8"))
 
 
 @pytest.fixture
@@ -126,6 +130,29 @@ def test_get_list_keeps_existing_records(addon, tmp_path):
     assert doc["pity"]
 
 
+def test_pity_only_save_does_not_claim_to_have_saved_pulls(tmp_path):
+    # Regression: logging in sends only the pity counters, yet the log said "Saved: 10 rescue records" for the same old pulls.
+    logs = []
+    a = Addon(tmp_path, log_callback=logs.append)
+    _reply(a, {"res": "ok", "qid": 1, "gacha_history_list": [_record(1)]})
+    logs.clear()
+    _ask(a, 33, "gacha", "get_list")
+    _reply(a, PITY_REPLY)
+    assert [m for m in logs if m.startswith("[RESCUE]")] == ["[RESCUE] Pity counters updated. Open a banner's Rescue Records in the game to save its pulls."]
+
+
+def test_history_save_logs_how_many_pulls_are_new(tmp_path):
+    logs = []
+    a = Addon(tmp_path, log_callback=logs.append)
+    _reply(a, {"res": "ok", "qid": 1, "gacha_history_list": [_record(1), _record(2)]})
+    _reply(a, {"res": "ok", "qid": 2, "gacha_history_list": [_record(2), _record(3)]})
+    name = _load_path(tmp_path).name
+    assert [m for m in logs if m.startswith("[RESCUE]")] == [
+        f"[RESCUE] Saved: 2 new pulls (2 total) -> {name}",
+        f"[RESCUE] Saved: 1 new pull (3 total) -> {name}",
+    ]
+
+
 def test_get_list_reply_without_its_request_is_ignored(addon, tmp_path):
     _reply(addon, PITY_REPLY)
     assert not list(tmp_path.glob("rescue_records_*.json"))
@@ -180,6 +207,13 @@ def test_a_pull_is_saved_as_it_happens(addon, tmp_path):
     assert record["live"] is True
     assert doc["pity"]["gacha_pity_card_factor"]["pity_ssr_count"] == 14
     assert "rescue" in addon.saved_kinds
+
+
+def test_a_pull_logs_that_it_was_saved_as_it_happened(tmp_path):
+    logs = []
+    a = Addon(tmp_path, log_callback=logs.append)
+    _pull(a)
+    assert [m for m in logs if m.startswith("[RESCUE]")] == [f"[RESCUE] Saved: 3-pull as it happened (1 total) -> {_load_path(tmp_path).name}"]
 
 
 def test_a_pull_does_not_mark_its_banner_history_as_refreshed(addon, tmp_path):

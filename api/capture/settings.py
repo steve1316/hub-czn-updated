@@ -11,7 +11,7 @@ from api.capture.constants import OUTPUT_DIR
 
 SETTINGS_PATH = OUTPUT_DIR / "capture_settings.json"
 
-DEFAULTS = {"auto_start": False, "region": "global"}
+DEFAULTS = {"auto_start": False, "region": "global", "debug": False}
 
 REGIONS = ("global", "asia")
 
@@ -21,14 +21,15 @@ def load_capture_settings() -> dict:
     Read the saved settings, falling back to the defaults for anything missing or invalid.
 
     Returns:
-        A dict with `auto_start` (bool) and `region` ("global" or "asia").
+        A dict with `auto_start` (bool), `region` ("global" or "asia") and `debug` (bool).
     """
     settings = dict(DEFAULTS)
     try:
         raw = json.loads(SETTINGS_PATH.read_text(encoding="utf-8"))
         if isinstance(raw, dict):
-            if isinstance(raw.get("auto_start"), bool):
-                settings["auto_start"] = raw["auto_start"]
+            for key in ("auto_start", "debug"):
+                if isinstance(raw.get(key), bool):
+                    settings[key] = raw[key]
             if raw.get("region") in REGIONS:
                 settings["region"] = raw["region"]
     except (OSError, ValueError):
@@ -46,7 +47,11 @@ def save_capture_settings(settings: dict) -> dict:
     Returns:
         The settings as stored (unknown keys dropped).
     """
-    clean = {"auto_start": bool(settings.get("auto_start", False)), "region": settings.get("region") if settings.get("region") in REGIONS else "global"}
+    clean = {
+        "auto_start": bool(settings.get("auto_start", False)),
+        "region": settings.get("region") if settings.get("region") in REGIONS else "global",
+        "debug": bool(settings.get("debug", False)),
+    }
     try:
         SETTINGS_PATH.parent.mkdir(parents=True, exist_ok=True)
         SETTINGS_PATH.write_text(json.dumps(clean, indent=2), encoding="utf-8")
