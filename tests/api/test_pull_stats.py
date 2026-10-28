@@ -7,8 +7,8 @@ from api.routes.rescue import _luck_percentile, _process_records, _ssr_rate
 # A real 5-star combatant id.
 FIVE = 1004
 COMBATANT_POOL = "gacha_pickup_combatant_30115"
-PARTNER_POOL = "gacha_pickup_partner_30116"
-STANDARD_POOL = "gacha_normal"
+PARTNER_POOL = "gacha_pickup_supporter_30116"
+STANDARD_POOL = "gacha_general"
 
 
 def _rec(rid, rewards, prisms=None, gacha_id=COMBATANT_POOL, ts=1000):
@@ -95,3 +95,43 @@ def test_banner_reports_luck_and_the_rate_it_used():
 def test_banner_lists_every_pool_it_covers():
     raw = [_rec(1, [99999], gacha_id="gacha_pickup_combatant_30115"), _rec(2, [99999], gacha_id="gacha_pickup_combatant_30120")]
     assert _banner(raw)["pool_ids"] == ["gacha_pickup_combatant_30115", "gacha_pickup_combatant_30120"]
+
+
+def test_banners_use_the_in_game_category_names():
+    pools = {
+        "gacha_pickup_combatant_30115": "Seasonal Combatant Rescue Rate-Up",
+        "gacha_pickup_supporter_30116": "Seasonal Partner Rescue Rate-Up",
+        "gacha_pickup_combatant_1062_1": "Normal Combatant Rescue Rate-Up",
+        "gacha_pickup_supporter_30045_1": "Normal Partner Rescue Rate-Up",
+        "gacha_general": "Normal Combatant Rescue",
+        "gacha_general_supporter": "Normal Partner Rescue",
+        "gacha_card_factor": "Observe Prism Module",
+    }
+    raw = [_rec(i, [99999], gacha_id=pool) for i, pool in enumerate(pools)]
+    names = {banner["pool_ids"][0]: banner["banner_name"] for banner in _process_records(raw)}
+    assert names == pools
+
+
+def test_an_older_rate_up_shares_the_seasonal_category_and_its_pity():
+    # Pre-seasonal rate-up pools count toward the same server pity, so they are one category.
+    raw = [_rec(1, [99999], gacha_id="gacha_pickup_combatant_1062"), _rec(2, [99999], gacha_id=COMBATANT_POOL, ts=2000)]
+    banners = _process_records(raw, {"pity": {"gacha_pity_pickup_combatant": {"pity_ssr_count": 7}}})
+    assert len(banners) == 1
+    assert banners[0]["banner_name"] == "Seasonal Combatant Rescue Rate-Up"
+    assert banners[0]["pity_current"] == 7
+
+
+def test_normal_combatant_rate_up_has_its_own_pity_and_a_fifty_fifty():
+    raw = [_rec(1, [FIVE, 99999, FIVE], prisms=[1, 0, 0], gacha_id="gacha_pickup_combatant_1062_1")]
+    banner = _banner(raw, {"pity": {"gacha_pity_genal_p_combatant": {"pity_ssr_count": 4}}})
+    assert banner["pity_current"] == 4
+    assert banner["stats"]["wins_50_50"] == 1
+    assert banner["stats"]["losses_50_50"] == 1
+
+
+def test_a_pool_newer_than_the_shipped_table_borrows_the_category_of_a_pool_shaped_like_it():
+    seasonal = _banner([_rec(1, [FIVE, 99999], prisms=[0, 0], gacha_id="gacha_pickup_combatant_99999")])
+    assert seasonal["banner_name"] == "Seasonal Combatant Rescue Rate-Up"
+    assert seasonal["stats"]["losses_50_50"] == 1
+    assert _banner([_rec(1, [99999], gacha_id="gacha_pickup_supporter_99999_1")])["banner_name"] == "Normal Partner Rescue Rate-Up"
+    assert _banner([_rec(1, [99999], gacha_id="gacha_mystery_pool")])["banner_name"] == "Gacha Mystery Pool"

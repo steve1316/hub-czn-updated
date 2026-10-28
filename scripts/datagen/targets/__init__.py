@@ -16,6 +16,7 @@ from scripts.datagen.targets import (
     encyclopedia_cards,
     enemy_presets,
     epiphanies,
+    gacha_banners,
     glossary,
     guides,
     items,
@@ -40,6 +41,7 @@ ALL_TARGETS: list[ModuleType] = [
     enemy_presets,
     eff_type_catalog,
     guides,
+    gacha_banners,
 ]
 
 OFFLINE_TARGETS: list[ModuleType] = [target for target in ALL_TARGETS if target.OFFLINE]

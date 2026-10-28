@@ -1,25 +1,16 @@
 from __future__ import annotations
 import json
-import sys
-from pathlib import Path
 from typing import Literal
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
+from api.frozen_path import data_path
 from api.routes.cards import CardEntry, _get_library
 
 router = APIRouter()
 
 
-def _data_path(filename: str) -> Path:
-    # In PyInstaller frozen mode, __file__ parent-walking is unreliable.
-    # Data files are extracted to sys._MEIPASS/data/ by the spec.
-    if getattr(sys, "frozen", False):
-        return Path(sys._MEIPASS) / "data" / filename  # type: ignore[attr-defined]
-    return Path(__file__).resolve().parents[1] / "data" / filename
-
-
-_MANIFEST_PATH = _data_path("deck_builder_cards.json")
-_EPIPHANY_VARIANTS_PATH = _data_path("deck_builder_epiphany_variants.json")
+_MANIFEST_PATH = data_path("deck_builder_cards.json")
+_EPIPHANY_VARIANTS_PATH = data_path("deck_builder_epiphany_variants.json")
 
 class DeckBuilderCardManifestItem(BaseModel):
     card_id: str

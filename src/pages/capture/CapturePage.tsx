@@ -187,6 +187,8 @@ function AutoScrollConfirmModal({
 }
 
 type AutoScrollPhase = 'idle' | 'countdown' | 'running' | 'done' | 'stopped'
+// Why a finished run stopped: the server said it was the last page, clicks brought no new page, or the page limit was reached.
+type AutoScrollReason = 'last_page' | 'no_page' | 'max_pages'
 
 function AutoScrollPanel({ port }: { port: number }) {
   const { t } = useTranslation()
@@ -197,7 +199,8 @@ function AutoScrollPanel({ port }: { port: number }) {
   const [records, setRecords] = useState(0)
   const [error, setError] = useState<string | null>(null)
   const [modalOpen, setModalOpen] = useState(false)
-  const [pagesTarget, setPagesTarget] = useState(10)
+  const [pagesTarget, setPagesTarget] = useState(200)
+  const [reason, setReason] = useState<AutoScrollReason>('max_pages')
 
   useEffect(() => {
     const ws = new WebSocket(wsUrl('/ws'))
@@ -218,6 +221,7 @@ function AutoScrollPanel({ port }: { port: number }) {
           case 'autoscroll.done':
             setPages(msg.pages as number)
             setRecords(msg.records as number)
+            setReason((msg.reason as AutoScrollReason | undefined) ?? 'max_pages')
             setPhase('done')
             import('@tauri-apps/api/window').then(({ getCurrentWindow }) => getCurrentWindow().setFocus()).catch(() => {})
             break
@@ -310,10 +314,14 @@ function AutoScrollPanel({ port }: { port: number }) {
 
       {phase === 'done' && (
         <div className="flex items-center justify-between gap-2">
-          <span className="text-xs text-[#4ade80] flex items-center gap-1">
-            <CheckCircle size={10} className="shrink-0" />
-            {t('capture.autoscroll.done', { pages, records })}
-          </span>
+          {reason === 'no_page' ? (
+            <span className="text-xs text-[#fbbf24]">{t('capture.autoscroll.noPage', { pages, records })}</span>
+          ) : (
+            <span className="text-xs text-[#4ade80] flex items-center gap-1">
+              <CheckCircle size={10} className="shrink-0" />
+              {t(reason === 'last_page' ? 'capture.autoscroll.lastPage' : 'capture.autoscroll.done', { pages, records })}
+            </span>
+          )}
           <button
             type="button"
             onClick={() => setPhase('idle')}
