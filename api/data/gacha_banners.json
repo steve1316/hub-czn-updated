@@ -1,0 +1,302 @@
+{
+  "gacha_card_factor": {
+    "name": "Observe Prism Module",
+    "pity_group": "gacha_pity_card_factor",
+    "fifty_fifty": false
+  },
+  "gacha_general": {
+    "name": "Normal Combatant Rescue",
+    "pity_group": "gacha_pity_general",
+    "fifty_fifty": false
+  },
+  "gacha_general_first_select_1": {
+    "name": "Special Signal Selective Rescue",
+    "pity_group": "gacha_pity_first_select",
+    "fifty_fifty": false
+  },
+  "gacha_general_new_register_1": {
+    "name": "Special Rescue Request",
+    "pity_group": "general_new_register_1",
+    "fifty_fifty": false
+  },
+  "gacha_general_supporter": {
+    "name": "Normal Partner Rescue",
+    "pity_group": "gacha_pity_general_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_partner_reform_1": {
+    "name": "Partner Special Rescue",
+    "pity_group": "gacha_pity_partner_reform",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_combatant_1052": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1052_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1055": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1055_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1057": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1057_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1057_2": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1060": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1060_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1061": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1061_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1062": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1062_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_1069": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30047": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30047_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30048": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30075": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30075_1": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30084": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30084_1": {
+    "name": "Normal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30093": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30097": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30113": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30115": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30117": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_combatant_30134": {
+    "name": "Seasonal Combatant Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_combatant",
+    "fifty_fifty": true
+  },
+  "gacha_pickup_supporter_1025": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_1070": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_20002": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_20002_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30044": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30044_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30044_2": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30045": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30045_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30046": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30046_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30053": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30053_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30076": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30076_1": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30085": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30085_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30091": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30091_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30092": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30094": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30095": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30095_1": {
+    "name": "Normal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_genal_p_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30114": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30116": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30118": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  },
+  "gacha_pickup_supporter_30135": {
+    "name": "Seasonal Partner Rescue Rate-Up",
+    "pity_group": "gacha_pity_pickup_supporter",
+    "fifty_fifty": false
+  }
+}

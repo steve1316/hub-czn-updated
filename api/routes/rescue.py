@@ -1,10 +1,12 @@
 from __future__ import annotations
 
 import json
+import logging
+import re
 from functools import cache
 from pathlib import Path
 
-from api.frozen_path import add_vribbels_to_path
+from api.frozen_path import add_vribbels_to_path, data_path
 add_vribbels_to_path()
 
 from fastapi import APIRouter
@@ -23,18 +25,9 @@ SSR_BASE_RATE = 0.01
 SOFT_PITY_START = 58
 SOFT_PITY_STEP = 0.045
 PITY_CAP = 70
-# Only combatant rate-up banners have a 50/50. A partner rate-up has one 5-star, so every 5-star there is the featured one.
-COMBATANT_PITY_GROUP = "gacha_pity_pickup_combatant"
-# Which server pity group each kind of banner counts toward, as named by `gacha/get_list`. Checked in order.
-PITY_GROUPS = (
-    ("pickup_combatant", COMBATANT_PITY_GROUP),
-    ("pickup_partner", "gacha_pity_pickup_supporter"),
-    ("pickup_supporter", "gacha_pity_pickup_supporter"),
-    ("supporter", "gacha_pity_general_supporter"),
-    ("standard", "gacha_pity_general"),
-    ("normal", "gacha_pity_general"),
-    ("general", "gacha_pity_general"),
-)
+# Pool ids with every number masked, so a pool newer than `gacha_banners.json` can borrow the category of a known pool shaped like it.
+# `gacha_pickup_combatant_30200` matches the seasonal rate-ups and `gacha_pickup_combatant_1070_1` the Normal ones.
+POOL_NUMBERS = re.compile(r"\d+")
 
 
 def _char_details(res_id: int) -> dict:
@@ -62,18 +55,39 @@ def _char_details(res_id: int) -> dict:
     }
 
 
-def _banner_name(gacha_id: str) -> str:
-    if "pickup_combatant" in gacha_id:
-        return "Seasonal Combatant Rescue Rate-Up"
-    if "pickup_partner" in gacha_id:
-        return "Seasonal Partner Rescue Rate-Up"
-    if "pickup_supporter" in gacha_id or "supporter" in gacha_id:
-        return "Gacha Pickup Supporter"
-    if "free" in gacha_id:
-        return "Free Rescue"
-    if "standard" in gacha_id or "normal" in gacha_id:
-        return "Standard Rescue"
-    return gacha_id.replace("_", " ").title()
+@cache
+def _banners() -> dict[str, dict]:
+    """The generated pool -> {name, pity_group, fifty_fifty} table, or empty when it cannot be read."""
+    try:
+        return json.loads(data_path("gacha_banners.json").read_text(encoding="utf-8"))
+    except (OSError, ValueError) as exc:
+        logging.getLogger(__name__).warning("Failed to read gacha_banners.json, so rescue categories fall back to pool ids: %s", exc)
+        return {}
+
+
+@cache
+def _banners_by_shape() -> dict[str, dict]:
+    """The first known pool for each masked pool id."""
+    shapes: dict[str, dict] = {}
+    for pool_id, entry in _banners().items():
+        shapes.setdefault(POOL_NUMBERS.sub("#", pool_id), entry)
+    return shapes
+
+
+def _banner(gacha_id: str) -> tuple[str, str | None, bool]:
+    """
+    Place a pool in its in-game Rescue Records category.
+
+    Args:
+        gacha_id: The pool id from a rescue record.
+
+    Returns:
+        The category name, the server pity group its pulls count toward (None when not known), and whether its 5-stars are a 50/50.
+    """
+    entry = _banners().get(gacha_id) or _banners_by_shape().get(POOL_NUMBERS.sub("#", gacha_id))
+    if entry:
+        return entry["name"], entry.get("pity_group"), bool(entry.get("fifty_fifty"))
+    return gacha_id.replace("_", " ").title(), None, False
 
 
 def _expand_batch(record: dict) -> list[dict]:
@@ -162,14 +176,6 @@ def _luck_percentile(five_stars: int, pulls: int) -> float | None:
     return round(max(0.0, fewer + same / 2) * 100, 1)
 
 
-def _pity_group(gacha_id: str) -> str | None:
-    """Name the server pity group that a banner's pulls count toward, or None when it is not known."""
-    for needle, group in PITY_GROUPS:
-        if needle in gacha_id:
-            return group
-    return None
-
-
 def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
     """
     Group raw rescue records by banner, compute stats, return API shape.
@@ -191,15 +197,13 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
         all_pulls.extend(_expand_batch(rec))
     all_pulls.sort(key=lambda p: p["timestamp"])
 
-    banners: dict[str, list[dict]] = {}
+    banners: dict[tuple[str, str | None, bool], list[dict]] = {}
     for pull in all_pulls:
-        name = _banner_name(pull["gacha_id"])
-        banners.setdefault(name, []).append(pull)
+        banners.setdefault(_banner(pull["gacha_id"]), []).append(pull)
 
     result = []
-    for banner_name, pulls in banners.items():
+    for (banner_name, group, fifty_fifty), pulls in banners.items():
         pool_ids = sorted({p["gacha_id"] for p in pulls if p["gacha_id"]})
-        group = _pity_group(pool_ids[0]) if pool_ids else None
         processed_pulls = []
         pity = 0
         pull_number = 0
@@ -230,7 +234,7 @@ def _process_records(raw: list[dict], meta: dict | None = None) -> list[dict]:
             if rarity >= 5:
                 five_stars += 1
                 # A loss makes the next 5-star the featured one, so that one is not a 50/50.
-                if group == COMBATANT_PITY_GROUP:
+                if fifty_fifty:
                     if guaranteed:
                         guaranteed = False
                     elif p["is_featured"]:
