@@ -33,6 +33,84 @@ It starts the Python sidecar and the app together, and stops the sidecar when yo
 
 ## Changelog
 
+### 2026-10-27
+
+- The installed app starts much faster. Its background service now ships as a folder of files
+  instead of one large exe that had to unpack itself on every launch.
+- The app now waits for its background service before showing the first screen, so pages no longer
+  load against a service that has not started yet.
+- Pulls are recorded the moment they happen while capture runs, so the full history only has to be
+  imported once. The capture log says how many new pulls each save added.
+- `Rescue Records` categories now use the game's own names, such as Seasonal Combatant Rescue
+  Rate-Up and Observe Prism Module.
+- `Auto-Scroll` now stops by itself on the last history page, and says so if clicks stop bringing in
+  new pages.
+- `Debug mode` on the `Capture` page is now remembered between launches.
+- `Setup` no longer warns about a stuck redirect while a capture is running, since the capture needs
+  that redirect.
+
+### 2026-10-26
+
+- The `Simulator` and `Battle History` are merged into one `Battles` page. It shares the current
+  enemy, lists recent enemies, and can simulate against any past battle's enemy.
+- The `Simulator` and the `Optimizer` now use each enemy's real damage decrease from the game.
+  Before this the `Optimizer` estimated it from the enemy's DEF.
+- Each `Deck Builder` deck gets a `Simulate` button that opens it in the `Simulator` with its
+  epiphanies, and saved decks show up in the `Simulator`'s deck list.
+- Unsaved `Deck Builder` work is now kept when you leave the page or reload it.
+- The app is easier to read, with a larger minimum text size, brighter text, and an `Interface size`
+  setting that Ctrl +/- steps through and remembers.
+- New users get a next step on `Home`, empty pages link to `Capture`, and `Setup` and `Capture` are
+  simpler with plain error messages.
+- The `Optimize` and `Simulate` buttons stay in view, and old results stay on screen marked as out
+  of date when settings change.
+- The `Encyclopedia` shows every card as an art grid with its text and epiphanies. Game keywords and
+  card names in card text open a popover with their definition.
+- `Guides` get search and sort, decks open straight in the `Deck Builder`, and rated sheet tables
+  such as `Desire Synergy` show as tables with a rating on each row.
+
+### 2026-10-25
+
+- Added `Rossweisse` and her partner `Sig`, along with the `Veiled Radiance` and
+  `Snowflake of Our First Meeting` sets.
+- Gear now updates live while capture runs. Equipping, upgrading, creating or dismantling memory
+  fragments updates the snapshot straight away, and `Combatants`, `Memory Fragments` and `Optimizer`
+  refresh by themselves.
+- `Rescue Records` shows pity, 50/50 status and a luck score for each banner. The luck score follows
+  the game's published rates: 1% per pull, rising by 4.5% a pull from the 58th, with a sure 5-star
+  on the 70th.
+- 50/50 wins and losses only count on combatant rate-up banners, and the guaranteed 5-star after a
+  loss no longer counts as a win.
+- A new opt-in setting on `Capture` starts capture when the app opens.
+- A capture that fails to start now cleans up the hosts file and certificate right away.
+- Substat roll quality is now measured against the piece's own rarity, so a perfect Rare roll shows
+  100%. Gear Score itself stays on the Legendary scale.
+- Potential now counts one roll per level a piece has left. Fresh Legendary pieces were treated as
+  having 4 rolls left instead of 5, and Rare pieces 3 instead of 4.
+- Roll ranges and max levels for every rarity now come from the game's own data instead of a
+  hand-kept table.
+- The separate `Scoring` tab is gone. Its weights now live on `Combatants` and each combatant's
+  detail view, and old `Scoring` links open `Combatants`.
+- Character and fragment art that fails to load is retried, then shows a placeholder instead of a
+  broken image.
+- The app is now English-only. Leftover Portuguese text, such as the `Optimizer` stat group labels,
+  is translated.
+- Capture log lines are now timestamped.
+- Every guide has the same set of pages, with set icons, labelled teams, rating colours and card
+  costs. Each deck card shows its epiphany, text and cost.
+- Each guide draws the author's potentials tree in their colours, with a toggle to the author's
+  original picture.
+- mitmproxy and Brotli are pinned to patched versions.
+
+### 2026-10-24
+
+- The `Deck Builder` now covers every released character with the game's own card text and art.
+- The `Deck Builder`, `Encyclopedia`, gear presets and monster lists are now generated from the
+  game's own files instead of kept by hand, so new characters and cards come through by themselves.
+- Every character guide is now imported from the community Google Sheet.
+- Saved decks keep their cards, apart from 37 epiphanies and 5 tutorial items that are no longer in
+  the game.
+
 ### 2026-09-05
 
 - Capture now stops with a clear message when a redirect left behind by a crashed run is still in
