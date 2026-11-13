@@ -1066,5 +1066,17 @@
     "ascend_group": "dev_ascend",
     "limit_break_group": "limit_30134",
     "friendship_group": "friendship_bonus_no_bg"
+  },
+  "30136": {
+    "atk": 140,
+    "def": 60,
+    "hp": 80,
+    "cri": 3.0,
+    "cri_dmg": 125.0,
+    "weak_ego_dmg_rate": 125.0,
+    "level_group": "c_lv_controller_ssr",
+    "ascend_group": "dev_ascend",
+    "limit_break_group": "limit_30136",
+    "friendship_group": "friendship_bonus_no_bg"
   }
 }

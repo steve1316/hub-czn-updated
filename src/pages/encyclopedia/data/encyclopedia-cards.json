@@ -43,6 +43,10 @@
       "name": "Beryl"
     },
     {
+      "id": 30136,
+      "name": "Blazebell"
+    },
+    {
       "id": 1049,
       "name": "Cassius"
     },
@@ -1270,6 +1274,222 @@
       "kind": "ego",
       "character_id": 1040,
       "image": "deck-builder/data/combatants/beryl/c_1040_eps.webp"
+    },
+    {
+      "id": "c_30136_srt1",
+      "name": "Bright Flame",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "100% Defense-Based Damage.",
+      "group": "combatant",
+      "kind": "starting",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_srt1.webp"
+    },
+    {
+      "id": "c_30136_srt3",
+      "name": "Blue Flame",
+      "cost": 1,
+      "card_type": "Skill",
+      "description": "Heal 60%. When the Bind effect of this card is stacked, Heal 60%.",
+      "group": "combatant",
+      "kind": "starting",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_srt3.webp"
+    },
+    {
+      "id": "c_30136_srt4",
+      "name": "Fluttering Embers",
+      "cost": 0,
+      "card_type": "Skill",
+      "description": "Gain 1 AP. Purity: Draw 1.",
+      "group": "combatant",
+      "kind": "starting",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_srt4.webp",
+      "epiphanies": [
+        {
+          "level": 1,
+          "name": "Fluttering Embers I",
+          "cost": 0,
+          "description": "[Unique] [Retain] Gain 1 AP. Draw 1."
+        },
+        {
+          "level": 2,
+          "name": "Fluttering Embers II",
+          "cost": 0,
+          "description": "Gain 1 AP. Increase Damage Amount of ally Justice Cards by 40% for 1 turn."
+        },
+        {
+          "level": 3,
+          "name": "Fluttering Embers III",
+          "cost": 0,
+          "description": "[Unique] Gain 1 AP. Heal 150%. Purity: Draw 1."
+        },
+        {
+          "level": 4,
+          "name": "Fluttering Embers IV",
+          "cost": 0,
+          "description": "Gain 1 AP. Decrease Cost of the next card activated by 1 for 1 turn(s)."
+        },
+        {
+          "level": 5,
+          "name": "Fluttering Embers V",
+          "cost": 0,
+          "description": "Gain 1 AP. Create 2 Blue Flame."
+        }
+      ]
+    },
+    {
+      "id": "c_30136_uni1",
+      "name": "Flametouch",
+      "cost": 1,
+      "card_type": "Attack",
+      "description": "1 Melting. 150% Defense-Based Damage.",
+      "group": "combatant",
+      "kind": "epiphany",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_uni1.webp",
+      "epiphanies": [
+        {
+          "level": 1,
+          "name": "Flametouch I",
+          "cost": 1,
+          "description": "1 Melting. 250% Defense-Based Damage."
+        },
+        {
+          "level": 2,
+          "name": "Flametouch II",
+          "cost": 1,
+          "description": "1 Melting to all enemies. 200% Defense-Based Damage."
+        },
+        {
+          "level": 3,
+          "name": "Flametouch III",
+          "cost": 1,
+          "description": "1 Melting. 150% Defense-Based Damage. Create 1 Blue Flame."
+        },
+        {
+          "level": 4,
+          "name": "Flametouch IV",
+          "cost": 0,
+          "description": "1 Melting. 100% Defense-Based Damage."
+        },
+        {
+          "level": 5,
+          "name": "Flametouch V",
+          "cost": 1,
+          "description": "[Unique] [Initiation] At the start of the turn, 1 Melting to the enemy with the highest HP, then create 1 Blue Flame."
+        }
+      ]
+    },
+    {
+      "id": "c_30136_uni2",
+      "name": "Freyjaen Blessing",
+      "cost": 1,
+      "card_type": "Skill",
+      "description": "Heal 150%. Streak: Create 2 Blue Flame.",
+      "group": "combatant",
+      "kind": "epiphany",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_uni2.webp",
+      "epiphanies": [
+        {
+          "level": 1,
+          "name": "Freyjaen Blessing I",
+          "cost": 1,
+          "description": "Heal 200%. Create 2 Blue Flame."
+        },
+        {
+          "level": 2,
+          "name": "Freyjaen Blessing II",
+          "cost": 0,
+          "description": "Heal 150%. Increase Damage and Heal Amounts of ally Bind cards by 30% for 1 turn(s)."
+        },
+        {
+          "level": 3,
+          "name": "Freyjaen Blessing III",
+          "cost": 1,
+          "description": "Heal 200%. 1 Melting to all enemies."
+        },
+        {
+          "level": 4,
+          "name": "Freyjaen Blessing IV",
+          "cost": 1,
+          "description": "[Exhaust] Heal 200%. Discard any number of cards in hand. Draw 1 Attack Card(s). +100% Damage Amount to those cards for 1 turn(s) or until activated."
+        },
+        {
+          "level": 5,
+          "name": "Freyjaen Blessing V",
+          "cost": 1,
+          "description": "[Unique] Heal 100%. Create 3 Blue Flame. Decrease Stress of allies by 5."
+        }
+      ]
+    },
+    {
+      "id": "c_30136_uni3",
+      "name": "Resonating Flame",
+      "cost": 2,
+      "card_type": "Upgrade",
+      "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, create 1 Blue Flame.",
+      "group": "combatant",
+      "kind": "epiphany",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_uni3.webp",
+      "epiphanies": [
+        {
+          "level": 1,
+          "name": "Resonating Flame I",
+          "cost": 3,
+          "description": "[Unique] [Initiation] Create 3 Blue Flame. When Bind of a different Combatant is stacked, create 1 Blue Flame (4 times per turn)."
+        },
+        {
+          "level": 2,
+          "name": "Resonating Flame II",
+          "cost": 1,
+          "description": "[Unique] [Exhaust] Create 3 Blue Flame. Select and Draw 2."
+        },
+        {
+          "level": 3,
+          "name": "Resonating Flame III",
+          "cost": 1,
+          "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, create 1 Blue Flame."
+        },
+        {
+          "level": 4,
+          "name": "Resonating Flame IV",
+          "cost": 1,
+          "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, decrease Cost of 1 random card(s) by 1 for 1 turn or until activated."
+        },
+        {
+          "level": 5,
+          "name": "Resonating Flame V",
+          "cost": 2,
+          "description": "[Unique] [Initiation] Create 2 Blue Flame. At the start of the turn, create 2 Blue Flame, then for 1 turn(s), decrease Cost of the next Bind card activated by 1."
+        }
+      ]
+    },
+    {
+      "id": "c_30136_uni4",
+      "name": "Vestige of Flames",
+      "cost": 1,
+      "card_type": "Skill",
+      "description": "[Unique] [Retain] For 1 turn(s), increase Damage Amount of allies by 20% and increase Damage Amount of ally Justice Cards by 20%.",
+      "group": "combatant",
+      "kind": "epiphany",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_uni4.webp"
+    },
+    {
+      "id": "c_30136_eps",
+      "name": "Hellfire",
+      "cost": 5,
+      "card_type": "Attack",
+      "description": "600% Defense-Based Damage and 1 Melting to all enemies. Discard all cards in hand except for Unique and Bind cards. Create 4 Blue Flame.",
+      "group": "combatant",
+      "kind": "ego",
+      "character_id": 30136,
+      "image": "deck-builder/data/combatants/blazebell/c_30136_eps.webp"
     },
     {
       "id": "c_1049_srt1",
@@ -6751,9 +6971,9 @@
     {
       "id": "c_30097_srt4",
       "name": "Chrono Archon",
-      "cost": 1,
+      "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card.",
+      "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card.",
       "group": "combatant",
       "kind": "starting",
       "character_id": 30097,
@@ -6762,32 +6982,32 @@
         {
           "level": 1,
           "name": "Chrono Archon I",
-          "cost": 1,
-          "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+          "cost": 0,
+          "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
         },
         {
           "level": 2,
           "name": "Chrono Archon II",
-          "cost": 1,
-          "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. At the end of the turn, 100% Damage to a random enemy for each Chronal Ascension."
+          "cost": 0,
+          "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. At the end of the turn, 100% Damage to a random enemy for each Chronal Ascension."
         },
         {
           "level": 3,
           "name": "Chrono Archon III",
-          "cost": 1,
-          "description": "[Unique] [Initiation] When a card is Exhausted, 1 Chronicle."
+          "cost": 0,
+          "description": "[Unique] [Opener] When a card is Exhausted, 1 Chronicle."
         },
         {
           "level": 4,
           "name": "Chrono Archon IV",
-          "cost": 1,
-          "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When a card is Discarded, 1 Chronicle."
+          "cost": 0,
+          "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When a card is Discarded, 1 Chronicle."
         },
         {
           "level": 5,
           "name": "Chrono Archon V",
-          "cost": 1,
-          "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When a Retain effect is activated, 1 Chronicle."
+          "cost": 0,
+          "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When a Retain effect is activated, 1 Chronicle."
         }
       ]
     },
@@ -7132,7 +7352,7 @@
           "level": 5,
           "name": "Blade of the Cycle V",
           "cost": 2,
-          "description": "[Pulverize] 500% Damage. 4 Brand of the Cycle. On Shield Break through this card, proc 1 more time (1 time per turn)."
+          "description": "[Pulverize] 500% Damage. 4 Brand of the Cycle. On Shield Break through this card, activate effect 1 more time (1 time per turn)."
         }
       ]
     },
@@ -7564,7 +7784,7 @@
           "level": 5,
           "name": "Cobalt Light V",
           "cost": 3,
-          "description": "[Weakness Attack] 140% Damage × 4. Ravage: Proc 1 more time."
+          "description": "[Weakness Attack] 140% Damage × 4. Ravage: Activate effect 1 more time."
         }
       ]
     },
@@ -7584,7 +7804,7 @@
       "name": "Death Halo",
       "cost": 6,
       "card_type": "Attack",
-      "description": "500% Damage to all enemies. Move all Homing Laser L in Exhaust Pile to hand.",
+      "description": "500% Damage to all enemies. Move all Homing Laser L from Exhaust Pile to hand.",
       "group": "combatant",
       "kind": "ego",
       "character_id": 30075,
@@ -11335,7 +11555,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +7% Attack to this unit (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +7% Attack to this unit (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11346,7 +11566,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of this unit by 9% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of this unit by 9% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11357,7 +11577,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +3% Attack to allies (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +3% Attack to allies (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11368,7 +11588,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of allies by 5% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of allies by 5% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11687,7 +11907,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +8% Attack to this unit (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +8% Attack to this unit (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11698,7 +11918,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of this unit by 11% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of this unit by 11% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11709,7 +11929,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +4% Attack to allies (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +4% Attack to allies (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -11720,7 +11940,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of allies by 6% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of allies by 6% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12039,7 +12259,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +9% Attack to this unit (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +9% Attack to this unit (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12050,7 +12270,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of this unit by 13% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of this unit by 13% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12061,7 +12281,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +5% Attack to allies (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +5% Attack to allies (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12072,7 +12292,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of allies by 7% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of allies by 7% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12391,7 +12611,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +10% Attack to this unit (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +10% Attack to this unit (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12402,7 +12622,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of this unit by 15% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of this unit by 15% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12413,7 +12633,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, +6% Attack to allies (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, +6% Attack to allies (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12424,7 +12644,7 @@
       "name": "Memory: Greed",
       "cost": 0,
       "card_type": "Upgrade",
-      "description": "[Memory] [Opener] When ally All-Target Attack Cards are activated 3 times in 1 turn, increase Damage Amount of allies by 8% (1 time per turn, 2 times per battle).",
+      "description": "[Memory] [Opener] When All-Target Attacks are made 3 times through ally Attack Cards in 1 turn, increase Damage Amount of allies by 8% (1 time per turn, 2 times per battle).",
       "group": "season",
       "kind": "power",
       "season": 5,
@@ -12649,6 +12869,182 @@
       "kind": "power",
       "season": 5,
       "image": "encyclopedia/data/card-art/job_00658.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_1_1",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +7% Attack to this unit (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_1_2",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of this unit by 9% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_1_3",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +3% Attack to allies (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_1_4",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of allies by 5% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_2_1",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +8% Attack to this unit (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_2_2",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of this unit by 11% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_2_3",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +4% Attack to allies (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_2_4",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of allies by 6% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_3_1",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +9% Attack to this unit (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_3_2",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of this unit by 13% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_3_3",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +5% Attack to allies (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_3_4",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of allies by 7% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_4_1",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +10% Attack to this unit (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_4_2",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of this unit by 15% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_4_3",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, +6% Attack to allies (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
+    },
+    {
+      "id": "card_ds05_b_c2_4_4",
+      "name": "Memory: Duress",
+      "cost": 0,
+      "card_type": "Upgrade",
+      "description": "[Memory] [Opener] When an ally Basic Card is stacked, increase Damage Amount of allies by 8% (1 time per turn, 2 times per battle). Increase Damage Amount of allies by 15%.",
+      "group": "season",
+      "kind": "power",
+      "season": 5,
+      "image": "encyclopedia/data/card-art/job_00659.webp"
     },
     {
       "id": "card_ds05_mem_blank",
@@ -13471,7 +13867,7 @@
     },
     {
       "name": "Bind",
-      "definition": "When Bind cards of a given unit are in the same Pile or in hand, stack into 1 card."
+      "definition": "When Bind cards of a given unit are in the same Pile other than the Activated Pile, or in hand, stack into 1 card."
     },
     {
       "name": "Blessing",
@@ -13511,7 +13907,7 @@
     },
     {
       "name": "Claim",
-      "definition": "Claim Synergy: Apply effect based on the total number of [ Claim ] talents possessed by allies.\n3+ Claim: When a harmful effect is applied to the enemy, 2 Morale for 1 turn (2 times per turn).\n5+ Claim: Increase DoT Amount by35%.\n7+ Claim: At the start of battle, 9 Claim: Desire.\nWhen a Claim Card is activated, gain 1 Claim: Desire for each stack. When Claim: Desire reaches 10, create 1 Desire Manifestation: Claim card in hand."
+      "definition": "Claim Synergy: Apply effect based on the total number of [ Claim ] talents possessed by allies.\n3+ Claim: When a harmful effect is applied to the enemy, 2 Morale for 1 turn (2 times per turn).\n5+ Claim: Increase DoT Amount by 35%.\n7+ Claim: At the start of battle, 9 Claim: Desire.\nWhen a Claim Card is activated, gain 1 Claim: Desire for each stack. When Claim: Desire reaches 10, create 1 Desire Manifestation: Claim card in hand."
     },
     {
       "name": "Combo",
@@ -13787,7 +14183,7 @@
     },
     {
       "name": "Inhibit",
-      "definition": "Cannot be influenced by AP gain or loss effects (except for what is given through cards and continuous effects of this unit, at the start of the turn or on Ravage) add 1 Hit to Shadow of the Moon and Shadow of the Moon+."
+      "definition": "Cannot be influenced by AP gain or loss effects (except for what is given through cards and continuous effects of this unit, at the start of the turn or on Ravage).\nAdd 1 Hit to Shadow of the Moon and Shadow of the Moon+."
     },
     {
       "name": "Initiation",
@@ -13844,6 +14240,10 @@
     {
       "name": "Mark",
       "definition": "When an Attack Card is activated, inflict 100% Extra Attack, inflict Tenacity Damage equal to 0 Cost, and decrease Mark by 1."
+    },
+    {
+      "name": "Melting",
+      "definition": "Increase Damage Amount taken from Justice Cards by 15% for X turn(s).\nWhen attacked by the Justice Attribute 3 times, add Hypermelting (1 time per turn).\nAt the end of the turn, decrease Melting by 1."
     },
     {
       "name": "Memory",
@@ -13963,10 +14363,6 @@
     },
     {
       "name": "Rhythm card",
-      "definition": "Signature cards created by Tenebria.\nChanges Damage Type according to the Class of the unit who owns the card.\nEach time a Rhythm card is activated, gain 1 Performance Burnout."
-    },
-    {
-      "name": "Rhythm card(s)",
       "definition": "Signature cards created by Tenebria.\nChanges Damage Type according to the Class of the unit who owns the card.\nEach time a Rhythm card is activated, gain 1 Performance Burnout."
     },
     {
@@ -14090,6 +14486,10 @@
     {
       "name": "Ballista",
       "id": "c_1033_cre1"
+    },
+    {
+      "name": "Blue Flame",
+      "id": "c_30136_srt2"
     },
     {
       "name": "Celestial Wrath",
@@ -14900,6 +15300,14 @@
       "card_type": "Attack",
       "description": "[Dark] [Unique] [Retain] 120% Damage to a random enemy. Create 1 Sword Tassel. When a 1-Cost or higher card is activated, activate effect (2 times per turn).",
       "image": "encyclopedia/data/card-art/unique_30134_07.webp"
+    },
+    {
+      "id": "c_30136_srt2",
+      "name": "Blue Flame",
+      "cost": 1,
+      "card_type": "Skill",
+      "description": "Heal 60%. When the Bind effect of this card is stacked, Heal 60%.",
+      "image": "deck-builder/data/combatants/blazebell/c_30136_srt2.webp"
     }
   ]
 }

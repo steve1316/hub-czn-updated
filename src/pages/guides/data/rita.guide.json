@@ -26,12 +26,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -124,12 +124,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -173,12 +173,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -273,12 +273,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -340,12 +340,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -436,12 +436,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -558,12 +558,12 @@
             {
               "cardId": "c_30097_srt4",
               "name": "Chrono Archon",
-              "cost": 1,
+              "cost": 0,
               "epiphany": {
                 "level": 1,
                 "name": "Chrono Archon I",
                 "text": {
-                  "en": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+                  "en": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
                 }
               }
             },
@@ -1015,7 +1015,7 @@
                 {
                   "level": 1,
                   "name": "Chrono Archon I",
-                  "cost": 1,
+                  "cost": 0,
                   "rating": "6/5",
                   "note": {
                     "en": "This is so broken, Rita Naturally just makes 6 Chronicle if your Paradox"
@@ -1024,7 +1024,7 @@
                 {
                   "level": 2,
                   "name": "Chrono Archon II",
-                  "cost": 1,
+                  "cost": 0,
                   "rating": "2/5",
                   "note": {
                     "en": "Pretty insignificant amount of extra damage unless moral stacking for some reason"
@@ -1033,7 +1033,7 @@
                 {
                   "level": 3,
                   "name": "Chrono Archon III",
-                  "cost": 1,
+                  "cost": 0,
                   "rating": "2/5",
                   "note": {
                     "en": "Removing the base epiphany seems really bad"
@@ -1042,7 +1042,7 @@
                 {
                   "level": 4,
                   "name": "Chrono Archon IV",
-                  "cost": 1,
+                  "cost": 0,
                   "rating": "2/5",
                   "note": {
                     "en": "Discarding is not very easy to do"
@@ -1051,7 +1051,7 @@
                 {
                   "level": 5,
                   "name": "Chrono Archon V",
-                  "cost": 1,
+                  "cost": 0,
                   "rating": "3/5",
                   "note": {
                     "en": "Basically you're playing Orlea wouldn't recommend Beryl or Tiphera"

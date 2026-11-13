@@ -194,6 +194,11 @@
     "rarity": 5,
     "kind": "Combatant"
   },
+  "Blazebell": {
+    "res_id": 30136,
+    "rarity": 5,
+    "kind": "Combatant"
+  },
   "Ivy": {
     "res_id": 1025,
     "rarity": 5,
@@ -446,6 +451,11 @@
   },
   "Sig": {
     "res_id": 30135,
+    "rarity": 5,
+    "kind": "Partner"
+  },
+  "Vivian": {
+    "res_id": 30137,
     "rarity": 5,
     "kind": "Partner"
   }

@@ -190,6 +190,8 @@
     "substats": [
       "Flat ATK",
       "ATK%",
+      "CRate",
+      "CDmg",
       "DoT%"
     ],
     "weights": {
@@ -200,8 +202,8 @@
       "DEF%": 1,
       "Flat HP": 1,
       "HP%": 1,
-      "CRate": 1,
-      "CDmg": 1,
+      "CRate": 8,
+      "CDmg": 8,
       "Ego": 1,
       "DoT%": 8,
       "Passion DMG%": 1,
@@ -1655,6 +1657,48 @@
       "CRate": 8,
       "CDmg": 8,
       "Ego": 1,
+      "DoT%": 1,
+      "Passion DMG%": 1,
+      "Order DMG%": 1,
+      "Justice DMG%": 1,
+      "Void DMG%": 1,
+      "Instinct DMG%": 1
+    }
+  },
+  "30136": {
+    "recommended_sets": [
+      31,
+      7
+    ],
+    "main_stat_4": [
+      "HP%",
+      "CRate",
+      "CDmg"
+    ],
+    "main_stat_5": [
+      "HP%",
+      "Justice DMG%"
+    ],
+    "main_stat_6": [
+      "DEF%",
+      "Ego"
+    ],
+    "substats": [
+      "Flat DEF",
+      "DEF%",
+      "Ego"
+    ],
+    "weights": {
+      "Flat ATK": 1,
+      "ATK%": 1,
+      "Extra DMG%": 1,
+      "Flat DEF": 8,
+      "DEF%": 8,
+      "Flat HP": 1,
+      "HP%": 1,
+      "CRate": 1,
+      "CDmg": 1,
+      "Ego": 8,
       "DoT%": 1,
       "Passion DMG%": 1,
       "Order DMG%": 1,

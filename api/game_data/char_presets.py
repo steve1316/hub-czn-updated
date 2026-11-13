@@ -40,7 +40,7 @@ _RAW: dict[int, dict] = {
         "main_4":  ['ATK%', 'CRate', 'CDmg'],
         "main_5":  ['Void DMG%', 'ATK%'],
         "main_6":  ['ATK%'],
-        "substats":['Flat ATK', 'ATK%', 'DoT%', 'Void DMG%'],
+        "substats":['Flat ATK', 'ATK%', 'CRate', 'CDmg', 'DoT%', 'Void DMG%'],
     },
     1010: {
         "sets":    [7, 8, 11],
@@ -279,6 +279,13 @@ _RAW: dict[int, dict] = {
         "main_5":  ['ATK%', 'Justice DMG%'],
         "main_6":  ['ATK%'],
         "substats":['Flat ATK', 'ATK%', 'CRate', 'CDmg', 'Justice DMG%'],
+    },
+    30136: {
+        "sets":    [31, 7],
+        "main_4":  ['HP%', 'CRate', 'CDmg'],
+        "main_5":  ['HP%', 'Justice DMG%'],
+        "main_6":  ['DEF%', 'Ego'],
+        "substats":['Flat DEF', 'DEF%', 'Ego', 'Justice DMG%'],
     },
 }
 

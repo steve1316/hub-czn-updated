@@ -214,6 +214,49 @@
       "description": "350% Damage to all enemies."
     }
   },
+  "30136": {
+    "character_name": "Blazebell",
+    "starting_cards": [
+      {
+        "card_id": "c_30136_srt1",
+        "description": "100% Defense-Based Damage."
+      },
+      {
+        "card_id": "c_30136_srt2",
+        "description": "Heal 60%. When the Bind effect of this card is stacked, Heal 60%."
+      },
+      {
+        "card_id": "c_30136_srt3",
+        "description": "Heal 60%. When the Bind effect of this card is stacked, Heal 60%."
+      },
+      {
+        "card_id": "c_30136_srt4",
+        "description": "Gain 1 AP. Purity: Draw 1."
+      }
+    ],
+    "epiphany_cards": [
+      {
+        "card_id": "c_30136_uni1",
+        "description": "1 Melting. 150% Defense-Based Damage."
+      },
+      {
+        "card_id": "c_30136_uni2",
+        "description": "Heal 150%. Streak: Create 2 Blue Flame."
+      },
+      {
+        "card_id": "c_30136_uni3",
+        "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, create 1 Blue Flame."
+      },
+      {
+        "card_id": "c_30136_uni4",
+        "description": "[Unique] [Retain] For 1 turn(s), increase Damage Amount of allies by 20% and increase Damage Amount of ally Justice Cards by 20%."
+      }
+    ],
+    "ego_skill": {
+      "card_id": "c_30136_eps",
+      "description": "600% Defense-Based Damage and 1 Melting to all enemies. Discard all cards in hand except for Unique and Bind cards. Create 4 Blue Flame."
+    }
+  },
   "1049": {
     "character_name": "Cassius",
     "starting_cards": [
@@ -1306,7 +1349,7 @@
       },
       {
         "card_id": "c_30097_srt4",
-        "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card."
+        "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card."
       }
     ],
     "epiphany_cards": [
@@ -1458,7 +1501,7 @@
     ],
     "ego_skill": {
       "card_id": "c_30075_eps",
-      "description": "500% Damage to all enemies. Move all Homing Laser L in Exhaust Pile to hand."
+      "description": "500% Damage to all enemies. Move all Homing Laser L from Exhaust Pile to hand."
     }
   },
   "1069": {

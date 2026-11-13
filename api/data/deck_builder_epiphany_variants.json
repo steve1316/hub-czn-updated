@@ -1215,6 +1215,245 @@
       }
     ]
   },
+  "c_30136_srt4": {
+    "character_id": 30136,
+    "character_name": "Blazebell",
+    "base_card_id": "c_30136_srt4",
+    "base_card_name": "Fluttering Embers",
+    "variants": [
+      {
+        "variant_id": "c_30136_srt4_epiphany_1",
+        "level": 1,
+        "name": "Fluttering Embers I",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [
+          "Unique",
+          "Retain"
+        ],
+        "description": "[Unique] [Retain] Gain 1 AP. Draw 1."
+      },
+      {
+        "variant_id": "c_30136_srt4_epiphany_2",
+        "level": 2,
+        "name": "Fluttering Embers II",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Gain 1 AP. Increase Damage Amount of ally Justice Cards by 40% for 1 turn."
+      },
+      {
+        "variant_id": "c_30136_srt4_epiphany_3",
+        "level": 3,
+        "name": "Fluttering Embers III",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] Gain 1 AP. Heal 150%. Purity: Draw 1."
+      },
+      {
+        "variant_id": "c_30136_srt4_epiphany_4",
+        "level": 4,
+        "name": "Fluttering Embers IV",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Gain 1 AP. Decrease Cost of the next card activated by 1 for 1 turn(s)."
+      },
+      {
+        "variant_id": "c_30136_srt4_epiphany_5",
+        "level": 5,
+        "name": "Fluttering Embers V",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Gain 1 AP. Create 2 Blue Flame."
+      }
+    ]
+  },
+  "c_30136_uni1": {
+    "character_id": 30136,
+    "character_name": "Blazebell",
+    "base_card_id": "c_30136_uni1",
+    "base_card_name": "Flametouch",
+    "variants": [
+      {
+        "variant_id": "c_30136_uni1_epiphany_1",
+        "level": 1,
+        "name": "Flametouch I",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "1 Melting. 250% Defense-Based Damage."
+      },
+      {
+        "variant_id": "c_30136_uni1_epiphany_2",
+        "level": 2,
+        "name": "Flametouch II",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "1 Melting to all enemies. 200% Defense-Based Damage."
+      },
+      {
+        "variant_id": "c_30136_uni1_epiphany_3",
+        "level": 3,
+        "name": "Flametouch III",
+        "cost": 1,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "1 Melting. 150% Defense-Based Damage. Create 1 Blue Flame."
+      },
+      {
+        "variant_id": "c_30136_uni1_epiphany_4",
+        "level": 4,
+        "name": "Flametouch IV",
+        "cost": 0,
+        "card_type": "Attack",
+        "tags": [],
+        "description": "1 Melting. 100% Defense-Based Damage."
+      },
+      {
+        "variant_id": "c_30136_uni1_epiphany_5",
+        "level": 5,
+        "name": "Flametouch V",
+        "cost": 1,
+        "card_type": "Upgrade",
+        "tags": [
+          "Unique",
+          "Initiation"
+        ],
+        "description": "[Unique] [Initiation] At the start of the turn, 1 Melting to the enemy with the highest HP, then create 1 Blue Flame."
+      }
+    ]
+  },
+  "c_30136_uni2": {
+    "character_id": 30136,
+    "character_name": "Blazebell",
+    "base_card_id": "c_30136_uni2",
+    "base_card_name": "Freyjaen Blessing",
+    "variants": [
+      {
+        "variant_id": "c_30136_uni2_epiphany_1",
+        "level": 1,
+        "name": "Freyjaen Blessing I",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Heal 200%. Create 2 Blue Flame."
+      },
+      {
+        "variant_id": "c_30136_uni2_epiphany_2",
+        "level": 2,
+        "name": "Freyjaen Blessing II",
+        "cost": 0,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Heal 150%. Increase Damage and Heal Amounts of ally Bind cards by 30% for 1 turn(s)."
+      },
+      {
+        "variant_id": "c_30136_uni2_epiphany_3",
+        "level": 3,
+        "name": "Freyjaen Blessing III",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [],
+        "description": "Heal 200%. 1 Melting to all enemies."
+      },
+      {
+        "variant_id": "c_30136_uni2_epiphany_4",
+        "level": 4,
+        "name": "Freyjaen Blessing IV",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [
+          "Exhaust"
+        ],
+        "description": "[Exhaust] Heal 200%. Discard any number of cards in hand. Draw 1 Attack Card(s). +100% Damage Amount to those cards for 1 turn(s) or until activated."
+      },
+      {
+        "variant_id": "c_30136_uni2_epiphany_5",
+        "level": 5,
+        "name": "Freyjaen Blessing V",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [
+          "Unique"
+        ],
+        "description": "[Unique] Heal 100%. Create 3 Blue Flame. Decrease Stress of allies by 5."
+      }
+    ]
+  },
+  "c_30136_uni3": {
+    "character_id": 30136,
+    "character_name": "Blazebell",
+    "base_card_id": "c_30136_uni3",
+    "base_card_name": "Resonating Flame",
+    "variants": [
+      {
+        "variant_id": "c_30136_uni3_epiphany_1",
+        "level": 1,
+        "name": "Resonating Flame I",
+        "cost": 3,
+        "card_type": "Upgrade",
+        "tags": [
+          "Unique",
+          "Initiation"
+        ],
+        "description": "[Unique] [Initiation] Create 3 Blue Flame. When Bind of a different Combatant is stacked, create 1 Blue Flame (4 times per turn)."
+      },
+      {
+        "variant_id": "c_30136_uni3_epiphany_2",
+        "level": 2,
+        "name": "Resonating Flame II",
+        "cost": 1,
+        "card_type": "Skill",
+        "tags": [
+          "Unique",
+          "Exhaust"
+        ],
+        "description": "[Unique] [Exhaust] Create 3 Blue Flame. Select and Draw 2."
+      },
+      {
+        "variant_id": "c_30136_uni3_epiphany_3",
+        "level": 3,
+        "name": "Resonating Flame III",
+        "cost": 1,
+        "card_type": "Upgrade",
+        "tags": [
+          "Unique",
+          "Initiation"
+        ],
+        "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, create 1 Blue Flame."
+      },
+      {
+        "variant_id": "c_30136_uni3_epiphany_4",
+        "level": 4,
+        "name": "Resonating Flame IV",
+        "cost": 1,
+        "card_type": "Upgrade",
+        "tags": [
+          "Unique",
+          "Initiation"
+        ],
+        "description": "[Unique] [Initiation] Create 3 Blue Flame. At the start of the turn, decrease Cost of 1 random card(s) by 1 for 1 turn or until activated."
+      },
+      {
+        "variant_id": "c_30136_uni3_epiphany_5",
+        "level": 5,
+        "name": "Resonating Flame V",
+        "cost": 2,
+        "card_type": "Upgrade",
+        "tags": [
+          "Unique",
+          "Initiation"
+        ],
+        "description": "[Unique] [Initiation] Create 2 Blue Flame. At the start of the turn, create 2 Blue Flame, then for 1 turn(s), decrease Cost of the next Bind card activated by 1."
+      }
+    ]
+  },
   "c_1049_srt4": {
     "character_id": 1049,
     "character_name": "Cassius",
@@ -7081,61 +7320,61 @@
         "variant_id": "c_30097_srt4_epiphany_1",
         "level": 1,
         "name": "Chrono Archon I",
-        "cost": 1,
+        "cost": 0,
         "card_type": "Upgrade",
         "tags": [
           "Unique",
-          "Initiation"
+          "Opener"
         ],
-        "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
+        "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When Chronal Ascension is removed, 3 Chronicle."
       },
       {
         "variant_id": "c_30097_srt4_epiphany_2",
         "level": 2,
         "name": "Chrono Archon II",
-        "cost": 1,
+        "cost": 0,
         "card_type": "Upgrade",
         "tags": [
           "Unique",
-          "Initiation"
+          "Opener"
         ],
-        "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. At the end of the turn, 100% Damage to a random enemy for each Chronal Ascension."
+        "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. At the end of the turn, 100% Damage to a random enemy for each Chronal Ascension."
       },
       {
         "variant_id": "c_30097_srt4_epiphany_3",
         "level": 3,
         "name": "Chrono Archon III",
-        "cost": 1,
+        "cost": 0,
         "card_type": "Upgrade",
         "tags": [
           "Unique",
-          "Initiation"
+          "Opener"
         ],
-        "description": "[Unique] [Initiation] When a card is Exhausted, 1 Chronicle."
+        "description": "[Unique] [Opener] When a card is Exhausted, 1 Chronicle."
       },
       {
         "variant_id": "c_30097_srt4_epiphany_4",
         "level": 4,
         "name": "Chrono Archon IV",
-        "cost": 1,
+        "cost": 0,
         "card_type": "Upgrade",
         "tags": [
           "Unique",
-          "Initiation"
+          "Opener"
         ],
-        "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When a card is Discarded, 1 Chronicle."
+        "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When a card is Discarded, 1 Chronicle."
       },
       {
         "variant_id": "c_30097_srt4_epiphany_5",
         "level": 5,
         "name": "Chrono Archon V",
-        "cost": 1,
+        "cost": 0,
         "card_type": "Upgrade",
         "tags": [
           "Unique",
-          "Initiation"
+          "Opener"
         ],
-        "description": "[Unique] [Initiation] When a card is activated, 1 Chronicle for each Cost of that card. When a Retain effect is activated, 1 Chronicle."
+        "description": "[Unique] [Opener] When a card is activated, 1 Chronicle for each Cost of that card. When a Retain effect is activated, 1 Chronicle."
       }
     ]
   },
@@ -7542,7 +7781,7 @@
         "tags": [
           "Pulverize"
         ],
-        "description": "[Pulverize] 500% Damage. 4 Brand of the Cycle. On Shield Break through this card, proc 1 more time (1 time per turn)."
+        "description": "[Pulverize] 500% Damage. 4 Brand of the Cycle. On Shield Break through this card, activate effect 1 more time (1 time per turn)."
       }
     ]
   },
@@ -7977,7 +8216,7 @@
         "tags": [
           "Weakness Attack"
         ],
-        "description": "[Weakness Attack] 140% Damage × 4. Ravage: Proc 1 more time."
+        "description": "[Weakness Attack] 140% Damage × 4. Ravage: Activate effect 1 more time."
       }
     ]
   },

@@ -26,6 +26,7 @@ CARDS = [
     _card("c_1055_uni3", ["c_1055_uni3_01", "c_1055_uni3_02"], "[TALENT_NO_COUNT]"),
     _card("c_1018_srt4", ["c_1018_srt4_01", "c_1018_srt4_02", "c_1018_srt4_03"], "[TALENT_NO_COUNT]"),
     _card("c_1004_uni2", ["c_1004_uni2_01", "c_1004_uni2_02"], "[TALENT_LEAD]"),
+    _card("c_30136_uni4", ["c_30136_uni4_01"]),
     _card("c_test_battle", ["c_test_battle_01"]),
     _card("c_test_missing", []),
     _card("c_test_fixed", ["c_test_fixed_01"], "[TALENT_UNIQUE_TEST]"),
@@ -47,6 +48,9 @@ EFFECTS = [
     _eff("c_1004_uni2_01", "SKILL_EFF_SHIELD", "100"),
     _eff("c_1004_uni2_02", "SKILL_EFF_CS_SET_ADD", "1", link_cs_id="[cs01_0079]"),
     _eff("cs01_0079_01", "SKILL_EFF_DAMAGE_VALUE_ADD", "120"),
+    _eff("c_30136_uni4_01", "SKILL_EFF_CS_SET_ADD", "1", link_cs_id="[cs_30136_12]"),
+    _eff("cs_30136_12_01", "SKILL_EFF_DAMAGE_VALUE_ADD", "20"),
+    _eff("cs_30136_12_02", "SKILL_EFF_DAMAGE_VALUE_ADD", "20"),
     _eff("c_test_battle_01", "SKILL_EFF_DMG", "80", eff_attr="[DMG_ATTR_FIX]"),
     _eff("c_test_fixed_01", "SKILL_EFF_DMG", "50", eff_attr="[DMG_ATTR_FIX]"),
 ]
@@ -56,6 +60,7 @@ STATUSES = [
     {"id": "cs01_0079", "link_skill_eff_id": "[cs01_0079_01]", "overlay_value_max": "5"},
     {"id": "cs01_0552", "link_skill_eff_id": "[]"},
     {"id": "cs01_0185", "link_skill_eff_id": "[]"},
+    {"id": "cs_30136_12", "link_skill_eff_id": "[cs_30136_12_01,cs_30136_12_02]"},
 ]
 
 TOOLTIPS = [
@@ -74,6 +79,7 @@ TEXT = {
     "card@desc@c_1055_uni3": "#result_coeff_ev_0# $Defense-Based Damage$<br>+#cs_ev_1_0#% Damage Amount taken by the target for <cc>1</> turn",
     "card@desc@c_1018_srt4": "#result_damage_0# Damage<br>Gain $Dark Mist Stance$<br>^TRIGGER_C1018_STANCE^ Increase Damage Amount by #ecdv0_1#%",
     "card@desc@c_1004_uni2": "#result_damage_0# $Shield$<br>+[fc]<cc>{cal}#cs_ev_1_0#*#result_ev_1#{/}</>[/]% Damage Amount to the next $Bullet$ card $activate$d",
+    "card@desc@c_30136_uni4": "For <cc>#tv#</> turn(s), increase Damage Amount of allies by #cs_ev_0_0#% and increase Damage Amount of ally Justice Cards by #cs_ev_0_1#%",
     "card@desc@c_test_battle": "#result_coeff_ev_0##n_result_damage_0# Damage for each#condition_value_stack_0_0# card ({cal}#cs_tv_cs01_0986#*#result_ev_0#{/}%)",
     "card@desc@c_test_missing": "Gain #result_ev_3# $AP$ and #mystery_token#",
     "card@desc@c_test_fixed": "#result_damage_0# fixed Damage",
@@ -160,6 +166,14 @@ def test_synergy_tiers_read_their_own_text(resolver):
     assert resolution.text == "Control Synergy: Apply effect\n3+ Control: When an enemy acts, 2 Agony to all enemies\n5+ Control: +5% Critical Chance for each enemy present"
     assert resolution.unresolved == []
     assert resolver.resolve("#synergy_unknown#", []).unresolved == ["synergy_unknown"]
+
+
+def test_card_term_value_is_the_turns_its_status_starts_with(resolver):
+    resolution = resolver.card_description("c_30136_uni4")
+    assert resolution.text == "For 1 turn(s), increase Damage Amount of allies by 20% and increase Damage Amount of ally Justice Cards by 20%"
+    assert resolution.unresolved == []
+    # A status tooltip's `#tv#` is a live battle value, so outside a card it is still reported.
+    assert resolver.resolve("For #tv# turn(s)", []).unresolved == ["tv"]
 
 
 def test_status_max(resolver):
