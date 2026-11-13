@@ -161,11 +161,31 @@ class TemplateResolver:
             template = self.client.text(base.get("desc"))
         if template is None:
             return Resolution("")
-        resolution = self.resolve(template, parse_list(card.get("link_skill_eff_id")))
+        effect_ids = parse_list(card.get("link_skill_eff_id"))
+        term = self._card_term_value(effect_ids)
+        if term is not None:
+            template = template.replace("#tv#", term)
+        resolution = self.resolve(template, effect_ids)
         tags = self.talent_tags(card)
         if tags:
             resolution.text = " ".join(f"[{tag}]" for tag in tags) + " " + resolution.text
         return resolution
+
+    def _card_term_value(self, effect_ids: list[str]) -> str | None:
+        """
+        What a bare `#tv#` means on a card: the turns its status starts with. In a status tooltip it is a live battle value instead.
+
+        Args:
+            effect_ids: The effect ids the card links to, in order.
+
+        Returns:
+            The value of the first status-applying effect, or None.
+        """
+        for effect_id in effect_ids:
+            effect = self.client.effects.get(effect_id)
+            if effect and effect.get("eff") == "SKILL_EFF_CS_SET_ADD" and parse_list(effect.get("link_cs_id")):
+                return self._field(effect, "eff_value")
+        return None
 
     def talent_tags(self, card: dict) -> list[str]:
         """
