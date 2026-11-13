@@ -832,6 +832,24 @@ PARTNERS = {
         "ego_cost": 3,
         "ego_desc": "2 Dominion Shard\nIncrease Damage Amount of the assigned Combatant's Justice Attack Cards by 50% for 2 turns",
     },
+    30137: {
+        "name": "Vivian",
+        "grade": 5,
+        "class": "Controller",
+        "passive_name": "Ring of Black Smoke",
+        "passive_desc": "Increase the assigned Combatant's Defense by {DEF%}%.\nWhen a Bind count of 4 or higher is reached on a card of the assigned Combatant, increase Damage Amount of Attack Cards of Justice Attribute allies by {V2}% (cannot stack).\nWhen a Justice Bind card of the assigned Combatant is stacked, +{V3}% Critical Chance to Justice Attribute allies for 1 turn (cannot stack).",
+        "values": {
+            "DEF%": (16, 18, 20, 22, 24),
+            "V2": (20, 25, 30, 35, 40),
+            "V3": (6, 8, 9, 11, 12),
+        },
+        "stats": {
+            "DEF%": (16, 18, 20, 22, 24),
+        },
+        "ego_name": "Freyjaen Fog",
+        "ego_cost": 3,
+        "ego_desc": "Draw 2\nFor each Justice Card in hand, increase Damage Amount of Attack Cards by 20% for 1 turn (max 5 stacks)",
+    },
 }
 
 # Base stats by grade and class at level 60
@@ -960,6 +978,7 @@ PARTNER_DEFAULT_ADD: dict[int, dict] = {
     30092: {"atk": 27, "def": 0, "hp": 1},
     30114: {"atk": 27, "def": 0, "hp": 1},
     30135: {"atk": 27, "def": 0, "hp": 1},
+    30137: {"atk": 0, "def": 9, "hp": 1},
 }
 
 

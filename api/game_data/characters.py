@@ -544,6 +544,20 @@ CHARACTERS = {
         "node_50": "CRate",
         "node_60": "CDmg",
     },
+    30136: {
+        "name": "Blazebell",
+        "grade": 5,
+        "attribute": "Justice",
+        "class": "Controller",
+        "base_atk": 419,
+        "base_def": 197,
+        "base_hp": 336,
+        "base_crit_rate": 3.0,
+        "base_crit_dmg": 125.0,
+        "base_weak_ego_dmg_rate": 125.0,
+        "node_50": "DEF%",
+        "node_60": "HP%",
+    },
 }
 
 # Build reverse lookup: name -> character data (for lookups by name)
