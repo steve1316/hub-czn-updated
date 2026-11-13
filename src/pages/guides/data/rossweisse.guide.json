@@ -7,7 +7,7 @@
       "en": "Sproot's Nightmare (community sheet)"
     }
   },
-  "updated": "10/24",
+  "updated": "11/11",
   "sections": [
     {
       "id": "playstyle",
@@ -265,6 +265,17 @@
           }
         },
         {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l8cOjiNqfdzwd5bz8N5Gb2ReyrtB0z4iRbEmZCVx1OgIGrv_Gzaw4krgi4GWDKvBhLhGSP1KItjRpZrVDWqMiRx-I8DmPXtP1kYLkNhT6PTbPjREOX04Y3HN1ELdB0xw"
+              }
+            }
+          ]
+        },
+        {
           "type": "prose",
           "body": {
             "en": "Cycle -2 | Blink Flow | 180 FM"
@@ -400,6 +411,17 @@
           "body": {
             "en": "Just use Dark/Light until Retrieve is gone, use Flow on whatever version you want\nOnly iffy card is Blade of Cycle since you consume the stacks way too quickly"
           }
+        },
+        {
+          "type": "rating-list",
+          "items": [
+            {
+              "label": "Preset Code",
+              "text": {
+                "en": "v6l8cOjiNqfdzwd5bz8N5Gb2ReyrtB0z4iRbEmZCV51NgOH_6IPYKlft2duRHzXrNb6pQXKqOr_rzkd9Tqc2WcglVYUh_IBH8c6CDNN3gKi3n8Nx_XTuichPBO8"
+              }
+            }
+          ]
         }
       ]
     },
