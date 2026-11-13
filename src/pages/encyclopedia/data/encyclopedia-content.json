@@ -1069,7 +1069,7 @@
       ],
       "category": "status",
       "definition": {
-        "en": "At the end of the turn, 1 Truth Seeking, inflict Chastisement for each stack, then enhance the Mark of Error action."
+        "en": "At the end of the turn, 1 Truth Seeking, then enhance the Chastisement and Mark of Error actions for each stack."
       },
       "seeAlso": []
     },

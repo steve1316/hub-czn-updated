@@ -919,7 +919,7 @@
     "slot": "Accessory",
     "tags": [],
     "description": {
-      "en": "When a card is Exhausted, +25% Damage Amount and Recover 5% of Max HP (1 times per battle)."
+      "en": "When a card is Exhausted, +25% Damage Amount and Recover 5% of Max HP (1 time per battle)."
     },
     "image_path": "itens/relic_1245.webp"
   },
@@ -1205,7 +1205,7 @@
     "slot": "Accessory",
     "tags": [],
     "description": {
-      "en": "If the enemy is alone, increase damage by 30%."
+      "en": "If the enemy is alone, increase Damage Amount by 30%."
     },
     "image_path": "itens/relic_1097.webp"
   },
@@ -1227,7 +1227,7 @@
     "slot": "Accessory",
     "tags": [],
     "description": {
-      "en": "+20% Damage Amount, +20 Shield gain."
+      "en": "+20% Damage Amount, +20% Shield Gain Amount."
     },
     "image_path": "itens/relic_1180.webp"
   },
@@ -2470,7 +2470,7 @@
     "slot": "Accessory",
     "tags": [],
     "description": {
-      "en": "At the start of the turn, increase Stress of a random ally by 2, then 150% Damage to all enemies."
+      "en": "At the start of the turn, increase Stress of a random ally by 2, then 150% Fixed Damage to all enemies."
     },
     "image_path": "itens/relic_5067.webp"
   },
@@ -2657,7 +2657,7 @@
     "slot": "Weapon",
     "tags": [],
     "description": {
-      "en": "When attacked, increase Damage Amount of the next Attack Card of this unit used by 20% (1 time per turn)."
+      "en": "When attacked, increase Damage Amount of the next Attack Card of this unit activated by 20% (1 time per turn)."
     },
     "image_path": "itens/relic_5078.webp"
   },

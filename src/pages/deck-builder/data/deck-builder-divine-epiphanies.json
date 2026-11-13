@@ -313,7 +313,7 @@
     "id": "div_0021",
     "god": "Caligo",
     "display_god": "Caligo",
-    "description": "Increase Damage Amount by 50% against targets haven't acted.",
+    "description": "Increase Damage Amount by 50% against targets that haven't acted.",
     "rarity": "Unique",
     "card_types": [
       "Attack"
@@ -322,7 +322,7 @@
     "levels": [],
     "tags": [],
     "source_key": "assault_r_spark_caligo_6",
-    "raw_text": "Increase Damage Amount by 50% against targets haven't acted.\nCaligo\nUNIQUE\nAttack"
+    "raw_text": "Increase Damage Amount by 50% against targets that haven't acted.\nCaligo\nUNIQUE\nAttack"
   },
   {
     "id": "div_0022",
@@ -404,7 +404,7 @@
     "id": "div_assault_r_spark_caligo_11",
     "god": "Caligo",
     "display_god": "Caligo",
-    "description": "Apply Quietus to this card. Discard from Draw Pile for each Cost+1.",
+    "description": "Apply Quietus to this card. Discard from top of Draw Pile for each Cost+1.",
     "rarity": "Unique",
     "card_types": [],
     "allowed_classes": [],
@@ -413,7 +413,7 @@
       "Quietus"
     ],
     "source_key": "assault_r_spark_caligo_11",
-    "raw_text": "Apply Quietus to this card. Discard from Draw Pile for each Cost+1.\nCaligo\nUNIQUE"
+    "raw_text": "Apply Quietus to this card. Discard from top of Draw Pile for each Cost+1.\nCaligo\nUNIQUE"
   },
   {
     "id": "div_assault_r_spark_caligo_12",
@@ -633,7 +633,7 @@
     "id": "div_0028",
     "god": "Circen",
     "display_god": "Kyrken",
-    "description": "Harmonization: 2 AP on the next turn.",
+    "description": "Harmonization: Gain 2 AP next turn.",
     "rarity": "Unique",
     "card_types": [],
     "allowed_classes": [],
@@ -645,7 +645,7 @@
     ],
     "tags": [],
     "source_key": "add_r_spark_circen_14",
-    "raw_text": "Harmonization: 2 AP on the next turn.\nKyrken\nUNIQUE\n1\n2\n3\n4+"
+    "raw_text": "Harmonization: Gain 2 AP next turn.\nKyrken\nUNIQUE\n1\n2\n3\n4+"
   },
   {
     "id": "div_0029",
@@ -714,7 +714,7 @@
     "id": "div_0033",
     "god": "Circen",
     "display_god": "Kyrken",
-    "description": "Harmonization: 2 AP on the next turn.",
+    "description": "Harmonization: Gain 2 AP next turn.",
     "rarity": "Unique",
     "card_types": [],
     "allowed_classes": [],
@@ -726,7 +726,7 @@
     ],
     "tags": [],
     "source_key": "assault_r_spark_circen_4",
-    "raw_text": "Harmonization: 2 AP on the next turn.\nKyrken\nUNIQUE\n1\n2\n3\n4+"
+    "raw_text": "Harmonization: Gain 2 AP next turn.\nKyrken\nUNIQUE\n1\n2\n3\n4+"
   },
   {
     "id": "div_0034",

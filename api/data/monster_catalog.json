@@ -735,6 +735,13 @@
     "has_weak": false
   },
   {
+    "id": "3000532_01",
+    "name": "Herald of Judgment",
+    "def": 47,
+    "dmg_decrease": 0.5035,
+    "has_weak": true
+  },
+  {
     "id": "2300006_01",
     "name": "Heretic Interrogator",
     "def": 47,
@@ -2338,6 +2345,13 @@
     "has_weak": true
   },
   {
+    "id": "3000532_10",
+    "name": "Herald of Judgment",
+    "def": 68,
+    "dmg_decrease": 0.4804,
+    "has_weak": true
+  },
+  {
     "id": "3000291_10",
     "name": "Judas",
     "def": 68,
@@ -2469,6 +2483,13 @@
     "def": 73,
     "dmg_decrease": 0.4753,
     "has_weak": false
+  },
+  {
+    "id": "3000532_11",
+    "name": "Herald of Judgment",
+    "def": 73,
+    "dmg_decrease": 0.4753,
+    "has_weak": true
   },
   {
     "id": "3000292_11",
@@ -2898,6 +2919,13 @@
     "has_weak": false
   },
   {
+    "id": "1004006_50",
+    "name": "Hunger of the Void",
+    "def": 206,
+    "dmg_decrease": 0.3767,
+    "has_weak": true
+  },
+  {
     "id": "3000514_50",
     "name": "Ironrain Soldier",
     "def": 206,
@@ -3157,6 +3185,13 @@
     "has_weak": false
   },
   {
+    "id": "1006011_51",
+    "name": "Human Shadow",
+    "def": 207,
+    "dmg_decrease": 0.3761,
+    "has_weak": true
+  },
+  {
     "id": "1001009_51",
     "name": "Kurete",
     "def": 207,
@@ -3176,6 +3211,13 @@
     "def": 207,
     "dmg_decrease": 0.3761,
     "has_weak": false
+  },
+  {
+    "id": "3000256_51",
+    "name": "The Devoured One",
+    "def": 207,
+    "dmg_decrease": 0.3761,
+    "has_weak": true
   },
   {
     "id": "3000513_52",
@@ -3465,6 +3507,13 @@
     "has_weak": false
   },
   {
+    "id": "1003001_80",
+    "name": "Fanatic",
+    "def": 239,
+    "dmg_decrease": 0.3597,
+    "has_weak": true
+  },
+  {
     "id": "1004004_80",
     "name": "Fickle Taste",
     "def": 239,
@@ -3668,6 +3717,13 @@
     "has_weak": true
   },
   {
+    "id": "1003011_80",
+    "name": "Saint Hound",
+    "def": 239,
+    "dmg_decrease": 0.3597,
+    "has_weak": true
+  },
+  {
     "id": "2104121_80",
     "name": "Sand Worm",
     "def": 239,
@@ -3698,6 +3754,13 @@
   {
     "id": "1002014_80",
     "name": "Seven Arms",
+    "def": 239,
+    "dmg_decrease": 0.3597,
+    "has_weak": true
+  },
+  {
+    "id": "3000534_80",
+    "name": "Shavrakhar",
     "def": 239,
     "dmg_decrease": 0.3597,
     "has_weak": true
@@ -3764,6 +3827,13 @@
     "def": 239,
     "dmg_decrease": 0.3597,
     "has_weak": false
+  },
+  {
+    "id": "1003004_80",
+    "name": "Templar",
+    "def": 239,
+    "dmg_decrease": 0.3597,
+    "has_weak": true
   },
   {
     "id": "3000306_80",
